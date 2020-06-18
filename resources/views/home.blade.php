@@ -299,7 +299,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-muted">Sales</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">$4021</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">$666666</h4>
                                         </div>
                                     </div>
 
