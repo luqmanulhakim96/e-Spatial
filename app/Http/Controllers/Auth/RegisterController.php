@@ -50,9 +50,21 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'kategori' => ['required'],
+            'nama' => ['required', 'string', 'max:255'],
+            'kad_pengenalan' => ['required', 'string', 'max:12', 'unique:users'],
+            'kerakyatan' => ['required'],
+            'tarikh_lahir' => ['required', 'date'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'jawatan' => ['required', 'string', 'max:255'],
+            'jenis_perniagaan' => ['required', 'string', 'max:255'],
+            'alamat_kediaman' => ['required', 'string', 'max:255'],
+            // 'nama_kementerian' => ['string', 'max:255'],
+            // 'alamat_kementerian' => ['string', 'max:255'],
+            'no_tel_rumah' => ['required', 'string', 'max:12'],
+            'no_tel_bimbit' => ['required', 'string', 'max:12'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            // 'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
 
@@ -64,9 +76,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $hashed_random_password = Hash::make(str_random(8));
+        dd($hashed_random_password);
         return User::create([
+            'kategori' => $data['kategori'],
             'name' => $data['name'],
             'email' => $data['email'],
+            'kad_pengenalan' => $data['kad_pengenalan'],
+            'kerakyatan' => $data['kerakyatan'],
+            'tarikh_lahir' => $data['tarikh_lahir'],
+            'tempat_lahir' => $data['tempat_lahir'],
+            'jawatan' => $data['jawatan'],
+            'jenis_perniagaan' => $data['jenis_perniagaan'],
+            'alamat_kediaman' => $data['alamat_kediaman'],
+            'nama_kementerian' => $data['nama_kementarian'],
+            'alamat_kementerian' => $data['alamat_kementerian'],
+            'no_tel_rumah' => $data['no_tel_rumah'],
+            'no_tel_bimbit' => $data['no_tel_bimbit'],
             'password' => Hash::make($data['password']),
         ]);
     }
