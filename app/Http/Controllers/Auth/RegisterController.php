@@ -78,7 +78,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         // dd($data);
-        $hashed_random_password = Hash::make(Str::random(8));
+        $hashed_random_password = Hash::make("1234567890");
         // dd($hashed_random_password);
         return User::create([
             'kategori' => $data['kategori'],
