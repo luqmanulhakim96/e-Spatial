@@ -14,7 +14,8 @@ class AddStatusInPermohonans extends Migration
     public function up()
     {
         Schema::table('permohonans', function (Blueprint $table) {
-            $table->string('status')->nullable();
+            $table->string('status_permohonan')->nullable();
+            $table->string('status_pembayaran')->nullable();
         });
     }
 
@@ -26,7 +27,8 @@ class AddStatusInPermohonans extends Migration
     public function down()
     {
         Schema::table('permohonans', function (Blueprint $table) {
-          $table->dropColumn('status');
+          $table->dropColumn('status_permohonan');
+          $table->dropColumn('status_pembayaran');
         });
     }
 }
