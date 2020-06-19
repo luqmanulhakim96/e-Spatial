@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -76,11 +77,12 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $hashed_random_password = Hash::make(str_random(8));
-        dd($hashed_random_password);
+        // dd($data);
+        $hashed_random_password = Hash::make(Str::random(8));
+        // dd($hashed_random_password);
         return User::create([
             'kategori' => $data['kategori'],
-            'name' => $data['name'],
+            'name' => $data['nama'],
             'email' => $data['email'],
             'kad_pengenalan' => $data['kad_pengenalan'],
             'kerakyatan' => $data['kerakyatan'],
@@ -89,11 +91,12 @@ class RegisterController extends Controller
             'jawatan' => $data['jawatan'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
             'alamat_kediaman' => $data['alamat_kediaman'],
-            'nama_kementerian' => $data['nama_kementarian'],
+            'nama_kementerian' => $data['nama_kementerian'],
             'alamat_kementerian' => $data['alamat_kementerian'],
             'no_tel_rumah' => $data['no_tel_rumah'],
             'no_tel_bimbit' => $data['no_tel_bimbit'],
-            'password' => Hash::make($data['password']),
+            // 'password' => Hash::make($data['password']),
+            'password' => $hashed_random_password,
         ]);
     }
 }

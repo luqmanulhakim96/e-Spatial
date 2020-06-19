@@ -14,7 +14,7 @@ class AddAdditionalDataIntoUsers extends Migration
     public function up()
     {
       Schema::table('users', function (Blueprint $table) {
-        $table->string('role'); //user, admin, super admin
+        $table->string('role')->default("2"); //user, admin, super admin
         $table->string('kategori'); //kementarian, agensi, penyelidik, ipt, orang awam
         $table->string('kad_pengenalan')->unique();
         $table->string('kerakyatan');
