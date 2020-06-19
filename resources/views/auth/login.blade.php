@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_user')
 
 @section('content')
     <!-- Main content start -->
@@ -18,7 +18,7 @@
                             @csrf
                             <h5 class="text-dark my-3">Sign In</h5>
                             <!-- Email -->
-                            <div class="form-group mb-2">
+                            <!-- <div class="form-group mb-2">
                                 <label for="email" class="text-muted">Email Address</label>
                                 <input id="email" type="email" class="form-control badge-pill bg-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
@@ -26,8 +26,17 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </div> -->
+                            <div class="form-group mb-2">
+                                <label for="kad_pengenalan" class="text-muted">Kad Pengenalan</label>
+                                <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" required autocomplete="kad_pengenalan" autofocus>
+                                @error('kad_pengenalan')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
-                            <!-- Passeord -->
+                            <!-- Password -->
                             <div class="form-group mb-2">
                                 <label for="Passeord" class="text-muted">Password</label>
                                 <input id="Passeord" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
