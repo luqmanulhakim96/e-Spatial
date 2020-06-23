@@ -130,15 +130,40 @@
 
           <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
+            <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
+                                <!-- Table head -->
+                                <thead>
+                                    <tr>
+                                      <th class="all">ID</th>
+                                      <th class="all">NAMA</th>
+                                      <th class="all">KAD PENGENALAN</th>
+                                      <th class="all">TARIKH LAHIR</th>
+                                    </tr>
+                                </thead>
+                                <!-- Table body -->
+                                <tbody>
+                                  @for($i=0; $i<$loop; $i++)
+                                  <tr>
+                                    <td>{{ $pemohon->id  }}</td>
+                                    <td>{{ $pemohon->name  }}</td>
+                                    <td>{{ $pemohon->kad_pengenalan  }}</td>
+                                    <td>{{ $pemohon->tarikh_lahir  }}</td>
+                                  </tr>
+                                  @endfor
+                                </tbody>
+                            </table>
+
             <!-- Create 2 row -->
             <div class="row">
                 <!-- 1st row -->
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="f-name-1">Ulasan Admin</label>
                         <textarea id="alamat_kediaman" class="form-control bg-light" name="ulasan_admin" rows="3" cols="50" readonly></textarea>
                     </div>
                 </div>
+
                 <!-- 2nd row -->
                 <div class="col-md-6">
                     <div class="form-group">
@@ -153,7 +178,7 @@
                         <textarea id="alamat_kediaman" class="form-control bg-light" name="ulasan_penyokong2" rows="3" cols="50" readonly></textarea>
                     </div>
                 </div>
-                <!-- 4th row -->  
+                <!-- 4th row -->
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="l-name-1">Ulasan Ketua Pengarah</label>
