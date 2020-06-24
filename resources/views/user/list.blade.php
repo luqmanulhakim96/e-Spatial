@@ -11,7 +11,7 @@
                 <div class="card rounded-lg">
                   <div class="card-body">
                       <div class="card-title">Senarai Pemohonan</div>
-                      <a class="btn btn-primary m-2" href="">Pemohonan Baru</a>
+                      <a class="btn btn-primary m-2" href="{{ route('user.add') }}">Pemohonan Baru</a>
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
                         <!-- Table head -->
                         <thead>

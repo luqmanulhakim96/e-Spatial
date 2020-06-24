@@ -3,8 +3,6 @@
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
                 <div class="page-heading border-bottom d-flex flex-row">
-                    <h5 class="font-weight-normal">Version 1</h5>
-                    <small class="mt-2 ml-2">Dashboard</small>
                 </div>
                 <!-- Small card component -->
 
@@ -12,7 +10,7 @@
                   <div class="card-body">
                       <div class="card-title">Pemohonan Baru</div>
 
-                      <form action="{{route('user.add')}}" method="post">
+                      <form action="{{route('user.submit')}}" method="post">
                         @csrf
                         <div class="card-title">Tambah Harga</div>
                         <!-- jenis data input-->
@@ -36,13 +34,13 @@
                             <label for="select-1">Jenis Hutan:</label>
                               <select id="select-1" class="custom-select  bg-light" name="jenis_hutan">
                                   <option value="" selected disabled hidden>Pilih Jenis Hutan</option>
-                                  <option value="Vector" {{ old('jenis_hutan') == "Hutan Ericaceous" ? 'selected' : '' }}>Hutan Ericaceous</option>
-                                  <option value="Digitize" {{ old('jenis_hutan') == "Hutan Montane" ? 'selected' : '' }}>Hutan Montane</option>
-                                  <option value="Option3" {{ old('jenis_hutan') == "Hutan Dipterokarpa Atas" ? 'selected' : '' }}>Hutan Dipterokarpa Atas</option>
-                                  <option value="Option3" {{ old('jenis_hutan') == "Hutan Dipterokarpa Bukit" ? 'selected' : '' }}>Hutan Dipterokarpa Bukit</option>
-                                  <option value="Option3" {{ old('jenis_hutan') == "Hutan Dipterokarpa Pamah" ? 'selected' : '' }}>Hutan Dipterokarpa Pamah</option>
-                                  <option value="Option3" {{ old('jenis_hutan') == "Hutan Paya Gambut" ? 'selected' : '' }}>Hutan Paya Gambut</option>
-                                  <option value="Option3" {{ old('jenis_hutan') == "Hutan Paya Laut" ? 'selected' : '' }}>Hutan Paya Laut</option>
+                                  <option value="Hutan Ericaceous" {{ old('jenis_hutan') == "Hutan Ericaceous" ? 'selected' : '' }}>Hutan Ericaceous</option>
+                                  <option value="Hutan Montane" {{ old('jenis_hutan') == "Hutan Montane" ? 'selected' : '' }}>Hutan Montane</option>
+                                  <option value="Hutan Dipterokarpa Atas" {{ old('jenis_hutan') == "Hutan Dipterokarpa Atas" ? 'selected' : '' }}>Hutan Dipterokarpa Atas</option>
+                                  <option value="Hutan Dipterokarpa Bukit" {{ old('jenis_hutan') == "Hutan Dipterokarpa Bukit" ? 'selected' : '' }}>Hutan Dipterokarpa Bukit</option>
+                                  <option value="Hutan Dipterokarpa Pamah" {{ old('jenis_hutan') == "Hutan Dipterokarpa Pamah" ? 'selected' : '' }}>Hutan Dipterokarpa Pamah</option>
+                                  <option value="Hutan Paya Gambut" {{ old('jenis_hutan') == "Hutan Paya Gambut" ? 'selected' : '' }}>Hutan Paya Gambut</option>
+                                  <option value="Hutan Paya Laut" {{ old('jenis_hutan') == "Hutan Paya Laut" ? 'selected' : '' }}>Hutan Paya Laut</option>
                               </select>
                               @error('jenis_hutan')
                               <div class="alert alert-danger">
@@ -111,11 +109,11 @@
                             <div class="switchs">
                                 <!-- Primary Radio Button  -->
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="Ya" name="dokumen_ke_luar_negara" class="custom-control-input" value="Ya">
+                                    <input type="radio" id="Ya" name="dokumen_ke_luar_negara" class="custom-control-input" value="Ya" @if(old('dokumen_ke_luar_negara')=="Ya") checked @endif>
                                     <label class="custom-control-label" for="Ya">Ya</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" value="Tidak">
+                                    <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif>
                                     <label class="custom-control-label" for="Tidak">Tidak</label>
                                 </div>
                             @error('dokumen_ke_luar_negara')
