@@ -123,6 +123,13 @@ $(document).ready(function(){
         responsive : true
     });
 
+    // Responsive Data Table
+    let responsiveDataTable2 = $("#responsiveDataTable2")
+    $(responsiveDataTable2).DataTable({
+        responsive : true
+    });
+
+
     // Individual column searching  Data Table
 
     // Setup - add a text input to each footer cell
@@ -131,16 +138,16 @@ $(document).ready(function(){
         var title = $(this).text();
         $(this).html( '<input type="text" class="form-control" placeholder="Search '+title+'" />' );
     } );
- 
+
     // DataTable
     var table = $(columnSearchDataTable).DataTable({
         ordering : false
     });
- 
+
     // Apply the search
     table.columns().every( function () {
         var that = this;
- 
+
         $( 'input', this.header() ).on( 'keyup change clear', function () {
             if ( that.search() !== this.value ) {
                 that

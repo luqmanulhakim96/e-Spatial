@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+
 use App\User;
+
+use App\SenaraiHarga;
 
 class HomeController extends Controller
 {
@@ -29,8 +33,24 @@ class HomeController extends Controller
       // dd($nama);
         return view('home', compact('nama'));
     }
+
+    public function senaraiPemohon(){
+      $listPemohon = User::get();
+      $loop = User::find(1)->count();
+      return view('permohonan.list', compact('listPemohon', 'loop'));
+    }
+
     public function viewInformasiPemohon(){
         $pemohon = User::find(1);
-        return view('permohonan.view',  compact('pemohon'));
+        $loop =  User::find(1)->count();
+        return view('permohonan.view',  compact('pemohon','loop'));
+    }
+
+    public function senaraiHarga(){
+        $list = SenaraiHarga::get();
+        // $loop = SenaraiHarga::find(1)->count();
+        // $list = DB::table('senarai_hargas')->get();
+        // dd($list);
+        return view('senarai-harga.list', compact('list'));
     }
 }
