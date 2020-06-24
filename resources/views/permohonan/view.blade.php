@@ -130,6 +130,34 @@
 
           <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
+            <!-- Example 2 -->
+            <div class="text-center mt-3 mt-md-0-lt-4">
+                <!-- Button trigger modal -->
+                <button type="button" c lass="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                    Masuk Data AOI
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Data AOI</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                          <input id="data_aoi-1" class="form-control bg-light" type="text" name="data_aoi" placeholder="Masukkan Data AOI">
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-primary">Simpan Maklumat</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
             <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
                                 <!-- Table head -->
                                 <thead>
