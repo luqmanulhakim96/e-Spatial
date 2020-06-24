@@ -28,7 +28,6 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/permohon/senarai', 'HomeController@senaraiPemohon')->name('permohonan.list');
 
-
   #route for Senarai Harga
   Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
 
@@ -55,18 +54,14 @@ Route::middleware('admin')->group(function () {
   Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
 });
 
-#route for User
-Route::get('/halaman-utama', 'UserController@index')->name('user.halaman-utama')->middleware('user');
+Route::middleware('user')->group(function () {
+  #normal user route
+  Route::get('/halaman-utama', 'UserController@index')->name('user.halaman-utama');
 
+  Route::get('/senarai', 'UserController@list')->name('user.senaraiPemohonan');
 
-#normal user route
+  Route::get('/permohonan/baru', 'UserController@viewPermohonanBaru')->name('user.permohonanBaru');
 
-Route::get('/halaman-utama', 'UserController@index')->name('user.halaman-utama');
-
-Route::get('/senarai', 'UserController@list')->name('user.senaraiPemohonan');
-
-Route::get('/permohonan/baru', 'UserController@viewPermohonanBaru')->name('user.permohonanBaru');
-
-Route::post('/permohonan/insert', 'UserController@add')->name('user.add');
-
+  Route::post('/permohonan/insert', 'UserController@add')->name('user.add');
+});
 // Route::resource('senaraiHargas', 'SenaraiHargaController');
