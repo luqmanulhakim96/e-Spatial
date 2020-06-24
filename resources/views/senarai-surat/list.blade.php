@@ -10,8 +10,8 @@
 
                 <div class="card rounded-lg">
                   <div class="card-body">
-                      <div class="card-title">Senarai Harga</div>
-                      <a class="btn btn-primary m-2" href="{{ route('senarai-harga.add') }}">Tambah Senarai</a>
+                      <div class="card-title">Senarai Surat</div>
+                      <a class="btn btn-primary m-2" href="{{ route('senarai-surat.add') }}">Tambah Surat</a>
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
                         <!-- Table head -->
                         <thead>
@@ -28,23 +28,23 @@
                         </thead>
                         <!-- Table body -->
                         <tbody>
-                          @foreach($list as $data)
+                          {{-- @foreach($list as $data) --}}
                           <tr>
-                            <td>{{ $data->id  }}</td>
-                            <td>{{ $data->jenis_data  }}</td>
-                            <td>{{ $data->saiz_data  }}</td>
-                            <td>{{ $data->negeri  }}</td>
-                            <td>{{ $data->tahun  }}</td>
-                            <td>{{ $data->harga_asas  }}</td>
-                            <td>{{ $data->jumlah_harga  }}</td>
+                            <td>{{-- $data->id  --}}</td>
+                            <td>{{-- $data->jenis_data  --}}</td>
+                            <td>{{-- $data->saiz_data  --}}</td>
+                            <td>{{-- $data->negeri  --}}</td>
+                            <td>{{-- $data->tahun  --}}</td>
+                            <td>{{-- $data->harga_asas  --}}</td>
+                            <td>{{-- $data->jumlah_harga  --}}</td>
                             <td class="p-3">
                                   <div class="d-flex flex-row justify-content-around align-items-center">
-                                      <a href="{{ route('senarai-harga.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                      <a href="{{ route('senarai-harga.delete', $data->id) }}" class="btn btn-danger"><i class="fas fa-times-circle"></i></a>
+                                      <!-- <a href="{{-- route('senarai-harga.edit', $data->id) --}}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a> -->
+                                      <!-- <a href="{{-- route('senarai-harga.delete', $data->id) --}}" class="btn btn-danger"><i class="fas fa-times-circle"></i></a> -->
                                   </div>
                             </td>
                           </tr>
-                          @endforeach
+                        {{-- @endforeach --}}
                         </tbody>
                       </table>
                   </div>
