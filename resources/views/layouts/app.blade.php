@@ -53,7 +53,7 @@
                     <ul class="side-menu p-0 m-0 mt-3">
                         <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
                         <!-- Sub menu parent -->
-                        <li class="side-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 py-3 pl-4">Senarai Pemohon</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 py-3 pl-4">Senarai Permohonan</a></li>
 
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-harga.list') }}" class="w-100 py-3 pl-4" >Senarai Harga</a></li>
