@@ -28,7 +28,6 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/permohon/senarai', 'HomeController@senaraiPemohon')->name('permohonan.list');
 
-
   #route for Senarai Harga
   Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
 
@@ -55,7 +54,7 @@ Route::middleware('admin')->group(function () {
   Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
 });
 
-Route::middleware('admin')->group(function () {
+Route::middleware('user')->group(function () {
   #normal user route
   Route::get('/halaman-utama', 'UserController@index')->name('user.halaman-utama');
 
