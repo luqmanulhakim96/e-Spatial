@@ -3,8 +3,8 @@
             <!--Page Body part -->
             <div class="page-body p-4 text-dark">
                 <div class="page-heading border-bottom d-flex flex-row">
-                    <h5 class="font-weight-normal">Version 1</h5>
-                    <small class="mt-2 ml-2">Dashboard</small>
+                    <!-- <h5 class="font-weight-normal">Version 1</h5>
+                    <small class="mt-2 ml-2">Dashboard</small> -->
                 </div>
                 <!-- Pills Tab-->
                                     <div class="card rounded-lg">

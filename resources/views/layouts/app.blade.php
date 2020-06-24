@@ -58,7 +58,7 @@
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-harga.list') }}" class="w-100 py-3 pl-4" >Senarai Harga</a></li>
                         <!-- Sub menu parent -->
-                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4" >Senarai Surat</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('senarai-surat.list') }}" class="w-100 py-3 pl-4" >Senarai Surat</a></li>
                     </ul>
                 </div>
             </div>
