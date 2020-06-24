@@ -25,6 +25,9 @@
                             <option value="penyelidik">Penyelidik</option>
                             <option value="institut">Institut Pengajian Tinggi</option>
                             <option value="awam">Orang Awam</option>
+                            <option value="awam">Orang Awam</option>
+                            <option value="lain">Lain-lain</option>
+                            <option value="dalaman">Dalaman</option>
                         </select>
                     </div>
                 </div>

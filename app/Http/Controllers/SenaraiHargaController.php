@@ -71,8 +71,6 @@ class SenaraiHargaController extends Controller
 
     $this->update($id);
     return redirect()->route('senarai-harga.list');
-    // return redirect('/harga/senarai');
-
   }
 
   public function deleteHarga($id){
