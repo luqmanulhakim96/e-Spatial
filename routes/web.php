@@ -19,27 +19,42 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('admin');
+Route::middleware('admin')->group(function () {
+  Route::get('/home', 'HomeController@index')->name('home');
 
-//PEMOHONAN
+  #route for Permohonan
+  Route::get('/permohonan/maklumat', 'HomeController@viewInformasiPemohon')->name('permohonan.view');
 
-Route::get('/permohonan/maklumat', 'HomeController@viewInformasiPemohon')->name('permohonan.view');
+  Route::get('/permohon/senarai', 'HomeController@senaraiPemohon')->name('permohonan.list');
 
-Route::get('/permohonan/senarai', 'HomeController@senaraiPemohon')->name('permohonan.list');
+  #route for Senarai Harga
+  Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
 
-//HARGA
+  Route::get('/harga/tambah', 'SenaraiHargaController@tambahHarga')->name('senarai-harga.add');
 
-Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
+  Route::get('/harga/edit/{id}', 'SenaraiHargaController@editHarga')->name('senarai-harga.edit');
 
-Route::get('/harga/tambah', 'SenaraiHargaController@tambahHarga')->name('senarai-harga.add');
+  Route::post('/harga/insert', 'SenaraiHargaController@insertHarga')->name('senarai-harga.insert');
 
-Route::get('/harga/edit/{id}', 'SenaraiHargaController@editHarga')->name('senarai-harga.edit');
+  Route::post('/harga/update/{id}', 'SenaraiHargaController@updateHarga')->name('senarai-harga.update');
 
-Route::post('/harga/insert', 'SenaraiHargaController@insertHarga')->name('senarai-harga.insert');
+  Route::get('/harga/delete/{id}','SenaraiHargaController@deleteHarga')->name('senarai-harga.delete');
 
-Route::post('/harga/update/{id}', 'SenaraiHargaController@updateHarga')->name('senarai-harga.update');
+  #route for Senarai Surat
+  Route::get('/surat/senarai', 'SenaraiSuratController@view')->name('senarai-surat.list');
 
-Route::get('/harga/delete/{id}','SenaraiHargaController@deleteHarga')->name('senarai-harga.delete');
+  Route::get('/surat/tambah', 'SenaraiSuratController@create')->name('senarai-surat.add');
+
+  Route::get('/surat/edit/{id}', 'SenaraiSuratController@editSurat')->name('senarai-surat.edit');
+
+  Route::post('/surat/submit', 'SenaraiSuratController@submitForm')->name('senarai-surat.submit');
+
+  #route for Admin
+  Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
+});
+
+#route for User
+Route::get('/halaman-utama', 'UserController@index')->name('user.halaman-utama')->middleware('user');
 
 
 #normal user route

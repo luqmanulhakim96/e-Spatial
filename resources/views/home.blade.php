@@ -3,8 +3,8 @@
             <!--Page Body part -->
             <div class="page-body p-4 text-dark">
                 <div class="page-heading border-bottom d-flex flex-row">
-                    <h5 class="font-weight-normal">Version 1</h5>
-                    <small class="mt-2 ml-2">Dashboard</small>
+                    <!-- <h5 class="font-weight-normal">Version 1</h5>
+                    <small class="mt-2 ml-2">Dashboard</small> -->
                 </div>
                 <!-- Small card component -->
                 <div class="small-cards mt-5 mb-4">
@@ -23,8 +23,8 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-muted">New Leads</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">205</h4>
+                                            <p class="font-weight-normal m-0 text-muted">Permohonan Baru</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">-</h4>
                                         </div>
                                     </div>
 
@@ -46,8 +46,8 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-muted">Sales</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">$666666</h4>
+                                            <p class="font-weight-normal m-0 text-muted">Permohonan Lulus</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">-</h4>
                                         </div>
                                     </div>
 
