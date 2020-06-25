@@ -63,5 +63,9 @@ Route::middleware('user')->group(function () {
   Route::get('/permohonan/baru', 'UserController@add')->name('user.add');
 
   Route::post('/permohonan/submit', 'UserController@submitForm')->name('user.submit');
+
+  Route::get('/permohonan/edit/{id}', 'UserController@edit')->name('user.edit');
+
+  Route::post('/permohonan/update/{id}', 'UserController@updatePermohonan')->name('user.update');
 });
 // Route::resource('senaraiHargas', 'SenaraiHargaController');

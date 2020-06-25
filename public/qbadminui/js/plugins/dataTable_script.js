@@ -129,6 +129,13 @@ $(document).ready(function(){
         responsive : true
     });
 
+    // Responsive Data Table
+    let list_permohonan_user = $("#list_permohonan_user")
+    $(list_permohonan_user).DataTable({
+        responsive : true,
+        order:[[4,"desc"]]
+    });
+
 
     // Individual column searching  Data Table
 
