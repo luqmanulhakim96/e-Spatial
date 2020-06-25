@@ -26,12 +26,17 @@ class Admin
             return redirect()->route('login');
         }
 
-        if (Auth::user()->role == 0 || Auth::user()->role == 1 || Auth::user()->role == 2 || Auth::user()->role == 3) {
+        if(Auth::user()->status == FALSE){
+            Auth::logout();
+            return redirect()->route('login');
+        }
+
+        if (Auth::user()->role == 0 || Auth::user()->role == 1 || Auth::user()->role == 2 || Auth::user()->role == 3 ||  Auth::user()->role == 4) {
             return $next($request);
             // return redirect()->route('admin.dashboard');
         }
 
-        if (Auth::user()->role == 4) {
+        if (Auth::user()->role == 5) {
              // return $next($request);
             return redirect()->route('user.halaman-utama');
         }

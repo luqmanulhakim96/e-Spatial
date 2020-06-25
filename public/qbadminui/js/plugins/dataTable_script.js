@@ -130,10 +130,25 @@ $(document).ready(function(){
     });
 
     // Responsive Data Table
+
+    let responsiveDataTable3 = $("#responsiveDataTable3")
+    $(responsiveDataTable3).DataTable({
+        responsive : true
+    });
+
+    // Responsive Data Table
+    let responsiveAuditTable = $("#responsiveAuditTable")
+    $(responsiveAuditTable).DataTable({
+        responsive : true,
+        scrollX: true,
+        order: [[ 7, "desc" ]]
+
+    // Responsive Data Table
     let list_permohonan_user = $("#list_permohonan_user")
     $(list_permohonan_user).DataTable({
         responsive : true,
         order:[[4,"desc"]]
+
     });
 
 

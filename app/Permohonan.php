@@ -2,9 +2,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class Permohonan extends Model
+class Permohonan extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
 
     protected $fillable = [
       'jenis_data', 'jenis_hutan', 'negeri', 'tahun', 'attachment_permohonan',

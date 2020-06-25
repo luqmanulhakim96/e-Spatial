@@ -43,7 +43,7 @@
                                                 </div>
 
                                                 <div class="tab-pane fade" id="pills-dalaman" role="tabpanel" aria-labelledby="pills-dalaman-tab">
-                                                  <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
+                                                  <table class="table table-striped table-bordered" id="responsiveDataTable2" style="width: 100%;">
 
                                                     <thead>
                                                         <tr>
@@ -58,7 +58,7 @@
                                                 </div>
 
                                                 <div class="tab-pane fade" id="pills-lulus" role="tabpanel" aria-labelledby="pills-lulus-tab">
-                                                  <table class="table table-striped table-bordered" id="responsiveDataTable2" style="width: 100%;">
+                                                  <table class="table table-striped table-bordered" id="responsiveDataTable3" style="width: 100%;">
 
                                                     <thead>
                                                         <tr>

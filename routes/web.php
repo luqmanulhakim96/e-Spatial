@@ -46,12 +46,26 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/surat/tambah', 'SenaraiSuratController@create')->name('senarai-surat.add');
 
-  Route::get('/surat/edit/{id}', 'SenaraiSuratController@editSurat')->name('senarai-surat.edit');
+  Route::get('/surat/edit/{id}', 'SenaraiSuratController@edit')->name('senarai-surat.edit');
 
   Route::post('/surat/submit', 'SenaraiSuratController@submitForm')->name('senarai-surat.submit');
 
-  #route for Admin
-  Route::get('/dashboard', 'AdminController@index')->name('admin.dashboard');
+  #route for super admin
+  Route::get('/pengguna/senarai', 'AdminController@list')->name('superadmin.list');
+
+  Route::get('/pengguna/tambah', 'AdminController@create')->name('superadmin.add');
+
+  Route::get('/pengguna/edit/{id}', 'AdminController@edit')->name('superadmin.edit');
+
+  Route::post('/pengguna/update/{id}', 'AdminController@updateUser')->name('superadmin.update');
+
+  Route::get('/pengguna/delete/{id}','AdminController@delete')->name('superadmin.delete');
+
+
+  Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
+
+
+
 });
 
 Route::middleware('user')->group(function () {
