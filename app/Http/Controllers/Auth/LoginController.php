@@ -34,19 +34,19 @@ class LoginController extends Controller
    {
        switch(Auth::user()->role){
            case 0:
-               $this->redirectTo = '/dashboard';
+               $this->redirectTo = '/home';
                return $this->redirectTo;
                break;
            case 1:
-               $this->redirectTo = '/dashboard';
+               $this->redirectTo = '/home';
                return $this->redirectTo;
                break;
            case 2:
-               $this->redirectTo = '/dashboard';
+               $this->redirectTo = '/home';
                return $this->redirectTo;
                break;
            case 3:
-                   $this->redirectTo = '/dashboard';
+                   $this->redirectTo = '/home';
                return $this->redirectTo;
                break;
            case 4:

@@ -52,7 +52,7 @@ class SenaraiHargaController extends Controller
 
     event($senaraiHarga = $this->createHarga($request->all()));
 
-    return redirect('/senaraiHarga');
+    return redirect()->route('senarai-harga.list');
   }
 
   public function update($id){

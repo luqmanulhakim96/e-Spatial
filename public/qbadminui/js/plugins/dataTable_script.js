@@ -129,6 +129,20 @@ $(document).ready(function(){
         responsive : true
     });
 
+    // Responsive Data Table
+    let responsiveDataTable3 = $("#responsiveDataTable3")
+    $(responsiveDataTable3).DataTable({
+        responsive : true
+    });
+
+    // Responsive Data Table
+    let responsiveAuditTable = $("#responsiveAuditTable")
+    $(responsiveAuditTable).DataTable({
+        responsive : true,
+        scrollX: true,
+        order: [[ 7, "desc" ]]
+    });
+
 
     // Individual column searching  Data Table
 

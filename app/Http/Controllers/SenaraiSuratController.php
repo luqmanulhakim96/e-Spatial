@@ -17,7 +17,7 @@ class SenaraiSuratController extends Controller
         return view('senarai-surat.add');
     }
 
-    public function editSurat($id){
+    public function edit($id){
       $info = SenaraiSurat::findOrFail($id);
       return view('senarai-surat.edit', compact('info'));
     }

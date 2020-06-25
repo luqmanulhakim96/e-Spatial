@@ -32,11 +32,16 @@ class User
            return redirect()->route('login');
        }
 
-       if (Auth::user()->role == 0 || Auth::user()->role == 1 || Auth::user()->role == 2 || Auth::user()->role == 3) {
-           return redirect()->route('admin.dashboard');
+       if(Auth::user()->status == FALSE){
+           Auth::logout();
+           return redirect()->route('login');
        }
 
-       if (Auth::user()->role == 4) {
+       if (Auth::user()->role == 0 || Auth::user()->role == 1 || Auth::user()->role == 2 || Auth::user()->role == 3 ||  Auth::user()->role == 4) {
+           return redirect()->route('home');
+       }
+
+       if (Auth::user()->role == 5) {
             return $next($request);
            // return redirect()->route('user.halaman-utama');
        }

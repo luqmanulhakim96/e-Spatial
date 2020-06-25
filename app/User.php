@@ -5,9 +5,11 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
     use Notifiable;
 
     /**
@@ -18,7 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password', 'role', 'kategori', 'kad_pengenalan', 'kerakyatan',
         'tarikh_lahir', 'tempat_lahir', 'jawatan', 'alamat_kediaman', 'nama_kementarian',
-        'alamat_kementarian', 'jenis_perniagaan', 'no_tel_rumah', 'no_tel_bimbit'
+        'alamat_kementarian', 'jenis_perniagaan', 'no_tel_rumah', 'no_tel_bimbit', 'status'
     ];
 
     /**
