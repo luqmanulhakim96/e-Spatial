@@ -7,6 +7,9 @@
         <div class="card rounded-sm mt-5 w-50 p-3">
         <h5 class="card-header">Halaman Utama</h5>
 
+          <a class="btn btn-primary m-2" href="{{ route('user.add') }}">Permohonan Baru</a>
+          <a class="btn btn-primary m-2" href="{{ route('user.list') }}">Senarai Pemohonan</a>
+
 
 
         </div>

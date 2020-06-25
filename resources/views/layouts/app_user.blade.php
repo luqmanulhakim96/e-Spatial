@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('qbadminui/fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('qbadminui/css/vendor/bootstrap-4.3.1/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ mix('qbadminui/css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('qbadminui/css/vendor/DataTable-1.10.20/datatables.min.css') }}">"></link>
     <style>
     </style>
     <meta name="theme-color" content="#fafafa">
@@ -42,5 +43,9 @@
     <script src="{{ asset('qbadminui/js/plugins/echart_drw.js') }}"></script>
     <script src="{{ asset('qbadminui/js/plugins.js') }}"></script>
     <script src="{{ asset('qbadminui/js/main.js') }}"></script>
+    <!-- Data Table -->
+    <script src="{{ asset('qbadminui/js/vendor/DataTable-1.10.20/datatables.min.js') }}"></script>
+    <!-- Data Table script -->
+    <script src="{{ asset('qbadminui/js/plugins/dataTable_script.js') }}"></script>
 </body>
 </html>

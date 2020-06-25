@@ -70,12 +70,16 @@ Route::middleware('admin')->group(function () {
 
 Route::middleware('user')->group(function () {
   #normal user route
-  Route::get('/halaman-utama', 'UserController@index')->name('user.halaman-utama');
+  Route::get('/halaman-utama', 'UserController@index')->name('user.mainMenu');
 
-  Route::get('/senarai', 'UserController@list')->name('user.senaraiPemohonan');
+  Route::get('/permohonan/senarai', 'UserController@list')->name('user.list');
 
-  Route::get('/permohonan/baru', 'UserController@viewPermohonanBaru')->name('user.permohonanBaru');
+  Route::get('/permohonan/baru', 'UserController@add')->name('user.add');
 
-  Route::post('/permohonan/insert', 'UserController@add')->name('user.add');
+  Route::post('/permohonan/submit', 'UserController@submitForm')->name('user.submit');
+
+  Route::get('/permohonan/edit/{id}', 'UserController@edit')->name('user.edit');
+
+  Route::post('/permohonan/update/{id}', 'UserController@updatePermohonan')->name('user.update');
 });
 // Route::resource('senaraiHargas', 'SenaraiHargaController');
