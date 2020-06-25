@@ -18,7 +18,10 @@ class UserController extends Controller
   }
 
   public function list(){
-      return view('user.list');
+    $user_id = Auth::user()->id;
+    $list = Permohonan::where('user_id','=',$user_id)->get();
+
+    return view('user.list', compact('list'));
   }
 
   public function add(){
@@ -27,6 +30,7 @@ class UserController extends Controller
 
   public function create(array $data){
     $user_id = Auth::user()->id;
+    //dd($data);
     return Permohonan::Create([
       'jenis_data' => $data['jenis_data'],
       'jenis_hutan' => $data['jenis_hutan'],
@@ -34,6 +38,8 @@ class UserController extends Controller
       'tahun' => $data['tahun'],
       'attachment_permohonan' => $data['attachment_permohonan'],
       'dokumen_ke_luar_negara' => $data['dokumen_ke_luar_negara'],
+      'status_permohonan' => $data['status_permohonan'],
+      'status_pembayaran' => $data['status_pembayaran'],
       'user_id' => $user_id
     ]);
   }
@@ -57,5 +63,26 @@ class UserController extends Controller
     return redirect()->route('user.list');
   }
 
+  public function edit($id){
+    $info = Permohonan::findOrFail($id);
+
+    return view('user.edit', compact('info'));
+  }
+
+  public function update($id){
+    $permohonan = Permohonan::find($id);
+    $permohonan->jenis_data = request()->jenis_data;
+    $permohonan->jenis_hutan = request()->jenis_hutan;
+    $permohonan->negeri = request()->negeri;
+    $permohonan->tahun = request()->tahun;
+    $permohonan->dokumen_ke_luar_negara = request()->dokumen_ke_luar_negara;
+  }
+
+  public function updatePermohonan($id){
+    $this->validator(request()->all())->validate();
+
+    $this->update($id);
+    return redirect()->route('user.list');
+  }
 
 }
