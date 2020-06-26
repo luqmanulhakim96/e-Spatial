@@ -19,8 +19,8 @@ class User extends Authenticatable implements Auditable
      */
     protected $fillable = [
         'name', 'email', 'password', 'role', 'kategori', 'kad_pengenalan', 'kerakyatan',
-        'tarikh_lahir', 'tempat_lahir', 'jawatan', 'alamat_kediaman', 'nama_kementarian',
-        'alamat_kementarian', 'jenis_perniagaan', 'no_tel_rumah', 'no_tel_bimbit', 'status'
+        'tarikh_lahir', 'tempat_lahir', 'jawatan', 'alamat_kediaman', 'nama_kementerian',
+        'alamat_kementerian', 'jenis_perniagaan', 'no_tel_rumah', 'no_tel_bimbit', 'status'
     ];
 
     /**
