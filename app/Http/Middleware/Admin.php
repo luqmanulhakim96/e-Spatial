@@ -38,7 +38,7 @@ class Admin
 
         if (Auth::user()->role == 5) {
              // return $next($request);
-            return redirect()->route('user.halaman-utama');
+            return redirect()->route('user.mainMenu');
         }
     }
 }
