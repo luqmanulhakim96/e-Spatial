@@ -82,7 +82,7 @@ class RegisterController extends Controller
     {
         // dd($data);
         $hashed_random_password = Hash::make("1234567890");
-        // dd($hashed_random_password);
+        // dd($data);
         return User::create([
             'kategori' => $data['kategori'],
             'name' => $data['nama'],
@@ -114,6 +114,8 @@ class RegisterController extends Controller
         $this->validator($request->all())->validate();
 
         event(new Registered($user = $this->create($request->all())));
+
+        //send email here
 
         return redirect('/login');
     }
