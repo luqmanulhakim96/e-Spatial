@@ -12,39 +12,38 @@
                   <div class="card-body">
                       <div class="card-title">Senarai Surat</div>
                       <a class="btn btn-primary m-2" href="{{ route('senarai-surat.add') }}">Tambah Surat</a>
-                      <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
+                      <table class="table table-striped table-bordered" id="responsiveSuratTable" style="width:100%;">
                         <!-- Table head -->
                         <thead>
                             <tr>
                               <th class="all">ID</th>
-                              <th class="all">JENIS DATA</th>
-                              <th class="all">SAIZ DATA</th>
-                              <th class="all">NEGERI</th>
-                              <th class="all">TAHUN</th>
-                              <th class="all">HARGA ASAS (RM)</th>
-                              <th class="all">JUMLAH HARGA (RM)</th>
-                              <th class="all">ACTIONS</th>
+                              <th class="all">NO RUJUKAN</th>
+                              <th class="all">TARIKH</th>
+
+                              <th class="all">TARIKH CREATED</th>
+                              <th class="all">TARIKH DIPINDA</th>
+                              <th class="all">ACTION</th>
                             </tr>
                         </thead>
                         <!-- Table body -->
                         <tbody>
-                          {{-- @foreach($list as $data) --}}
-                          <tr>
-                            <td>{{-- $data->id  --}}</td>
-                            <td>{{-- $data->jenis_data  --}}</td>
-                            <td>{{-- $data->saiz_data  --}}</td>
-                            <td>{{-- $data->negeri  --}}</td>
-                            <td>{{-- $data->tahun  --}}</td>
-                            <td>{{-- $data->harga_asas  --}}</td>
-                            <td>{{-- $data->jumlah_harga  --}}</td>
-                            <td class="p-3">
-                                  <div class="d-flex flex-row justify-content-around align-items-center">
-                                      <!-- <a href="{{-- route('senarai-harga.edit', $data->id) --}}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a> -->
-                                      <!-- <a href="{{-- route('senarai-harga.delete', $data->id) --}}" class="btn btn-danger"><i class="fas fa-times-circle"></i></a> -->
-                                  </div>
-                            </td>
-                          </tr>
-                        {{-- @endforeach --}}
+                          @foreach($list as $data)
+                            <tr>
+                              <td>{{ $data->id  }}</td>
+                              <td>{{ $data->nombor_rujukan  }}</td>
+                              <td>{{ $data->tarikh  }}</td>
+                              <td>{{ $data->created_at  }}</td>
+                              <td>{{ $data->updated_at  }}</td>
+                              <td class="p-3">
+                                    <div class="d-flex flex-row justify-content-around align-items-center">
+                                        <a href="{{ route('senarai-surat.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="{{ route('senarai-surat.print', $data->id) }}" class="btn btn-success mr-1"><i class="fa fa-print"></i></a>
+                                        <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+
+                                    </div>
+                              </td>
+                            </tr>
+                          @endforeach
                         </tbody>
                       </table>
                   </div>

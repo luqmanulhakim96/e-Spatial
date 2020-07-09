@@ -14,17 +14,17 @@ class AddAdditionalDataIntoUsers extends Migration
     public function up()
     {
       Schema::table('users', function (Blueprint $table) {
-        $table->string('role')->default("5"); //0 = pentadbir sistem, 1 = penyokong 1, 2 = penyokong 2, 3 = Ketua Pengarah, 4 = Superadmin ,5 = pemohon 
-        $table->string('kategori'); //kementarian, agensi, penyelidik, ipt, orang awam
+        $table->string('role')->default("5"); //0 = pentadbir sistem, 1 = penyokong 1, 2 = penyokong 2, 3 = Ketua Pengarah, 4 = Superadmin ,5 = pemohon
+        $table->string('kategori')->nullable(); //kementarian, agensi, penyelidik, ipt, orang awam
         $table->string('kad_pengenalan')->unique();
-        $table->string('kerakyatan');
-        $table->date('tarikh_lahir');
-        $table->string('tempat_lahir');
+        $table->string('kerakyatan')->nullable();
+        $table->date('tarikh_lahir')->nullable();
+        $table->string('tempat_lahir')->nullable();
         $table->string('jawatan')->nullable();
-        $table->string('alamat_kediaman');
+        $table->string('alamat_kediaman')->nullable();
         $table->string('nama_kementarian')->nullable();
         $table->string('alamat_kementarian')->nullable();
-        $table->string('jenis_perniagaan');
+        $table->string('jenis_perniagaan')->nullable();
         $table->string('no_tel_rumah')->nullable();
         $table->string('no_tel_bimbit')->nullable();
       });

@@ -6,11 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\SenaraiSurat;
 use DB;
+use PDF;
+use Auth;
 
 class SenaraiSuratController extends Controller
 {
     public function view(){
-        return view('senarai-surat.list');
+        $list = SenaraiSurat::get();
+        return view('senarai-surat.list', compact('list'));
     }
 
     public function create(){
@@ -19,21 +22,21 @@ class SenaraiSuratController extends Controller
 
     public function edit($id){
       $info = SenaraiSurat::findOrFail($id);
-      return view('senarai-surat.edit', compact('info'));
+      $pemohon = Auth::user()->id;
+
+      return view('senarai-surat.edit', compact('info','pemohon'));
     }
 
     public function add(array $data){
       return SenaraiSurat::create([
-        'alamat_1' => $data['alamat_1'],
-        'alamat_2' => $data['alamat_2'],
-        'alamat_3' => $data['alamat_3'],
-        'poskod' => $data['poskod'],
-        'negeri' => $data['negeri'],
+        'nombor_rujukan' => $data['nombor_rujukan'],
+        'tarikh' => $data['tarikh'],
         'kandungan' => $data['kandungan'],
       ]);
     }
 
     public function submitForm(Request $request){
+      // dd(($request->all()));
       $this->validator($request->all())->validate();
 
       event($senaraiSurat = $this->add($request->all()));
@@ -43,11 +46,8 @@ class SenaraiSuratController extends Controller
 
     public function update($id){
       $senarai = SenaraiSurat::find($id);
-      $senarai->alamat_1 = request()->alamat_1;
-      $senarai->alamat_2 = request()->alamat_2;
-      $senarai->alamat_3 = request()->alamat_3;
-      $senarai->poskod = request()->poskod;
-      $senarai->negeri = request()->negeri;
+      $senarai->nombor_rujukan = request()->nombor_rujukan;
+      $senarai->tarikh = request()->tarikh;
       $senarai->kandungan = request()->kandungan;
       $senarai->save();
     }
@@ -62,13 +62,20 @@ class SenaraiSuratController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'alamat_1' => ['required', 'string'],
-            'alamat_2' => ['required', 'string'],
-            'alamat_3' => ['required', 'string'],
-            'poskod' => ['required', 'numeric',  'digits:5' ],
-            'negeri' => ['required', 'string'],
-            'kandungan' => ['required', 'string'],
+            'nombor_rujukan' => ['required', 'string'],
+            'tarikh' => ['required', 'date'],
+            'kandungan' => ['required', 'string']
         ]);
     }
 
+    public function print($id)
+    {
+        $surat = SenaraiSurat::find($id);
+
+        // $pdf = PDF::loadView('senarai-surat.pdf', compact(['surat']))->setPaper('a4');
+        // $pdf = PDF::loadHTML($surat->kandungan)->setPaper('a4');
+        $pdf = PDF::loadHTML($surat->kandungan)->setPaper('a4');
+
+        return $pdf->download('surat-' . $surat->created_at->format('d-m-Y') . '.pdf');
+    }
 }
