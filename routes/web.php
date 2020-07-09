@@ -63,10 +63,7 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/pengguna/delete/{id}','AdminController@delete')->name('superadmin.delete');
 
-
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
-
-
 
 });
 
