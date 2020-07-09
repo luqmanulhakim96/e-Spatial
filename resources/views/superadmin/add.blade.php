@@ -11,7 +11,7 @@
                 <div class="card rounded-lg">
                   <div class="card-body">
 
-                      <form action="{{route('senarai-harga.insert')}}" method="post">
+                      <form action="{{route('superadmin.submit')}}" method="post">
                         @csrf
                         <div class="card-title">Tambah Pengguna</div>
                           <!-- nama input -->
@@ -58,7 +58,7 @@
                           <div class="form-group">
                               <label for="tahun">Kad Pengenalan :</label>
                               <input type="text" class="form-control bg-light" name="kad_pengenalan" id="kad_pengenalan" aria-describedby="kad_pengenalan" placeholder="Masukkan Kad Pengenalan" value="{{ old('kad_pengenalan') }}">
-                              @error('tahun')
+                              @error('kad_pengenalan')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>
                               </div>

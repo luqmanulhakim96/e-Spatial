@@ -151,6 +151,14 @@ $(document).ready(function(){
     });
 
     // Responsive Data Table
+    let responsiveSuratTable = $("#responsiveSuratTable")
+    $(responsiveSuratTable).DataTable({
+        responsive : true,
+        scrollX: true,
+        order: [[ 0, "desc" ]],
+    });
+
+    // Responsive Data Table
     let list_permohonan_user = $("#list_permohonan_user")
     $(list_permohonan_user).DataTable({
         responsive : true,

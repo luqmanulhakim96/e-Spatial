@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 use App\User;
 use App\Audit;
@@ -49,6 +50,26 @@ class AdminController extends Controller
           'role' => ['required'],
           'kad_pengenalan' => ['required', 'string', 'max:12'],
       ]);
+  }
+
+  public function add(array $data){
+    $hashed_random_password = Hash::make("1234567890");
+
+    return User::create([
+      'kategori' => "JPSM",
+      'name' => $data['nama'],
+      'email' => $data['email'],
+      'kad_pengenalan' => $data['kad_pengenalan'],
+      'role' => $data['role'],
+      'password' => $hashed_random_password,
+    ]);
+  }
+
+  public function submitForm(Request $request){
+    // dd($request->all());
+    $this->validator($request->all())->validate();
+    event($user = $this->add($request->all()));
+    return redirect()->route('superadmin.list');
   }
 
   public function update($id){

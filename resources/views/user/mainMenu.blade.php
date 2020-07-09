@@ -1,19 +1,66 @@
-@extends('layouts.app')
+@extends('layouts.app_user')
 
 @section('content')
-    <div class="login-page d-flex flex-row justify-content-center align-items-center">
-        <!-- Login card -->
-        <!-- <div class="card rounded-sm mt-4 w-50 p-3"> -->
-        <div class="card rounded-sm mt-5 w-50 p-3">
-        <h5 class="card-header">Halaman Utama</h5>
 
-          <a class="btn btn-primary m-2" href="{{ route('user.add') }}">Permohonan Baru</a>
-          <a class="btn btn-primary m-2" href="{{ route('user.list') }}">Senarai Pemohonan</a>
+<div class="page-body p-4 text-dark">
+                
+                <!-- Small card component -->
+                <div class="card rounded-lg"> 
+                <div class="card-body">
+                      <div class="card-titleuser"><b>Selamat Datang Ke Portal Perhutanan Semenanjung Malaysia</b></div>
+                </div>
+                </div><br><br>
+                
+                
+                <div class="card rounded-lg"> 
+            <div class="card-body">
+                      <div class="card-title"><b>Tatacara Penggunaan Untuk Mengisi Permohonan.</b></div>
+                      <div class="card-title">1. Mendaftar masuk di Portal e-Spatial.</div>
+                      <div class="card-title">2. Klik Permohonan Baru untuk memohon data hutan.</div>
+                      <div class="card-title">3. Masukkan jenis data, jenis hutan, negeri, tahun dan memuatnaik lampiran yang berkaitan.</div>
+                      <div class="card-title">4. Klik Mohon untuk menghantar kepada JPSM untuk diproses.</div>
+                </div>
+            </div><br><br>
 
+            <div class="card rounded-lg">
+                  <div class="card-body">
 
+                      
+                      <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
+                        <!-- Table head -->
+                        <thead>
+                            <tr>
+                              <th class="all">ID</th>
+                              <th class="all">JENIS DATA</th>
+                              <th class="all">NEGERI</th>
+                              <th class="all">TAHUN</th>
+                            </tr>
+                        </thead>
+                        <!-- Table body -->
+                        <tbody>
+                          @foreach($list as $data)
+                          <tr>
+                            <td>{{ $data->id  }}</td>
+                            <td>{{ $data->jenis_data  }}</td>
+                            <td>{{ $data->negeri  }}</td>
+                            <td>{{ $data->tahun  }}</td>
+                          </tr>
+                          @endforeach
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+         
+  
 
-        </div>
-
+   
+                
+       
+                </div>
 
     </div>
+
+    
+    
 @endsection
+
