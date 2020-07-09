@@ -9,7 +9,7 @@
                 <!-- Pills Tab-->
                                     <div class="card rounded-lg">
                                         <div class="card-body">
-                                            <div class="card-title">Senarai Pemohon</div>
+                                            <div class="card-title">Senarai Pemohon </div>
 
 
 
@@ -28,31 +28,37 @@
                                             <!-- Tab content -->
                                             <div class="tab-content" id="pills-tabContent">
                                                 <div class="tab-pane fade show active" id="pills-baru" role="tabpanel" aria-labelledby="pills-baru-tab">
-                                                  <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
+                                                  <table class="table table-striped table-bordered" id="list_permohonan_baru" style="width: 100%;">
 
                                                     <thead>
                                                         <tr>
-                                                          <th class="all">NAMA</th>
+                                                          <th class="all">NAMA PEMOHON</th>
                                                           <th class="all">STATUS PERMOHONAN</th>
                                                           <th class="all">ATTACHMENT</th>
                                                           <th class="all">PRINT</th>
                                                         </tr>
                                                     </thead>
 
-                                                  </table>
-                                                </div>
-
-                                                <div class="tab-pane fade" id="pills-dalaman" role="tabpanel" aria-labelledby="pills-dalaman-tab">
-                                                  <table class="table table-striped table-bordered" id="responsiveDataTable2" style="width: 100%;">
-
-                                                    <thead>
-                                                        <tr>
-                                                          <th class="all">NAMA</th>
-                                                          <th class="all">STATUS PERMOHONAN</th>
-                                                          <th class="all">ATTACHMENT</th>
-                                                          <th class="all">PRINT</th>
-                                                        </tr>
-                                                    </thead>
+                                                    <tbody>
+                                                      @foreach($listPermohonanBaru as $data)
+                                                      <tr>
+                                                        <td>
+                                                          <a href="{{ route('permohonan.harga.view', $data->id) }}">{{ $data->user->name  }}</a>
+                                                        </td>
+                                                        <td>{{ $data->status_permohonan  }}</td>
+                                                        @if($data->attachment_pemohonan != NULL)
+                                                        <td>{{ $data->attachment_pemohonan}}</td>
+                                                        @else
+                                                        <td>Tiada</td>
+                                                        @endif
+                                                        <td class="p-3">
+                                                              <div class="d-flex flex-row justify-content-around align-items-center">
+                                                                  <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
+                                                              </div>
+                                                        </td>
+                                                      </tr>
+                                                      @endforeach
+                                                    </tbody>
 
                                                   </table>
                                                 </div>
@@ -68,17 +74,53 @@
                                                           <th class="all">PRINT</th>
                                                         </tr>
                                                     </thead>
+
+                                                    <tbody>
+                                                      @foreach($listPermohonanLulus as $data)
+                                                      <tr>
+                                                        <td>{{ $data->user->name  }}</td>
+                                                        <td>{{ $data->status_pembayaran  }}</td>
+                                                        @if($data->attachment_pemohonan != NULL)
+                                                        <td>{{ $data->attachment_pemohonan}}</td>
+                                                        @else
+                                                        <td>Tiada</td>
+                                                        @endif
+                                                        <td class="p-3">
+                                                              <div class="d-flex flex-row justify-content-around align-items-center">
+                                                                  <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
+                                                              </div>
+                                                        </td>
+                                                      </tr>
+                                                      @endforeach
+                                                    </tbody>
+
                                                   </table>
                                                 </div>
+
+                                                <div class="tab-pane fade" id="pills-dalaman" role="tabpanel" aria-labelledby="pills-dalaman-tab">
+                                                  <table class="table table-striped table-bordered" id="list_permohonan_lulus" style="width: 100%;">
+
+                                                    <thead>
+                                                        <tr>
+                                                          <th class="all">NAMA</th>
+                                                          <th class="all">STATUS PEMBAYARAN</th>
+                                                          <th class="all">ATTACHMENT</th>
+                                                          <th class="all">PRINT</th>
+                                                        </tr>
+                                                    </thead>
+                                                  </table>
+                                                </div>
+
+
 
 
                                             </div>
                                         </div>
                                     </div>
 
-      </div>
-  </div>
-</div>
+                            </div>
+                        </div>
+                      </div>
 
             </div>
         </main>

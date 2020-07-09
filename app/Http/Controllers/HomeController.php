@@ -10,6 +10,8 @@ use App\User;
 
 use App\SenaraiHarga;
 
+use App\Permohonan;
+
 class HomeController extends Controller
 {
     /**
@@ -34,17 +36,25 @@ class HomeController extends Controller
         return view('home', compact('nama'));
     }
 
-    public function senaraiPemohon(){
-      $listPemohon = User::get();
-      $loop = User::find(1)->count();
-      return view('permohonan.list', compact('listPemohon', 'loop'));
+    public function senaraiPermohonan(){
+      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->distinct()
+                            ->get();
+      $listPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')->get();
+
+      //$userDalaman = User::where('role','!=','5')->get();
+
+      // $listPermohonan = Permohonan::with('user')->where('status_permohonan', 'Sedang Diproses')->get();
+      // $listPermohonan = Permohonan::with([
+      //    'user' => function($q) use ($user){
+      //       $q->where('role','!=','5');
+      // }])->where('status_permohonan', 'Sedang Diproses')->get();
+      // dd($listPermohonan->user->role)
+
+      return view('permohonan.list', compact('listPermohonanBaru', 'listPermohonanLulus'));
     }
 
-    public function viewInformasiPemohon(){
-        $pemohon = User::find(1);
-        $loop =  User::find(1)->count();
-        return view('permohonan.view',  compact('pemohon','loop'));
-    }
+
 
     public function senaraiHarga(){
         $list = SenaraiHarga::get();

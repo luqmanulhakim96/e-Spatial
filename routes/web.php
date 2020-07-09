@@ -24,9 +24,11 @@ Route::middleware('admin')->group(function () {
   Route::get('/home', 'HomeController@index')->name('home');
 
   #route for Permohonan
-  Route::get('/permohonan/maklumat', 'HomeController@viewInformasiPemohon')->name('permohonan.view');
+  Route::get('/permohonan/maklumat/{id}', 'PermohonanController@viewInformasiPermohonan')->name('permohonan.view');
 
-  Route::get('/permohon/senarai', 'HomeController@senaraiPemohon')->name('permohonan.list');
+  Route::get('/permohonan/harga/{id}', 'PermohonanController@hargaPermohonan')->name('permohonan.harga.view');
+
+  Route::get('/permohonan/senarai/semua', 'HomeController@senaraiPermohonan')->name('permohonan.list');
 
   #route for Senarai Harga
   Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
@@ -48,6 +50,10 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/surat/edit/{id}', 'SenaraiSuratController@edit')->name('senarai-surat.edit');
 
+  Route::post('/surat/update/{id}', 'SenaraiSuratController@updateSurat')->name('senarai-surat.update');
+
+  Route::get('/surat/print/{id}', 'SenaraiSuratController@print')->name('senarai-surat.print');
+
   Route::post('/surat/submit', 'SenaraiSuratController@submitForm')->name('senarai-surat.submit');
 
   #route for super admin
@@ -61,10 +67,12 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/pengguna/delete/{id}','AdminController@delete')->name('superadmin.delete');
 
+  Route::post('/pengguna/submit', 'AdminController@submitForm')->name('superadmin.submit');
 
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
 
-
+  #edit surat route
+  \BWF\DocumentTemplates\DocumentTemplates::routes(InvoiceTemplatesController::class);
 
 });
 
@@ -75,6 +83,20 @@ Route::middleware('user')->group(function () {
   Route::get('/permohonan/senarai', 'UserController@list')->name('user.list');
 
   Route::get('/permohonan/baru', 'UserController@add')->name('user.add');
+
+  Route::get('/permohonan/jenisdata/{data}', 'UserController@getJenisData')->name('user.jenisdata');
+
+  Route::get('/permohonan/tahun/{data}', 'UserController@getTahun')->name('user.tahun');
+
+  Route::get('/permohonan/kategoriData/{data}/and/{dokumen}', 'UserController@getKategoriData')->name('user.kategoriData');
+
+  Route::get('/permohonan/negeri/{data}/and/{dokumen}/tahun/{tahun}', 'UserController@getNegeriFromTahun')->name('user.negeriTahun');
+
+  Route::get('/permohonan/negeri/{data}/and/{dokumen}/kategoriData/{kategori}', 'UserController@getNegeriFromKategoriData')->name('user.negeriKategoriData');
+
+  Route::get('/permohonan/fetchSenaraiHargaIdByTahun/jenisDokumen/{jenis_dokumen}/jenisData/{jenis_data}/tahun/{tahun}/negeri/{negeri}', 'UserController@getSenaraiHargaIdByTahun');
+
+  Route::get('/permohonan/fetchSenaraiHargaIdByKategoriData/jenisDokumen/{jenis_dokumen}/jenisData/{jenis_data}/kategoriData/{kategori_data}/negeri/{negeri}', 'UserController@getSenaraiHargaIdByKategoriData');
 
   Route::post('/permohonan/submit', 'UserController@submitForm')->name('user.submit');
 

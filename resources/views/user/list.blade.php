@@ -13,10 +13,10 @@
                         <!-- Table head -->
                         <thead>
                             <tr>
+                              <th class="all">JENIS DOKUMEN</th>
                               <th class="all">JENIS DATA</th>
-                              <th class="all">JENIS HUTAN</th>
                               <th class="all">NEGERI</th>
-                              <th class="all">TAHUN</th>
+                              <th class="all">TAHUN / KATEGORI DATA</th>
                               <th class="all">TARIKH PERMOHONAN</th>
                               <th class="all">STATUS PERMOHONAN</th>
                               <th class="all">STATUS PEMBAYARAN</th>
@@ -27,10 +27,10 @@
                         <tbody>
                           @foreach($list as $data)
                           <tr>
+                            <td>{{ $data->jenis_dokumen  }}</td>
                             <td>{{ $data->jenis_data  }}</td>
-                            <td>{{ $data->jenis_hutan  }}</td>
                             <td>{{ $data->negeri  }}</td>
-                            <td>{{ $data->tahun  }}</td>
+                            <td>{{ $data->tahun  }} {{ $data->kategori_data  }}</td>
                             <td>{{ Carbon\Carbon::parse($data->created_at)->format('d-m-Y H:i:s') }}</td>
                             <td>{{ $data->status_permohonan  }}</td>
                             <td>{{ $data->status_pembayaran  }}</td>

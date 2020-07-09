@@ -118,6 +118,12 @@ $(document).ready(function(){
     });
 
     // Responsive Data Table
+    let tableHarga = $("#tableHarga")
+    $(tableHarga).DataTable({
+        responsive : true
+    });
+
+    // Responsive Data Table
     let responsiveDataTable = $("#responsiveDataTable")
     $(responsiveDataTable).DataTable({
         responsive : true
@@ -143,12 +149,33 @@ $(document).ready(function(){
         scrollX: true,
         order: [[ 7, "desc" ]]
     });
+
+    // Responsive Data Table
+    let responsiveSuratTable = $("#responsiveSuratTable")
+    $(responsiveSuratTable).DataTable({
+        responsive : true,
+        scrollX: true,
+        order: [[ 0, "desc" ]],
+    });
+
     // Responsive Data Table
     let list_permohonan_user = $("#list_permohonan_user")
     $(list_permohonan_user).DataTable({
         responsive : true,
         order:[[4,"desc"]]
 
+    });
+
+    // Responsive Data Table
+    let list_permohonan_baru = $("#list_permohonan_baru")
+    $(list_permohonan_baru).DataTable({
+        responsive : true
+    });
+
+    // Responsive Data Table
+    let list_permohonan_lulus = $("#list_permohonan_lulus")
+    $(list_permohonan_lulus).DataTable({
+        responsive : true
     });
 
 
