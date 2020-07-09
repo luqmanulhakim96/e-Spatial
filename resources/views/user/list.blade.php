@@ -1,10 +1,9 @@
-@extends('layouts.app_user')
+@extends('layouts.app')
 @section('content')
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
                 <div class="page-heading border-bottom d-flex flex-row">
-                    <h5 class="font-weight-normal">Version 1</h5>
-                    <small class="mt-2 ml-2">Dashboard</small>
+
                 </div>
                 <!-- Small card component -->
 
@@ -16,10 +15,7 @@
                         <!-- Table head -->
                         <thead>
                             <tr>
-                              <th class="all">JENIS DOKUMEN</th>
-                              <th class="all">JENIS DATA</th>
-                              <th class="all">NEGERI</th>
-                              <th class="all">TAHUN / KATEGORI DATA</th>
+                              <th class="all">PERMOHONAN ID</th>
                               <th class="all">TARIKH PERMOHONAN</th>
                               <th class="all">STATUS PERMOHONAN</th>
                               <th class="all">STATUS PEMBAYARAN</th>
@@ -30,10 +26,7 @@
                         <tbody>
                           @foreach($list as $data)
                           <tr>
-                            <td>{{ $data->jenis_dokumen  }}</td>
-                            <td>{{ $data->jenis_data  }}</td>
-                            <td>{{ $data->negeri  }}</td>
-                            <td>{{ $data->tahun  }} {{ $data->kategori_data  }}</td>
+                            <td><a href="#" data-toggle="modal" data-target="#display_data_permohonan" data-value="{{ $data->id  }}">{{ $data->id  }}</a></td>
                             <td>{{ Carbon\Carbon::parse($data->created_at)->format('d-m-Y H:i:s') }}</td>
                             <td>{{ $data->status_permohonan  }}</td>
                             <td>{{ $data->status_pembayaran  }}</td>
@@ -46,6 +39,28 @@
                           @endforeach
                         </tbody>
                       </table>
+
+                      <div class="modal fade" id="display_data_permohonan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Senarai Data Yang Dipohon</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                              </div>
+                              <div class="modal-body">
+
+                                <p> {{}}</p>
+
+                              </div>
+                              <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              </div>
+                          </div>
+                          </div>
+                      </div>
+
                   </div>
                 </div>
             </div>
