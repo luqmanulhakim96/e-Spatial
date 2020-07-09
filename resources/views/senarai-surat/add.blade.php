@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+  </style>
             <!--Page Body part -->
             <div class="page-body p-4 text-dark">
                 <div class="page-heading border-bottom d-flex flex-row">
@@ -16,78 +17,40 @@
                           <div class="col-md-12">
                             <div class="card-title">Surat Baharu</div>
                               <!--jumlah harga input -->
-                              <div class="form-group">
-                                  <label for="jumlah_harga">Alamat 1</label>
-                                  <input type="text" class="form-control bg-light" name="alamat_1" id="alamat_1" aria-describedby="alamat_1" placeholder="" value="{{ old('alamat_1') }}">
-                                  <small id="alamat_1" class="form-text text-secondary"></small>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label for="nombor_rujukan">Nombor Rujukan</label>
+                                          <input type="text" class="form-control bg-light" name="nombor_rujukan" id="nombor_rujukan" aria-describedby="nombor_rujukan" placeholder="" value="{{ old('nombor_rujukan') }}">
+                                          <small id="nombor_rujukan" class="form-text text-secondary"></small>
+                                      </div>
+                                      @error('nombor_rujukan')
+                                      <div class="alert alert-danger">
+                                        <strong>{{ $message }}</strong>
+                                      </div>
+                                      @enderror
+                                  </div>
+                                  <div class="col-md-6">
+                                      <div class="form-group">
+                                          <label for="tarikh">Tarikh</label>
+                                          <input type="date" class="form-control bg-light" name="tarikh" id="tarikh" aria-describedby="tarikh" placeholder="" value="{{ old('tarikh') }}">
+                                          <small id="tarikh" class="form-text text-secondary"></small>
+                                      </div>
+                                      @error('tarikh')
+                                      <div class="alert alert-danger">
+                                        <strong>{{ $message }}</strong>
+                                      </div>
+                                      @enderror
+                                  </div>
                               </div>
-                              @error('alamat_1')
-                              <div class="alert alert-danger">
-                                <strong>{{ $message }}</strong>
-                              </div>
-                              @enderror
                           </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="jumlah_harga">Alamat 2</label>
-                                <input type="text" class="form-control bg-light" name="alamat_2" id="alamat_2" aria-describedby="alamat_2" placeholder="" value="{{ old('alamat_2') }}">
-                                <small id="alamat_2" class="form-text text-secondary"></small>
-                            </div>
-                            @error('alamat_2')
-                            <div class="alert alert-danger">
-                              <strong>{{ $message }}</strong>
-                            </div>
-                            @enderror
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="jumlah_harga">Alamat 3</label>
-                                <input type="text" class="form-control bg-light" name="alamat_3" id="alamat_3" aria-describedby="alamat_3" placeholder="" value="{{ old('alamat_3') }}">
-                                <small id="alamat_3" class="form-text text-secondary"></small>
-                            </div>
-                            @error('alamat_3')
-                            <div class="alert alert-danger">
-                              <strong>{{ $message }}</strong>
-                            </div>
-                            @enderror
-                          </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="jumlah_harga">Poskod</label>
-                                    <input type="text" class="form-control bg-light" name="poskod" id="poskod" aria-describedby="poskod" placeholder="" value="{{ old('poskod') }}">
-                                    <small id="poskod" class="form-text text-secondary"></small>
-                                </div>
-                                @error('poskod')
-                                <div class="alert alert-danger">
-                                  <strong>{{ $message }}</strong>
-                                </div>
-                                @enderror
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="jumlah_harga">Negeri</label>
-                                    <input type="text" class="form-control bg-light" name="negeri" id="negeri" aria-describedby="negeri" placeholder="" value="{{ old('negeri') }}">
-                                    <small id="negeri" class="form-text text-secondary"></small>
-                                </div>
-                                @error('negeri')
-                                <div class="alert alert-danger">
-                                  <strong>{{ $message }}</strong>
-                                </div>
-                                @enderror
-                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="kandungan">Kandungan</label>
-                                    <textarea type="text" class="form-control bg-light" name="kandungan" id="kandungan" aria-describedby="kandungan" placeholder="" form="senarai_surat_submit" value="{{ old('kandungan') }}" rows="10"></textarea>
-                                    <small id="kandungan" class="form-text text-secondary"></small>
+                              <div class="form-group form-inline justify-content-center">
+                                    <!-- <label for="testing">Kandungan</label> -->
+                                    <textarea type="text" class="form-control bg-light text-center" name="kandungan" id="kandungan" aria-describedby="kandungan" placeholder="" form="senarai_surat_submit">{{ old('kandungan') }}</textarea>
+                                    <small id="testing" class="form-text text-secondary"></small>
                                 </div>
                                 @error('kandungan')
                                 <div class="alert alert-danger">
@@ -105,4 +68,13 @@
                 </div>
             </div>
         </main>
+        <script>
+            tinymce.init({
+                selector:'#kandungan',
+                // inline: true5
+                width: 794,
+                // width: 794,
+                height: 1000,
+            });
+        </script>
 @endsection
