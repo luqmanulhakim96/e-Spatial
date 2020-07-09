@@ -178,6 +178,11 @@ $(document).ready(function(){
         responsive : true
     });
 
+    let list_permohonan_dalaman = $("#list_permohonan_dalaman")
+    $(list_permohonan_dalaman).DataTable({
+        responsive : true
+    });
+
 
     // Individual column searching  Data Table
 

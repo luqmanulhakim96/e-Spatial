@@ -37,8 +37,7 @@ class HomeController extends Controller
     }
 
     public function senaraiPermohonan(){
-      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
-                            ->distinct()
+      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')  
                             ->get();
       $listPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')->get();
 
