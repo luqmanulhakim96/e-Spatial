@@ -8,6 +8,7 @@ use App\Permohonan;
 use App\User;
 use App\SenaraiHarga;
 use App\DataPermohonan;
+
 use Auth;
 
 
@@ -17,8 +18,9 @@ class UserController extends Controller
   public function index()
   {
     $nama = User::find(1);
+    $list = SenaraiHarga::get();
     // dd($nama);
-      return view('user.mainMenu', compact('nama'));
+      return view('user.mainMenu', compact('nama', 'list'));
   }
 
   public function getSenaraiHargaIdByTahun($jenisDokumen, $jenisData, $tahun, $negeri){
