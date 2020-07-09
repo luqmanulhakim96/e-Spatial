@@ -1,10 +1,10 @@
-@extends('layouts.app_user')
+@extends('layouts.app_user2')
 
 @section('content')
-    <div class="login-page d-flex flex-row justify-content-center align-items-center">
+    <div class="login-pagenew d-flex flex-row justify-content-center align-items-center">
         <!-- Login card -->
         <!-- <div class="card rounded-sm mt-4 w-50 p-3"> -->
-        <div class="card rounded-sm mt-5 w-50 p-3">
+        <div class="card rounded-sm mt-0 w-50 p-3">
         <h5 class="card-header">Borang Pendaftaran Pemohon</h5>
         <div class="card-body">
         <!-- <div class="login-brand m-2 m-md-0 d-flex justify-content-center align-items-center"> -->

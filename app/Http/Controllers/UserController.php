@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Permohonan;
 use App\User;
+use App\SenaraiHarga;
 use Auth;
 
 class UserController extends Controller
@@ -13,8 +14,9 @@ class UserController extends Controller
   public function index()
   {
     $nama = User::find(1);
+    $list = SenaraiHarga::get();
     // dd($nama);
-      return view('user.mainMenu', compact('nama'));
+      return view('user.mainMenu', compact('nama', 'list'));
   }
 
   public function list(){

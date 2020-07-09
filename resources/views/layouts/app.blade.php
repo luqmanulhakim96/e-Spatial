@@ -31,9 +31,10 @@
         <div class="side-bar side-bar-lg-active" data-theme="purple">
             <!-- Brand details -->
             <div class="side-menu-brand d-flex flex-column justify-content-center align-items-center clear mt-3">
-                <img src="{{ asset('qbadminui/img/QbyteIcon.png') }}" alt="bran_name" class="brand-img">
+                <img src="{{ asset('https://www.atvadventurepark.com/images/hutan.png') }}" alt="bran_name" class="brand-img">
                 <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold">e-Spatial</a>
             </div>
+            @if(Auth::user())
             <!-- Side bar menu -->
             <div class="the_menu mt-5">
                 <!-- Heading -->
@@ -72,6 +73,8 @@
                     </ul>
                 </div>
             </div>
+
+            @endif
         </div>
 
         <!-- Main section -->
@@ -82,12 +85,14 @@
                 <div class="theme-pck">
                     <i class="fas fa-cog fa-lg"></i>
                 </div>
-                <p>Navbar:</p>
+                <p>Colour Theme:</p>
                 <div class="side-nav-themes d-flex flex-row">
                     <p class="p-3 rounded side-nav-theme-primary side-nav-theme" theme-color="purple"></p>
                     <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
                 </div>
             </div>
+			
+			
 
             <!-- The navbar -->
             <nav class="navbar navbar-expand navbar-light bg-light py-3">
@@ -228,7 +233,7 @@
 
     <!-- Footer section -->
     <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary">
-        <p>&copy; Copyright. <a href="https://qbytesoft.com" target="_Blank">Qbytesoft</a></p>
+        <p>&copy; Copyright. <a href="https://www.forestry.gov.my/my/" target="_Blank">Jabatan Perhutanan Semenanjung Malaysia</a></p>
         <p>Version 1.0.0</p>
     </footer>
   </div>

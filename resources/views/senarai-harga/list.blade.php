@@ -11,7 +11,7 @@
                 <div class="card rounded-lg">
                   <div class="card-body">
                       <div class="card-title">Senarai Harga</div>
-                      <a class="btn btn-primary m-2" href="{{ route('senarai-harga.add') }}">Tambah Senarai</a>
+                      <a class="btn btn-primarynew m-2" href="{{ route('senarai-harga.add') }}">Tambah Senarai</a>
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
                         <!-- Table head -->
                         <thead>
