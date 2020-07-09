@@ -1,23 +1,23 @@
-@extends('layouts.app_user')
+@extends('layouts.app_user2')
 
 @section('content')
     <!-- Main content start -->
     <div class="login-page d-flex flex-row justify-content-center align-items-center">
         <!-- Login card -->
         <div class="card mx-3 mx-md-0 border-0 rounded-lg">
-            <div class="card-body">
+            <div class="card-body" style="width:500px; height:auto;">
                 <!-- Row -->
                 <div class="row">
                     <!-- Left side -->
                     <!-- <div class="col-md-6 border-0 border-md-right"> -->
                     <div class="col-md-12">
                         <!-- Brand -->
-                        <div class="login-brand m-3 m-md-0 d-flex justify-content-center align-items-center">
-                            <img src="{{ asset('qbadminui/img/QbyteIcon.png') }}" alt="image" class="w-25">
+                        <div class="login-brand m-3 m-md d-flex justify-content-center align-items-center">
+                            <img src="{{ asset('https://eresearch.forestry.gov.my/static_files/images/logos/99wVeGrpFpy_qG7bZk30YtKiMEXzhPPK.png') }}" alt="image" class="w-25">
                         </div>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <h5 class="text-dark my-3">Log Masuk</h5>
+                            <h5 class="text-dark my-3" style="padding-top:20px;">Log Masuk</h5>
                             <!-- Email -->
                             <!-- <div class="form-group mb-2">
                                 <label for="email" class="text-muted">Email Address</label>
@@ -54,16 +54,21 @@
                                 <label for="my-input" class="custom-control-label">Remember me</label>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto">Masuk</button>
-
-                            <p class="text-center mt-3">
-                                @if (Route::has('password.request'))
-                                <a href="{{ route('password.request') }}" >Lupa Kata Laluan? Klik Sini</a>
-                                @endif
-                                <br>
-                                <a href="{{ route('register') }}">Daftar</p></a>
-                            </p>
+                            <button type="submit" class="btn btn-primary rounded m-1 btn-outline-primary badge-pill btn-block w-75 m-auto">Masuk</button>
+                            <br>
+                            
                         </form>
+                        <div class="btn btn-block w-75 m-auto">
+                        <div class="btn btn-primarynew rounded m-0">
+                                @if (Route::has('password.request'))
+                                <a href="{{ route('password.request') }}" >Lupa Kata Laluan?</a>
+                            </div>
+                            <div class="btn btn-primarynew rounded m-0">
+                                @endif
+                                <a href="{{ route('register') }}">Daftar</a>
+                            </div>
+
+                        </div>
                     </div>
                     <!-- Right side -->
                     <!-- <div class="col-md-6 d-flex flex-column justify-content-center align-items-center pt-3 pt-md-0">

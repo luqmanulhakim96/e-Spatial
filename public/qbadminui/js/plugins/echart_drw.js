@@ -19,7 +19,7 @@ if (echartElemBar) {
             borderRadius: 0,
             orient: 'horizontal',
             x: 'right',
-            data: ['Online', 'Offline']
+            data: ['Lulus', 'Gagal']
         },
         grid: {
             left: '8px',
@@ -47,11 +47,11 @@ if (echartElemBar) {
         yAxis: [{
             type: 'value',
             axisLabel: {
-                formatter: '${value}'
+                // formatter: '${value}'
             },
             min: 0,
-            max: 100000,
-            interval: 25000,
+            max: 1000,
+            interval: 250,
             axisLine: {
                 show: false
             },
@@ -62,12 +62,12 @@ if (echartElemBar) {
         }],
 
         series: [{
-            name: 'Online',
-            data: [35000, 69000, 22500, 60000, 50000, 50000, 30000, 80000, 70000, 60000, 20000, 30005],
+            name: 'Lulus',
+            data: [350, 690, 225, 600, 500, 500, 300, 800, 700, 600, 200, 305],
             label: { show: false, color: '#0168c1' },
             type: 'bar',
             barGap: 0,
-            color: '#bcbbdd',
+            color: '#003E61',
             smooth: true,
             itemStyle: {
                 emphasis: {
@@ -78,11 +78,11 @@ if (echartElemBar) {
                 }
             }
         }, {
-            name: 'Offline',
-            data: [45000, 82000, 35000, 93000, 71000, 89000, 49000, 91000, 80200, 86000, 35000, 40050],
+            name: 'Gagal',
+            data: [450, 820, 350, 930, 710, 890, 490, 910, 802, 860, 350, 450],
             label: { show: false, color: '#639' },
             type: 'bar',
-            color: '#7569b3',
+            color: '#86AED8',
             smooth: true,
             itemStyle: {
                 emphasis: {
@@ -106,24 +106,23 @@ var echartElemPie = document.getElementById('echartPie');
 if (echartElemPie) {
     var echartPie = echarts.init(echartElemPie);
     echartPie.setOption({
-        color: ['#62549c', '#7566b5', '#7d6cbb', '#8877bd', '#9181bd', '#6957af'],
+        color: ['#003E61', '#356187', '#5E87AF', '#86AFD9', '#B0D8FF'],
         tooltip: {
             show: true,
             backgroundColor: 'rgba(0, 0, 0, .8)'
         },
 
         series: [{
-            name: 'Sales by Country',
+            name: 'Permohonan Mengikut Negeri',
             type: 'pie',
             radius: '60%',
             center: ['50%', '50%'],
             data: [
-                { value: 535, name: 'USA' }, 
-                { value: 310, name: 'Brazil' }, 
-                { value: 234, name: 'France' }, 
-                { value: 155, name: 'BD' }, 
-                { value: 130, name: 'UK' }, 
-                { value: 348, name: 'India' }
+                { value: 535, name: 'Johor' }, 
+                { value: 310, name: 'Selangor' }, 
+                { value: 234, name: 'Perak' }, 
+                { value: 155, name: 'Pulau Pinang' }, 
+                { value: 130, name: 'Kedah' }
             ],
             itemStyle: {
                 emphasis: {
@@ -211,10 +210,10 @@ if (echartElem3) {
         series: [{
             data: [40, 80, 20, 90, 30, 80, 40, 90, 20, 80, 30, 45, 50, 110, 90, 140, 120, 135, 120, 140],
             lineStyle: _extends({
-                color: 'rgba(102, 51, 153, 0.8)',
-                width: 3
+                color: '#136C89',
+                width: 4
             }, echartOptions.lineShadow),
-            label: { show: true, color: '#212121' },
+            label: { show: true, color: '#6DC37D' },
             type: 'line',
             smooth: true,
             itemStyle: {
@@ -228,3 +227,68 @@ if (echartElem3) {
         }, 500);
     });
 }
+
+// DonutChart in Dashboard version 1
+var echartElemPie = document.getElementById('donutChart');
+if (echartElemPie) {
+    var echartPie = echarts.init(echartElemPie);
+    echartPie.setOption({
+        color: ['#003E61', '#356187', '#5E87AF', '#86AFD9'],
+        tooltip: {
+            show: true,
+            backgroundColor: 'rgba(0, 0, 0, .8)'
+        },
+
+        series: [{
+            name: 'Permohonan',
+            type: 'pie',
+            radius: '60%',
+            center: ['50%', '50%'],
+            data: [
+                { value: 535, name: 'Jumlah Diterima' }, 
+                { value: 310, name: 'Jumlah Lulus' }, 
+                { value: 234, name: 'Jumlah Gagal' }, 
+                { value: 155, name: 'Jumlah Pengguna' }, 
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }]
+    });
+    $(window).on('resize', function () {
+        setTimeout(function () {
+            echartPie.resize();
+        }, 500);
+    });
+}
+
+//linechart
+var echartElem3 = document.getElementById('echart4');
+if (echartElem3) {
+    var echart4 = echarts.init(echartElem3);
+    echart4.setOption(_extends({}, echartOptions.lineNoAxis, {
+        series: [{
+            data: [40, 80, 20, 90, 30, 80, 40, 90, 20, 80, 30, 45, 50],
+            lineStyle: _extends({
+                color: '#136C89',
+                width: 4
+            }, echartOptions.lineShadow),
+            label: { show: true, color: '#6DC37D' },
+            type: 'line',
+            smooth: true,
+            itemStyle: {
+                borderColor: 'rgba(102, 51, 153, 1)'
+            }
+        }]
+    }));
+    $(window).on('resize', function () {
+        setTimeout(function () {
+            echart4.resize();
+        }, 500);
+    });
+}
+

@@ -50,6 +50,10 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/surat/edit/{id}', 'SenaraiSuratController@edit')->name('senarai-surat.edit');
 
+  Route::post('/surat/update/{id}', 'SenaraiSuratController@updateSurat')->name('senarai-surat.update');
+
+  Route::get('/surat/print/{id}', 'SenaraiSuratController@print')->name('senarai-surat.print');
+
   Route::post('/surat/submit', 'SenaraiSuratController@submitForm')->name('senarai-surat.submit');
 
   #route for super admin
@@ -62,6 +66,8 @@ Route::middleware('admin')->group(function () {
   Route::post('/pengguna/update/{id}', 'AdminController@updateUser')->name('superadmin.update');
 
   Route::get('/pengguna/delete/{id}','AdminController@delete')->name('superadmin.delete');
+
+  Route::post('/pengguna/submit', 'AdminController@submitForm')->name('superadmin.submit');
 
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
 
