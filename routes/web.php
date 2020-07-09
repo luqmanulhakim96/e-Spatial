@@ -71,9 +71,6 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
 
-  #edit surat route
-  \BWF\DocumentTemplates\DocumentTemplates::routes(InvoiceTemplatesController::class);
-
 });
 
 Route::middleware('user')->group(function () {
