@@ -37,7 +37,7 @@ class HomeController extends Controller
     }
 
     public function senaraiPermohonan(){
-      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')  
+      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->get();
       $listPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')->get();
 
@@ -56,7 +56,8 @@ class HomeController extends Controller
 
 
     public function senaraiHarga(){
-        $list = SenaraiHarga::get();
+        $list = SenaraiHarga::where('status','Aktif')
+                  ->get();
         // $loop = SenaraiHarga::find(1)->count();
         // $list = DB::table('senarai_hargas')->get();
         // dd($list);

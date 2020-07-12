@@ -16,7 +16,7 @@
                         @csrf
                         <!-- jenis dokumen input-->
                         <div class="form-group">
-                            <label for="jenis_dokumen">Jenis Data:</label>
+                            <label for="jenis_dokumen">Jenis Dokumen:</label>
                               <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showSaizData(this)">
                                   <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                   <option value="Bercetak" {{ $info->jenis_dokumen == "Bercetak" ? 'selected' : '' }}>Bercetak</option>
@@ -37,12 +37,47 @@
                             <input type="text" class="form-control bg-light" name="saiz_data" id="saiz_data" aria-describedby="saiz_data" placeholder="Masukkan Saiz Data (MB)" value="{{ $info->saiz_data  }}">
                             <small id="actionBarName1Help" class="form-text text-secondary">Size data dalam format MB (Contoh: 120.2)</small>
                         </div>
+                        @else
+                        <!-- jenis data input-->
+                        <div class="form-group" id="jenis_kertas_div">
+                            <label for="jenis_kertas">Jenis Kertas:</label>
+                              <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas">
+                                  <option value="" selected disabled hidden>Pilih Jenis Data</option>
+                                  <option value="A0" {{ $info->jenis_kertas == "A0" ? 'selected' : '' }}>A0</option>
+                                  <option value="A1" {{ $info->jenis_kertas == "A1" ? 'selected' : '' }}>A1</option>
+                                  <option value="A2" {{ $info->jenis_kertas == "A2" ? 'selected' : '' }}>A2</option>
+                                  <option value="A3" {{ $info->jenis_kertas == "A3" ? 'selected' : '' }}>A3</option>
+                                  <option value="A4" {{ $info->jenis_kertas == "A4" ? 'selected' : '' }}>A4</option>
+                              </select>
+                              @error('jenis_kertas')
+                              <div class="alert alert-danger">
+                                <strong>{{ $message }}</strong>
+                              </div>
+                              @enderror
+                        </div>
                         @endIf
 
                         <div class="form-group" id="saiz_data_div" style="display: none;">
                             <label for="actionBarName1">Saiz Data:</label>
                             <input type="text" class="form-control bg-light" name="saiz_data" id="saiz_data" aria-describedby="saiz_data" placeholder="Masukkan Saiz Data (MB)" value="{{ $info->saiz_data  }}">
                             <small id="actionBarName1Help" class="form-text text-secondary">Size data dalam format MB (Contoh: 120.2)</small>
+                        </div>
+
+                        <div class="form-group" id="jenis_kertas_div" style="display: none;">
+                            <label for="jenis_kertas">Jenis Kertas:</label>
+                              <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas">
+                                  <option value="" selected disabled hidden>Pilih Jenis Data</option>
+                                  <option value="A0" {{ $info->jenis_kertas == "A0" ? 'selected' : '' }}>A0</option>
+                                  <option value="A1" {{ $info->jenis_kertas == "A1" ? 'selected' : '' }}>A1</option>
+                                  <option value="A2" {{ $info->jenis_kertas == "A2" ? 'selected' : '' }}>A2</option>
+                                  <option value="A3" {{ $info->jenis_kertas == "A3" ? 'selected' : '' }}>A3</option>
+                                  <option value="A4" {{ $info->jenis_kertas == "A4" ? 'selected' : '' }}>A4</option>
+                              </select>
+                              @error('jenis_kertas')
+                              <div class="alert alert-danger">
+                                <strong>{{ $message }}</strong>
+                              </div>
+                              @enderror
                         </div>
 
                         <!-- jenis data input-->
@@ -149,7 +184,7 @@
                               <small id="actionBarName1Help" class="form-text text-secondary">Contoh: 120.20</small>
                           </div>
 
-                          <button type="submit" class="btn btn-primary">Edit</button>
+                          <button type="submit" class="btn btn-primary">Edit Data</button>
 
                       </form>
 
@@ -160,9 +195,12 @@
         function showSaizData(select){
           if(select.value=='Bercetak'){
             document.getElementById('saiz_data_div').style.display = "none";
+            document.getElementById('jenis_kertas_div').style.display = "block";
+
           }
           else if (select.value=='Vektor Shapefile') {
             document.getElementById('saiz_data_div').style.display = "block";
+            document.getElementById('jenis_kertas_div').style.display = "none";
           }
         }
         function showDiv(select){
