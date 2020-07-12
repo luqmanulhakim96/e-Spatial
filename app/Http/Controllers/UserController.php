@@ -18,7 +18,9 @@ class UserController extends Controller
   public function index()
   {
     $nama = User::find(1);
-    $list = SenaraiHarga::get();
+    $list = SenaraiHarga::where('status','Aktif')
+              ->distinct()
+              ->get();
     // dd($nama);
       return view('user.mainMenu', compact('nama', 'list'));
   }
@@ -71,9 +73,10 @@ class UserController extends Controller
       exit;
   }
 
-  public function getTahun($jenisData){
+  public function getTahun($jenisData, $jenisDokumen){
     $tahun = SenaraiHarga::select('tahun')
               ->where('jenis_data', $jenisData)
+              ->where('jenis_dokumen', $jenisDokumen)
               ->distinct()
               ->get();
     echo json_encode($tahun);
@@ -112,6 +115,32 @@ class UserController extends Controller
     exit;
   }
 
+  public function getJenisKertasFromTahun($jenisData,$jenisDokumen,$tahun,$negeri){
+    $jenisKertas = SenaraiHarga::select('jenis_kertas')
+                ->where('jenis_data', $jenisData)
+                ->where('jenis_dokumen', $jenisDokumen)
+                ->where('tahun', $tahun)
+                ->where('negeri', $negeri)
+                ->distinct()
+                ->get();
+    echo json_encode($jenisKertas);
+    exit;
+  }
+
+public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategoriData,$negeri){
+    $jenisKertas = SenaraiHarga::select('jenis_kertas')
+                ->where('jenis_data', $jenisData)
+                ->where('jenis_dokumen', $jenisDokumen)
+                ->where('kategori_data', $kategoriData)
+                ->where('negeri', $negeri)
+                ->distinct()
+                ->get();
+    echo json_encode($jenisKertas);
+    exit;
+  }
+
+
+
 
   public function create(array $data){
     $user_id = Auth::user()->id;
@@ -119,6 +148,7 @@ class UserController extends Controller
 
 
     return Permohonan::Create([
+      'attachment_aoi' => $data['attachment_aoi'],
       'attachment_permohonan' => $data['attachment_permohonan'],
       'dokumen_ke_luar_negara' => $data['dokumen_ke_luar_negara'],
       'maklumat_agensi_dan_negara' => $data['maklumat_agensi_dan_negara'],
@@ -148,6 +178,8 @@ class UserController extends Controller
   protected function validator(array $data)
   {
       return Validator::make($data, [
+          'attachment_aoi' => ['nullable'],
+          'attachment_permohonan' => ['nullable'],
           'dokumen_ke_luar_negara' => ['required'],
       ]);
   }
@@ -174,8 +206,9 @@ class UserController extends Controller
 
   public function edit($id){
     $info = Permohonan::findOrFail($id);
-
-    return view('user.edit', compact('info'));
+    $data = DataPermohonan::where('permohonan_id', $id)->get();
+    dd($data);
+    return view('user.edit', compact('info','data'));
   }
 
   public function update($id){

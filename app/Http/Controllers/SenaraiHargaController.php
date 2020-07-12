@@ -30,7 +30,7 @@ class SenaraiHargaController extends Controller
     if($data['saiz_data'] != NULL){
       $jumlah_harga = $data['saiz_data'] * $data['harga_asas'];
     }else{
-      $jumlah_harga = 1 * $data['harga_asas'];
+      $jumlah_harga = $data['harga_asas'];
     }
 
     $kategori_data_exist = isset($data['kategori_data']);
@@ -39,16 +39,19 @@ class SenaraiHargaController extends Controller
     }else {
       $kategori_data_exist = $data['kategori_data'];
     }
+    $status = 'Aktif';
     // dd($kategori_data_exist);
     return SenaraiHarga::create([
       'jenis_dokumen' => $data['jenis_dokumen'],
-      'jenis_data' => $data['jenis_data'],
       'saiz_data' => $data['saiz_data'],
+      'jenis_kertas' => $data['jenis_kertas'],
+      'jenis_data' => $data['jenis_data'],
       'negeri' => $data['negeri'],
       'tahun' => $data['tahun'],
       'harga_asas' => $data['harga_asas'],
       'jumlah_harga' => $jumlah_harga,
-      'kategori_data' => $kategori_data_exist
+      'kategori_data' => $kategori_data_exist,
+      'status' => $status,
     ]);
   }
 
@@ -56,8 +59,9 @@ class SenaraiHargaController extends Controller
   {
       return Validator::make($data, [
           'jenis_dokumen' => ['required'],
-          'jenis_data' => ['required'],
           'saiz_data' => ['nullable', 'numeric'],
+          'jenis_kertas' => ['nullable'],
+          'jenis_data' => ['required'],
           'tahun' => ['nullable', 'numeric', 'digits:4'],
           'negeri' => ['required'],
           'harga_asas' => ['required', 'numeric'],
@@ -67,7 +71,7 @@ class SenaraiHargaController extends Controller
 
   public function insertHarga(Request $request){
     $this->validator($request->all())->validate();
-
+    //dd($request);
     event($senaraiHarga = $this->createHarga($request->all()));
 
     return redirect()->route('senarai-harga.list');
@@ -78,31 +82,31 @@ class SenaraiHargaController extends Controller
     $tahun = request()->tahun;
     $kategori_data = request()->kategori_data;
 
-    if(request()->saiz_data != NULL){
-      $jumlah_harga = request()->saiz_data * request()->harga_asas;
-    }else{
-      $jumlah_harga = 1 * request()->harga_asas;
-    }
-
+    $senaraiHarga = SenaraiHarga::find($id);
+    //nullification data
+    $senaraiHarga->saiz_data = null;
+    $senaraiHarga->jenis_kertas = null;
+    $senaraiHarga->tahun = null;
+    $senaraiHarga->kategori_data = null;
+    //update data
+    $senaraiHarga->jenis_dokumen = request()->jenis_dokumen;
 
     if(request()->jenis_dokumen == 'Bercetak'){
-      $saiz_data = null;
+      $senaraiHarga->jenis_kertas = request()->jenis_kertas;
+      $jumlah_harga =request()->harga_asas;
     }else {
-      $saiz_data = request()->saiz_data;
+      $senaraiHarga->saiz_data = request()->saiz_data ;
+      $jumlah_harga = request()->saiz_data * request()->harga_asas;
     }
 
-    if(request()->jenis_data == 'Petak Kajian'){
-      $tahun = null;
-    }elseif (request()->jenis_data != 'Petak Kajian') {
-      $kategori_data = null;
-    }
-
-    $senaraiHarga = SenaraiHarga::find($id);
-    $senaraiHarga->jenis_dokumen = request()->jenis_dokumen;
-    $senaraiHarga->saiz_data = $saiz_data;
     $senaraiHarga->jenis_data = request()->jenis_data;
-    $senaraiHarga->tahun = $tahun;
-    $senaraiHarga->kategori_data = $kategori_data;
+
+    if (request()->jenis_data == 'Petak Kajian') {
+      $senaraiHarga->kategori_data = $kategori_data;
+    }
+    else {
+      $senaraiHarga->tahun = $tahun;
+    }
     $senaraiHarga->negeri = request()->negeri;
     $senaraiHarga->harga_asas = request()->harga_asas;
     $senaraiHarga->jumlah_harga = $jumlah_harga;
@@ -120,7 +124,8 @@ class SenaraiHargaController extends Controller
 
   public function deleteHarga($id){
       $senaraiHarga = SenaraiHarga::find($id);
-      $senaraiHarga-> delete();
+      $senaraiHarga->status = 'Tidak Aktif';
+      $senaraiHarga->save();
       return redirect()->route('senarai-harga.list');
   }
 }

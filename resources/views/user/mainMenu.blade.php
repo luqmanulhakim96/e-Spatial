@@ -3,16 +3,16 @@
 @section('content')
 
 <div class="page-body p-4 text-dark">
-                
+
                 <!-- Small card component -->
-                <div class="card rounded-lg"> 
+                <div class="card rounded-lg">
                 <div class="card-body">
                       <div class="card-titleuser"><b>Selamat Datang Ke Portal Perhutanan Semenanjung Malaysia</b></div>
                 </div>
                 </div><br><br>
-                
-                
-                <div class="card rounded-lg"> 
+
+
+                <div class="card rounded-lg">
             <div class="card-body">
                       <div class="card-title"><b>Tatacara Penggunaan Untuk Mengisi Permohonan.</b></div>
                       <div class="card-title">1. Mendaftar masuk di Portal e-Spatial.</div>
@@ -25,12 +25,13 @@
             <div class="card rounded-lg">
                   <div class="card-body">
 
-                      
+
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
                         <!-- Table head -->
                         <thead>
                             <tr>
-                              <th class="all">ID</th>
+
+                              <th class="all">JENIS DOKUMEN</th>
                               <th class="all">JENIS DATA</th>
                               <th class="all">NEGERI</th>
                               <th class="all">TAHUN</th>
@@ -40,7 +41,8 @@
                         <tbody>
                           @foreach($list as $data)
                           <tr>
-                            <td>{{ $data->id  }}</td>
+
+                            <td>{{ $data->jenis_dokumen  }}</td>
                             <td>{{ $data->jenis_data  }}</td>
                             <td>{{ $data->negeri  }}</td>
                             <td>{{ $data->tahun  }}</td>
@@ -50,17 +52,16 @@
                       </table>
                   </div>
                 </div>
-         
-  
 
-   
-                
-       
+
+
+
+
+
                 </div>
 
     </div>
 
-    
-    
-@endsection
 
+
+@endsection
