@@ -330,7 +330,7 @@
                       console.log("Error: " + errorThrown);
                     }
                   });
-                }else if (kategori_data != null) {
+                }else if (kategori_data) {
                   //tahun = null;
                   //2nd Ajax for kategori data
                   $.ajax({
@@ -373,12 +373,12 @@
                               '</td><td><a onClick="removeData(this, '+ counter_data  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }
-                          str_to_append = '<div><input type="text" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data[0].id +'"></div>';
+                          //console.log(data.id);
+                          str_to_append = '<div><input type="text" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
                           counter_data++;
                           document.getElementById("counter_data").value = counter_data;
-                          //$("#counter_data").append(counter_data);
-                          //console.log(counter_data);
-                          //$("#permohonan_data").append(str_to_append);
+                          $("#counter_data").append(counter_data);
+                          $("#permohonan_data").append(str_to_append);
                         })
                       })
                     }
@@ -612,7 +612,7 @@
 
             $.ajax({
               type:"get",
-              url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + tahun + "/and/" + negeri,
+              url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + tahun + "/and/" + negeri + "/tahun",
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -632,10 +632,10 @@
               }
             })
           }
-          else if(kategori_data){
+          if(kategori_data){
             $.ajax({
               type:"get",
-              url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + kategori_data + "/and/" + negeri,
+              url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + kategori_data + "/and/" + negeri + "/kategori_data",
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -653,8 +653,6 @@
                   console.log("Error: " + errorThrown);
               }
             })
-          }else {
-            $("#jenis_kertas").append('<option value="">No Data</option>');
           }
         });
         </script>

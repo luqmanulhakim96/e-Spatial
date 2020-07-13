@@ -33,18 +33,27 @@ class SenaraiHargaController extends Controller
       $jumlah_harga = $data['harga_asas'];
     }
 
+    //check weather input text exist or not
     $kategori_data_exist = isset($data['kategori_data']);
     if(!$kategori_data_exist){
       $kategori_data_exist = null;
     }else {
       $kategori_data_exist = $data['kategori_data'];
     }
+
+    $jenis_kertas_exist = isset($data['jenis_kertas']);
+    if(!$jenis_kertas_exist){
+      $jenis_kertas_exist = null;
+    }else {
+      $jenis_kertas_exist = $data['jenis_kertas'];
+    }
+    //initialize status
     $status = 'Aktif';
     // dd($kategori_data_exist);
     return SenaraiHarga::create([
       'jenis_dokumen' => $data['jenis_dokumen'],
       'saiz_data' => $data['saiz_data'],
-      'jenis_kertas' => $data['jenis_kertas'],
+      'jenis_kertas' => $jenis_kertas_exist,
       'jenis_data' => $data['jenis_data'],
       'negeri' => $data['negeri'],
       'tahun' => $data['tahun'],
@@ -88,9 +97,10 @@ class SenaraiHargaController extends Controller
     $senaraiHarga->jenis_kertas = null;
     $senaraiHarga->tahun = null;
     $senaraiHarga->kategori_data = null;
+
     //update data
     $senaraiHarga->jenis_dokumen = request()->jenis_dokumen;
-
+    
     if(request()->jenis_dokumen == 'Bercetak'){
       $senaraiHarga->jenis_kertas = request()->jenis_kertas;
       $jumlah_harga =request()->harga_asas;
