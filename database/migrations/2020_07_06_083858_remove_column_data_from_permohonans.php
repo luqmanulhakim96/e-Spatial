@@ -33,8 +33,8 @@ class RemoveColumnDataFromPermohonans extends Migration
             $table->string('tahun')->nullable();
             $table->string('kategori_data')->nullable();
             $table->string('negeri');
-            $table->bigInteger('senarai_harga_id')->unsigned()->nullable();
-            $table->foreign('senarai_harga_id')->references('id')->on('senarai_hargas');
+            //$table->bigInteger('senarai_harga_id')->unsigned()->nullable();
+            //$table->foreign('senarai_harga_id')->references('id')->on('senarai_hargas');
             $table->dropColumn('maklumat_agensi_dan_negara');
         });
     }

@@ -47,7 +47,40 @@ class PermohonanController extends Controller
   }
 
   public function updateHarga($id, Request $request){
+    $this->validator($request->all())->validate();
 
+    $test = $request->all();
+
+    $countData = count($request->saiz_data);
+
+    //calculate total price for all data
+    $jumlah = 0.00;
+    for ($i = 0; $i < $countData; $i++) {
+      //dd($test['harga_asas'][0]) ;
+      //$jumlah = $jumlah + $test['saiz_data'];
+      $jumlah = $jumlah + ($test['harga_asas'][$i] * $test['saiz_data'][$i]);
+    }
+
+    //add harga aoi into jumlah
+    if(isset($request->harga_aoi)){
+      $jumlah = $jumlah + $request->harga_aoi;
+
+    }
+
+    //add harga tambahan into jumlah
+    if(isset($request->harga_lain)){
+      $jumlah = $jumlah + $request->harga_lain;
+
+    }
+
+    //update data into DB
+    $permohonan = Permohonan::findOrFail($id);
+
+    $permohonan->jumlah_bayaran = $jumlah;
+
+    $permohonan->save();
+
+    //route to next page
     return $this->viewInformasiPermohonan($id);
   }
 

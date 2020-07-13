@@ -95,9 +95,9 @@ Route::middleware('user')->group(function () {
 
   Route::get('/permohonan/negeri/{data}/and/{dokumen}/kategoriData/{kategori}', 'UserController@getNegeriFromKategoriData')->name('user.negeriKategoriData');
 
-  Route::get('/permohonan/jenisKertas/{data}/and/{dokumen}/and/{tahun}/and/{negeri}', 'UserController@getJenisKertasFromTahun')->name('user.tahunKategoriData');
+  Route::get('/permohonan/jenisKertas/{data}/and/{dokumen}/and/{tahun}/and/{negeri}/tahun', 'UserController@getJenisKertasFromTahun')->name('user.tahunKategoriData');
 
-  Route::get('/permohonan/jenisKertas/{data}/and/{dokumen}/and/{kategori}/and/{negeri}', 'UserController@getJenisKertasFromKategoriData')->name('user.jenisKertasKategoriData');
+  Route::get('/permohonan/jenisKertas/{data}/and/{dokumen}/and/{kategori}/and/{negeri}/kategori_data', 'UserController@getJenisKertasFromKategoriData')->name('user.jenisKertasKategoriData');
 
   Route::get('/permohonan/fetchSenaraiHargaIdByTahun/jenisDokumen/{jenis_dokumen}/jenisData/{jenis_data}/tahun/{tahun}/negeri/{negeri}', 'UserController@getSenaraiHargaIdByTahun');
 
