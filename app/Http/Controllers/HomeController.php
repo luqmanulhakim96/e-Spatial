@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use DB;
 
+use Auth;
+
 use App\User;
 
 use App\SenaraiHarga;
@@ -37,9 +39,27 @@ class HomeController extends Controller
     }
 
     public function senaraiPermohonan(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
       $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->get();
       $listPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')->get();
+
+      // $listPermohonanDalaman = Permohonan::whereHas('user', function($q) use($user_id) {
+      //   $q->where('kategori', '=', 'dalaman');
+      //   $q->where('id', '=', '2');
+      // })->get();
+
+      $listPermohonanDalaman = Permohonan::whereHas('user', function($q) use($user_id) {
+        $q->where('kategori', '=', 'dalaman');
+      })->get();
+      //dd($listPermohonanDalaman);
+
+      // $listPermohonanDalaman = DB::select(DB::raw("SELECT * from permohonans permohonans, users users WHERE permohonans.user_id = users.id AND users.kategori = 'dalaman'"));
+      //dd($listPermohonanDalaman[0]);
+      //dd($listPermohonanBaru);
 
       //$userDalaman = User::where('role','!=','5')->get();
 
@@ -50,7 +70,7 @@ class HomeController extends Controller
       // }])->where('status_permohonan', 'Sedang Diproses')->get();
       // dd($listPermohonan->user->role)
 
-      return view('permohonan.list', compact('listPermohonanBaru', 'listPermohonanLulus'));
+      return view('permohonan.list', compact('listPermohonanBaru', 'listPermohonanLulus', 'listPermohonanDalaman', 'userInfo' ));
     }
 
 

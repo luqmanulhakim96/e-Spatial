@@ -34,23 +34,32 @@
                                                         <tr>
                                                           <th class="all">NAMA PEMOHON</th>
                                                           <th class="all">STATUS PERMOHONAN</th>
-                                                          <th class="all">ATTACHMENT</th>
+                                                          <th class="all">ATTACHMENT PERMOHONAN</th>
                                                           <th class="all">PRINT</th>
                                                         </tr>
                                                     </thead>
 
                                                     <tbody>
-                                                      @foreach($listPermohonanBaru as $data)
+                                                      @foreach($listPermohonanBaru as $baru)
                                                       <tr>
+                                                        @if($userInfo->role != 0)
                                                         <td>
-                                                          <a href="{{ route('permohonan.harga.view', $data->id) }}">{{ $data->user->name  }}</a>
+                                                          <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
                                                         </td>
-                                                        <td><span class="badge badge-warning badge-pill">{{ $data->status_permohonan  }}</span></td>
-                                                        @if($data->attachment_pemohonan != NULL)
-                                                        <td>{{ $data->attachment_pemohonan}}</td>
                                                         @else
-                                                        <td>Tiada</td>
+                                                          @if($baru->jumlah_bayaran == 0.00)
+                                                          <td>
+                                                            <a href="{{ route('permohonan.harga.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @else
+                                                          <td>
+                                                            <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @endif
+
                                                         @endif
+                                                        <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
+                                                        <td>{{ $baru->attachment_permohonan}}</td>
                                                         <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
@@ -69,6 +78,7 @@
                                                     <thead>
                                                         <tr>
                                                           <th class="all">NAMA</th>
+                                                          <th class="all">STATUS PERMOHONAN</th>
                                                           <th class="all">STATUS PEMBAYARAN</th>
                                                           <th class="all">ATTACHMENT</th>
                                                           <th class="all">PRINT</th>
@@ -76,15 +86,12 @@
                                                     </thead>
 
                                                     <tbody>
-                                                      @foreach($listPermohonanLulus as $data)
+                                                      @foreach($listPermohonanLulus as $lulus)
                                                       <tr>
-                                                        <td>{{ $data->user->name  }}</td>
-                                                        <td>{{ $data->status_pembayaran  }}</td>
-                                                        @if($data->attachment_pemohonan == NULL)
-                                                        <td>{{ $data->attachment_pemohonan}}</td>
-                                                        @else
-                                                        <td>Tiada</td>
-                                                        @endif
+                                                        <td>{{ $lulus->user->name  }}</td>
+                                                        <td><span class="badge badge-success badge-pill">{{ $lulus->status_permohonan  }}</span></td>
+                                                        <td><span class="badge badge-warning badge-pill">{{ $lulus->status_pembayaran  }}</span></td>
+                                                        <td>{{ $lulus->attachment_permohonan}}</td>
                                                         <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
@@ -109,25 +116,19 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                      @foreach($listPermohonanLulus as $data)
+                                                      @foreach($listPermohonanDalaman as $dalaman)
                                                       <tr>
-                                                        <td>
-                                                          <a href="#">{{ $data->user->name  }}</a>
-                                                        </td>
-                                                        <td>{{ $data->status_pembayaran  }}</td>
-                                                        @if($data->attachment_pemohonan != NULL)
-                                                        <td>{{ $data->attachment_pemohonan}}</td>
-                                                        @else
-                                                        <td>Tiada Attachment</td>
-                                                        @endif
-                                                        <td class="p-3">
-                                                              <div class="d-flex flex-row justify-content-around align-items-center">
-                                                                  <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
-                                                              </div>
-                                                        </td>
+                                                        <td>{{$dalaman->user->name}}</td>
+                                                        <td>{{$dalaman->status_permohonan}}</td>
+                                                        <td>Tiada</td>
+                                                        <td>Tiada</td>
                                                       </tr>
                                                       @endforeach
+
                                                     </tbody>
+
+
+
                                                   </table>
                                                 </div>
 
