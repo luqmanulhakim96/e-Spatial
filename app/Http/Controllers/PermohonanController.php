@@ -85,6 +85,13 @@ class PermohonanController extends Controller
   }
 
   public function updateUlasan($id, Request $request){
+    //dd($request->ulasan_admin);
+
+    $permohonan = Permohonan::findOrFail($id);
+
+    $permohonan->ulasan_admin = $request->ulasan_admin;
+
+    $permohonan->save();
 
     return app('App\Http\Controllers\HomeController')->senaraiPermohonan();
   }

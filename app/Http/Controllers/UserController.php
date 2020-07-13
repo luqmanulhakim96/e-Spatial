@@ -144,7 +144,18 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
 
   public function create(array $data){
     $user_id = Auth::user()->id;
-    //dd($data);
+
+    $user = User::findOrFail($user_id);
+
+    $status_permohonan = $data['status_permohonan'];
+    $status_pembayaran = $data['status_pembayaran'];
+
+    
+
+    if($user->kategori == 'dalaman'){
+      $status_permohonan = 'Lulus';
+      $status_pembayaran = 'Sudah Dibayar';
+    }
 
 
     return Permohonan::Create([
@@ -152,8 +163,8 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
       'attachment_permohonan' => $data['attachment_permohonan'],
       'dokumen_ke_luar_negara' => $data['dokumen_ke_luar_negara'],
       'maklumat_agensi_dan_negara' => $data['maklumat_agensi_dan_negara'],
-      'status_permohonan' => $data['status_permohonan'],
-      'status_pembayaran' => $data['status_pembayaran'],
+      'status_permohonan' => $status_permohonan,
+      'status_pembayaran' => $status_pembayaran,
       'user_id' => $user_id,
       'jumlah_bayaran'=> 0.00
       ]);
