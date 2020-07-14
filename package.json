@@ -24,5 +24,9 @@
         "vue-template-compiler": "^2.6.10",
         "doctrine/dbal": "^2.10",
         "owen-it/laravel-auditing": "^10.0"
+    },
+    "dependencies": {
+        "laravel-echo": "^1.8.0",
+        "pusher-js": "^4.3.1"
     }
 }

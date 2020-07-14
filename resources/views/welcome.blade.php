@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-toke" content="{{csrf_token()}}">
 
         <title>QBAdminUI Laravel Broilerplate</title>
 
@@ -83,12 +84,22 @@
                 <div class="title m-b-md">
                     QBAdminUI
                 </div>
-
+                <div id="app">
+                  <example-component>
+                  </example-component>
+                </div>
                 <div class="links">
                     <a href="https://qbytesoft.com">Qbytesoft</a>
                     <a href="https://github.com/qbytesoft-com/QBAdminUi-Laravel-Broilerplate">GitHub</a>
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="{{ asset ('js/app.js') }}">
+            Echo.channel('home')
+              .listen('NewNotification', (e) => {
+                console.log(e.message);
+              });
+              console.log("hi");
+        </script>
     </body>
 </html>
