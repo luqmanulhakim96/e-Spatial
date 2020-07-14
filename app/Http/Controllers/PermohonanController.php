@@ -10,6 +10,8 @@ use App\User;
 use App\SenaraiHarga;
 use App\DataPermohonan;
 
+use Auth;
+
 class PermohonanController extends Controller
 {
   public function hargaPermohonan($id){
@@ -17,7 +19,6 @@ class PermohonanController extends Controller
 
     $dataPermohonan = DataPermohonan::where('permohonan_id',$id)
                         ->get();
-    //dd($dataPermohonan);
 
     $i = 0;
     foreach ($dataPermohonan as $value) {
@@ -85,11 +86,23 @@ class PermohonanController extends Controller
   }
 
   public function updateUlasan($id, Request $request){
-    //dd($request->ulasan_admin);
+    $user_id = Auth::user()->id;
+    $current_user_info = User::findOrFail($user_id);
+    //dd( $current_user_info->role);
 
     $permohonan = Permohonan::findOrFail($id);
 
     $permohonan->ulasan_admin = $request->ulasan_admin;
+
+    $permohonan->ulasan_penyokong_1 = $request->ulasan_penyokong1;
+
+    $permohonan->ulasan_penyokong_2 = $request->ulasan_penyokong2;
+
+    $permohonan->ulasan_ketua_pengarah = $request->ulasan_ketua_pengarah;
+
+    if($current_user_info->role == 3){
+      $permohonan->status_permohonan = "Lulus";
+    }
 
     $permohonan->save();
 
@@ -100,7 +113,24 @@ class PermohonanController extends Controller
       $permohonan = Permohonan::findorfail($id);
       $loop =  Permohonan::findorfail($id)->count();
       $user = User::where('id', $permohonan->user_id )->first();
-      //dd($user);
-      return view('permohonan.view',  compact('permohonan','loop','user'));
+
+      //current user id
+      $user_id = Auth::user()->id;
+      $current_user_info = User::findOrFail($user_id);
+      //dd($current_user_info);
+
+      //fetch data list
+
+      $dataPermohonan = DataPermohonan::where('permohonan_id',$id)
+                          ->get();
+      $i = 0;
+      foreach ($dataPermohonan as $value) {
+
+        $senaraiHargaUser[$i] = SenaraiHarga::where('id', $value->senarai_harga_id)->get();
+        $i++;
+      }
+
+
+      return view('permohonan.view',  compact('permohonan','loop','user','current_user_info','senaraiHargaUser'));
   }
 }

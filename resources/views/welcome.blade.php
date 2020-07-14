@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>QBAdminUI Laravel Broilerplate</title>
+        <title>JPSM e-Spatial - Laman Utama</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -70,10 +70,10 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Log Masuk</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Daftar</a>
                         @endif
                     @endauth
                 </div>
@@ -81,12 +81,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    QBAdminUI
+                    JPSM e-Spatial
                 </div>
 
                 <div class="links">
-                    <a href="https://qbytesoft.com">Qbytesoft</a>
-                    <a href="https://github.com/qbytesoft-com/QBAdminUi-Laravel-Broilerplate">GitHub</a>
+                    <a href="https://www.forestry.gov.my/my/">Jabatan Perhutanan Semenanjung Malaysia</a>
+                </div>
+                <br>
+                <div class="links">
+                  <a href="https://www.artaniscloud.com/">made by Artanis Cloud Sdn. Bhd.</a>
                 </div>
             </div>
         </div>

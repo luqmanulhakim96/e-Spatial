@@ -97,8 +97,8 @@
                     <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
                 </div>
             </div>
-			
-			
+
+
 
             <!-- The navbar -->
             <nav class="navbar navbar-expand navbar-light bg-light py-3">
