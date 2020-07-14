@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-toke" content="{{csrf_token()}}">
 
         <title>JPSM e-Spatial - Laman Utama</title>
 
@@ -83,7 +84,10 @@
                 <div class="title m-b-md">
                     JPSM e-Spatial
                 </div>
-
+                <div id="app">
+                  <example-component>
+                  </example-component>
+                </div>
                 <div class="links">
                     <a href="https://www.forestry.gov.my/my/">Jabatan Perhutanan Semenanjung Malaysia</a>
                 </div>
@@ -93,5 +97,12 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="{{ asset ('js/app.js') }}">
+            Echo.channel('home')
+              .listen('NewNotification', (e) => {
+                console.log(e.message);
+              });
+              console.log("hi");
+        </script>
     </body>
 </html>
