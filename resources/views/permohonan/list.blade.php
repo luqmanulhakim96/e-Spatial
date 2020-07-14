@@ -9,7 +9,7 @@
                 <!-- Pills Tab-->
                                     <div class="card rounded-lg">
                                         <div class="card-body">
-                                            <div class="card-title">Senarai Pemohon </div>
+                                            <div class="card-title">Senarai Pemohon (Current User role: {{$userInfo->role}}) </div>
 
 
 
@@ -34,23 +34,35 @@
                                                         <tr>
                                                           <th class="all">NAMA PEMOHON</th>
                                                           <th class="all">STATUS PERMOHONAN</th>
-                                                          <th class="all">ATTACHMENT</th>
+                                                          <th class="all">ATTACHMENT PERMOHONAN</th>
                                                           <th class="all">PRINT</th>
                                                         </tr>
                                                     </thead>
 
                                                     <tbody>
-                                                      @foreach($listPermohonanBaru as $data)
+
+                                                      @if($userInfo->role == 0)
+
+                                                      @foreach($listPermohonanBaru as $baru)
                                                       <tr>
+                                                        @if($userInfo->role != 0)
                                                         <td>
-                                                          <a href="{{ route('permohonan.harga.view', $data->id) }}">{{ $data->user->name  }}</a>
+                                                          <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}0</a>
                                                         </td>
-                                                        <td><span class="badge badge-warning badge-pill">{{ $data->status_permohonan  }}</span></td>
-                                                        @if($data->attachment_pemohonan != NULL)
-                                                        <td>{{ $data->attachment_pemohonan}}</td>
                                                         @else
-                                                        <td>Tiada</td>
+                                                          @if($baru->jumlah_bayaran == 0.00)
+                                                          <td>
+                                                            <a href="{{ route('permohonan.harga.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @else
+                                                          <td>
+                                                            <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @endif
+
                                                         @endif
+                                                        <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
+                                                        <td>{{ $baru->attachment_permohonan}}</td>
                                                         <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
@@ -58,6 +70,99 @@
                                                         </td>
                                                       </tr>
                                                       @endforeach
+
+                                                      @elseif($userInfo->role == 1)
+
+                                                      @foreach($listPermohonanBaru_p1 as $baru)
+                                                      <tr>
+                                                        @if($userInfo->role != 0)
+                                                        <td>
+                                                          <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}1</a>
+                                                        </td>
+                                                        @else
+                                                          @if($baru->jumlah_bayaran == 0.00)
+                                                          <td>
+                                                            <a href="{{ route('permohonan.harga.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @else
+                                                          <td>
+                                                            <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @endif
+
+                                                        @endif
+                                                        <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
+                                                        <td>{{ $baru->attachment_permohonan}}</td>
+                                                        <td class="p-3">
+                                                              <div class="d-flex flex-row justify-content-around align-items-center">
+                                                                  <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
+                                                              </div>
+                                                        </td>
+                                                      </tr>
+                                                      @endforeach
+
+                                                      @elseif($userInfo->role == 2)
+
+                                                      @foreach($listPermohonanBaru_p2 as $baru)
+                                                      <tr>
+                                                        @if($userInfo->role != 0)
+                                                        <td>
+                                                          <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}2</a>
+                                                        </td>
+                                                        @else
+                                                          @if($baru->jumlah_bayaran == 0.00)
+                                                          <td>
+                                                            <a href="{{ route('permohonan.harga.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @else
+                                                          <td>
+                                                            <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @endif
+
+                                                        @endif
+                                                        <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
+                                                        <td>{{ $baru->attachment_permohonan}}</td>
+                                                        <td class="p-3">
+                                                              <div class="d-flex flex-row justify-content-around align-items-center">
+                                                                  <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
+                                                              </div>
+                                                        </td>
+                                                      </tr>
+                                                      @endforeach
+
+                                                      @elseif($userInfo->role == 3)
+
+                                                      @foreach($listPermohonanBaru_kp as $baru)
+                                                      <tr>
+                                                        @if($userInfo->role != 0)
+                                                        <td>
+                                                          <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}3</a>
+                                                        </td>
+                                                        @else
+                                                          @if($baru->jumlah_bayaran == 0.00)
+                                                          <td>
+                                                            <a href="{{ route('permohonan.harga.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @else
+                                                          <td>
+                                                            <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </td>
+                                                          @endif
+
+                                                        @endif
+                                                        <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
+                                                        <td>{{ $baru->attachment_permohonan}}</td>
+                                                        <td class="p-3">
+                                                              <div class="d-flex flex-row justify-content-around align-items-center">
+                                                                  <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
+                                                              </div>
+                                                        </td>
+                                                      </tr>s
+                                                      @endforeach
+
+                                                      @endif
+
                                                     </tbody>
 
                                                   </table>
@@ -69,6 +174,7 @@
                                                     <thead>
                                                         <tr>
                                                           <th class="all">NAMA</th>
+                                                          <th class="all">STATUS PERMOHONAN</th>
                                                           <th class="all">STATUS PEMBAYARAN</th>
                                                           <th class="all">ATTACHMENT</th>
                                                           <th class="all">PRINT</th>
@@ -76,15 +182,12 @@
                                                     </thead>
 
                                                     <tbody>
-                                                      @foreach($listPermohonanLulus as $data)
+                                                      @foreach($listPermohonanLulus as $lulus)
                                                       <tr>
-                                                        <td>{{ $data->user->name  }}</td>
-                                                        <td>{{ $data->status_pembayaran  }}</td>
-                                                        @if($data->attachment_pemohonan == NULL)
-                                                        <td>{{ $data->attachment_pemohonan}}</td>
-                                                        @else
-                                                        <td>Tiada</td>
-                                                        @endif
+                                                        <td>{{ $lulus->user->name  }}</td>
+                                                        <td><span class="badge badge-success badge-pill">{{ $lulus->status_permohonan  }}</span></td>
+                                                        <td><span class="badge badge-warning badge-pill">{{ $lulus->status_pembayaran  }}</span></td>
+                                                        <td>{{ $lulus->attachment_permohonan}}</td>
                                                         <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
@@ -109,25 +212,19 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                      @foreach($listPermohonanLulus as $data)
+                                                      @foreach($listPermohonanDalaman as $dalaman)
                                                       <tr>
-                                                        <td>
-                                                          <a href="#">{{ $data->user->name  }}</a>
-                                                        </td>
-                                                        <td>{{ $data->status_pembayaran  }}</td>
-                                                        @if($data->attachment_pemohonan != NULL)
-                                                        <td>{{ $data->attachment_pemohonan}}</td>
-                                                        @else
-                                                        <td>Tiada Attachment</td>
-                                                        @endif
-                                                        <td class="p-3">
-                                                              <div class="d-flex flex-row justify-content-around align-items-center">
-                                                                  <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
-                                                              </div>
-                                                        </td>
+                                                        <td>{{$dalaman->user->name}}</td>
+                                                        <td>{{$dalaman->status_permohonan}}</td>
+                                                        <td>Tiada</td>
+                                                        <td>Tiada</td>
                                                       </tr>
                                                       @endforeach
+
                                                     </tbody>
+
+
+
                                                   </table>
                                                 </div>
 

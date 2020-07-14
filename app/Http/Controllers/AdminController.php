@@ -35,9 +35,12 @@ class AdminController extends Controller
 
   public function auditTrail()
   {
-    $data = Audit::with('user')->get();
+    // $data = Audit::with('user')->get();
     // $data = User::where('role','!=','5')->get();
     // $all = $user->audits;
+    $data = Audit::whereHas('user', function($q) {
+      $q->where('role','!=','5');
+    })->get();
     // dd($data);
     return view('superadmin.audit', compact('data'));
   }

@@ -21,7 +21,8 @@ class Permohonan extends Model implements Auditable
       'user_id',
       'jumlah_bayaran',
       'senarai_harga_id',
-      'maklumat_agensi_dan_negara'
+      'maklumat_agensi_dan_negara',
+      'attachment_aoi'
     ];
 
     public function user()

@@ -41,7 +41,7 @@
                                             @if($data[0]->saiz_data != NULL)
                                             <td><input type="text" id="harga" name="saiz_data[]" value="{{ $data[0]->saiz_data}}"></td>
                                             @else
-                                            <td> - </td>
+                                            <td> - <input type="hidden" id="harga" name="saiz_data[]" value="1"></td>
                                             @endif
                                             <td><input type="text" id="harga" name="harga_asas[]" value="{{ $data[0]->harga_asas}}" readonly></td>
                                           </tr>

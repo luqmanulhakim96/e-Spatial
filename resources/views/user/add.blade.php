@@ -16,7 +16,7 @@
                         <!-- jenis dokumen input-->
                         <div class="form-group">
                             <label for="jenis_dokumen">Jenis Dokumen:</label>
-                              <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen">
+                              <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)">
                                   <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                   @foreach($jenisDokumen as $data)
                                   <option value="{{$data->jenis_dokumen}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
@@ -28,7 +28,6 @@
                               </div>
                               @enderror
                         </div>
-
 
                         <!-- jenis data input-->
                         <div class="form-group">
@@ -82,6 +81,19 @@
                             @enderror
                         </div>
 
+                        <!-- jenis data input-->
+                        <div class="form-group" style="display: none;" id="jenis_kertas_div">
+                            <label for="jenis_kertas">Jenis Kertas:</label>
+                              <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas" >
+                                  <option value="" selected disabled hidden>Pilih Jenis Kertas</option>
+                              </select>
+                              @error('jenis_kertas')
+                              <div class="alert alert-danger">
+                                <strong>{{ $message }}</strong>
+                              </div>
+                              @enderror
+                        </div>
+
                         <!-- counter -->
                         <!-- <div class="form-group">
                           <label for="negeri">Data Counter:</label>
@@ -106,7 +118,7 @@
 
             <div class="card-body">
               <!-- Col md 6 -->
-                    <div class="col-md-6 mt-4">
+                    <div class="col-md-15 mt-1">
                         <!-- Light Bordered Table card -->
                         <div class="card rounded-lg">
                             <div class="card-body">
@@ -117,9 +129,11 @@
                                         <thead>
                                             <tr class="text-center">
                                                 <th width="10%"><p class="mb-0">Jenis Dokumen</p></th>
+                                                <th width="10%"><p class="mb-0">Jenis Kertas</p></th>
                                                 <th width="20%"><p class="mb-0">Jenis Data</p></th>
                                                 <th width="25%"><p class="mb-0">Tahun/Kategori Data</p></th>
                                                 <th width="15%"><p class="mb-0">Negeri</p></th>
+                                                <th width="15%"><p class="mb-0">Buang Data</p></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -144,6 +158,18 @@
                   <form class="" action="{{route('user.submit')}}" method="post" id="permohonan_data">
                     <!-- attachment input -->
                     @csrf
+
+                    <div class="form-group">
+                        <label for="attachment_permohonan">Muatnaik Attachment AOI:</label>
+                        <input type="file" class="form-control bg-light" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi">
+                        <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 120MB</small>
+                        @error('attachment_aoi')
+                        <div class="alert alert-danger">
+                          <strong>{{ $message }}</strong>
+                        </div>
+                        @enderror
+                    </div>
+
                           <div class="form-group">
                               <label for="attachment_permohonan">Muatnaik Lampiran:</label>
                               <input type="file" class="form-control bg-light" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan">
@@ -210,6 +236,14 @@
 
         </main>
         <script type="text/javascript">
+        function showJenisKertas(select){
+          if(select.value=='Bercetak'){
+            document.getElementById('jenis_kertas_div').style.display = "block";
+          }else{
+            document.getElementById('jenis_kertas_div').style.display = "none";
+          }
+        }
+
         function showAgensi(select){
            if(document.getElementById('Ya').checked){
             document.getElementById('maklumat_agensi_dan_negara_div').style.display = "block";
@@ -220,96 +254,152 @@
         }
         </script>
         <script type="text/javascript">
+        //display jenis data in table and add the id of senarai harga in other form
           function tambahData(){
-            //fetch data
-              var jenis_dokumen = document.getElementById("jenis_dokumen").value;
-              //console.log(jenis_dokumen);
-              var jenis_data = document.getElementById("jenis_data").value;
-              //console.log(jenis_data);
-              var tahun = document.getElementById("tahun").value;
-              //console.log(tahun);
-              var kategori_data = document.getElementById("kategori_data").value;
-              //console.log(kategori_data);
-              var negeri = document.getElementById("negeri").value;
-              //console.log(negeri);
-              var counter_data = document.getElementById("counter_data").value;
-              console.log(counter_data);
-              //displau table
-              $("#pilihan_table").append(
-                '<tr><td><p class="mb-0 font-weight-bold">' +
-                jenis_dokumen +
-                '</td><td><p class="mb-0 font-weight-bold">' +
-                jenis_data +
-                '</td><td><p class="mb-0 font-weight-bold">' +
-                tahun + kategori_data +
-                '</td><td><p class="mb-0 font-weight-bold">' +
-                negeri +
-                '</td></tr>'
-              );
-              //reset form
-              document.getElementById("pilihan_data").reset();
+                //fetch data
+                var jenis_dokumen = document.getElementById("jenis_dokumen").value;
+                var jenis_data = document.getElementById("jenis_data").value;
+                var tahun = document.getElementById("tahun").value;
+                var kategori_data = document.getElementById("kategori_data").value;
+                var negeri = document.getElementById("negeri").value;
+                var jenis_kertas = document.getElementById("jenis_kertas").value;
 
-              if(tahun){
-                kategori_data = null;
-                $.ajax({
-                  type:"get",
-                  url:"/permohonan/fetchSenaraiHargaIdByTahun/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/tahun/"+tahun+"/negeri/" + negeri,
-                  success: function(respond){
-                    //console.log(respond);
-                    var data = JSON.parse(respond);
-                    //console.log(respond);
-                    data.forEach(function(data)
-                    {
-                      $(document).ready(function(){
-                          str_to_append = '<div><input type="text" id="data_permohonan" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
-                          counter_data++;
-                          document.getElementById("counter_data").value = counter_data;
-                          //$("#counter_data").append(counter_data);
-                          console.log(counter_data);
-                          $("#permohonan_data").append(str_to_append);
-                      }) ;
-                    });
-                  },
-                  error: function(XMLHttpRequest, textStatus, errorThrown) {
+                //this variable to count total data apply by the user
+                var counter_data = document.getElementById("counter_data").value;
+
+                //reset form above
+                document.getElementById("pilihan_data").reset();
+
+                //insert data in other form
+                if(tahun){
+                  //kategori_data = null;
+                  //1st Ajax for tahun
+                  $.ajax({
+                    type:"get",
+                    url:"/permohonan/fetchSenaraiHargaIdByTahun/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/tahun/"+tahun+"/negeri/" + negeri,
+                    success: function(respond){
+                      //fetch data (id) from DB Senarai Harga
+                      var data = JSON.parse(respond);
+                      //console.log(data);
+                      //loop for data
+                      data.forEach(function(){
+                        //insert data in table
+                        if(jenis_kertas){
+                          $("#pilihan_table").append(
+                            '<tr><td><p class="mb-0 font-weight-bold">' +
+                            jenis_dokumen +
+                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            jenis_kertas +
+                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            jenis_data +
+                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            tahun + kategori_data +
+                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            negeri +
+                            '</td><td><a onClick="removeData(this,'+ counter_data  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                          );
+                        }else {
+                          jenis_kertas = "Tiada";
+                          $("#pilihan_table").append(
+                            '<tr><td><p class="mb-0 font-weight-bold">' +
+                            jenis_dokumen +
+                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            jenis_kertas +
+                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            jenis_data +
+                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            tahun + kategori_data +
+                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            negeri +
+                            '</td><td><a onClick="removeData(this,'+ counter_data  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                          );
+                        }
+                        //console.log(data[0].id);
+                        //insert responsive input text in form
+                        str_to_append = '<div><input type="text" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data[0].id +'"></div>';
+                        //add counter for data apply by the user
+                        counter_data++;
+                        document.getElementById("counter_data").value = counter_data;
+                        //$("#counter_data").append(counter_data);
+                        //console.log(counter_data);
+                        $("#permohonan_data").append(str_to_append);
+                      });
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
                       console.log("Status: " + textStatus);
                       console.log("Error: " + errorThrown);
-                  }
-                })
-              }
-              if (kategori_data != null) {
-                tahun = null;
-                $.ajax({
-                  type:"get",
-                  url:"/permohonan/fetchSenaraiHargaIdByKategoriData/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/kategoriData/"+kategori_data+"/negeri/" + negeri,
-                  success: function(respond){
-                    //console.log(respond);
-                    var data = JSON.parse(respond);
-                    //console.log(respond);
-                    data.forEach(function(data)
-                    {
-                      $(document).ready(function(){
-                          str_to_append = '<div><input type="text" id="data_permohonan" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
+                    }
+                  });
+                }else if (kategori_data) {
+                  //tahun = null;
+                  //2nd Ajax for kategori data
+                  $.ajax({
+                    type:"get",
+                    url:"/permohonan/fetchSenaraiHargaIdByKategoriData/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/kategoriData/"+kategori_data+"/negeri/" + negeri,
+                    success: function(respond){
+                      //fetch data (id) from DB Senarai Harga
+                      var data = JSON.parse(respond);
+
+                      data.forEach(function(data){
+                        $(document).ready(function(){
+                          //display in table
+                          if(jenis_kertas){
+                            $("#pilihan_table").append(
+                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              jenis_dokumen +
+                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              jenis_kertas +
+                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              jenis_data +
+                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              tahun + kategori_data +
+                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              negeri +
+                              '</td><td><a onClick="removeData(this,'+ counter_data  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            );
+                          }else{
+                            jenis_kertas = "Tiada";
+                            $("#pilihan_table").append(
+                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              jenis_dokumen +
+                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              jenis_kertas +
+                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              jenis_data +
+                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              tahun + kategori_data +
+                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              negeri +
+                              '</td><td><a onClick="removeData(this, '+ counter_data  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            );
+                          }
+                          //console.log(data.id);
+                          str_to_append = '<div><input type="text" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
                           counter_data++;
                           document.getElementById("counter_data").value = counter_data;
-                          //$("#counter_data").append(counter_data);
-                          console.log(counter_data);
+                          $("#counter_data").append(counter_data);
                           $("#permohonan_data").append(str_to_append);
-                      }) ;
-                      //$("#tahun").append('<option value="'+data.tahun+'">'+data.tahun+'</option>');
-                    });
-                  },
-                  error: function(XMLHttpRequest, textStatus, errorThrown) {
-                      console.log("Status: " + textStatus);
-                      console.log("Error: " + errorThrown);
-                  }
-                })
-              }
-              //ajax for fetch id from senarai harga
-
-
+                        })
+                      })
+                    }
+                  })
+                }
 
 
           }
+        </script>
+        <script type="text/javascript">
+             function removeData(e,counter){
+              //remove table row
+              $(e).parents('tr').remove();
+              //remove input text in form
+              $('#data_permohonan'+counter+'').remove();
+              //fetch data from jumlah data input
+              var counter_data = document.getElementById("counter_data").value;
+              counter_data--;
+              //update data into jumlah data input
+              document.getElementById("counter_data").value = counter_data;
+            }
         </script>
         <script type="text/javascript">
         function showDiv(select){
@@ -362,6 +452,7 @@
         $('#jenis_data').change(function(){
           //fetch data from
           var jenisData = $(this).val();
+          var jenisDokumen = $('#jenis_dokumen').val();
 
           //clear jenis_data selection
           $("#tahun").empty();
@@ -371,7 +462,7 @@
           if(jenisData){
             $.ajax({
               type:"get",
-              url:"/permohonan/tahun/"+jenisData,
+              url:"/permohonan/tahun/"+jenisData+"/and/"+jenisDokumen,
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -502,4 +593,70 @@
           }
         });
         </script>
+        <!-- script for select jenis kertas from tahun and kategori data-->
+        <script type="text/javascript">
+        $('#negeri').change(function(){
+          //fetch data from jenis_data
+          var jenisDokumen = $('#jenis_dokumen').val();
+          var jenisData = $('#jenis_data').val();
+          var tahun = $('#tahun').val();
+          var kategori_data = $('#kategori_data').val();
+          var negeri = $(this).val();
+
+      //clear kategori_data selection
+          $("#jenis_kertas").empty();
+          //default selection
+          $("#jenis_kertas").append('<option value="" selected disabled hidden>Pilih Jenis Kertas</option>');
+          //ajax
+          if(tahun){
+
+            $.ajax({
+              type:"get",
+              url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + tahun + "/and/" + negeri + "/tahun",
+              success: function(respond){
+                //console.log(respond);
+                var data = JSON.parse(respond);
+                //console.log(data);
+                data.forEach(function(data)
+                {
+
+                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                });
+                    // $.each(JSON.parse(respond),function(key,value){
+                    //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
+                    // });
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) {
+                  console.log("Status: " + textStatus);
+                  console.log("Error: " + errorThrown);
+              }
+            })
+          }
+          if(kategori_data){
+            $.ajax({
+              type:"get",
+              url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + kategori_data + "/and/" + negeri + "/kategori_data",
+              success: function(respond){
+                //console.log(respond);
+                var data = JSON.parse(respond);
+                //console.log(data);
+                data.forEach(function(data)
+                {
+                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                });
+                    // $.each(JSON.parse(respond),function(key,value){
+                    //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
+                    // });
+              },
+              error: function(XMLHttpRequest, textStatus, errorThrown) {
+                  console.log("Status: " + textStatus);
+                  console.log("Error: " + errorThrown);
+              }
+            })
+          }
+        });
+        </script>
+
+
+
 @endsection

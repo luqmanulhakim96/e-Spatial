@@ -32,11 +32,18 @@
                             <td>{{ Carbon\Carbon::parse($data->created_at)->format('d-m-Y H:i:s') }}</td>
                             <td>{{ $data->status_permohonan  }}</td>
                             <td>{{ $data->status_pembayaran  }}</td>
+                            @if($data->ulasan_admin == NULL)
                             <td class="p-3">
                                   <div class="d-flex flex-row justify-content-around align-items-center">
                                       <a href="{{ route('user.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
                                   </div>
                             </td>
+                            @else
+                            <td class="p-3">
+                                  <div class="d-flex flex-row justify-content-around align-items-center">
+                                      <a href="#" class="btn btn-dark mr-1"><i class="fas fa-pencil-alt"></i></a>
+                                  </div>
+                            @endif
                           </tr>
                           @endforeach
                         </tbody>

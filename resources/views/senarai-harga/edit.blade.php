@@ -16,14 +16,36 @@
                         @csrf
                         <!-- jenis dokumen input-->
                         <div class="form-group">
-                            <label for="jenis_dokumen">Jenis Data:</label>
+                            <label for="jenis_dokumen">Jenis Dokumen:</label>
                               <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showSaizData(this)">
                                   <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                   <option value="Bercetak" {{ $info->jenis_dokumen == "Bercetak" ? 'selected' : '' }}>Bercetak</option>
                                   <option value="Vektor Shapefile" {{ $info->jenis_dokumen == "Vektor Shapefile" ? 'selected' : '' }}>Vektor Shapefile (Digital)</option>
-                                  <option value="Lain-lain" {{ $info->jenis_dokumen == "Lain-lain" ? 'selected' : '' }}>Lain-lain</option>
                               </select>
                               @error('jenis_dokumen')
+                              <div class="alert alert-danger">
+                                <strong>{{ $message }}</strong>
+                              </div>
+                              @enderror
+                        </div>
+
+                        <div class="form-group" id="saiz_data_div" style="display: none;">
+                            <label for="actionBarName1">Saiz Data:</label>
+                            <input type="text" class="form-control bg-light" name="saiz_data" id="saiz_data" aria-describedby="saiz_data" placeholder="Masukkan Saiz Data (MB)" value="{{ $info->saiz_data  }}">
+                            <small id="actionBarName1Help" class="form-text text-secondary">Size data dalam format MB (Contoh: 120.2)</small>
+                        </div>
+
+                        <div class="form-group" id="jenis_kertas_div" style="display: none;">
+                            <label for="jenis_kertas">Jenis Kertas:</label>
+                              <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas">
+                                  <option value="" selected disabled hidden>Pilih Jenis Data</option>
+                                  <option value="A0" {{ $info->jenis_kertas == "A0" ? 'selected' : '' }}>A0</option>
+                                  <option value="A1" {{ $info->jenis_kertas == "A1" ? 'selected' : '' }}>A1</option>
+                                  <option value="A2" {{ $info->jenis_kertas == "A2" ? 'selected' : '' }}>A2</option>
+                                  <option value="A3" {{ $info->jenis_kertas == "A3" ? 'selected' : '' }}>A3</option>
+                                  <option value="A4" {{ $info->jenis_kertas == "A4" ? 'selected' : '' }}>A4</option>
+                              </select>
+                              @error('jenis_kertas')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>
                               </div>
@@ -37,13 +59,25 @@
                             <input type="text" class="form-control bg-light" name="saiz_data" id="saiz_data" aria-describedby="saiz_data" placeholder="Masukkan Saiz Data (MB)" value="{{ $info->saiz_data  }}">
                             <small id="actionBarName1Help" class="form-text text-secondary">Size data dalam format MB (Contoh: 120.2)</small>
                         </div>
-                        @endIf
-
-                        <div class="form-group" id="saiz_data_div" style="display: none;">
-                            <label for="actionBarName1">Saiz Data:</label>
-                            <input type="text" class="form-control bg-light" name="saiz_data" id="saiz_data" aria-describedby="saiz_data" placeholder="Masukkan Saiz Data (MB)" value="{{ $info->saiz_data  }}">
-                            <small id="actionBarName1Help" class="form-text text-secondary">Size data dalam format MB (Contoh: 120.2)</small>
+                        @else
+                        <!-- jenis data input-->
+                        <div class="form-group" id="jenis_kertas_div" style="display: block;">
+                            <label for="jenis_kertas">Jenis Kertas:</label>
+                              <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas">
+                                  <option value="" selected disabled hidden>Pilih Jenis Data</option>
+                                  <option value="A0" {{ $info->jenis_kertas == "A0" ? 'selected' : '' }}>A0</option>
+                                  <option value="A1" {{ $info->jenis_kertas == "A1" ? 'selected' : '' }}>A1</option>
+                                  <option value="A2" {{ $info->jenis_kertas == "A2" ? 'selected' : '' }}>A2</option>
+                                  <option value="A3" {{ $info->jenis_kertas == "A3" ? 'selected' : '' }}>A3</option>
+                                  <option value="A4" {{ $info->jenis_kertas == "A4" ? 'selected' : '' }}>A4</option>
+                              </select>
+                              @error('jenis_kertas')
+                              <div class="alert alert-danger">
+                                <strong>{{ $message }}</strong>
+                              </div>
+                              @enderror
                         </div>
+                        @endIf
 
                         <!-- jenis data input-->
                         <div class="form-group">
@@ -58,6 +92,29 @@
                                   <option value="Lain-lain" {{ $info->jenis_data  == "Lain-lain" ? 'selected' : '' }}>Lain-lain</option>
                               </select>
                               @error('jenis_data')
+                              <div class="alert alert-danger">
+                                <strong>{{ $message }}</strong>
+                              </div>
+                              @enderror
+                        </div>
+
+                        <!--tahun input -->
+                        <div class="form-group" id="tahun_div" style="display: none;">
+                            <label for="actionBarName1">Tahun:</label>
+                            <input type="text" name="tahun" class="form-control bg-light" id="tahun" aria-describedby="tahun" placeholder="Masukkan Tahun" value="{{ $info->tahun  }}">
+                        </div>
+
+                        <div class="form-group" id="kategori_data_div" style="display: none;">
+                            <label for="kategori_data">Kategori Data:</label>
+                              <select id="kategori_data" class="custom-select  bg-light" name="kategori_data" >
+                                  <option value="" selected disabled hidden>Pilih Jenis Data</option>
+                                  <option value="Fenologi" {{ $info->kategori_data == "Fenologi" ? 'selected' : '' }}>Fenologi</option>
+                                  <option value="Growth Ploth" {{ $info->kategori_data == "Growth Ploth" ? 'selected' : '' }}>Growth Ploth</option>
+                                  <option value="G&Y" {{ $info->kategori_data == "G&Y" ? 'selected' : '' }}>G&Y</option>
+                                  <option value="Restorasi" {{ $info->kategori_data == "Restorasi" ? 'selected' : '' }}>Restorasi</option>
+                                  <option value="CFI" {{ $info->kategori_data == "CFI" ? 'selected' : '' }}>CFI</option>
+                              </select>
+                              @error('kategori_data')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>
                               </div>
@@ -89,31 +146,6 @@
                         </div>
                         @endif
 
-                        <div class="form-group" id="kategori_data_div" style="display: none;">
-                            <label for="kategori_data">Kategori Data:</label>
-                              <select id="kategori_data" class="custom-select  bg-light" name="kategori_data" >
-                                  <option value="" selected disabled hidden>Pilih Jenis Data</option>
-                                  <option value="Fenologi" {{ $info->kategori_data == "Fenologi" ? 'selected' : '' }}>Fenologi</option>
-                                  <option value="Growth Ploth" {{ $info->kategori_data == "Growth Ploth" ? 'selected' : '' }}>Growth Ploth</option>
-                                  <option value="G&Y" {{ $info->kategori_data == "G&Y" ? 'selected' : '' }}>G&Y</option>
-                                  <option value="Restorasi" {{ $info->kategori_data == "Restorasi" ? 'selected' : '' }}>Restorasi</option>
-                                  <option value="CFI" {{ $info->kategori_data == "CFI" ? 'selected' : '' }}>CFI</option>
-                              </select>
-                              @error('kategori_data')
-                              <div class="alert alert-danger">
-                                <strong>{{ $message }}</strong>
-                              </div>
-                              @enderror
-                        </div>
-
-                        <!--tahun input -->
-                        <div class="form-group" id="tahun_div" style="display: none;">
-                            <label for="actionBarName1">Tahun:</label>
-                            <input type="text" name="tahun" class="form-control bg-light" id="tahun" aria-describedby="tahun" placeholder="Masukkan Tahun" value="{{ $info->tahun  }}">
-                        </div>
-
-
-
                         <!-- negeri input -->
                         <div class="form-group">
                           <label for="select-1">Pilih Negeri:</label>
@@ -123,7 +155,7 @@
                               <option value="Johor" {{ $info->negeri == "Johor" ? 'selected' : '' }}>Johor</option>
                               <option value="Kedah" {{ $info->negeri == "Kedah" ? 'selected' : '' }}>Kedah</option>
                               <option value="Kelantan" {{ $info->negeri == "Kelantan" ? 'selected' : '' }}>Kelantan</option>
-                              <option value="Negeri Sembilan" {{ $info->negeri == "Johor" ? 'selected' : '' }}>Negeri Sembilan</option>
+                              <option value="Negeri Sembilan" {{ $info->negeri == "Negeri Sembilan" ? 'selected' : '' }}>Negeri Sembilan</option>
                               <option value="Pahang" {{ $info->negeri == "Pahang" ? 'selected' : '' }}>Pahang</option>
                               <option value="Perak" {{ $info->negeri == "Perak" ? 'selected' : '' }}>Perak</option>
                               <option value="Perlis" {{ $info->negeri == "Perlis" ? 'selected' : '' }}>Perlis</option>
@@ -149,7 +181,7 @@
                               <small id="actionBarName1Help" class="form-text text-secondary">Contoh: 120.20</small>
                           </div>
 
-                          <button type="submit" class="btn btn-primary">Edit</button>
+                          <button type="submit" class="btn btn-primary">Edit Data</button>
 
                       </form>
 
@@ -160,9 +192,12 @@
         function showSaizData(select){
           if(select.value=='Bercetak'){
             document.getElementById('saiz_data_div').style.display = "none";
+            document.getElementById('jenis_kertas_div').style.display = "block";
+
           }
           else if (select.value=='Vektor Shapefile') {
             document.getElementById('saiz_data_div').style.display = "block";
+            document.getElementById('jenis_kertas_div').style.display = "none";
           }
         }
         function showDiv(select){

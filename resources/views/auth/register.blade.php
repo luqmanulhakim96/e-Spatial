@@ -63,8 +63,8 @@
                     <div class="form-group">
                         <label for="kerakyatan" class="text-muted">Kerakyatan</label>
                         <select id="kerakyatan" class="custom-select  bg-light @error('kerakyatan') is-invalid @enderror" name="kerakyatan" value="{{ old('kerakyatan') }}" autofocus>
-                              <option value="bumiputera">Bumiputera</option>
-                              <option value="bukan_bumiputera">Bukan Bumiputera</option>
+                              <option value="Warganegara">Warganegara</option>
+                              <option value="bukan_warganegara">Bukan Warganegara</option>
                           </select>
                         @error('kerakyatan')
                         <span class="invalid-feedback" role="alert">
