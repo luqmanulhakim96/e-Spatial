@@ -15,7 +15,7 @@ class SenaraiSurat extends Model implements Auditable
   //   'perenggan_empat', 'perenggan_lima', 'penutup', 'nama_tandatangan', 'jawatan_tandatangan', 'surat_kepada'
   // ];
   protected $fillable = [
-    'nombor_rujukan', 'tarikh', 'kandungan',
+    'nombor_rujukan', 'tarikh', 'kandungan', 'status_pembayaran'
   ];
   protected $dates = ['created_at','updated_at'];
 }
