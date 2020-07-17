@@ -10,18 +10,19 @@
 
                 <div class="card rounded-lg">
                   <div class="card-body">
-                      <div class="card-title">Senarai Surat</div>
+                      <div class="card-title">Senarai Templat Email</div>
 
-                      <a class="btn btn-primarynew m-2" href="{{ route('senarai-surat.add') }}">Tambah Surat</a>
+                      <a class="btn btn-primarynew m-2" href="{{ route('senarai-email.add') }}">Tambah Templat Email</a>
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
 
                         <!-- Table head -->
                         <thead>
                             <tr>
                               <th class="all">ID</th>
-                              <th class="all">NO RUJUKAN</th>
-                              <th class="all">TARIKH</th>
-
+                              <th class="all">JENIS</th>
+                              <th class="all">KEPADA</th>
+                              <th class="all">SUBJEK</th>
+                              <th class="all">TAJUK</th>
                               <th class="all">TARIKH DICIPTA</th>
                               <th class="all">TARIKH DIPINDA</th>
                               <th class="all">ACTION</th>
@@ -32,14 +33,15 @@
                           @foreach($list as $data)
                             <tr>
                               <td>{{ $data->id  }}</td>
-                              <td>{{ $data->nombor_rujukan  }}</td>
-                              <td>{{ $data->tarikh  }}</td>
+                              <td>{{ $data->jenis  }}</td>
+                              <td>{{ $data->kepada  }}</td>
+                              <td>{{ $data->subjek  }}</td>
+                              <td>{{ $data->tajuk  }}</td>
                               <td>{{ $data->created_at  }}</td>
                               <td>{{ $data->updated_at  }}</td>
                               <td class="p-3">
                                     <div class="d-flex flex-row justify-content-around align-items-center">
-                                        <a href="{{ route('senarai-surat.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                        <a href="{{ route('senarai-surat.print', $data->id) }}" class="btn btn-success mr-1"><i class="fa fa-print"></i></a>
+                                        <a href="{{ route('senarai-email.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
                                         <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 
                                     </div>

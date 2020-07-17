@@ -10,6 +10,10 @@ use App\User;
 use App\SenaraiHarga;
 use App\DataPermohonan;
 
+use App\SenaraiEmail;
+use App\Notifications\Admin\PermohonanBaruAdmin;
+use App\Notifications\Admin\PermohonanBaruAdminNull;
+
 use Auth;
 
 class PermohonanController extends Controller
@@ -125,8 +129,80 @@ class PermohonanController extends Controller
     }
 
     $permohonan->save();
+    if($current_user_info->role == 0){
+      $penyokong_satu = User::where('role','=','1')->get();
+      // dd($penyokong_satu);
+      $email = SenaraiEmail::where('kepada', '=', 'penyokong_1')->where('jenis', '=', 'memo')->first();
+      if(is_null($email))
+      {
+        foreach ($penyokong_satu as $data) {
+          $permohonan->notify(new PermohonanBaruAdminNull($data));  // use this notification when email template not available
+        }
+      }
+      else
+      {
+        foreach ($penyokong_satu as $data) {
+          $permohonan->notify(new PermohonanBaruAdmin($data, $email));
+        }
+      }
+    }
+    if($current_user_info->role == 1){
+      $penyokong_dua = User::where('role','=','2')->get();
 
-    return app('App\Http\Controllers\HomeController')->senaraiPermohonan();
+      $email = SenaraiEmail::where('kepada', '=', 'penyokong_2')->where('jenis', '=', 'memo')->first();
+      if(is_null($email))
+      {
+        foreach ($penyokong_dua as $data) {
+          $permohonan->notify(new PermohonanBaruAdminNull($data));  // use this notification when email template not available
+        }
+      }
+      else
+      {
+        foreach ($penyokong_dua as $data) {
+          $permohonan->notify(new PermohonanBaruAdmin($data, $email));
+        }
+      }
+    }
+    if($current_user_info->role == 2){
+      $ketua_pengarah = User::where('role','=','3')->get();
+
+      $email = SenaraiEmail::where('kepada', '=', 'ketua_pengarah')->where('jenis', '=', 'memo')->first();
+      if(is_null($email))
+      {
+        foreach ($ketua_pengarah as $data) {
+          $permohonan->notify(new PermohonanBaruAdminNull($data));  // use this notification when email template not available
+        }
+      }
+      else
+      {
+        foreach ($ketua_pengarah as $data) {
+          $permohonan->notify(new PermohonanBaruAdmin($data, $email));
+        }
+      }
+    }
+
+    if($current_user_info->role == 3){
+      $admin = User::where('role','=','0')->get();
+
+      $permohonan->status_permohonan = "Lulus";
+
+      // have not done yet 15/7/2020 -luke-
+      $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'memo')->first();
+      if(is_null($email))
+      {
+        foreach ($admin as $data) {
+          $permohonan->notify(new PermohonanBaruAdminNull($data));  // use this notification when email template not available
+        }
+      }
+      else
+      {
+        foreach ($admin as $data) {
+          $permohonan->notify(new PermohonanBaruAdmin($data, $email));
+        }
+      }
+    }
+    // return app('App\Http\Controllers\HomeController')->senaraiPermohonan();
+    return redirect()->route('permohonan.list');
   }
 
   public function viewInformasiPermohonan($id){

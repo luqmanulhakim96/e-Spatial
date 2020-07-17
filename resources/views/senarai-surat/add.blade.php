@@ -46,6 +46,22 @@
                           </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="status_pembayaran">Surat - Status Pembayaran</label>
+                                    <select id="status_pembayaran" class="custom-select  bg-light @error('status_pembayaran') is-invalid @enderror" name="status_pembayaran" value="{{ old('status_pembayaran') }}" autofocus>
+                                          <option value="bayaran">Bayaran</option>
+                                          <option value="pengecualian_bayaran">Pengecualian Bayaran</option>
+                                      </select>
+                                </div>
+                                @error('status_pembayaran')
+                                <div class="alert alert-danger">
+                                  <strong>{{ $message }}</strong>
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-12">
                               <div class="form-group form-inline justify-content-center">
                                     <!-- <label for="testing">Kandungan</label> -->
@@ -75,6 +91,9 @@
                 width: 794,
                 // width: 794,
                 height: 1000,
+                plugins: "pagebreak",
+                // menubar: "insert",
+                // toolbar: "pagebreak"
             });
         </script>
 @endsection

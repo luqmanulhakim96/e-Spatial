@@ -10,6 +10,12 @@ use App\User;
 use App\SenaraiHarga;
 use App\DataPermohonan;
 
+use App\SenaraiEmail;
+use App\Events\NewNotification;
+
+use App\Notifications\Admin\PermohonanBaruAdmin;
+use App\Notifications\User\PermohonanBaruUser;
+
 use Auth;
 
 
@@ -157,14 +163,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
 
     $status_permohonan = $data['status_permohonan'];
     $status_pembayaran = $data['status_pembayaran'];
-    $attachment_aoi = $data['attachment_aoi'];
-    //dd($data);
-    if(isset($data['attachment_permohonan'])){
-      $attachment_permohonan = $data['attachment_permohonan'];
-    }
-    else {
-      $attachment_permohonan = null;
-    }
+
     if($user->kategori == 'dalaman'){
       $status_permohonan = 'Lulus';
       $status_pembayaran = 'Sudah Dibayar';
@@ -249,9 +248,24 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     event($permohonanBaru = $this->create($request->all(), $uploaded_files_permohonan, $uploaded_file_aoi));
     //call permohonan id
 
+    $user_id = Auth::user()->id;
     //dd($request);
+
+    // hantar notification permohonan ke admin
+
     event($permohonanDataBaru = $this->createData($request->all(), $permohonanBaru));
-    //dd($permohonanDataBaru);
+    // dd($permohonanBaru);
+    $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'memo')->first();
+    // dd($email);
+    $admins = User::where('role', '=' , '0',)
+                ->get();
+    // dd($admin);
+    foreach ($admins as $admin) {
+      $permohonanBaru->notify(new PermohonanBaruAdmin($admin, $email));
+      event(new NewNotification($admin));
+    }
+
+    $permohonanBaru->notify(new PermohonanBaruUser(Auth::user()));
 
 
     return redirect()->route('user.list');
