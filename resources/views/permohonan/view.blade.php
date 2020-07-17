@@ -112,7 +112,7 @@
             </div>
 
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <form  action="{{route('permohonan.ulasan.update',$permohonan->id)}}" method="post">
+              <form  action="{{route('permohonan.ulasan.update',$permohonan->id)}}" method="post" name="ulasan" onsubmit="return validateStatusPermohonan()">
                 @csrf
                 <!-- Create 2 row -->
                 <div class="row">
@@ -151,8 +151,31 @@
 
                     @endif
                 </div>
+                @if($current_user_info->role == 3)
+                <div class="">
+                  <!-- All Radio Button  -->
+                  <label for="l-name-1">Pilih status permohonan:</label>
+                  <div class="switchs">
+                      <!-- Primary Radio Button  -->
+                  <div class="custom-control custom-radio">
+                      <input type="radio" id="Lulus" name="status_permohonan" class="custom-control-input"  value="Lulus" @if(old('status_permohonan')=="Lulus") checked @endif>
+                      <label class="custom-control-label" for="Lulus">Lulus</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                      <input type="radio" id="Gagal" name="status_permohonan" class="custom-control-input"  value="Gagal" @if(old('status_permohonan')=="Gagal") checked @endif>
+                      <label class="custom-control-label" for="Gagal">Gagal</label>
+                  </div>
+                </div>
+
+                </div>
+                @endif
+
                 <input type="hidden" name="current_id_for_user" value="{{ $current_user_info->role }}" readonly>
-                <button type="submit" class="btn btn-primary">Hantar Ulasan</button>
+
+                <div class="">
+                  <button type="submit" class="btn btn-primary">Hantar</button>
+                </div>
+
               </form>
             </div>
 
@@ -170,4 +193,15 @@
 
             </div>
         </main>
+
+      <script type="text/javascript">
+        function validateStatusPermohonan(){
+          var x = document.forms["ulasan"]["status_permohonan"].value;
+          console.log(x);
+          if (x == "") {
+            alert("Pilih Status Ulasan!");
+            return false;
+          }
+        }
+      </script>
 @endsection

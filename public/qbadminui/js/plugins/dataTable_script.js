@@ -167,6 +167,14 @@ $(document).ready(function(){
     });
 
     // Responsive Data Table
+    let list_permohonan_user_lulus = $("#list_permohonan_user_lulus")
+    $(list_permohonan_user_lulus).DataTable({
+        responsive : true,
+        order:[[4,"desc"]]
+
+    });
+
+    // Responsive Data Table
     let list_permohonan_baru = $("#list_permohonan_baru")
     $(list_permohonan_baru).DataTable({
         responsive : true
