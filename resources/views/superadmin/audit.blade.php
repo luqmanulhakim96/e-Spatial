@@ -10,7 +10,7 @@
                 <div class="card rounded-lg">
                   <div class="card-body">
                       <div class="card-title">Audit Trail</div>
-                      
+
                       <table class="table table-striped table-bordered" id="responsiveAuditTable" style="width: 100%;">
                         <!-- Table head -->
                         <thead>
@@ -51,12 +51,20 @@
                             @if( $datas->old_values == "[]")
                             <td>-</td>
                             @else
-                            <td>{{ $datas->old_values }}</td>
+                              @if( $datas->auditable_type == "App\SenaraiSurat")
+                              <td>Data Surat</td>
+                              @else
+                              <td>{{ $datas->old_values }}</td>
+                              @endif
                             @endif
                             @if( $datas->new_values == "[]")
                             <td>-</td>
                             @else
-                            <td>{{ $datas->new_values }}</td>
+                              @if( $datas->auditable_type == "App\SenaraiSurat")
+                              <td>{{ $datas->new_values }}</td>
+                              @else
+                              <td>{{ $datas->new_values }}</td>
+                              @endif
                             @endif
                             <td>{{ $datas->ip_address }}</td>
                             <td>{{  Carbon\Carbon::parse($datas->updated_at)->format('d-m-Y h:i:s')  }}</td>

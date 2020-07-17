@@ -68,6 +68,8 @@
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-harga.list') }}" class="w-100 py-3 pl-4" >Senarai Harga</a></li>
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-surat.list') }}" class="w-100 py-3 pl-4" >Senarai Surat</a></li>
+                        <!-- Sub menu parent -->
+                        <li class="side-menu-item px-3"><a href="{{ route('senarai-email.list') }}" class="w-100 py-3 pl-4" >Senarai Templat Email</a></li>
                         @endif
                         @if(Auth::user()->role == 4)
                         <!-- Sub menu parent -->
@@ -170,9 +172,61 @@
                     </div>
 
                     <!-- Notification dropdown -->
-                    <div id="app">
-                      <example-component>
-                      </example-component>
+                    <div class="dropdown dropdown-arow-none d-contents text-center mx-2 pt-1">
+                        <!-- icon -->
+                        <a href="#" class="w-100 dropdown-toggle text-muted position-relative" data-toggle="dropdown">
+                            <!-- Notification -->
+                            <i class="far fa-bell fa-2x"></i>
+                            <span class="badge badge-primary position-absolute notification-badge">{{$count_notification}}</span>
+                        </a>
+                        <!-- Dropdown menu -->
+                        <div class="dropdown-menu dropdown-menu-right p-0 dropdown-menu-max-height">
+                            <!-- Menu item -->
+                            @foreach($permohonan_admin as $permohonan)
+                              @foreach($permohonan->unreadNotifications as $notification)
+                              @if($notification->data['kepada_id'] == Auth::user()->id)
+                                <a href="{{route('permohonan.harga.view', $notification->data['permohonan_id'])}}" class="dropdown-item text-secondary-light p-0">
+                                    <div class="d-flex flex-row border-bottom">
+                                        <div class="notification-icon bg-secondary-c pt-3 px-3 pb-3"><i class="far fa-envelope text-primary fa-lg pt-3"></i></div>
+                                        <div class="flex-grow-1 px-3 py-3">
+                                            <p class="mb-0"> {{date('H:i:s d-m-Y', strtotime($permohonan->created_at))}} &ensp;<span class="badge badge-pill badge-primary">Baru</span></p>
+                                            <small>{{$notification->data['tajuk'] }}</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                @endif
+                                @endforeach
+                              @endforeach
+                            <!-- <a href="#" class="dropdown-item text-secondary-light p-0">
+                                <div class="d-flex flex-row border-bottom">
+                                    <div class="notification-icon bg-secondary-c pt-3 px-3"><i class="far fa-envelope text-primary fa-lg"></i></div>
+                                    <div class="flex-grow-1 px-3 py-3">
+                                        <p class="mb-0">New message <span class="badge badge-pill badge-primary">New</span></p>
+                                        <small>James : Hey! Are you busy?</small>
+                                    </div>
+                                </div>
+                            </a> -->
+                            <!-- Menu item -->
+                            <!-- <a href="#" class="dropdown-item text-secondary-light p-0">
+                                <div class="d-flex flex-row border-bottom">
+                                    <div class="notification-icon bg-secondary-c pt-3 px-3"><i class="fas fa-clipboard-list text-success fa-lg"></i></div>
+                                    <div class="flex-grow-1 px-3 py-3">
+                                        <p class="m-0">New order received <span class="badge badge-pill badge-success">New</span></p>
+                                        <small>3 iPhones x</small>
+                                    </div>
+                                </div>
+                            </a> -->
+                            <!-- Menu item -->
+                            <!-- <a href="#" class="dropdown-item text-secondary-light p-0 pr-2">
+                                <div class="d-flex flex-row border-bottom">
+                                    <div class="notification-icon bg-secondary-c pt-3 px-3"><i class="fas fa-box-open text-warning fa-lg"></i></div>
+                                    <div class="flex-grow-1 px-3 py-3">
+                                        <p class="m-0">Product out of stock <span class="badge badge-pill badge-warning small">1</span></p>
+                                        <small>Headphone E63</small>
+                                    </div>
+                                </div>
+                            </a> -->
+                        </div>
                     </div>
 
                     <!-- Profile action dropdown -->
@@ -224,7 +278,6 @@
     <script src="{{ asset('qbadminui/js/vendor/DataTable-1.10.20/datatables.min.js') }}"></script>
     <!-- Data Table script -->
     <script src="{{ asset('qbadminui/js/plugins/dataTable_script.js') }}"></script>
-    <script src="{{ asset ('js/app.js') }}"></script>
 
 </body>
 </html>

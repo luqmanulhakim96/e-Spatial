@@ -84,10 +84,6 @@
                 <div class="title m-b-md">
                     JPSM e-Spatial
                 </div>
-                <div id="app">
-                  <example-component>
-                  </example-component>
-                </div>
                 <div class="links">
                     <a href="https://www.forestry.gov.my/my/">Jabatan Perhutanan Semenanjung Malaysia</a>
                 </div>
@@ -97,12 +93,5 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="{{ asset ('js/app.js') }}">
-            Echo.channel('home')
-              .listen('NewNotification', (e) => {
-                console.log(e.message);
-              });
-              console.log("hi");
-        </script>
     </body>
 </html>

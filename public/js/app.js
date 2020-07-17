@@ -1955,7 +1955,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
-    Echo.channel('home').listen('NewNotification', function (e) {
+    Echo.channel('home').listen('PermohonanBaruAdmin', function (e) {
+      console.log(e.message);
+    });
+    Echo.channel('home').listen('PermohonanBaruAdminNull', function (e) {
+      console.log(e.message);
+    });
+    Echo.channel('home').listen('PermohonanBaruUser', function (e) {
       console.log(e.message);
     });
   }

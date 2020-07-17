@@ -75,6 +75,17 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
 
+  #route for Senarai Email
+  Route::get('/email/senarai', 'SenaraiEmailController@view')->name('senarai-email.list');
+
+  Route::get('/email/tambah', 'SenaraiEmailController@create')->name('senarai-email.add');
+
+  Route::get('/email/edit/{id}', 'SenaraiEmailController@edit')->name('senarai-email.edit');
+
+  Route::post('/email/update/{id}', 'SenaraiEmailController@updateSurat')->name('senarai-email.update');
+
+  Route::post('/email/submit', 'SenaraiEmailController@submitForm')->name('senarai-email.submit');
+
 });
 
 Route::middleware('user')->group(function () {

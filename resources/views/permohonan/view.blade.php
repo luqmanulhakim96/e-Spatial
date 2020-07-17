@@ -112,7 +112,7 @@
             </div>
 
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <form  action="{{route('permohonan.ulasan.update',$permohonan->id)}}" method="post">
+              <form  action="{{route('permohonan.harga.view',$permohonan->id)}}" method="post" id="rumusan-form">
                 @csrf
                 <!-- Create 2 row -->
                 <div class="row">
@@ -152,7 +152,7 @@
                     @endif
                 </div>
                 <input type="hidden" name="current_id_for_user" value="{{ $current_user_info->role }}" readonly>
-                <button type="submit" class="btn btn-primary">Hantar Ulasan</button>
+                <button type="submit" class="btn btn-primary" id="submit_data" >Hantar Ulasan</button>
               </form>
             </div>
 
@@ -166,8 +166,13 @@
 
       </div>
   </div>
-</div>
-
-            </div>
-        </main>
+  <script type="text/javascript">
+  $(document).ready(function() {
+      $(document).on('submit', '#rumusan-form', function() {
+          $('#submit_data').html('<i class="fa fa-spinner fa-spin"></i>');
+          $('#submit_data').attr('disabled', 'disabled');
+      });
+  });
+  </script>
+</main>
 @endsection

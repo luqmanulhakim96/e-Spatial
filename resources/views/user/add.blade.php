@@ -153,7 +153,7 @@
               <div class="card rounded-lg">
                 <div class="card-body">
 
-                  <div class="card-title">Malumat Tambahan</div>
+                  <div class="card-title">Maklumat Tambahan</div>
 
                   <form class="" action="{{route('user.submit')}}" method="post" id="permohonan_data">
                     <!-- attachment input -->
@@ -222,7 +222,7 @@
                               <input type="text" class="form-control bg-light" name="status_permohonan"    value="Sedang Diproses"hidden>
                               <input type="text" class="form-control bg-light" name="status_pembayaran"   value="Belum Dibayar" hidden>
 
-                              <button type="submit" class="btn btn-primary">Mohon Data</button>
+                              <button type="submit" class="btn btn-primary" id="submit_data" >Mohon Data</button>
                               </div>
 
                         </div>
@@ -654,6 +654,14 @@
               }
             })
           }
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('submit', '#permohonan_data', function() {
+                $('#submit_data').html('<i class="fa fa-spinner fa-spin"></i>');
+                $('#submit_data').attr('disabled', 'disabled');
+            });
         });
         </script>
 

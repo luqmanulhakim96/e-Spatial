@@ -47,7 +47,15 @@
         mounted() {
             console.log('Component mounted.');
             Echo.channel('home')
-              .listen('NewNotification', (e) => {
+              .listen('PermohonanBaruAdmin', (e) => {
+                console.log(e.message);
+              });
+            Echo.channel('home')
+              .listen('PermohonanBaruAdminNull', (e) => {
+                console.log(e.message);
+              });
+            Echo.channel('home')
+              .listen('PermohonanBaruUser', (e) => {
                 console.log(e.message);
               });
         }
