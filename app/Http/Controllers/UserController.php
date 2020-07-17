@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
+use Validator,Redirect,Response,File;
+Use App\Document;
 use App\Permohonan;
 use App\User;
 use App\SenaraiHarga;
@@ -27,6 +28,7 @@ class UserController extends Controller
     $list = SenaraiHarga::where('status','Aktif')
               ->distinct()
               ->get();
+
     // dd($nama);
       return view('user.mainMenu', compact('nama', 'list'));
   }
@@ -57,9 +59,15 @@ class UserController extends Controller
 
   public function list(){
     $user_id = Auth::user()->id;
-    $list = Permohonan::where('user_id','=',$user_id)->get();
+    $list = Permohonan::where('user_id','=',$user_id)
+              ->where('status_permohonan','Sedang Diproses')
+              ->get();
 
-    return view('user.list', compact('list'));
+    $list_lulus = Permohonan::where('user_id','=',$user_id)
+              ->where('status_permohonan','Lulus')
+              ->get();
+
+    return view('user.list', compact('list','list_lulus'));
   }
 
   public function add(){
@@ -148,7 +156,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
 
 
 
-  public function create(array $data){
+  public function create(array $data, string $uploaded_files_permohonan, string $uploaded_file_aoi){
     $user_id = Auth::user()->id;
 
     $user = User::findOrFail($user_id);
@@ -156,17 +164,23 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     $status_permohonan = $data['status_permohonan'];
     $status_pembayaran = $data['status_pembayaran'];
 
-
-
     if($user->kategori == 'dalaman'){
       $status_permohonan = 'Lulus';
       $status_pembayaran = 'Sudah Dibayar';
     }
 
+    if(!isset($data['attachment_permohonan'])){
+      $attachment_permohonan = null;
+    }
+
+    if(!isset($data['attachment_aoi'])){
+      $attachment_aoi = null;
+    }
+
 
     return Permohonan::Create([
-      'attachment_aoi' => $data['attachment_aoi'],
-      'attachment_permohonan' => $data['attachment_permohonan'],
+      'attachment_aoi' => $uploaded_file_aoi,
+      'attachment_permohonan' => $uploaded_files_permohonan,
       'dokumen_ke_luar_negara' => $data['dokumen_ke_luar_negara'],
       'maklumat_agensi_dan_negara' => $data['maklumat_agensi_dan_negara'],
       'status_permohonan' => $status_permohonan,
@@ -202,18 +216,43 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
   }
 
   public function submitForm(Request $request){
-    //dd($request);
+    // dd($request->all());
+    $user_id = Auth::user()->id;
+    $filename_aoi = null;
+    $filename_kepujian = null;
     $this->validator($request->all())->validate();
 
-    //dd($request->kategori_data);
+    //dd($files = $request->file('attachment_permohonan') != null);
+    $uploaded_files_permohonan = "";
+    $uploaded_file_aoi = "";
+    if ($files = $request->file('attachment_aoi') != null) {
+          $uploaded_file_aoi = $request->file('attachment_aoi')->store('uploads');
+          // dd($uploaded_file_aoi);
+           // $destinationPath = 'public/file/attachment_aoi'; // upload path
+           // $filename_aoi = "attachment_aoi_" . $user_id . "." . $files->getClientOriginalExtension();
+           // $files->move($destinationPath, $filename_aoi);
+           // $insert['file'] = "$filename_aoi";
+
+    }
+
+    if ($files = $request->file('attachment_permohonan') != null) {
+           // $destinationPath = 'public/file/attachment_permohonan'; // upload path
+           // $filename_aoi = "attachment_aoi_" . $user_id . "." . $files->getClientOriginalExtension();
+           // $files->move($destinationPath, $filename_aoi);
+           // $insert['file'] = "$filename_aoi";
+           $uploaded_files_permohonan =  $request->file('attachment_permohonan')->store('uploads');
+    }
+
 
     //store data in permohonan table
-    event($permohonanBaru = $this->create($request->all()));
+    event($permohonanBaru = $this->create($request->all(), $uploaded_files_permohonan, $uploaded_file_aoi));
     //call permohonan id
+
     $user_id = Auth::user()->id;
     //dd($request);
 
     // hantar notification permohonan ke admin
+
     event($permohonanDataBaru = $this->createData($request->all(), $permohonanBaru));
     // dd($permohonanBaru);
     $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'memo')->first();
@@ -235,7 +274,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
   public function edit($id){
     $info = Permohonan::findOrFail($id);
     $data = DataPermohonan::where('permohonan_id', $id)->get();
-    dd($data);
+    //dd($data);
     return view('user.edit', compact('info','data'));
   }
 

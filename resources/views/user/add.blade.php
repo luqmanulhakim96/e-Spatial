@@ -11,7 +11,7 @@
                       <div class="card-title">Permohonan Baru</div>
                       <div class="">
                         <div class="card-title">Pilih Data</div>
-                        <form class="" id="pilihan_data">
+                        <form class="" id="pilihan_data" enctype="multipart/form-data">
                           @csrf
                         <!-- jenis dokumen input-->
                         <div class="form-group">
@@ -155,7 +155,7 @@
 
                   <div class="card-title">Maklumat Tambahan</div>
 
-                  <form class="" action="{{route('user.submit')}}" method="post" id="permohonan_data">
+                  <form class="" action="{{route('user.submit')}}" method="post" id="permohonan_data" enctype="multipart/form-data">
                     <!-- attachment input -->
                     @csrf
 
@@ -196,6 +196,7 @@
                                   <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif>
                                   <label class="custom-control-label" for="Tidak">Tidak</label>
                               </div>
+                            </div>
 
                               @error('dokumen_ke_luar_negara')
                               <div class="alert alert-danger">
