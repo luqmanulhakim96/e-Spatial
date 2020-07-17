@@ -85,8 +85,7 @@
                     JPSM e-Spatial
                 </div>
                 <div id="app">
-                  <example-component>
-                  </example-component>
+
                 </div>
                 <div class="links">
                     <a href="https://www.forestry.gov.my/my/">Jabatan Perhutanan Semenanjung Malaysia</a>

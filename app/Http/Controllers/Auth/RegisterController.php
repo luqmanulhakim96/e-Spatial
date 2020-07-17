@@ -13,6 +13,8 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 
+use Carbon\Carbon;
+
 class RegisterController extends Controller
 {
     /*
@@ -58,16 +60,17 @@ class RegisterController extends Controller
             'nama' => ['required', 'string', 'max:255'],
             'kad_pengenalan' => ['required', 'string', 'max:12', 'unique:users'],
             'kerakyatan' => ['required'],
-            'tarikh_lahir' => ['required', 'date'],
+            'tarikh_lahir' => ['required'],
             'tempat_lahir' => ['required', 'string', 'max:255'],
             'jawatan' => ['required', 'string', 'max:255'],
             'jenis_perniagaan' => ['required', 'string', 'max:255'],
-            'alamat_kediaman' => ['required', 'string', 'max:255'],
-            // 'nama_kementerian' => ['string', 'max:255'],
-            // 'alamat_kementerian' => ['string', 'max:255'],
+            'alamat_kediaman' => ['nullable','required', 'string', 'max:255'],
+            'nama_kementerian' => ['nullable','string', 'max:255'],
+            'alamat_kementerian' => ['nullable','string', 'max:255'],
             'no_tel_rumah' => ['required', 'string', 'max:12'],
             'no_tel_bimbit' => ['required', 'string', 'max:12'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'bahagian' => ['nullable','string', 'max:255'],
             // 'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -80,16 +83,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // dd($data);
+         //dd($data);
         $hashed_random_password = Hash::make("1234567890");
-        // dd($data);
+         //dd($data['tarikh_lahir']);
+        $date = $data['tarikh_lahir'];
+
+        $date = Carbon::parse($date)->timestamp;
+        dd($date);
+
+
+        dd($date);
         return User::create([
             'kategori' => $data['kategori'],
             'name' => $data['nama'],
             'email' => $data['email'],
             'kad_pengenalan' => $data['kad_pengenalan'],
             'kerakyatan' => $data['kerakyatan'],
-            'tarikh_lahir' => $data['tarikh_lahir'],
+            'tarikh_lahir' => $date,
             'tempat_lahir' => $data['tempat_lahir'],
             'jawatan' => $data['jawatan'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
@@ -98,6 +108,7 @@ class RegisterController extends Controller
             'alamat_kementerian' => $data['alamat_kementerian'],
             'no_tel_rumah' => $data['no_tel_rumah'],
             'no_tel_bimbit' => $data['no_tel_bimbit'],
+            'bahagian' => $data['bahagian'],
             // 'password' => Hash::make($data['password']),
             'password' => $hashed_random_password,
         ]);

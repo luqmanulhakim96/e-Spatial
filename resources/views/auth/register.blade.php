@@ -19,14 +19,14 @@
                 <div class="col-md-12">
                     <div class="form-group">
                       <label for="kategori">Kategori</label>
-                      <select id="kategori" class="custom-select  bg-light @error('kategori') is-invalid @enderror" name="kategori" value="{{ old('kategori') }}" onchange="showJenisForm(this)" autofocus>
-                            <option value="kementerian">Kementerian</option>
-                            <option value="agensi">Agensi</option>
-                            <option value="penyelidik">Penyelidik</option>
-                            <option value="institut">Institut Pengajian Tinggi</option>
-                            <option value="awam">Orang Awam</option>
-                            <option value="lain">Lain-lain</option>
-                            <option value="dalaman">Dalaman</option>
+                      <select id="kategori" class="custom-select  bg-light @error('kategori') is-invalid @enderror" name="kategori" value="{{ old('kategori') }}" onchange="showJenisForm()" autofocus>
+                            <option value="kementerian" {{ old('kategori') == "kementerian" ? 'selected' : '' }}>Kementerian</option>
+                            <option value="agensi" {{ old('kategori') == "agensi" ? 'selected' : '' }}>Agensi</option>
+                            <option value="penyelidik" {{ old('kategori') == "penyelidik" ? 'selected' : '' }}>Penyelidik</option>
+                            <option value="institut" {{ old('kategori') == "institut" ? 'selected' : '' }}>Institut Pengajian Tinggi</option>
+                            <option value="awam" {{ old('kategori') == "awam" ? 'selected' : '' }}>Orang Awam</option>
+                            <option value="lain" {{ old('kategori') == "lain" ? 'selected' : '' }}>Lain-lain</option>
+                            <option value="dalaman" {{ old('kategori') == "dalaman" ? 'selected' : '' }}>Dalaman</option>
                         </select>
                     </div>
                 </div>
@@ -160,11 +160,11 @@
                     <div class="form-group">
                       <label for="bahagian" class="text-muted">Bahagian</label>
                       <input id="bahagian" type="text" class="form-control bg-light @error('bahagian') is-invalid @enderror" name="bahagian" value="{{ old('bahagian') }}" autocomplete="bahagian" autofocus>
-                      <!-- @error('bahagian')
+                      @error('bahagian')
                       <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                           </span>
-                      @enderror -->
+                      @enderror
                     </div>
                 </div>
             </div>
@@ -242,17 +242,25 @@
         </div>
     </div>
     <script type="text/javascript">
-      function showJenisForm(select){
-        if(select.value=='awam'){
+      window.addEventListener('load', showJenisForm)
+      window.addEventListener('load', get_tarikh_lahir)
+
+      function showJenisForm(){
+
+        var kategori = $('#kategori').val();
+
+        if(kategori =='awam'){
           document.getElementById('nama_kementerian_div').style.display = "none";
           document.getElementById('alamat_kementerian_div').style.display = "none";
           document.getElementById('bahagian_div').style.display = "none";
-        }else if(select.value=='Dalaman'){
+        }else if(kategori =='dalaman'){
           document.getElementById('bahagian_div').style.display = "block";
+          document.getElementById('nama_kementerian_div').style.display = "none";
+          document.getElementById('alamat_kementerian_div').style.display = "none";
         }else {
           document.getElementById('nama_kementerian_div').style.display = "block";
           document.getElementById('alamat_kementerian_div').style.display = "block";
-          document.getElementById('bahagian_div').style.display = "block";
+          document.getElementById('bahagian_div').style.display = "none";
         }
 
       }
@@ -268,7 +276,7 @@
 
         // var dob = Day + "/" + Month + "/" + (Year > cutoff ? '19' : '20') + Year;
 
-        var dob = (Year > cutoff ? '19' : '20') + Year + "/" + Month + "/"  + Day;
+        var dob = (Year > cutoff ? '19' : '20') + Year + "-" + Month + "-"  + Day;
 
         // $('#tarikh_lahir').val(dob);
 

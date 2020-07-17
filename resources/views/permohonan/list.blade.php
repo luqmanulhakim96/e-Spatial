@@ -135,6 +135,7 @@
 
                                                       @foreach($listPermohonanBaru_kp as $baru)
                                                       <tr>
+                                                        <!-- kalau jumlah bayaran == 0, masuk page harga -->
                                                         @if($userInfo->role != 0)
                                                         <td>
                                                           <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}3</a>
@@ -169,6 +170,49 @@
                                                 </div>
 
                                                 <div class="tab-pane fade" id="pills-lulus" role="tabpanel" aria-labelledby="pills-lulus-tab">
+
+                                                  <div class="modal fade" id="status_harga" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLabel">Update Status Bayaran</h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <form action="{{route('permohonan.statusPembayaran.update')}}" method="post">
+                                                          @csrf
+                                                          <div class="modal-body">
+
+                                                              <div class="form-group">
+                                                                <label for="dokumen_ke_luar_negara">Status pembayaran:</label>
+
+                                                                <!-- All Radio Button  -->
+                                                                <div class="switchs">
+                                                                    <!-- Primary Radio Button  -->
+
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" id="Sudah Dibayar" name="status_pembayaran" class="custom-control-input"  value="Sudah Dibayar" @if(old('status_pembayaran')=="Sudah Dibayar") checked @endif>
+                                                                    <label class="custom-control-label" for="Sudah Dibayar">Sudah Dibayar</label>
+                                                                </div>
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" id="Pengecualian Bayaran" name="status_pembayaran" class="custom-control-input"  value="Pengecualian Bayaran" @if(old('status_pembayaran')=="Pengecualian Bayaran") checked @endif>
+                                                                    <label class="custom-control-label" for="Pengecualian Bayaran">Pengecualian Bayaran</label>
+                                                                </div>
+                                                              </div>
+
+                                                              </div>
+
+                                                              <input type="text" name="permohonan_id" id="permohonan_id" value="">
+                                                          </div>
+                                                          <div class="modal-footer">
+                                                              <button type="submit"  class="btn btn-primary" >Update Status Pembayaran</button>
+                                                          </div>
+                                                        </form>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
                                                   <table class="table table-striped table-bordered" id="list_permohonan_lulus" style="width: 100%;">
 
                                                     <thead>
@@ -186,7 +230,17 @@
                                                       <tr>
                                                         <td>{{ $lulus->user->name  }}</td>
                                                         <td><span class="badge badge-success badge-pill">{{ $lulus->status_permohonan  }}</span></td>
-                                                        <td><span class="badge badge-warning badge-pill">{{ $lulus->status_pembayaran  }}</span></td>
+                                                        @if($lulus->status_pembayaran == 'Belum Dibayar')
+
+                                                        @if($userInfo->role == 0)
+                                                        <td><button class="btn btn-warning rounded m-2" onclick="passId({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#status_harga">{{ $lulus->status_pembayaran  }}</button></td>
+                                                        @else
+                                                        <td><button class="btn btn-warning rounded m-2">{{ $lulus->status_pembayaran  }}</button></td>
+                                                        @endif
+                                                        <!-- <td><span class="badge badge-warning badge-pill">{{ $lulus->status_pembayaran  }}</span></td> -->
+                                                        @else
+                                                        <td><span class="badge badge-success badge-pill">{{ $lulus->status_pembayaran  }}</span></td>
+                                                        @endif
                                                         <td>{{ $lulus->attachment_permohonan}}</td>
                                                         <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
@@ -241,4 +295,11 @@
 
             </div>
         </main>
+        <script type="text/javascript">
+        //pass id from table to modal
+          function passId(id){
+            //var permohonan_id = $(this).data('id');
+            $(".modal-body #permohonan_id").val( id );
+          }
+        </script>
 @endsection

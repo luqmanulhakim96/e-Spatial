@@ -85,10 +85,30 @@ class PermohonanController extends Controller
     return $this->viewInformasiPermohonan($id);
   }
 
+  public function updateStatusPembayaran(Request $request){
+
+    //dd($request->all());
+
+    $permohonan = Permohonan::findOrFail($request->permohonan_id);
+
+    $permohonan->status_pembayaran = $request->status_pembayaran;
+
+    $permohonan->save();
+
+    if($request->status_pembayaran == 'Sudah Dibayar'){
+      return redirect()->route('senarai-surat.add');
+    }elseif ($request->status_pembayaran == 'Pengecualian Bayaran') {
+      return redirect()->route('senarai-surat.add');
+    }else {
+      return redirect()->route('senarai-surat.add');
+    }
+
+  }
+
   public function updateUlasan($id, Request $request){
     $user_id = Auth::user()->id;
     $current_user_info = User::findOrFail($user_id);
-    //dd( $current_user_info->role);
+    //dd($current_user_info->role);
 
     $permohonan = Permohonan::findOrFail($id);
 
@@ -101,7 +121,7 @@ class PermohonanController extends Controller
     $permohonan->ulasan_ketua_pengarah = $request->ulasan_ketua_pengarah;
 
     if($current_user_info->role == 3){
-      $permohonan->status_permohonan = "Lulus";
+      $permohonan->status_permohonan = $request->status_permohonan;
     }
 
     $permohonan->save();
