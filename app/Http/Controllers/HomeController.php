@@ -44,7 +44,13 @@ class HomeController extends Controller
       $userInfo = User::findOrFail($user_id);
 
       $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNull('ulasan_admin')
                             ->get();
+
+      $listPermohonanBaru2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->get();
+
 
       $listPermohonanBaru_p1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
                                 ->whereNull('ulasan_penyokong_1')
@@ -65,6 +71,8 @@ class HomeController extends Controller
                                 ->get();
 
       $listPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')->get();
+
+      $listPermohonanGagal = Permohonan::where('status_permohonan', 'Gagal')->get();
 
       //dd($listPermohonanBaru_p2);
       // $listPermohonanDalaman = Permohonan::whereHas('user', function($q) use($user_id) {
@@ -90,7 +98,7 @@ class HomeController extends Controller
       // }])->where('status_permohonan', 'Sedang Diproses')->get();
       // dd($listPermohonan->user->role)
 
-      return view('permohonan.list', compact('listPermohonanBaru', 'listPermohonanLulus', 'listPermohonanDalaman', 'userInfo','listPermohonanBaru_p1','listPermohonanBaru_p2','listPermohonanBaru_kp' ));
+      return view('permohonan.list', compact('listPermohonanBaru','listPermohonanBaru2', 'listPermohonanLulus','listPermohonanGagal', 'listPermohonanDalaman', 'userInfo','listPermohonanBaru_p1','listPermohonanBaru_p2','listPermohonanBaru_kp' ));
     }
 
 
