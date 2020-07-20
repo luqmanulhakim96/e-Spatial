@@ -33,9 +33,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $nama = User::find(1);
-      // dd($nama);
-        return view('home', compact('nama'));
+        //getting notification function is in Providers/AppServiceProvider
+        
+        return view('home');
     }
 
     public function senaraiPermohonan(){
