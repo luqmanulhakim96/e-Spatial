@@ -282,18 +282,18 @@
 
         console.log(dob);
 
-        var tarikh_lahir = convert(dob);
+        // var tarikh_lahir = convert(dob);
 
-        console.log(tarikh_lahir);
+        // console.log(tarikh_lahir);
 
-        document.getElementById("tarikh_lahir").value = tarikh_lahir;
+        document.getElementById("tarikh_lahir").value = dob;
 
       }
-      function convert(str) {
-        var date = new Date(str),
-          mnth = ("0" + (date.getMonth() + 1)).slice(-2),
-          day = ("0" + date.getDate()).slice(-2);
-        return [day, mnth, date.getFullYear()].join("/");
-      }
+      // function convert(str) {
+      //   var date = new Date(str),
+      //     mnth = ("0" + (date.getMonth() + 1)).slice(-2),
+      //     day = ("0" + date.getDate()).slice(-2);
+      //   return [day, mnth, date.getFullYear()].join("/");
+      // }
     </script>
 @endsection

@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class EmailNotifikasiUserPermohonanBaru extends Mailable
+class EmailNotifikasiRegisterUser extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,12 +16,11 @@ class EmailNotifikasiUserPermohonanBaru extends Mailable
      *
      * @return void
      */
-    public $user;
-
-    public function __construct($user)
+    public function __construct($user, $password)
     {
         //
         $this->user = $user;
+        $this->password = $password;
     }
 
     /**
@@ -31,10 +30,13 @@ class EmailNotifikasiUserPermohonanBaru extends Mailable
      */
     public function build()
     {
-      return $this->to($this->user->email , $this->user->name)
+      // dd($this->password);
+      $user = $this->user;
+      $password = $this->password;
+      return $this->to($this->user['email'] , $this->user['nama'])
               // ->from(env('MAIL_FROM_ADDRESS'))
               ->from('system@espatial.com')
-              ->subject('Permohonan Diterima')
-              ->view('senarai-email.templates.notifikasiUserPermohonanBaru');
+              ->subject('Pendaftaran Berjaya')
+              ->view('senarai-email.templates.notifikasiUserPendaftaranBaru', compact('user','password'));
     }
 }
