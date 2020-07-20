@@ -175,8 +175,28 @@ $(document).ready(function(){
     });
 
     // Responsive Data Table
+    let list_permohonan_user_gagal = $("#list_permohonan_user_gagal")
+    $(list_permohonan_user_gagal).DataTable({
+        responsive : true,
+        order:[[4,"desc"]]
+
+    });
+
+    // Responsive Data Table
     let list_permohonan_baru = $("#list_permohonan_baru")
     $(list_permohonan_baru).DataTable({
+        responsive : true
+    });
+
+    // Responsive Data Table
+    let list_permohonan_baru_2 = $("#list_permohonan_baru_2")
+    $(list_permohonan_baru_2).DataTable({
+        responsive : true
+    });
+
+    // Responsive Data Table
+    let list_permohonan_gagal = $("#list_permohonan_gagal")
+    $(list_permohonan_gagal).DataTable({
         responsive : true
     });
 

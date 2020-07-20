@@ -9,6 +9,7 @@ use App\Permohonan;
 use App\User;
 use App\SenaraiHarga;
 use App\DataPermohonan;
+use Storage;
 
 use Auth;
 
@@ -33,7 +34,7 @@ class PermohonanController extends Controller
     //$harga = SenaraiHarga::findorfail($senaraiHargaId);
     //dd($harga);
     //dd($permohonan);
-    return view('permohonan.harga.view', compact('dataPermohonan', 'senaraiHargaUser'));
+    return view('permohonan.harga.view', compact('dataPermohonan', 'senaraiHargaUser','permohonan'));
   }
 
   protected function validator(array $data)
@@ -83,6 +84,11 @@ class PermohonanController extends Controller
 
     //route to next page
     return $this->viewInformasiPermohonan($id);
+  }
+
+  public function downloadAoi($id){
+    $permohonan = Permohonan::findOrFail($id);
+    return Storage::download($permohonan->attachment_aoi);
   }
 
   public function updateStatusPembayaran(Request $request){

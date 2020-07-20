@@ -9,20 +9,30 @@
                 <!-- Pills Tab-->
                                     <div class="card rounded-lg">
                                         <div class="card-body">
-                                            <div class="card-title">Senarai Pemohon (Current User role: {{$userInfo->role}}) </div>
+                                            <div class="card-title">Senarai Permohonan (Current User role: {{$userInfo->role}}) </div>
 
 
 
                                             <!-- Tab nav -->
                                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" id="pills-baru-tab" data-toggle="pill" href="#pills-baru" role="tab" aria-controls="pills-baru" aria-selected="true">Pemohon Baru</a>
+                                                    <a class="nav-link active" id="pills-baru-tab" data-toggle="pill" href="#pills-baru" role="tab" aria-controls="pills-baru" aria-selected="true">Permohonan Baru</a>
                                                 </li>
+                                                @if($userInfo->role == 0)
                                                 <li class="nav-item">
-                                                    <a class="nav-link" id="pills-lulus-tab" data-toggle="pill" href="#pills-lulus" role="tab" aria-controls="pills-lulus" aria-selected="false">Pemohon Lulus</a>
+                                                    <a class="nav-link" id="pills-proses-tab" data-toggle="pill" href="#pills-proses" role="tab" aria-controls="pills-proses" aria-selected="false">Permohonan Sedang Diproses</a>
                                                 </li>
+                                                @endif
                                                 <li class="nav-item">
-                                                    <a class="nav-link" id="pills-dalaman-tab" data-toggle="pill" href="#pills-dalaman" role="tab" aria-controls="pills-dalaman" aria-selected="false">Pemohon Dalaman</a>
+                                                    <a class="nav-link" id="pills-lulus-tab" data-toggle="pill" href="#pills-lulus" role="tab" aria-controls="pills-lulus" aria-selected="false">Permohonan Lulus</a>
+                                                </li>
+                                                @if($userInfo->role == 0)
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="pills-gagal-tab" data-toggle="pill" href="#pills-gagal" role="tab" aria-controls="pills-gagal" aria-selected="false">Permohonan Gagal</a>
+                                                </li>
+                                                @endif
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="pills-dalaman-tab" data-toggle="pill" href="#pills-dalaman" role="tab" aria-controls="pills-dalaman" aria-selected="false">Permohonan Dalaman</a>
                                                 </li>
                                             </ul>
                                             <!-- Tab content -->
@@ -32,7 +42,7 @@
 
                                                     <thead>
                                                         <tr>
-                                                          <th class="all">NAMA PEMOHON</th>
+                                                          <th class="all">NAMA Permohonan</th>
                                                           <th class="all">STATUS PERMOHONAN</th>
                                                           <th class="all">ATTACHMENT PERMOHONAN</th>
                                                           <th class="all">PRINT</th>
@@ -220,8 +230,7 @@
                                                           <th class="all">NAMA</th>
                                                           <th class="all">STATUS PERMOHONAN</th>
                                                           <th class="all">STATUS PEMBAYARAN</th>
-                                                          <th class="all">ATTACHMENT</th>
-                                                          <th class="all">PRINT</th>
+                                                          <th class="all">RECEIPT PEMBAYARAN</th>
                                                         </tr>
                                                     </thead>
 
@@ -241,12 +250,19 @@
                                                         @else
                                                         <td><span class="badge badge-success badge-pill">{{ $lulus->status_pembayaran  }}</span></td>
                                                         @endif
+
+                                                        @if($lulus->attachment_receipt != null)
                                                         <td>{{ $lulus->attachment_permohonan}}</td>
-                                                        <td class="p-3">
+                                                        @else
+                                                        <td>Tiada</td>
+                                                        @endif
+
+
+                                                        <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
                                                               </div>
-                                                        </td>
+                                                        </td> -->
                                                       </tr>
                                                       @endforeach
                                                     </tbody>
@@ -260,31 +276,91 @@
                                                     <thead>
                                                         <tr>
                                                           <th class="all">NAMA</th>
+                                                          <th class="all">KATEGORI</th>
                                                           <th class="all">STATUS PERMOHONAN</th>
-                                                          <th class="all">ATTACHMENT</th>
-                                                          <th class="all">PRINT</th>
+                                                          <th class="all">TARIKH PERMOHONAN</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                       @foreach($listPermohonanDalaman as $dalaman)
                                                       <tr>
                                                         <td>{{$dalaman->user->name}}</td>
+                                                        <td>{{$dalaman->user->kategori}}</td>
                                                         <td>{{$dalaman->status_permohonan}}</td>
-                                                        <td>Tiada</td>
-                                                        <td>Tiada</td>
+                                                        <td>{{$dalaman->created_at}}</td>
                                                       </tr>
                                                       @endforeach
 
                                                     </tbody>
-
-
-
                                                   </table>
                                                 </div>
 
+                                                @if($userInfo->role == 0)
+                                                <!-- tab sedang diproses -->
+                                                <div class="tab-pane fade" id="pills-proses" role="tabpanel" aria-labelledby="pills-proses-tab">
+                                                    <table class="table table-striped table-bordered" id="list_permohonan_baru_2" style="width: 100%;">
 
+                                                      <thead>
+                                                          <tr>
+                                                            <th class="all">PERMOHONAN ID</th>
+                                                            <th class="all">NAMA PEMOHON</th>
+                                                            <th class="all">TARIKH PERMOHONAN</th>
+                                                            <th class="all">STATUS PERMOHONAN</th>
+                                                          </tr>
+                                                      </thead>
+                                                      <tbody>
+                                                        @foreach($listPermohonanBaru2 as $baru2)
+                                                        <tr>
+                                                          <td>{{$baru2->id}}</td>
+                                                          <td>{{$baru2->user->name}}</td>
+                                                          <td>{{$baru2->user->created_at}}</td>
+                                                          @if($baru2->ulasan_penyokong_1 == null)
+                                                          <td>Menunggu ulasan Penyokong 1</td>
+                                                          @elseif($baru2->ulasan_penyokong_2 == null)
+                                                          <td>Menunggu ulasan Penyokong 2</td>
+                                                          @elseif($baru2->ulasan_ketua_pengarah == null)
+                                                          <td>Menunggu ulasan Ketua Pengarah</td>
+                                                          @else
+                                                          <td>{{$baru2->status_permohonan}}</td>
+                                                          @endif
+                                                        </tr>
+                                                        @endforeach
+                                                      </tbody>
 
-
+                                                    </table>
+                                                </div>
+                                                <!-- tab permohonan gagal -->
+                                                <div class="tab-pane fade" id="pills-gagal" role="tabpanel" aria-labelledby="pills-gagal-tab">
+                                                  <table class="table table-striped table-bordered" id="list_permohonan_gagal" style="width: 100%;">
+                                                    <thead>
+                                                        <tr>
+                                                          <th class="all">PERMOHONAN ID</th>
+                                                          <th class="all">NAMA PEMOHON</th>
+                                                          <th class="all">TARIKH PERMOHONAN</th>
+                                                          <th class="all">STATUS PERMOHONAN</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      @foreach($listPermohonanGagal as $baru2)
+                                                      <tr>
+                                                        <td>{{$baru2->id}}</td>
+                                                        <td>{{$baru2->user->name}}</td>
+                                                        <td>{{$baru2->user->created_at}}</td>
+                                                        @if($baru2->ulasan_penyokong_1 == null)
+                                                        <td>Menunggu ulasan Penyokong 1</td>
+                                                        @elseif($baru2->ulasan_penyokong_2 == null)
+                                                        <td>Menunggu ulasan Penyokong 2</td>
+                                                        @elseif($baru2->ulasan_ketua_pengarah == null)
+                                                        <td>Menunggu ulasan Ketua Pengarah</td>
+                                                        @else
+                                                        <td>{{$baru2->status_permohonan}}</td>
+                                                        @endif
+                                                      </tr>
+                                                      @endforeach
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>

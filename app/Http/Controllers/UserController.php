@@ -61,7 +61,11 @@ class UserController extends Controller
               ->where('status_permohonan','Lulus')
               ->get();
 
-    return view('user.list', compact('list','list_lulus'));
+    $list_gagal = Permohonan::where('user_id','=',$user_id)
+              ->where('status_permohonan','Gagal')
+              ->get();
+
+    return view('user.list', compact('list','list_lulus','list_gagal'));
   }
 
   public function add(){
@@ -150,34 +154,19 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
 
 
 
-  public function create(array $data, string $uploaded_files_permohonan, string $uploaded_file_aoi){
+  public function create(array $data, $uploaded_files_permohonan, $uploaded_file_aoi){
     $user_id = Auth::user()->id;
 
     $user = User::findOrFail($user_id);
 
     $status_permohonan = $data['status_permohonan'];
     $status_pembayaran = $data['status_pembayaran'];
-    $attachment_aoi = $data['attachment_aoi'];
-    //dd($data);
-    if(isset($data['attachment_permohonan'])){
-      $attachment_permohonan = $data['attachment_permohonan'];
-    }
-    else {
-      $attachment_permohonan = null;
-    }
+
+    //user dalaman permohonan akan terus lulus
     if($user->kategori == 'dalaman'){
       $status_permohonan = 'Lulus';
       $status_pembayaran = 'Sudah Dibayar';
     }
-
-    if(!isset($data['attachment_permohonan'])){
-      $attachment_permohonan = null;
-    }
-
-    if(!isset($data['attachment_aoi'])){
-      $attachment_aoi = null;
-    }
-
 
     return Permohonan::Create([
       'attachment_aoi' => $uploaded_file_aoi,
@@ -234,6 +223,8 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
            // $files->move($destinationPath, $filename_aoi);
            // $insert['file'] = "$filename_aoi";
 
+    }else {
+      $uploaded_file_aoi = null;
     }
 
     if ($files = $request->file('attachment_permohonan') != null) {
@@ -242,6 +233,8 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
            // $files->move($destinationPath, $filename_aoi);
            // $insert['file'] = "$filename_aoi";
            $uploaded_files_permohonan =  $request->file('attachment_permohonan')->store('uploads');
+    }else {
+      $uploaded_files_permohonan = null;
     }
 
 
@@ -259,9 +252,25 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
 
   public function edit($id){
     $info = Permohonan::findOrFail($id);
-    $data = DataPermohonan::where('permohonan_id', $id)->get();
+    $dataPilihan = DataPermohonan::where('permohonan_id', $id)->get();
+    $jumlahdata = DataPermohonan::where('permohonan_id', $id)->count();
+    $jenisDokumen = SenaraiHarga::select('jenis_dokumen')->distinct()->get();
+
+
+    $senaraiHarga = null;
+
+    for($i = 0; $i < $jumlahdata; $i++){
+      $senaraiHarga[$i] = SenaraiHarga::where('id',$dataPilihan[$i]->senarai_harga_id)->get();
+    }
+    //$senaraiHarga = SenaraiHarga::get();
+    // dd($senaraiHarga[0][0]);
+    // $i=0;
+    // foreach ($senaraiHarga[1] as $data) {
+    //   dd($data);
+    //   $i++;
+    // }
     //dd($data);
-    return view('user.edit', compact('info','data'));
+    return view('user.edit', compact('info','dataPilihan','jenisDokumen','jumlahdata','senaraiHarga'));
   }
 
   public function update($id){
@@ -278,10 +287,20 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     $permohonan->save();
   }
 
-  public function updatePermohonan($id){
-    $this->validator(request()->all())->validate();
+  public function updatePermohonan($id, Request $request){
+    //$this->validator(request()->all())->validate();
+    //dd(request()->all());
 
-    $this->update($id);
+    $deleteData = DataPermohonan::where('permohonan_id',$id)->delete();
+
+    foreach ($request['data'] as $value) {
+      //d( $value);
+      $submit = DataPermohonan::Create([
+        'senarai_harga_id' => $value,
+        'permohonan_id' => $id
+      ]);
+
+    }
     return redirect()->route('user.list');
   }
 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app_user')
 @section('content')
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
@@ -40,9 +40,6 @@
                                                         <th class="all">PERMOHONAN ID</th>
                                                         <th class="all">TARIKH PERMOHONAN</th>
                                                         <th class="all">STATUS PERMOHONAN</th>
-                                                        <th class="all">STATUS PEMBAYARAN</th>
-                                                        <th class="all">Attachment</th>
-
                                                         <th class="all">UPDATE PERMOHONAN</th>
                                                       </tr>
                                                   </thead>
@@ -53,10 +50,6 @@
                                                       <td><a href="#" data-toggle="modal" data-target="#display_data_permohonan" data-value="{{ $data->id  }}">{{ $data->id  }}</a></td>
                                                       <td>{{ Carbon\Carbon::parse($data->created_at)->format('d-m-Y H:i:s') }}</td>
                                                       <td>{{ $data->status_permohonan  }}</td>
-                                                      <td>{{ $data->status_pembayaran  }}</td>
-                                                      <td><a href="{{ $data->attachment_aoi  }}"> SDSWCDC</a></td>
-
-
                                                       @if($data->ulasan_admin == NULL)
                                                       <td class="p-3">
                                                             <div class="d-flex flex-row justify-content-around align-items-center">
@@ -85,9 +78,10 @@
                                                         <th class="all">PERMOHONAN ID</th>
                                                         <th class="all">TARIKH PERMOHONAN</th>
                                                         <th class="all">STATUS PERMOHONAN</th>
+                                                        <th class="all">JUMLAH BAYARAN (RM)</th>
                                                         <th class="all">STATUS PEMBAYARAN</th>
                                                         <th class="all">MUATNAIK RECEIPT PEMBAYARAN</th>
-                                                        <th class="all">MUATNAIK RECEIPT PEMBAYARAN</th>
+                                                        <th class="all">MUATNAIK RECEIPT SURAT PENERIMAAN DATA</th>
                                                       </tr>
                                                   </thead>
                                                   <!-- Table body -->
@@ -97,19 +91,29 @@
                                                       <td><a href="#" data-toggle="modal" data-target="#display_data_permohonan" data-value="{{ $data->id  }}">{{ $data->id  }}</a></td>
                                                       <td>{{ Carbon\Carbon::parse($data->created_at)->format('d-m-Y H:i:s') }}</td>
                                                       <td>{{ $data->status_permohonan  }}</td>
+                                                      <td>{{ $data->jumlah_bayaran  }}</td>
                                                       <td>{{ $data->status_pembayaran  }}</td>
-                                                      @if($data->ulasan_admin == NULL)
-                                                      <td class="p-3">
-                                                            <div class="d-flex flex-row justify-content-around align-items-center">
-                                                                <a href="{{ route('user.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                                            </div>
+                                                      <!-- column muat naik receipt pembayaran -->
+                                                      @if($data->attachment_receipt_pembayaran == null)
+                                                      <td>
+                                                        <div class="d-flex flex-row justify-content-around align-items-center">
+                                                            <a href="#" class="btn btn-success mr-1"><i class="fa fa-upload"></i></a>
+                                                        </div>
                                                       </td>
                                                       @else
-                                                      <td class="p-3">
-                                                            <div class="d-flex flex-row justify-content-around align-items-center">
-                                                                <a href="#" class="btn btn-dark mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                                            </div>
+                                                      <td>Telah diterima</td>
                                                       @endif
+                                                      <!-- column muat naik surat penerimaan data -->
+                                                      @if($data->attachment_penerimaan_data == null)
+                                                      <td>
+                                                        <div class="d-flex flex-row justify-content-around align-items-center">
+                                                            <a href="#" class="btn btn-success mr-1"><i class="fa fa-upload"></i></a>
+                                                        </div>
+                                                      </td>
+                                                      @else
+                                                      <td>Telah dimuat naik</td>
+                                                      @endif
+
                                                     </tr>
                                                     @endforeach
                                                   </tbody>
@@ -118,9 +122,23 @@
                                             </div>
 
                                             <div class="tab-pane" id="content" role="tabpanel" aria-labelledby="content-tab">
+                                              <table class="table table-striped table-bordered" id="list_permohonan_user_gagal" style="width: 100%;">
+                                                <thead>
+                                                    <tr>
+                                                      <th class="all">PERMOHONAN ID</th>
+                                                      <th class="all">TARIKH PERMOHONAN</th>
+                                                      <th class="all">STATUS PERMOHONAN</th>
+                                                    </tr>
+                                                </thead>
 
-
-
+                                                <tbody>
+                                                  @foreach($list_gagal as $gagal)
+                                                  <td>{{ $gagal->id  }}</td>
+                                                  <td>{{ $gagal->status_permohonan  }}</td>
+                                                  <td>{{ Carbon\Carbon::parse($gagal->created_at)->format('d-m-Y H:i:s')  }}</td>
+                                                  @endforeach
+                                                </tbody>
+                                              </table>
                                             </div>
                                         </div>
                                     </div>
