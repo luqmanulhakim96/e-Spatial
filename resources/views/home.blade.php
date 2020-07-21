@@ -130,7 +130,7 @@
                             <!-- Card body -->
                             <div class="card-body">
                                 <!-- Card title -->
-                                <div class="card-title">Permohonan</div>
+                                <div class="card-title">Jenis Data Dipohon Mengikut Negeri</div>
                                 <!-- Chart -->
                                 <div id="echartPie" style="width:100%;height: 300px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;"></div>
                             </div>

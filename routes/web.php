@@ -23,6 +23,9 @@ Auth::routes();
 Route::middleware('admin')->group(function () {
   Route::get('/home', 'HomeController@index')->name('home');
 
+  Route::get('/home/chart/pie/jenis_data_dipohon_mengikut negeri', 'HomeController@getDataPieChart')->name('chart.pie.jenis_data_negeri');
+
+
   #route for Permohonan
   Route::get('/permohonan/maklumat/{id}', 'PermohonanController@viewInformasiPermohonan')->name('permohonan.view');
 
@@ -37,6 +40,9 @@ Route::middleware('admin')->group(function () {
   Route::post('/permohonan/updateStatusBayaran', 'PermohonanController@updateStatusPembayaran')->name('permohonan.statusPembayaran.update');
 
   Route::post('/permohonan/updateUlasan/{id}', 'PermohonanController@updateUlasan')->name('permohonan.ulasan.update');
+
+  Route::get('/permohonan/download/attachment_permohonan/{id}', 'PermohonanController@downloadSuratPermohonan')->name('permohonan.download.surat_permohonan');
+  
 
   #route for Senarai Harga
   Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
