@@ -24,7 +24,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-muted">Permohonan Baru</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">100</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanBaru}}</h4>
                                         </div>
                                     </div>
 
@@ -47,7 +47,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-muted">Permohonan Lulus</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">100</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
                                         </div>
                                     </div>
 
@@ -70,7 +70,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-muted">Jumlah Pengguna</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">80</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPengguna}}</h4>
                                         </div>
                                     </div>
 
@@ -93,7 +93,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-muted">Permohonan Keseluruhan</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">200</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanKeseluruhan}}</h4>
                                         </div>
                                     </div>
 
@@ -115,7 +115,7 @@
                             <!-- Card body -->
                             <div class="card-body">
                                 <!-- Card title -->
-                                <div class="card-title">Jumlah Pengguna</div>
+                                <div class="card-title">Jumlah Permohonan Mengikut Bulan</div>
                                 <!-- Chart -->
                                 <div id="echartBar" style="height: 300px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;"></div>
                             </div>
@@ -192,7 +192,7 @@
                 </div>
             </div>
         </main>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
       // Load the Visualization API and the corechart package.
@@ -219,7 +219,7 @@
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
+        var options = {'title':'Jumlah Data Yang Dipohon Mengikut Negeri',
                        'width':400,
                        'height':300};
 

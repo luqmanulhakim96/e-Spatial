@@ -33,9 +33,36 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //getting notification function is in Providers/AppServiceProvider
-        
-        return view('home');
+      $nama = User::find(1);
+
+      $countPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNull('ulasan_admin')
+                            ->count();
+
+      $countPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')
+                            ->count();
+
+      $countPengguna = User::where('role', '5')
+                        ->count();
+
+      $countPermohonanKeseluruhan = Permohonan::count();
+
+      //google chart
+      //$permohonan_negeri_semenanjung_malaysia = SenaraiHarga::where('negeri','Semenanjung Malaysia')->get();
+
+
+
+
+      //dd($permohonan_negeri_semenanjung_malaysia);
+
+      // dd($nama);
+        return view('home', compact(
+          'nama',
+          'countPermohonanBaru',
+          'countPermohonanLulus',
+          'countPengguna',
+          'countPermohonanKeseluruhan'
+      ));
     }
 
     public function senaraiPermohonan(){

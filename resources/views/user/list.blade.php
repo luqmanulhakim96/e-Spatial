@@ -59,7 +59,7 @@
                                                       @else
                                                       <td class="p-3">
                                                             <div class="d-flex flex-row justify-content-around align-items-center">
-                                                                <a href="#" class="btn btn-dark mr-1"><i class="fas fa-pencil-alt"></i></a>
+                                                                <a href="#" class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Maaf, permohonan anda telah diulas."><i class="fas fa-pencil-alt"></i></a>
                                                             </div>
                                                       @endif
                                                     </tr>
@@ -80,8 +80,8 @@
                                                         <th class="all">STATUS PERMOHONAN</th>
                                                         <th class="all">JUMLAH BAYARAN (RM)</th>
                                                         <th class="all">STATUS PEMBAYARAN</th>
-                                                        <th class="all">MUATNAIK RECEIPT PEMBAYARAN</th>
-                                                        <th class="all">MUATNAIK RECEIPT SURAT PENERIMAAN DATA</th>
+                                                        <th class="all">MUATNAIK RESIT PEMBAYARAN</th>
+                                                        <th class="all">MUATNAIK SURAT PENERIMAAAN DATA</th>
                                                       </tr>
                                                   </thead>
                                                   <!-- Table body -->
@@ -97,17 +97,56 @@
                                                       @if($data->attachment_receipt_pembayaran == null)
                                                       <td>
                                                         <div class="d-flex flex-row justify-content-around align-items-center">
-                                                            <a href="#" class="btn btn-success mr-1"><i class="fa fa-upload"></i></a>
+
+                                                          <button class="btn btn-success mr-1" onclick="pass_id_resit_pembayaran({{$data->id }})" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fa fa-upload"></i>
+                                                          </button>
+
+                                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                              <form action="{{route('user.upload.resit_pemabayaran')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
+                                                                  @csrf
+                                                                  <h5>Muat Naik Resit Pembayaran</h5>
+                                                                  <small>Saiz file tidak melebihi 100MB.</small>
+                                                                  <!-- Upload Resit PEMBAYARaran -->
+                                                                  <div class="input-group mt-3">
+                                                                      <input type="file" class="form-control bg-light" id="attachment_receipt_pembayaran" name="attachment_receipt_pembayaran" aria-describedby="attachment_receipt_pembayaran">
+                                                                  </div>
+                                                                  <!-- pass id permohonan -->
+                                                                  <input type="hidden" id="permohonan_id_resit"name="permohonan_id_resit" value="">
+                                                                  <!-- Login button -->
+                                                                  <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muatnaik</button>
+                                                              </form>
+                                                          </div>
+
+                                                            <!-- <a href="#" class="btn btn-success mr-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-upload"></i></a> -->
                                                         </div>
+
                                                       </td>
                                                       @else
-                                                      <td>Telah diterima</td>
+                                                      <td>Telah dimuat naik</td>
                                                       @endif
                                                       <!-- column muat naik surat penerimaan data -->
                                                       @if($data->attachment_penerimaan_data == null)
                                                       <td>
                                                         <div class="d-flex flex-row justify-content-around align-items-center">
-                                                            <a href="#" class="btn btn-success mr-1"><i class="fa fa-upload"></i></a>
+                                                          <button class="btn btn-success mr-1" type="button" onclick="pass_id_surat_penerimaan_data({{$data->id }})" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="fa fa-upload"></i>
+                                                          </button>
+                                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                              <form action="{{route('user.upload.surat_penerimaan_data')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
+                                                                  @csrf
+                                                                  <h5>Muat Naik Surat Penerimaan Data</h5>
+                                                                  <small>Saiz file tidak melebihi 100MB.</small>
+                                                                  <!-- Upload Resit PEMBAYARaran -->
+                                                                  <div class="input-group mt-3">
+                                                                      <input type="file" class="form-control bg-light" id="attachment_surat_penerimaan_data" name="attachment_surat_penerimaan_data" aria-describedby="attachment_surat_penerimaan_data">
+                                                                  </div>
+                                                                  <!-- pass id permohonan -->
+                                                                  <input type="hidden" id="permohonan_id_surat"name="permohonan_id_surat" value="">
+                                                                  <!-- Login button -->
+                                                                  <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muatnaik</button>
+                                                              </form>
+                                                            <!-- <a href="#" class="btn btn-success mr-1"><i class="fa fa-upload"></i></a> -->
                                                         </div>
                                                       </td>
                                                       @else
@@ -118,6 +157,8 @@
                                                     @endforeach
                                                   </tbody>
                                                 </table>
+
+
 
                                             </div>
 
@@ -134,8 +175,8 @@
                                                 <tbody>
                                                   @foreach($list_gagal as $gagal)
                                                   <td>{{ $gagal->id  }}</td>
-                                                  <td>{{ $gagal->status_permohonan  }}</td>
                                                   <td>{{ Carbon\Carbon::parse($gagal->created_at)->format('d-m-Y H:i:s')  }}</td>
+                                                  <td>{{ $gagal->status_permohonan  }}</td>
                                                   @endforeach
                                                 </tbody>
                                               </table>
@@ -151,4 +192,14 @@
                 </div>
             </div>
         </main>
+        <script type="text/javascript">
+          function pass_id_resit_pembayaran(id){
+            $("#permohonan_id_resit").val( id );
+          }
+
+          function pass_id_surat_penerimaan_data(id){
+            $("#permohonan_id_surat").val( id );
+          }
+
+        </script>
 @endsection

@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="{{ asset('qbadminui/css/vendor/DataTable-1.10.20/datatables.min.css') }}">"></link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+
     <style>
     </style>
     <meta name="theme-color" content="#fafafa">
@@ -78,6 +78,8 @@
                         <li class="side-menu-item px-3"><a href="{{ route('user.add') }}" class="w-100 py-3 pl-4" >Permohonan Baru</a></li>
 
                         <li class="side-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 py-3 pl-4" >Senarai Permohonan Lalu</a></li>
+
+                        <li class="side-menu-item px-3"><a href="{{ route('user.profil.edit') }}" class="w-100 py-3 pl-4" >Update Profil Pengguna</a></li>
                         @endif
 
                     </ul>
@@ -101,8 +103,8 @@
                     <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
                 </div>
             </div>
-			
-			
+
+
 
             <!-- The navbar -->
             <nav class="navbar navbar-expand navbar-light bg-light py-3">
@@ -112,7 +114,7 @@
                     <span></span>
                 </p>
                 <!-- Navbar search section -->
-                <div class="navb-search ml-5 d-none d-md-block">
+                <!-- <div class="navb-search ml-5 d-none d-md-block">
                     <form action="#" method="POST">
                         <div class="input-group search-round">
                             <input type="text" class="form-control" placeholder="Search...">
@@ -121,7 +123,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
                 <!-- Navbar right menu section -->
                 <div class="navb-menu ml-auto d-flex flex-row">
                     <!-- Message dropdown -->
@@ -219,11 +221,11 @@
                     <!-- Profile action dropdown -->
                     <div class="dropdown dropdown-arow-none d-contents text-center mx-2">
                         <!-- Icon -->
-                        <a href="#" class="w-100 dropdown-toggle text-muted" data-toggle="dropdown"><img src="{{ asset('qbadminui/img/profile.jpg') }}" alt="profile" class="profile-avatar"></a>
+                        <a href="#" class="w-100 dropdown-toggle text-muted" data-toggle="dropdown"><img  src="{{ asset('qbadminui/img/profile.jpg') }}" alt="profile" class="profile-avatar";></a>
                         <!-- Dropdown Menu -->
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-max-height">
                             <!-- Menu items -->
-                            <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i> Md.Maruf Ahmed</a>
+                            <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i> {{Auth::user()->name}} </a>
                             <a href="#" class="dropdown-item text-secondary-light">Account setting</a>
                             <a href="#" class="dropdown-item text-secondary-light">Billing history</a>
                             <a  class="dropdown-item text-secondary-light"
