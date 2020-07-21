@@ -21,8 +21,8 @@
                                       <div class="form-group">
                                           <label for="jenis">Jenis</label>
                                           <select id="jenis" class="custom-select  bg-light @error('jenis') is-invalid @enderror" name="jenis" value="{{ $info->jenis }}" autofocus>
-                                                <option value="memo">Memo</option>
-                                                <option value="notis">Notis</option>
+                                                <option value="memo" {{ $info->jenis == "memo" ? 'selected' : '' }}>Memo</option>
+                                                <option value="notis" {{ $info->jenis == "notis" ? 'selected' : '' }}>Notis</option>
                                             </select>
                                       </div>
                                       @error('jenis')
@@ -35,12 +35,12 @@
                                       <div class="form-group">
                                           <label for="kepada">Kepada</label>
                                           <select id="kepada" class="custom-select  bg-light @error('kepada') is-invalid @enderror" name="kepada" value="{{ $info->kepada }}" autofocus>
-                                                <option value="super_admin">Super Admin</option>
-                                                <option value="admin">Admin</option>
-                                                <option value="penyokong_1">Penyokong 1</option>
-                                                <option value="penyokong_2">Penyokong 2</option>
-                                                <option value="ketua_pengarah">Ketua Pengarah</option>
-                                                <option value="pemohon">Pemohon</option>
+                                                <option value="super_admin" {{ $info->kepada == "super_admin" ? 'selected' : '' }}>Super Admin</option>
+                                                <option value="admin" {{ $info->kepada == "admin" ? 'selected' : '' }}>Admin</option>
+                                                <option value="penyokong_1" {{ $info->kepada == "penyokong_1" ? 'selected' : '' }}>Penyokong 1</option>
+                                                <option value="penyokong_2" {{ $info->kepada == "penyokong_2" ? 'selected' : '' }}>Penyokong 2</option>
+                                                <option value="ketua_pengarah" {{ $info->kepada == "ketua_pengarah" ? 'selected' : '' }}>Ketua Pengarah</option>
+                                                <option value="pemohon" {{ $info->kepada == "pemohon" ? 'selected' : '' }}>Pemohon</option>
                                             </select>
                                       </div>
                                       @error('kepada')

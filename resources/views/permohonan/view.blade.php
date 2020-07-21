@@ -113,7 +113,7 @@
 
             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-              <form  action="{{route('permohonan.ulasan.update',$permohonan->id)}}" method="post" name="ulasan" onsubmit="return validateStatusPermohonan()">
+              <form id="rumusan-form" action="{{route('permohonan.ulasan.update',$permohonan->id)}}" method="post" name="ulasan" onsubmit="return validateStatusPermohonan()">
 
                 @csrf
                 <!-- Create 2 row -->
@@ -205,14 +205,14 @@
           }
         }
       </script>
-        <script type="text/javascript">
-  $(document).ready(function() {
-      $(document).on('submit', '#rumusan-form', function() {
-          $('#submit_data').html('<i class="fa fa-spinner fa-spin"></i>');
-          $('#submit_data').attr('disabled', 'disabled');
-      });
-  });
-  </script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('submit', '#rumusan-form', function() {
+                $('#submit_data').html('<i class="fa fa-spinner fa-spin"></i>');
+                $('#submit_data').attr('disabled', 'disabled');
+            });
+        });
+      </script>
 </main>
 
 @endsection

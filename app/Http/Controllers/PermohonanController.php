@@ -9,13 +9,17 @@ use App\Permohonan;
 use App\User;
 use App\SenaraiHarga;
 use App\DataPermohonan;
+use App\SenaraiSurat;
 use Storage;
 
 use App\SenaraiEmail;
 use App\Notifications\Admin\PermohonanBaruAdmin;
 use App\Notifications\Admin\PermohonanBaruAdminNull;
+use App\Notifications\Admin\PermohonanLulusAdmin;
+use App\Notifications\Admin\PermohonanLulusAdminNull;
 
 use Auth;
+use PDF;
 
 class PermohonanController extends Controller
 {
@@ -106,13 +110,25 @@ class PermohonanController extends Controller
     $permohonan->save();
 
     if($request->status_pembayaran == 'Sudah Dibayar'){
-      return redirect()->route('senarai-surat.add');
-    }elseif ($request->status_pembayaran == 'Pengecualian Bayaran') {
-      return redirect()->route('senarai-surat.add');
-    }else {
-      return redirect()->route('senarai-surat.add');
+      $surat = SenaraiSurat::where('status_pembayaran', '=', 'bayaran')->first();
+      if(is_null($surat))
+      {
+        return redirect()->route('senarai-surat.add');
+      }
+      else{
+        return view('permohonan.surat',  compact('surat'));
+      }
     }
-
+    elseif ($request->status_pembayaran == 'Pengecualian Bayaran') {
+      $surat = SenaraiSurat::where('status_pembayaran', '=', 'pengecualian_bayaran')->first();
+      if(is_null($surat))
+      {
+        return redirect()->route('senarai-surat.add');
+      }
+      else{
+        return view('permohonan.surat',  compact('surat'));
+      }
+    }
   }
 
   public function updateUlasan($id, Request $request){
@@ -138,7 +154,7 @@ class PermohonanController extends Controller
     if($current_user_info->role == 0){
       $penyokong_satu = User::where('role','=','1')->get();
       // dd($penyokong_satu);
-      $email = SenaraiEmail::where('kepada', '=', 'penyokong_1')->where('jenis', '=', 'memo')->first();
+      $email = SenaraiEmail::where('kepada', '=', 'penyokong_1')->where('jenis', '=', 'permohonan_baru')->first();
       if(is_null($email))
       {
         foreach ($penyokong_satu as $data) {
@@ -155,7 +171,7 @@ class PermohonanController extends Controller
     if($current_user_info->role == 1){
       $penyokong_dua = User::where('role','=','2')->get();
 
-      $email = SenaraiEmail::where('kepada', '=', 'penyokong_2')->where('jenis', '=', 'memo')->first();
+      $email = SenaraiEmail::where('kepada', '=', 'penyokong_2')->where('jenis', '=', 'permohonan_baru')->first();
       if(is_null($email))
       {
         foreach ($penyokong_dua as $data) {
@@ -172,7 +188,7 @@ class PermohonanController extends Controller
     if($current_user_info->role == 2){
       $ketua_pengarah = User::where('role','=','3')->get();
 
-      $email = SenaraiEmail::where('kepada', '=', 'ketua_pengarah')->where('jenis', '=', 'memo')->first();
+      $email = SenaraiEmail::where('kepada', '=', 'ketua_pengarah')->where('jenis', '=', 'permohonan_baru')->first();
       if(is_null($email))
       {
         foreach ($ketua_pengarah as $data) {
@@ -193,17 +209,17 @@ class PermohonanController extends Controller
       $permohonan->status_permohonan = "Lulus";
 
       // have not done yet 15/7/2020 -luke-
-      $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'memo')->first();
+      $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'permohonan_lulus')->first();
       if(is_null($email))
       {
         foreach ($admin as $data) {
-          $permohonan->notify(new PermohonanBaruAdminNull($data));  // use this notification when email template not available
+          $permohonan->notify(new PermohonanLulusAdminNull($data));  // use this notification when email template not available
         }
       }
       else
       {
         foreach ($admin as $data) {
-          $permohonan->notify(new PermohonanBaruAdmin($data, $email));
+          $permohonan->notify(new PermohonanLulusAdmin($data, $email));
         }
       }
     }
@@ -234,5 +250,26 @@ class PermohonanController extends Controller
 
 
       return view('permohonan.view',  compact('permohonan','loop','user','current_user_info','senaraiHargaUser'));
+  }
+
+  public function printSurat(Request $request){
+    // $surat = SenaraiSurat::find($id);
+    // dd($surat->kandungan);
+    // dd($request->all());
+    $pagebreak = '<p><!-- pagebreak --></p>';
+    $span_pagebreak = '<span style="page-break-before: always;"></span>';
+    // dd(substr_count($surat->kandungan, $pagebreak));
+    $surat_baru = str_replace($pagebreak,$span_pagebreak,$request->kandungan);
+    // $excerpt = substr($surat->kandungan, 0, strpos($surat->kandungan, $pagebreak));
+    // dd($test);
+    $pdf = PDF::loadView('senarai-surat.pdf', compact(['surat_baru']))->setPaper('a4');
+    // $pdf = PDF::loadHTML($surat->kandungan)->setPaper('a4');
+    // $pdf = PDF::loadHTML($surat->kandungan)->setPaper('a4');
+    $content = $pdf->download()->getOriginalContent();
+    Storage::put('public/surat/surat-' . $request->nombor_rujukan . '.pdf',$content);
+    // return $pdf->stream();
+    return $pdf->download('surat-' . $request->nombor_rujukan . '.pdf');
+
+    // return redirect()->route('permohonan.list');
   }
 }

@@ -38,6 +38,8 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/permohonan/updateUlasan/{id}', 'PermohonanController@updateUlasan')->name('permohonan.ulasan.update');
 
+  Route::post('/permohonan/print/', 'PermohonanController@printSurat')->name('permohonan.print');
+
   #route for Senarai Harga
   Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
 
