@@ -236,7 +236,17 @@
                 </div>
               </div>
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto">Daftar</button>
+              <div class="row">
+                <div class="col-md-12">
+                  <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto">Daftar</button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <a href="{{ route('login') }}" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto">Login</a>
+                </div>
+              </div>
         </form>
         </div>
         </div>

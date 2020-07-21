@@ -14,6 +14,7 @@ use App\SenaraiEmail;
 use App\Events\NewNotification;
 
 use App\Notifications\Admin\PermohonanBaruAdmin;
+use App\Notifications\Admin\PermohonanBaruAdminNull;
 use App\Notifications\User\PermohonanBaruUser;
 
 use Auth;
@@ -235,7 +236,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     $uploaded_files_permohonan = "";
     $uploaded_file_aoi = "";
     if ($files = $request->file('attachment_aoi') != null) {
-          $uploaded_file_aoi = $request->file('attachment_aoi')->store('uploads');
+          $uploaded_file_aoi = $request->file('attachment_aoi')->store('uploads/attachment_aoi');
           // dd($uploaded_file_aoi);
            // $destinationPath = 'public/file/attachment_aoi'; // upload path
            // $filename_aoi = "attachment_aoi_" . $user_id . "." . $files->getClientOriginalExtension();
@@ -251,7 +252,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
            // $filename_aoi = "attachment_aoi_" . $user_id . "." . $files->getClientOriginalExtension();
            // $files->move($destinationPath, $filename_aoi);
            // $insert['file'] = "$filename_aoi";
-           $uploaded_files_permohonan =  $request->file('attachment_permohonan')->store('uploads');
+           $uploaded_files_permohonan =  $request->file('attachment_permohonan')->store('uploads/attachment_aoi');
     }else {
       $uploaded_files_permohonan = null;
     }
@@ -273,10 +274,18 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     $admins = User::where('role', '=' , '0',)
                 ->get();
     // dd($admin);
-    foreach ($admins as $admin) {
-      $permohonanBaru->notify(new PermohonanBaruAdmin($admin, $email));
-      event(new NewNotification($admin));
+    if(is_null($email))
+    {
+      foreach ($admins as $admin) {
+        $permohonanBaru->notify(new PermohonanBaruAdminNull($admin, $email));
+      }
     }
+    else{
+      foreach ($admins as $admin) {
+        $permohonanBaru->notify(new PermohonanBaruAdmin($admin, $email));
+      }
+    }
+
 
     $permohonanBaru->notify(new PermohonanBaruUser(Auth::user()));
 
@@ -336,6 +345,62 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
 
     }
     return redirect()->route('user.list');
+  }
+
+  public function editProfil(){
+    $user_id = Auth::user()->id;
+    $user = User::findOrFail($user_id);
+
+    return view('user.profil.edit',compact('user'));
+  }
+
+  public function updateProfil(Request $request){
+    $this->validatorProfile($request->all())->validate();
+    //dd($request->all());
+
+
+
+    $user_id = Auth::user()->id;
+    $user = User::findOrFail($user_id);
+
+    $user->alamat_kediaman = $request->alamat_kediaman;
+    $user->no_tel_rumah = $request->no_tel_rumah;
+    $user->no_tel_bimbit = $request->no_tel_rumah;
+    $user->email = $request->email;
+    $user->save();
+
+    return redirect()->route('user.profil.edit');
+    //return view('user.profil.edit');
+  }
+
+  protected function validatorProfile(array $data)
+  {
+      return Validator::make($data, [
+          'alamat_kediaman' => ['required','string', 'max:255'],
+          'no_tel_rumah' => ['required', 'string', 'max:12'],
+          'no_tel_bimbit' => ['required', 'string', 'max:12'],
+          'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+      ]);
+  }
+
+  public function uploadResitPembayaran(Request $request){
+    //dd($request->all());
+    $uploaded_files_permohonan =  $request->file('attachment_receipt_pembayaran')->store('uploads/attachment_resceipt_pembayaran');
+    $permohonan = Permohonan::findOrFail($request->permohonan_id_resit);
+    $permohonan->attachment_receipt_pembayaran = $uploaded_files_permohonan;
+    $permohonan->save();
+
+    return redirect()->route('user.list');
+  }
+
+  public function uploadPenerimaanData(Request $request){
+    $uploaded_files_permohonan =  $request->file('attachment_surat_penerimaan_data')->store('uploads/attachment_surat_penerimaan_data');
+    $permohonan = Permohonan::findOrFail($request->permohonan_id_surat);
+    $permohonan->attachment_penerimaan_data = $uploaded_files_permohonan;
+    $permohonan->save();
+
+    return redirect()->route('user.list');
+
   }
 
 }

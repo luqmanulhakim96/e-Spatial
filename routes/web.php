@@ -123,5 +123,13 @@ Route::middleware('user')->group(function () {
   Route::get('/permohonan/edit/{id}', 'UserController@edit')->name('user.edit');
 
   Route::post('/permohonan/update/{id}', 'UserController@updatePermohonan')->name('user.update');
+
+  Route::get('/profil/edit', 'UserController@editProfil')->name('user.profil.edit');
+
+  Route::post('/profile/update', 'UserController@updateProfil')->name('user.profil.updatePengguna');
+
+  Route::post('/upload/resit_pembayaran', 'UserController@uploadResitPembayaran')->name('user.upload.resit_pemabayaran');
+
+  Route::post('/upload/surat_penerimaan_data', 'UserController@uploadPenerimaanData')->name('user.upload.surat_penerimaan_data');
 });
 // Route::resource('senaraiHargas', 'SenaraiHargaController');
