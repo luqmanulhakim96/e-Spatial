@@ -95,6 +95,11 @@ class PermohonanController extends Controller
     return Storage::download($permohonan->attachment_aoi);
   }
 
+  public function downloadSuratPermohonan($id){
+    $permohonan = Permohonan::findOrFail($id);
+    return Storage::download($permohonan->attachment_permohonan);
+  }
+
   public function updateStatusPembayaran(Request $request){
 
     //dd($request->all());
