@@ -14,6 +14,8 @@ use App\SenaraiHarga;
 
 use App\Permohonan;
 
+use Illuminate\Notifications\DatabaseNotification as Notification;
+
 class HomeController extends Controller
 {
     /**
@@ -137,5 +139,20 @@ class HomeController extends Controller
         // $list = DB::table('senarai_hargas')->get();
         // dd($list);
         return view('senarai-harga.list', compact('list'));
+    }
+
+    public function redirectNotification($id){
+
+      $markAsRead = Notification::where('id', $id)->first();
+
+      $markAsRead->markAsRead();
+
+      if(Auth::user()->role == '5')
+      {
+        return redirect()->route('user.list');
+      }
+      else{
+        return redirect()->route('permohonan.list');
+      }
     }
 }

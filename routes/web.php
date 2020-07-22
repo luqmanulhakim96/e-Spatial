@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/notifikasi/baca/{id}', 'HomeController@redirectNotification')->name('notification.mark-as-read');
 
 Route::middleware('admin')->group(function () {
   Route::get('/home', 'HomeController@index')->name('home');

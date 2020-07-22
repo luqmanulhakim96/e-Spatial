@@ -137,12 +137,13 @@
                             <span class="badge badge-primary position-absolute notification-badge">{{$count_notification}}</span>
                         </a>
                         <!-- Dropdown menu -->
+                        @if($count_notification != 0)
                         <div class="dropdown-menu dropdown-menu-right p-0 dropdown-menu-max-height">
                             <!-- Menu item -->
                             @foreach($permohonan_admin as $permohonan)
-                                @foreach($permohonan->unreadNotifications->sortByDesc('created_at') as $notification)
+                              @foreach($permohonan->unreadNotifications->sortByDesc('created_at') as $notification)
                                 @if($notification->data['kepada_id'] == Auth::user()->id)
-                                  <a href="{{route('permohonan.list')}}" class="dropdown-item text-secondary-light p-0">
+                                  <a href="{{route('notification.mark-as-read', $notification->id)}}" class="dropdown-item text-secondary-light p-0">
                                     <div class="d-flex flex-row border-bottom">
                                         <div class="notification-icon bg-secondary-c pt-3 px-3 pb-3"><i class="far fa-envelope text-primary fa-lg pt-3"></i></div>
                                         <div class="flex-grow-1 px-3 py-3">
@@ -155,6 +156,7 @@
                               @endforeach
                             @endforeach
                         </div>
+                        @endif
                     </div>
 
                     <!-- Profile action dropdown -->
@@ -171,7 +173,7 @@
                                 href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
-                            >Sign out</a>
+                            >Log Keluar</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

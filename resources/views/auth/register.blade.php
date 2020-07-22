@@ -13,7 +13,7 @@
         <!-- </div> -->
         <!-- <div class="card-title">Borang Pendaftaran Pemohon</div> -->
         <!-- Create 2 row -->
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" id="register-form">
             @csrf
             <div class="row">
                 <div class="col-md-12">
@@ -238,7 +238,7 @@
               <!-- Submit button -->
               <div class="row">
                 <div class="col-md-12">
-                  <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto">Daftar</button>
+                  <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit-form">Daftar</button>
                 </div>
               </div>
 
@@ -305,5 +305,13 @@
       //     day = ("0" + date.getDate()).slice(-2);
       //   return [day, mnth, date.getFullYear()].join("/");
       // }
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $(document).on('submit', '#register-form', function() {
+              $('#submit-form').html('<i class="fa fa-spinner fa-spin"></i>');
+              $('#submit-form').attr('disabled', 'disabled');
+          });
+      });
     </script>
 @endsection
