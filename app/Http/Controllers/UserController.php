@@ -290,7 +290,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     $permohonanBaru->notify(new PermohonanBaruUser(Auth::user()));
 
 
-    return redirect()->route('user.list');
+    return redirect()->route('user.list')->with('success','Permohonan anda berjaya membuat permohonan data.');
   }
 
   public function edit($id){
@@ -344,7 +344,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
       ]);
 
     }
-    return redirect()->route('user.list');
+    return redirect()->route('user.list')->with('success','Permohonan anda telah berjaya dikemaskini.');;
   }
 
   public function editProfil(){
