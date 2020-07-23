@@ -34,6 +34,17 @@ class UserController extends Controller
       return view('user.mainMenu', compact('nama', 'list'));
   }
 
+    /**
+   * Send the password reset notification.
+   *
+   * @param  string  $token
+   * @return void
+   */
+  public function sendPasswordResetNotification($token)
+  {
+      $this->notify(new ResetPasswordNotification($token));
+  }
+
   public function getSenaraiHargaIdByTahun($jenisDokumen, $jenisData, $tahun, $negeri){
     $senaraiHargaId = 'TAK MASUK';
     $senaraiHargaId = SenaraiHarga::select('id')

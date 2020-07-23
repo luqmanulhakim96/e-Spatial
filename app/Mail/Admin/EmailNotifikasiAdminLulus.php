@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class EmailNotifikasiAdminNull extends Mailable
+class EmailNotifikasiAdminLulus extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,13 +16,15 @@ class EmailNotifikasiAdminNull extends Mailable
      *
      * @return void
      */
-    public $admin;
+     public $admin;
+     public $email;
 
-    public function __construct($admin)
-    {
-        //
-        $this->admin = $admin;
-    }
+     public function __construct($admin, $email)
+     {
+         //
+         $this->admin = $admin;
+         $this->email = $email;
+     }
 
     /**
      * Build the message.
@@ -31,10 +33,13 @@ class EmailNotifikasiAdminNull extends Mailable
      */
     public function build()
     {
+      // return $this->to($this->admin->email, $this->admin->name)
+      $email = $this->email;
+      // dd($this->email);
       return $this->to($this->admin->email , $this->admin->name)
               // ->from(env('MAIL_FROM_ADDRESS'))
               ->from('system@espatial.com')
-              ->subject('Permohonan Baru')
-              ->view('senarai-email.templates.notifikasiAdminPermohonanNull');
+              ->subject($this->email->subjek)
+              ->view('senarai-email.templates.notifikasiAdmin', compact('email'));
     }
 }

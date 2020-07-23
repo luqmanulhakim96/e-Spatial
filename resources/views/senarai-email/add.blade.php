@@ -22,8 +22,11 @@
                                       <div class="form-group">
                                           <label for="jenis">Jenis</label>
                                           <select id="jenis" class="custom-select  bg-light @error('jenis') is-invalid @enderror" name="jenis" value="{{ old('jenis') }}" autofocus>
-                                                <option value="memo">Memo</option>
-                                                <option value="notis">Notis</option>
+                                                <option value="permohonan_baru">Permohonan Baru</option>
+                                                <option value="permohonan_lulus">Permohonan Lulus</option>
+                                                <option value="permohonan_tidak_lulus">Permohonan Tidak Lulus</option>
+                                                <option value="permohonan_berbayar">Permohonan Berbayar</option>
+                                                <option value="permohonan_tidak_berbayar">Permohonan Tidak Berbayar</option>
                                             </select>
                                       </div>
                                       @error('jenis')

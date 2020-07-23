@@ -42,7 +42,7 @@
             <div class="the_menu mt-5">
                 <!-- Heading -->
                 <div class="side-menu-heading d-flex">
-                    <h6 class=" font-weight-bold pb-2 mx-3"> {{Auth::user()->name}} </h6>
+                    <h6 class=" font-weight-bold pb-2 mx-3"> {{ucwords(strtolower((Auth::user()->name)))}} </h6>
                     <a  class="font-weight-bold ml-auto px-3"
                         href="{{ route('logout') }}"
                         onclick="event.preventDefault();
@@ -79,7 +79,7 @@
 
                         <li class="side-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 py-3 pl-4" >Senarai Permohonan Lalu</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('user.profil.edit') }}" class="w-100 py-3 pl-4" >Update Profil Pengguna</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('user.profil.edit') }}" class="w-100 py-3 pl-4" >Kemaskini Profil</a></li>
                         @endif
 
                     </ul>
@@ -145,50 +145,7 @@
                     <!-- Message dropdown -->
                     <div class="dropdown dropdown-arow-none d-contents text-center mx-2 pt-1">
                         <!-- Icon -->
-                        <a href="#" class="w-100 dropdown-toggle text-muted position-relative" data-toggle="dropdown">
-                            <!-- Message -->
-                            <i class="far fa-envelope fa-2x"></i>
-                            <span class="badge badge-danger position-absolute notification-badge">3</span>
-                        </a>
-                        <!-- Dropdown menu -->
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-max-height p-0">
-                            <!-- Dropdown item -->
-                            <a href="#" class="dropdown-item text-secondary-light p-0">
-                                <div class="d-flex flex-row border-bottom">
-                                    <!-- Profile image -->
-                                    <div class="notification-icon bg-secondary-c pt-3"><img src="{{ asset('qbadminui/img/profile.jpg') }}" alt="img" class="w-75 img-round"></div>
-                                    <!-- Message notification -->
-                                    <div class="flex-grow-1 px-3 py-3">
-                                        <p class="mb-0">James <span class="badge badge-pill badge-primary">1</span></p>
-                                        <small>James : Hey! Are you busy?</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Dropdown item -->
-                            <a href="#" class="dropdown-item text-secondary-light p-0">
-                                <div class="d-flex flex-row border-bottom">
-                                    <!-- Profile image -->
-                                    <div class="notification-icon bg-secondary-c pt-3"><img src="{{ asset('qbadminui/img/profile.jpg') }}" alt="img" class="w-75 img-round"></div>
-                                    <!-- Message notification -->
-                                    <div class="flex-grow-1 px-3 py-3">
-                                        <p class="mb-0">Jhone <span class="badge badge-pill badge-primary">1</span></p>
-                                        <small>Jhone : Hey! I need help.</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Dropdown item -->
-                            <a href="#" class="dropdown-item text-secondary-light p-0">
-                                <div class="d-flex flex-row border-bottom">
-                                    <!-- Profile image -->
-                                    <div class="notification-icon bg-secondary-c pt-3"><img src="{{ asset('qbadminui/img/profile.jpg') }}" alt="img" class="w-75 img-round"></div>
-                                    <!-- Message notification -->
-                                    <div class="flex-grow-1 px-3 py-3">
-                                        <p class="mb-0">Mariam <span class="badge badge-pill badge-primary">1</span></p>
-                                        <small>Mariam : information</small>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+
                     </div>
 
                     <!-- Notification dropdown -->
@@ -197,58 +154,46 @@
                         <a href="#" class="w-100 dropdown-toggle text-muted position-relative" data-toggle="dropdown">
                             <!-- Notification -->
                             <i class="far fa-bell fa-2x"></i>
-                            <span class="badge badge-primary position-absolute notification-badge">3</span>
+                            <span class="badge badge-primary position-absolute notification-badge">{{$count_notification}}</span>
                         </a>
+                        @if($count_notification != 0)
                         <!-- Dropdown menu -->
                         <div class="dropdown-menu dropdown-menu-right p-0 dropdown-menu-max-height">
                             <!-- Menu item -->
-                            <a href="#" class="dropdown-item text-secondary-light p-0">
-                                <div class="d-flex flex-row border-bottom">
-                                    <div class="notification-icon bg-secondary-c pt-3 px-3"><i class="far fa-envelope text-primary fa-lg"></i></div>
-                                    <div class="flex-grow-1 px-3 py-3">
-                                        <p class="mb-0">New message <span class="badge badge-pill badge-primary">New</span></p>
-                                        <small>James : Hey! Are you busy?</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Menu item -->
-                            <a href="#" class="dropdown-item text-secondary-light p-0">
-                                <div class="d-flex flex-row border-bottom">
-                                    <div class="notification-icon bg-secondary-c pt-3 px-3"><i class="fas fa-clipboard-list text-success fa-lg"></i></div>
-                                    <div class="flex-grow-1 px-3 py-3">
-                                        <p class="m-0">New order received <span class="badge badge-pill badge-success">New</span></p>
-                                        <small>3 iPhone x</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <!-- Menu item -->
-                            <a href="#" class="dropdown-item text-secondary-light p-0 pr-2">
-                                <div class="d-flex flex-row border-bottom">
-                                    <div class="notification-icon bg-secondary-c pt-3 px-3"><i class="fas fa-box-open text-warning fa-lg"></i></div>
-                                    <div class="flex-grow-1 px-3 py-3">
-                                        <p class="m-0">Product out of stock <span class="badge badge-pill badge-warning small">1</span></p>
-                                        <small>Headphone E63</small>
-                                    </div>
-                                </div>
-                            </a>
+                            @foreach($permohonan_admin as $permohonan)
+                              @foreach($permohonan->unreadNotifications->sortByDesc('created_at') as $notification)
+                                @if($notification->data['kepada_id'] == Auth::user()->id)
+                                <a href="{{route('notification.mark-as-read', $notification->id)}}" class="dropdown-item text-secondary-light p-0">
+                                      <div class="d-flex flex-row border-bottom">
+                                          <div class="notification-icon bg-secondary-c pt-3 px-3 pb-3"><i class="far fa-envelope text-primary fa-lg pt-3"></i></div>
+                                          <div class="flex-grow-1 px-3 py-3">
+                                              <p class="mb-0"> {{date('H:i:s d-m-Y', strtotime($permohonan->created_at))}} &ensp;<span class="badge badge-pill badge-primary">Baru</span></p>
+                                              <small>{{$notification->data['tajuk'] }}</small>
+                                          </div>
+                                      </div>
+                                  </a>
+                                  @endif
+                                @endforeach
+                              @endforeach
                         </div>
+                        @endif
                     </div>
 
                     <!-- Profile action dropdown -->
                     <div class="dropdown dropdown-arow-none d-contents text-center mx-2">
                         <!-- Icon -->
-                        <a href="#" class="w-100 dropdown-toggle text-muted" data-toggle="dropdown"><img  src="{{ asset('qbadminui/img/profile.jpg') }}" alt="profile" class="profile-avatar";></a>
+                        <a href="#" class="w-100 dropdown-toggle text-muted" data-toggle="dropdown"><img src="{{ asset('https://icon-library.com/images/default-profile-icon/default-profile-icon-24.jpg') }}" alt="profile" class="profile-avatar" style="height:40px; width:40px;"></a>
                         <!-- Dropdown Menu -->
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-max-height">
                             <!-- Menu items -->
-                            <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i> {{Auth::user()->name}} </a>
-                            <a href="#" class="dropdown-item text-secondary-light">Account setting</a>
-                            <a href="#" class="dropdown-item text-secondary-light">Billing history</a>
+                            <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i>{{explode(' ',trim(ucwords(strtolower((Auth::user()->name)))))[0]}} </a>
+                            <a href="{{ route('user.profil.edit') }}" class="dropdown-item text-secondary-light">Kemaskini Profil</a>
+                            <!-- <a href="#" class="dropdown-item text-secondary-light">Billing history</a> -->
                             <a  class="dropdown-item text-secondary-light"
                                 href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
-                            >Sign out</a>
+                            >Log Keluar</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

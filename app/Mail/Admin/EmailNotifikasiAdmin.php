@@ -37,6 +37,7 @@ class EmailNotifikasiAdmin extends Mailable
         $email = $this->email;
         // dd($this->email);
         return $this->to($this->admin->email , $this->admin->name)
+                // ->from(env('MAIL_FROM_ADDRESS'))
                 ->from('system@espatial.com')
                 ->subject($this->email->subjek)
                 ->view('senarai-email.templates.notifikasiAdmin', compact('email'));
