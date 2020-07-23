@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 use App\User;
 use App\Audit;
+
+use App\Mail\User\EmailNotifikasiRegisterUser;
+use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
@@ -56,9 +60,10 @@ class AdminController extends Controller
   }
 
   public function add(array $data){
-    $hashed_random_password = Hash::make("1234567890");
+    $random = Str::random(10);
+    $hashed_random_password = Hash::make($random);
 
-    return User::create([
+    $user = User::create([
       'kategori' => "JPSM",
       'name' => $data['nama'],
       'email' => $data['email'],
@@ -66,6 +71,9 @@ class AdminController extends Controller
       'role' => $data['role'],
       'password' => $hashed_random_password,
     ]);
+
+    Mail::send(new EmailNotifikasiRegisterUser($data, $random));
+    return $user;
   }
 
   public function submitForm(Request $request){
