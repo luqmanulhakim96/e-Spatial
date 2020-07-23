@@ -14,7 +14,11 @@ use App\SenaraiHarga;
 
 use App\Permohonan;
 
+
+use Carbon;
+
 use Illuminate\Notifications\DatabaseNotification as Notification;
+
 
 class HomeController extends Controller
 {
@@ -58,6 +62,19 @@ class HomeController extends Controller
       $countPermohonanKeseluruhan = Permohonan::count();
 
       //google chart
+      $dataDipohonMengikutNegeri = DB::select(DB::raw("SELECT COUNT(senarai_hargas.negeri) as count, senarai_hargas.negeri FROM senarai_hargas, data_permohonans, permohonans WHERE permohonans.id = data_permohonans.permohonan_id AND senarai_hargas.id = data_permohonans.senarai_harga_id GROUP BY senarai_hargas.negeri"));
+      //dd($data);
+      //$mytime = Carbon\Carbon::now();
+      //dd($mytime->year);
+      $dataDipohonMengikutBulan = DB::select(DB::raw("SELECT EXTRACT(MONTH FROM created_at) as bulan, COUNT(EXTRACT(MONTH FROM created_at)) as count_bulan from permohonans where created_at >= date_sub(now(),interval 6 month) GROUP BY bulan"));
+
+      $dataStatusPermohonan = DB::select(DB::raw("SELECT COUNT(permohonans.status_permohonan) as count_status, permohonans.status_permohonan as status FROM permohonans GROUP BY status"));
+
+      $dataJumlahPendapatan = DB::select(DB::raw("SELECT SUM(permohonans.jumlah_bayaran) as total, EXTRACT(MONTH FROM created_at) as bulan from permohonans WHERE permohonans.ulasan_admin IS NOT NULL AND permohonans.status_pembayaran <> 'Pengecualian Bayaran' AND permohonans.status_permohonan = 'Lulus' GROUP BY bulan"));
+
+
+
+      //dd($dataJumlahPendapatan);
       //$permohonan_negeri_semenanjung_malaysia = SenaraiHarga::where('negeri','Semenanjung Malaysia')->get();
 
 
@@ -71,7 +88,11 @@ class HomeController extends Controller
           'countPermohonanBaru',
           'countPermohonanLulus',
           'countPengguna',
-          'countPermohonanKeseluruhan'
+          'countPermohonanKeseluruhan',
+          'dataDipohonMengikutNegeri',
+          'dataDipohonMengikutBulan',
+          'dataStatusPermohonan',
+          'dataJumlahPendapatan'
       ));
     }
 

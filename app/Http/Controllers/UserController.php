@@ -355,6 +355,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
   }
 
   public function updateProfil(Request $request){
+
     $this->validatorProfile($request->all())->validate();
     //dd($request->all());
 
@@ -369,7 +370,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     $user->email = $request->email;
     $user->save();
 
-    return redirect()->route('user.profil.edit');
+    return redirect()->route('user.mainMenu')->with('success','Profil anda telah dikemaskini');
     //return view('user.profil.edit');
   }
 
@@ -377,9 +378,9 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
   {
       return Validator::make($data, [
           'alamat_kediaman' => ['required','string', 'max:255'],
-          'no_tel_rumah' => ['required', 'string', 'max:12'],
-          'no_tel_bimbit' => ['required', 'string', 'max:12'],
-          'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+          'no_tel_rumah' => ['required', 'string', 'max:12','min:10'],
+          'no_tel_bimbit' => ['required', 'string', 'max:12','min:10'],
+          'email' => ['required', 'string', 'email', 'max:255'],
       ]);
   }
 
@@ -390,17 +391,16 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     $permohonan->attachment_receipt_pembayaran = $uploaded_files_permohonan;
     $permohonan->save();
 
-    return redirect()->route('user.list');
+    return redirect()->route('user.list')->with('success','Resit Pembayaran telah berjaya dimuatnaik');
   }
 
   public function uploadPenerimaanData(Request $request){
-    $uploaded_files_permohonan =  $request->file('attachment_surat_penerimaan_data')->store('uploads/attachment_surat_penerimaan_data');
+    $uploaded_files_permohonan =  $request->file('attachment_surat_penerimaan_data')->store('uploads/attachment_surat_penerimaan_data_user');
     $permohonan = Permohonan::findOrFail($request->permohonan_id_surat);
-    $permohonan->attachment_penerimaan_data = $uploaded_files_permohonan;
+    $permohonan->attachment_penerimaan_data_user = $uploaded_files_permohonan;
     $permohonan->save();
 
-    return redirect()->route('user.list');
-
+    return redirect()->route('user.list')->with('success','Surat Penerimaan Data anda telah berjaya dimuatnaik');
   }
 
 }
