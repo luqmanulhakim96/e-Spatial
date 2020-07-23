@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Mail\User;
+namespace App\Mail\Admin;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class EmailNotifikasiUserPermohonanBaru extends Mailable
+class EmailNotifikasiAdminLulusNull extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,12 +16,12 @@ class EmailNotifikasiUserPermohonanBaru extends Mailable
      *
      * @return void
      */
-    public $user;
+    public $admin;
 
-    public function __construct($user)
+    public function __construct($admin)
     {
         //
-        $this->user = $user;
+        $this->admin = $admin;
     }
 
     /**
@@ -31,10 +31,10 @@ class EmailNotifikasiUserPermohonanBaru extends Mailable
      */
     public function build()
     {
-      return $this->to($this->user->email , $this->user->name)
+      return $this->to($this->admin->email , $this->admin->name)
               // ->from(env('MAIL_FROM_ADDRESS'))
               ->from('system@espatial.com')
-              ->subject('Permohonan Diterima')
-              ->view('senarai-email.templates.notifikasiUserPermohonanBaru');
+              ->subject('Permohonan Lulus')
+              ->view('senarai-email.templates.notifikasiAdminPermohonanLulusNull');
     }
 }

@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/notifikasi/baca/{id}', 'HomeController@redirectNotification')->name('notification.mark-as-read');
 
 Route::middleware('admin')->group(function () {
   Route::get('/home', 'HomeController@index')->name('home');
@@ -41,14 +42,13 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/permohonan/updateUlasan/{id}', 'PermohonanController@updateUlasan')->name('permohonan.ulasan.update');
 
+  Route::post('/permohonan/print/', 'PermohonanController@printSurat')->name('permohonan.print');
+
   Route::get('/permohonan/download/attachment_permohonan/{id}', 'PermohonanController@downloadSuratPermohonan')->name('permohonan.download.surat_permohonan');
 
   Route::post('/permohonan/upload/surat_bayaran', 'PermohonanController@uploadSuratBayaran')->name('permohonan.upload.surat_bayaran');
 
   Route::post('/permohonan/upload/dokumen_dan_link_data', 'PermohonanController@uploadLinkData')->name('permohonan.upload.link_data');
-
-
-
 
 
   #route for Senarai Harga

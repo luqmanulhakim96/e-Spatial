@@ -14,6 +14,10 @@ use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 
 use Carbon\Carbon;
+use DateTime;
+
+use App\Mail\User\EmailNotifikasiRegisterUser;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -60,7 +64,7 @@ class RegisterController extends Controller
             'nama' => ['required', 'string', 'max:255'],
             'kad_pengenalan' => ['required', 'string', 'max:12', 'unique:users'],
             'kerakyatan' => ['required'],
-            'tarikh_lahir' => ['required'],
+            'tarikh_lahir' => ['required', 'date'],
             'tempat_lahir' => ['required', 'string', 'max:255'],
             'jawatan' => ['required', 'string', 'max:255'],
             'jenis_perniagaan' => ['required', 'string', 'max:255'],
@@ -83,23 +87,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-         //dd($data);
-        $hashed_random_password = Hash::make("1234567890");
-         //dd($data['tarikh_lahir']);
-        $date = $data['tarikh_lahir'];
+        $random = Str::random(10);
 
-        $date = Carbon::parse($date)->timestamp;
-        dd($date);
+        $hashed_random_password = Hash::make($random);
 
-
-        dd($date);
-        return User::create([
+        $user = User::create([
             'kategori' => $data['kategori'],
             'name' => $data['nama'],
             'email' => $data['email'],
             'kad_pengenalan' => $data['kad_pengenalan'],
             'kerakyatan' => $data['kerakyatan'],
-            'tarikh_lahir' => $date,
+            'tarikh_lahir' => $data['tarikh_lahir'],
             'tempat_lahir' => $data['tempat_lahir'],
             'jawatan' => $data['jawatan'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
@@ -112,6 +110,10 @@ class RegisterController extends Controller
             // 'password' => Hash::make($data['password']),
             'password' => $hashed_random_password,
         ]);
+
+        Mail::send(new EmailNotifikasiRegisterUser($data, $random));
+
+        return $user;
     }
 
     /**
