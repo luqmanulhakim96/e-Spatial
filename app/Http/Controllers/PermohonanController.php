@@ -240,4 +240,31 @@ class PermohonanController extends Controller
 
       return view('permohonan.view',  compact('permohonan','loop','user','current_user_info','senaraiHargaUser'));
   }
+
+  public function uploadSuratBayaran(Request $request){
+    $uploaded_files_permohonan_surat_pembayaran =  $request->file('attachment_surat_bayaran')->store('uploads/surat_bayaran');
+
+    $permohonan_id = $request->permohonan_id_upload_surat_bayaran;
+    $permohonan = Permohonan::findOrFail($permohonan_id);
+    $permohonan->attachment_surat_bayaran = $uploaded_files_permohonan_surat_pembayaran;
+    $permohonan->save();
+
+    return redirect()->route('permohonan.list');
+  }
+
+  public function uploadLinkData(Request $request){
+    //dd($request->all());
+    //upload file
+    $uploaded_files_permohonan_penerimaan_data =  $request->file('attachment_penerimaan_data')->store('uploads/surat_penerimaan_data');
+
+
+    //update file location in db
+    $permohonan_id = $request->permohonan_id_link_data;
+    $permohonan = Permohonan::findOrFail($permohonan_id);
+    $permohonan->link_data = $request->link_data;
+    $permohonan->attachment_penerimaan_data = $uploaded_files_permohonan_penerimaan_data;
+    $permohonan->save();
+
+    return redirect()->route('permohonan.list');
+  }
 }

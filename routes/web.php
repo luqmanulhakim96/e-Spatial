@@ -42,7 +42,14 @@ Route::middleware('admin')->group(function () {
   Route::post('/permohonan/updateUlasan/{id}', 'PermohonanController@updateUlasan')->name('permohonan.ulasan.update');
 
   Route::get('/permohonan/download/attachment_permohonan/{id}', 'PermohonanController@downloadSuratPermohonan')->name('permohonan.download.surat_permohonan');
-  
+
+  Route::post('/permohonan/upload/surat_bayaran', 'PermohonanController@uploadSuratBayaran')->name('permohonan.upload.surat_bayaran');
+
+  Route::post('/permohonan/upload/dokumen_dan_link_data', 'PermohonanController@uploadLinkData')->name('permohonan.upload.link_data');
+
+
+
+
 
   #route for Senarai Harga
   Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
@@ -134,7 +141,7 @@ Route::middleware('user')->group(function () {
 
   Route::post('/profile/update', 'UserController@updateProfil')->name('user.profil.updatePengguna');
 
-  Route::post('/upload/resit_pembayaran', 'UserController@uploadResitPembayaran')->name('user.upload.resit_pemabayaran');
+  Route::post('/upload/resit_pembayaran', 'UserController@uploadResitPembayaran')->name('user.upload.resit_pembayaran');
 
   Route::post('/upload/surat_penerimaan_data', 'UserController@uploadPenerimaanData')->name('user.upload.surat_penerimaan_data');
 });
