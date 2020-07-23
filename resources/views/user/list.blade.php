@@ -98,9 +98,15 @@
                                                       <td>
                                                         <div class="d-flex flex-row justify-content-around align-items-center">
 
+                                                          @if($data->status_pembayaran == 'Belum Dibayar')
                                                           <button class="btn btn-success mr-1" onclick="pass_id_resit_pembayaran({{$data->id }})" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                             <i class="fa fa-upload"></i>
                                                           </button>
+                                                          @elseif($data->status_pembayaran == 'Pengecualian Bayaran')
+                                                          <button class="btn btn-dark mr-1">
+                                                            <i class="fa fa-upload"></i>
+                                                          </button>
+                                                          @endif
 
                                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                               <form action="{{route('user.upload.resit_pemabayaran')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">

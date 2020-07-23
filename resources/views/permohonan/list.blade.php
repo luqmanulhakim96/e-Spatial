@@ -72,7 +72,7 @@
 
                                                         @endif
                                                         <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
-                                                        <td>{{ $baru->attachment_permohonan}}</td>
+                                                        <td><a class="fa fa-download" href="{{route('permohonan.download.surat_permohonan',$baru->id)}}"></a></td>
                                                         <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>

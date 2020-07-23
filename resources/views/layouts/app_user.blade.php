@@ -113,6 +113,22 @@
                     <span></span>
                     <span></span>
                 </p>
+
+                <div id=alert class="alert">
+                  @if ($message = Session::get('success'))
+                  <div class="alert alert-card  alert-success" role="alert">
+                      <strong>Tahniah! </strong>
+                      {{$message}}
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  @endif
+                </div>
+
+
+
+
                 <!-- Navbar search section -->
                 <!-- <div class="navb-search ml-5 d-none d-md-block">
                     <form action="#" method="POST">
@@ -214,3 +230,11 @@
     <script src="{{ asset('qbadminui/js/plugins/dataTable_script.js') }}"></script>
 </body>
 </html>
+<script type="text/javascript">
+$("document").ready(function(){
+  setTimeout(function(){
+     $("div.alert").remove();
+  }, 5000 ); // 5 secs
+
+});
+</script>
