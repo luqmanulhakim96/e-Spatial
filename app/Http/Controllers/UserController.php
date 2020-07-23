@@ -271,7 +271,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     // dd($permohonanBaru);
     $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'memo')->first();
     // dd($email);
-    $admins = User::where('role', '=' , '0',)
+    $admins = User::where('role', '=' , '0')
                 ->get();
     // dd($admin);
     if(is_null($email))
