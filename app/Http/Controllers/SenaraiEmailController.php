@@ -44,7 +44,7 @@ class SenaraiEmailController extends Controller
 
     event($senaraiEmail = $this->add($request->all()));
 
-    return redirect()->route('senarai-email.list');
+    return redirect()->route('senarai-email.list')->with('success','Template baru telah ditambah');
   }
 
   public function update($id){
@@ -60,7 +60,7 @@ class SenaraiEmailController extends Controller
   public function updateSurat($id){
     $this->validator(request()->all())->validate();
     $this->update($id);
-    return redirect()->route('senarai-email.list');
+    return redirect()->route('senarai-email.list')->with('success','Surat telah dikemaskini');
   }
 
   protected function validator(array $data)

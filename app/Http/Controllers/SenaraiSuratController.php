@@ -44,7 +44,7 @@ class SenaraiSuratController extends Controller
 
       event($senaraiSurat = $this->add($request->all()));
 
-      return redirect()->route('senarai-surat.list');
+      return redirect()->route('senarai-surat.list')->with('success','Templat baru telah ditambah');
     }
 
     public function update($id){
@@ -60,7 +60,7 @@ class SenaraiSuratController extends Controller
       $this->validator(request()->all())->validate();
 
       $this->update($id);
-      return redirect()->route('senarai-surat.list');
+      return redirect()->route('senarai-surat.list')->with('success','Surat telah dikemaskini');
     }
 
     protected function validator(array $data)
