@@ -185,13 +185,29 @@ $(document).ready(function(){
     // Responsive Data Table
     let list_permohonan_baru = $("#list_permohonan_baru")
     $(list_permohonan_baru).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+         {
+             "targets": [1,2], // your case first column
+             "className": "text-center",
+             "width": "20%"
+        },
+        {
+             "targets": 0,
+             "className": "text-center",
+        }],
     });
 
     // Responsive Data Table
     let list_permohonan_baru_2 = $("#list_permohonan_baru_2")
     $(list_permohonan_baru_2).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+                      {
+                           "targets": "_all", // your case first column
+                           "className": "text-center",
+                      },
+                    ],
     });
 
     // Responsive Data Table
@@ -203,7 +219,13 @@ $(document).ready(function(){
     // Responsive Data Table
     let list_permohonan_lulus = $("#list_permohonan_lulus")
     $(list_permohonan_lulus).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+                      {
+                           "targets": "_all", // your case first column
+                           "className": "text-center",
+                      },
+                    ],
     });
 
     let list_permohonan_dalaman = $("#list_permohonan_dalaman")

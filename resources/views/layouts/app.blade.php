@@ -99,6 +99,19 @@
                     <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
                 </div>
             </div> -->
+            @if ($message = Session::get('success'))
+            <div id=alert>
+
+              <div class="alert alert-card  alert-success" role="alert">
+                  <strong>Berjaya! </strong>
+                  {{$message}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+
+            </div>
+            @endif
 
 
 
@@ -211,3 +224,11 @@
 
 </body>
 </html>
+<script type="text/javascript">
+$("document").ready(function(){
+  setTimeout(function(){
+     $("div.alert").remove();
+  }, 5000 ); // 5 secs
+
+});
+</script>

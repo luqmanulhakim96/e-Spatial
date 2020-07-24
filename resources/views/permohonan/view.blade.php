@@ -174,8 +174,13 @@
 
                 <input type="hidden" name="current_id_for_user" value="{{ $current_user_info->role }}" readonly>
 
-                <button type="submit" class="btn btn-primary" id="submit_data" >Hantar Ulasan</button>
-
+                <div class="form-group">
+                  @if($current_user_info->role == 3)
+                  <button type="submit" class="btn btn-primary" onclick="return confirm('Adakah anda pasti dengan status permohonan ini??');" id="submit_data" >Hantar Ulasan Dan Update Status Permohonan</button>
+                  @else
+                  <button type="submit" class="btn btn-primary"  id="submit_data" >Hantar Ulasan</button>
+                  @endif
+                </div>
               </form>
             </div>
 
@@ -200,7 +205,8 @@
           var x = document.forms["ulasan"]["status_permohonan"].value;
           console.log(x);
           if (x == "") {
-            alert("Pilih Status Ulasan!");
+            alert("Sila pilih status permohonan ini!");
+            location.reload();
             return false;
           }
         }
