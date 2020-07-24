@@ -16,6 +16,7 @@
                         <!-- jenis dokumen input-->
                         <div class="form-group">
                             <label for="jenis_dokumen">Jenis Dokumen:</label>
+                            <label for="jenis_dokumen">(Document Type)</label>
                               <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)">
                                   <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                   @foreach($jenisDokumen as $data)
@@ -32,6 +33,7 @@
                         <!-- jenis data input-->
                         <div class="form-group">
                             <label for="jenis_data">Jenis Data:</label>
+                            <label for="jenis_data">(Data Type)</label>
                               <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)">
                                 <option value="" selected disabled hidden>Pilih Jenis Data</option>
                               </select>
@@ -58,6 +60,7 @@
                         <!--tahun input -->
                         <div class="form-group" id="tahun_div" style="display: block;">
                             <label for="tahun">Tahun:</label>
+                            <label for="tahun">(Year)</label>
                             <select id="tahun" class="custom-select  bg-light" name="tahun">
                                 <option value="" selected disabled hidden>Pilih Tahun</option>
                             </select>
@@ -71,6 +74,7 @@
                         <!-- negeri input -->
                         <div class="form-group">
                           <label for="negeri">Negeri:</label>
+                          <label for="negeri">(State)</label>
                             <select id="negeri" class="custom-select  bg-light" name="negeri">
                                 <option value="" selected disabled hidden>Pilih Negeri</option>
                             </select>
@@ -161,7 +165,7 @@
 
                     <div class="form-group">
                         <label for="attachment_permohonan">Muatnaik Attachment AOI:</label>
-                        <input type="file" class="form-control bg-light" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi">
+                        <input type="file" class="bg-light" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi">
                         <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 120MB</small>
                         @error('attachment_aoi')
                         <div class="alert alert-danger">
@@ -172,7 +176,7 @@
 
                           <div class="form-group">
                               <label for="attachment_permohonan">Muatnaik Lampiran:</label>
-                              <input type="file" class="form-control bg-light" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan">
+                              <input type="file" class="bg-light" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan">
                               <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 120MB</small>
                               @error('attachment_permohonan')
                               <div class="alert alert-danger">
