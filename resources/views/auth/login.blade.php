@@ -5,9 +5,7 @@
     <div class="login-page d-flex flex-row justify-content-center align-items-center">
         <!-- Login card -->
         <div class="card mx-3 mx-md-0 border-0 rounded-lg">
-
-            <div class="card-body" style="width:500px; height:auto;">
-
+            <div class="card-body">
                 <!-- Row -->
                 <div class="row">
                     <!-- Left side -->
