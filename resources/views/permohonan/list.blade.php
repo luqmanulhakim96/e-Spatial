@@ -38,6 +38,7 @@
                                             <!-- Tab content -->
                                             <div class="tab-content" id="pills-tabContent">
                                                 <div class="tab-pane fade show active" id="pills-baru" role="tabpanel" aria-labelledby="pills-baru-tab">
+                                                  <div class="table-responsive">
                                                   <table class="table table-striped table-bordered" id="list_permohonan_baru" style="width: 100%;">
 
                                                     <thead>
@@ -180,6 +181,7 @@
 
                                                   </table>
                                                 </div>
+                                                </div>
 
                                                 <div class="tab-pane fade" id="pills-lulus" role="tabpanel" aria-labelledby="pills-lulus-tab">
 
@@ -306,7 +308,7 @@
                                                       </div>
                                                     </div>
                                                   </div>
-
+                                                  <div class="table-responsive">
                                                   <table class="table table-striped table-bordered" id="list_permohonan_lulus" style="width: 100%;">
 
                                                     <thead>
@@ -379,9 +381,11 @@
                                                     </tbody>
 
                                                   </table>
+                                                  </div>
                                                 </div>
 
                                                 <div class="tab-pane fade" id="pills-dalaman" role="tabpanel" aria-labelledby="pills-dalaman-tab">
+                                                  <div class="table-responsive">
                                                   <table class="table table-striped table-bordered" id="list_permohonan_dalaman" style="width: 100%;">
 
                                                     <thead>
@@ -405,10 +409,13 @@
                                                     </tbody>
                                                   </table>
                                                 </div>
+                                                </div>
 
                                                 @if($userInfo->role == 0)
                                                 <!-- tab sedang diproses -->
                                                 <div class="tab-pane fade" id="pills-proses" role="tabpanel" aria-labelledby="pills-proses-tab">
+                                                  <div class="table-responsive">
+
                                                     <table class="table table-striped table-bordered" id="list_permohonan_baru_2" style="width: 100%;">
 
                                                       <thead>
@@ -439,9 +446,13 @@
                                                       </tbody>
 
                                                     </table>
+                                                  </div>
+
                                                 </div>
                                                 <!-- tab permohonan gagal -->
                                                 <div class="tab-pane fade" id="pills-gagal" role="tabpanel" aria-labelledby="pills-gagal-tab">
+                                                  <div class="table-responsive">
+
                                                   <table class="table table-striped table-bordered" id="list_permohonan_gagal" style="width: 100%;">
                                                     <thead>
                                                         <tr>
@@ -470,6 +481,8 @@
                                                       @endforeach
                                                     </tbody>
                                                   </table>
+                                                </div>
+                                                  
                                                 </div>
                                                 @endif
                                             </div>

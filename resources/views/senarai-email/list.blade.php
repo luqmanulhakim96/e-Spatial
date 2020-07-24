@@ -13,6 +13,8 @@
                       <div class="card-title">Senarai Templat Email</div>
 
                       <a class="btn btn-ripple btn-raised btn-primary m-2" href="{{ route('senarai-email.add') }}">Tambah Templat Email</a>
+                      <div class="table-responsive">
+
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
 
                         <!-- Table head -->
@@ -50,6 +52,8 @@
                           @endforeach
                         </tbody>
                       </table>
+                    </div>
+                      
                   </div>
                 </div>
             </div>
