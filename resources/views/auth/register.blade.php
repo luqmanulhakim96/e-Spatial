@@ -4,7 +4,8 @@
     <div class="login-pagenew d-flex flex-row justify-content-center align-items-center">
         <!-- Login card -->
         <!-- <div class="card rounded-sm mt-4 w-50 p-3"> -->
-        <div class="card rounded-sm mt-0 w-50 p-3">
+        <!-- <div class="card rounded-sm mt-0 w-50 p-3"> -->
+        <div class="card mx-5 mx-md-25 border-0 rounded-lg">
         <h5 class="card-header">Borang Pendaftaran Pemohon</h5><br>
         <div class="card-header">
         <h5>MUSTAHAK:</h5>
@@ -17,11 +18,6 @@
         Bil.3/2018</span>
         </div>
         <div class="card-body">
-        <!-- <div class="login-brand m-2 m-md-0 d-flex justify-content-center align-items-center"> -->
-            <!-- <img src="{{ asset('qbadminui/img/QbyteIcon.png') }}" alt="image" class="w-25"> -->
-            <!-- <img src="{{ asset('qbadminui/img/logo-jpsm_resize.png') }}" alt="image" class="w-10"> -->
-        <!-- </div> -->
-        <!-- <div class="card-title">Borang Pendaftaran Pemohon</div> -->
         <!-- Create 2 row -->
         <form method="POST" action="{{ route('register') }}" id="register-form">
             @csrf
@@ -207,7 +203,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="no_tel_rumah" class="text-muted">No Telefon Rumah (*nombor sahaja)</label>
-                      
+
                       <input id="no_tel_rumah" type="text" class="form-control bg-light @error('no_tel_rumah') is-invalid @enderror" name="no_tel_rumah" value="{{ old('no_tel_rumah') }}" autocomplete="phone" autofocus>
                       @error('no_tel_rumah')
                       <span class="invalid-feedback" role="alert">
@@ -224,7 +220,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="no_tel_bimbit" class="text-muted">No Telefon Bimbit (*nombor sahaja)</label>
-                      
+
                       <input id="no_tel_bimbit" type="text" class="form-control bg-light @error('no_tel_bimbit') is-invalid @enderror" name="no_tel_bimbit" value="{{ old('no_tel_bimbit') }}" autocomplete="phone" autofocus>
                       @error('no_tel_bimbit')
                       <span class="invalid-feedback" role="alert">
