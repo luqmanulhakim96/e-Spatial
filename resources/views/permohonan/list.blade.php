@@ -42,9 +42,9 @@
 
                                                     <thead>
                                                         <tr>
-                                                          <th class="all">NAMA Permohonan</th>
-                                                          <th class="all">STATUS PERMOHONAN</th>
-                                                          <th class="all">ATTACHMENT PERMOHONAN</th>
+                                                          <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">NAMA PEMOHON</p></div></th>
+                                                          <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">STATUS PERMOHONAN</p></div></th>
+                                                          <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">MUAT TURUN SURAT PERMOHONAN</p></div></th>
                                                           <!-- <th class="all">PRINT</th> -->
                                                         </tr>
                                                     </thead>
@@ -57,7 +57,9 @@
                                                       <tr>
                                                         @if($userInfo->role != 0)
                                                         <td>
-                                                          <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}0</a>
+                                                          <div class="d-flex flex-row justify-content-around align-items-center">
+                                                            <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </div>
                                                         </td>
                                                         @else
                                                           @if($baru->jumlah_bayaran == 0.00)
@@ -245,10 +247,16 @@
 
                                                             <div class="form-group">
                                                               <label for="">Upload Surat Pembayaran</label>
-                                                              <input type="file" class="form-control bg-light" id="attachment_surat_bayaran" name="attachment_surat_bayaran" aria-describedby="attachment_surat_bayaran">
+                                                              <!-- <input type="file" required onchange="fileValidation('attachment_surat_bayaran')" class="form-control bg-light" id="attachment_surat_bayaran" name="attachment_surat_bayaran" aria-describedby="attachment_surat_bayaran"> -->
+                                                              <div class="custom-file">
+                                                                  <input type="file" required class="custom-file-input" required id="attachment_surat_bayaran" onchange="return fileValidation('attachment_surat_bayaran')" name="attachment_surat_bayaran">
+                                                                  <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                                              </div>
+                                                              <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+
                                                             </div>
 
-                                                              <input type="text" id="permohonan_id_upload_surat_bayaran" name="permohonan_id_upload_surat_bayaran" value="">
+                                                              <input type="hidden" id="permohonan_id_upload_surat_bayaran" name="permohonan_id_upload_surat_bayaran" value="">
 
                                                           </div>
                                                           <div class="modal-footer">
@@ -274,15 +282,21 @@
 
                                                             <div class="form-group">
                                                               <label for="">Link data</label>
-                                                              <input class="form-control bg-light" type="text" name="link_data" placeholder="Masukkan link untuk muat turun data">
+                                                              <input required class="form-control bg-light" type="text" name="link_data" placeholder="Masukkan link untuk muat turun data">
                                                             </div>
 
                                                             <div class="form-group">
                                                               <label for="">Upload Surat Penerimaan Data</label>
-                                                              <input type="file" class="form-control bg-light" id="attachment_penerimaan_data" name="attachment_penerimaan_data" aria-describedby="attachment_penerimaan_data">
+                                                              <!-- <input type="file" required onchange="fileValidation('attachment_penerimaan_data')" class="form-control bg-light" id="attachment_penerimaan_data" name="attachment_penerimaan_data" aria-describedby="attachment_penerimaan_data"> -->
+                                                              <div class="custom-file">
+                                                                  <input type="file" required class="custom-file-input" required id="attachment_penerimaan_data" onchange="return fileValidation('attachment_penerimaan_data')" name="attachment_penerimaan_data">
+                                                                  <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                                              </div>
+                                                              <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+
                                                             </div>
 
-                                                              <input type="text" id="permohonan_id_link_data" name="permohonan_id_link_data" value="">
+                                                              <input type="hidden" id="permohonan_id_link_data" name="permohonan_id_link_data" value="">
 
                                                           </div>
                                                           <div class="modal-footer">
@@ -474,5 +488,30 @@
           function passId_upload_link_data(id){
             $(".modal-body #permohonan_id_link_data").val( id );
           }
+
+          function fileValidation(name){
+            var fileInput = document.getElementById(name);
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.pdf)$/i;
+            if(!allowedExtensions.exec(filePath)){
+                alert('Sila muatnaik file dalam format .pdf sahaja.');
+                fileInput.value = '';
+                return false;
+            }
+        }
+
+        $('#attachment_surat_bayaran').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+
+        $('#attachment_penerimaan_data').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
         </script>
 @endsection

@@ -22,8 +22,22 @@
     <style>
     </style>
     <meta name="theme-color" content="#fafafa">
+    @if ($message = Session::get('success'))
+    <div id=alert>
+
+      <div class="alert alert-card  alert-success" role="alert">
+          <strong>Tahniah! </strong>
+          {{$message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+
+    </div>
+    @endif
 </head>
 <body class="position-relative">
+
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
@@ -50,3 +64,12 @@
     <script src="{{ asset('qbadminui/js/plugins/dataTable_script.js') }}"></script>
 </body>
 </html>
+
+<script type="text/javascript">
+$("document").ready(function(){
+  setTimeout(function(){
+     $("div.alert").remove();
+  }, 5000 ); // 5 secs
+
+});
+</script>

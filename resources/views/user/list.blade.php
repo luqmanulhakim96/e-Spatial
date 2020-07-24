@@ -119,7 +119,7 @@
                                                                   <small>Saiz file tidak melebihi 100MB.</small>
                                                                   <!-- Upload Resit PEMBAYARaran -->
                                                                   <div class="input-group mt-3">
-                                                                      <input type="file" class="form-control bg-light" id="attachment_receipt_pembayaran" name="attachment_receipt_pembayaran" aria-describedby="attachment_receipt_pembayaran">
+                                                                      <input type="file" onchange="return fileValidation('attachment_receipt_pembayaran')" class="form-control bg-light" id="attachment_receipt_pembayaran" name="attachment_receipt_pembayaran" aria-describedby="attachment_receipt_pembayaran">
                                                                   </div>
                                                                   <!-- pass id permohonan -->
                                                                   <input type="hidden" id="permohonan_id_resit"name="permohonan_id_resit" value="{{ $data->id  }}">
@@ -149,10 +149,10 @@
                                                                   <small>Saiz file tidak melebihi 100MB.</small>
                                                                   <!-- Upload Resit PEMBAYARaran -->
                                                                   <div class="input-group mt-3">
-                                                                      <input type="file" class="form-control bg-light" id="attachment_surat_penerimaan_data" name="attachment_surat_penerimaan_data" aria-describedby="attachment_surat_penerimaan_data">
+                                                                      <input type="file" class="form-control bg-light" onchange="return fileValidation('attachment_surat_penerimaan_data')" id="attachment_surat_penerimaan_data" name="attachment_surat_penerimaan_data" aria-describedby="attachment_surat_penerimaan_data">
                                                                   </div>
                                                                   <!-- pass id permohonan -->
-                                                                  <input type="text " id="permohonan_id_surat" name="permohonan_id_surat" value="{{ $data->id  }}">
+                                                                  <input type="hidden" id="permohonan_id_surat" name="permohonan_id_surat" value="{{ $data->id  }}">
                                                                   <!-- Login button -->
                                                                   <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muatnaik</button>
                                                               </form>
@@ -197,4 +197,16 @@
                 </div>
             </div>
         </main>
+        <script type="text/javascript">
+        function fileValidation(name){
+          var fileInput = document.getElementById(name);
+          var filePath = fileInput.value;
+          var allowedExtensions = /(\.pdf)$/i;
+          if(!allowedExtensions.exec(filePath)){
+              alert('Sila muatnaik file dalam format .pdf sahaja.');
+              fileInput.value = '';
+              return false;
+          }
+      }
+        </script>
 @endsection

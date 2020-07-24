@@ -283,6 +283,7 @@ class PermohonanController extends Controller
     $permohonan->save();
 
     return redirect()->route('permohonan.list');
+  }
 
   public function printSurat(Request $request){
     // $surat = SenaraiSurat::find($id);

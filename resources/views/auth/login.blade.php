@@ -5,7 +5,9 @@
     <div class="login-page d-flex flex-row justify-content-center align-items-center">
         <!-- Login card -->
         <div class="card mx-3 mx-md-0 border-0 rounded-lg">
+
             <div class="card-body" style="width:500px; height:auto;">
+
                 <!-- Row -->
                 <div class="row">
                     <!-- Left side -->
@@ -56,7 +58,7 @@
 
                             <button type="submit" class="btn btn-primary rounded m-1 btn-outline-primary badge-pill btn-block w-75 m-auto">Masuk</button>
                             <br>
-                            
+
                         </form>
                         <div class="btn btn-block w-75 m-auto">
                         <div class="btn btn-primarynew rounded m-0">
@@ -80,4 +82,5 @@
             </div>
         </div>
     </div>
+    
 @endsection

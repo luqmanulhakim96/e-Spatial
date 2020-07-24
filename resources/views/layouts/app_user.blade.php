@@ -81,9 +81,6 @@
 
                         <li class="side-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 py-3 pl-4" >Senarai Permohonan</a></li>
 
-
-                        <li class="side-menu-item px-3"><a href="{{ route('user.profil.edit') }}" class="w-100 py-3 pl-4" >Kemaskini Profil</a></li>
-
                         @endif
 
                     </ul>
@@ -97,7 +94,7 @@
         <main class="bg-light main-full-body">
 
             <!-- Theme changer -->
-            <div class="theme-option p-4">
+            <!-- <div class="theme-option p-4">
                 <div class="theme-pck">
                     <i class="fas fa-cog fa-lg"></i>
                 </div>
@@ -106,10 +103,10 @@
                     <p class="p-3 rounded side-nav-theme-primary side-nav-theme" theme-color="purple"></p>
                     <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
                 </div>
-            </div>
+            </div> -->
 
 
-@if ($message = Session::get('success'))
+            @if ($message = Session::get('success'))
             <div id=alert>
 
               <div class="alert alert-card  alert-success" role="alert">
@@ -245,7 +242,7 @@
 $("document").ready(function(){
   setTimeout(function(){
      $("div.alert").remove();
-  }, 5000000 ); // 5 secs
+  }, 5000 ); // 5 secs
 
 });
 </script>
