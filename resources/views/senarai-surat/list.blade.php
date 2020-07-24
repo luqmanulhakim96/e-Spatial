@@ -13,6 +13,8 @@
                       <div class="card-title">Senarai Templat Surat</div>
 
                       <a class="btn btn-ripple btn-raised btn-primary m-2" href="{{ route('senarai-surat.add') }}">Tambah Surat</a>
+                      <div class="table-responsive">
+
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
 
                         <!-- Table head -->
@@ -48,6 +50,8 @@
                           @endforeach
                         </tbody>
                       </table>
+                    </div>
+                      
                   </div>
                 </div>
             </div>

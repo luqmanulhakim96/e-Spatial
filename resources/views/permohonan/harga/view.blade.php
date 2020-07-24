@@ -39,7 +39,7 @@
                                             <td><p class="mb-0 font-weight-bold">{{ $data[0]->tahun}}{{ $data[0]->kategori_data}}</p></td>
                                             <td><p class="mb-0 font-weight-bold">{{ $data[0]->negeri}}</p></td>
                                             @if($data[0]->saiz_data != NULL)
-                                            <td><input type="text" id="harga" name="saiz_data[]" value="{{ $data[0]->saiz_data}}"></td>
+                                            <td><input type="text" id="harga" name="saiz_data[]" value="{{ $data[0]->saiz_data}}" required></td>
                                             @else
                                             <td> - <input type="hidden" id="harga" name="saiz_data[]" value="1"></td>
                                             @endif
