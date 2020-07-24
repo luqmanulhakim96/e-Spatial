@@ -10,7 +10,11 @@ body {
 }
 
 a {
+
+
   color: #003e61 !important;
+
+
   text-decoration: none !important;
 }
 
@@ -1525,7 +1529,16 @@ main {
 
 .login-page {
   height: 100vh;
-  background: #ffffff;
+
+  background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
+}
+.login-pagenew {
+  height: 90rem;
+  background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
+}
+.login-pagemain {
+  height: 100vh;
+
 }
 
 .login-brand {
