@@ -14,7 +14,7 @@
                         @csrf
                         <div class="row">
                           <div class="col-md-12">
-                            <div class="card-title">Surat Baharu</div>
+                            <div class="card-title">Edit Surat</div>
                               <!--jumlah harga input -->
                               <div class="row">
                                   <div class="col-md-6">
@@ -43,6 +43,22 @@
                                   </div>
                               </div>
                           </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="status_pembayaran">Surat - Status Pembayaran</label>
+                                    <select id="status_pembayaran" class="custom-select  bg-light @error('status_pembayaran') is-invalid @enderror" name="status_pembayaran" value="{{ $info->status_pembayaran }}" autofocus>
+                                          <option value="bayaran" {{ $info->status_pembayaran == "bayaran" ? 'selected' : '' }}>Bayaran</option>
+                                          <option value="pengecualian_bayaran" {{ $info->status_pembayaran == "pengecualian_bayaran" ? 'selected' : '' }} >Pengecualian Bayaran</option>
+                                      </select>
+                                </div>
+                                @error('status_pembayaran')
+                                <div class="alert alert-danger">
+                                  <strong>{{ $message }}</strong>
+                                </div>
+                                @enderror
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
@@ -74,6 +90,9 @@
                 width: 794,
                 // width: 794,
                 height: 1000,
+                plugins: "pagebreak",
+                // menubar: "insert",
+                // toolbar: "pagebreak"
             });
         </script>
 @endsection

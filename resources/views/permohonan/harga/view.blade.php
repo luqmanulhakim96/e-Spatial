@@ -61,7 +61,18 @@
 
                         <div class="card rounded-lg">
                           <div class="card-body">
-                              <div class="card-title">Lain-lain Harga</div>
+                              <div class="card-title">Lain-lain Harga (Permohonan ID: {{$permohonan->id}} )</div>
+
+                              <div class="form-group">
+                                <label for="harga_asas">
+                                  Muat turun file AOI :
+                                  @if($permohonan->attachment_aoi != null)
+                                    <a href="{{route('permohonan.download.attachment_aoi',$permohonan->id)}}">Download</a>
+                                  @else
+                                  Tiada
+                                  @endif
+                                </label>
+                              </div>
 
                               <div class="form-group">
                                   <label for="harga_asas">Harga AOI: RM</label>

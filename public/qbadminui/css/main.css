@@ -7,11 +7,12 @@ Author's custom styles
 body {
   font-size: 0.8rem;
   font-family: "Open Sans", sans-serif;
-  background-color: #f8f9fa;
 }
 
 a {
-  color: #000 !important;
+
+  color: #003e61 !important;
+
   text-decoration: none !important;
 }
 
@@ -45,12 +46,12 @@ html {
 }
 
 ::-moz-selection {
-  background: rgba(0,123,255,.5);
+  background: #b3d4fc;
   text-shadow: none;
 }
 
 ::selection {
-  background: rgba(0,123,255,.5);
+  background: #b3d4fc;
   text-shadow: none;
 }
 
@@ -340,7 +341,7 @@ textarea {
 }
 
 .card-icon-bg-primary {
-  color: rgba(102, 51, 153, 0.28);
+  color: rgba(0, 62, 97, 0.68);
 }
 
 .text-muted {
@@ -352,8 +353,6 @@ textarea {
 .bg-primary-c {
   background: #6B5CAB !important;
 }
-
-
 
 .box-shadow-none {
   box-shadow: unset !important;
@@ -528,9 +527,11 @@ label {
 .dropdown-item:active,
 .page-item.active .page-link,
 .list-group-item.active {
+
   background-color: #003e61  !important;
   color: #ffffff !important;
   border-color: #003e61  !important;
+
 }
 
 .card {
@@ -548,21 +549,9 @@ label {
 .btn-outline-primary:hover,
 .btn-primary,
 .btn-outline-primary {
-  color: #f8f9fa !important;
-  background: #003e61      !important;
-  border-color: #003e61     !important;
-}
-
-.primary-btn,
-.btn-primary:focus,
-.btn-outline-primary:focus,
-.btn-primary:hover,
-.btn-outline-primary:hover,
-.btn-primarynew,
-.btn-outline-primary {
-  color: #f8f9fa !important;
-  background: #003e61    !important;
-  border-color: #003e61   !important;
+  color: #ffffff !important;
+  background: #003e61 !important;
+  border-color: #003e61 !important;
 }
 
 .primary-btn-hover-focus,
@@ -576,7 +565,7 @@ label {
 .btn-outline-primary,
 .btn-outline-primary:focus {
   background: unset !important;
-  color: #000000 !important;
+  color: #663399 !important;
 }
 
 .btn-primary:active,
@@ -1077,7 +1066,7 @@ button.close {
 .badge-danger,
 .badge-rounded-danger,
 .badge-square-danger {
-  background-color: #003e61  !important;
+  background-color: #f44336 !important;
 }
 
 .badge-warning,
@@ -1238,8 +1227,8 @@ button.close {
 }
 
 .form-control:focus {
-  border-color: #f8f9fa ;
-  /* box-shadow: 0 0 0 0.1rem #ff5200 !important; */
+  border-color: #003e61;
+  box-shadow: 0 0 0 0.2rem #52b8f2 !important;
 }
 
 .form-text {
@@ -1262,10 +1251,6 @@ button.close {
 
 .card-title {
   font-size: 1.1rem !important;
-}
-
-.card-titleuser {
-  font-size: 2rem !important;
 }
 
 .modal-dialog {
@@ -1300,7 +1285,7 @@ button.close {
   align-items: center;
   width: 3rem;
   height: 3rem;
-  background: #003E61;
+  background: #6B5CAB;
   position: absolute;
   left: -3rem;
   top: 0;
@@ -1316,18 +1301,18 @@ button.close {
 }
 
 .theme-option .side-nav-themes .side-nav-theme-primary {
-  background-color: #003E61 !important;
+  background: linear-gradient(-154deg, #639, #33214b) !important;
 }
 
 .theme-option .side-nav-themes .side-nav-theme-light {
   background: #e8eaeb !important;
 }
 
-
 /* The sidebar */
 
 .side-bar {
-  background-color: #003E61 !important;
+  /* background: linear-gradient(-154deg, #639, #33214b) !important; */
+  background: linear-gradient(-154deg, #003E61, #003473) !important;
   height: 100vh !important;
   width: 17rem !important;
   visibility: hidden;
@@ -1440,7 +1425,6 @@ button.close {
   background: #ffffff !important;
 }
 
-
 .side-bar[data-theme=light] .brand-name {
   color: #343a40 !important;
 }
@@ -1502,10 +1486,12 @@ button.close {
   width: 50%;
   border-radius: 50%;
   margin-top: -0.2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .search-round input {
-  background: #f8f9fa;
+  background: transparent;
   border-radius: 25px 0 0 25px !important;
 }
 
@@ -1543,6 +1529,7 @@ main {
 
 .login-page {
   height: 100vh;
+
   background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
 }
 .login-pagenew {
@@ -1551,8 +1538,8 @@ main {
 }
 .login-pagemain {
   height: 100vh;
-}
 
+}
 
 .login-brand {
   height: 5rem;
@@ -1565,17 +1552,6 @@ main {
 .erro-page h1 {
   font-size: 8rem !important;
 }
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.

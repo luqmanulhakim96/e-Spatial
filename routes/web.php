@@ -19,9 +19,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/notifikasi/baca/{id}', 'HomeController@redirectNotification')->name('notification.mark-as-read');
 
 Route::middleware('admin')->group(function () {
   Route::get('/home', 'HomeController@index')->name('home');
+
+  Route::get('/home/chart/pie/jenis_data_dipohon_mengikut negeri', 'HomeController@getDataPieChart')->name('chart.pie.jenis_data_negeri');
+
 
   #route for Permohonan
   Route::get('/permohonan/maklumat/{id}', 'PermohonanController@viewInformasiPermohonan')->name('permohonan.view');
@@ -32,7 +36,20 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/permohonan/updateHarga/{id}', 'PermohonanController@updateHarga')->name('permohonan.harga.update');
 
+  Route::get('/permohonan/download/attachment_aoi/{id}', 'PermohonanController@downloadAoi')->name('permohonan.download.attachment_aoi');
+
+  Route::post('/permohonan/updateStatusBayaran', 'PermohonanController@updateStatusPembayaran')->name('permohonan.statusPembayaran.update');
+
   Route::post('/permohonan/updateUlasan/{id}', 'PermohonanController@updateUlasan')->name('permohonan.ulasan.update');
+
+  Route::post('/permohonan/print/', 'PermohonanController@printSurat')->name('permohonan.print');
+
+  Route::get('/permohonan/download/attachment_permohonan/{id}', 'PermohonanController@downloadSuratPermohonan')->name('permohonan.download.surat_permohonan');
+
+  Route::post('/permohonan/upload/surat_bayaran', 'PermohonanController@uploadSuratBayaran')->name('permohonan.upload.surat_bayaran');
+
+  Route::post('/permohonan/upload/dokumen_dan_link_data', 'PermohonanController@uploadLinkData')->name('permohonan.upload.link_data');
+
 
   #route for Senarai Harga
   Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');
@@ -75,6 +92,17 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
 
+  #route for Senarai Email
+  Route::get('/email/senarai', 'SenaraiEmailController@view')->name('senarai-email.list');
+
+  Route::get('/email/tambah', 'SenaraiEmailController@create')->name('senarai-email.add');
+
+  Route::get('/email/edit/{id}', 'SenaraiEmailController@edit')->name('senarai-email.edit');
+
+  Route::post('/email/update/{id}', 'SenaraiEmailController@updateSurat')->name('senarai-email.update');
+
+  Route::post('/email/submit', 'SenaraiEmailController@submitForm')->name('senarai-email.submit');
+
 });
 
 Route::middleware('user')->group(function () {
@@ -108,5 +136,13 @@ Route::middleware('user')->group(function () {
   Route::get('/permohonan/edit/{id}', 'UserController@edit')->name('user.edit');
 
   Route::post('/permohonan/update/{id}', 'UserController@updatePermohonan')->name('user.update');
+
+  Route::get('/profil/edit', 'UserController@editProfil')->name('user.profil.edit');
+
+  Route::post('/profile/update', 'UserController@updateProfil')->name('user.profil.updatePengguna');
+
+  Route::post('/upload/resit_pembayaran', 'UserController@uploadResitPembayaran')->name('user.upload.resit_pembayaran');
+
+  Route::post('/upload/surat_penerimaan_data', 'UserController@uploadPenerimaanData')->name('user.upload.surat_penerimaan_data');
 });
 // Route::resource('senaraiHargas', 'SenaraiHargaController');

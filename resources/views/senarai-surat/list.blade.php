@@ -10,9 +10,9 @@
 
                 <div class="card rounded-lg">
                   <div class="card-body">
-                      <div class="card-title">Senarai Surat</div>
+                      <div class="card-title">Senarai Templat Surat</div>
 
-                      <a class="btn btn-primarynew m-2" href="{{ route('senarai-surat.add') }}">Tambah Surat</a>
+                      <a class="btn btn-ripple btn-raised btn-primary m-2" href="{{ route('senarai-surat.add') }}">Tambah Surat</a>
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
 
                         <!-- Table head -->
@@ -22,7 +22,7 @@
                               <th class="all">NO RUJUKAN</th>
                               <th class="all">TARIKH</th>
 
-                              <th class="all">TARIKH CREATED</th>
+                              <th class="all">TARIKH DICIPTA</th>
                               <th class="all">TARIKH DIPINDA</th>
                               <th class="all">ACTION</th>
                             </tr>

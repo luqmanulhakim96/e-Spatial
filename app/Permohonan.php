@@ -3,10 +3,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Contracts\Auditable;
+use Illuminate\Notifications\Notifiable;
 
 class Permohonan extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
+    use Notifiable;
 
     protected $fillable = [
       'attachment_permohonan',
@@ -22,7 +24,12 @@ class Permohonan extends Model implements Auditable
       'jumlah_bayaran',
       'senarai_harga_id',
       'maklumat_agensi_dan_negara',
-      'attachment_aoi'
+      'attachment_aoi',
+      'attachment_receipt_pembayaran',
+      'attachment_penerimaan_data',
+      'attachment_surat_bayaran',
+      'link_data',
+      'attachment_penerimaan_data_user'
     ];
 
     public function user()

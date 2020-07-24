@@ -11,7 +11,7 @@
                       <div class="card-title">Permohonan Baru</div>
                       <div class="">
                         <div class="card-title">Pilih Data</div>
-                        <form class="" id="pilihan_data">
+                        <form class="" id="pilihan_data" enctype="multipart/form-data">
                           @csrf
                         <!-- jenis dokumen input-->
                         <div class="form-group">
@@ -105,7 +105,8 @@
                         </div> -->
 
                         <div class="">
-                          <input class="button" type="button" value=" Tambah Data " onclick="tambahData()">
+                          <input class="btn btn-primary" type="button" value=" Tambah Data " onclick="tambahData()">
+                          <!-- <button type="submit" class="btn btn-primary" onclick="tambahData()">Tambah Data</button> -->
                         </div>
 
                           <!-- <button class="btn btn-primary" onclick="tambahData()">Mohon</button> -->
@@ -156,90 +157,155 @@
             <div class="card-body">
               <div class="card rounded-lg">
                 <div class="card-body">
-
-                  <div class="card-title">Malumat Tambahan</div>
-
-                  <form class="" action="{{route('user.submit')}}" method="post" id="permohonan_data">
-                    <!-- attachment input -->
+                  <div class="card-title">Maklumat Tambahan</div>
+                  <form  method="post" action="{{route('user.submit')}}" id="permohonan_data" enctype="multipart/form-data">
                     @csrf
 
-                    <div class="form-group">
-                        <label for="attachment_permohonan">Muatnaik Attachment AOI:</label>
-                        <input type="file" class="bg-light" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi">
-                        <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 120MB</small>
-                        @error('attachment_aoi')
-                        <div class="alert alert-danger">
-                          <strong>{{ $message }}</strong>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="attachment_permohonan">Muatnaik Attachment AOI:</label>
+                            <!-- <input type="file" onchange="return fileValidation('attachment_aoi')" class="custom-select  bg-light @error('attachment_aoi') is-invalid @enderror" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi"> -->
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="attachment_aoi" onchange="return fileValidation('attachment_aoi')" name="attachment_aoi">
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                            </div>
+                            <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+                            @error('attachment_aoi')
+                            <div class="alert alert-danger">
+                              <strong>{{ $message }}</strong>
+                            </div>
+                            @enderror
+
                         </div>
-                        @enderror
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="attachment_permohonan">Muatnaik Lampiran:</label>
+                            <!-- <input type="file" required="required" onchange="return fileValidation('attachment_permohonan')" class="custom-select  bg-light @error('attachment_permohonan') is-invalid @enderror" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan"> -->
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return fileValidation('attachment_permohonan')" name="attachment_permohonan">
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                            </div>
+                            <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+                            @error('attachment_permohonan')
+                            <div class="alert alert-danger">
+                              <strong>{{ $message }}</strong>
+                            </div>
+                            @enderror
+                        </div>
+                      </div>
                     </div>
 
-                          <div class="form-group">
-                              <label for="attachment_permohonan">Muatnaik Lampiran:</label>
-                              <input type="file" class="bg-light" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan">
-                              <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 120MB</small>
-                              @error('attachment_permohonan')
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="dokumen_ke_luar_negara">Adakah Dokumen Geospatial Ini Perlu Di Bawa Ke Luar Negara?</label>
+
+                          <!-- All Radio Button  -->
+                          <div class="radios">
+                              <!-- Primary Radio Button  -->
+                          <div class="custom-control custom-radio">
+                              <input type="radio" id="Ya" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Ya" @if(old('dokumen_ke_luar_negara')=="Ya") checked @endif>
+                              <label class="custom-control-label" for="Ya">Ya</label>
+
+                          </div>
+                          <div class="custom-control custom-radio">
+                              <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif>
+                              <label class="custom-control-label" for="Tidak">Tidak</label>
+                          </div>
+                        </div>
+
+                          @error('dokumen_ke_luar_negara')
+                          <div class="alert alert-danger">
+                            <strong>{{ $message }}</strong>
+                          </div>
+                          @enderror
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="form-group" id="maklumat_agensi_dan_negara_div" style="display: none;" >
+                              <label for="maklumat_agensi">Maklumat Agensi Dan Negara Terlibat:</label>
+                              <input type="text" class="custom-select  bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara">
+                              @error('maklumat_agensi_dan_negara')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>
                               </div>
                               @enderror
                           </div>
-
-                          <!-- dokumen ke luar negara input -->
-                          <div class="form-group">
-                              <label for="dokumen_ke_luar_negara">Adakah Dokumen Geospatial Ini Perlu Di Bawa Ke Luar Negara?</label>
-
-                              <!-- All Radio Button  -->
-                              <div class="switchs">
-                                  <!-- Primary Radio Button  -->
-                              <div class="custom-control custom-radio">
-                                  <input type="radio" id="Ya" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Ya" @if(old('dokumen_ke_luar_negara')=="Ya") checked @endif>
-                                  <label class="custom-control-label" for="Ya">Ya</label>
-                              </div>
-                              <div class="custom-control custom-radio">
-                                  <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif>
-                                  <label class="custom-control-label" for="Tidak">Tidak</label>
-                              </div>
-
-                              @error('dokumen_ke_luar_negara')
-                              <div class="alert alert-danger">
-                                <strong>{{ $message }}</strong>
-                              </div>
-                              @enderror
-
-                              <div class="form-group" id="maklumat_agensi_dan_negara_div" style="display: none;" >
-                                  <label for="maklumat_agensi">Maklumat Agensi Dan Negara Terlibat:</label>
-                                  <input type="text" class="form-control bg-light" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara">
-                                  @error('maklumat_agensi_dan_negara')
-                                  <div class="alert alert-danger">
-                                    <strong>{{ $message }}</strong>
-                                  </div>
-                                  @enderror
-                              </div>
-
-                              <!-- counter -->
-                              <div class="form-group" style="display: block;">
-                                <label for="negeri">Jumlah data yang dipohon:</label>
-                                  <input type="text" class="form-control bg-light" id="counter_data" name="counter_data" aria-describedby="counter_data" value="0" readonly>
-                              </div>
-
-                              <input type="text" class="form-control bg-light" name="status_permohonan"    value="Sedang Diproses"hidden>
-                              <input type="text" class="form-control bg-light" name="status_pembayaran"   value="Belum Dibayar" hidden>
-
-                              <button type="submit" class="btn btn-primary">Mohon Data</button>
-                              </div>
-
                         </div>
+                      </div>
+                    </div>
 
+                    <!-- initialization for status permohonan and pembayaran -->
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control bg-light" name="status_permohonan"    value="Sedang Diproses"hidden>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="text" class="form-control bg-light" name="status_pembayaran"   value="Belum Dibayar" hidden>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group" style="display: none;">
+                          <label for="negeri">Jumlah data yang dipohon:</label>
+                            <input type="text" class="form-control bg-light" id="counter_data" name="counter_data" aria-describedby="counter_data" value="0" readonly>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-3">
+
+                      </div>
+                      <div class="col-md-4" id="button_submit_permohonan" style="display: none;">
+                        <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Mohon Data</button>
+                      </div>
+                    </div>
+
+                    </div>
+                    </div>
                   </form>
-
-
                 </div>
               </div>
             </div>
 
         </main>
         <script type="text/javascript">
+
+        $('#attachment_aoi').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+
+        $('#attachment_permohonan').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+
+        function fileValidation(name){
+          var fileInput = document.getElementById(name);
+          var filePath = fileInput.value;
+          var allowedExtensions = /(\.pdf)$/i;
+          if(!allowedExtensions.exec(filePath)){
+              alert('Sila muatnaik file dalam format .pdf sahaja.');
+              fileInput.value = '';
+              return false;
+          }
+      }
+
         function showJenisKertas(select){
           if(select.value=='Bercetak'){
             document.getElementById('jenis_kertas_div').style.display = "block";
@@ -388,7 +454,8 @@
                     }
                   })
                 }
-
+                //
+                document.getElementById('button_submit_permohonan').style.display = "block";
 
           }
         </script>
@@ -401,6 +468,9 @@
               //fetch data from jumlah data input
               var counter_data = document.getElementById("counter_data").value;
               counter_data--;
+              if(counter_data == 0){
+                document.getElementById('button_submit_permohonan').style.display = "none";
+              }
               //update data into jumlah data input
               document.getElementById("counter_data").value = counter_data;
             }
@@ -658,6 +728,14 @@
               }
             })
           }
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('submit', '#permohonan_data', function() {
+                $('#submit_data').html('<i class="fa fa-spinner fa-spin"></i>');
+                $('#submit_data').attr('disabled', 'disabled');
+            });
         });
         </script>
 
