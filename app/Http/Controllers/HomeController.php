@@ -184,4 +184,10 @@ class HomeController extends Controller
         return redirect()->route('permohonan.list');
       }
     }
+
+    public function changePasswordPage(){
+      // $user = User::findOrFail($id);
+      // dd($user_id = Auth::user()->id);
+      return view('auth.tukar_katalaluan');
+    }
 }

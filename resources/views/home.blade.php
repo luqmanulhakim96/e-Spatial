@@ -23,7 +23,7 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-muted">Permohonan Baru</p>
+                                            <p class="font-weight-normal m-0 text-primary">Permohonan Baru</p>
                                             <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanBaru}}</h4>
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-muted">Permohonan Lulus</p>
+                                            <p class="font-weight-normal m-0 text-primary">Permohonan Lulus</p>
                                             <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
                                         </div>
                                     </div>
@@ -69,7 +69,7 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-muted">Jumlah Pengguna</p>
+                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna</p>
                                             <h4 class="font-weight-normal m-0 text-primary">{{$countPengguna}}</h4>
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-muted">Permohonan Keseluruhan</p>
+                                            <p class="font-weight-normal m-0 text-primary">Permohonan Keseluruhan</p>
                                             <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanKeseluruhan}}</h4>
                                         </div>
                                     </div>

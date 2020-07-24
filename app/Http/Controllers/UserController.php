@@ -34,6 +34,12 @@ class UserController extends Controller
       return view('user.mainMenu', compact('nama', 'list'));
   }
 
+  public function changePasswordPage(){
+    // $user = User::findOrFail($id);
+    // dd($user_id = Auth::user()->id);
+    return view('user.change');
+  }
+
     /**
    * Send the password reset notification.
    *
@@ -219,9 +225,10 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
   protected function validator(array $data)
   {
       return Validator::make($data, [
-          'attachment_aoi' => ['nullable'],
-          'attachment_permohonan' => ['nullable'],
+          'attachment_aoi' => ['nullable','max:100000'],
+          'attachment_permohonan' => ['required','max:100000'],
           'dokumen_ke_luar_negara' => ['required'],
+          'maklumat_agensi_dan_negara' => ['nullable','string']
       ]);
   }
 
@@ -402,5 +409,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
 
     return redirect()->route('user.list')->with('success','Surat Penerimaan Data anda telah berjaya dimuatnaik');
   }
+
+
 
 }
