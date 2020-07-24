@@ -50,12 +50,6 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/permohonan/upload/dokumen_dan_link_data', 'PermohonanController@uploadLinkData')->name('permohonan.upload.link_data');
 
-  Route::get('/permohonan/download/attachment_receipt_pembayaran/{id}', 'PermohonanController@downloadResitPembayaran')->name('permohonan.download.attachment_receipt_pembayaran');
-
-  Route::get('/permohonan/download/attachment_penerimaan_data_user/{id}', 'PermohonanController@downloadSuratPenerimaanDataUser')->name('permohonan.download.attachment_penerimaan_data_user');
-
-
-
 
   #route for Senarai Harga
   Route::get('/harga/senarai', 'HomeController@senaraiHarga')->name('senarai-harga.list');

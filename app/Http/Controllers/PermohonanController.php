@@ -91,7 +91,7 @@ class PermohonanController extends Controller
     $permohonan->save();
 
     //route to next page
-    return $this->viewInformasiPermohonan($id)->with('success','Harga permohonan telah ditambah.');;
+    return $this->viewInformasiPermohonan($id);
   }
 
   public function downloadAoi($id){
@@ -118,20 +118,20 @@ class PermohonanController extends Controller
       $surat = SenaraiSurat::where('status_pembayaran', '=', 'bayaran')->first();
       if(is_null($surat))
       {
-        return redirect()->route('senarai-surat.add')->with('success','Status pembayaran telah dikemaskini');
+        return redirect()->route('senarai-surat.add');
       }
       else{
-        return view('permohonan.surat',  compact('surat'))->with('success','Status pembayaran telah dikemaskini');
+        return view('permohonan.surat',  compact('surat'));
       }
     }
     elseif ($request->status_pembayaran == 'Pengecualian Bayaran') {
       $surat = SenaraiSurat::where('status_pembayaran', '=', 'pengecualian_bayaran')->first();
       if(is_null($surat))
       {
-        return redirect()->route('senarai-surat.add')->with('success','Status pembayaran telah dikemaskini');
+        return redirect()->route('senarai-surat.add');
       }
       else{
-        return view('permohonan.surat',  compact('surat'))->with('success','Status pembayaran telah dikemaskini');
+        return view('permohonan.surat',  compact('surat'));
       }
     }
   }
@@ -229,7 +229,7 @@ class PermohonanController extends Controller
       }
     }
     // return app('App\Http\Controllers\HomeController')->senaraiPermohonan();
-    return redirect()->route('permohonan.list')->with('success','Ulasan permohonan telah dikemaskini');
+    return redirect()->route('permohonan.list');
   }
 
   public function viewInformasiPermohonan($id){
@@ -266,7 +266,7 @@ class PermohonanController extends Controller
     $permohonan->attachment_surat_bayaran = $uploaded_files_permohonan_surat_pembayaran;
     $permohonan->save();
 
-    return redirect()->route('permohonan.list')->with('success','Fail telah dimuatnaik');
+    return redirect()->route('permohonan.list');
   }
 
   public function uploadLinkData(Request $request){
@@ -282,7 +282,7 @@ class PermohonanController extends Controller
     $permohonan->attachment_penerimaan_data = $uploaded_files_permohonan_penerimaan_data;
     $permohonan->save();
 
-    return redirect()->route('permohonan.list')->with('success','Fail telah dimuatnaik');
+    return redirect()->route('permohonan.list');
   }
 
   public function printSurat(Request $request){
@@ -304,15 +304,6 @@ class PermohonanController extends Controller
     return $pdf->download('surat-' . $request->nombor_rujukan . '.pdf');
 
     // return redirect()->route('permohonan.list');
-  }
 
-  public function downloadResitPembayaran($id){
-    $permohonan = Permohonan::findOrFail($id);
-    return Storage::download($permohonan->attachment_receipt_pembayaran);
-  }
-
-  public function downloadSuratPenerimaanDataUser($id){
-    $permohonan = Permohonan::findOrFail($id);
-    return Storage::download($permohonan->attachment_penerimaan_data_user);
   }
 }

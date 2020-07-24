@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: #639 !important;
+  color: #003e61 !important;
   text-decoration: none !important;
 }
 
@@ -339,7 +339,7 @@ textarea {
 }
 
 .card-icon-bg-primary {
-  color: rgba(102, 51, 153, 0.28);
+  color: rgba(0, 62, 97, 0.68);
 }
 
 .text-muted {
@@ -498,7 +498,7 @@ label {
 }
 
 .text-primary {
-  color: #663399 !important;
+  color: #003e61 !important;
 }
 
 .text-success {
@@ -525,9 +525,9 @@ label {
 .dropdown-item:active,
 .page-item.active .page-link,
 .list-group-item.active {
-  background-color: #663399 !important;
+  background-color: #003e61 !important;
   color: #ffffff !important;
-  border-color: #663399 !important;
+  border-color: #003e61 !important;
 }
 
 .card {
@@ -546,8 +546,8 @@ label {
 .btn-primary,
 .btn-outline-primary {
   color: #ffffff !important;
-  background: #663399 !important;
-  border-color: #663399 !important;
+  background: #003e61 !important;
+  border-color: #003e61 !important;
 }
 
 .primary-btn-hover-focus,
@@ -1044,7 +1044,7 @@ button.close {
 .badge-primary,
 .badge-rounded-primary,
 .badge-square-primary {
-  background-color: #663399 !important;
+  background-color: #003e61 !important;
 }
 
 .badge-secondary,
@@ -1209,7 +1209,7 @@ button.close {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #ffffff !important;
-  background-color: #663399 !important;
+  background-color: #003e61 !important;
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {
@@ -1223,8 +1223,8 @@ button.close {
 }
 
 .form-control:focus {
-  border-color: #663399;
-  box-shadow: 0 0 0 0.2rem #c3a1e4 !important;
+  border-color: #003e61;
+  box-shadow: 0 0 0 0.2rem #52b8f2 !important;
 }
 
 .form-text {
@@ -1307,7 +1307,8 @@ button.close {
 /* The sidebar */
 
 .side-bar {
-  background: linear-gradient(-154deg, #639, #33214b) !important;
+  /* background: linear-gradient(-154deg, #639, #33214b) !important; */
+  background: linear-gradient(-154deg, #003E61, #003473) !important;
   height: 100vh !important;
   width: 17rem !important;
   visibility: hidden;
@@ -1481,6 +1482,8 @@ button.close {
   width: 50%;
   border-radius: 50%;
   margin-top: -0.2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .search-round input {
@@ -1586,4 +1589,3 @@ footer {
   overflow: hidden;
   position: relative;
 }
-

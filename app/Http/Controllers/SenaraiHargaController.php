@@ -83,7 +83,7 @@ class SenaraiHargaController extends Controller
     //dd($request);
     event($senaraiHarga = $this->createHarga($request->all()));
 
-    return redirect()->route('senarai-harga.list')->with('success','Data baru telah ditambah');;
+    return redirect()->route('senarai-harga.list');
   }
 
   public function update($id){
@@ -100,7 +100,7 @@ class SenaraiHargaController extends Controller
 
     //update data
     $senaraiHarga->jenis_dokumen = request()->jenis_dokumen;
-
+    
     if(request()->jenis_dokumen == 'Bercetak'){
       $senaraiHarga->jenis_kertas = request()->jenis_kertas;
       $jumlah_harga =request()->harga_asas;
@@ -129,13 +129,13 @@ class SenaraiHargaController extends Controller
 
 
     $this->update($id);
-    return redirect()->route('senarai-harga.list')->with('success','Maklumat data telah dikemaskini');;
+    return redirect()->route('senarai-harga.list');
   }
 
   public function deleteHarga($id){
       $senaraiHarga = SenaraiHarga::find($id);
       $senaraiHarga->status = 'Tidak Aktif';
       $senaraiHarga->save();
-      return redirect()->route('senarai-harga.list')->with('success','Data telah dibuang dari senarai');;
+      return redirect()->route('senarai-harga.list');
   }
 }

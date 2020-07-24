@@ -378,7 +378,7 @@
                         }
                         //console.log(data[0].id);
                         //insert responsive input text in form
-                        str_to_append = '<div><input type="hidden" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data[0].id +'"></div>';
+                        str_to_append = '<div><input type="text" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data[0].id +'"></div>';
                         //add counter for data apply by the user
                         counter_data++;
                         document.getElementById("counter_data").value = counter_data;
@@ -436,7 +436,7 @@
                             );
                           }
                           //console.log(data.id);
-                          str_to_append = '<div><input type="hidden" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
+                          str_to_append = '<div><input type="text" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
                           counter_data++;
                           document.getElementById("counter_data").value = counter_data;
                           $("#counter_data").append(counter_data);
