@@ -33,6 +33,8 @@
                                         <div class="tab-content">
                                             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                               <div class="card-title">Senarai Permohonan Sedang Diproses</div>
+                                              <div class="table-responsive">
+
                                               <table class="table table-striped table-bordered" id="list_permohonan_user" style="width: 100%;">
                                                   <!-- Table head -->
                                                   <thead>
@@ -66,11 +68,15 @@
                                                     @endforeach
                                                   </tbody>
                                                 </table>
+                                              </div>
+
 
                                             </div>
 
                                             <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                               <div class="card-title">Senarai Permohonan Lulus</div>
+                                              <div class="table-responsive">
+
                                               <table class="table table-striped table-bordered" id="list_permohonan_user_lulus" style="width: 100%;">
                                                   <!-- Table head -->
                                                   <thead>
@@ -167,12 +173,15 @@
                                                     @endforeach
                                                   </tbody>
                                                 </table>
+                                              </div>
 
 
 
                                             </div>
 
                                             <div class="tab-pane" id="content" role="tabpanel" aria-labelledby="content-tab">
+                                              <div class="table-responsive">
+
                                               <table class="table table-striped table-bordered" id="list_permohonan_user_gagal" style="width: 100%;">
                                                 <thead>
                                                     <tr>
@@ -190,6 +199,8 @@
                                                   @endforeach
                                                 </tbody>
                                               </table>
+                                            </div>
+                                              
                                             </div>
                                         </div>
                                     </div>

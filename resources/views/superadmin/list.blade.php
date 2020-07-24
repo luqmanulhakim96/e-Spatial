@@ -65,6 +65,8 @@
                             </div>
 
                             <div class="tab-pane fade" id="pills-deactivate" role="tabpanel" aria-labelledby="pills-deactivate-tab">
+                              <div class="table-responsive">
+
                               <table class="table table-striped table-bordered" id="responsiveDataTable2" style="width: 100%;">
 
                                 <thead>
@@ -103,6 +105,8 @@
                                   @endforeach
                                 </tbody>
                               </table>
+                            </div>
+                              
                             </div>
                       </div>
                     </div>

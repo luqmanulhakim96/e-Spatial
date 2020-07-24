@@ -10,6 +10,7 @@
                 <div class="card rounded-lg">
                   <div class="card-body">
                       <div class="card-title">Audit Trail</div>
+                      <div class="table-responsive">
 
                       <table class="table table-striped table-bordered" id="responsiveAuditTable" style="width: 100%;">
                         <!-- Table head -->
@@ -73,6 +74,8 @@
                           @endforeach
                         </tbody>
                       </table>
+                    </div>
+                      
                   </div>
                 </div>
             </div>

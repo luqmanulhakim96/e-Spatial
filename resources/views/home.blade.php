@@ -118,7 +118,10 @@
                                 <div class="card-title">Jumlah Permohonan (6 Bulan Lepas)</div>
                                 <!-- Chart -->
                                 <!-- <div id="echartBar" style="height: 300px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;"></div> -->
-                                <div id="curve_chart" style="width: 100%; height: 400px"></div>
+                                <div id="chart-wrap">
+                                  <div id="jumlah_permohonan_chart" ></div>
+
+                                </div>
                             </div>
 
                         </div>
@@ -133,7 +136,9 @@
                                 <!-- Card title -->
                                 <div class="card-title">Status Permohonan Keseluruhan</div>
                                 <!-- Chart -->
-                                <div id="chart_status_div"></div>
+                                <div id="chart-wrap">
+                                  <div id="status_permohonan_keseluruhan_div"></div>
+                                </div>
 
                             </div>
 
@@ -153,7 +158,11 @@
                             <div class="card-body">
                                 <div class="card-title m-0 p-1">Jumlah Data Yang Dipohon Mengikut Negeri</div>
                                 <!-- Chart -->
-                                <div id="chart_div" style="width: 100%; height: 400px;"></div>
+                                <div id="chart-wrap">
+
+                                <div id="jumlah_data_dipohon_div" style="width: 100%; height: 400px;"></div>
+                              </div>
+
                             </div>
 
                         </div>
@@ -166,8 +175,11 @@
                             <div class="card-body">
                                 <!-- Card title -->
                                 <div class="card-title">Jumlah Pendapatan Mengikut Bulan</div>
+                                <div id="chart-wrap">
                                 <!-- Chart -->
-                                <div id="columnchart_values" style="width: 100%; height: 400px;"></div>
+                                <div id="jumlah_pendapatan_mengikut_bulan_div" style="width: 100%; height: 400px;"></div>
+
+                              </div>
                             </div>
 
                         </div>
@@ -208,6 +220,8 @@
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
       // draws it.
+
+      // jumlah data dipohon pie chart
       function drawPieChart() {
 
         //fetch data from db
@@ -236,15 +250,17 @@
 
         // Set chart options
         var options = {'title':'',
-                       'width':500,
-                       'height':400,
+                       // 'width':500,
+                       // 'height':400,
                        colors: ['#B0D8FF', '#86AFD9', '#5E87AF', '#356187', '#003E61']
                      };
 
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.PieChart(document.getElementById('jumlah_data_dipohon_div'));
         chart.draw(data, options);
       }
+
+      //jumlah Keseluruhan pie chart
 
       function drawPieChartStatusPermohonan() {
 
@@ -275,17 +291,17 @@
 
         // Set chart options
         var options = {'title':'',
-                       'width':500,
-                       'height':400,
+                       // 'width':500,
+                       // 'height':400,
                        colors: ['#B0D8FF', '#86AFD9', '#5E87AF', '#356187', '#003E61']
                      };
 
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_status_div'));
+        var chart = new google.visualization.PieChart(document.getElementById('status_permohonan_keseluruhan_div'));
         chart.draw(data, options);
       }
 
-
+      //jumlah permohonan (6 bulan) chart
       function drawChartLine() {
         var sites= @json($dataDipohonMengikutBulan);
 
@@ -358,10 +374,12 @@
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.visualization.LineChart(document.getElementById('jumlah_permohonan_chart'));
 
         chart.draw(data, options);
       }
+
+      //jumlah pendapatan mengikut bulan - column chart
 
       function drawChartBar() {
         var sites= @json($dataJumlahPendapatan);
@@ -444,15 +462,21 @@
 
       var options = {
         title: "",
-        width: 500,
-        height: 400,
+        // width: 500,
+        // height: 400,
         bar: {groupWidth: "80%"},
         legend: { position: "none" },
         colors: ['#B0D8FF', '#86AFD9', '#5E87AF', '#356187', '#003E61']
       };
-      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      var chart = new google.visualization.ColumnChart(document.getElementById("jumlah_pendapatan_mengikut_bulan_div"));
       chart.draw(view, options);
   }
+  $(window).resize(function(){
+      drawChartBar();
+      drawChartLine();
+      drawPieChart();
+      drawPieChartStatusPermohonan();
+      });
     </script>
 
 @endsection

@@ -120,26 +120,50 @@ $(document).ready(function(){
     // Responsive Data Table
     let tableHarga = $("#tableHarga")
     $(tableHarga).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
     });
 
     // Responsive Data Table
     let responsiveDataTable = $("#responsiveDataTable")
     $(responsiveDataTable).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
     });
 
     // Responsive Data Table
     let responsiveDataTable2 = $("#responsiveDataTable2")
     $(responsiveDataTable2).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
     });
 
     // Responsive Data Table
 
     let responsiveDataTable3 = $("#responsiveDataTable3")
     $(responsiveDataTable3).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
     });
 
     // Responsive Data Table
@@ -147,7 +171,13 @@ $(document).ready(function(){
     $(responsiveAuditTable).DataTable({
         responsive : true,
         scrollX: true,
-        order: [[ 7, "desc" ]]
+        order: [[ 7, "desc" ]],
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
     });
 
     // Responsive Data Table
@@ -156,13 +186,25 @@ $(document).ready(function(){
         responsive : true,
         scrollX: true,
         order: [[ 0, "desc" ]],
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
     });
 
     // Responsive Data Table
     let list_permohonan_user = $("#list_permohonan_user")
     $(list_permohonan_user).DataTable({
         responsive : true,
-        order:[[4,"desc"]]
+        order:[[4,"desc"]],
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
 
     });
 
@@ -170,7 +212,13 @@ $(document).ready(function(){
     let list_permohonan_user_lulus = $("#list_permohonan_user_lulus")
     $(list_permohonan_user_lulus).DataTable({
         responsive : true,
-        order:[[4,"desc"]]
+        order:[[4,"desc"]],
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
 
     });
 
@@ -178,7 +226,13 @@ $(document).ready(function(){
     let list_permohonan_user_gagal = $("#list_permohonan_user_gagal")
     $(list_permohonan_user_gagal).DataTable({
         responsive : true,
-        order:[[4,"desc"]]
+        order:[[4,"desc"]],
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
 
     });
 
@@ -213,13 +267,19 @@ $(document).ready(function(){
     // Responsive Data Table
     let list_permohonan_gagal = $("#list_permohonan_gagal")
     $(list_permohonan_gagal).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
     });
 
     // Responsive Data Table
     let list_permohonan_lulus = $("#list_permohonan_lulus")
     $(list_permohonan_lulus).DataTable({
-        responsive : true
+        responsive : true,
         columnDefs: [
                      {
                           "targets": "_all", // your case first column
@@ -230,7 +290,13 @@ $(document).ready(function(){
 
     let list_permohonan_dalaman = $("#list_permohonan_dalaman")
     $(list_permohonan_dalaman).DataTable({
-        responsive : true
+        responsive : true,
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
     });
 
 
