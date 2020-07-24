@@ -75,11 +75,12 @@
                         @endif
                         @if(Auth::user()->role == 5)
                         <!-- Sub menu parent -->
+                        <li class="side-menu-item px-3"><a href="{{ route('user.mainMenu') }}" class="w-100 py-3 pl-4" >Halaman Utama</a></li>
+
                         <li class="side-menu-item px-3"><a href="{{ route('user.add') }}" class="w-100 py-3 pl-4" >Permohonan Baru</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 py-3 pl-4" >Senarai Permohonan Lalu</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 py-3 pl-4" >Senarai Permohonan</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('user.profil.edit') }}" class="w-100 py-3 pl-4" >Kemaskini Profil</a></li>
                         @endif
 
                     </ul>
@@ -93,7 +94,7 @@
         <main class="bg-light main-full-body">
 
             <!-- Theme changer -->
-            <div class="theme-option p-4">
+            <!-- <div class="theme-option p-4">
                 <div class="theme-pck">
                     <i class="fas fa-cog fa-lg"></i>
                 </div>
@@ -102,29 +103,33 @@
                     <p class="p-3 rounded side-nav-theme-primary side-nav-theme" theme-color="purple"></p>
                     <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
                 </div>
+            </div> -->
+
+
+            @if ($message = Session::get('success'))
+            <div id=alert>
+
+              <div class="alert alert-card  alert-success" role="alert">
+                  <strong>Tahniah! </strong>
+                  {{$message}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+
             </div>
-
-
-
+            @endif
             <!-- The navbar -->
             <nav class="navbar navbar-expand navbar-light bg-light py-3">
                 <p class="navbar-brand mb-0 pb-0">
                     <span></span>
                     <span></span>
                     <span></span>
+
+
                 </p>
 
-                <div id=alert class="alert">
-                  @if ($message = Session::get('success'))
-                  <div class="alert alert-card  alert-success" role="alert">
-                      <strong>Tahniah! </strong>
-                      {{$message}}
-                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-                  @endif
-                </div>
+
 
 
 
@@ -142,6 +147,7 @@
                 </div> -->
                 <!-- Navbar right menu section -->
                 <div class="navb-menu ml-auto d-flex flex-row">
+
                     <!-- Message dropdown -->
                     <div class="dropdown dropdown-arow-none d-contents text-center mx-2 pt-1">
                         <!-- Icon -->
@@ -186,6 +192,7 @@
                         <!-- Dropdown Menu -->
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-max-height">
                             <!-- Menu items -->
+
                             <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i>{{explode(' ',trim(ucwords(strtolower((Auth::user()->name)))))[0]}} </a>
                             <a href="{{ route('user.profil.edit') }}" class="dropdown-item text-secondary-light">Kemaskini Profil</a>
                             <!-- <a href="#" class="dropdown-item text-secondary-light">Billing history</a> -->
@@ -194,6 +201,7 @@
                                 onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
                             >Log Keluar</a>
+
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>

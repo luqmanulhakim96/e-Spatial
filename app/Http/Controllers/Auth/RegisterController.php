@@ -130,6 +130,6 @@ class RegisterController extends Controller
 
         //send email here
 
-        return redirect('/login');
+        return redirect('/login')->with('success','Pendaftaran anda telah berjaya');
     }
 }

@@ -16,6 +16,7 @@
                         <!-- jenis dokumen input-->
                         <div class="form-group">
                             <label for="jenis_dokumen">Jenis Dokumen:</label>
+                            <label for="jenis_dokumen">(Document Type)</label>
                               <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)">
                                   <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                   @foreach($jenisDokumen as $data)
@@ -32,6 +33,7 @@
                         <!-- jenis data input-->
                         <div class="form-group">
                             <label for="jenis_data">Jenis Data:</label>
+                            <label for="jenis_data">(Data Type)</label>
                               <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)">
                                 <option value="" selected disabled hidden>Pilih Jenis Data</option>
                               </select>
@@ -58,6 +60,7 @@
                         <!--tahun input -->
                         <div class="form-group" id="tahun_div" style="display: block;">
                             <label for="tahun">Tahun:</label>
+                            <label for="tahun">(Year)</label>
                             <select id="tahun" class="custom-select  bg-light" name="tahun">
                                 <option value="" selected disabled hidden>Pilih Tahun</option>
                             </select>
@@ -71,6 +74,7 @@
                         <!-- negeri input -->
                         <div class="form-group">
                           <label for="negeri">Negeri:</label>
+                          <label for="negeri">(State)</label>
                             <select id="negeri" class="custom-select  bg-light" name="negeri">
                                 <option value="" selected disabled hidden>Pilih Negeri</option>
                             </select>
@@ -154,26 +158,36 @@
               <div class="card rounded-lg">
                 <div class="card-body">
                   <div class="card-title">Maklumat Tambahan</div>
-                  <form class="" action="{{route('user.submit')}}" method="post" id="permohonan_data" enctype="multipart/form-data">
+                  <form  method="post" action="{{route('user.submit')}}" id="permohonan_data" enctype="multipart/form-data">
                     @csrf
+
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
                             <label for="attachment_permohonan">Muatnaik Attachment AOI:</label>
-                            <input type="file" class="form-control bg-light" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi">
-                            <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 120MB</small>
+                            <!-- <input type="file" onchange="return fileValidation('attachment_aoi')" class="custom-select  bg-light @error('attachment_aoi') is-invalid @enderror" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi"> -->
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="attachment_aoi" onchange="return fileValidation('attachment_aoi')" name="attachment_aoi">
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                            </div>
+                            <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
                             @error('attachment_aoi')
                             <div class="alert alert-danger">
                               <strong>{{ $message }}</strong>
                             </div>
                             @enderror
+
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                             <label for="attachment_permohonan">Muatnaik Lampiran:</label>
-                            <input type="file" class="form-control bg-light" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan">
-                            <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 120MB</small>
+                            <!-- <input type="file" required="required" onchange="return fileValidation('attachment_permohonan')" class="custom-select  bg-light @error('attachment_permohonan') is-invalid @enderror" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan"> -->
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return fileValidation('attachment_permohonan')" name="attachment_permohonan">
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                            </div>
+                            <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
                             @error('attachment_permohonan')
                             <div class="alert alert-danger">
                               <strong>{{ $message }}</strong>
@@ -182,6 +196,7 @@
                         </div>
                       </div>
                     </div>
+
 
                     <div class="row">
                       <div class="col-md-6">
@@ -194,6 +209,7 @@
                           <div class="custom-control custom-radio">
                               <input type="radio" id="Ya" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Ya" @if(old('dokumen_ke_luar_negara')=="Ya") checked @endif>
                               <label class="custom-control-label" for="Ya">Ya</label>
+
                           </div>
                           <div class="custom-control custom-radio">
                               <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif>
@@ -212,7 +228,7 @@
                         <div class="form-group">
                           <div class="form-group" id="maklumat_agensi_dan_negara_div" style="display: none;" >
                               <label for="maklumat_agensi">Maklumat Agensi Dan Negara Terlibat:</label>
-                              <input type="text" class="form-control bg-light" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara">
+                              <input type="text" class="custom-select  bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara">
                               @error('maklumat_agensi_dan_negara')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>
@@ -264,6 +280,32 @@
 
         </main>
         <script type="text/javascript">
+
+        $('#attachment_aoi').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+
+        $('#attachment_permohonan').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+
+        function fileValidation(name){
+          var fileInput = document.getElementById(name);
+          var filePath = fileInput.value;
+          var allowedExtensions = /(\.pdf)$/i;
+          if(!allowedExtensions.exec(filePath)){
+              alert('Sila muatnaik file dalam format .pdf sahaja.');
+              fileInput.value = '';
+              return false;
+          }
+      }
+
         function showJenisKertas(select){
           if(select.value=='Bercetak'){
             document.getElementById('jenis_kertas_div').style.display = "block";
@@ -427,7 +469,7 @@
               var counter_data = document.getElementById("counter_data").value;
               counter_data--;
               if(counter_data == 0){
-                document.getElementById('button_submit_permohonan').style.display = "none";                
+                document.getElementById('button_submit_permohonan').style.display = "none";
               }
               //update data into jumlah data input
               document.getElementById("counter_data").value = counter_data;

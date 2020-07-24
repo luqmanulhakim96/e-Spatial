@@ -98,27 +98,31 @@
                                                       <td>
                                                         <div class="d-flex flex-row justify-content-around align-items-center">
 
-                                                          @if($data->status_pembayaran == 'Belum Dibayar')
-                                                          <button class="btn btn-success mr-1" onclick="pass_id_resit_pembayaran({{$data->id }})" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                          @if($data->status_pembayaran == 'Perlu Dibayar')
+                                                          <button class="btn btn-success mr-1"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                             <i class="fa fa-upload"></i>
                                                           </button>
                                                           @elseif($data->status_pembayaran == 'Pengecualian Bayaran')
+                                                          <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tidak perlu muatnaik data">
+                                                            <i class="fa fa-upload"></i>
+                                                          </button>
+                                                          @elseif($data->status_pembayaran == 'Belum Dibayar')
                                                           <button class="btn btn-dark mr-1">
                                                             <i class="fa fa-upload"></i>
                                                           </button>
                                                           @endif
 
                                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                              <form action="{{route('user.upload.resit_pemabayaran')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
+                                                              <form action="{{route('user.upload.resit_pembayaran')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
                                                                   @csrf
                                                                   <h5>Muat Naik Resit Pembayaran</h5>
                                                                   <small>Saiz file tidak melebihi 100MB.</small>
                                                                   <!-- Upload Resit PEMBAYARaran -->
                                                                   <div class="input-group mt-3">
-                                                                      <input type="file" class="form-control bg-light" id="attachment_receipt_pembayaran" name="attachment_receipt_pembayaran" aria-describedby="attachment_receipt_pembayaran">
+                                                                      <input type="file" onchange="return fileValidation('attachment_receipt_pembayaran')" class="form-control bg-light" id="attachment_receipt_pembayaran" name="attachment_receipt_pembayaran" aria-describedby="attachment_receipt_pembayaran">
                                                                   </div>
                                                                   <!-- pass id permohonan -->
-                                                                  <input type="hidden" id="permohonan_id_resit"name="permohonan_id_resit" value="">
+                                                                  <input type="hidden" id="permohonan_id_resit"name="permohonan_id_resit" value="{{ $data->id  }}">
                                                                   <!-- Login button -->
                                                                   <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muatnaik</button>
                                                               </form>
@@ -132,10 +136,10 @@
                                                       <td>Telah dimuat naik</td>
                                                       @endif
                                                       <!-- column muat naik surat penerimaan data -->
-                                                      @if($data->attachment_penerimaan_data == null)
+                                                      @if($data->attachment_penerimaan_data_user == null)
                                                       <td>
                                                         <div class="d-flex flex-row justify-content-around align-items-center">
-                                                          <button class="btn btn-success mr-1" type="button" onclick="pass_id_surat_penerimaan_data({{$data->id }})" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                          <button class="btn btn-success mr-1" type="button"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                             <i class="fa fa-upload"></i>
                                                           </button>
                                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -145,10 +149,10 @@
                                                                   <small>Saiz file tidak melebihi 100MB.</small>
                                                                   <!-- Upload Resit PEMBAYARaran -->
                                                                   <div class="input-group mt-3">
-                                                                      <input type="file" class="form-control bg-light" id="attachment_surat_penerimaan_data" name="attachment_surat_penerimaan_data" aria-describedby="attachment_surat_penerimaan_data">
+                                                                      <input type="file" class="form-control bg-light" onchange="return fileValidation('attachment_surat_penerimaan_data')" id="attachment_surat_penerimaan_data" name="attachment_surat_penerimaan_data" aria-describedby="attachment_surat_penerimaan_data">
                                                                   </div>
                                                                   <!-- pass id permohonan -->
-                                                                  <input type="hidden" id="permohonan_id_surat"name="permohonan_id_surat" value="">
+                                                                  <input type="hidden" id="permohonan_id_surat" name="permohonan_id_surat" value="{{ $data->id  }}">
                                                                   <!-- Login button -->
                                                                   <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muatnaik</button>
                                                               </form>
@@ -189,23 +193,20 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
-
-
                   </div>
                 </div>
             </div>
         </main>
         <script type="text/javascript">
-          function pass_id_resit_pembayaran(id){
-            $("#permohonan_id_resit").val( id );
+        function fileValidation(name){
+          var fileInput = document.getElementById(name);
+          var filePath = fileInput.value;
+          var allowedExtensions = /(\.pdf)$/i;
+          if(!allowedExtensions.exec(filePath)){
+              alert('Sila muatnaik file dalam format .pdf sahaja.');
+              fileInput.value = '';
+              return false;
           }
-
-          function pass_id_surat_penerimaan_data(id){
-            $("#permohonan_id_surat").val( id );
-          }
-
+      }
         </script>
 @endsection

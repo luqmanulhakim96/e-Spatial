@@ -42,10 +42,10 @@
 
                                                     <thead>
                                                         <tr>
-                                                          <th class="all">NAMA Permohonan</th>
-                                                          <th class="all">STATUS PERMOHONAN</th>
-                                                          <th class="all">ATTACHMENT PERMOHONAN</th>
-                                                          <th class="all">PRINT</th>
+                                                          <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">NAMA PEMOHON</p></div></th>
+                                                          <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">STATUS PERMOHONAN</p></div></th>
+                                                          <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">MUAT TURUN SURAT PERMOHONAN</p></div></th>
+                                                          <!-- <th class="all">PRINT</th> -->
                                                         </tr>
                                                     </thead>
 
@@ -57,7 +57,9 @@
                                                       <tr>
                                                         @if($userInfo->role != 0)
                                                         <td>
-                                                          <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}0</a>
+                                                          <div class="d-flex flex-row justify-content-around align-items-center">
+                                                            <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                                          </div>
                                                         </td>
                                                         @else
                                                           @if($baru->jumlah_bayaran == 0.00)
@@ -73,11 +75,11 @@
                                                         @endif
                                                         <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
                                                         <td><a class="fa fa-download" href="{{route('permohonan.download.surat_permohonan',$baru->id)}}"></a></td>
-                                                        <td class="p-3">
+                                                        <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
                                                               </div>
-                                                        </td>
+                                                        </td> -->
                                                       </tr>
                                                       @endforeach
 
@@ -103,11 +105,11 @@
                                                         @endif
                                                         <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
                                                         <td>{{ $baru->attachment_permohonan}}</td>
-                                                        <td class="p-3">
+                                                        <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
                                                               </div>
-                                                        </td>
+                                                        </td> -->
                                                       </tr>
                                                       @endforeach
 
@@ -133,11 +135,11 @@
                                                         @endif
                                                         <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
                                                         <td>{{ $baru->attachment_permohonan}}</td>
-                                                        <td class="p-3">
+                                                        <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
                                                               </div>
-                                                        </td>
+                                                        </td> -->
                                                       </tr>
                                                       @endforeach
 
@@ -164,11 +166,11 @@
                                                         @endif
                                                         <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
                                                         <td>{{ $baru->attachment_permohonan}}</td>
-                                                        <td class="p-3">
+                                                        <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
                                                               </div>
-                                                        </td>
+                                                        </td> -->
                                                       </tr>s
                                                       @endforeach
 
@@ -202,13 +204,20 @@
                                                                     <!-- Primary Radio Button  -->
 
                                                                 <div class="custom-control custom-radio">
-                                                                    <input type="radio" id="Sudah Dibayar" name="status_pembayaran" class="custom-control-input"  value="Sudah Dibayar" @if(old('status_pembayaran')=="Sudah Dibayar") checked @endif>
-                                                                    <label class="custom-control-label" for="Sudah Dibayar">Sudah Dibayar</label>
+                                                                    <input type="radio" id="Perlu Dibayar" name="status_pembayaran" class="custom-control-input"  value="Perlu Dibayar" @if(old('status_pembayaran')=="Perlu Dibayar") checked @endif>
+                                                                    <label class="custom-control-label" for="Perlu Dibayar">Perlu Dibayar</label>
                                                                 </div>
                                                                 <div class="custom-control custom-radio">
                                                                     <input type="radio" id="Pengecualian Bayaran" name="status_pembayaran" class="custom-control-input"  value="Pengecualian Bayaran" @if(old('status_pembayaran')=="Pengecualian Bayaran") checked @endif>
                                                                     <label class="custom-control-label" for="Pengecualian Bayaran">Pengecualian Bayaran</label>
                                                                 </div>
+
+                                                                <div class="custom-control custom-radio">
+                                                                    <input type="radio" id="Sudah Dibayar" name="status_pembayaran" class="custom-control-input"  value="Sudah Dibayar" @if(old('status_pembayaran')=="Sudah Dibayar") checked @endif>
+                                                                    <label class="custom-control-label" for="Sudah Dibayar">Sudah Dibayar</label>
+                                                                </div>
+
+
                                                               </div>
 
                                                               </div>
@@ -223,46 +232,140 @@
                                                     </div>
                                                   </div>
 
+                                                  <div class="modal fade" id="upload_surat_bayaran" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLabel">Upload Surat Bayaran</h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <form action="{{route('permohonan.upload.surat_bayaran')}}" method="post" enctype="multipart/form-data">
+                                                          @csrf
+                                                          <div class="modal-body">
+
+                                                            <div class="form-group">
+                                                              <label for="">Upload Surat Pembayaran</label>
+                                                              <!-- <input type="file" required onchange="fileValidation('attachment_surat_bayaran')" class="form-control bg-light" id="attachment_surat_bayaran" name="attachment_surat_bayaran" aria-describedby="attachment_surat_bayaran"> -->
+                                                              <div class="custom-file">
+                                                                  <input type="file" required class="custom-file-input" required id="attachment_surat_bayaran" onchange="return fileValidation('attachment_surat_bayaran')" name="attachment_surat_bayaran">
+                                                                  <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                                              </div>
+                                                              <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+
+                                                            </div>
+
+                                                              <input type="hidden" id="permohonan_id_upload_surat_bayaran" name="permohonan_id_upload_surat_bayaran" value="">
+
+                                                          </div>
+                                                          <div class="modal-footer">
+                                                              <button type="submit"  class="btn btn-primary" >Muatnaik</button>
+                                                          </div>
+                                                        </form>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                  <div class="modal fade" id="upload_link_data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title" id="exampleModalLabel">Upload Dokumen Dan Link Data</h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <form action="{{route('permohonan.upload.link_data')}}" method="post" enctype="multipart/form-data">
+                                                          @csrf
+                                                          <div class="modal-body">
+
+                                                            <div class="form-group">
+                                                              <label for="">Link data</label>
+                                                              <input required class="form-control bg-light" type="text" name="link_data" placeholder="Masukkan link untuk muat turun data">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                              <label for="">Upload Surat Penerimaan Data</label>
+                                                              <!-- <input type="file" required onchange="fileValidation('attachment_penerimaan_data')" class="form-control bg-light" id="attachment_penerimaan_data" name="attachment_penerimaan_data" aria-describedby="attachment_penerimaan_data"> -->
+                                                              <div class="custom-file">
+                                                                  <input type="file" required class="custom-file-input" required id="attachment_penerimaan_data" onchange="return fileValidation('attachment_penerimaan_data')" name="attachment_penerimaan_data">
+                                                                  <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                                              </div>
+                                                              <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+
+                                                            </div>
+
+                                                              <input type="hidden" id="permohonan_id_link_data" name="permohonan_id_link_data" value="">
+
+                                                          </div>
+                                                          <div class="modal-footer">
+                                                              <button type="submit"  class="btn btn-primary" >Muatnaik</button>
+                                                          </div>
+                                                        </form>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
                                                   <table class="table table-striped table-bordered" id="list_permohonan_lulus" style="width: 100%;">
 
                                                     <thead>
                                                         <tr>
+                                                          <th class="all">PERMOHONAN ID</th>
                                                           <th class="all">NAMA</th>
                                                           <th class="all">STATUS PERMOHONAN</th>
                                                           <th class="all">STATUS PEMBAYARAN</th>
-                                                          <th class="all">RECEIPT PEMBAYARAN</th>
+                                                          <th class="all">MUATNAIK SURAT BAYARAN</th>
+                                                          <th class="all">RESIT PEMBAYARAN</th>
+                                                          @if($userInfo->role == 0)
+                                                          <th class="all">MUATNAIK DOKUMEN DAN LINK DATA</th>
+                                                          @endif
+                                                          <th class="all">Surat Penerimaan Data</th>
                                                         </tr>
                                                     </thead>
 
                                                     <tbody>
                                                       @foreach($listPermohonanLulus as $lulus)
                                                       <tr>
-                                                        <td>{{ $lulus->user->name  }}</td>
-                                                        <td><span class="badge badge-success badge-pill">{{ $lulus->status_permohonan  }}</span></td>
-                                                        @if($lulus->status_pembayaran == 'Belum Dibayar')
+                                                        <td>{{ $lulus->id  }}</td>
 
-                                                        @if($userInfo->role == 0)
-                                                        <td><button class="btn btn-warning rounded m-2" onclick="passId({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#status_harga">{{ $lulus->status_pembayaran  }}</button></td>
-                                                        @else
-                                                        <td><button class="btn btn-warning rounded m-2">{{ $lulus->status_pembayaran  }}</button></td>
-                                                        @endif
-                                                        <!-- <td><span class="badge badge-warning badge-pill">{{ $lulus->status_pembayaran  }}</span></td> -->
-                                                        @else
+                                                        <td><a href="{{ route('permohonan.view', $lulus->id) }}">{{ $lulus->user->name  }}</a></td>
+
+                                                        <td><span class="badge badge-success badge-pill">{{ $lulus->status_permohonan  }}</span></td>
+
+                                                        @if($lulus->status_pembayaran == 'Belum Dibayar')
+                                                        <td><button class="btn btn-warning rounded m-2" onclick="passId({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#status_harga">Pilih Status Bayaran</button></td>
+                                                        @elseif($lulus->status_pembayaran == 'Pengecualian Bayaran')
+                                                        <td><span class="badge badge-primary badge-pill">{{ $lulus->status_pembayaran  }}</span></td>
+                                                        @elseif($lulus->status_pembayaran == 'Perlu Dibayar')
+                                                        <td><button class="btn btn-warning rounded m-2" onclick="passId({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#status_harga">{{$lulus->status_pembayaran}}</button></td>
+                                                        @elseif($lulus->status_pembayaran == 'Sudah Dibayar')
                                                         <td><span class="badge badge-success badge-pill">{{ $lulus->status_pembayaran  }}</span></td>
                                                         @endif
 
+                                                        @if($lulus->attachment_surat_bayaran == null)
+                                                        <td><button class="btn btn-success mr-1" onclick="passId_upload_surat_bayaran({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_surat_bayaran"><i class="fa fa-upload"></i></button></td>
+                                                        @else
+                                                        <td><button class="btn btn-dark mr-1"><i class="fa fa-upload"></i> </button></td>
+                                                        @endif
+
                                                         @if($lulus->attachment_receipt != null)
-                                                        <td>{{ $lulus->attachment_permohonan}}</td>
+                                                        <td> <a href=""><i class="fa fa-download"></i></a> </td>
                                                         @else
                                                         <td>Tiada</td>
                                                         @endif
 
+                                                        @if($lulus->link_data == null)
+                                                        <td><button class="btn btn-success mr-1" onclick="passId_upload_link_data({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_link_data"><i class="fa fa-upload"></i></button></td>
+                                                        @else
+                                                        <td><button class="btn btn-dark mr-1"><i class="fa fa-upload"></i> </button></td>
+                                                        @endif
 
-                                                        <!-- <td class="p-3">
-                                                              <div class="d-flex flex-row justify-content-around align-items-center">
-                                                                  <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
-                                                              </div>
-                                                        </td> -->
+                                                        @if($lulus->attachment_penerimaan_data_user != null)
+                                                        <td> <a href=""><i class="fa fa-download"></i></a> </td>
+                                                        @else
+                                                        <td>Tiada</td>
+                                                        @endif
                                                       </tr>
                                                       @endforeach
                                                     </tbody>
@@ -377,5 +480,38 @@
             //var permohonan_id = $(this).data('id');
             $(".modal-body #permohonan_id").val( id );
           }
+
+          function passId_upload_surat_bayaran(id){
+            $(".modal-body #permohonan_id_upload_surat_bayaran").val( id );
+          }
+
+          function passId_upload_link_data(id){
+            $(".modal-body #permohonan_id_link_data").val( id );
+          }
+
+          function fileValidation(name){
+            var fileInput = document.getElementById(name);
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.pdf)$/i;
+            if(!allowedExtensions.exec(filePath)){
+                alert('Sila muatnaik file dalam format .pdf sahaja.');
+                fileInput.value = '';
+                return false;
+            }
+        }
+
+        $('#attachment_surat_bayaran').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+
+        $('#attachment_penerimaan_data').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
         </script>
 @endsection

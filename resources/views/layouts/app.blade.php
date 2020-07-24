@@ -89,7 +89,7 @@
         <main class="bg-light main-full-body">
 
             <!-- Theme changer -->
-            <div class="theme-option p-4">
+            <!-- <div class="theme-option p-4">
                 <div class="theme-pck">
                     <i class="fas fa-cog fa-lg"></i>
                 </div>
@@ -98,7 +98,7 @@
                     <p class="p-3 rounded side-nav-theme-primary side-nav-theme" theme-color="purple"></p>
                     <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -110,7 +110,7 @@
                     <span></span>
                 </p>
                 <!-- Navbar search section -->
-                <div class="navb-search ml-5 d-none d-md-block">
+                <!-- <div class="navb-search ml-5 d-none d-md-block">
                     <form action="#" method="POST">
                         <div class="input-group search-round">
                             <input type="text" class="form-control" placeholder="Search...">
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
                 <!-- Navbar right menu section -->
                 <div class="navb-menu ml-auto d-flex flex-row">
                     <!-- Message dropdown -->
