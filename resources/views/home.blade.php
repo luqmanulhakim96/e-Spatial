@@ -118,7 +118,7 @@
                                 <div class="card-title">Jumlah Permohonan (6 Bulan Lepas)</div>
                                 <!-- Chart -->
                                 <!-- <div id="echartBar" style="height: 300px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;"></div> -->
-                                <div id="curve_chart" style="width: 100%; height: 300px"></div>
+                                <div id="curve_chart" style="width: 100%; height: 400px"></div>
                             </div>
 
                         </div>
@@ -148,12 +148,12 @@
                        <!-- col md 6 -->
                        <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
                         <!-- Six Month Sales VS Revenue Card -->
-                        <div class="card mb4">
+                        <div class="card border-0 rounded-lg">
                             <!-- Card body -->
                             <div class="card-body">
                                 <div class="card-title m-0 p-1">Jumlah Data Yang Dipohon Mengikut Negeri</div>
                                 <!-- Chart -->
-                                <div id="chart_div"></div>
+                                <div id="chart_div" style="width: 100%; height: 400px;"></div>
                             </div>
 
                         </div>
@@ -165,9 +165,9 @@
                             <!-- Card body -->
                             <div class="card-body">
                                 <!-- Card title -->
-                                <div class="card-title">Permohonan</div>
+                                <div class="card-title">Jumlah Pendapatan Mengikut Bulan</div>
                                 <!-- Chart -->
-                                <div id="columnchart_values" style="width: 100%; height: 100%;"></div>
+                                <div id="columnchart_values" style="width: 100%; height: 400px;"></div>
                             </div>
 
                         </div>
@@ -444,7 +444,7 @@
 
       var options = {
         title: "",
-        width: 600,
+        width: 500,
         height: 400,
         bar: {groupWidth: "80%"},
         legend: { position: "none" },

@@ -9,7 +9,7 @@
                 <!-- Pills Tab-->
                                     <div class="card rounded-lg">
                                         <div class="card-body">
-                                            <div class="card-title">Senarai Permohonan (Current User role: {{$userInfo->role}}) </div>
+                                            <div class="card-title">Senarai Permohonan</div>
 
 
 
@@ -222,7 +222,7 @@
 
                                                               </div>
 
-                                                              <input type="text" name="permohonan_id" id="permohonan_id" value="">
+                                                              <input type="hidden" name="permohonan_id" id="permohonan_id" value="">
                                                           </div>
                                                           <div class="modal-footer">
                                                               <button type="submit"  class="btn btn-primary" >Update Status Pembayaran</button>
@@ -349,8 +349,12 @@
                                                         <td><button class="btn btn-dark mr-1"><i class="fa fa-upload"></i> </button></td>
                                                         @endif
 
-                                                        @if($lulus->attachment_receipt != null)
-                                                        <td> <a href=""><i class="fa fa-download"></i></a> </td>
+                                                        @if($lulus->attachment_receipt_pembayaran != null)
+                                                        <td>
+                                                          <a href="{{route('permohonan.download.attachment_receipt_pembayaran',  $lulus->id)}}">
+                                                            <i class="fa fa-download"></i>
+                                                          </a>
+                                                        </td>
                                                         @else
                                                         <td>Tiada</td>
                                                         @endif
@@ -362,7 +366,11 @@
                                                         @endif
 
                                                         @if($lulus->attachment_penerimaan_data_user != null)
-                                                        <td> <a href=""><i class="fa fa-download"></i></a> </td>
+                                                        <td>
+                                                          <a href="{{route('permohonan.download.attachment_penerimaan_data_user',  $lulus->id)}}">
+                                                            <i class="fa fa-download"></i>
+                                                          </a>
+                                                        </td>
                                                         @else
                                                         <td>Tiada</td>
                                                         @endif
