@@ -10,7 +10,11 @@ body {
 }
 
 a {
-  color: #639 !important;
+
+
+  color: #003e61 !important;
+
+  
   text-decoration: none !important;
 }
 
@@ -525,9 +529,13 @@ label {
 .dropdown-item:active,
 .page-item.active .page-link,
 .list-group-item.active {
-  background-color: #663399 !important;
+
+
+  background-color: #003e61  !important;
   color: #ffffff !important;
-  border-color: #663399 !important;
+  border-color: #003e61  !important;
+
+
 }
 
 .card {
@@ -1522,7 +1530,16 @@ main {
 
 .login-page {
   height: 100vh;
-  background: #ffffff;
+
+  background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
+}
+.login-pagenew {
+  height: 90rem;
+  background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
+}
+.login-pagemain {
+  height: 100vh;
+
 }
 
 .login-brand {

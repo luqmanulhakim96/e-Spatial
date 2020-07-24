@@ -16,6 +16,7 @@
                         <!-- jenis dokumen input-->
                         <div class="form-group">
                             <label for="jenis_dokumen">Jenis Dokumen:</label>
+                            <label for="jenis_dokumen">(Document Type)</label>
                               <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)">
                                   <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                   @foreach($jenisDokumen as $data)
@@ -32,6 +33,7 @@
                         <!-- jenis data input-->
                         <div class="form-group">
                             <label for="jenis_data">Jenis Data:</label>
+                            <label for="jenis_data">(Data Type)</label>
                               <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)">
                                 <option value="" selected disabled hidden>Pilih Jenis Data</option>
                               </select>
@@ -58,6 +60,7 @@
                         <!--tahun input -->
                         <div class="form-group" id="tahun_div" style="display: block;">
                             <label for="tahun">Tahun:</label>
+                            <label for="tahun">(Year)</label>
                             <select id="tahun" class="custom-select  bg-light" name="tahun">
                                 <option value="" selected disabled hidden>Pilih Tahun</option>
                             </select>
@@ -71,6 +74,7 @@
                         <!-- negeri input -->
                         <div class="form-group">
                           <label for="negeri">Negeri:</label>
+                          <label for="negeri">(State)</label>
                             <select id="negeri" class="custom-select  bg-light" name="negeri">
                                 <option value="" selected disabled hidden>Pilih Negeri</option>
                             </select>
@@ -156,6 +160,7 @@
                   <div class="card-title">Maklumat Tambahan</div>
                   <form  method="post" action="{{route('user.submit')}}" id="permohonan_data" enctype="multipart/form-data">
                     @csrf
+
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -171,6 +176,7 @@
                               <strong>{{ $message }}</strong>
                             </div>
                             @enderror
+
                         </div>
                       </div>
                       <div class="col-md-6">
@@ -191,6 +197,7 @@
                       </div>
                     </div>
 
+
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -202,6 +209,7 @@
                           <div class="custom-control custom-radio">
                               <input type="radio" id="Ya" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Ya" @if(old('dokumen_ke_luar_negara')=="Ya") checked @endif>
                               <label class="custom-control-label" for="Ya">Ya</label>
+
                           </div>
                           <div class="custom-control custom-radio">
                               <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif>
