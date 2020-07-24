@@ -11,7 +11,9 @@ body {
 
 a {
 
+
   color: #003e61 !important;
+
 
   text-decoration: none !important;
 }
@@ -527,11 +529,9 @@ label {
 .dropdown-item:active,
 .page-item.active .page-link,
 .list-group-item.active {
-
-  background-color: #003e61  !important;
+  background-color: #003e61 !important;
   color: #ffffff !important;
-  border-color: #003e61  !important;
-
+  border-color: #003e61 !important;
 }
 
 .card {
