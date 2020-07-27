@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Hash;
+
 use DB;
 
 use Auth;
@@ -185,9 +187,41 @@ class HomeController extends Controller
       }
     }
 
-    public function changePasswordPage(){
+    public function changePassAdmin(){
       // $user = User::findOrFail($id);
       // dd($user_id = Auth::user()->id);
-      return view('auth.tukar_katalaluan');
+      return view('profil-admins.changePass');
+    }
+
+    public function updatePassAdmin(Request $request){
+      $user_id = Auth::user()->id;
+      $user = User::findOrFail($user_id);
+
+      if(!(Hash::check($request->get('old_pass'), Auth::user()->password))){
+        return redirect()->back()->with("error","Kata laluan terdahulu tidak sama");
+      }
+
+      if(strcmp($request->get('old_pass'),$request->get('new_pass'))== 0){
+        return redirect()->back()->with("error","Kata laluan terdahulu tidak boleh sama dengan kata laluan sekarang");
+        //dd('password lama sama dgn pass baru');
+      }
+
+      if(strcmp($request->get('new_pass_confirm'),$request->get('new_pass'))== 1){
+        return redirect()->back()->with("error","Kata laluan baru tidak sama");
+        //dd('password baru tak sama');
+      }
+
+      $validatedData = $request->validate([
+              'old_pass' => 'required',
+              'new_pass' => 'required|string|min:6',
+        ]);
+
+        $hashed_random_password = Hash::make($request->get('new_pass'));
+
+        $user->password = $hashed_random_password;
+
+        $user->save();
+
+        return redirect()->route('user.mainMenu')->with("success","Kata laluan telah ditukar");
     }
 }

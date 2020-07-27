@@ -17,6 +17,9 @@ use App\Notifications\Admin\PermohonanBaruAdmin;
 use App\Notifications\Admin\PermohonanBaruAdminNull;
 use App\Notifications\User\PermohonanBaruUser;
 
+use Illuminate\Support\Facades\Hash;
+
+
 use Auth;
 
 
@@ -34,10 +37,11 @@ class UserController extends Controller
       return view('user.mainMenu', compact('nama', 'list'));
   }
 
-  public function changePasswordPage(){
-    // $user = User::findOrFail($id);
-    // dd($user_id = Auth::user()->id);
-    return view('user.change');
+  public function changePassUser(){
+    $user_id = Auth::user()->id;
+     $user = User::findOrFail($user_id);
+
+    return view('user.profil.changePass',compact('user'));
   }
 
     /**
@@ -410,6 +414,36 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     return redirect()->route('user.list')->with('success','Surat Penerimaan Data anda telah berjaya dimuatnaik');
   }
 
+  public function updatePass(Request $request){
+    $user_id = Auth::user()->id;
+    $user = User::findOrFail($user_id);
 
+    if(!(Hash::check($request->get('old_pass'), Auth::user()->password))){
+      return redirect()->back()->with("error","Kata laluan terdahulu tidak sama");
+    }
 
+    if(strcmp($request->get('old_pass'),$request->get('new_pass'))== 0){
+      return redirect()->back()->with("error","Kata laluan terdahulu tidak boleh sama dengan kata laluan sekarang");
+      //dd('password lama sama dgn pass baru');
+    }
+
+    if(strcmp($request->get('new_pass_confirm'),$request->get('new_pass'))== 1){
+      return redirect()->back()->with("error","Kata laluan baru tidak sama");
+      //dd('password baru tak sama');
+    }
+
+    $validatedData = $request->validate([
+            'old_pass' => 'required',
+            'new_pass' => 'required|string|min:6',
+      ]);
+
+      $hashed_random_password = Hash::make($request->get('new_pass'));
+
+      $user->password = $hashed_random_password;
+
+      $user->save();
+
+      return redirect()->route('user.mainMenu')->with("success","Kata laluan telah ditukar");
+
+  }
 }
