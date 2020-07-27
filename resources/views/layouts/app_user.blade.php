@@ -108,15 +108,23 @@
 
             @if ($message = Session::get('success'))
             <div id=alert>
-
-              <div class="alert alert-card  alert-success" role="alert">
-                  <strong>Berjaya! </strong>
+                <div class="alert alert-card  alert-success" role="alert">
+                    <strong>Berjaya! </strong>
+                    {{$message}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            @elseif ($message = Session::get('error'))
+            <div id="alert">
+              <div class="alert alert-card  alert-danger" role="alert">
+                  <strong>Ralat! </strong>
                   {{$message}}
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                   </button>
               </div>
-
             </div>
             @endif
             <!-- The navbar -->
@@ -195,6 +203,8 @@
 
                             <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i>{{explode(' ',trim(ucwords(strtolower((Auth::user()->name)))))[0]}} </a>
                             <a href="{{ route('user.profil.edit') }}" class="dropdown-item text-secondary-light">Kemaskini Profil</a>
+                            <a href="{{ route('user.profil.katalaluan') }}" class="dropdown-item text-secondary-light">Tukar Kata Laluan</a>
+
                             <!-- <a href="#" class="dropdown-item text-secondary-light">Billing history</a> -->
                             <a  class="dropdown-item text-secondary-light"
                                 href="{{ route('logout') }}"
