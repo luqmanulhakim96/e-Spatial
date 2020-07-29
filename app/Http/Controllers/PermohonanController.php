@@ -12,6 +12,9 @@ use App\DataPermohonan;
 use App\SenaraiSurat;
 use Storage;
 
+use App\Mail\User\EmailNotifikasiLinkPermohonan;
+use Illuminate\Support\Facades\Mail;
+
 use App\SenaraiEmail;
 use App\Notifications\Admin\PermohonanBaruAdmin;
 use App\Notifications\Admin\PermohonanBaruAdminNull;
@@ -272,6 +275,7 @@ class PermohonanController extends Controller
   public function uploadLinkData(Request $request){
     //dd($request->all());
     //upload file
+
     $uploaded_files_permohonan_penerimaan_data =  $request->file('attachment_penerimaan_data')->store('uploads/surat_penerimaan_data');
 
 
@@ -281,6 +285,12 @@ class PermohonanController extends Controller
     $permohonan->link_data = $request->link_data;
     $permohonan->attachment_penerimaan_data = $uploaded_files_permohonan_penerimaan_data;
     $permohonan->save();
+
+    $user_id = Auth::user()->id;
+    $user = User::findOrFail($user_id);
+
+    Mail::send(new EmailNotifikasiLinkPermohonan($permohonan,$user));
+
 
     return redirect()->route('permohonan.list')->with('success','Fail telah dimuatnaik');
   }
