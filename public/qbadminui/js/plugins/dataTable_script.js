@@ -255,7 +255,7 @@ $(document).ready(function(){
     // Responsive Data Table
     let list_permohonan_baru_2 = $("#list_permohonan_baru_2")
     $(list_permohonan_baru_2).DataTable({
-        responsive : true
+        responsive : true,
         columnDefs: [
                       {
                            "targets": "_all", // your case first column
