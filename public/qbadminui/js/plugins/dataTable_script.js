@@ -288,6 +288,8 @@ $(document).ready(function(){
                    ],
     });
 
+    //test
+
     let list_permohonan_dalaman = $("#list_permohonan_dalaman")
     $(list_permohonan_dalaman).DataTable({
         responsive : true,
