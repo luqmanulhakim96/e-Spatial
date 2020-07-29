@@ -109,7 +109,16 @@
                  <span aria-hidden="true">&times;</span>
                  </button>
              </div>
-
+           </div>
+           @elseif ($message = Session::get('error'))
+           <div id="alert">
+             <div class="alert alert-card  alert-danger" role="alert">
+                 <strong>Ralat! </strong>
+                 {{$message}}
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
            </div>
            @endif
 
@@ -179,6 +188,7 @@
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-max-height">
                             <!-- Menu items -->
                             <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i>{{explode(' ',trim(ucwords(strtolower((Auth::user()->name)))))[0]}} </a>
+                            <a href="{{ route('profil-admins.changePass') }}" class="dropdown-item text-secondary-light">Tukar Kata Laluan</a>
                             <!-- <a href="#" class="dropdown-item text-secondary-light">Account setting</a>
                             <a href="#" class="dropdown-item text-secondary-light">Billing history</a> -->
                             <a  class="dropdown-item text-secondary-light"

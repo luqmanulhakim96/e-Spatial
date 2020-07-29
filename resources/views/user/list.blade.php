@@ -86,8 +86,10 @@
                                                         <th class="all">STATUS PERMOHONAN</th>
                                                         <th class="all">JUMLAH BAYARAN (RM)</th>
                                                         <th class="all">STATUS PEMBAYARAN</th>
-                                                        <th class="all">MUATNAIK RESIT PEMBAYARAN</th>
-                                                        <th class="all">MUATNAIK SURAT PENERIMAAAN DATA</th>
+                                                        <th class="all">MUAT TURUN SURAT PEMBAYARAN</th>
+                                                        <th class="all">MUAT NAIK RESIT PEMBAYARAN</th>
+                                                        <th class="all">MUAT TURUN SURAT PENERIMAAN DATA</th>
+                                                        <th class="all">MUAT NAIK SURAT PENERIMAAAN DATA</th>
                                                       </tr>
                                                   </thead>
                                                   <!-- Table body -->
@@ -99,6 +101,17 @@
                                                       <td>{{ $data->status_permohonan  }}</td>
                                                       <td>{{ $data->jumlah_bayaran  }}</td>
                                                       <td>{{ $data->status_pembayaran  }}</td>
+
+                                                      @if($data->attachment_surat_bayaran == null)
+                                                      <td>
+                                                          <!-- <button type="button" class="fa fa-download" name="button"></button> -->
+                                                          Tiada
+                                                      </td>
+                                                      @else
+                                                      <td>
+                                                        <a class="fa fa-download" href="{{route('user.download.surat_bayaran', $data->id)}}"></a>
+                                                      </td>
+                                                      @endif
                                                       <!-- column muat naik receipt pembayaran -->
                                                       @if($data->attachment_receipt_pembayaran == null)
                                                       <td>
@@ -141,6 +154,17 @@
                                                       @else
                                                       <td>Telah dimuat naik</td>
                                                       @endif
+
+                                                      @if($data->attachment_penerimaan_data_ == null)
+                                                        <td>
+                                                          Tiada
+                                                        </td>
+                                                      @else
+                                                      <td>
+                                                        <a class="fa fa-download" href="{{route('user.download.surat_penerimaan_data', $data->id)}}"></a>
+                                                      </td>
+                                                      @endif
+
                                                       <!-- column muat naik surat penerimaan data -->
                                                       @if($data->attachment_penerimaan_data_user == null)
                                                       <td>
@@ -200,7 +224,7 @@
                                                 </tbody>
                                               </table>
                                             </div>
-                                              
+
                                             </div>
                                         </div>
                                     </div>

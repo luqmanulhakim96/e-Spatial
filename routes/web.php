@@ -26,6 +26,9 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/home/chart/pie/jenis_data_dipohon_mengikut negeri', 'HomeController@getDataPieChart')->name('chart.pie.jenis_data_negeri');
 
+  Route::get('/home/profil/kata-laluan/tukar', 'HomeController@changePassAdmin')->name('profil-admins.changePass');
+
+  Route::post('/home/profil/kata-laluan/update', 'HomeController@updatePassAdmin')->name('profil-admins.updatePass');
 
   #route for Permohonan
   Route::get('/permohonan/maklumat/{id}', 'PermohonanController@viewInformasiPermohonan')->name('permohonan.view');
@@ -148,5 +151,19 @@ Route::middleware('user')->group(function () {
   Route::post('/upload/resit_pembayaran', 'UserController@uploadResitPembayaran')->name('user.upload.resit_pembayaran');
 
   Route::post('/upload/surat_penerimaan_data', 'UserController@uploadPenerimaanData')->name('user.upload.surat_penerimaan_data');
+
+  Route::get('/profil/tukar_kata_laluan', 'UserController@changePassUser')->name('user.profil.katalaluan');
+
+  Route::post('/profile/tukar_kata_laluan/update', 'UserController@updatePass')->name('user.profil.updatePassword');
+
+  Route::get('/permohonan/user/download/surat_bayaran/{id}', 'UserController@downloadSuratBayaran')->name('user.download.surat_bayaran');
+
+  Route::get('/permohonan/user/download/surat_penerimaan_data/{id}', 'UserController@downloadSuratPenerimaanData')->name('user.download.surat_penerimaan_data');
+
+
+
+
+
+
 });
 // Route::resource('senaraiHargas', 'SenaraiHargaController');
