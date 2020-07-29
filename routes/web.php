@@ -156,6 +156,14 @@ Route::middleware('user')->group(function () {
 
   Route::post('/profile/tukar_kata_laluan/update', 'UserController@updatePass')->name('user.profil.updatePassword');
 
+  Route::get('/permohonan/user/download/surat_bayaran/{id}', 'UserController@downloadSuratBayaran')->name('user.download.surat_bayaran');
+
+  Route::get('/permohonan/user/download/surat_penerimaan_data/{id}', 'UserController@downloadSuratPenerimaanData')->name('user.download.surat_penerimaan_data');
+
+
+
+
+
 
 });
 // Route::resource('senaraiHargas', 'SenaraiHargaController');

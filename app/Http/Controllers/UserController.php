@@ -10,6 +10,9 @@ use App\User;
 use App\SenaraiHarga;
 use App\DataPermohonan;
 
+use Storage;
+
+
 use App\SenaraiEmail;
 use App\Events\NewNotification;
 
@@ -444,6 +447,15 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
       $user->save();
 
       return redirect()->route('user.mainMenu')->with("success","Kata laluan telah ditukar");
+  }
 
+  public function downloadSuratBayaran($id){
+    $permohonan = Permohonan::findOrFail($id);
+    return Storage::download($permohonan->attachment_surat_bayaran);
+  }
+
+  public function downloadSuratPenerimaanData($id){
+    $permohonan = Permohonan::findOrFail($id);
+    return Storage::download($permohonan->attachment_penerimaan_data);
   }
 }
