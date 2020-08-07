@@ -346,7 +346,8 @@
                   //1st Ajax for tahun
                   $.ajax({
                     type:"get",
-                    url:"/permohonan/fetchSenaraiHargaIdByTahun/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/tahun/"+tahun+"/negeri/" + negeri,
+                    // url:"/permohonan/fetchSenaraiHargaIdByTahun/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/tahun/"+tahun+"/negeri/" + negeri,
+                    url:"/JPSM/permohonan/fetchSenaraiHargaIdByTahun/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/tahun/"+tahun+"/negeri/" + negeri,
                     success: function(respond){
                       //fetch data (id) from DB Senarai Harga
                       var data = JSON.parse(respond);
@@ -405,7 +406,9 @@
                   //2nd Ajax for kategori data
                   $.ajax({
                     type:"get",
-                    url:"/permohonan/fetchSenaraiHargaIdByKategoriData/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/kategoriData/"+kategori_data+"/negeri/" + negeri,
+                    //url:"/permohonan/fetchSenaraiHargaIdByKategoriData/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/kategoriData/"+kategori_data+"/negeri/" + negeri,
+
+                    url:"/JPSM/permohonan/fetchSenaraiHargaIdByKategoriData/jenisDokumen/"+jenis_dokumen+"/jenisData/"+jenis_data+"/kategoriData/"+kategori_data+"/negeri/" + negeri,
                     success: function(respond){
                       //fetch data (id) from DB Senarai Harga
                       var data = JSON.parse(respond);
@@ -499,7 +502,9 @@
           if(jenisDokumen){
             $.ajax({
               type:"get",
-              url:"/permohonan/jenisdata/"+jenisDokumen,
+              // url:"/permohonan/jenisdata/"+jenisDokumen,
+              url:"/JPSM/permohonan/jenisdata/"+jenisDokumen,
+
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -536,7 +541,9 @@
           if(jenisData){
             $.ajax({
               type:"get",
-              url:"/permohonan/tahun/"+jenisData+"/and/"+jenisDokumen,
+              //url:"/permohonan/tahun/"+jenisData+"/and/"+jenisDokumen,
+              url:"JPSM/permohonan/tahun/"+jenisData+"/and/"+jenisDokumen,
+
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -573,7 +580,8 @@
           if(jenisData){
             $.ajax({
               type:"get",
-              url:"/permohonan/kategoriData/"+jenisData+"/and/"+jenisDokumen,
+              //url:"/permohonan/kategoriData/"+jenisData+"/and/"+jenisDokumen,
+              url:"JPSM/permohonan/kategoriData/"+jenisData+"/and/"+jenisDokumen,
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -610,7 +618,8 @@
           if(jenisData){
             $.ajax({
               type:"get",
-              url:"/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/tahun/" + tahun,
+              // url:"/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/tahun/" + tahun,
+              url:"JPSM/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/tahun/" + tahun,
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -646,7 +655,9 @@
           if(jenisData){
             $.ajax({
               type:"get",
-              url:"/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/kategoriData/" + kategoriData,
+              // url:"/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/kategoriData/" + kategoriData,
+              url:"/JPSM/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/kategoriData/" + kategoriData,
+
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -686,7 +697,8 @@
 
             $.ajax({
               type:"get",
-              url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + tahun + "/and/" + negeri + "/tahun",
+              //url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + tahun + "/and/" + negeri + "/tahun",
+              url:"/JPSM/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + tahun + "/and/" + negeri + "/tahun",
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -709,7 +721,9 @@
           if(kategori_data){
             $.ajax({
               type:"get",
-              url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + kategori_data + "/and/" + negeri + "/kategori_data",
+              // url:"/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + kategori_data + "/and/" + negeri + "/kategori_data",
+
+              url:"/JPSM/permohonan/jenisKertas/"+jenisData+"/and/"+jenisDokumen+"/and/" + kategori_data + "/and/" + negeri + "/kategori_data",
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
