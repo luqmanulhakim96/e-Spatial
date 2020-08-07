@@ -542,7 +542,7 @@
             $.ajax({
               type:"get",
               //url:"/permohonan/tahun/"+jenisData+"/and/"+jenisDokumen,
-              url:"JPSM/permohonan/tahun/"+jenisData+"/and/"+jenisDokumen,
+              url:"/JPSM/permohonan/tahun/"+jenisData+"/and/"+jenisDokumen,
 
               success: function(respond){
                 //console.log(respond);
@@ -581,7 +581,7 @@
             $.ajax({
               type:"get",
               //url:"/permohonan/kategoriData/"+jenisData+"/and/"+jenisDokumen,
-              url:"JPSM/permohonan/kategoriData/"+jenisData+"/and/"+jenisDokumen,
+              url:"/JPSM/permohonan/kategoriData/"+jenisData+"/and/"+jenisDokumen,
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
@@ -619,7 +619,7 @@
             $.ajax({
               type:"get",
               // url:"/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/tahun/" + tahun,
-              url:"JPSM/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/tahun/" + tahun,
+              url:"/JPSM/permohonan/negeri/"+jenisData+"/and/"+jenisDokumen+"/tahun/" + tahun,
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
