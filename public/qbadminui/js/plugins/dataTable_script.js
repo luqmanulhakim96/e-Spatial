@@ -198,7 +198,7 @@ $(document).ready(function(){
     let list_permohonan_user = $("#list_permohonan_user")
     $(list_permohonan_user).DataTable({
         responsive : true,
-        order:[[4,"desc"]],
+        order:[[1,"desc"]],
         columnDefs: [
                      {
                           "targets": "_all", // your case first column
@@ -226,7 +226,7 @@ $(document).ready(function(){
     let list_permohonan_user_gagal = $("#list_permohonan_user_gagal")
     $(list_permohonan_user_gagal).DataTable({
         responsive : true,
-        order:[[4,"desc"]],
+        order:[[2,"desc"]],
         columnDefs: [
                      {
                           "targets": "_all", // your case first column

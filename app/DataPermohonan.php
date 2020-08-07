@@ -20,7 +20,7 @@ class DataPermohonan extends Model implements Auditable
     }
 
     public function permohonan(){
-      return $this->belongsTo('\App\Pemrohonan', 'permohonan_id');
+      return $this->belongsTo('\App\Permohonan', 'permohonan_id');
     }
 
 }
