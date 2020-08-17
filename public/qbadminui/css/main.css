@@ -539,7 +539,7 @@ label {
 }
 
 .btn {
-  font-size: 12px !important;
+  font-size: 14px !important;
 }
 
 .primary-btn,
@@ -565,7 +565,7 @@ label {
 .btn-outline-primary,
 .btn-outline-primary:focus {
   background: unset !important;
-  color: #663399 !important;
+  color: #003e61 !important;
 }
 
 .btn-primary:active,
@@ -1533,7 +1533,7 @@ main {
   background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
 }
 .login-pagenew {
-  height: 90rem;
+  height: 100rem;
   background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
 }
 .login-pagemain {

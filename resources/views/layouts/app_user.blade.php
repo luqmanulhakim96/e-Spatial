@@ -81,6 +81,9 @@
 
                         <li class="side-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 py-3 pl-4" >Senarai Permohonan</a></li>
 
+                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4" >Manual Pengguna</a></li>
+
+
                         @endif
 
                     </ul>

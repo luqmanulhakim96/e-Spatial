@@ -22,6 +22,8 @@ class AddAdditionalDataIntoUsers extends Migration
         $table->string('tempat_lahir')->nullable();
         $table->string('jawatan')->nullable();
         $table->string('alamat_kediaman')->nullable();
+        $table->string('poskod')->nullable();
+        $table->string('negeri')->nullable();
         $table->string('nama_kementarian')->nullable();
         $table->string('alamat_kementarian')->nullable();
         $table->string('jenis_perniagaan')->nullable();

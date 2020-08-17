@@ -127,7 +127,7 @@ class UserSeeder extends Seeder
         'email' => 'User1@gmail.com',
         'password' => $hashed_random_password,
         'role' => '5',
-        'kategori' => 'dalaman',
+        'kategori' => 'kementerian',
         'kad_pengenalan' => '900102034572',
         'kerakyatan' => 'bumiputera',
         'tarikh_lahir' => '1990/1/02',

@@ -12,7 +12,10 @@ class DataPermohonan extends Model implements Auditable
 
     protected $fillable = [
       'senarai_harga_id',
-      'permohonan_id'
+      'permohonan_id',
+      'custom_jenis_data',
+      'custom_tahun',
+      'saiz_data'
     ];
 
     public function harga(){

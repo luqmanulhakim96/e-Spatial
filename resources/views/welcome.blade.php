@@ -6,7 +6,7 @@
         <meta name="csrf-toke" content="{{csrf_token()}}">
 
 
-        <title>JPSM e-Spatial - Laman Utama</title>
+        <title>JPSM eSpatial - Laman Utama</title>
 
 
         <!-- Fonts -->
@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
 
 
         <!-- Styles -->
@@ -86,7 +87,7 @@
         <style>
             html, body {
                 /* background-color: #000; */
-                background-image: url('https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+                background-image: url('https://studysuccess168956482.files.wordpress.com/2018/10/jungle2.jpg');
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
@@ -127,6 +128,7 @@
 
             .title {
                 font-size: 84px;
+                font-family: 'Yeseva One', cursive;
             }
 
             .links > a {
@@ -152,16 +154,14 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                     e-Spatial
+                     eSpatial
                 </div>
 
                 <div class="links">
                     <a href="https://www.forestry.gov.my/my/">Jabatan Perhutanan Semenanjung Malaysia</a>
                 </div>
                 <br>
-                <div class="links">
-                  <a href="https://www.artaniscloud.com/">made by Artanis Cloud Sdn. Bhd.</a>
-                </div>
+
                 @if (Route::has('login'))
                     <div class="top-right links" style="margin-top: 20px;">
                         @auth
