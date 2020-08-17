@@ -31,13 +31,31 @@ class UserController extends Controller
 {
   public function index()
   {
+    $user_id = Auth::user()->id;
     $nama = User::find(1);
     $list = SenaraiHarga::where('status','Aktif')
               ->distinct()
               ->get();
 
-    // dd($nama);
-      return view('user.mainMenu', compact('nama', 'list'));
+    //dashboard counter
+
+    $countPermohonanSedangProses = Permohonan::where('user_id', $user_id)
+                                ->where('status_permohonan', 'Sedang Diproses')
+                                ->count();
+
+    $countPermohonanLulus = Permohonan::where('user_id', $user_id)
+                                ->where('status_permohonan', 'Lulus')
+                                ->count();
+
+    $countPermohonanGagal = Permohonan::where('user_id', $user_id)
+                                ->where('status_permohonan', 'Gagal')
+                                ->count();
+
+    $countPermohonanKeseluruhan = Permohonan::where('user_id', $user_id)
+                                ->count();
+
+
+      return view('user.mainMenu', compact('list','countPermohonanSedangProses', 'countPermohonanLulus', 'countPermohonanGagal','countPermohonanKeseluruhan'));
   }
 
   public function changePassUser(){
@@ -58,28 +76,69 @@ class UserController extends Controller
       $this->notify(new ResetPasswordNotification($token));
   }
 
-  public function getSenaraiHargaIdByTahun($jenisDokumen, $jenisData, $tahun, $negeri){
-    $senaraiHargaId = 'TAK MASUK';
-    $senaraiHargaId = SenaraiHarga::select('id')
-                      ->where('jenis_dokumen',$jenisDokumen)
-                      ->where('jenis_data',$jenisData)
-                      ->where('tahun',$tahun)
-                      ->where('negeri',$negeri)
-                      ->get();
+  public function getSenaraiHargaIdByTahun($jenisDokumen, $jenisData, $tahun, $negeri, $jenisKertas){
+
+    if($jenisKertas == 'tiada'){
+      $senaraiHargaId = SenaraiHarga::select('id')
+                        ->where('jenis_dokumen',$jenisDokumen)
+                        ->where('jenis_data',$jenisData)
+                        ->where('tahun',$tahun)
+                        ->where('negeri',$negeri)
+                        ->get();
+    }else {
+      $senaraiHargaId = SenaraiHarga::select('id')
+                        ->where('jenis_dokumen',$jenisDokumen)
+                        ->where('jenis_data',$jenisData)
+                        ->where('tahun',$tahun)
+                        ->where('negeri',$negeri)
+                        ->where('jenis_Kertas',$jenisKertas)
+                        ->get();
+    }
     return json_encode($senaraiHargaId);
     exit;
   }
 
-  public function getSenaraiHargaIdByKategoriData($jenisDokumen, $jenisData, $kategoriData, $negeri){
-    $senaraiHargaId = 'TAK MASUK2';
-    $senaraiHargaId = SenaraiHarga::select('id')
-                      ->where('jenis_dokumen',$jenisDokumen)
-                      ->where('jenis_data',$jenisData)
-                      ->where('kategori_data',$kategoriData)
-                      ->where('negeri',$negeri)
-                      ->get();
+  public function getSenaraiHargaIdByKategoriData($jenisDokumen, $jenisData, $kategoriData, $negeri, $jenisKertas){
+
+    if($jenisKertas == 'tiada'){
+      $senaraiHargaId = SenaraiHarga::select('id')
+                        ->where('jenis_dokumen',$jenisDokumen)
+                        ->where('jenis_data',$jenisData)
+                        ->where('kategori_data',$kategoriData)
+                        ->where('negeri',$negeri)
+                        ->get();
+    }else {
+      $senaraiHargaId = SenaraiHarga::select('id')
+                        ->where('jenis_dokumen',$jenisDokumen)
+                        ->where('jenis_data',$jenisData)
+                        ->where('kategori_data',$kategoriData)
+                        ->where('negeri',$negeri)
+                        ->where('jenis_Kertas',$jenisKertas)
+                        ->get();
+    }
     return json_encode($senaraiHargaId);
     exit;
+  }
+
+  public function getSenaraiHargaIdCustom($jenisDokumen, $jenisData, $jenisKertas, $negeri){
+
+    if($jenisKertas == 'tiada'){
+      $senaraiHargaId = SenaraiHarga::select('id')
+                        ->where('jenis_dokumen',$jenisDokumen)
+                        ->where('jenis_data',$jenisData)
+                        ->where('negeri',$negeri)
+                        ->get();
+    }else {
+      $senaraiHargaId = SenaraiHarga::select('id')
+                        ->where('jenis_dokumen',$jenisDokumen)
+                        ->where('jenis_data',$jenisData)
+                        ->where('negeri',$negeri)
+                        ->where('jenis_Kertas',$jenisKertas)
+                        ->get();
+    }
+    return json_encode($senaraiHargaId);
+    exit;
+
   }
 
   public function list(){
@@ -136,6 +195,16 @@ class UserController extends Controller
     exit;
   }
 
+  public function getCustomNegeri($jenisData,$jenisDokumen){
+    $negeri = SenaraiHarga::select('negeri')
+                ->where('jenis_data', $jenisData)
+                ->where('jenis_dokumen', $jenisDokumen)
+                ->distinct()
+                ->get();
+    echo json_encode($negeri);
+    exit;
+  }
+
   public function getNegeriFromTahun($jenisData,$jenisDokumen,$tahun){
     $negeri = SenaraiHarga::select('negeri')
                 ->where('jenis_data', $jenisData)
@@ -170,17 +239,28 @@ class UserController extends Controller
     exit;
   }
 
-public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategoriData,$negeri){
-    $jenisKertas = SenaraiHarga::select('jenis_kertas')
-                ->where('jenis_data', $jenisData)
-                ->where('jenis_dokumen', $jenisDokumen)
-                ->where('kategori_data', $kategoriData)
-                ->where('negeri', $negeri)
-                ->distinct()
-                ->get();
-    echo json_encode($jenisKertas);
-    exit;
-  }
+  public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategoriData,$negeri){
+      $jenisKertas = SenaraiHarga::select('jenis_kertas')
+                  ->where('jenis_data', $jenisData)
+                  ->where('jenis_dokumen', $jenisDokumen)
+                  ->where('kategori_data', $kategoriData)
+                  ->where('negeri', $negeri)
+                  ->distinct()
+                  ->get();
+      echo json_encode($jenisKertas);
+      exit;
+    }
+
+    public function getCustomJenisKertas($jenisData,$jenisDokumen,$negeri){
+        $jenisKertas = SenaraiHarga::select('jenis_kertas')
+                     ->where('jenis_data', $jenisData)
+                     ->where('jenis_dokumen', $jenisDokumen)
+                     ->where('negeri', $negeri)
+                    ->distinct()
+                    ->get();
+        echo json_encode($jenisKertas);
+        exit;
+      }
 
 
 
@@ -192,14 +272,6 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
 
     $status_permohonan = $data['status_permohonan'];
     $status_pembayaran = $data['status_pembayaran'];
-
-
-    //user dalaman permohonan akan terus lulus
-
-    if($user->kategori == 'dalaman'){
-      $status_permohonan = 'Lulus';
-      $status_pembayaran = 'Sudah Dibayar';
-    }
 
     return Permohonan::Create([
       'attachment_aoi' => $uploaded_file_aoi,
@@ -214,17 +286,19 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
   }
 
   public function createData(array $data, $permohonan_id){
-
+    //dd($data);
     $permohonan_id = $permohonan_id->id;
-    // dd($data['data']);
-    foreach ($data['data'] as $value) {
-      //d( $value);
+    // dd($data);
+    $counter_data_permohonan = $data['counter_data'];
+    for($i = 0; $i < $counter_data_permohonan; $i++){
       $submit = DataPermohonan::Create([
-        'senarai_harga_id' => $value,
-        'permohonan_id' => $permohonan_id
+        'senarai_harga_id' => $data['data'][$i],
+        'permohonan_id' => $permohonan_id,
+        'custom_jenis_data' => $data['data_jenis_data'][$i],
+        'custom_tahun' => $data['data_tahun'][$i],
       ]);
-
     }
+
     return $submit;
   }
 
@@ -240,7 +314,7 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
   }
 
   public function submitForm(Request $request){
-    // dd($request->all());
+    //dd($request->all());
     $user_id = Auth::user()->id;
     $filename_aoi = null;
     $filename_kepujian = null;
@@ -312,15 +386,18 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
     $dataPilihan = DataPermohonan::where('permohonan_id', $id)->get();
     $jumlahdata = DataPermohonan::where('permohonan_id', $id)->count();
     $jenisDokumen = SenaraiHarga::select('jenis_dokumen')->distinct()->get();
-
+    //dd($dataPilihan);
 
     $senaraiHarga = null;
 
     for($i = 0; $i < $jumlahdata; $i++){
       $senaraiHarga[$i] = SenaraiHarga::where('id',$dataPilihan[$i]->senarai_harga_id)->get();
     }
+    //dd($dataPilihan);
+
+
     //$senaraiHarga = SenaraiHarga::get();
-    // dd($senaraiHarga[0][0]);
+    //dd($senaraiHarga[0][0]);
     // $i=0;
     // foreach ($senaraiHarga[1] as $data) {
     //   dd($data);
@@ -345,20 +422,41 @@ public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategor
   }
 
   public function updatePermohonan($id, Request $request){
-    //$this->validator(request()->all())->validate();
-    //dd(request()->all());
+    //$this->validator()->validate();
+    $counter_data_permohonan = request()->counter_data;
+    //dd($request->all());
 
     $deleteData = DataPermohonan::where('permohonan_id',$id)->delete();
+      //dd($request->all());
 
-    foreach ($request['data'] as $value) {
-      //d( $value);
+     foreach ($request['data'] as $value) {
+       $harga_id[] = $value;
+     }
+
+     foreach ($request['data_jenis_data'] as $value) {
+       $jenis_data[] = $value;
+     }
+
+     foreach ($request['data_tahun'] as $value) {
+       $tahun[] = $value;
+     }
+
+     // dd($harga_id[0]);
+     for($i = 0; $i < $counter_data_permohonan; $i++){
+
+       $harga_id_single = $harga_id[$i];
+       $jenis_data_single = $jenis_data[$i];
+       $tahun_single = $tahun[$i];
+
       $submit = DataPermohonan::Create([
-        'senarai_harga_id' => $value,
-        'permohonan_id' => $id
+        'senarai_harga_id' => $harga_id_single,
+        'permohonan_id' => $id,
+        'custom_jenis_data' => $jenis_data_single,
+        'custom_tahun' => $tahun_single,
       ]);
-
     }
-    return redirect()->route('user.list')->with('success','Permohonan anda telah berjaya dikemaskini.');;
+
+    return redirect()->route('user.list')->with('success','Data permohonan anda telah berjaya dikemaskini.');
   }
 
   public function editProfil(){

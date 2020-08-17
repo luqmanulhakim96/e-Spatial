@@ -17,7 +17,6 @@
                         </div>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <h5 class="text-dark my-3" style="padding-top:20px;">Log Masuk</h5>
                             <!-- Email -->
                             <!-- <div class="form-group mb-2">
                                 <label for="email" class="text-muted">Email Address</label>
@@ -28,33 +27,69 @@
                                     </span>
                                 @enderror
                             </div> -->
-                            <div class="form-group mb-2">
-                                <label for="kad_pengenalan" class="text-muted">Kad Pengenalan</label>
-                                <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" required autocomplete="kad_pengenalan" autofocus>
-                                @error('kad_pengenalan')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <!-- Password -->
-                            <div class="form-group mb-2">
-                                <label for="Passeord" class="text-muted">Password</label>
-                                <input id="Passeord" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                            <!-- Remember me checkbox -->
-                            <div class="custom-control custom-checkbox">
-                                <input id="my-input" class="custom-control-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                <label for="my-input" class="custom-control-label">Remember me</label>
+                            <div class="row">
+                              <div class="col-md-5">
+                              </div>
+                              <div class="col-md-4">
+                                <h5 class="text-dark my-3" style="padding-top:20px;">Log Masuk</h5>
+                              </div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary rounded m-1 btn-outline-primary badge-pill btn-block w-75 m-auto">Masuk</button>
+                            <div class="row">
+                              <div class="col-md-1">
+                              </div>
+                              <div class="col-md-10">
+                                <div class="form-group">
+                                    <label for="kad_pengenalan" class="text-muted">Kad Pengenalan</label>
+                                    <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" required autocomplete="kad_pengenalan" autofocus>
+                                    @error('kad_pengenalan')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-1">
+
+                              </div>
+                              <div class="col-md-10">
+                                <!-- Password -->
+                                <div class="form-group">
+                                    <label for="Passeord" class="text-muted">Password</label>
+                                    <input id="Passeord" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-1">
+                              </div>
+                              <div class="col-md-10">
+                                <!-- Remember me checkbox -->
+                                <div class="custom-control custom-checkbox">
+                                    <input id="my-input" class="custom-control-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <label for="my-input" class="custom-control-label">Remember me</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-1">
+                              </div>
+                              <div class="col-md-10">
+                                <button type="submit" class="btn btn-primary rounded m-1 btn-outline-primary badge-pill btn-block w-50 m-auto">Masuk</button>
+                              </div>
+                            </div>
+
                             <br>
 
                         </form>
@@ -80,5 +115,5 @@
             </div>
         </div>
     </div>
-    
+
 @endsection

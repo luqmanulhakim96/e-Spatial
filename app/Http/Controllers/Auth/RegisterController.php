@@ -62,19 +62,59 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'kategori' => ['required'],
             'nama' => ['required', 'string', 'max:255'],
-            'kad_pengenalan' => ['required', 'string', 'max:12', 'unique:users'],
+            'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8', 'unique:users'],
             'kerakyatan' => ['required'],
             'tarikh_lahir' => ['required', 'date'],
             'tempat_lahir' => ['required', 'string', 'max:255'],
             'jawatan' => ['required', 'string', 'max:255'],
             'jenis_perniagaan' => ['required', 'string', 'max:255'],
-            'alamat_kediaman' => ['nullable','required', 'string', 'max:255'],
-            'nama_kementerian' => ['nullable','string', 'max:255'],
-            'alamat_kementerian' => ['nullable','string', 'max:255'],
+            'alamat_kediaman' => ['required','string', 'max:255'],
+            'poskod' => ['required','string', 'max:5', 'min:5'],
+            'negeri' => ['required','string', 'max:255'],
+            'nama_kementerian' => ['required','string', 'max:255'],
+            'alamat_kementerian' => ['required','string', 'max:255'],
+            'no_tel_rumah' => ['required', 'string', 'max:12'],
+            'no_tel_bimbit' => ['required', 'string', 'max:12'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users']
+            // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+    }
+
+    protected function validatorAwam(array $data)
+    {
+        return Validator::make($data, [
+            'kategori' => ['required'],
+            'nama' => ['required', 'string', 'max:255'],
+            'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8', 'unique:users'],
+            'kerakyatan' => ['required'],
+            'tarikh_lahir' => ['required', 'date'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'jawatan' => ['required', 'string', 'max:255'],
+            'jenis_perniagaan' => ['required', 'string', 'max:255'],
+            'alamat_kediaman' => ['required','string', 'max:255'],
+            'poskod' => ['required','string', 'max:5', 'min:5'],
+            'negeri' => ['required','string', 'max:255'],
+            'no_tel_rumah' => ['required', 'string', 'max:12'],
+            'no_tel_bimbit' => ['required', 'string', 'max:12'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users']
+            // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+    }
+
+    protected function validatorDalaman(array $data)
+    {
+        return Validator::make($data, [
+            'kategori' => ['required'],
+            'nama' => ['required', 'string', 'max:255'],
+            'kad_pengenalan' => ['required', 'string', 'max:12','unique:users'],
+            'kerakyatan' => ['required'],
+            'tarikh_lahir' => ['required', 'date'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'jawatan' => ['required', 'string', 'max:255'],
             'no_tel_rumah' => ['required', 'string', 'max:12'],
             'no_tel_bimbit' => ['required', 'string', 'max:12'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'bahagian' => ['nullable','string', 'max:255'],
+            'bahagian' => ['required','string', 'max:255'],
             // 'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -101,12 +141,10 @@ class RegisterController extends Controller
             'tempat_lahir' => $data['tempat_lahir'],
             'jawatan' => $data['jawatan'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
-            'alamat_kediaman' => $data['alamat_kediaman'],
             'nama_kementerian' => $data['nama_kementerian'],
             'alamat_kementerian' => $data['alamat_kementerian'],
             'no_tel_rumah' => $data['no_tel_rumah'],
             'no_tel_bimbit' => $data['no_tel_bimbit'],
-            'bahagian' => $data['bahagian'],
             // 'password' => Hash::make($data['password']),
             'password' => $hashed_random_password,
         ]);
@@ -116,6 +154,66 @@ class RegisterController extends Controller
         return $user;
     }
 
+    protected function createAwam(array $data)
+    {
+        $random = Str::random(10);
+
+        $hashed_random_password = Hash::make($random);
+
+        $user = User::create([
+            'kategori' => $data['kategori'],
+            'name' => $data['nama'],
+            'email' => $data['email'],
+            'kad_pengenalan' => $data['kad_pengenalan'],
+            'kerakyatan' => $data['kerakyatan'],
+            'tarikh_lahir' => $data['tarikh_lahir'],
+            'tempat_lahir' => $data['tempat_lahir'],
+            'jawatan' => $data['jawatan'],
+            'jenis_perniagaan' => $data['jenis_perniagaan'],
+            'no_tel_rumah' => $data['no_tel_rumah'],
+            'no_tel_bimbit' => $data['no_tel_bimbit'],
+            // 'password' => Hash::make($data['password']),
+            'password' => $hashed_random_password,
+        ]);
+
+        Mail::send(new EmailNotifikasiRegisterUser($data, $random));
+
+        return $user;
+    }
+
+
+
+    protected function createDalaman(array $data)
+    {
+        $random = Str::random(10);
+
+        $hashed_random_password = Hash::make($random);
+
+        $user = User::create([
+            'kategori' => $data['kategori'],
+            'name' => $data['nama'],
+            'email' => $data['email'],
+            'kad_pengenalan' => $data['kad_pengenalan'],
+            'kerakyatan' => $data['kerakyatan'],
+            'tarikh_lahir' => $data['tarikh_lahir'],
+            'tempat_lahir' => $data['tempat_lahir'],
+            'jawatan' => $data['jawatan'],
+            'jenis_perniagaan' => $data['jenis_perniagaan'],
+            'alamat_kediaman' => $data['alamat_kediaman'],
+            'poskod' => $data['poskod'],
+            'negeri' => $data['negeri'],
+            'no_tel_rumah' => $data['no_tel_rumah'],
+            'no_tel_bimbit' => $data['no_tel_bimbit'],
+            // 'password' => Hash::make($data['password']),
+            'password' => $hashed_random_password,
+        ]);
+        Mail::send(new EmailNotifikasiRegisterUser($data, $random));
+
+        return $user;
+      }
+
+
+
     /**
    * Handle a registration request for the application.
    *
@@ -124,11 +222,32 @@ class RegisterController extends Controller
    */
     public function register(Request $request)
     {
-        $this->validator($request->all())->validate();
+      if($request->pasport != null){
+        $request->merge([
+          'kad_pengenalan' => $request->pasport,
+        ]);
 
+        $request->merge([
+          'tarikh_lahir' => $request->tarikh_lahir_manual,
+        ]);
+      }
+
+      if($request->kategori == 'dalaman'){
+
+        $this->validatorDalaman($request->all())->validate();
+        event(new Registered($user = $this->createDalaman($request->all())));
+
+      }elseif ($request->kategori == 'awam') {
+
+        $this->validatorAwam($request->all())->validate();
+        event(new Registered($user = $this->createAwam($request->all())));
+        
+      }else {
+
+        $this->validator($request->all())->validate();
         event(new Registered($user = $this->create($request->all())));
 
-        //send email here
+      }
 
         return redirect('/login')->with('success','Pendaftaran anda telah berjaya');
     }

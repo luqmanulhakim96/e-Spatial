@@ -45,7 +45,7 @@
                                                         <tr>
                                                           <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">NAMA PEMOHON</p></div></th>
                                                           <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">STATUS PERMOHONAN</p></div></th>
-                                                          <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">MUAT TURUN SURAT PERMOHONAN</p></div></th>
+                                                          <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">SURAT PERMOHONAN</p></div></th>
                                                           <!-- <th class="all">PRINT</th> -->
                                                         </tr>
                                                     </thead>
@@ -74,8 +74,12 @@
                                                           @endif
 
                                                         @endif
-                                                        <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
-                                                        <td><a class="fa fa-download" href="{{route('permohonan.download.surat_permohonan',$baru->id)}}"></a></td>
+                                                        <td><span class="badge badge-warning badge-pill" style="font-size: 100%;">{{ $baru->status_permohonan  }}</span></td>
+                                                        <td>
+                                                          <button class="btn btn-success m-2">
+                                                            <a class="fa fa-download"  href="{{route('permohonan.download.surat_permohonan',$baru->id)}}"></a>
+                                                          </button>
+                                                        </td>
                                                         <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
@@ -105,7 +109,8 @@
 
                                                         @endif
                                                         <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
-                                                        <td>{{ $baru->attachment_permohonan}}</td>
+                                                        <td><a class="fa fa-download" href="{{route('permohonan.download.surat_permohonan',$baru->id)}}"></a></td>
+
                                                         <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
@@ -135,7 +140,8 @@
 
                                                         @endif
                                                         <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
-                                                        <td>{{ $baru->attachment_permohonan}}</td>
+                                                        <td><a class="fa fa-download" href="{{route('permohonan.download.surat_permohonan',$baru->id)}}"></a></td>
+
                                                         <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
@@ -166,7 +172,8 @@
 
                                                         @endif
                                                         <td><span class="badge badge-warning badge-pill">{{ $baru->status_permohonan  }}</span></td>
-                                                        <td>{{ $baru->attachment_permohonan}}</td>
+                                                        <td><a class="fa fa-download" href="{{route('permohonan.download.surat_permohonan',$baru->id)}}"></a></td>
+
                                                         <!-- <td class="p-3">
                                                               <div class="d-flex flex-row justify-content-around align-items-center">
                                                                   <a href="#" class="fa fa-print"><i class="fas fa-times-circle"></i></a>
@@ -316,8 +323,9 @@
                                                           <th class="all">PERMOHONAN ID</th>
                                                           <th class="all">NAMA</th>
                                                           <th class="all">STATUS PERMOHONAN</th>
-                                                          <th class="all">STATUS PEMBAYARAN</th>
-                                                          <th class="all">MUATNAIK SURAT BAYARAN</th>
+                                                          <th class="all">STATUS PEMBAYARAN PEMOHON</th>
+                                                          <th class="all">MUAT NAIK SURAT KELULUSAN</th>
+                                                          <th class="all">JUMLAH BAYARAN (RM)</th>
                                                           <th class="all">RESIT PEMBAYARAN</th>
                                                           @if($userInfo->role == 0)
                                                           <th class="all">MUATNAIK DOKUMEN DAN LINK DATA</th>
@@ -350,6 +358,9 @@
                                                         @else
                                                         <td><button class="btn btn-dark mr-1"><i class="fa fa-upload"></i> </button></td>
                                                         @endif
+
+                                                        <td><span >{{ $lulus->jumlah_bayaran  }}</span></td>
+
 
                                                         @if($lulus->attachment_receipt_pembayaran != null)
                                                         <td>

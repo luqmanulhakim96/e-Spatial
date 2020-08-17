@@ -32,6 +32,9 @@
                                         <!-- Tab panes -->
                                         <div class="tab-content">
                                             <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                              <div class="">
+
+                                              </div>
                                               <div class="card-title">Senarai Permohonan Sedang Diproses</div>
                                               <div class="table-responsive">
 
@@ -51,15 +54,17 @@
                                                     <tr>
                                                       <td><a href="#" data-toggle="modal" data-target="#display_data_permohonan" data-value="{{ $data->id  }}">{{ $data->id  }}</a></td>
                                                       <td>{{ Carbon\Carbon::parse($data->created_at)->format('d-m-Y H:i:s') }}</td>
-                                                      <td>{{ $data->status_permohonan  }}</td>
+                                                      <td>
+                                                        <span class="badge badge-warning badge-pill" style="font-size: 100%;">{{ $data->status_permohonan  }}</span>
+                                                      </td>
                                                       @if($data->ulasan_admin == NULL)
-                                                      <td class="p-3">
+                                                      <td >
                                                             <div class="d-flex flex-row justify-content-around align-items-center">
                                                                 <a href="{{ route('user.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
                                                             </div>
                                                       </td>
                                                       @else
-                                                      <td class="p-3">
+                                                      <td >
                                                             <div class="d-flex flex-row justify-content-around align-items-center">
                                                                 <a href="#" class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Maaf, permohonan anda telah diulas."><i class="fas fa-pencil-alt"></i></a>
                                                             </div>
@@ -143,7 +148,7 @@
                                                                   <!-- pass id permohonan -->
                                                                   <input type="hidden" id="permohonan_id_resit"name="permohonan_id_resit" value="{{ $data->id  }}">
                                                                   <!-- Login button -->
-                                                                  <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muatnaik</button>
+                                                                  <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muat Naik</button>
                                                               </form>
                                                           </div>
 
@@ -155,7 +160,7 @@
                                                       <td>Telah dimuat naik</td>
                                                       @endif
 
-                                                      @if($data->attachment_penerimaan_data_ == null)
+                                                      @if($data->attachment_penerimaan_data == null)
                                                         <td>
                                                           Tiada
                                                         </td>

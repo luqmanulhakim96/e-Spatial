@@ -74,9 +74,10 @@ class HomeController extends Controller
 
       $dataJumlahPendapatan = DB::select(DB::raw("SELECT SUM(permohonans.jumlah_bayaran) as total, EXTRACT(MONTH FROM created_at) as bulan from permohonans WHERE permohonans.ulasan_admin IS NOT NULL AND permohonans.status_pembayaran <> 'Pengecualian Bayaran' AND permohonans.status_permohonan = 'Lulus' GROUP BY bulan"));
 
+      $jumlahJenisDokumen =  DB::select(DB::raw("SELECT COUNT(senarai_hargas.jenis_dokumen) as count_jenis_dokumen, senarai_hargas.jenis_dokumen as jenis_dokumen FROM senarai_hargas, data_permohonans, permohonans WHERE permohonans.id = data_permohonans.permohonan_id AND senarai_hargas.id = data_permohonans.senarai_harga_id GROUP BY senarai_hargas.jenis_dokumen"));
 
 
-      //dd($dataJumlahPendapatan);
+      //dd($jumlahJenisDokumen);
       //$permohonan_negeri_semenanjung_malaysia = SenaraiHarga::where('negeri','Semenanjung Malaysia')->get();
 
 
@@ -94,7 +95,8 @@ class HomeController extends Controller
           'dataDipohonMengikutNegeri',
           'dataDipohonMengikutBulan',
           'dataStatusPermohonan',
-          'dataJumlahPendapatan'
+          'dataJumlahPendapatan',
+          'jumlahJenisDokumen'
       ));
     }
 

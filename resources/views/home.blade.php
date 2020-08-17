@@ -148,7 +148,7 @@
 
                 </div>
                 <!-- Row -->
-                <div class="row">
+                <div class="row mb-4">
                     <!-- Col lg 6, col md 12 -->
                        <!-- col md 6 -->
                        <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
@@ -178,32 +178,31 @@
                                 <div id="chart-wrap">
                                 <!-- Chart -->
                                 <div id="jumlah_pendapatan_mengikut_bulan_div" style="width: 100%; height: 400px;"></div>
-
                               </div>
                             </div>
 
                         </div>
 
                     </div>
-
-                    <!-- Col 12 -->
-                    <!-- <div class="col-12 mt-4">
-
-                        <div class="card mb-4">
-
-                            <div class="card-body p-0">
-
-                                <div class="card-title m-0 p-3">Jumlah Permohonan</div>
-
-                                <div id="echart3" style="height: 360px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;"></div>
-                            </div>
-
-                        </div>
-
-                    </div> -->
-
                 </div>
-            </div>
+
+
+
+                <!-- <div class="row mb-4">
+                  <div class="col-lg-12 col-md-12 mt-4 mt-lg-0">
+                      <div class="card border-0 rounded-lg">
+                          <div class="card-body ">
+                              <div class="card-title m-0 p-3">Last 20 Day Leads</div>
+                              <div id="chart-wrap">
+                              <div id="columnchart_material" style="width: 100%; height: 350px;"></div>
+
+                          </div>
+
+                      </div>
+                  </div>
+                </div>
+
+            </div> -->
         </main>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -477,6 +476,36 @@
       drawPieChart();
       drawPieChartStatusPermohonan();
       });
+    </script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Vektor Shapeline', 'Bercetak'],
+          ['2014', 1000, 400],
+          ['2015', 1170, 460],
+          ['2016', 660, 1120],
+          ['2017', 1030, 540],
+          ['2018', 660, 1120],
+          ['2019', 450, 900],
+
+        ]);
+
+        var options = {
+          chart: {
+            title: '',
+            subtitle: '',
+          },
+          colors: ['#B0D8FF', '#86AFD9', '#5E87AF', '#356187', '#003E61']
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
     </script>
 
 @endsection

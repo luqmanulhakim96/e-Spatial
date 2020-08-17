@@ -31,6 +31,7 @@ class PermohonanController extends Controller
 
     $dataPermohonan = DataPermohonan::where('permohonan_id',$id)
                         ->get();
+    $count_data_permohonan = DataPermohonan::where('permohonan_id', $id)->count();
 
     $i = 0;
     foreach ($dataPermohonan as $value) {
@@ -38,14 +39,18 @@ class PermohonanController extends Controller
       $senaraiHargaUser[$i] = SenaraiHarga::where('id', $value->senarai_harga_id)->get();
       $i++;
     }
-    $dataPermohonan = $id;
+
+    //dd($senaraiHargaUser);
+    // dd($senaraiHargaUser[0][0]['negeri']);
+
+    //dd($dataPermohonan);
 
 
     //$senaraiHargaId = $permohonan->senarai_harga_id;
     //$harga = SenaraiHarga::findorfail($senaraiHargaId);
     //dd($harga);
     //dd($permohonan);
-    return view('permohonan.harga.view', compact('dataPermohonan', 'senaraiHargaUser','permohonan'));
+    return view('permohonan.harga.view', compact('dataPermohonan', 'senaraiHargaUser','permohonan','count_data_permohonan','id'));
   }
 
   protected function validator(array $data)
@@ -53,17 +58,18 @@ class PermohonanController extends Controller
       return Validator::make($data, [
           //'saiz_data[]' => ['required','numeric'],
           //'saiz_data' => ['required','numeric'],
-          'harga_aoi' => ['nullable', 'numeric'],
           'harga_lain' => ['nullable', 'numeric'],
+
 
       ]);
   }
 
   public function updateHarga($id, Request $request){
     $this->validator($request->all())->validate();
+    // dd($request->all());
 
     $test = $request->all();
-
+    // dd($test);
     $countData = count($request->saiz_data);
 
     //calculate total price for all data
@@ -72,12 +78,6 @@ class PermohonanController extends Controller
       //dd($test['harga_asas'][0]) ;
       //$jumlah = $jumlah + $test['saiz_data'];
       $jumlah = $jumlah + ($test['harga_asas'][$i] * $test['saiz_data'][$i]);
-    }
-
-    //add harga aoi into jumlah
-    if(isset($request->harga_aoi)){
-      $jumlah = $jumlah + $request->harga_aoi;
-
     }
 
     //add harga tambahan into jumlah
@@ -94,7 +94,7 @@ class PermohonanController extends Controller
     $permohonan->save();
 
     //route to next page
-    return $this->viewInformasiPermohonan($id)->with('success','Harga permohonan telah ditambah.');
+     return $this->viewInformasiPermohonan($id)->with('success','Harga permohonan telah ditambah');
   }
 
   public function downloadAoi($id){
@@ -117,7 +117,7 @@ class PermohonanController extends Controller
 
     $permohonan->save();
 
-    if($request->status_pembayaran == 'Sudah Dibayar'){
+    if($request->status_pembayaran == 'Perlu Dibayar'){
       $surat = SenaraiSurat::where('status_pembayaran', '=', 'bayaran')->first();
       if(is_null($surat))
       {
@@ -136,6 +136,8 @@ class PermohonanController extends Controller
       else{
         return view('permohonan.surat',  compact('surat'))->with('success','Status pembayaran telah dikemaskini');
       }
+    }else {
+      return redirect()->route('permohonan.list')->with('success','Status pembayaran telah dikemaskini');
     }
   }
 
@@ -239,6 +241,8 @@ class PermohonanController extends Controller
       $permohonan = Permohonan::findorfail($id);
       $loop =  Permohonan::findorfail($id)->count();
       $user = User::where('id', $permohonan->user_id )->first();
+      $permohonan_id = $permohonan['id'];
+      // dd($permohonan_id);
 
       //current user id
       $user_id = Auth::user()->id;
@@ -247,8 +251,8 @@ class PermohonanController extends Controller
 
       //fetch data list
 
-      $dataPermohonan = DataPermohonan::where('permohonan_id',$id)
-                          ->get();
+      $dataPermohonan = DataPermohonan::where('permohonan_id',$id)->get();
+      $count_data_permohonan = DataPermohonan::where('permohonan_id',$id)->count();
       $i = 0;
       foreach ($dataPermohonan as $value) {
 
@@ -256,8 +260,8 @@ class PermohonanController extends Controller
         $i++;
       }
 
-
-      return view('permohonan.view',  compact('permohonan','loop','user','current_user_info','senaraiHargaUser'));
+      // dd($permohonan);
+      return view('permohonan.view',  compact('dataPermohonan','loop','user','current_user_info','senaraiHargaUser','count_data_permohonan','permohonan_id','permohonan'));
   }
 
 

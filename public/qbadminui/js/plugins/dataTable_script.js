@@ -244,7 +244,7 @@ $(document).ready(function(){
        {
            "targets": [1,2], // your case first column
            "className": "text-center",
-           "width": "20%"
+           "width": "30%"
       },
       {
            "targets": 0,
