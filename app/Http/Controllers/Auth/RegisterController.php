@@ -170,6 +170,9 @@ class RegisterController extends Controller
             'tempat_lahir' => $data['tempat_lahir'],
             'jawatan' => $data['jawatan'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
+            'alamat_kediaman' => $data['alamat_kediaman'],
+            'poskod' => $data['poskod'],
+            'negeri' => $data['negeri'],
             'no_tel_rumah' => $data['no_tel_rumah'],
             'no_tel_bimbit' => $data['no_tel_bimbit'],
             // 'password' => Hash::make($data['password']),
@@ -199,9 +202,6 @@ class RegisterController extends Controller
             'tempat_lahir' => $data['tempat_lahir'],
             'jawatan' => $data['jawatan'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
-            'alamat_kediaman' => $data['alamat_kediaman'],
-            'poskod' => $data['poskod'],
-            'negeri' => $data['negeri'],
             'no_tel_rumah' => $data['no_tel_rumah'],
             'no_tel_bimbit' => $data['no_tel_bimbit'],
             // 'password' => Hash::make($data['password']),
@@ -241,7 +241,7 @@ class RegisterController extends Controller
 
         $this->validatorAwam($request->all())->validate();
         event(new Registered($user = $this->createAwam($request->all())));
-        
+
       }else {
 
         $this->validator($request->all())->validate();
