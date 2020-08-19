@@ -24,6 +24,12 @@ use App\Notifications\Admin\PermohonanLulusAdminNull;
 use Auth;
 use PDF;
 
+use App\Jobs\SendEmailNotifikasiLinkPermohonan;
+use App\Jobs\SendEmailPermohonanLulusAdmin;
+use App\Jobs\SendEmailPermohonanLulusAdminNull;
+use App\Jobs\SendEmailPermohonanBaruAdmin;
+
+
 class PermohonanController extends Controller
 {
   public function hargaPermohonan($id){
@@ -224,12 +230,16 @@ class PermohonanController extends Controller
       {
         foreach ($admin as $data) {
           $permohonan->notify(new PermohonanLulusAdminNull($data));  // use this notification when email template not available
+          // $emailJob = (new SendEmailPermohonanLulusAdminNull($data))->delay(Carbon::now()->addSeconds(30));
+          // dispatch($emailJob);
         }
       }
       else
       {
         foreach ($admin as $data) {
           $permohonan->notify(new PermohonanLulusAdmin($data, $email));
+          // $emailJob = (new SendEmailPermohonanLulusAdmin($data,$email))->delay(Carbon::now()->addSeconds(30));
+          // dispatch($emailJob);
         }
       }
     }
@@ -293,8 +303,11 @@ class PermohonanController extends Controller
     $user_id = Auth::user()->id;
     $user = User::findOrFail($user_id);
 
-    Mail::send(new EmailNotifikasiLinkPermohonan($permohonan,$user));
 
+    // Mail::send(new EmailNotifikasiLinkPermohonan($permohonan,$user));
+
+    $emailJob = (new SendEmailNotifikasiLinkPermohonan($permohonan,$user))->delay(Carbon::now()->addSeconds(30));
+    dispatch($emailJob);
 
     return redirect()->route('permohonan.list')->with('success','Fail telah dimuatnaik');
   }

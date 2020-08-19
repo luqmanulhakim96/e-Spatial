@@ -19,6 +19,8 @@ use DateTime;
 use App\Mail\User\EmailNotifikasiRegisterUser;
 use Illuminate\Support\Facades\Mail;
 
+use App\Jobs\SendEmailRegistration;
+
 class RegisterController extends Controller
 {
     /*
@@ -148,9 +150,13 @@ class RegisterController extends Controller
             // 'password' => Hash::make($data['password']),
             'password' => $hashed_random_password,
         ]);
+        // Mail::send(new EmailNotifikasiRegisterUser($data, $random));
+        // Mail::queue(new EmailNotifikasiRegisterUser($data, $random));
 
-        Mail::send(new EmailNotifikasiRegisterUser($data, $random));
-
+        // $emailJob = (new      SendEmail($details))->delay(Carbon::now()->addMinutes(5));
+        // $emailJob = SendEmail::dispatch($data,$random)->delay(Carbon::now()->addSeconds(30));
+        $emailJob = (new SendEmailRegistration($data,$random))->delay(Carbon::now()->addSeconds(30));
+        dispatch($emailJob);
         return $user;
     }
 
@@ -178,9 +184,8 @@ class RegisterController extends Controller
             // 'password' => Hash::make($data['password']),
             'password' => $hashed_random_password,
         ]);
-
-        Mail::send(new EmailNotifikasiRegisterUser($data, $random));
-
+        $emailJob = (new SendEmailRegistration($data,$random))->delay(Carbon::now()->addSeconds(30));
+        dispatch($emailJob);
         return $user;
     }
 
@@ -207,8 +212,8 @@ class RegisterController extends Controller
             // 'password' => Hash::make($data['password']),
             'password' => $hashed_random_password,
         ]);
-        Mail::send(new EmailNotifikasiRegisterUser($data, $random));
-
+        $emailJob = (new SendEmailRegistration($data,$random))->delay(Carbon::now()->addSeconds(30));
+        dispatch($emailJob);
         return $user;
       }
 

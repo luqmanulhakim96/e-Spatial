@@ -30,7 +30,6 @@ class EmailNotifikasiRegisterUser extends Mailable
      */
     public function build()
     {
-      // dd($this->password);
       $user = $this->user;
       $password = $this->password;
       return $this->to($this->user['email'] , $this->user['nama'])
