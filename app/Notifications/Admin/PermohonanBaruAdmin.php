@@ -10,6 +10,11 @@ use Illuminate\Notifications\Notification;
 use App\Mail\Admin\EmailNotifikasiAdmin;
 use Illuminate\Support\Facades\Mail;
 
+use Carbon\Carbon;
+use DateTime;
+
+use App\Jobs\SendEmailPermohonanBaruAdmin;
+
 class PermohonanBaruAdmin extends Notification implements ShouldQueue
 {
     use Queueable;
@@ -53,6 +58,8 @@ class PermohonanBaruAdmin extends Notification implements ShouldQueue
         // return Mail::queue(new EmailNotifikasiAdmin($this->admin));
         // dd($this->admin);
         return Mail::queue(new EmailNotifikasiAdmin($this->admin, $this->email));
+        // $emailJob = (new SendEmailPermohonanBaruAdmin($this->admin,$this->email))->delay(Carbon::now()->addSeconds(30));
+        // dispatch($emailJob);
 
         // return (new EmailNotifikasiAdmin($this->admin));
         // return (new MailMessage)
