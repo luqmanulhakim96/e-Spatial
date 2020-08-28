@@ -149,13 +149,36 @@ class UserController extends Controller
 
     $list_lulus = Permohonan::where('user_id','=',$user_id)
               ->where('status_permohonan','Lulus')
+              ->whereNotNull('attachment_surat_bayaran')
               ->get();
+
+    // dd($list_lulus);
 
     $list_gagal = Permohonan::where('user_id','=',$user_id)
               ->where('status_permohonan','Gagal')
               ->get();
 
     return view('user.list', compact('list','list_lulus','list_gagal'));
+  }
+
+  public function viewListSedangDiproses(){
+    $user_id = Auth::user()->id;
+
+    $listSedangDiproses = Permohonan::where('user_id','=',$user_id)
+              ->where('status_permohonan','Sedang Diproses')
+              ->get();
+
+    return view('user.listSedangDiproses', compact('listSedangDiproses'));
+  }
+
+  public function viewListGagal(){
+    $user_id = Auth::user()->id;
+
+    $list_gagal = Permohonan::where('user_id','=',$user_id)
+              ->where('status_permohonan','Gagal')
+              ->get();
+
+    return view('user.listGagal', compact('list_gagal'));
   }
 
   public function add(){
@@ -378,7 +401,7 @@ class UserController extends Controller
     $permohonanBaru->notify(new PermohonanBaruUser(Auth::user()));
 
 
-    return redirect()->route('user.list')->with('success','Permohonan anda berjaya membuat permohonan data.');
+    return redirect()->route('user.listSedangDiproses')->with('success','Permohonan anda berjaya membuat permohonan data.');
   }
 
   public function edit($id){
@@ -456,7 +479,7 @@ class UserController extends Controller
       ]);
     }
 
-    return redirect()->route('user.list')->with('success','Data permohonan anda telah berjaya dikemaskini.');
+    return redirect()->route('user.listSedangDiproses')->with('success','Data permohonan anda telah berjaya dikemaskini.');
   }
 
   public function editProfil(){
@@ -466,34 +489,147 @@ class UserController extends Controller
     return view('user.profil.edit',compact('user'));
   }
 
+  protected function validatorProfile(array $data)
+  {
+      return Validator::make($data, [
+          'kategori' => ['required'],
+          'nama' => ['required', 'string', 'max:255'],
+          'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8'],
+          'kerakyatan' => ['required'],
+          'tarikh_lahir' => ['required', 'date'],
+          'tempat_lahir' => ['required', 'string', 'max:255'],
+          'jawatan' => ['required', 'string', 'max:255'],
+          'jenis_perniagaan' => ['required', 'string', 'max:255'],
+          'alamat_kediaman' => ['required','string', 'max:255'],
+          'poskod' => ['required','string', 'max:5', 'min:5'],
+          'negeri' => ['required','string', 'max:255'],
+          'nama_kementerian' => ['required','string', 'max:255'],
+          'alamat_kementerian' => ['required','string', 'max:255'],
+          'no_tel_rumah' => ['required', 'string', 'max:12'],
+          'no_tel_bimbit' => ['required', 'string', 'max:12'],
+          'email' => ['required', 'string', 'email', 'max:255']
+          // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+      ]);
+  }
+
+  protected function validatorAwam(array $data)
+  {
+      return Validator::make($data, [
+          'kategori' => ['required'],
+          'nama' => ['required', 'string', 'max:255'],
+          'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8'],
+          'kerakyatan' => ['required'],
+          'tarikh_lahir' => ['required', 'date'],
+          'tempat_lahir' => ['required', 'string', 'max:255'],
+          'jawatan' => ['required', 'string', 'max:255'],
+          'jenis_perniagaan' => ['required', 'string', 'max:255'],
+          'alamat_kediaman' => ['required','string', 'max:255'],
+          'poskod' => ['required','string', 'max:5', 'min:5'],
+          'negeri' => ['required','string', 'max:255'],
+          'no_tel_rumah' => ['required', 'string', 'max:12'],
+          'no_tel_bimbit' => ['required', 'string', 'max:12'],
+          'email' => ['required', 'string', 'email', 'max:255']
+          // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+      ]);
+  }
+
+  protected function validatorDalaman(array $data)
+  {
+      return Validator::make($data, [
+          'kategori' => ['required'],
+          'nama' => ['required', 'string', 'max:255'],
+          'kad_pengenalan' => ['required', 'string', 'max:12','unique:users'],
+          'kerakyatan' => ['required'],
+          'tarikh_lahir' => ['required', 'date'],
+          'tempat_lahir' => ['required', 'string', 'max:255'],
+          'jawatan' => ['required', 'string', 'max:255'],
+          'no_tel_rumah' => ['required', 'string', 'max:12'],
+          'no_tel_bimbit' => ['required', 'string', 'max:12'],
+          'email' => ['required', 'string', 'email', 'max:255'],
+          'bahagian' => ['required','string', 'max:255'],
+          // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+      ]);
+  }
+
   public function updateProfil(Request $request){
 
-    $this->validatorProfile($request->all())->validate();
-    //dd($request->all());
+    if($request->kerakyatan == 'Bukan Warganegara'){
+      if($request->pasport != null){
+        $request->merge([
+          'kad_pengenalan' => $request->pasport,
+        ]);
 
+        $request->merge([
+          'tarikh_lahir' => $request->tarikh_lahir_manual,
+        ]);
+      }
+    }
+    // dd($request->all());
 
 
     $user_id = Auth::user()->id;
     $user = User::findOrFail($user_id);
 
-    $user->alamat_kediaman = $request->alamat_kediaman;
-    $user->no_tel_rumah = $request->no_tel_rumah;
-    $user->no_tel_bimbit = $request->no_tel_rumah;
-    $user->email = $request->email;
-    $user->save();
+    if($request->kategori == 'dalaman'){
 
-    return redirect()->route('user.mainMenu')->with('success','Profil anda telah dikemaskini');
+      $this->validatorDalaman($request->all())->validate();
+
+      $user->name = $request->nama;
+      $user->kerakyatan = $request->kerakyatan;
+      $user->kad_pengenalan = $request->kad_pengenalan;
+      $user->tarikh_lahir = $request->tarikh_lahir;
+      $user->tempat_lahir = $request->tempat_lahir;
+      $user->jawatan = $request->jawatan;
+      $user->bahagian = $request->bahagian;
+      $user->no_tel_rumah = $request->no_tel_rumah;
+      $user->no_tel_bimbit = $request->no_tel_bimbit;
+      $user->email = $request->email;
+      $user->save();
+
+    }elseif ($request->kategori == 'awam') {
+
+      $this->validatorAwam($request->all())->validate();
+
+      $user->name = $request->nama;
+      $user->kerakyatan = $request->kerakyatan;
+      $user->kad_pengenalan = $request->kad_pengenalan;
+      $user->tarikh_lahir = $request->tarikh_lahir;
+      $user->tempat_lahir = $request->tempat_lahir;
+      $user->jawatan = $request->jawatan;
+      $user->jenis_perniagaan = $request->jenis_perniagaan;
+      $user->alamat_kediaman = $request->alamat_kediaman;
+      $user->poskod = $request->poskod;
+      $user->negeri = $request->negeri;
+      $user->no_tel_rumah = $request->no_tel_rumah;
+      $user->no_tel_bimbit = $request->no_tel_bimbit;
+      $user->email = $request->email;
+      $user->save();
+
+    }else {
+
+      $this->validatorProfile($request->all())->validate();
+
+      $user->name = $request->nama;
+      $user->kerakyatan = $request->kerakyatan;
+      $user->kad_pengenalan = $request->kad_pengenalan;
+      $user->tarikh_lahir = $request->tarikh_lahir;
+      $user->tempat_lahir = $request->tempat_lahir;
+      $user->jawatan = $request->jawatan;
+      $user->jenis_perniagaan = $request->jenis_perniagaan;
+      $user->alamat_kediaman = $request->alamat_kediaman;
+      $user->poskod = $request->poskod;
+      $user->negeri = $request->negeri;
+      $user->nama_kementerian = $request->nama_kementerian;
+      $user->alamat_kementerian = $request->alamat_kementerian;
+      $user->no_tel_rumah = $request->no_tel_rumah;
+      $user->no_tel_bimbit = $request->no_tel_bimbit;
+      $user->email = $request->email;
+      $user->save();
+
+    }
+
+    return redirect()->route('user.profil.edit')->with('success','Profil anda telah dikemaskini');
     //return view('user.profil.edit');
-  }
-
-  protected function validatorProfile(array $data)
-  {
-      return Validator::make($data, [
-          'alamat_kediaman' => ['required','string', 'max:255'],
-          'no_tel_rumah' => ['required', 'string', 'max:12','min:10'],
-          'no_tel_bimbit' => ['required', 'string', 'max:12','min:10'],
-          'email' => ['required', 'string', 'email', 'max:255'],
-      ]);
   }
 
   public function uploadResitPembayaran(Request $request){

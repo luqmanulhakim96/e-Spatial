@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Validator,Redirect,Response,File;
+
 use Illuminate\Support\Facades\Hash;
 
 use DB;
@@ -136,15 +138,14 @@ class HomeController extends Controller
 
       $listPermohonanGagal = Permohonan::where('status_permohonan', 'Gagal')->get();
 
-      //dd($listPermohonanBaru_p2);
+      // dd($listPermohonanLulus);
       // $listPermohonanDalaman = Permohonan::whereHas('user', function($q) use($user_id) {
       //   $q->where('kategori', '=', 'dalaman');
       //   $q->where('id', '=', '2');
       // })->get();
 
       $listPermohonanDalaman = Permohonan::whereHas('user', function($q) use($user_id) {
-        $q->where('kategori', '=', 'dalaman');
-      })->get();
+        $q->where('kategori', '=', 'dalaman');      })->get();
       //dd($listPermohonanDalaman);
 
       // $listPermohonanDalaman = DB::select(DB::raw("SELECT * from permohonans permohonans, users users WHERE permohonans.user_id = users.id AND users.kategori = 'dalaman'"));
@@ -163,7 +164,68 @@ class HomeController extends Controller
       return view('permohonan.list', compact('listPermohonanBaru','listPermohonanBaru2', 'listPermohonanLulus','listPermohonanGagal', 'listPermohonanDalaman', 'userInfo','listPermohonanBaru_p1','listPermohonanBaru_p2','listPermohonanBaru_kp' ));
     }
 
+    public function senaraiPermohonanBaru(){
+      $user_id = Auth::user()->id;
 
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNull('ulasan_admin')
+                            ->get();
+
+      $listPermohonanBaru_p1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                                ->whereNull('ulasan_penyokong_1')
+                                ->whereNotNull('ulasan_admin')
+                                ->get();
+
+      $listPermohonanBaru_p2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                                ->whereNull('ulasan_penyokong_2')
+                                ->whereNotNull('ulasan_penyokong_1')
+                                ->whereNotNull('ulasan_admin')
+                                ->get();
+
+      $listPermohonanBaru_kp = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                                ->whereNull('ulasan_ketua_pengarah')
+                                ->whereNotNull('ulasan_penyokong_1')
+                                ->whereNotNull('ulasan_penyokong_2')
+                                ->whereNotNull('ulasan_admin')
+                                ->get();
+
+      return view('permohonan.listBaru', compact('listPermohonanBaru','userInfo', 'listPermohonanBaru_p1','listPermohonanBaru_p2','listPermohonanBaru_kp'));
+    }
+
+    public function senaraiPermohonanSedangDiproses(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->get();
+
+      return view('permohonan.listSedangDiproses', compact('listPermohonanBaru','userInfo'));
+    }
+
+    public function senaraiPermohonanGagal(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonanGagal = Permohonan::where('status_permohonan', 'Gagal')->get();
+
+      return view('permohonan.listGagal', compact('listPermohonanGagal','userInfo'));
+    }
+
+    public function senaraiPermohonanDalaman(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonanDalaman = Permohonan::whereHas('user', function($q) use($user_id) {
+        $q->where('kategori', '=', 'dalaman');      })->get();
+
+      return view('permohonan.listDalaman', compact('listPermohonanDalaman','userInfo'));
+    }
 
     public function senaraiHarga(){
         $list = SenaraiHarga::where('status','Aktif')
@@ -225,5 +287,153 @@ class HomeController extends Controller
         $user->save();
 
         return redirect()->route('user.mainMenu')->with("success","Kata laluan telah ditukar");
+    }
+
+    public function editProfil(){
+      $user_id = Auth::user()->id;
+      $user = User::findOrFail($user_id);
+
+      return view('profil-admins.editProfil',compact('user'));
+    }
+
+    public function updateProfil(Request $request){
+      if($request->kerakyatan == 'Bukan Warganegara'){
+        if($request->pasport != null){
+          $request->merge([
+            'kad_pengenalan' => $request->pasport,
+          ]);
+
+          $request->merge([
+            'tarikh_lahir' => $request->tarikh_lahir_manual,
+          ]);
+        }
+      }
+      // dd($request->all());
+
+
+      $user_id = Auth::user()->id;
+      $user = User::findOrFail($user_id);
+
+      if($request->kategori == 'dalaman'){
+
+        $this->validatorDalaman($request->all())->validate();
+
+        $user->name = $request->nama;
+        $user->kerakyatan = $request->kerakyatan;
+        $user->kad_pengenalan = $request->kad_pengenalan;
+        $user->tarikh_lahir = $request->tarikh_lahir;
+        $user->tempat_lahir = $request->tempat_lahir;
+        $user->jawatan = $request->jawatan;
+        $user->bahagian = $request->bahagian;
+        $user->no_tel_rumah = $request->no_tel_rumah;
+        $user->no_tel_bimbit = $request->no_tel_bimbit;
+        $user->email = $request->email;
+        $user->save();
+
+      }elseif ($request->kategori == 'awam') {
+
+        $this->validatorAwam($request->all())->validate();
+
+        $user->name = $request->nama;
+        $user->kerakyatan = $request->kerakyatan;
+        $user->kad_pengenalan = $request->kad_pengenalan;
+        $user->tarikh_lahir = $request->tarikh_lahir;
+        $user->tempat_lahir = $request->tempat_lahir;
+        $user->jawatan = $request->jawatan;
+        $user->jenis_perniagaan = $request->jenis_perniagaan;
+        $user->alamat_kediaman = $request->alamat_kediaman;
+        $user->poskod = $request->poskod;
+        $user->negeri = $request->negeri;
+        $user->no_tel_rumah = $request->no_tel_rumah;
+        $user->no_tel_bimbit = $request->no_tel_bimbit;
+        $user->email = $request->email;
+        $user->save();
+
+      }else {
+
+        $this->validatorProfile($request->all())->validate();
+
+        $user->name = $request->nama;
+        $user->kerakyatan = $request->kerakyatan;
+        $user->kad_pengenalan = $request->kad_pengenalan;
+        $user->tarikh_lahir = $request->tarikh_lahir;
+        $user->tempat_lahir = $request->tempat_lahir;
+        $user->jawatan = $request->jawatan;
+        $user->jenis_perniagaan = $request->jenis_perniagaan;
+        $user->alamat_kediaman = $request->alamat_kediaman;
+        $user->poskod = $request->poskod;
+        $user->negeri = $request->negeri;
+        $user->nama_kementerian = $request->nama_kementerian;
+        $user->alamat_kementerian = $request->alamat_kementerian;
+        $user->no_tel_rumah = $request->no_tel_rumah;
+        $user->no_tel_bimbit = $request->no_tel_bimbit;
+        $user->email = $request->email;
+        $user->save();
+
+      }
+
+      return redirect()->route('profil-admins.editProfil')->with('success','Profil anda telah dikemaskini');
+    }
+
+    protected function validatorProfile(array $data)
+    {
+        return Validator::make($data, [
+            'kategori' => ['required'],
+            'nama' => ['required', 'string', 'max:255'],
+            'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8'],
+            'kerakyatan' => ['required'],
+            'tarikh_lahir' => ['required', 'date'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'jawatan' => ['required', 'string', 'max:255'],
+            'jenis_perniagaan' => ['required', 'string', 'max:255'],
+            'alamat_kediaman' => ['required','string', 'max:255'],
+            'poskod' => ['required','string', 'max:5', 'min:5'],
+            'negeri' => ['required','string', 'max:255'],
+            'nama_kementerian' => ['required','string', 'max:255'],
+            'alamat_kementerian' => ['required','string', 'max:255'],
+            'no_tel_rumah' => ['required', 'string', 'max:12'],
+            'no_tel_bimbit' => ['required', 'string', 'max:12'],
+            'email' => ['required', 'string', 'email', 'max:255']
+            // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+    }
+
+    protected function validatorAwam(array $data)
+    {
+        return Validator::make($data, [
+            'kategori' => ['required'],
+            'nama' => ['required', 'string', 'max:255'],
+            'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8'],
+            'kerakyatan' => ['required'],
+            'tarikh_lahir' => ['required', 'date'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'jawatan' => ['required', 'string', 'max:255'],
+            'jenis_perniagaan' => ['required', 'string', 'max:255'],
+            'alamat_kediaman' => ['required','string', 'max:255'],
+            'poskod' => ['required','string', 'max:5', 'min:5'],
+            'negeri' => ['required','string', 'max:255'],
+            'no_tel_rumah' => ['required', 'string', 'max:12'],
+            'no_tel_bimbit' => ['required', 'string', 'max:12'],
+            'email' => ['required', 'string', 'email', 'max:255']
+            // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+    }
+
+    protected function validatorDalaman(array $data)
+    {
+        return Validator::make($data, [
+            'kategori' => ['required'],
+            'nama' => ['required', 'string', 'max:255'],
+            'kad_pengenalan' => ['required', 'string', 'max:12'],
+            'kerakyatan' => ['required'],
+            'tarikh_lahir' => ['required', 'date'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'jawatan' => ['required', 'string', 'max:255'],
+            'no_tel_rumah' => ['required', 'string', 'max:12'],
+            'no_tel_bimbit' => ['required', 'string', 'max:12'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'bahagian' => ['required','string', 'max:255'],
+            // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
     }
 }

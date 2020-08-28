@@ -16,6 +16,7 @@ class AddAttachmentReceiptInPermohonans extends Migration
         Schema::table('permohonans', function (Blueprint $table) {
             $table->string('attachment_receipt_pembayaran')->nullable();
             $table->string('attachment_penerimaan_data')->nullable();
+            $table->string('remarks_admin')->nullable();
         });
     }
 
@@ -29,6 +30,8 @@ class AddAttachmentReceiptInPermohonans extends Migration
         Schema::table('permohonans', function (Blueprint $table) {
             $table->dropColumn('attachment_receipt_pembayaran');
             $table->dropColumn('attachment_penerimaan_data');
+            $table->dropColumn('remarks_admin');
+
         });
     }
 }

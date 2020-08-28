@@ -204,6 +204,8 @@ class RegisterController extends Controller
             'jenis_perniagaan' => $data['jenis_perniagaan'],
             'no_tel_rumah' => $data['no_tel_rumah'],
             'no_tel_bimbit' => $data['no_tel_bimbit'],
+            'bahagian' => $data['bahagian'],
+
             // 'password' => Hash::make($data['password']),
             'password' => $hashed_random_password,
         ]);
@@ -222,14 +224,16 @@ class RegisterController extends Controller
    */
     public function register(Request $request)
     {
-      if($request->pasport != null){
-        $request->merge([
-          'kad_pengenalan' => $request->pasport,
-        ]);
+      if($request->kerakyatan == 'Bukan Warganegara'){
+        if($request->pasport != null){
+          $request->merge([
+            'kad_pengenalan' => $request->pasport,
+          ]);
 
-        $request->merge([
-          'tarikh_lahir' => $request->tarikh_lahir_manual,
-        ]);
+          $request->merge([
+            'tarikh_lahir' => $request->tarikh_lahir_manual,
+          ]);
+        }
       }
 
       if($request->kategori == 'dalaman'){
@@ -246,7 +250,6 @@ class RegisterController extends Controller
 
         $this->validator($request->all())->validate();
         event(new Registered($user = $this->create($request->all())));
-
       }
 
         return redirect('/login')->with('success','Pendaftaran anda telah berjaya');

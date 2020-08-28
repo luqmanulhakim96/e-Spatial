@@ -40,10 +40,10 @@ class PermohonanController extends Controller
       $i++;
     }
 
-    //dd($senaraiHargaUser);
+    // dd($senaraiHargaUser);
     // dd($senaraiHargaUser[0][0]['negeri']);
 
-    //dd($dataPermohonan);
+    // dd($dataPermohonan);
 
 
     //$senaraiHargaId = $permohonan->senarai_harga_id;
@@ -84,12 +84,27 @@ class PermohonanController extends Controller
     if(isset($request->harga_lain)){
       $jumlah = $jumlah + $request->harga_lain;
 
+    }else {
+      $request->merge(['harga_lain' => 0.00]);
+    }
+
+
+
+    for ($x = 0; $x < $countData; $x++){
+      $dataPermohonan = DataPermohonan::findOrFail($test['id_data_permohonan'][$x]);
+
+      $dataPermohonan->saiz_data = $test['saiz_data'][$x];
+
+      $dataPermohonan->save();
     }
 
     //update data into DB
     $permohonan = Permohonan::findOrFail($id);
 
     $permohonan->jumlah_bayaran = $jumlah;
+
+    $permohonan->harga_tambahan = $request->harga_lain;
+
 
     $permohonan->save();
 
@@ -142,6 +157,7 @@ class PermohonanController extends Controller
   }
 
   public function updateUlasan($id, Request $request){
+    // dd($request->all());
     $user_id = Auth::user()->id;
     $current_user_info = User::findOrFail($user_id);
     //dd($current_user_info->role);
@@ -158,6 +174,9 @@ class PermohonanController extends Controller
 
     if($current_user_info->role == 3){
       $permohonan->status_permohonan = $request->status_permohonan;
+      if($request->status_permohonan == 'Lulus'){
+        $permohonan->status_pembayaran = $request->status_pembayaran;
+      }
     }
 
     $permohonan->save();
@@ -216,25 +235,27 @@ class PermohonanController extends Controller
     if($current_user_info->role == 3){
       $admin = User::where('role','=','0')->get();
 
-      $permohonan->status_permohonan = "Lulus";
+      if($permohonan->status_permohonan = "Lulus"){
+        // have not done yet 15/7/2020 -luke-
+        $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'permohonan_lulus')->first();
+        if(is_null($email))
+        {
+          foreach ($admin as $data) {
+            $permohonan->notify(new PermohonanLulusAdminNull($data));  // use this notification when email template not available
+          }
+        }
+        else
+        {
+          foreach ($admin as $data) {
+            $permohonan->notify(new PermohonanLulusAdmin($data, $email));
+          }
+        }
+      }
 
-      // have not done yet 15/7/2020 -luke-
-      $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'permohonan_lulus')->first();
-      if(is_null($email))
-      {
-        foreach ($admin as $data) {
-          $permohonan->notify(new PermohonanLulusAdminNull($data));  // use this notification when email template not available
-        }
-      }
-      else
-      {
-        foreach ($admin as $data) {
-          $permohonan->notify(new PermohonanLulusAdmin($data, $email));
-        }
-      }
+
     }
     // return app('App\Http\Controllers\HomeController')->senaraiPermohonan();
-    return redirect()->route('permohonan.list')->with('success','Ulasan permohonan telah dikemaskini');
+    return redirect()->route('permohonan.listBaru')->with('success','Permohonan telah dikemaskini');
   }
 
   public function viewInformasiPermohonan($id){
@@ -266,6 +287,8 @@ class PermohonanController extends Controller
 
 
   public function uploadSuratBayaran(Request $request){
+    // dd($request->all());
+
     $uploaded_files_permohonan_surat_pembayaran =  $request->file('attachment_surat_bayaran')->store('uploads/surat_bayaran');
 
     $permohonan_id = $request->permohonan_id_upload_surat_bayaran;
@@ -328,6 +351,24 @@ class PermohonanController extends Controller
   public function downloadSuratPenerimaanDataUser($id){
     $permohonan = Permohonan::findOrFail($id);
     return Storage::download($permohonan->attachment_penerimaan_data_user);
+  }
+
+  public function viewSebabGagal($id){
+
+    $permohonan_id = $id;
+
+    return view('permohonan.alasanGagal',  compact('permohonan_id'));
+
+  }
+
+  public function submitSebabGagal($id, Request $request){
+    $permohonan = Permohonan::findOrFail($id);
+
+    $permohonan->remarks_admin = $request->sebab_gagal;
+
+    $permohonan->save();
+
+    return redirect()->route('permohonan.list')->with('success','Sebab permohonan gagal telah dihantar');
   }
 
 }

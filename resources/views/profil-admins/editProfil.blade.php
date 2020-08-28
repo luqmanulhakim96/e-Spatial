@@ -14,7 +14,7 @@
                   <div class="card-body">
                       <div class="card-title" style="text-align: center;">Kemaskini Profil | Update Profile</div>
 
-                      <form method="POST" action="{{ route('user.profil.updatePengguna') }}">
+                      <form method="POST" action="{{route('profil-admins.updateProfil')}}">
                           @csrf
 
 

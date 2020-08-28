@@ -18,6 +18,7 @@ class Permohonan extends Model implements Auditable
       'ulasan_penyokong_2',
       'ulasan_ketua_pengarah',
       'no_rujukan',
+      'harga_tambahan',
       'status_permohonan',
       'status_pembayaran',
       'user_id',
@@ -29,8 +30,15 @@ class Permohonan extends Model implements Auditable
       'attachment_penerimaan_data',
       'attachment_surat_bayaran',
       'link_data',
-      'attachment_penerimaan_data_user'
+      'attachment_penerimaan_data_user',
+      'remarks_admin'
+
     ];
+
+    public function getPermohonanID()
+   {
+       return sprintf('PMH-%05d', $this->id);
+   }
 
     public function user()
     {

@@ -27,7 +27,7 @@
                                                 <th width="15%"><p class="mb-0">TAHUN / KATEGORI DATA</p></th>
                                                 <th width="15%"><p class="mb-0">NEGERI</p></th>
                                                 <th width="15%"><p class="mb-0">SAIZ DATA (MB)</p></th>
-                                                <th width="15%"><p class="mb-0">HARGA ASAS (RM)</p></th>
+                                                <th width="15%"><p class="mb-0">HARGA ASAS</p></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -45,12 +45,24 @@
                                             @endif
                                             <td><p class="mb-0 " style="text-align: center;">{{ $senaraiHargaUser[$i][0]['negeri']}}</p></td>
                                             @if($senaraiHargaUser[$i][0]['jenis_dokumen'] == 'Bercetak')
-                                            <td><p class="mb-0 " style="text-align: center;">Tiada<input type="hidden" id="harga" name="saiz_data[]" value="1" required></p></td>
+                                            <td>
+                                              <p class="mb-0 " style="text-align: center;">
+                                                Tiada
+                                                <input type="hidden" id="harga" name="saiz_data[]" value="1" required>
+                                                <input type="hidden" id="harga" name="id_data_permohonan[]"  value="{{ $dataPermohonan[$i]['id']}}" readonly>
+                                              </p>
+                                            </td>
+
                                             @else
-                                            <td><p class="mb-0 " style="text-align: center;"><input type="text" id="harga" name="saiz_data[]" onkeypress="return fun_AllowOnlyAmountAndDot(this.id);"  value="{{ $senaraiHargaUser[$i][0]['saiz_data']}}" required></p></td>
+                                            <td>
+                                              <p class="mb-0 " style="text-align: center;">
+                                                <input type="text" id="harga" name="saiz_data[]" onkeypress="return fun_AllowOnlyAmountAndDot(this.id);"  value="{{ $senaraiHargaUser[$i][0]['saiz_data']}}" required>
+                                                <input type="hidden" id="harga" name="id_data_permohonan[]"  value="{{ $dataPermohonan[$i]['id']}}" readonly>
+                                              </p>
+                                            </td>
                                             @endif
                                             <td>
-                                              <p class="mb-0 " style="text-align: center;">{{ $senaraiHargaUser[$i][0]['harga_asas']}}</p>
+                                              <p class="mb-0 " style="text-align: center;">RM {{ $senaraiHargaUser[$i][0]['harga_asas']}}</p>
                                               <p class="mb-0 " style="text-align: center;"><input type="hidden" id="harga" name="harga_asas[]" value="{{ $senaraiHargaUser[$i][0]['harga_asas']}}" readonly></p>
                                             </td>
                                           </tr>
@@ -96,7 +108,7 @@
                                         <label for="harga_asas">Muat turun file AOI :</label>
                                         <!-- <br> -->
                                         @if($permohonan->attachment_aoi != null)
-                                          <a href="{{route('permohonan.download.attachment_aoi',$permohonan->id)}}" class="btn btn-primary btn-icon m-2"><i class="fa fa-download"></i> Muat Turun Data AOI</a>
+                                          <a href="{{route('permohonan.download.attachment_aoi',$permohonan->id)}}" class="btn btn-success btn-icon m-2"><i class="fa fa-download"></i> Muat Turun Data AOI</a>
                                         @else
                                         <a href="#" class="btn btn-dark btn-icon m-2"><i class="fa fa-download"></i> Tiada Data</a>
                                         @endif

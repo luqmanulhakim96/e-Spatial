@@ -30,10 +30,22 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/home/profil/kata-laluan/update', 'HomeController@updatePassAdmin')->name('profil-admins.updatePass');
 
+  Route::get('/home/profil/edit', 'HomeController@editProfil')->name('profil-admins.editProfil');
+
+  Route::post('/home/profil/update', 'HomeController@updateProfil')->name('profil-admins.updateProfil');
+
   #route for Permohonan
   Route::get('/permohonan/maklumat/{id}', 'PermohonanController@viewInformasiPermohonan')->name('permohonan.view');
 
   Route::get('/permohonan/harga/{id}', 'PermohonanController@hargaPermohonan')->name('permohonan.harga.view');
+
+  Route::get('/permohonan/senarai/baru', 'HomeController@senaraiPermohonanBaru')->name('permohonan.listBaru');
+
+  Route::get('/permohonan/senarai/sedang-diproses', 'HomeController@senaraiPermohonanSedangDiproses')->name('permohonan.listSedangDiproses');
+
+  Route::get('/permohonan/senarai/gagal', 'HomeController@senaraiPermohonanGagal')->name('permohonan.listGagal');
+
+  Route::get('/permohonan/senarai/dalaman', 'HomeController@senaraiPermohonanDalaman')->name('permohonan.listDalaman');
 
   Route::get('/permohonan/senarai/semua', 'HomeController@senaraiPermohonan')->name('permohonan.list');
 
@@ -56,6 +68,12 @@ Route::middleware('admin')->group(function () {
   Route::get('/permohonan/download/attachment_receipt_pembayaran/{id}', 'PermohonanController@downloadResitPembayaran')->name('permohonan.download.attachment_receipt_pembayaran');
 
   Route::get('/permohonan/download/attachment_penerimaan_data_user/{id}', 'PermohonanController@downloadSuratPenerimaanDataUser')->name('permohonan.download.attachment_penerimaan_data_user');
+
+  Route::get('/permohonan/sebabGagal/{id}', 'PermohonanController@viewSebabGagal')->name('permohonan.alasanGagal');
+
+  Route::post('/permohonan/sebabGagal/update/{id}', 'PermohonanController@submitSebabGagal')->name('permohonan.submitAlasan');
+
+
 
 
   #route for Senarai Harga
@@ -116,7 +134,11 @@ Route::middleware('user')->group(function () {
   #normal user route
   Route::get('/halaman-utama', 'UserController@index')->name('user.mainMenu');
 
+  Route::get('/permohonan/user/senarai/sedang_diproses', 'UserController@viewListSedangDiproses')->name('user.listSedangDiproses');
+
   Route::get('/permohonan/senarai', 'UserController@list')->name('user.list');
+
+  Route::get('/permohonan/user/senarai/gagal', 'UserController@viewListGagal')->name('user.listGagal');
 
   Route::get('/permohonan/baru', 'UserController@add')->name('user.add');
 
@@ -152,7 +174,7 @@ Route::middleware('user')->group(function () {
 
   Route::get('/profil/edit', 'UserController@editProfil')->name('user.profil.edit');
 
-  Route::post('/profile/update', 'UserController@updateProfil')->name('user.profil.updatePengguna');
+  Route::post('/profile/update', 'UserController@updateProfil')->name('/');
 
   Route::post('/upload/resit_pembayaran', 'UserController@uploadResitPembayaran')->name('user.upload.resit_pembayaran');
 
@@ -165,11 +187,5 @@ Route::middleware('user')->group(function () {
   Route::get('/permohonan/user/download/surat_bayaran/{id}', 'UserController@downloadSuratBayaran')->name('user.download.surat_bayaran');
 
   Route::get('/permohonan/user/download/surat_penerimaan_data/{id}', 'UserController@downloadSuratPenerimaanData')->name('user.download.surat_penerimaan_data');
-
-
-
-
-
-
 });
 // Route::resource('senaraiHargas', 'SenaraiHargaController');
