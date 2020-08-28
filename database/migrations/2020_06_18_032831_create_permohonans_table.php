@@ -26,6 +26,8 @@ class CreatePermohonansTable extends Migration
             $table->string('ulasan_penyokong_2');
             $table->string('ulasan_ketua_pengarah');
             $table->string('no_rujukan');
+            $table->string('harga_tambahan')->nullable();
+
             $table->timestamps();
         });
     }

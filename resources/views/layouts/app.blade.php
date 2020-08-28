@@ -61,7 +61,20 @@
                         @if(Auth::user()->role == 0 || Auth::user()->role == 1 || Auth::user()->role == 2 || Auth::user()->role == 3)
                         <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
                         <!-- Sub menu parent -->
-                        <li class="side-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 py-3 pl-4">Senarai Permohonan</a></li>
+                        <!-- <li class="side-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 py-3 pl-4">Senarai Permohonan #temp</a></li> -->
+
+                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4 sub-menu-parent" data-toggle="collapse" data-target="#table-sub-menu3" aria-expanded="false" aria-controls="table-sub-menu">Senarai Permohonan </a></li>
+                        <div id="table-sub-menu3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <ul class="side-sub-menu p-0">
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listBaru') }}" class="w-100 pl-4">Senarai Permohonan Baru </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listSedangDiproses') }}" class="w-100 pl-4">Senarai Permohonan Sedang Diproses </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 pl-4">Senarai Permohonan Lulus </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listGagal') }}" class="w-100 pl-4">Senarai Permohonan Gagal </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listDalaman') }}" class="w-100 pl-4">Senarai Permohonan Dalaman </a></li>
+
+                            </ul>
+                        </div>
+
                         @endif
                         @if(Auth::user()->role == 0)
                         <!-- Sub menu parent -->
@@ -188,6 +201,7 @@
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-max-height">
                             <!-- Menu items -->
                             <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i>{{explode(' ',trim(ucwords(strtolower((Auth::user()->name)))))[0]}} </a>
+                            <a href="{{ route('profil-admins.editProfil') }}" class="dropdown-item text-secondary-light">Kemaskini Profil</a>
                             <a href="{{ route('profil-admins.changePass') }}" class="dropdown-item text-secondary-light">Tukar Kata Laluan</a>
                             <!-- <a href="#" class="dropdown-item text-secondary-light">Account setting</a>
                             <a href="#" class="dropdown-item text-secondary-light">Billing history</a> -->
