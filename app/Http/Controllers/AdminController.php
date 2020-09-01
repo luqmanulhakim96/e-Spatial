@@ -10,6 +10,8 @@ use Illuminate\Support\Str;
 use App\User;
 use App\Audit;
 
+use Auth;
+
 use App\Mail\User\EmailNotifikasiRegisterUser;
 use Illuminate\Support\Facades\Mail;
 
@@ -22,10 +24,11 @@ class AdminController extends Controller
 
   public function list()
   {
+    $currentUser = Auth::user();
     $user = User::where([['role','!=','5'],['status','!=','0']])->get();
     $user_deact = User::where([['role','!=','5'],['status','!=','1']])->get();
-    // dd($user);
-    return view('superadmin.list', compact('user','user_deact'));
+
+    return view('superadmin.list', compact('user','user_deact','currentUser'));
   }
 
   public function create(){
@@ -53,9 +56,9 @@ class AdminController extends Controller
   {
       return Validator::make($data, [
           'nama' => ['required'],
-          'email' => ['required', 'string', 'email', 'max:255'],
+          'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
           'role' => ['required'],
-          'kad_pengenalan' => ['required', 'string', 'max:12'],
+          'kad_pengenalan' => ['required', 'string', 'max:12', 'unique:users'],
       ]);
   }
 
@@ -64,7 +67,7 @@ class AdminController extends Controller
     $hashed_random_password = Hash::make($random);
 
     $user = User::create([
-      'kategori' => "JPSM",
+      'kategori' => "dalaman",
       'name' => $data['nama'],
       'email' => $data['email'],
       'kad_pengenalan' => $data['kad_pengenalan'],
@@ -92,8 +95,20 @@ class AdminController extends Controller
     $data->save();
   }
 
+  protected function validatorUpdate(array $data)
+  {
+      return Validator::make($data, [
+          'nama' => ['required'],
+          'email' => ['required', 'string', 'email', 'max:255'],
+          'role' => ['required'],
+          'kad_pengenalan' => ['required', 'string', 'max:12'],
+      ]);
+  }
+
   public function updateUser($id){
-    $this->validator(request()->all())->validate();
+
+
+    $this->validatorUpdate(request()->all())->validate();
     $this->update($id);
     return redirect()->route('superadmin.list');
   }

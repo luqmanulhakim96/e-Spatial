@@ -9,165 +9,218 @@
 
                 <div class="card rounded-lg">
                   <div class="card-body">
-                      <div class="card-title">Permohonan Baru</div>
+                      <div class="card-title" style="text-align: center;">Permohonan Baru</div>
                       <div class="">
-                        <div class="card-title">Pilih Data</div>
                         <form class="" id="pilihan_data" enctype="multipart/form-data">
                           @csrf
                         <!-- jenis dokumen input-->
-                        <div class="form-group">
-                            <label for="jenis_dokumen">Jenis Dokumen:</label>
-                            <label for="jenis_dokumen">(Document Type)</label>
-                              <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)" required>
-                                  <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
-                                  @foreach($jenisDokumen as $data)
-                                  <option value="{{$data->jenis_dokumen}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
-                                  @endforeach
-                              </select>
-                              @error('jenis_dokumen')
-                              <div class="alert alert-danger">
-                                <strong>{{ $message }}</strong>
-                              </div>
-                              @enderror
+                        <div class="row">
+                          <div class="col-md-4">
+
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="jenis_dokumen">Jenis Dokumen:</label>
+                                <label for="jenis_dokumen">(Document Type)</label>
+                                  <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)" required>
+                                      <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
+                                      @foreach($jenisDokumen as $data)
+                                      <option value="{{$data->jenis_dokumen}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
+                                      @endforeach
+                                  </select>
+                                  @error('jenis_dokumen')
+                                  <div class="alert alert-danger">
+                                    <strong>{{ $message }}</strong>
+                                  </div>
+                                  @enderror
+                            </div>
+                          </div>
                         </div>
 
-                        <!-- jenis data input-->
-                        <div class="form-group">
-                            <label for="jenis_data">Jenis Data:</label>
-                            <label for="jenis_data">(Data Type)</label>
-                              <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)" required>
-                                <option value="" selected disabled hidden>Pilih Jenis Data</option>
-                              </select>
-                              @error('jenis_data')
-                              <div class="alert alert-danger">
-                                <strong>{{ $message }}</strong>
+                        <div class="row">
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                              <!-- jenis data input-->
+                              <div class="form-group">
+                                  <label for="jenis_data">Jenis Data:</label>
+                                  <label for="jenis_data">(Data Type)</label>
+                                    <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)" required>
+                                      <option value="" selected disabled hidden>Pilih Jenis Data</option>
+                                    </select>
+                                    @error('jenis_data')
+                                    <div class="alert alert-danger">
+                                      <strong>{{ $message }}</strong>
+                                    </div>
+                                    @enderror
                               </div>
-                              @enderror
+                            </div>
                         </div>
+
+
+
+
+
 
                         <div id="custom_form_div" style="display: none;">
-                          <div class="form-group">
-                            <div class="form-group" id="custom_jenis_data_div" >
-                                <label for="maklumat_agensi">Nyatakan Jenis Data:</label>
-                                <input type="text" class="custom-select  bg-light @error('custom_jenis_data') is-invalid @enderror" id="custom_jenis_data" name="custom_jenis_data" placeholder="Nyatakan Jenis Data" aria-describedby="custom_jenis_data">
-                                @error('custom_jenis_data')
-                                <div class="alert alert-danger">
-                                  <strong>{{ $message }}</strong>
-                                </div>
-                                @enderror
-                            </div>
-                          </div>
+                          <div class="row">
+                              <div class="col-md-4">
 
-                          <div class="form-group">
-                            <div class="form-group" id="custom_tahun_div" >
-                                <label for="maklumat_agensi">Tahun:</label>
-                                <input type="text" class="custom-select  bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" placeholder="Nyatakan Tahun Data" aria-describedby="custom_tahun">
-                                @error('custom_tahun')
-                                <div class="alert alert-danger">
-                                  <strong>{{ $message }}</strong>
-                                </div>
-                                @enderror
-                            </div>
-                          </div>
-
-                          <!-- custom negeri input -->
-                          <div class="form-group">
-                            <label for="negeri">Negeri:</label>
-                            <label for="negeri">(State)</label>
-                              <select id="custom_negeri" class="custom-select  bg-light" name="custom_negeri" required>
-                                  <option value="" selected disabled hidden>Pilih Negeri</option>
-                              </select>
-                              @error('custom_negeri')
-                              <div class="alert alert-danger">
-                                <strong>{{ $message }}</strong>
                               </div>
-                              @enderror
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <div class="form-group" id="custom_jenis_data_div" >
+                                      <label for="maklumat_agensi">Nyatakan Jenis Data:</label>
+                                      <input type="text" class="form-control bg-light @error('custom_jenis_data') is-invalid @enderror" id="custom_jenis_data" name="custom_jenis_data" placeholder="Nyatakan Jenis Data" aria-describedby="custom_jenis_data">
+                                      @error('custom_jenis_data')
+                                      <div class="alert alert-danger">
+                                        <strong>{{ $message }}</strong>
+                                      </div>
+                                      @enderror
+                                  </div>
+                                </div>
+                              </div>
                           </div>
 
+                          <div class="row">
+                              <div class="col-md-4">
 
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <div class="form-group" id="custom_tahun_div" >
+                                      <label for="maklumat_agensi">Tahun:</label>
+                                      <input type="text" class="form-control bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" placeholder="Nyatakan Tahun Data" aria-describedby="custom_tahun">
+                                      @error('custom_tahun')
+                                      <div class="alert alert-danger">
+                                        <strong>{{ $message }}</strong>
+                                      </div>
+                                      @enderror
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
 
+                          <div class="row">
+                              <div class="col-md-4">
 
+                              </div>
+                              <div class="col-md-4">
+                                <!-- custom negeri input -->
+                                <div class="form-group">
+                                  <label for="negeri">Negeri:</label>
+                                  <label for="negeri">(State)</label>
+                                    <select id="custom_negeri" class="custom-select  bg-light" name="custom_negeri" required>
+                                        <option value="" selected disabled hidden>Pilih Negeri</option>
+                                    </select>
+                                    @error('custom_negeri')
+                                    <div class="alert alert-danger">
+                                      <strong>{{ $message }}</strong>
+                                    </div>
+                                    @enderror
+                                </div>
+                              </div>
+                          </div>
 
                         </div>
 
                         <div id="default_form_div"  style="display: block;">
 
-                                                  <!--kategori data input -->
-                                                  <div class="form-group" id="kategori_data_div" style="display: none;">
-                                                      <label for="kategori_data">Kategori Data:</label>
-                                                        <select id="kategori_data" class="custom-select  bg-light" name="kategori_data" required>
-                                                            <option value="" selected disabled hidden>Pilih Kategori Data</option>
-                                                        </select>
-                                                        @error('kategori_data')
-                                                        <div class="alert alert-danger">
-                                                          <strong>{{ $message }}</strong>
-                                                        </div>
-                                                        @enderror
-                                                  </div>
+                          <div class="row">
+                              <div class="col-md-4">
 
-                                                  <!--tahun input -->
-                                                  <div class="form-group" id="tahun_div" style="display: block;">
-                                                      <label for="tahun">Tahun:</label>
-                                                      <label for="tahun">(Year)</label>
-                                                      <select id="tahun" class="custom-select  bg-light" name="tahun" required>
-                                                          <option value="" selected disabled hidden>Pilih Tahun</option>
-                                                      </select>
-                                                      @error('tahun')
-                                                      <div class="alert alert-danger">
-                                                        <strong>{{ $message }}</strong>
-                                                      </div>
-                                                      @enderror
-                                                  </div>
-
-                                                  <!-- negeri input -->
-                                                  <div class="form-group">
-                                                    <label for="negeri">Negeri:</label>
-                                                    <label for="negeri">(State)</label>
-                                                      <select id="negeri" class="custom-select  bg-light" name="negeri" required>
-                                                          <option value="" selected disabled hidden>Pilih Negeri</option>
-                                                      </select>
-                                                      @error('negeri')
-                                                      <div class="alert alert-danger">
-                                                        <strong>{{ $message }}</strong>
-                                                      </div>
-                                                      @enderror
-                                                  </div>
-
-
-                        </div>
-
-                        <!-- jenis kertas input-->
-                        <div class="form-group" style="display: none;" id="jenis_kertas_div">
-                            <label for="jenis_kertas">Jenis Kertas:</label>
-                              <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas" required>
-                                  <option value="" selected disabled hidden>Pilih Jenis Kertas</option>
-                              </select>
-                              @error('jenis_kertas')
-                              <div class="alert alert-danger">
-                                <strong>{{ $message }}</strong>
                               </div>
-                              @enderror
+                              <div class="col-md-4">
+                                <!--kategori data input -->
+                                <div class="form-group" id="kategori_data_div" style="display: none;">
+                                    <label for="kategori_data">Kategori Data:</label>
+                                      <select id="kategori_data" class="custom-select  bg-light" name="kategori_data" required>
+                                          <option value="" selected disabled hidden>Pilih Kategori Data</option>
+                                      </select>
+                                      @error('kategori_data')
+                                      <div class="alert alert-danger">
+                                        <strong>{{ $message }}</strong>
+                                      </div>
+                                      @enderror
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-md-4">
+
+                              </div>
+                              <div class="col-md-4">
+                                <!--tahun input -->
+                                <div class="form-group" id="tahun_div" style="display: block;">
+                                    <label for="tahun">Tahun:</label>
+                                    <label for="tahun">(Year)</label>
+                                    <select id="tahun" class="custom-select  bg-light" name="tahun" required>
+                                        <option value="" selected disabled hidden>Pilih Tahun</option>
+                                    </select>
+                                    @error('tahun')
+                                    <div class="alert alert-danger">
+                                      <strong>{{ $message }}</strong>
+                                    </div>
+                                    @enderror
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-md-4">
+
+                              </div>
+                              <div class="col-md-4">
+                                <!-- negeri input -->
+                                <div class="form-group">
+                                  <label for="negeri">Negeri:</label>
+                                  <label for="negeri">(State)</label>
+                                    <select id="negeri" class="custom-select  bg-light" name="negeri" required>
+                                        <option value="" selected disabled hidden>Pilih Negeri</option>
+                                    </select>
+                                    @error('negeri')
+                                    <div class="alert alert-danger">
+                                      <strong>{{ $message }}</strong>
+                                    </div>
+                                    @enderror
+                                </div>
+                              </div>
+                          </div>
+
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-4">
 
-                        <!-- counter -->
-                        <!-- <div class="form-group">
-                          <label for="negeri">Data Counter:</label>
-                            <input type="text" class="form-control bg-light" id="counter_data" name="counter_data" aria-describedby="counter_data" value="0" readonly>
-                        </div> -->
-
-                        <div class="">
-                          <input class="btn btn-primary" type="button" value=" Tambah Data " onclick="tambahData()">
-                          <!-- <button type="submit" class="btn btn-primary" onclick="tambahData()">Tambah Data</button> -->
+                            </div>
+                            <div class="col-md-4">
+                              <!-- jenis kertas input-->
+                              <div class="form-group" style="display: none;" id="jenis_kertas_div">
+                                  <label for="jenis_kertas">Jenis Kertas:</label>
+                                    <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas" required>
+                                        <option value="" selected disabled hidden>Pilih Jenis Kertas</option>
+                                    </select>
+                                    @error('jenis_kertas')
+                                    <div class="alert alert-danger">
+                                      <strong>{{ $message }}</strong>
+                                    </div>
+                                    @enderror
+                              </div>
+                            </div>
                         </div>
 
-                          <!-- <button class="btn btn-primary" onclick="tambahData()">Mohon</button> -->
+                        <div class="row">
+                            <div class="col-md-5">
+
+                            </div>
+                            <div class="col-md-4">
+                              <input class="btn btn-primary" type="button" value=" Tambah Data " onclick="tambahData()">
+
+                            </div>
+                        </div>
                         </form>
-
-                      </div>
-                      <div class="">
-
-
                       </div>
                   </div>
                 </div>
@@ -179,7 +232,7 @@
                         <!-- Light Bordered Table card -->
                         <div class="card rounded-lg">
                             <div class="card-body">
-                                <div class="card-title">Senarai Data Permohonan</div>
+                                <div class="card-title" style="text-align: center;">Senarai Data Permohonan</div>
                                 <!-- Table -->
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="pilihan_table">
@@ -209,12 +262,28 @@
             <div class="card-body">
               <div class="card rounded-lg">
                 <div class="card-body">
-                  <div class="card-title">Maklumat Tambahan</div>
+                  <div class="card-title" style="text-align: center;">Maklumat Tambahan</div>
 
                   <form  method="post" action="{{route('user.submit')}}" id="permohonan_data" enctype="multipart/form-data">
                     @csrf
 
                     <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="attachment_permohonan">Muatnaik Surat Permohonan:</label>
+                            <!-- <input type="file" required="required" onchange="return fileValidation('attachment_permohonan')" class="custom-select  bg-light @error('attachment_permohonan') is-invalid @enderror" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan"> -->
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return fileValidation('attachment_permohonan')" name="attachment_permohonan">
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                            </div>
+                            <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+                            @error('attachment_permohonan')
+                            <div class="alert alert-danger">
+                              <strong>{{ $message }}</strong>
+                            </div>
+                            @enderror
+                        </div>
+                      </div>
                       <div class="col-md-6">
                         <div class="form-group">
                             <label for="attachment_permohonan">Muatnaik Attachment AOI:</label>
@@ -230,22 +299,6 @@
                             </div>
                             @enderror
 
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="attachment_permohonan">Muatnaik Lampiran:</label>
-                            <!-- <input type="file" required="required" onchange="return fileValidation('attachment_permohonan')" class="custom-select  bg-light @error('attachment_permohonan') is-invalid @enderror" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan"> -->
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return fileValidation('attachment_permohonan')" name="attachment_permohonan">
-                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                            </div>
-                            <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
-                            @error('attachment_permohonan')
-                            <div class="alert alert-danger">
-                              <strong>{{ $message }}</strong>
-                            </div>
-                            @enderror
                         </div>
                       </div>
                     </div>
@@ -281,7 +334,7 @@
                         <div class="form-group">
                           <div class="form-group" id="maklumat_agensi_dan_negara_div" style="display: none;" >
                               <label for="maklumat_agensi">Maklumat Agensi Dan Negara Terlibat:</label>
-                              <input type="text" class="custom-select  bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara">
+                              <input type="text" class="form-control bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara">
                               @error('maklumat_agensi_dan_negara')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>
@@ -307,7 +360,7 @@
                     </div>
 
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                         <div class="form-group" style="display: block;">
                           <label for="negeri">Jumlah data yang dipohon:</label>
                             <input type="text" class="form-control bg-light" id="counter_data" name="counter_data" aria-describedby="counter_data" value="0" readonly>
@@ -320,7 +373,7 @@
 
                       </div>
                       <div class="col-md-4" id="button_submit_permohonan" style="display: none;">
-                        <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Mohon Data</button>
+                        <button type="submit" onclick="return confirm('Anda pasti mahu memohon data ini?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Mohon Data</button>
                       </div>
                     </div>
 
@@ -473,6 +526,8 @@
                         //console.log(data[0].id);
                         //insert responsive input text in form
                         str_to_append = '<div><input type="hidden" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data[0].id +'"></div>';
+                        str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ counter_data +'" name="data_jenis_data['+ counter_data +']"  value="Tiada"></div>';
+                        str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ counter_data +'" name="data_tahun['+ counter_data +']"  value="Tiada"></div>';
                         //add counter for data apply by the user
                         counter_data++;
                         if(counter_data != 0)
@@ -482,9 +537,11 @@
                         console.log('counter_data: tahun:',counter_data);
 
                         document.getElementById("counter_data").value = counter_data;
-                        //$("#counter_data").append(counter_data);
-                        //console.log(counter_data);
+                        $("#counter_data").append(counter_data);
                         $("#permohonan_data").append(str_to_append);
+                        $("#permohonan_data").append(str_to_append_custom_jenis_data);
+                        $("#permohonan_data").append(str_to_append_custom_tahun);
+
                       });
                     },
                     error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -538,6 +595,8 @@
                           }
                           //console.log(data.id);
                           str_to_append = '<div><input type="hidden" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
+                          str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ counter_data +'" name="data_jenis_data['+ counter_data +']"  value="Tiada"></div>';
+                          str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ counter_data +'" name="data_tahun['+ counter_data +']"  value="Tiada"></div>';
                           counter_data++;
                           if(counter_data != 0)
                           {
@@ -548,6 +607,9 @@
                           document.getElementById("counter_data").value = counter_data;
                           $("#counter_data").append(counter_data);
                           $("#permohonan_data").append(str_to_append);
+                          $("#permohonan_data").append(str_to_append_custom_jenis_data);
+                          $("#permohonan_data").append(str_to_append_custom_tahun);
+
                         })
                       })
                     }
@@ -596,9 +658,9 @@
                             );
                           }
                           //console.log(data.id);
-                          str_to_append = '<div><input type="text" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
-                          str_to_append_custom_jenis_data = '<div><input type="text" id="data_permohonan_jenis_data'+ counter_data +'" name="data_jenis_data['+ counter_data +']"  value="'+ custom_jenis_data +'"></div>';
-                          str_to_append_custom_tahun = '<div><input type="text" id="data_permohonan_tahun'+ counter_data +'" name="data['+ counter_data +']"  value="'+ custom_tahun +'"></div>';
+                          str_to_append = '<div><input type="hidden" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
+                          str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ counter_data +'" name="data_jenis_data['+ counter_data +']"  value="'+ custom_jenis_data +'"></div>';
+                          str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ counter_data +'" name="data_tahun['+ counter_data +']"  value="'+ custom_tahun +'"></div>';
 
 
                           counter_data++;

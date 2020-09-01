@@ -314,6 +314,7 @@
                         <div class="form-group" style="display: block;">
                           <label for="negeri">Jumlah data yang dipohon:</label>
                             <input type="text" class="form-control bg-light" id="counter_data" name="counter_data" aria-describedby="counter_data" value="{{$jumlahdata}}" readonly>
+                            <input type="hidden" class="form-control bg-light" id="increment" name="increment" aria-describedby="increment" value="{{$jumlahdata}}" readonly>
                         </div>
                       </div>
                     </div>
@@ -430,6 +431,8 @@
                 }
                 //this variable to count total data apply by the user
                 var counter_data = document.getElementById("counter_data").value;
+                var increment = document.getElementById("increment").value;
+
 
                 //reset form above
                 document.getElementById("pilihan_data").reset();
@@ -463,7 +466,7 @@
                             tahun + kategori_data +
                             '</td><td><p class="mb-0 font-weight-bold">' +
                             negeri +
-                            '</td><td><a onClick="removeData(this,'+ counter_data  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }else {
                           jenis_kertas = "Tiada";
@@ -478,16 +481,17 @@
                             tahun + kategori_data +
                             '</td><td><p class="mb-0 font-weight-bold">' +
                             negeri +
-                            '</td><td><a onClick="removeData(this,'+ counter_data  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }
                         //console.log(data[0].id);
                         //insert responsive input text in form
-                        str_to_append = '<div><input type="hidden" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data[0].id +'"></div>';
-                        str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ counter_data +'" name="data_jenis_data['+ counter_data +']"  value="Tiada"></div>';
-                        str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ counter_data +'" name="data_tahun['+ counter_data +']"  value="Tiada"></div>';
+                        str_to_append = '<div><input type="hidden" id="data_permohonan'+ increment +'" name="data['+ increment +']"  value="'+ data[0].id +'"></div>';
+                        str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ increment +'" name="data_jenis_data['+ increment +']"  value="Tiada"></div>';
+                        str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ increment +'" name="data_tahun['+ increment +']"  value="Tiada"></div>';
                         //add counter for data apply by the user
                         counter_data++;
+                        increment++;
                         if(counter_data != 0)
                         {
                           document.getElementById('button_submit_permohonan').style.display = "block";
@@ -495,7 +499,11 @@
                         console.log('counter_data: tahun:',counter_data);
 
                         document.getElementById("counter_data").value = counter_data;
+                        document.getElementById("increment").value = increment;
+
                         $("#counter_data").append(counter_data);
+                        $("#increment").append(increment);
+
                         $("#permohonan_data").append(str_to_append);
                         $("#permohonan_data").append(str_to_append_custom_jenis_data);
                         $("#permohonan_data").append(str_to_append_custom_tahun);
@@ -533,7 +541,7 @@
                               tahun + kategori_data +
                               '</td><td><p class="mb-0 font-weight-bold">' +
                               negeri +
-                              '</td><td><a onClick="removeData(this,'+ counter_data  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
@@ -548,14 +556,15 @@
                               tahun + kategori_data +
                               '</td><td><p class="mb-0 font-weight-bold">' +
                               negeri +
-                              '</td><td><a onClick="removeData(this, '+ counter_data  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }
                           //console.log(data.id);
-                          str_to_append = '<div><input type="hidden" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
-                          str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ counter_data +'" name="data_jenis_data['+ counter_data +']"  value="Tiada"></div>';
-                          str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ counter_data +'" name="data_tahun['+ counter_data +']"  value="Tiada"></div>';
+                          str_to_append = '<div><input type="hidden" id="data_permohonan'+ increment +'" name="data['+ increment +']"  value="'+ data.id +'"></div>';
+                          str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ increment +'" name="data_jenis_data['+ increment +']"  value="Tiada"></div>';
+                          str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ increment +'" name="data_tahun['+ increment +']"  value="Tiada"></div>';
                           counter_data++;
+                          increment++;
                           if(counter_data != 0)
                           {
                             document.getElementById('button_submit_permohonan').style.display = "block";
@@ -563,7 +572,11 @@
                           console.log('counter_data: kategori_data :',counter_data);
 
                           document.getElementById("counter_data").value = counter_data;
+                          document.getElementById("increment").value = increment;
+
                           $("#counter_data").append(counter_data);
+                          $("#increment").append(increment);
+
                           $("#permohonan_data").append(str_to_append);
                           $("#permohonan_data").append(str_to_append_custom_jenis_data);
                           $("#permohonan_data").append(str_to_append_custom_tahun);
@@ -597,7 +610,7 @@
                               custom_tahun +
                               '</td><td><p class="mb-0 font-weight-bold">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this,'+ counter_data  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
@@ -612,23 +625,28 @@
                               custom_tahun +
                               '</td><td><p class="mb-0 font-weight-bold">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this, '+ counter_data  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }
                           //console.log(data.id);
-                          str_to_append = '<div><input type="hidden" id="data_permohonan'+ counter_data +'" name="data['+ counter_data +']"  value="'+ data.id +'"></div>';
-                          str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ counter_data +'" name="data_jenis_data['+ counter_data +']"  value="'+ custom_jenis_data +'"></div>';
-                          str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ counter_data +'" name="data_tahun['+ counter_data +']"  value="'+ custom_tahun +'"></div>';
+                          str_to_append = '<div><input type="hidden" id="data_permohonan'+ increment +'" name="data['+ increment +']"  value="'+ data.id +'"></div>';
+                          str_to_append_custom_jenis_data = '<div><input type="hidden" id="data_permohonan_jenis_data'+ increment +'" name="data_jenis_data['+ increment +']"  value="'+ custom_jenis_data +'"></div>';
+                          str_to_append_custom_tahun = '<div><input type="hidden" id="data_permohonan_tahun'+ increment +'" name="data_tahun['+ increment +']"  value="'+ custom_tahun +'"></div>';
 
 
                           counter_data++;
+                          increment++;
                           if(counter_data != 0)
                           {
                             document.getElementById('button_submit_permohonan').style.display = "block";
                           }
 
                           document.getElementById("counter_data").value = counter_data;
+                          document.getElementById("increment").value = increment;
+
                           $("#counter_data").append(counter_data);
+                          $("#increment").append(increment);
+
                           $("#permohonan_data").append(str_to_append);
                           $("#permohonan_data").append(str_to_append_custom_jenis_data);
                           $("#permohonan_data").append(str_to_append_custom_tahun);
@@ -640,8 +658,7 @@
 
 
                 }
-                //
-                console.log('counter_data:',counter_data);
+
 
           }
         </script>
