@@ -31,7 +31,7 @@
                           </thead>
                           <!-- Table body -->
                           <tbody>
-                            @foreach($list_lulus as $data)
+                            @foreach($list_lulus as $key => $data)
                             <tr>
 
                               <td>
@@ -65,13 +65,14 @@
                               @endif
 
                               @if($data->attachment_surat_bayaran == null)
+
                               <td>
-                                  <!-- <button type="button" class="fa fa-download" name="button"></button> -->
                                   <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tiada Data">
                                   <i class="fa fa-download"></i>
                                   </button>
                               </td>
                               @else
+
                               <td>
                                 <a  href="{{route('user.download.surat_bayaran', $data->id)}}">
                                   <button class="btn btn-success mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Muat turun Surat Kelulusan">
@@ -82,75 +83,31 @@
                               @endif
                               <!-- column muat naik receipt pembayaran -->
                               @if($data->attachment_receipt_pembayaran == null)
-                              <td>
-                                <div class="d-flex flex-row justify-content-around align-items-center">
-
-                                  @if($data->status_pembayaran == 'Berbayar')
-                                  <button class="btn btn-warning mr-1"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-upload"></i>
-                                  </button>
-                                  @elseif($data->status_pembayaran == 'Pengecualian Bayaran')
-                                  <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tidak perlu muatnaik data">
-                                    <i class="fa fa-upload"></i>
-                                  </button>
-                                  @elseif($data->status_pembayaran == 'Sudah Dibayar')
-                                  <button class="btn btn-success mr-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-upload"></i>
-                                  </button>
-                                  @endif
-
-                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <form action="{{route('user.upload.resit_pembayaran')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
-                                          @csrf
-                                          <h5>Muat Naik Resit Pembayaran</h5>
-                                          <small>Saiz file tidak melebihi 100MB.</small>
-                                          <!-- Upload Resit PEMBAYARaran -->
-                                          <div class="input-group mt-3">
-                                              <!-- <input type="file" onchange="return fileValidation('attachment_receipt_pembayaran')" class="form-control bg-light" id="attachment_receipt_pembayaran" name="attachment_receipt_pembayaran" aria-describedby="attachment_receipt_pembayaran"> -->
-                                              <div class="custom-file">
-                                                  <input type="file" required class="custom-file-input" required id="attachment_receipt_pembayaran" onchange="return fileValidation('attachment_receipt_pembayaran')" name="attachment_receipt_pembayaran">
-                                                  <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih Fail</label>
-                                              </div>
-                                          </div>
-                                          <!-- pass id permohonan -->
-                                          <input type="hidden" id="permohonan_id_resit"name="permohonan_id_resit" value="{{ $data->id  }}">
-                                          <!-- Login button -->
-                                          <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muat Naik</button>
-                                      </form>
-                                  </div>
-
-                                    <!-- <a href="#" class="btn btn-success mr-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-upload"></i></a> -->
-                                </div>
-
-                              </td>
+                              <div class="d-flex flex-row justify-content-around align-items-center">
+                                @if($data->status_pembayaran == 'Berbayar' && $data->attachment_receipt_pembayaran == null)
+                                <td>
+                                <button class="btn btn-warning mr-1" onclick="passId_upload_link_data({{ $data->id  }})" data-id="" data-toggle="modal"  data-target="#upload_resit_model"><i class="fa fa-upload"></i></button>
+                                </td>
+                                @endif
+                            </div>
                               @else
-                              <td>
-                                <button class="btn btn-success mr-1"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <i class="fa fa-upload"></i>
-                                </button>
-
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <form action="{{route('user.upload.resit_pembayaran')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
-                                        @csrf
-                                        <h5>Muat Naik Resit Pembayaran</h5>
-                                        <small>Saiz file tidak melebihi 100MB.</small>
-                                        <!-- Upload Resit PEMBAYARaran -->
-                                        <div class="input-group mt-3">
-                                            <!-- <input type="file" onchange="return fileValidation('attachment_receipt_pembayaran')" class="form-control bg-light" id="attachment_receipt_pembayaran" name="attachment_receipt_pembayaran" aria-describedby="attachment_receipt_pembayaran"> -->
-                                            <div class="custom-file">
-                                                <input type="file" required class="custom-file-input" required id="attachment_receipt_pembayaran" onchange="return fileValidation('attachment_receipt_pembayaran')" name="attachment_receipt_pembayaran">
-                                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih Fail</label>
-                                            </div>
-                                        </div>
-                                        <!-- pass id permohonan -->
-                                        <input type="hidden" id="permohonan_id_resit"name="permohonan_id_resit" value="{{ $data->id  }}" readonly>
-                                        <!-- Login button -->
-                                        <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muat Naik</button>
-                                    </form>
-                                </div>
 
 
-                              </td>
+                                @if($data->status_pembayaran == 'Berbayar' && $data->attachment_receipt_pembayaran == null)
+                                <td>
+                                <button class="btn btn-warning mr-1" onclick="passId_upload_link_data({{ $data->id  }})" data-id="" data-toggle="modal"   data-target="#upload_resit_model"><i class="fa fa-upload"></i></button>
+                                </td>
+
+                                @elseif($data->status_pembayaran == 'Pengecualian Bayaran')
+                                <td>
+                                <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tidak perlu muatnaik data"><i class="fa fa-upload"></i></button>
+                                </td>
+                                @elseif($data->status_pembayaran == 'Sudah Dibayar' || $data->attachment_receipt_pembayaran != null)
+
+                                <td><button class="btn btn-success mr-1" onclick="passId_upload_link_data({{ $data->id  }})" data-id="" data-toggle="modal"   data-target="#upload_resit_model"><i class="fa fa-upload"></i></button></td>
+                                @endif
+
+                              </div>
                               @endif
 
                               @if($data->attachment_penerimaan_data == null)
@@ -166,46 +123,109 @@
 
                               <!-- column muat naik surat penerimaan data -->
 
-                              <td>
-                                <div class="d-flex flex-row justify-content-around align-items-center">
+
 
                                   @if($data->attachment_penerimaan_data_user == null)
-                                  <button class="btn btn-warning mr-1" type="button"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <td>
+                                    <div class="d-flex flex-row justify-content-around align-items-center">
+                                      <button class="btn btn-warning mr-1" onclick="passId_upload_borang({{ $data->id  }})" data-id="" data-toggle="modal"  data-target="#upload_borang_akuan_penerimaan_data"><i class="fa fa-upload"></i></button>
+                                    </div>
+                                  </td>
                                   @else
-                                  <button class="btn btn-success mr-1" type="button"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <td>
+                                    <div class="d-flex flex-row justify-content-around align-items-center">
+                                      <button class="btn btn-success mr-1" onclick="passId_upload_borang({{ $data->id  }})" data-id="" data-toggle="modal"  data-target="#upload_borang_akuan_penerimaan_data"><i class="fa fa-upload"></i></button>
+                                    </div>
+                                  </td>
                                   @endif
-                                    <i class="fa fa-upload"></i>
-                                  </button>
 
-                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                       <form action="{{route('user.upload.surat_penerimaan_data')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
                                           @csrf
                                           <h5>Muat Naik Surat Penerimaan Data</h5>
                                           <small>Saiz file tidak melebihi 100MB.</small>
-                                          <!-- Upload Resit PEMBAYARaran -->
                                           <div class="input-group mt-3">
-                                              <!-- <input type="file" class="form-control bg-light" onchange="return fileValidation('attachment_surat_penerimaan_data')" id="attachment_surat_penerimaan_data" name="attachment_surat_penerimaan_data" aria-describedby="attachment_surat_penerimaan_data"> -->
                                               <div class="custom-file">
                                                   <input type="file" required class="custom-file-input" required id="attachment_surat_penerimaan_data" onchange="return fileValidation('attachment_surat_penerimaan_data')" name="attachment_surat_penerimaan_data">
                                                   <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih Fail</label>
                                               </div>
                                           </div>
-                                          <!-- pass id permohonan -->
                                           <input type="hidden" id="permohonan_id_surat" name="permohonan_id_surat" value="{{ $data->id  }}">
-                                          <!-- Login button -->
                                           <button type="submit" class="btn btn-lg btn-primary btn-block mt-3">Muatnaik</button>
                                       </form>
-                                    <!-- <a href="#" class="btn btn-success mr-1"><i class="fa fa-upload"></i></a> -->
-                                </div>
+                                </div> -->
 
-                                </div>
 
-                              </td>
+
+
 
                             </tr>
                             @endforeach
                           </tbody>
                         </table>
+                      </div>
+
+                      <div class="modal fade" id="upload_borang_akuan_penerimaan_data" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Muat Naik Borang Akuan Penerimaan Data</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <form action="{{route('user.upload.surat_penerimaan_data')}}" id="form_borang" method="post" enctype="multipart/form-data">
+                              @csrf
+                              <div class="modal-body">
+
+                                <div class="input-group mt-3">
+                                    <div class="custom-file">
+                                        <input type="file" required class="custom-file-input" required id="attachment_surat_penerimaan_data" onchange="return fileValidation('attachment_surat_penerimaan_data')" name="attachment_surat_penerimaan_data">
+                                        <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih Fail</label>
+                                    </div>
+                                </div>
+
+                                  <input type="text" id="permohonan_id_surat" name="permohonan_id_surat" value="">
+
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="submit"  class="btn btn-primary" >Muatnaik</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal fade" id="upload_resit_model" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Muat Naik Resit Pembayaran</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <form action="{{route('user.upload.resit_pembayaran')}}" id="form_resit" method="post" enctype="multipart/form-data">
+                              @csrf
+                              <div class="modal-body">
+
+                                <div class="input-group mt-3">
+
+                                    <div class="custom-file">
+                                        <input type="file" required class="custom-file-input" required id="attachment_receipt_pembayaran" onchange="return fileValidation('attachment_receipt_pembayaran')" name="attachment_receipt_pembayaran">
+                                        <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih Fail</label>
+                                    </div>
+                                </div>
+
+                                  <input type="text" id="permohonan_id_resit" name="permohonan_id_resit" value="">
+
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="submit"  class="btn btn-primary" >Muatnaik</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                       </div>
 
 
@@ -215,6 +235,15 @@
             </div>
         </main>
         <script type="text/javascript">
+
+        function passId_upload_link_data(id){
+          $(".modal-body #permohonan_id_resit").val( id );
+        }
+
+        function passId_upload_borang(id){
+          $(".modal-body #permohonan_id_surat").val( id );
+        }
+
         $('#attachment_receipt_pembayaran').on('change',function(){
                 //get the file name
                 var fileName = $(this).val();
@@ -222,11 +251,22 @@
                 $(this).next('.custom-file-label').html(fileName);
             })
 
-            $('#attachment_surat_penerimaan_data').on('change',function(){
-                    //get the file name
-                    var fileName = $(this).val();
-                    //replace the "Choose a file" label
-                    $(this).next('.custom-file-label').html(fileName);
-                })
+        $('#attachment_surat_penerimaan_data').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+
+        function fileValidation(name){
+          var fileInput = document.getElementById(name);
+          var filePath = fileInput.value;
+          var allowedExtensions = /(\.pdf)$/i;
+          if(!allowedExtensions.exec(filePath)){
+              alert('Sila muatnaik file dalam format .pdf sahaja.');
+              fileInput.value = '';
+              return false;
+            }
+        }
         </script>
 @endsection

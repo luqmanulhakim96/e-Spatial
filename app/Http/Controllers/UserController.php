@@ -313,14 +313,24 @@ class UserController extends Controller
     $permohonan_id = $permohonan_id->id;
     // dd($data);
     $counter_data_permohonan = $data['counter_data'];
-    for($i = 0; $i < $counter_data_permohonan; $i++){
+
+    foreach ($data['data'] as $key => $value) {
       $submit = DataPermohonan::Create([
-        'senarai_harga_id' => $data['data'][$i],
+        'senarai_harga_id' => $data['data'][$key],
         'permohonan_id' => $permohonan_id,
-        'custom_jenis_data' => $data['data_jenis_data'][$i],
-        'custom_tahun' => $data['data_tahun'][$i],
+        'custom_jenis_data' => $data['data_jenis_data'][$key],
+        'custom_tahun' => $data['data_tahun'][$key],
       ]);
     }
+
+    // for($i = 0; $i < $counter_data_permohonan; $i++){
+    //   $submit = DataPermohonan::Create([
+    //     'senarai_harga_id' => $data['data'][$i],
+    //     'permohonan_id' => $permohonan_id,
+    //     'custom_jenis_data' => $data['data_jenis_data'][$i],
+    //     'custom_tahun' => $data['data_tahun'][$i],
+    //   ]);
+    // }
 
     return $submit;
   }
@@ -337,7 +347,7 @@ class UserController extends Controller
   }
 
   public function submitForm(Request $request){
-    //dd($request->all());
+    // dd($request->all());
     $user_id = Auth::user()->id;
     $filename_aoi = null;
     $filename_kepujian = null;
@@ -648,7 +658,7 @@ class UserController extends Controller
     $permohonan->attachment_penerimaan_data_user = $uploaded_files_permohonan;
     $permohonan->save();
 
-    return redirect()->route('user.list')->with('success','Surat Penerimaan Data anda telah berjaya dimuatnaik');
+    return redirect()->route('user.list')->with('success','Borang Akuan Penerimaan Data anda telah berjaya dimuatnaik');
   }
 
   public function updatePass(Request $request){

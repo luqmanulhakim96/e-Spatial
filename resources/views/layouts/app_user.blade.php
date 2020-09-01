@@ -79,7 +79,7 @@
 
                         <li class="side-menu-item px-3"><a href="{{ route('user.add') }}" class="w-100 py-3 pl-4" >Permohonan Baru</a></li>
 
-                        <!-- <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4" >Senarai Permohonan #TEMP</a></li> -->
+                        <!-- <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4" >Senarai Permohonan </a></li> -->
 
                         <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4 sub-menu-parent" data-toggle="collapse" data-target="#table-sub-menu3" aria-expanded="false" aria-controls="table-sub-menu">Senarai Permohonan </a></li>
                         <div id="table-sub-menu3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -90,7 +90,7 @@
                             </ul>
                         </div>
 
-                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4" >Manual Pengguna</a></li>
+                        <!-- <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4" >Manual Pengguna</a></li> -->
 
 
                         @endif

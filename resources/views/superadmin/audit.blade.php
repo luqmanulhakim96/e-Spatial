@@ -18,12 +18,13 @@
                             <tr>
                               <th class="all">Nama Pengguna</th>
                               <th class="all">Role</th>
-                              <th class="all">Event</th>
-                              <th class="all">Database</th>
-                              <th class="all">Data Lama</th>
-                              <th class="all">Data Baharu</th>
                               <th class="all">IP Address</th>
                               <th class="all">Timestamp</th>
+                              <th class="all">Database</th>
+                              <th class="all">Event</th>
+                              <th class="all">Data Lama</th>
+                              <th class="all">Data Baharu</th>
+
                             </tr>
                         </thead>
                         <!-- Table body -->
@@ -47,8 +48,11 @@
                             @elseif($datas->user->role == 4)
                             <td> Superadmin </td>
                             @endif
-                            <td>{{  ucfirst($datas->event) }}</td>
+                            <td>{{ $datas->ip_address }}</td>
+                            <td>{{  Carbon\Carbon::parse($datas->updated_at)->format('d-m-Y h:i:s')  }}</td>
                             <td>{{ substr($datas->auditable_type, strpos($datas->auditable_type, "/") + 4) }}</td>
+                            <td>{{  ucfirst($datas->event) }}</td>
+
                             @if( $datas->old_values == "[]")
                             <td>-</td>
                             @else
@@ -67,15 +71,14 @@
                               <td>{{ $datas->new_values }}</td>
                               @endif
                             @endif
-                            <td>{{ $datas->ip_address }}</td>
-                            <td>{{  Carbon\Carbon::parse($datas->updated_at)->format('d-m-Y h:i:s')  }}</td>
+
                           </tr>
                             @endif
                           @endforeach
                         </tbody>
                       </table>
                     </div>
-                      
+
                   </div>
                 </div>
             </div>

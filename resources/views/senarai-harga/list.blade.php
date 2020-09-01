@@ -12,10 +12,11 @@
                   <div class="card-body">
                       <div class="card-title">Senarai Harga</div>
 
-                      <a class="btn btn-ripple btn-raised btn-primary m-2" href="{{ route('senarai-harga.add') }}">Tambah Senarai</a>
+                      <a class="btn btn-ripple btn-raised btn-primary m-2" href="{{ route('senarai-harga.add') }}">Tambah Data Geospatial</a>
+                      <div style="padding: 5px"></div>
                       <div class="table-responsive">
 
-                      <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
+                      <table class="table table-striped table-bordered" id="responsiveDataTable" >
 
                         <!-- Table head -->
                         <thead>
@@ -36,7 +37,11 @@
                           <tr>
                             <td>{{ $data->id  }}</td>
                             <td>{{ $data->jenis_dokumen  }}</td>
-                            <td>{{ $data->saiz_data  }}{{ $data->jenis_kertas}}</td>
+                            @if($data->jenis_dokumen == "Bercetak")
+                            <td>{{ $data->jenis_kertas}}</td>
+                            @else
+                            <td>{{ $data->saiz_data  }}</td>
+                            @endif
                             <td>{{ $data->jenis_data  }}</td>
                             <td>{{ $data->tahun  }} {{ $data->kategori_data  }}</td>
                             <td>{{ $data->negeri  }}</td>
@@ -52,7 +57,7 @@
                         </tbody>
                       </table>
                     </div>
-                      
+
                   </div>
                 </div>
             </div>
