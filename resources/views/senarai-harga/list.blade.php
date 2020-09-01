@@ -28,7 +28,7 @@
                               <th class="all">TAHUN / KATEGORI DATA</th>
                               <th class="all">NEGERI</th>
                               <th class="all">HARGA ASAS (RM)</th>
-                              <th class="all">ACTIONS</th>
+                              <th class="all">TINDAKAN</th>
                             </tr>
                         </thead>
                         <!-- Table body -->

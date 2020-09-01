@@ -33,15 +33,16 @@ use App\Jobs\SendEmailPermohonanBaruAdmin;
 class PermohonanController extends Controller
 {
   public function hargaPermohonan($id){
+    // dd($id);
     $permohonan = Permohonan::findorfail($id);
-
+    // dd($permohonan);
     $dataPermohonan = DataPermohonan::where('permohonan_id',$id)
                         ->get();
     $count_data_permohonan = DataPermohonan::where('permohonan_id', $id)->count();
 
     $i = 0;
+    // dd($count_data_permohonan);
     foreach ($dataPermohonan as $value) {
-
       $senaraiHargaUser[$i] = SenaraiHarga::where('id', $value->senarai_harga_id)->get();
       $i++;
     }
