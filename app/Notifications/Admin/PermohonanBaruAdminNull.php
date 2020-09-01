@@ -9,6 +9,11 @@ use Illuminate\Notifications\Notification;
 use App\Mail\Admin\EmailNotifikasiAdminNull;
 use Illuminate\Support\Facades\Mail;
 
+use Carbon\Carbon;
+use DateTime;
+
+use App\Jobs\SendEmailPermohonanBaruAdminNull;
+
 class PermohonanBaruAdminNull extends Notification
 {
     use Queueable;
@@ -44,6 +49,8 @@ class PermohonanBaruAdminNull extends Notification
     public function toMail($notifiable)
     {
       return Mail::queue(new EmailNotifikasiAdminNull($this->admin));
+    //   $emailJob = (new SendEmailPermohonanBaruAdminNull($this->admin))->delay(Carbon::now()->addSeconds(30));
+    //   return dispatch($emailJob);
     }
     public function toDatabase($notifiable)
     {
