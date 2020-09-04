@@ -59,16 +59,32 @@
                               @if( $datas->auditable_type == "App\SenaraiSurat")
                               <td>Data Surat</td>
                               @else
-                              <td>{{ $datas->old_values }}</td>
+                              <td>
+                              <table>
+                                @foreach(explode(',', $datas->old_values) as $info)
+                                  <tr>
+                                    <td>{{  preg_replace('/[{}]/',"",$info) }}</td>
+                                  </tr>
+                                @endforeach
+                              </table>
+                              </td>
                               @endif
                             @endif
                             @if( $datas->new_values == "[]")
                             <td>-</td>
                             @else
                               @if( $datas->auditable_type == "App\SenaraiSurat")
-                              <td>{{ $datas->new_values }}</td>
+                              <td>Data Surat</td>
                               @else
-                              <td>{{ $datas->new_values }}</td>
+                              <td>
+                              <table>
+                                @foreach(explode(',', $datas->new_values) as $info)
+                                  <tr>
+                                    <td>{{  preg_replace('/[{}]/',"",$info) }}</td>
+                                  </tr>
+                                @endforeach
+                              </table>
+                              </td>
                               @endif
                             @endif
 
