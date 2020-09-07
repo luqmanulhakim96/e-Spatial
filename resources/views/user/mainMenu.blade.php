@@ -103,6 +103,36 @@
 
 
       </div>
+
+      <div class="row">
+        <!-- Col md 4 -->
+                       <div class="col-md-6 mt-4">
+                          <!--  Custom content card -->
+                          <div class="card rounded-lg">
+                              <div class="card-body">
+                                  <div class="card-title" style="text-align:center;">Pengumuman</div>
+                                  <!-- List -->
+
+
+                                  <div class="list-group">
+                                    @foreach($pengumuman as $data)
+                                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                                          <div class="d-flex w-100 justify-content-between">
+                                          <h6 class="mb-1">{{$data->tajuk}}</h6>
+                                          <small class="text-muted"></small>
+                                          </div>
+                                          <p class="my-1">{{$data->content}}</p>
+                                      </a>
+
+                                      @endforeach
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+      </div>
+
+
   </div>
 
 

@@ -102,6 +102,19 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/surat/submit', 'SenaraiSuratController@submitForm')->name('senarai-surat.submit');
 
+  #route for Senarai Surat
+  Route::get('/pengumuman/tambah', 'PengumumanController@viewAdd')->name('pengumuman.add');
+
+  Route::post('/pengumuman/submit', 'PengumumanController@submit')->name('pengumuman.submit');
+
+  Route::get('/pengumuman/senarai', 'PengumumanController@list')->name('pengumuman.list');
+
+  Route::get('/pengumuman/edit/{id}', 'PengumumanController@edit')->name('pengumuman.edit');
+
+  Route::get('/pengumuman/delete/{id}', 'PengumumanController@delete')->name('pengumuman.delete');
+
+
+
   #route for super admin
   Route::get('/pengguna/senarai', 'AdminController@list')->name('superadmin.list');
 

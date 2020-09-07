@@ -83,7 +83,7 @@ class AdminController extends Controller
     // dd($request->all());
     $this->validator($request->all())->validate();
     event($user = $this->add($request->all()));
-    return redirect()->route('superadmin.list');
+    return redirect()->route('superadmin.list')->with('success','Pengguna baru berjaya ditambah');
   }
 
   public function update($id){
@@ -110,7 +110,7 @@ class AdminController extends Controller
 
     $this->validatorUpdate(request()->all())->validate();
     $this->update($id);
-    return redirect()->route('superadmin.list');
+    return redirect()->route('superadmin.list')->with('success','Permohonan anda berjaya membuat permohonan data.');
   }
 
   public function delete($id){
@@ -122,7 +122,7 @@ class AdminController extends Controller
       elseif($user->status == true){
         $user->update(['status' => 0]);
       }
-      return redirect()->route('superadmin.list');
+      return redirect()->route('superadmin.list')->with('success','Pengguna berjaya dinyahaktif');
   }
 
 }

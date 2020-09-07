@@ -236,9 +236,7 @@
                     <div class="form-group" id="alamat_kediaman_div" style="display : block;">
                       <label for="alamat_kediaman" class="">Alamat Kediaman | Residential address</label>
                       <!-- <input id="alamat_kediaman" type="text" class="form-control bg-light @error('alamat_kediaman') is-invalid @enderror" name="alamat_kediaman" value="" autocomplete="address"  > -->
-                      <textarea id="alamat_kediaman" name="alamat_kediaman" rows="2" cols="50" class="form-control bg-light @error('alamat_kediaman') is-invalid @enderror">
-                        {{ old('alamat_kediaman') }}
-                        </textarea>
+                      <textarea id="alamat_kediaman" name="alamat_kediaman" rows="2" cols="50" class="form-control bg-light @error('alamat_kediaman') is-invalid @enderror">{{ old('alamat_kediaman') }}</textarea>
                       @error('alamat_kediaman')
                       <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
