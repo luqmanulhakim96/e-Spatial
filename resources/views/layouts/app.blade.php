@@ -75,6 +75,9 @@
                             </ul>
                         </div>
 
+                        <!-- Sub menu parent -->
+                        <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
+
                         @endif
                         @if(Auth::user()->role == 0)
                         <!-- Sub menu parent -->
@@ -83,6 +86,7 @@
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-surat.list') }}" class="w-100 py-3 pl-4" >Senarai Templat Surat</a></li>
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-email.list') }}" class="w-100 py-3 pl-4" >Senarai Templat Email</a></li>
+
                         @endif
                         @if(Auth::user()->role == 4)
                         <!-- Sub menu parent -->
@@ -116,7 +120,7 @@
            <div id=alert>
 
              <div class="alert alert-card  alert-success" role="alert">
-                 <strong>Berjaya! </strong>
+                 <strong>Operasi Berjaya! </strong>
                  {{$message}}
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                  <span aria-hidden="true">&times;</span>

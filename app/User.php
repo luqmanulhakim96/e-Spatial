@@ -45,6 +45,10 @@ class User extends Authenticatable implements Auditable
       return $this->hasMany('App\Permohonan');
     }
 
+    public function user2(){
+      return $this->hasMany('App\Pengumuman');
+    }
+
     public function getUserID()
    {
        return sprintf('USR-%05d', $this->id);

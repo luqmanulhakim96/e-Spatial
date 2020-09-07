@@ -9,6 +9,8 @@ use App\Permohonan;
 use App\User;
 use App\SenaraiHarga;
 use App\DataPermohonan;
+use App\Pengumuman;
+
 
 use Storage;
 
@@ -54,13 +56,15 @@ class UserController extends Controller
     $countPermohonanKeseluruhan = Permohonan::where('user_id', $user_id)
                                 ->count();
 
+    $pengumuman = Pengumuman::where('status','1')->get();
 
-      return view('user.mainMenu', compact('list','countPermohonanSedangProses', 'countPermohonanLulus', 'countPermohonanGagal','countPermohonanKeseluruhan'));
+
+      return view('user.mainMenu', compact('list','countPermohonanSedangProses', 'countPermohonanLulus', 'countPermohonanGagal','countPermohonanKeseluruhan','pengumuman'));
   }
 
   public function changePassUser(){
     $user_id = Auth::user()->id;
-     $user = User::findOrFail($user_id);
+    $user = User::findOrFail($user_id);
 
     return view('user.profil.changePass',compact('user'));
   }
@@ -411,7 +415,7 @@ class UserController extends Controller
     $permohonanBaru->notify(new PermohonanBaruUser(Auth::user()));
 
 
-    return redirect()->route('user.listSedangDiproses')->with('success','Permohonan anda berjaya membuat permohonan data.');
+    return redirect()->route('user.listSedangDiproses')->with('success','Anda berjaya membuat permohonan data.');
   }
 
   public function edit($id){
