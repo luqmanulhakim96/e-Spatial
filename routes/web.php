@@ -187,7 +187,7 @@ Route::middleware('user')->group(function () {
 
   Route::get('/profil/edit', 'UserController@editProfil')->name('user.profil.edit');
 
-  Route::post('/profile/update', 'UserController@updateProfil')->name('/');
+  Route::post('/profile/update', 'UserController@updateProfil')->name('user.profil.updatePengguna');
 
   Route::post('/upload/resit_pembayaran', 'UserController@uploadResitPembayaran')->name('user.upload.resit_pembayaran');
 
