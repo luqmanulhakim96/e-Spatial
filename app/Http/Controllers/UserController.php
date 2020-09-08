@@ -458,6 +458,19 @@ class UserController extends Controller
     $permohonan->save();
   }
 
+  public function batal($id){
+
+    $status = "Batal";
+
+    $permohonan = Permohonan::find($id);
+
+    $permohonan->status_permohonan = $status;
+
+    $permohonan->save();
+
+    return redirect()->route('user.listSedangDiproses')->with('success','Permohonan anda telah dibatalkan');
+  }
+
   public function updatePermohonan($id, Request $request){
     //$this->validator()->validate();
     $counter_data_permohonan = request()->counter_data;

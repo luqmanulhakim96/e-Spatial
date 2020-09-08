@@ -42,6 +42,9 @@
                                 <div class="form-group">
                                     <label for="kad_pengenalan" class="text-muted">Kad Pengenalan</label>
                                     <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" required autocomplete="kad_pengenalan" autofocus>
+
+
+
                                     @error('kad_pengenalan')
                                     <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -59,8 +62,12 @@
                                 <!-- Password -->
                                 <div class="form-group">
                                     <label for="Passeord" class="text-muted">Password</label>
-                                    <input id="Passeord" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
+                                    <div class="input-group mb-3">
+                                      <input id="password" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                      <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" onclick="visiblePass()" type="button" id="button-addon2"><i class="fa fa-eye"></i></button>
+                                      </div>
+                                    </div>
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -96,8 +103,9 @@
                         <div class="btn btn-block w-75 m-auto">
                         <div class="btn btn-primarynew rounded m-0">
                                 @if (Route::has('password.request'))
-                                <a href="{{ route('password.request') }}" >Lupa Kata Laluan?</a>
+                                <a href="{{ route('password.request') }}" >Lupa Kata Laluan</a>
                             </div>
+                            <span> | </span>
                             <div class="btn btn-primarynew rounded m-0">
                                 @endif
                                 <a href="{{ route('register') }}">Daftar</a>
@@ -115,5 +123,15 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+    function visiblePass() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
 
 @endsection

@@ -185,6 +185,8 @@ Route::middleware('user')->group(function () {
 
   Route::post('/permohonan/update/{id}', 'UserController@updatePermohonan')->name('user.update');
 
+  Route::get('/permohonan/batal/{id}', 'UserController@batal')->name('user.batal');
+
   Route::get('/profil/edit', 'UserController@editProfil')->name('user.profil.edit');
 
   Route::post('/profile/update', 'UserController@updateProfil')->name('user.profil.updatePengguna');

@@ -3,13 +3,122 @@
 @section('content')
 
 <div class="page-body p-4 text-dark">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <div  style="text">Halaman Utama</div>
+
   <!-- Small card component -->
   <div class="small-cards mt-5 mb-4">
+
+
+
+
       <div class="row">
+        <div class="col-md-2">
+
+        </div>
+          <!-- Col sm 6, col md 6, col lg 3 -->
+          <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+            <!-- Card -->
+            <a href="{{ route('user.listSedangDiproses') }}"  >
+              <div class="card border-0 rounded-lg">
+                  <!-- Card body -->
+                  <div class="card-body" style="border-radius:.5rem;">
+
+                      <div class="d-flex flex-row justify-content-center align-items-center">
+                          <!-- Icon -->
+                          <div class="small-card-icon">
+                              <i class="fas fa-folder-open card-icon-bg-primary fa-4x"></i>
+                          </div>
+                          <!-- Text -->
+                          <div class="small-card-text w-100 text-center">
+                              <p class="font-weight-normal m-0 text-primary">Permohonan Sedang Diproses</p>
+                              <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanSedangProses}}</h4>
+                          </div>
+
+                      </div>
+
+                      <hr>
+                      <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                  </div>
+              </div>
+            </a>
+          </div>
+
           <!-- Col sm 6, col md 6, col lg 3 -->
           <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
               <!-- Card -->
-              <a href="{{ route('user.list') }}"  >
+              <div class="card border-0 rounded-lg">
+                  <!-- Card body -->
+                  <a href="{{ route('user.list') }}"  >
+                    <div class="card-body" style="border-radius:.5rem;">
+
+                        <div class="d-flex flex-row justify-content-center align-items-center">
+                            <!-- Icon -->
+                            <div class="small-card-icon">
+                                <i class="fas fa-user-check  card-icon-bg-primary fa-4x"></i>
+                            </div>
+                            <!-- Text -->
+                            <div class="small-card-text w-100 text-center">
+                                <p class="font-weight-normal m-0 text-primary">Permohonan Lulus</p>
+                                <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                    </div>
+                  </a>
+
+              </div>
+          </div>
+
+          <!-- Col sm 6, col md 6, col lg 3 -->
+          <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+              <!-- Card -->
+              <div class="card border-0 rounded-lg">
+                  <!-- Card body -->
+                  <a href="{{ route('user.listGagal') }}"  >
+                    <div class="card-body" style="border-radius:.5rem;">
+
+                        <div class="d-flex flex-row justify-content-center align-items-center">
+                            <!-- Icon -->
+                            <div class="small-card-icon">
+                                <i class="fas fa-users card-icon-bg-primary fa-4x"></i>
+                            </div>
+                            <!-- Text -->
+                            <div class="small-card-text w-100 text-center">
+                                <p class="font-weight-normal m-0 text-primary">Permohonan Gagal</p>
+                                <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanGagal}}</h4>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                    </div>
+                  </a>
+
+              </div>
+          </div>
+
+
+
+
+      </div>
+
+      <div class="" style="padding: 10px;"></div>
+
+
+      <div class="row">
+        <div class="col-md-3">
+
+        </div>
+          <!-- Col sm 6, col md 6, col lg 3 -->
+          <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
+              <!-- Card -->
+              <a href="{{ route('user.listSedangDiproses') }}"  >
                 <div class="card border-0 rounded-lg">
                     <!-- Card body -->
                     <div class="card-body" style="border-radius:.5rem;">
@@ -21,10 +130,13 @@
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary">Permohonan Sedang Diproses</p>
+                                <p class="font-weight-normal m-0 text-primary">Permohonan Tidak Berkaitan</p>
                                 <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanSedangProses}}</h4>
                             </div>
                         </div>
+
+                        <hr>
+                        <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                     </div>
                 </div>
@@ -37,76 +149,41 @@
               <!-- Card -->
               <div class="card border-0 rounded-lg">
                   <!-- Card body -->
-                  <div class="card-body" style="border-radius:.5rem;">
+                  <a href="{{ route('user.list') }}"  >
+                    <div class="card-body" style="border-radius:.5rem;">
 
-                      <div class="d-flex flex-row justify-content-center align-items-center">
-                          <!-- Icon -->
-                          <div class="small-card-icon">
-                              <i class="fas fa-user-check  card-icon-bg-primary fa-4x"></i>
-                          </div>
-                          <!-- Text -->
-                          <div class="small-card-text w-100 text-center">
-                              <p class="font-weight-normal m-0 text-primary">Permohonan Lulus</p>
-                              <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
-                          </div>
-                      </div>
+                        <div class="d-flex flex-row justify-content-center align-items-center">
+                            <!-- Icon -->
+                            <div class="small-card-icon">
+                                <i class="fas fa-user-check  card-icon-bg-primary fa-4x"></i>
+                            </div>
+                            <!-- Text -->
+                            <div class="small-card-text w-100 text-center">
+                                <p class="font-weight-normal m-0 text-primary">Permohonan Batal</p>
+                                <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
+                            </div>
+                        </div>
 
-                  </div>
+                        <hr>
+                        <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                    </div>
+                  </a>
+
               </div>
           </div>
 
-          <!-- Col sm 6, col md 6, col lg 3 -->
-          <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-              <!-- Card -->
-              <div class="card border-0 rounded-lg">
-                  <!-- Card body -->
-                  <div class="card-body" style="border-radius:.5rem;">
 
-                      <div class="d-flex flex-row justify-content-center align-items-center">
-                          <!-- Icon -->
-                          <div class="small-card-icon">
-                              <i class="fas fa-users card-icon-bg-primary fa-4x"></i>
-                          </div>
-                          <!-- Text -->
-                          <div class="small-card-text w-100 text-center">
-                              <p class="font-weight-normal m-0 text-primary">Permohonan Gagal</p>
-                              <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanGagal}}</h4>
-                          </div>
-                      </div>
-
-                  </div>
-              </div>
-          </div>
-
-          <!-- Col sm 6, col md 6, col lg 3 -->
-          <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-              <!-- Card -->
-              <div class="card border-0 rounded-lg">
-                  <!-- Card body -->
-                  <div class="card-body" style="border-radius:.5rem;">
-
-                      <div class="d-flex flex-row justify-content-center align-items-center">
-                          <!-- Icon -->
-                          <div class="small-card-icon">
-                              <i class="fas fa-file card-icon-bg-primary fa-4x"></i>
-                          </div>
-                          <!-- Text -->
-                          <div class="small-card-text w-100 text-center">
-                              <p class="font-weight-normal m-0 text-primary">Permohonan Keseluruhan</p>
-                              <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanKeseluruhan}}</h4>
-                          </div>
-                      </div>
-
-                  </div>
-              </div>
-          </div>
 
 
       </div>
 
       <div class="row">
         <!-- Col md 4 -->
-                       <div class="col-md-6 mt-4">
+        <div class="col-md-2">
+
+        </div>
+                       <div class="col-md-9 mt-4">
                           <!--  Custom content card -->
                           <div class="card rounded-lg">
                               <div class="card-body">
@@ -114,7 +191,7 @@
                                   <!-- List -->
 
 
-                                  <div class="list-group">
+                                  <div class="list-group" style="overflow:auto;height:500px;width:100%;border:1px solid #ccc">
                                     @foreach($pengumuman as $data)
                                       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                           <div class="d-flex w-100 justify-content-between">

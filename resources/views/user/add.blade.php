@@ -270,13 +270,15 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                            <label for="attachment_permohonan">Muatnaik Surat Permohonan:</label>
+                            <label  class="required">Muatnaik Surat Permohonan:</label>
                             <!-- <input type="file" required="required" onchange="return fileValidation('attachment_permohonan')" class="custom-select  bg-light @error('attachment_permohonan') is-invalid @enderror" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan"> -->
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return fileValidation('attachment_permohonan')" name="attachment_permohonan">
-                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>
                             </div>
                             <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+                            <small id="saiz_data" class="form-text text-secondary">Sila compile file sekiranya melebihi 1 dokumen</small>
+
                             @error('attachment_permohonan')
                             <div class="alert alert-danger">
                               <strong>{{ $message }}</strong>
@@ -290,7 +292,7 @@
                             <!-- <input type="file" onchange="return fileValidation('attachment_aoi')" class="custom-select  bg-light @error('attachment_aoi') is-invalid @enderror" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi"> -->
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="attachment_aoi" onchange="return fileValidation('attachment_aoi')" name="attachment_aoi">
-                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>
                             </div>
                             <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
                             @error('attachment_aoi')
@@ -307,7 +309,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label for="dokumen_ke_luar_negara">Adakah Dokumen Geospatial Ini Perlu Di Bawa Ke Luar Negara?</label>
+                          <label for="dokumen_ke_luar_negara" class="required">Adakah Dokumen Geospatial Ini Perlu Di Bawa Ke Luar Negara?</label>
 
                           <!-- All Radio Button  -->
                           <div class="radios">
@@ -333,7 +335,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <div class="form-group" id="maklumat_agensi_dan_negara_div" style="display: none;" >
-                              <label for="maklumat_agensi">Maklumat Agensi Dan Negara Terlibat:</label>
+                              <label for="maklumat_agensi" class="required">Maklumat Agensi Dan Negara Terlibat:</label>
                               <input type="text" class="form-control bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara">
                               @error('maklumat_agensi_dan_negara')
                               <div class="alert alert-danger">
@@ -388,6 +390,9 @@
 
         </main>
         <script type="text/javascript">
+
+
+
         function showDiv(select){
            if(select.value=='Petak Kajian'){
             document.getElementById('default_form_div').style.display = "block";
@@ -424,13 +429,37 @@
         function fileValidation(name){
           var fileInput = document.getElementById(name);
           var filePath = fileInput.value;
-          var allowedExtensions = /(\.pdf)$/i;
+          var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png)$/i;
           if(!allowedExtensions.exec(filePath)){
-              alert('Sila muatnaik file dalam format .pdf sahaja.');
+              alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg dan .png sahaja.');
               fileInput.value = '';
               return false;
           }
-      }
+        }
+
+        $('#attachment_permohonan').on('change', function() {
+              var numb = $(this)[0].files[0].size/102400 /102400 ;
+              numb = numb.toFixed(2);
+              if(numb > 2){
+              alert('Ralat! Fail anda melebihi 100MB. Saiz fail anda adalah: ' + numb +' MB');
+              document.getElementById("attachment_permohonan").value = "";
+              var fileName = "";
+              $(this).next('.custom-file-label').html(fileName);
+              return false;
+              }
+            });
+
+            $('#attachment_aoi').on('change', function() {
+                  var numb = $(this)[0].files[0].size/102400 /102400 ;
+                  numb = numb.toFixed(2);
+                  if(numb > 2){
+                  alert('Ralat! Fail anda melebihi 100MB. Saiz fail anda adalah: ' + numb +' MB');
+                  document.getElementById("attachment_aoi").value = "";
+                  var fileName = "";
+                  $(this).next('.custom-file-label').html(fileName);
+                  return false;
+                  }
+                });
 
         function showJenisKertas(select){
           if(select.value=='Bercetak'){
@@ -499,30 +528,30 @@
                         //insert data in table
                         if(jenis_kertas){
                           $("#pilihan_table").append(
-                            '<tr><td><p class="mb-0 font-weight-bold">' +
+                            '<tr><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_dokumen +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_kertas +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             tahun + kategori_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             negeri +
                             '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }else {
                           jenis_kertas = "Tiada";
                           $("#pilihan_table").append(
-                            '<tr><td><p class="mb-0 font-weight-bold">' +
+                            '<tr><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_dokumen +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_kertas +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             tahun + kategori_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             negeri +
                             '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
@@ -573,30 +602,30 @@
                           //display in table
                           if(jenis_kertas){
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               tahun + kategori_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               negeri +
                               '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               tahun + kategori_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               negeri +
                               '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
@@ -641,30 +670,30 @@
                           //display in table
                           if(jenis_kertas){
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data + ' : ' + custom_jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_tahun +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1" ><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data + ' : ' + custom_jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_tahun +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_negeri +
                               '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );

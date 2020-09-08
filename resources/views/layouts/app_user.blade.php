@@ -84,9 +84,11 @@
                         <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4 sub-menu-parent" data-toggle="collapse" data-target="#table-sub-menu3" aria-expanded="false" aria-controls="table-sub-menu">Senarai Permohonan </a></li>
                         <div id="table-sub-menu3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <ul class="side-sub-menu p-0">
-                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listSedangDiproses') }}" class="w-100 pl-4">Senarai Permohonan Sedang Diproses </a></li>
-                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 pl-4">Senarai Permohonan Lulus </a></li>
-                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listGagal') }}" class="w-100 pl-4">Senarai Permohonan Gagal </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listSedangDiproses') }}" class="w-100 pl-4">Permohonan Sedang Diproses </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 pl-4">Permohonan Lulus </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listGagal') }}" class="w-100 pl-4">Permohonan Gagal </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="#" class="w-100 pl-4">Permohonan Tidak Berkaitan </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="#" class="w-100 pl-4">Permohonan Batal </a></li>
                             </ul>
                         </div>
 

@@ -21,8 +21,9 @@
                               <tr>
                                 <th class="all">PERMOHONAN ID</th>
                                 <th class="all">TARIKH PERMOHONAN</th>
-                                <th class="all">STATUS PERMOHONAN</th>
-                                <th class="all">UPDATE PERMOHONAN</th>
+                                <th class="all">KEMASKINI PERMOHONAN</th>
+                                <th class="all">BATALKAN PERMOHONAN</th>
+
                               </tr>
                           </thead>
                           <!-- Table body -->
@@ -31,28 +32,31 @@
                             <tr>
                               <td>
                                 <div style="padding : 4px;"></div>
-                                <a href="#" data-toggle="modal" data-target="#display_data_permohonan" data-value="{{ $data->id  }}">{{ $data->getPermohonanID()  }}</a>
+                                <span>{{ $data->getPermohonanID()  }}</span>
                               </td>
                               <td>
                                 <div style="padding : 4px;"></div>
                                 {{ Carbon\Carbon::parse($data->created_at)->format('d-m-Y H:i:s') }}
                               </td>
-                              <td>
-                                <div style="padding : 4px;"></div>
-                                <span class="badge badge-warning badge-pill" style="font-size: 100%;">{{ $data->status_permohonan  }}</span>
-                              </td>
+
                               @if($data->ulasan_admin == NULL)
-                              <td >
+                              <td>
                                     <div class="d-flex flex-row justify-content-around align-items-center">
                                         <a href="{{ route('user.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
                                     </div>
                               </td>
                               @else
-                              <td >
+                              <td>
                                     <div class="d-flex flex-row justify-content-around align-items-center">
                                         <a href="#" class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Maaf, permohonan anda telah diulas."><i class="fas fa-pencil-alt"></i></a>
                                     </div>
+                              </td>
                               @endif
+                              <td>
+                                <div class="d-flex flex-row justify-content-around align-items-center">
+                                    <a href="{{ route('user.batal', $data->id) }}" class="btn btn-danger mr-1" onclick="return confirm('Anda pasti mahu membatalkan permohonan ini?')"><i class="fas fa-times-circle"></i></a>
+                                </div>
+                              </td>
                             </tr>
                             @endforeach
                           </tbody>
