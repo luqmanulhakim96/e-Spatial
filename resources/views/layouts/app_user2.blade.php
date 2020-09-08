@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="{{ asset('qbadminui/css/vendor/DataTable-1.10.20/datatables.min.css') }}"></link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style>
+    .required:after {
+      content: " *";
+      color: red;
+    }
     </style>
     <meta name="theme-color" content="#fafafa">
     @if ($message = Session::get('success'))

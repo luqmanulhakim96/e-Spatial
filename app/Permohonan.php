@@ -37,7 +37,7 @@ class Permohonan extends Model implements Auditable
 
     public function getPermohonanID()
    {
-       return sprintf('PMH-%05d', $this->id);
+       return sprintf('JPSM-%05d', $this->id);
    }
 
     public function user()
