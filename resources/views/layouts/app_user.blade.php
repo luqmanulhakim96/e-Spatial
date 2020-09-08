@@ -88,7 +88,7 @@
                                 <li class="side-sub-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 pl-4">Permohonan Lulus </a></li>
                                 <li class="side-sub-menu-item px-3"><a href="{{ route('user.listGagal') }}" class="w-100 pl-4">Permohonan Gagal </a></li>
                                 <li class="side-sub-menu-item px-3"><a href="#" class="w-100 pl-4">Permohonan Tidak Berkaitan </a></li>
-                                <li class="side-sub-menu-item px-3"><a href="#" class="w-100 pl-4">Permohonan Batal </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listBatal') }}" class="w-100 pl-4">Permohonan Batal </a></li>
                             </ul>
                         </div>
 

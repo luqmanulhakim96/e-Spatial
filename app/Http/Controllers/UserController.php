@@ -185,6 +185,16 @@ class UserController extends Controller
     return view('user.listGagal', compact('list_gagal'));
   }
 
+  public function viewListBatal(){
+    $user_id = Auth::user()->id;
+
+    $list_batal = Permohonan::where('user_id','=',$user_id)
+              ->where('status_permohonan','Batal')
+              ->get();
+
+    return view('user.listBatal', compact('list_batal'));
+  }
+
   public function add(){
     $jenisDokumen = SenaraiHarga::select('jenis_dokumen')->distinct()->get();
 
