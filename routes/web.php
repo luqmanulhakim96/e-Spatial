@@ -147,11 +147,13 @@ Route::middleware('user')->group(function () {
   #normal user route
   Route::get('/halaman-utama', 'UserController@index')->name('user.mainMenu');
 
-  Route::get('/permohonan/user/senarai/sedang_diproses', 'UserController@viewListSedangDiproses')->name('user.listSedangDiproses');
+  Route::get('/permohonan/user/senarai/sedang-diproses', 'UserController@viewListSedangDiproses')->name('user.listSedangDiproses');
 
   Route::get('/permohonan/senarai', 'UserController@list')->name('user.list');
 
   Route::get('/permohonan/user/senarai/gagal', 'UserController@viewListGagal')->name('user.listGagal');
+
+  Route::get('/permohonan/user/senarai/batal', 'UserController@viewListBatal')->name('user.listBatal');
 
   Route::get('/permohonan/baru', 'UserController@add')->name('user.add');
 
