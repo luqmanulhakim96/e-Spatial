@@ -211,7 +211,10 @@
                     <!-- Profile action dropdown -->
                     <div class="dropdown dropdown-arow-none d-contents text-center mx-2">
                         <!-- Icon -->
-                        <a href="#" class="w-100 dropdown-toggle text-muted" data-toggle="dropdown"><img src="{{ asset('https://icon-library.com/images/default-profile-icon/default-profile-icon-24.jpg') }}" alt="profile" class="profile-avatar" style="height:40px; width:40px;"></a>
+                        <a href="#" class="w-100 dropdown-toggle text-muted" data-toggle="dropdown">
+                          
+                          <img src="{{ asset('https://icon-library.com/images/default-profile-icon/default-profile-icon-24.jpg') }}" alt="profile" class="profile-avatar" style="height:40px; width:40px;">
+                        </a>
                         <!-- Dropdown Menu -->
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-max-height">
                             <!-- Menu items -->
