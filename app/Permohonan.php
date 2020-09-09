@@ -31,7 +31,8 @@ class Permohonan extends Model implements Auditable
       'attachment_surat_bayaran',
       'link_data',
       'attachment_penerimaan_data_user',
-      'remarks_admin'
+      'remarks_admin',
+      'catatan_harga'
 
     ];
 

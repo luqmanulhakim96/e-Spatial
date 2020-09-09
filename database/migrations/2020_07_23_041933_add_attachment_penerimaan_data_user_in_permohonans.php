@@ -15,6 +15,8 @@ class AddAttachmentPenerimaanDataUserInPermohonans extends Migration
     {
         Schema::table('permohonans', function (Blueprint $table) {
           $table->string('attachment_penerimaan_data_user')->nullable();
+          $table->string('catatan_harga')->nullable();
+
 
         });
     }
@@ -28,6 +30,7 @@ class AddAttachmentPenerimaanDataUserInPermohonans extends Migration
     {
         Schema::table('permohonans', function (Blueprint $table) {
           $table->dropColumn('attachment_penerimaan_data_user');
+          $table->dropColumn('catatan_harga');
 
         });
     }

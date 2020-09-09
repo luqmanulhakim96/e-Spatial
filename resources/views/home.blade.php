@@ -2,12 +2,16 @@
 @section('content')
             <!--Page Body part -->
             <div class="page-body p-4 text-dark">
-                <div class="page-heading border-bottom d-flex flex-row">
-                    <!-- <h5 class="font-weight-normal">Version 1</h5>
-                    <small class="mt-2 ml-2">Dashboard</small> -->
-                </div>
+              <div  style="font-size: 180%;" >
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Dashboard
+              </div>
+              <hr>
+
+              <div style="padding:5px;"></div>
+
                 <!-- Small card component -->
-                <div class="small-cards mt-5 mb-4">
+                <div class="small-cards mb-4">
                     <div class="row">
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">

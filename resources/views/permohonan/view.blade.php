@@ -2,7 +2,7 @@
 @section('content')
             <!--Page Body part -->
             <div class="page-body p-4 text-dark">
-                <div class="page-heading border-bottom d-flex flex-row">
+                <div class="page-heading d-flex flex-row">
                     <!-- <h5 class="font-weight-normal">Version 1</h5>
                     <small class="mt-2 ml-2">Dashboard</small> -->
                 </div>
@@ -21,9 +21,11 @@
           <a class="nav-link" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="false">Info Data Pemohonan</a>
           </li>
 
+          @if($permohonan->jumlah_bayaran != 0.00)
           <li class="nav-item">
           <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Rumusan</a>
           </li>
+          @endif
       </ul>
 
       <!-- Tab panes -->
@@ -312,6 +314,16 @@
                 </div>
               </div>
 
+              @if($permohonan->jumlah_bayaran == 0.00)
+              <div class="row">
+                <div class="col-md-5">
+
+                </div>
+                <div class="col-md-3">
+                  <a href="{{ route('permohonan.harga.view', $permohonan->id) }}" class="btn btn-ripple btn-raised btn-primary m-2" style="text-align: center;">TAMBAH HARGA</a>
+                </div>
+              </div>
+              @else
               <div class="row">
                 <div class="col-md-2">
 
@@ -328,6 +340,19 @@
                 </div>
 
               </div>
+
+              <div style="padding : 5px;"></div>
+
+              <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+                  <label for="harga_asas">Catatan Harga Lain-Lain:</label>
+                  <textarea  name="catatan_harga" rows="2" cols="15" class="form-control bg-light" readonly>{{ $permohonan->catatan_harga }}</textarea>
+                </div>
+              </div>
+              @endif
 
 
 
@@ -355,6 +380,21 @@
 
                 </div>
               </div>
+
+              @if($permohonan->ulasan_admin == null)
+                <div style="padding : 10px;"></div>
+                <hr>
+
+                <div class="row">
+                  <div class="col-md-4">
+
+                  </div>
+                  <div class="col-md-4">
+                    <a href="{{route('permohonan.update.tidakBerkaitan', $permohonan->id)}}" class="btn btn-ripple btn-raised btn-danger m-2" onclick="return confirm('Anda pasti mahu membatalkan permohonan ini?');" style="text-align: center;"><i class="fa fa-ban" aria-hidden="true"></i> PERMOHONAN TIDAK BERKAITAN</a>
+                  </div>
+                </div>
+              @endif 
+
 
 
 
@@ -445,6 +485,7 @@
 
                                   @endif
                               </div>
+
                               @if($current_user_info->role == 3)
                               <hr>
                               <div style="padding: 10px">

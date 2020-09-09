@@ -83,6 +83,9 @@
                                   <!-- <div class="card-title" style="text-align: center;">Lain-lain Harga</div> -->
 
                                   <div class="row">
+                                    <div class="col-md-2">
+
+                                    </div>
                                     <div class="col-md-4">
                                       <div class="form-group">
                                           <label for="harga_asas">Harga Lain-lain: RM</label>
@@ -95,14 +98,18 @@
                                           @enderror
                                       </div>
                                     </div>
+                                    <div class="col-md-4">
+                                      <label for="harga_asas">Catatan Harga Lain-Lain:</label>
+                                      <textarea  name="catatan_harga" rows="2" cols="15" class="form-control bg-light @error('catatan_harga') is-invalid @enderror">{{ old('catatan_harga') }}</textarea>
+                                    </div>
 
 
                                   </div>
 
                                   <div class="row">
-                                    <!-- <div class="col-md-5">
+                                    <div class="col-md-2">
 
-                                    </div> -->
+                                    </div>
                                     <div class="col-md-4">
                                       <div class="form-group">
                                         <label for="harga_asas">Muat turun file AOI :</label>

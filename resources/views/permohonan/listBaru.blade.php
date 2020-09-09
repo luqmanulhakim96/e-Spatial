@@ -19,7 +19,6 @@
                               <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">PERMOHONAN ID</p></div></th>
                               <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">NAMA PEMOHON</p></div></th>
                               <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">TARIKH PERMOHONAN</p></div></th>
-                              <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">STATUS PERMOHONAN</p></div></th>
                               <th class="all"><div class="d-flex flex-row justify-content-around align-items-center"><p class="mb-0 font-weight-bold">SURAT PERMOHONAN</p></div></th>
                               <!-- <th class="all">PRINT</th> -->
                             </tr>
@@ -33,36 +32,17 @@
                           <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              {{ $baru->getPermohonanID()  }}
+                              <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->getPermohonanID()  }}</a>
                             </td>
-                            @if($userInfo->role != 0)
                             <td>
                               <div style="padding : 4px;"></div>
                               <div class="d-flex flex-row justify-content-around align-items-center">
-                                <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
+                                {{ $baru->user->name  }}
                               </div>
                             </td>
-                            @else
-                              @if($baru->jumlah_bayaran == 0.00)
-                              <td>
-                                <div style="padding : 4px;"></div>
-                                <a href="{{ route('permohonan.harga.view', $baru->id) }}">{{ $baru->user->name  }}</a>
-                              </td>
-                              @else
-                              <td>
-                                <div style="padding : 4px;"></div>
-                                <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->user->name  }}</a>
-                              </td>
-                              @endif
-
-                            @endif
                             <td>
                               <div style="padding : 4px;"></div>
                               {{ Carbon\Carbon::parse($baru->created_at)->format('d-m-Y H:i:s') }}
-                            </td>
-                            <td>
-                              <div style="padding : 4px;"></div>
-                              <span class="badge badge-warning badge-pill" style="font-size: 100%;">{{ $baru->status_permohonan  }}</span>
                             </td>
                             <td>
                               <div class="d-flex flex-row justify-content-around align-items-center">

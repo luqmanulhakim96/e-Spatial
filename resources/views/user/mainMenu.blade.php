@@ -4,7 +4,11 @@
 
 <div class="page-body p-4 text-dark">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <div  style="text">Halaman Utama</div>
+  <div  style="font-size: 180%;" >
+    <i class="fa fa-home" aria-hidden="true"></i>
+    Halaman Utama
+  </div>
+  <hr>
 
   <!-- Small card component -->
   <div class="small-cards mt-5 mb-4">
@@ -22,27 +26,28 @@
             <a href="{{ route('user.listSedangDiproses') }}"  >
               <div class="card border-0 rounded-lg">
                   <!-- Card body -->
-                  <div class="card-body" style="border-radius:.5rem;">
+                  <div class="card-body"  style="border-radius:.5rem;">
 
                       <div class="d-flex flex-row justify-content-center align-items-center">
                           <!-- Icon -->
                           <div class="small-card-icon">
-                              <i class="fas fa-folder-open card-icon-bg-primary fa-4x"></i>
+                              <i class="fa fa-retweet card-icon-bg-primary fa-4x"></i>
                           </div>
                           <!-- Text -->
                           <div class="small-card-text w-100 text-center">
-                              <p class="font-weight-normal m-0 text-primary">Permohonan Sedang Diproses</p>
+                              <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Sedang Diproses</p>
                               <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanSedangProses}}</h4>
                           </div>
 
                       </div>
 
                       <hr>
-                      <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                      <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                   </div>
               </div>
             </a>
+
           </div>
 
           <!-- Col sm 6, col md 6, col lg 3 -->
@@ -56,11 +61,11 @@
                         <div class="d-flex flex-row justify-content-center align-items-center">
                             <!-- Icon -->
                             <div class="small-card-icon">
-                                <i class="fas fa-user-check  card-icon-bg-primary fa-4x"></i>
+                                <i class="fa fa-check  card-icon-bg-primary fa-4x"></i>
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary">Permohonan Lulus</p>
+                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Lulus</p>
                                 <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
                             </div>
                         </div>
@@ -85,11 +90,11 @@
                         <div class="d-flex flex-row justify-content-center align-items-center">
                             <!-- Icon -->
                             <div class="small-card-icon">
-                                <i class="fas fa-users card-icon-bg-primary fa-4x"></i>
+                                <i class="fa fa-times-circle card-icon-bg-primary fa-4x"></i>
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary">Permohonan Gagal</p>
+                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Gagal</p>
                                 <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanGagal}}</h4>
                             </div>
                         </div>
@@ -118,7 +123,7 @@
           <!-- Col sm 6, col md 6, col lg 3 -->
           <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
               <!-- Card -->
-              <a href="{{ route('user.listSedangDiproses') }}"  >
+              <a href="{{ route('user.listTidakBerkaitan') }}"  >
                 <div class="card border-0 rounded-lg">
                     <!-- Card body -->
                     <div class="card-body" style="border-radius:.5rem;">
@@ -126,12 +131,12 @@
                         <div class="d-flex flex-row justify-content-center align-items-center">
                             <!-- Icon -->
                             <div class="small-card-icon">
-                                <i class="fas fa-folder-open card-icon-bg-primary fa-4x"></i>
+                                <i class="fa fa-question-circle card-icon-bg-primary fa-4x"></i>
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary">Permohonan Tidak Berkaitan</p>
-                                <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanSedangProses}}</h4>
+                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Tidak Berkaitan</p>
+                                <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanTidakBerkaitan}}</h4>
                             </div>
                         </div>
 
@@ -149,18 +154,18 @@
               <!-- Card -->
               <div class="card border-0 rounded-lg">
                   <!-- Card body -->
-                  <a href="{{ route('user.list') }}"  >
+                  <a href="{{ route('user.listBatal') }}"  >
                     <div class="card-body" style="border-radius:.5rem;">
 
                         <div class="d-flex flex-row justify-content-center align-items-center">
                             <!-- Icon -->
                             <div class="small-card-icon">
-                                <i class="fas fa-user-check  card-icon-bg-primary fa-4x"></i>
+                                <i class="fa fa-trash  card-icon-bg-primary fa-4x"></i>
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary">Permohonan Batal</p>
-                                <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
+                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Batal</p>
+                                <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanBatal}}</h4>
                             </div>
                         </div>
 

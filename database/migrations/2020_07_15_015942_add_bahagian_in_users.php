@@ -15,6 +15,7 @@ class AddBahagianInUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('bahagian')->nullable();
+            $table->string('gambar_profile')->nullable();
         });
     }
 
@@ -27,6 +28,8 @@ class AddBahagianInUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('bahagian');
+            $table->dropColumn('gambar_profile');
+
         });
     }
 }

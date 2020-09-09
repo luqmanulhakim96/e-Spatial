@@ -51,6 +51,8 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/permohonan/updateHarga/{id}', 'PermohonanController@updateHarga')->name('permohonan.harga.update');
 
+  Route::get('/permohonan/tidak-berkaitan/{id}', 'PermohonanController@updateStatusTidakBerkaitan')->name('permohonan.update.tidakBerkaitan');
+
   Route::get('/permohonan/download/attachment_aoi/{id}', 'PermohonanController@downloadAoi')->name('permohonan.download.attachment_aoi');
 
   Route::post('/permohonan/updateStatusBayaran', 'PermohonanController@updateStatusPembayaran')->name('permohonan.statusPembayaran.update');
@@ -152,6 +154,8 @@ Route::middleware('user')->group(function () {
   Route::get('/permohonan/senarai', 'UserController@list')->name('user.list');
 
   Route::get('/permohonan/user/senarai/gagal', 'UserController@viewListGagal')->name('user.listGagal');
+
+  Route::get('/permohonan/user/senarai/tidak-berkaitan', 'UserController@viewListTidakBerkaitan')->name('user.listTidakBerkaitan');
 
   Route::get('/permohonan/user/senarai/batal', 'UserController@viewListBatal')->name('user.listBatal');
 
