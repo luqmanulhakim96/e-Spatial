@@ -95,6 +95,12 @@ class PermohonanController extends Controller
       $request->merge(['harga_lain' => 0.00]);
     }
 
+    $catatan_harga = $request->catatan_harga;
+
+    if($catatan_harga == null){
+      $catatan_harga = "Tiada";
+    }
+
 
 
     for ($x = 0; $x < $countData; $x++){
@@ -111,6 +117,8 @@ class PermohonanController extends Controller
     $permohonan->jumlah_bayaran = $jumlah;
 
     $permohonan->harga_tambahan = $request->harga_lain;
+
+    $permohonan->catatan_harga = $catatan_harga;
 
 
     $permohonan->save();
@@ -385,6 +393,19 @@ class PermohonanController extends Controller
     $permohonan->save();
 
     return redirect()->route('permohonan.list')->with('success','Sebab permohonan gagal telah dihantar');
+  }
+
+  public function updateStatusTidakBerkaitan($id){
+
+    $status = "Tidak Berkaitan";
+
+    $permohonan = Permohonan::findOrFail($id);
+
+    $permohonan->status_permohonan = $status;
+
+    $permohonan->save();
+
+    return redirect()->route('permohonan.listBaru')->with('success','Status permohonan berjaya dikemaskini');
   }
 
 }

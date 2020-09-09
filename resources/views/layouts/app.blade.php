@@ -147,6 +147,8 @@
                     <span></span>
                     <span></span>
                 </p>
+                <a href="{{ url()->previous() }}" class="btn btn-outline-primary m-2" style="font-size:150%"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Kembali</a>
+                
                 <!-- Navbar search section -->
                 <!-- <div class="navb-search ml-5 d-none d-md-block">
                     <form action="#" method="POST">

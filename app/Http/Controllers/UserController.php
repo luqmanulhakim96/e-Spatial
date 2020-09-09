@@ -53,13 +53,21 @@ class UserController extends Controller
                                 ->where('status_permohonan', 'Gagal')
                                 ->count();
 
+    $countPermohonanTidakBerkaitan = Permohonan::where('user_id', $user_id)
+                                ->where('status_permohonan', 'Tidak Berkaitan')
+                                ->count();
+
+    $countPermohonanBatal = Permohonan::where('user_id', $user_id)
+                                ->where('status_permohonan', 'Batal')
+                                ->count();
+
     $countPermohonanKeseluruhan = Permohonan::where('user_id', $user_id)
                                 ->count();
 
     $pengumuman = Pengumuman::where('status','1')->get();
 
 
-      return view('user.mainMenu', compact('list','countPermohonanSedangProses', 'countPermohonanLulus', 'countPermohonanGagal','countPermohonanKeseluruhan','pengumuman'));
+      return view('user.mainMenu', compact('list','countPermohonanSedangProses', 'countPermohonanLulus', 'countPermohonanGagal','countPermohonanKeseluruhan','pengumuman', 'countPermohonanTidakBerkaitan','countPermohonanBatal'));
   }
 
   public function changePassUser(){
@@ -183,6 +191,16 @@ class UserController extends Controller
               ->get();
 
     return view('user.listGagal', compact('list_gagal'));
+  }
+
+  public function viewListTidakBerkaitan(){
+    $user_id = Auth::user()->id;
+
+    $list_tidak_berkaitan = Permohonan::where('user_id','=',$user_id)
+              ->where('status_permohonan','Tidak Berkaitan')
+              ->get();
+
+    return view('user.listTidakBerkaitan', compact('list_tidak_berkaitan'));
   }
 
   public function viewListBatal(){

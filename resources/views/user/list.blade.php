@@ -20,13 +20,13 @@
                           <thead>
                               <tr>
                                 <th class="all">TARIKH PERMOHONAN</th>
-                                <th class="all">STATUS PERMOHONAN</th>
+                                <th class="all">MUAT TURUN SURAT KELULUSAN</th>
+                                <th class="all">MUAT TURUN BORANG AKUAN PENERIMAAN DATA</th>
                                 <th class="all">JUMLAH BAYARAN</th>
                                 <th class="all">STATUS PEMBAYARAN</th>
-                                <th class="all">MUAT TURUN SURAT KELULUSAN</th>
                                 <th class="all">MUAT NAIK RESIT PEMBAYARAN</th>
-                                <th class="all">MUAT TURUN BORANG AKUAN PENERIMAAN DATA</th>
                                 <th class="all">MUAT NAIK BORANG AKUAN PENERIMAAAN DATA</th>
+                                <th class="all">TINDAKAN</th>
                               </tr>
                           </thead>
                           <!-- Table body -->
@@ -38,10 +38,36 @@
                                 <div style="padding : 4px;"></div>
                                 {{ Carbon\Carbon::parse($data->created_at)->format('d-m-Y H:i:s') }}
                               </td>
+
+                              @if($data->attachment_surat_bayaran == null)
+
                               <td>
-                                <div style="padding : 4px;"></div>
-                                <span class="badge badge-success badge-pill" style="font-size: 100%;">{{ $data->status_permohonan  }}</span>
+                                  <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tiada Data">
+                                  <i class="fa fa-download"></i>
+                                  </button>
                               </td>
+                              @else
+
+                              <td>
+                                <a  href="{{route('user.download.surat_bayaran', $data->id)}}">
+                                  <button class="btn btn-success mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Muat turun Surat Kelulusan">
+                                  <i class="fa fa-download"></i>
+                                  </button>
+                                </a>
+                              </td>
+                              @endif
+
+                              @if($data->attachment_penerimaan_data == null)
+                                <td>
+                                  <div style="padding : 4px;"></div>
+                                  Tiada
+                                </td>
+                              @else
+                              <td>
+                                <a class="btn btn-success mr-1" href="{{route('user.download.surat_penerimaan_data', $data->id)}}" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Muat turun Surat Penerimaan Data"><i class="fa fa-download"></i></a>
+                              </td>
+                              @endif
+
                               <td>
                                 <div style="padding : 4px;"></div>
                                 RM {{ $data->jumlah_bayaran  }}
@@ -64,23 +90,7 @@
                               </td>
                               @endif
 
-                              @if($data->attachment_surat_bayaran == null)
 
-                              <td>
-                                  <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tiada Data">
-                                  <i class="fa fa-download"></i>
-                                  </button>
-                              </td>
-                              @else
-
-                              <td>
-                                <a  href="{{route('user.download.surat_bayaran', $data->id)}}">
-                                  <button class="btn btn-success mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Muat turun Surat Kelulusan">
-                                  <i class="fa fa-download"></i>
-                                  </button>
-                                </a>
-                              </td>
-                              @endif
                               <!-- column muat naik receipt pembayaran -->
                               @if($data->attachment_receipt_pembayaran == null)
                               <div class="d-flex flex-row justify-content-around align-items-center">
@@ -110,16 +120,7 @@
                               </div>
                               @endif
 
-                              @if($data->attachment_penerimaan_data == null)
-                                <td>
-                                  <div style="padding : 4px;"></div>
-                                  Tiada
-                                </td>
-                              @else
-                              <td>
-                                <a class="btn btn-success mr-1" href="{{route('user.download.surat_penerimaan_data', $data->id)}}" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Muat turun Surat Penerimaan Data"><i class="fa fa-download"></i></a>
-                              </td>
-                              @endif
+
 
                               <!-- column muat naik surat penerimaan data -->
 
@@ -138,6 +139,27 @@
                                     </div>
                                   </td>
                                   @endif
+
+                                  <td>
+                                    @if($data->status_pembayaran == "Berbayar" && $data->attachment_receipt_pembayaran == null)
+                                    <span>- Muat Naik Resit Pembayaran</span>
+                                    @endif
+
+                                    @if($data->attachment_penerimaan_data_user == null)
+                                    <span>- Muat Naik Resit Pembayaran</span>
+                                    @endif
+
+                                    @if($data->status_pembayaran == "Berbayar" && $data->attachment_receipt_pembayaran != null && $data->attachment_penerimaan_data_user != null)
+                                    <span>- Selesai</span>
+                                    @endif
+
+                                    @if($data->status_pembayaran == "Pengecualian Bayaran" &&  $data->attachment_penerimaan_data_user != null)
+                                    <span>- Selesai</span>
+                                    @endif
+
+
+
+                                  </td>
 
                                   <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                       <form action="{{route('user.upload.surat_penerimaan_data')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
