@@ -3,7 +3,7 @@
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
 
-                <div class="page-heading border-bottom d-flex flex-row">
+                <div class="page-heading d-flex flex-row">
 
                 </div>
 
@@ -14,7 +14,7 @@
                   <div class="card-body">
                       <div class="card-title" style="text-align: center;">Kemaskini Profil | Update Profile</div>
 
-                      <form method="POST" action="{{ route('user.profil.updatePengguna') }}">
+                      <form method="POST" action="{{ route('user.profil.updatePengguna') }}" enctype="multipart/form-data">
                           @csrf
 
 
@@ -29,8 +29,24 @@
                               <div class="col-md">
                                   <div class="form-group">
                                     <label for="kategori">Kategori | Category</label>
-                                    <input id="kategori" type="text" class="form-control bg-light" name="kategori" value="{{ $user->kategori}}" autocomplete="kategori" readonly onchange=""="this.value = this.value.toUpperCase();">
+                                    <input id="kategori" type="text" class="form-control" style="text-transform:capitalize;" name="kategori" value="{{ $user->kategori}}" autocomplete="kategori" readonly onchange=""="this.value = this.value.toUpperCase();">
                                   </div>
+                              </div>
+                              <div class="col-md">
+                                <div class="form-group">
+                                    <label >Muatnaik Gambar Profil | Upload Profile Picture:</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="gambar_profile" onchange="return fileValidation('gambar_profile')" name="gambar_profile">
+                                        <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>
+                                    </div>
+                                    <small id="saiz_data" class="form-text text-secondary">Muat naik gambar tidak melebihi 100MB</small>
+
+                                    @error('gambar_profile')
+                                    <div class="alert alert-danger">
+                                      <strong>{{ $message }}</strong>
+                                    </div>
+                                    @enderror
+                                </div>
                               </div>
                               <div class="col-md-1">
 
@@ -44,7 +60,7 @@
                               </div>
                               <div class="col-md">
                                   <div class="form-group">
-                                    <label for="nama" >Nama Penuh | Full Name</label>
+                                    <label for="nama" class="required" >Nama Penuh | Full Name</label>
                                     <input id="nama" type="text" class="form-control bg-light @error('nama') is-invalid @enderror" name="nama" value=" {{$user->name}}" autocomplete="name" >
                                     @error('nama')
                                     <span class="invalid-feedback" role="alert">
@@ -67,7 +83,7 @@
                             <!-- Kerakyatan -->
                               <div class="col-md">
                                 <div class="form-group">
-                                    <label for="kerakyatan" class="">Kerakyatan | Citizen</label>
+                                    <label for="kerakyatan" class="required">Kerakyatan | Citizen</label>
                                     <select id="kerakyatan" class="custom-select  bg-light @error('kerakyatan') is-invalid @enderror" name="kerakyatan" value="{{ $user->kerakyatan }}" onchange="viewPassportForm()" >
                                           <option value="" selected disabled hidden>Pilih Kerakyatan</option>
                                           <option value="Warganegara" {{ $user->kerakyatan == "Warganegara" ? 'selected' : '' }}>Warganegara</option>
@@ -87,12 +103,12 @@
 
                                   <!-- <div id="text_kp" style="display: block;"> -->
                                   <div id="text_kp" style="display: block;">
-                                    <label for="kad_pengenalan" class="">Kad Pengenalan | Identification Card</label>
-                                    <input id="kad_pengenalan" type="text" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ $user->kad_pengenalan }}" onfocus="this.value=''"  autocomplete="kad_pengenalan" >
+                                    <label for="kad_pengenalan" class="required">Kad Pengenalan | Identification Card</label>
+                                    <input id="kad_pengenalan" type="text" maxlength="12" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ $user->kad_pengenalan }}" onfocus="this.value=''"  autocomplete="kad_pengenalan" >
                                   </div>
 
                                   <div id="text_pp" style="display: none;">
-                                    <label for="pasport" class="">Pasport | Passport</label>
+                                    <label for="pasport" class="required">Pasport | Passport</label>
                                     <input id="pasport" type="text" class="form-control bg-light @error('pasport') is-invalid @enderror" name="pasport" value="{{ $user->kad_pengenalan }}" onfocus="this.value=''" autocomplete="pasport" >
                                   </div>
 
@@ -124,7 +140,7 @@
                               <div class="col-md">
                                   <div class="form-group">
 
-                                      <label for="tarikh_lahir" class="">Tarikh Lahir | Birth Date</label>
+                                      <label for="tarikh_lahir" class="required">Tarikh Lahir | Birth Date</label>
                                       <div id="auto_birthdate" style="display : block;">
                                         <input id="tarikh_lahir" type="text" class="form-control bg-light @error('tarikh_lahir') is-invalid @enderror" name="tarikh_lahir" value="{{ old('tarikh_lahir') }}" autocomplete="tarikh_lahir"  readonly>
                                         @error('tarikh_lahir')
@@ -147,7 +163,7 @@
                               <!-- 2nd row -->
                               <div class="col-md">
                                   <div class="form-group">
-                                      <label for="tempat_lahir" class="">Tempat Lahir | Birth Place</label>
+                                      <label for="tempat_lahir" class="required">Tempat Lahir | Birth Place</label>
                                       <input id="tempat_lahir" type="text" class="form-control bg-light @error('tempat_lahir') is-invalid @enderror" name="tempat_lahir" value="{{ $user->tempat_lahir }}" autocomplete="tempat_lahir" >
                                       @error('tempat_lahir')
                                       <span class="invalid-feedback" role="alert">
@@ -169,7 +185,7 @@
                             </div>
                               <div class="col-md">
                                   <div class="form-group">
-                                      <label for="jawatan" class="">Jawatan/Gred | Position/Grade</label><br>
+                                      <label for="jawatan" class="required">Jawatan/Gred | Position/Grade</label><br>
                                       <input id="jawatan" type="text" class="form-control bg-light @error('jawatan') is-invalid @enderror" name="jawatan" value="{{  $user->jawatan  }}" autocomplete="jawatan" >
                                       @error('jawatan')
                                       <span class="invalid-feedback" role="alert">
@@ -184,7 +200,7 @@
                               <!-- 2nd row -->
                               <div class="col-md" id="jenis_perniagaan_div">
                                   <div class="form-group">
-                                      <label for="jenis_perniagaan" class="">Profesion | Profession</label>
+                                      <label for="jenis_perniagaan" class="required">Profesion | Profession</label>
                                       <input id="jenis_perniagaan" type="text" class="form-control bg-light @error('jenis_perniagaan') is-invalid @enderror" name="jenis_perniagaan" value="{{  $user->jenis_perniagaan  }}" autocomplete="jenis_perniagaan"  >
                                       @error('jenis_perniagaan')
                                       <span class="invalid-feedback" role="alert">
@@ -207,7 +223,7 @@
                               <!-- Alamat Kediaman -->
                               <div class="col-md">
                                   <div class="form-group" id="alamat_kediaman_div" style="display : block;">
-                                    <label for="alamat_kediaman" class="">Alamat Kediaman | Residential address</label>
+                                    <label for="alamat_kediaman" class="required">Alamat Kediaman | Residential address</label>
                                     <!-- <input id="alamat_kediaman" type="text" class="form-control bg-light @error('alamat_kediaman') is-invalid @enderror" name="alamat_kediaman" value="" autocomplete="address"  > -->
                                     <textarea id="alamat_kediaman" name="alamat_kediaman" rows="2" cols="50" class="form-control bg-light @error('alamat_kediaman') is-invalid @enderror">{{  $user->alamat_kediaman  }}</textarea>
                                     @error('alamat_kediaman')
@@ -231,8 +247,8 @@
                             </div>
                             <div class="col-md">
                               <div class="form-group" id="poskod_div" style="display : block;">
-                                <label for="poskod" class="">Poskod | Postcode</label>
-                                <input id="poskod" type="text" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('poskod') is-invalid @enderror" name="poskod" value="{{  $user->poskod }}" autocomplete="poskod"  >
+                                <label for="poskod" class="required">Poskod | Postcode</label>
+                                <input id="poskod" type="text" maxlength="5" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('poskod') is-invalid @enderror" name="poskod" value="{{  $user->poskod }}" autocomplete="poskod"  >
                                 @error('poskod')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -242,7 +258,7 @@
                             </div>
                             <div class="col-md">
                               <div class="form-group" id="negeri_div" style="display : block;">
-                                <label for="negeri" class="">Negeri | State</label>
+                                <label for="negeri" class="required">Negeri | State</label>
                                 <!-- <input id="negeri" type="text" class="form-control bg-light @error('negeri') is-invalid @enderror" name="negeri" value="{{ old('negeri') }}" autocomplete="negeri" > -->
                                 <select id="negeri" class="custom-select  bg-light @error('negeri') is-invalid @enderror" name="negeri" value="{{  $user->negeri  }}"  >
                                       <option value="" selected disabled hidden>Pilih Negeri</option>
@@ -282,7 +298,7 @@
                               <!-- Nama Kementerian/Jabatan/Badan Berkanun/Swasta -->
                               <div class="col-md" id="nama_kementerian_div" style="display: block;">
                                   <div class="form-group">
-                                    <label for="nama_kementerian" class="">Nama Kementerian/Jabatan/Badan Berkanun/Swasta | Name of Ministry/Department/Statutory Body/Private</label>
+                                    <label for="nama_kementerian" class="required">Nama Kementerian/Jabatan/Badan Berkanun/Swasta | Name of Ministry/Department/Statutory Body/Private</label>
                                     <input id="nama_kementerian" type="text" class="form-control bg-light @error('nama_kementerian') is-invalid @enderror" name="nama_kementerian" value="{{ $user->nama_kementerian }}" autocomplete="nama_kementerian"  >
                                     @error('nama_kementerian')
                                     <span class="invalid-feedback" role="alert">
@@ -305,7 +321,7 @@
                               <!-- Bahagian -->
                               <div class="col-md" id="bahagian_div" style="display: none;">
                                   <div class="form-group">
-                                    <label for="bahagian" class="">Bahagian / JPN</label>
+                                    <label for="bahagian" class="required">Bahagian / JPN</label>
                                     <input id="bahagian" type="text" class="form-control bg-light @error('bahagian') is-invalid @enderror" name="bahagian" value="{{ $user->bahagian }}" autocomplete="bahagian"  >
                                     @error('bahagian')
                                     <span class="invalid-feedback" role="alert">
@@ -325,11 +341,9 @@
                               <!-- Alamat Kementerian/Jabatan/Badan Berkanun/Swasta -->
                               <div class="col-md" id="alamat_kementerian_div" style="display: block;">
                                   <div class="form-group">
-                                    <label for="alamat_kementerian" class="">Alamat Kementerian/Jabatan/Badan Berkanun/Swasta | Address of Ministry/Department/Statutory Body/Private</label>
+                                    <label for="alamat_kementerian" class="required">Alamat Kementerian/Jabatan/Badan Berkanun/Swasta | Address of Ministry/Department/Statutory Body/Private</label>
                                     <!-- <input id="alamat_kementerian" type="text" class="form-control bg-light @error('alamat_kementerian') is-invalid @enderror" name="alamat_kementerian" value="{{ old('alamat_kementerian') }}" autocomplete="alamat_kementerian"  > -->
-                                    <textarea id="alamat_kementerian" name="alamat_kementerian" rows="2" cols="50" class="form-control bg-light @error('alamat_kementerian') is-invalid @enderror">
-                                      {{ $user->alamat_kementerian }}
-                                      </textarea>
+                                    <textarea id="alamat_kementerian" name="alamat_kementerian" rows="2" cols="50" class="form-control bg-light @error('alamat_kementerian') is-invalid @enderror">{{ $user->alamat_kementerian }}</textarea>
                                     @error('alamat_kementerian')
                                     <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -348,9 +362,9 @@
                               <!-- No Telefon Rumah -->
                               <div class="col-md">
                                   <div class="form-group">
-                                    <label for="no_tel_rumah" class="">No Telefon Pejabat</label>
+                                    <label for="no_tel_rumah" class="required">No Telefon Pejabat</label>
 
-                                    <input id="no_tel_rumah" type="text" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_rumah') is-invalid @enderror" name="no_tel_rumah" value="{{ $user->no_tel_rumah }}" autocomplete="phone" >
+                                    <input id="no_tel_rumah" type="text" maxlength="11" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_rumah') is-invalid @enderror" name="no_tel_rumah" value="{{ $user->no_tel_rumah }}" autocomplete="phone" >
                                     <small id="saiz_data" class="form-text text-secondary">Contoh | Example : 0312345678</small>
                                     @error('no_tel_rumah')
                                     <span class="invalid-feedback" role="alert">
@@ -366,9 +380,9 @@
                               <!-- No Telefon Bimbit -->
                               <div class="col-md">
                                   <div class="form-group">
-                                    <label for="no_tel_bimbit" class="">No Telefon Bimbit</label>
+                                    <label for="no_tel_bimbit" class="required">No Telefon Bimbit</label>
 
-                                    <input id="no_tel_bimbit" type="text" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_bimbit') is-invalid @enderror" name="no_tel_bimbit" value="{{ $user->no_tel_bimbit }}" autocomplete="phone" >
+                                    <input id="no_tel_bimbit" type="text" maxlength="11" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_bimbit') is-invalid @enderror" name="no_tel_bimbit" value="{{ $user->no_tel_bimbit }}" autocomplete="phone" >
                                     <small id="saiz_data" class="form-text text-secondary">Contoh | Example : 0123456789</small>
                                     @error('no_tel_bimbit')
                                     <span class="invalid-feedback" role="alert">
@@ -393,7 +407,7 @@
                               <!-- Email -->
                               <div class="col-md">
                                   <div class="form-group">
-                                    <label for="email" class="">Email</label>
+                                    <label for="email" class="required">Email</label>
                                     <input id="email" type="email" class="form-control bg-light @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" autocomplete="email">
                                     <small id="saiz_data" class="form-text text-secondary">PERINGATAN : Pemohon hendaklah menggunakan email yang sah untuk menggunakan sistem eSpatial</small>
                                     @error('email')
@@ -549,5 +563,35 @@
                   $('#submit-form').attr('disabled', 'disabled');
               });
           });
+
+          function fileValidation(name){
+            var fileInput = document.getElementById(name);
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.jpeg|\.jpg|\.png)$/i;
+            if(!allowedExtensions.exec(filePath)){
+                alert('Sila muatnaik gambar dalam format .jpeg , .jpg dan .png sahaja.');
+                fileInput.value = '';
+                return false;
+            }
+          }
+
+          $('#gambar_profile').on('change',function(){
+                  //get the file name
+                  var fileName = $(this).val();
+                  //replace the "Choose a file" label
+                  $(this).next('.custom-file-label').html(fileName);
+              })
+
+          $('#gambar_profile').on('change', function() {
+                var numb = $(this)[0].files[0].size/102400 /102400 ;
+                numb = numb.toFixed(2);
+                if(numb > 2){
+                alert('Ralat! Gambar anda melebihi 100MB. Saiz fail anda adalah: ' + numb +' MB');
+                document.getElementById("attachment_permohonan").value = "";
+                var fileName = "";
+                $(this).next('.custom-file-label').html(fileName);
+                return false;
+                }
+              });
         </script>
 @endsection
