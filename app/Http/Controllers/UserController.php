@@ -20,6 +20,9 @@ use App\Events\NewNotification;
 
 use App\Notifications\Admin\PermohonanBaruAdmin;
 use App\Notifications\Admin\PermohonanBaruAdminNull;
+use App\Notifications\Admin\PermohonanBatalAdmin;
+use App\Notifications\Admin\PermohonanMuatNaikResitAdmin;
+
 use App\Notifications\User\PermohonanBaruUser;
 
 use Illuminate\Support\Facades\Hash;
@@ -423,7 +426,7 @@ class UserController extends Controller
 
     event($permohonanDataBaru = $this->createData($request->all(), $permohonanBaru));
     // dd($permohonanBaru);
-    $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'memo')->first();
+    $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'permohonan_baru')->first();
     // dd($email);
     $admins = User::where('role', '=' , '0')
                 ->get();
@@ -440,8 +443,9 @@ class UserController extends Controller
       }
     }
 
+    $emailUser = SenaraiEmail::where('kepada', '=', 'pemohon')->where('jenis', '=', 'permohonan_baru')->first();
 
-    $permohonanBaru->notify(new PermohonanBaruUser(Auth::user()));
+    $permohonanBaru->notify(new PermohonanBaruUser(Auth::user(),$emailUser));
 
 
     return redirect()->route('user.listSedangDiproses')->with('success','Anda berjaya membuat permohonan data.');
@@ -496,6 +500,13 @@ class UserController extends Controller
     $permohonan->status_permohonan = $status;
 
     $permohonan->save();
+
+    $admin = User::where('role','=','0')->get();
+    $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'permohonan_batal')->first();
+
+    foreach ($admin as $data) {
+      $permohonan->notify(new PermohonanBatalAdmin($data,$email));
+    }
 
     return redirect()->route('user.listSedangDiproses')->with('success','Permohonan anda telah dibatalkan');
   }
@@ -716,6 +727,14 @@ class UserController extends Controller
     $permohonan = Permohonan::findOrFail($request->permohonan_id_resit);
     $permohonan->attachment_receipt_pembayaran = $uploaded_files_permohonan;
     $permohonan->save();
+
+    $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'pemohon_muatnaik_resit_pembayaran')->first();
+
+    $admins = User::where('role', '=' , '0')->get();
+
+    foreach ($admins as $data) {
+      $permohonan->notify(new PermohonanMuatNaikResitAdmin($data, $email));
+    }
 
     return redirect()->route('user.list')->with('success','Resit Pembayaran telah berjaya dimuatnaik');
   }
