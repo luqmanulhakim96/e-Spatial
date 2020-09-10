@@ -19,7 +19,7 @@
                             <tr>
                               <th class="all">PERMOHONAN ID</th>
                               <th class="all">TARIKH PERMOHONAN</th>
-                              <th class="all">STATUS PERMOHONAN</th>
+
                               <th class="all">SEBAB PERMOHONAN GAGAL</th>
 
                             </tr>
@@ -30,9 +30,9 @@
                           <tr>
                             <td>{{ $gagal->getPermohonanID()  }}</td>
                             <td>{{ Carbon\Carbon::parse($gagal->created_at)->format('d-m-Y H:i:s')  }}</td>
-                            <td>
+                            <!-- <td>
                               <span class="badge badge-danger badge-pill" style="font-size: 100%;">{{ $gagal->status_permohonan  }}</span>
-                            </td>
+                            </td> -->
                             <td>{{ $gagal->remarks_admin  }}</td>
                           </tr>
                           @endforeach

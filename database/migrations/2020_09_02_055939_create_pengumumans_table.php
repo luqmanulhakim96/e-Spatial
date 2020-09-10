@@ -17,7 +17,7 @@ class CreatePengumumansTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('tajuk')->nullable();
-            $table->string('content')->nullable();
+            $table->text('content')->nullable();
             $table->string('status')->nullable();
 
             $table->bigInteger('user_id')->unsigned()->nullable();

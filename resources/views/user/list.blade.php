@@ -20,6 +20,7 @@
                           <!-- Table head -->
                           <thead>
                               <tr>
+                                <th class="all">PERMOHONAN ID</th>
                                 <th class="all">TARIKH PERMOHONAN</th>
                                 <th class="all">MUAT TURUN SURAT KELULUSAN</th>
                                 <th class="all">MUAT TURUN BORANG AKUAN PENERIMAAN DATA</th>
@@ -35,6 +36,10 @@
                           <tbody>
                             @foreach($list_lulus as $key => $data)
                             <tr>
+                              <td>
+                                <div style="padding : 4px;"></div>
+                                {{ $data->getPermohonanID()  }}
+                              </td>
 
                               <td>
                                 <div style="padding : 4px;"></div>

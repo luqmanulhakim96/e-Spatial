@@ -21,10 +21,10 @@ class CreatePermohonansTable extends Migration
             $table->string('tahun');
             $table->string('attachment_permohonan');
             $table->string('dokumen_ke_luar_negara');
-            $table->string('ulasan_admin');
-            $table->string('ulasan_penyokong_1');
-            $table->string('ulasan_penyokong_2');
-            $table->string('ulasan_ketua_pengarah');
+            $table->text('ulasan_admin');
+            $table->text('ulasan_penyokong_1');
+            $table->text('ulasan_penyokong_2');
+            $table->text('ulasan_ketua_pengarah');
             $table->string('no_rujukan');
             $table->string('harga_tambahan')->nullable();
 

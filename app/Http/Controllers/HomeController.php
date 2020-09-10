@@ -51,19 +51,54 @@ class HomeController extends Controller
 
     public function index()
     {
+      $user_id = Auth::user()->id;
+
       $nama = User::find(1);
 
-      $countPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
+      $countPermohonanBaruPS = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNull('ulasan_admin')
+                            ->count();
+
+      $countPermohonanBaruP1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNull('ulasan_penyokong_1')
+                            ->count();
+
+      $countPermohonanBaruP2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNull('ulasan_penyokong_2')
+                            ->count();
+
+      $countPermohonanBaruKP = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNull('ulasan_ketua_pengarah')
+                            ->count();
+
+      $countPermohonanSedangDiproses = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
                             ->count();
 
       $countPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')
                             ->count();
 
+      $countPermohonanGagal = Permohonan::where('status_permohonan', 'Gagal')
+                            ->count();
+
+      $countPermohonanTidakBerkaitan = Permohonan::where('status_permohonan', 'Tidak Berkaitan')
+                            ->count();
+
+      $countPermohonanBatal = Permohonan::where('status_permohonan', 'Batal')
+                                                  ->count();
+
+      $countPermohonanDalaman = Permohonan::whereHas('user', function($q) use($user_id) {
+        $q->where('kategori', '=', 'dalaman');      })->count();
+
+      $countPermohonanKeseluruhan = Permohonan::count();
+
+      $countSenaraiHarga = SenaraiHarga::count();
+
       $countPengguna = User::where('role', '5')
                         ->count();
 
-      $countPermohonanKeseluruhan = Permohonan::count();
+      $countPenggunaDalaman = User::where('role', '!=', 5)
+                        ->count();
 
       //google chart
       $dataDipohonMengikutNegeri = DB::select(DB::raw("SELECT COUNT(senarai_hargas.negeri) as count, senarai_hargas.negeri FROM senarai_hargas, data_permohonans, permohonans WHERE permohonans.id = data_permohonans.permohonan_id AND senarai_hargas.id = data_permohonans.senarai_harga_id GROUP BY senarai_hargas.negeri"));
@@ -79,7 +114,7 @@ class HomeController extends Controller
       $jumlahJenisDokumen =  DB::select(DB::raw("SELECT COUNT(senarai_hargas.jenis_dokumen) as count_jenis_dokumen, senarai_hargas.jenis_dokumen as jenis_dokumen FROM senarai_hargas, data_permohonans, permohonans WHERE permohonans.id = data_permohonans.permohonan_id AND senarai_hargas.id = data_permohonans.senarai_harga_id GROUP BY senarai_hargas.jenis_dokumen"));
 
 
-      //dd($jumlahJenisDokumen);
+      // dd($dataDipohonMengikutBulan);
       //$permohonan_negeri_semenanjung_malaysia = SenaraiHarga::where('negeri','Semenanjung Malaysia')->get();
 
 
@@ -90,10 +125,20 @@ class HomeController extends Controller
       // dd($nama);
         return view('home', compact(
           'nama',
-          'countPermohonanBaru',
+          'countPermohonanBaruPS',
+          'countPermohonanBaruP1',
+          'countPermohonanBaruP2',
+          'countPermohonanBaruKP',
+          'countPermohonanSedangDiproses',
           'countPermohonanLulus',
-          'countPengguna',
+          'countPermohonanGagal',
+          'countPermohonanTidakBerkaitan',
+          'countPermohonanBatal',
+          'countPermohonanDalaman',
           'countPermohonanKeseluruhan',
+          'countSenaraiHarga',
+          'countPengguna',
+          'countPenggunaDalaman',
           'dataDipohonMengikutNegeri',
           'dataDipohonMengikutBulan',
           'dataStatusPermohonan',
@@ -214,6 +259,26 @@ class HomeController extends Controller
       $listPermohonanGagal = Permohonan::where('status_permohonan', 'Gagal')->get();
 
       return view('permohonan.listGagal', compact('listPermohonanGagal','userInfo'));
+    }
+
+    public function senaraiPermohonanTidakBerkaitan(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonanTidakBerkaitan = Permohonan::where('status_permohonan', 'Tidak Berkaitan')->get();
+
+      return view('permohonan.listTidakBerkaitan', compact('listPermohonanTidakBerkaitan','userInfo'));
+    }
+
+    public function senaraiPermohonanBatal(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonanBatal = Permohonan::where('status_permohonan', 'Batal')->get();
+
+      return view('permohonan.listBatal', compact('listPermohonanBatal','userInfo'));
     }
 
     public function senaraiPermohonanDalaman(){

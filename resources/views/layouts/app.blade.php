@@ -71,8 +71,9 @@
                                 <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listSedangDiproses') }}" class="w-100 pl-4">Senarai Permohonan Sedang Diproses </a></li>
                                 <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 pl-4">Senarai Permohonan Lulus </a></li>
                                 <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listGagal') }}" class="w-100 pl-4">Senarai Permohonan Gagal </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listTidakBerkaitan') }}" class="w-100 pl-4">Senarai Permohonan Tidak Berkaitan </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listBatal') }}" class="w-100 pl-4">Senarai Permohonan Batal </a></li>
                                 <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listDalaman') }}" class="w-100 pl-4">Senarai Permohonan Dalaman </a></li>
-
                             </ul>
                         </div>
 

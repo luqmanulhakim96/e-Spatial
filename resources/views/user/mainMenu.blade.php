@@ -200,10 +200,10 @@
                                     @foreach($pengumuman as $data)
                                       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                                           <div class="d-flex w-100 justify-content-between">
-                                          <h6 class="mb-1">{{$data->tajuk}}</h6>
+                                          <h6 class="mb-1" style="font-size: 20px; font-weight: bold;">{{$data->tajuk}}</h6>
                                           <small class="text-muted"></small>
                                           </div>
-                                          <p class="my-1">{{$data->content}}</p>
+                                          <p class="my-1" style="font-size: 15px; text-align:justify;">{{$data->content}}</p>
                                       </a>
 
                                       @endforeach
