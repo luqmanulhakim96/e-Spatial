@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
             <!--Page Body part -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
             <div class="page-body p-4 text-dark">
               <div  style="font-size: 180%;" >
                 <i class="fa fa-home" aria-hidden="true"></i>
@@ -10,78 +12,252 @@
 
               <div style="padding:5px;"></div>
 
+              <!-- Small card component -->
+              <div class="small-cards mt-5 mb-4">
+
+
+
+
+                  <div class="row">
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                      <!-- Card -->
+                      <a href="#"  >
+                        <div class="card border-0 rounded-lg">
+                            <!-- Card body -->
+                            <div class="card-body"  style="border-radius:.5rem;">
+
+                                <div class="d-flex flex-row justify-content-center align-items-center">
+                                    <!-- Icon -->
+                                    <div class="small-card-icon">
+                                        <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x"></i>
+                                    </div>
+                                    <!-- Text -->
+                                    <div class="small-card-text w-100 text-center">
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Baru</p>
+                                        <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                    </div>
+
+                                </div>
+
+                                <hr>
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                            </div>
+                        </div>
+                      </a>
+
+                    </div>
+
+                      <!-- Col sm 6, col md 6, col lg 3 -->
+                      <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                        <!-- Card -->
+                        <a href="#"  >
+                          <div class="card border-0 rounded-lg">
+                              <!-- Card body -->
+                              <div class="card-body"  style="border-radius:.5rem;">
+
+                                  <div class="d-flex flex-row justify-content-center align-items-center">
+                                      <!-- Icon -->
+                                      <div class="small-card-icon">
+                                          <i class="fa fa-retweet card-icon-bg-primary fa-4x"></i>
+                                      </div>
+                                      <!-- Text -->
+                                      <div class="small-card-text w-100 text-center">
+                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Sedang Diproses</p>
+                                          <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                      </div>
+
+                                  </div>
+
+                                  <hr>
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                              </div>
+                          </div>
+                        </a>
+
+                      </div>
+
+                      <!-- Col sm 6, col md 6, col lg 3 -->
+                      <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                          <!-- Card -->
+                          <div class="card border-0 rounded-lg">
+                              <!-- Card body -->
+                              <a href="#"  >
+                                <div class="card-body" style="border-radius:.5rem;">
+
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <!-- Icon -->
+                                        <div class="small-card-icon">
+                                            <i class="fa fa-check  card-icon-bg-primary fa-4x"></i>
+                                        </div>
+                                        <!-- Text -->
+                                        <div class="small-card-text w-100 text-center">
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Lulus</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                                </div>
+                              </a>
+
+                          </div>
+                      </div>
+
+                      <!-- Col sm 6, col md 6, col lg 3 -->
+                      <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                          <!-- Card -->
+                          <div class="card border-0 rounded-lg">
+                              <!-- Card body -->
+                              <a href="#"  >
+                                <div class="card-body" style="border-radius:.5rem;">
+
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <!-- Icon -->
+                                        <div class="small-card-icon">
+                                            <i class="fa fa-times-circle card-icon-bg-primary fa-4x"></i>
+                                        </div>
+                                        <!-- Text -->
+                                        <div class="small-card-text w-100 text-center">
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Gagal</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                                </div>
+                              </a>
+
+                          </div>
+                      </div>
+
+
+
+
+                  </div>
+
+                  <div class="" style="padding: 10px;"></div>
+
+
+                  <div class="row">
+                    <div class="col-md-1">
+
+                    </div>
+
+
+
+                      <!-- Col sm 6, col md 6, col lg 3 -->
+                      <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
+                          <!-- Card -->
+                          <a href="#"  >
+                            <div class="card border-0 rounded-lg">
+                                <!-- Card body -->
+                                <div class="card-body" style="border-radius:.5rem;">
+
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <!-- Icon -->
+                                        <div class="small-card-icon">
+                                            <i class="fa fa-question-circle card-icon-bg-primary fa-4x"></i>
+                                        </div>
+                                        <!-- Text -->
+                                        <div class="small-card-text w-100 text-center">
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Tidak Berkaitan</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                                </div>
+                            </div>
+                          </a>
+
+                      </div>
+
+                      <!-- Col sm 6, col md 6, col lg 3 -->
+                      <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                          <!-- Card -->
+                          <div class="card border-0 rounded-lg">
+                              <!-- Card body -->
+                              <a href="#"  >
+                                <div class="card-body" style="border-radius:.5rem;">
+
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <!-- Icon -->
+                                        <div class="small-card-icon">
+                                            <i class="fa fa-trash  card-icon-bg-primary fa-4x"></i>
+                                        </div>
+                                        <!-- Text -->
+                                        <div class="small-card-text w-100 text-center">
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Batal</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                                </div>
+                              </a>
+
+                          </div>
+                      </div>
+
+                      <!-- Col sm 6, col md 6, col lg 3 -->
+                      <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
+                          <!-- Card -->
+                          <a href="#"  >
+                            <div class="card border-0 rounded-lg">
+                                <!-- Card body -->
+                                <div class="card-body" style="border-radius:.5rem;">
+
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <!-- Icon -->
+                                        <div class="small-card-icon">
+                                            <i class="fa fa-users card-icon-bg-primary fa-4x"></i>
+                                        </div>
+                                        <!-- Text -->
+                                        <div class="small-card-text w-100 text-center">
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Dalaman</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                                </div>
+                            </div>
+                          </a>
+
+                      </div>
+
+
+
+
+                  </div>
+
+              </div>
+
+
+
+
+                <div  style="font-size: 180%;" >
+                  <i class="fa fa-area-chart" aria-hidden="true"></i>
+                  Laporan
+                </div>
+                <hr>
+
                 <!-- Small card component -->
                 <div class="small-cards mb-4">
                     <div class="row">
-                        <!-- Col sm 6, col md 6, col lg 3 -->
-                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                            <!-- Card -->
-                            <div class="card border-0 rounded-lg">
-                                <!-- Card body -->
-                                <div class="card-body" style="border-radius:.5rem;">
-
-                                    <div class="d-flex flex-row justify-content-center align-items-center">
-                                        <!-- Icon -->
-                                        <div class="small-card-icon">
-                                            <i class="fas fa-folder-open card-icon-bg-primary fa-4x"></i>
-                                        </div>
-                                        <!-- Text -->
-                                        <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Permohonan Baru</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanBaru}}</h4>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Col sm 6, col md 6, col lg 3 -->
-                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                            <!-- Card -->
-                            <div class="card border-0 rounded-lg">
-                                <!-- Card body -->
-                                <div class="card-body" style="border-radius:.5rem;">
-
-                                    <div class="d-flex flex-row justify-content-center align-items-center">
-                                        <!-- Icon -->
-                                        <div class="small-card-icon">
-                                            <i class="fas fa-user-check  card-icon-bg-primary fa-4x"></i>
-                                        </div>
-                                        <!-- Text -->
-                                        <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Permohonan Lulus</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Col sm 6, col md 6, col lg 3 -->
-                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                            <!-- Card -->
-                            <div class="card border-0 rounded-lg">
-                                <!-- Card body -->
-                                <div class="card-body" style="border-radius:.5rem;">
-
-                                    <div class="d-flex flex-row justify-content-center align-items-center">
-                                        <!-- Icon -->
-                                        <div class="small-card-icon">
-                                            <i class="fas fa-users card-icon-bg-primary fa-4x"></i>
-                                        </div>
-                                        <!-- Text -->
-                                        <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPengguna}}</h4>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <!-- Card -->
@@ -105,17 +281,78 @@
                             </div>
                         </div>
 
+                        <!-- Col sm 6, col md 6, col lg 3 -->
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                            <!-- Card -->
+                            <div class="card border-0 rounded-lg">
+                                <!-- Card body -->
+                                <div class="card-body" style="border-radius:.5rem;">
+
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <!-- Icon -->
+                                        <div class="small-card-icon">
+                                            <i class="fa fa-database  card-icon-bg-primary fa-4x"></i>
+                                        </div>
+                                        <!-- Text -->
+                                        <div class="small-card-text w-100 text-center">
+                                            <p class="font-weight-normal m-0 text-primary">Jumlah Data Geospatial</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Col sm 6, col md 6, col lg 3 -->
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                            <!-- Card -->
+                            <div class="card border-0 rounded-lg">
+                                <!-- Card body -->
+                                <div class="card-body" style="border-radius:.5rem;">
+
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <!-- Icon -->
+                                        <div class="small-card-icon">
+                                            <i class="fa fa-user-circle-o card-icon-bg-primary fa-4x"></i>
+                                        </div>
+                                        <!-- Text -->
+                                        <div class="small-card-text w-100 text-center">
+                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPengguna}}</h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Col sm 6, col md 6, col lg 3 -->
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                            <!-- Card -->
+                            <div class="card border-0 rounded-lg">
+                                <!-- Card body -->
+                                <div class="card-body" style="border-radius:.5rem;">
+
+                                    <div class="d-flex flex-row justify-content-center align-items-center">
+                                        <!-- Icon -->
+                                        <div class="small-card-icon">
+                                            <i class="fa fa-users card-icon-bg-primary fa-4x"></i>
+                                        </div>
+                                        <!-- Text -->
+                                        <div class="small-card-text w-100 text-center">
+                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna Dalaman</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
-                <div style="padding:15px;"></div>
-
-
-                <div  style="font-size: 180%;" >
-                  <i class="fa fa-area-chart" aria-hidden="true"></i>
-                  Laporan
-                </div>
-                <hr>
 
 
 

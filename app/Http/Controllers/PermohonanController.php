@@ -400,7 +400,7 @@ class PermohonanController extends Controller
 
     $permohonan->save();
 
-    return redirect()->route('permohonan.list')->with('success','Sebab permohonan gagal telah dihantar');
+    return redirect()->route('permohonan.listGagal')->with('success','Sebab permohonan gagal telah dihantar');
   }
 
   public function updateStatusTidakBerkaitan($id){
