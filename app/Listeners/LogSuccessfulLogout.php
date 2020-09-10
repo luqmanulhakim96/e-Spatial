@@ -41,7 +41,7 @@ class LogSuccessfulLogout
           'user_agent' => $this->request->userAgent(),
           'created_at' => Carbon::now(),
           'updated_at' => Carbon::now(),
-          'user_id'    =>  Auth::user()->id,
+          'user_id'    => Auth::user()->id,
       ];
       $details = Audit::create($data);
     }

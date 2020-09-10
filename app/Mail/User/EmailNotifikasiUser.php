@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Mail\Admin;
+namespace App\Mail\User;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class EmailNotifikasiAdmin extends Mailable
+class EmailNotifikasiUser extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -40,6 +40,6 @@ class EmailNotifikasiAdmin extends Mailable
                 ->from(env('MAIL_FROM_ADDRESS'))
                 // ->from('system@espatial.com')
                 ->subject($this->email->subjek)
-                ->view('senarai-email.templates.notifikasiAdmin', compact('email'));
+                ->view('senarai-email.templates.notifikasiUser', compact('email'));
     }
 }

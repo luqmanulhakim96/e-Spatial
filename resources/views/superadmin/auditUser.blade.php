@@ -45,6 +45,8 @@
                             <td> Ketua Pengarah </td>
                             @elseif($datas->user->role == 4)
                             <td> Superadmin </td>
+                            @elseif($datas->user->role == 5)
+                            <td> Pengguna Biasa </td>
                             @endif
                             <td>{{ $datas->ip_address }}</td>
                             <td>{{  Carbon\Carbon::parse($datas->updated_at)->format('M-d-Y h:i:s')  }}</td>
