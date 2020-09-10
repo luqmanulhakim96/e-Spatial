@@ -112,7 +112,7 @@
                       <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
                         <table border="0" cellspacing="0" cellpadding="0">
                           <tr>
-                              <td align="center" style="border-radius: 3px;" bgcolor="#003E61"><a href="{{ route('home') }}" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #003E61; display: inline-block;">Klik Di Sini</a></td>
+                              <td align="center" style="border-radius: 3px;" bgcolor="#003E61"><a href="{{ route('user.mainMenu') }}" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #003E61; display: inline-block;">Klik Di Sini</a></td>
                           </tr>
                         </table>
                       </td>
@@ -142,7 +142,7 @@
                 <!-- COPY -->
                 <tr>
                   <td bgcolor="#111111" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                    <p style="margin: 0;"><a href="{{ route('home') }}" target="_blank" style="color: #FFFFE0; font-size: 12px;">{{ urlencode(route('home')) }}</a></p>
+                    <p style="margin: 0;"><a href="{{ route('user.mainMenu') }}" target="_blank" style="color: #FFFFE0; font-size: 12px;">{{ urlencode(route('user.mainMenu')) }}</a></p>
                   </td>
                 </tr>
             </table>

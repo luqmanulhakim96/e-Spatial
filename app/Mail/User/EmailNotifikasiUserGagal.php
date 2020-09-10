@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Mail\Admin;
+namespace App\Mail\User;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class EmailNotifikasiAdmin extends Mailable
+class EmailNotifikasiUserGagal extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -18,12 +18,15 @@ class EmailNotifikasiAdmin extends Mailable
      */
      public $admin;
      public $email;
+     public $permohonan;
 
-    public function __construct($admin, $email)
+
+    public function __construct($admin, $email, $permohonan)
     {
         //
         $this->admin = $admin;
         $this->email = $email;
+        $this->permohonan = $permohonan;
     }
 
     /**
@@ -35,11 +38,12 @@ class EmailNotifikasiAdmin extends Mailable
     {
         // return $this->to($this->admin->email, $this->admin->name)
         $email = $this->email;
+        $permohonan =  $this->permohonan;
         // dd($this->email);
         return $this->to($this->admin->email , $this->admin->name)
                 ->from(env('MAIL_FROM_ADDRESS'))
                 // ->from('system@espatial.com')
                 ->subject($this->email->subjek)
-                ->view('senarai-email.templates.notifikasiAdmin', compact('email'));
+                ->view('senarai-email.templates.notifikasiUser', compact('email','permohonan'));
     }
 }

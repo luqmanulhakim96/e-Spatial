@@ -25,8 +25,11 @@
                                                 <option value="permohonan_baru">Permohonan Baru</option>
                                                 <option value="permohonan_lulus">Permohonan Lulus</option>
                                                 <option value="permohonan_tidak_lulus">Permohonan Tidak Lulus</option>
-                                                <option value="permohonan_berbayar">Permohonan Berbayar</option>
-                                                <option value="permohonan_tidak_berbayar">Permohonan Tidak Berbayar</option>
+                                                <!-- <option value="permohonan_berbayar">Permohonan Berbayar</option>
+                                                <option value="permohonan_tidak_berbayar">Permohonan Tidak Berbayar</option> -->
+                                                <option value="permohonan_gagal">Permohonan Gagal</option>
+                                                <option value="permohonan_batal">Permohonan Batal</option>
+                                                <option value="permohonan_tiada_berkaitan">Permohonan Tidak Berkaitan</option>
                                             </select>
                                       </div>
                                       @error('jenis')

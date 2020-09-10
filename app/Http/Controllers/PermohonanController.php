@@ -22,6 +22,12 @@ use App\Notifications\Admin\PermohonanBaruAdmin;
 use App\Notifications\Admin\PermohonanBaruAdminNull;
 use App\Notifications\Admin\PermohonanLulusAdmin;
 use App\Notifications\Admin\PermohonanLulusAdminNull;
+use App\Notifications\Admin\PermohonanGagalAdmin;
+
+use App\Notifications\User\PermohonanTidakBerkaitanUser;
+use App\Notifications\User\PermohonanGagalUser;
+use App\Notifications\User\PermohonanLulusUser;
+
 
 use Auth;
 use PDF;
@@ -202,6 +208,7 @@ class PermohonanController extends Controller
       }
     }
 
+    // dd($permohonan);
     $permohonan->save();
     if($current_user_info->role == 0){
       $penyokong_satu = User::where('role','=','1')->get();
@@ -258,27 +265,31 @@ class PermohonanController extends Controller
     if($current_user_info->role == 3){
       $admin = User::where('role','=','0')->get();
 
+      if($request->status_permohonan == 'Lulus'){
+        $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'permohonan_lulus')->first();
+        if(is_null($email))
+        {
+          foreach ($admin as $data) {
+            $permohonan->notify(new PermohonanLulusAdminNull($data));  // use this notification when email template not available
+            // $emailJob = (new SendEmailPermohonanLulusAdminNull($data))->delay(Carbon::now()->addSeconds(30));
+            // dispatch($emailJob);
+          }
+        }
+        else
+        {
+          foreach ($admin as $data) {
+            $permohonan->notify(new PermohonanLulusAdmin($data, $email));
+            // $emailJob = (new SendEmailPermohonanLulusAdmin($data,$email))->delay(Carbon::now()->addSeconds(30));
+            // dispatch($emailJob);
 
-      $permohonan->status_permohonan = "Lulus";
-
-      // have not done yet 15/7/2020 -luke-
-      $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'permohonan_lulus')->first();
-      if(is_null($email))
-      {
-        foreach ($admin as $data) {
-          $permohonan->notify(new PermohonanLulusAdminNull($data));  // use this notification when email template not available
-          // $emailJob = (new SendEmailPermohonanLulusAdminNull($data))->delay(Carbon::now()->addSeconds(30));
-          // dispatch($emailJob);
+          }
         }
       }
-      else
-      {
-        foreach ($admin as $data) {
-          $permohonan->notify(new PermohonanLulusAdmin($data, $email));
-          // $emailJob = (new SendEmailPermohonanLulusAdmin($data,$email))->delay(Carbon::now()->addSeconds(30));
-          // dispatch($emailJob);
-
-        }
+      else {
+        $email = SenaraiEmail::where('kepada', '=', 'admin')->where('jenis', '=', 'permohonan_gagal')->first();
+          foreach ($admin as $data) {
+            $permohonan->notify(new PermohonanGagalAdmin($data, $email));
+          }
       }
 
 
@@ -327,6 +338,14 @@ class PermohonanController extends Controller
     $permohonan->attachment_surat_bayaran = $uploaded_files_permohonan_surat_pembayaran;
     $permohonan->attachment_penerimaan_data = $uploaded_files_permohonan_penerimaan_data;
     $permohonan->save();
+
+    $email = SenaraiEmail::where('kepada', '=', 'pemohon')->where('jenis', '=', 'permohonan_lulus')->first();
+
+    $pemohon = User::where('id','=',$permohonan->user_id)->get();
+
+    foreach ($pemohon as $data) {
+      $permohonan->notify(new PermohonanLulusUser($data, $email));
+    }
 
     return redirect()->route('permohonan.list')->with('success','Fail telah dimuatnaik');
   }
@@ -400,7 +419,17 @@ class PermohonanController extends Controller
 
     $permohonan->save();
 
+
+    $pemohon = User::where('id','=',$permohonan->user_id)->get();
+
+    $email = SenaraiEmail::where('kepada', '=', 'pemohon')->where('jenis', '=', 'permohonan_gagal')->first();
+
+    foreach ($pemohon as $data) {
+      $permohonan->notify(new PermohonanGagalUser($data, $email, $permohonan));  // use this notification when email template not available
+    }
+
     return redirect()->route('permohonan.listGagal')->with('success','Sebab permohonan gagal telah dihantar');
+
   }
 
   public function updateStatusTidakBerkaitan($id){
@@ -412,6 +441,14 @@ class PermohonanController extends Controller
     $permohonan->status_permohonan = $status;
 
     $permohonan->save();
+
+    $pemohon = User::where('id','=',$permohonan->user_id)->get();
+
+    $email = SenaraiEmail::where('kepada', '=', 'pemohon')->where('jenis', '=', 'permohonan_tiada_berkaitan')->first();
+
+    foreach ($pemohon as $data) {
+      $permohonan->notify(new PermohonanTidakBerkaitanUser($data, $email));  // use this notification when email template not available
+    }
 
     return redirect()->route('permohonan.listBaru')->with('success','Status permohonan berjaya dikemaskini');
   }

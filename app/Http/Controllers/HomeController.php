@@ -309,10 +309,79 @@ class HomeController extends Controller
 
       if(Auth::user()->role == '5')
       {
-        return redirect()->route('user.list');
+        $permohonanbaru = str_contains($markAsRead, 'PermohonanBaruUser');
+        $permohonanlulus = str_contains($markAsRead, 'PermohonanLulusUser');
+        $permohonangagal = str_contains($markAsRead, 'PermohonanGagalUser');
+        $permohonantidakberkaitan = str_contains($markAsRead, 'PermohonanTidakBerkaitanUser');
+
+        if($permohonanbaru){
+          return redirect()->route('user.listSedangDiproses');
+        }
+        elseif ($permohonanlulus) {
+          return redirect()->route('user.list');
+        }
+        elseif ($permohonangagal) {
+          return redirect()->route('user.listGagal');
+        }
+        elseif ($permohonantidakberkaitan) {
+          return redirect()->route('user.listTidakBerkaitan');
+        }
       }
       else{
-        return redirect()->route('permohonan.list');
+        $permohonanbaru = false;
+        $permohonanlulus = false;
+        $permohonangagal = false;
+        $permohonandalaman = false;
+        $permohonanbatal = false;
+
+        if(str_contains($markAsRead, 'PermohonanBaruAdmin'))
+        {
+          $permohonanbaru = true;
+        }
+        else if(str_contains($markAsRead, 'PermohonanBaruAdminNull'))
+        {
+          $permohonanbaru = true;
+        }
+
+        if(str_contains($markAsRead, 'PermohonanLulusAdmin'))
+        {
+          $permohonanlulus = true;
+        }
+        else if(str_contains($markAsRead, 'PermohonanLulusAdminNull'))
+        {
+          $permohonanlulus = true;
+        }
+
+        if(str_contains($markAsRead, 'PermohonanGagalAdmin'))
+        {
+          $permohonangagal = true;
+        }
+
+        if(str_contains($markAsRead, 'PermohonanDalamanAdmin'))
+        {
+          $permohonandalaman = true;
+        }
+
+        if(str_contains($markAsRead, 'PermohonanBatalAdmin'))
+        {
+          $permohonanbatal = true;
+        }
+
+        if($permohonanbaru){
+          return redirect()->route('permohonan.listBaru');
+        }
+        elseif ($permohonanlulus) {
+          return redirect()->route('permohonan.list');
+        }
+        elseif ($permohonangagal) {
+          return redirect()->route('permohonan.listGagal');
+        }
+        elseif ($permohonandalaman) {
+          return redirect()->route('permohonan.listDalaman');
+        }
+        elseif ($permohonanbatal) {
+          return redirect()->route('permohonan.listBatal');
+        }
       }
     }
 

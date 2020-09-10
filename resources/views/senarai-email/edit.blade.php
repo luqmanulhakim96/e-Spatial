@@ -21,8 +21,15 @@
                                       <div class="form-group">
                                           <label for="jenis">Jenis</label>
                                           <select id="jenis" class="custom-select  bg-light @error('jenis') is-invalid @enderror" name="jenis" value="{{ $info->jenis }}" autofocus>
-                                                <option value="memo" {{ $info->jenis == "memo" ? 'selected' : '' }}>Memo</option>
-                                                <option value="notis" {{ $info->jenis == "notis" ? 'selected' : '' }}>Notis</option>
+                                                <option value="permohonan_baru" {{ $info->jenis == "permohonan_baru" ? 'selected' : '' }}>Permohonan Baru</option>
+                                                <option value="permohonan_lulus" {{ $info->jenis == "permohonan_lulus" ? 'selected' : '' }}>Permohonan Lulus</option>
+                                                <option value="permohonan_tidak_lulus" {{ $info->jenis == "permohonan_tidak_lulus" ? 'selected' : '' }}>Permohonan Tidak Lulus</option>
+                                                <option value="permohonan_berbayar" {{ $info->jenis == "permohonan_berbayar" ? 'selected' : '' }}>Permohonan Berbayar</option>
+                                                <option value="permohonan_tidak_berbayar" {{ $info->jenis == "permohonan_tidak_berbayar" ? 'selected' : '' }}>Permohonan Tidak Berbayar</option>
+                                                <option value="permohonan_gagal" {{ $info->jenis == "permohonan_gagal" ? 'selected' : '' }}>Permohonan Gagal</option>
+                                                <option value="permohonan_batal" {{ $info->jenis == "permohonan_batal" ? 'selected' : '' }}>Permohonan Batal</option>
+                                                <option value="permohonan_tiada_berkaitan" {{ $info->jenis == "permohonan_tiada_berkaitan" ? 'selected' : '' }}>Permohonan Tidak Berkaitan</option>
+
                                             </select>
                                       </div>
                                       @error('jenis')

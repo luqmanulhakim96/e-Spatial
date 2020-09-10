@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class EmailNotifikasiAdminLulus extends Mailable
+class EmailNotifikasiAdminBatal extends Mailable
 {
     use Queueable, SerializesModels;
 

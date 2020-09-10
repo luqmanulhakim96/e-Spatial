@@ -71,7 +71,7 @@
     <!-- LOGO -->
     <tr>
         <td bgcolor="#003E61" align="center">
-            <table border="0" cellpadding="0" cellspacing="0" width="680" >
+            <table border="0" cellpadding="0" cellspacing="0" width="480" >
                 <tr>
                     <td align="center" valign="top" style="padding: 40px 10px 40px 10px;">
                         <a href="https://www.forestry.gov.my/my/" target="_blank">
@@ -85,10 +85,10 @@
     <!-- HERO -->
     <tr>
         <td bgcolor="#003E61" align="center" style="padding: 0px 10px 0px 10px;">
-            <table border="0" cellpadding="0" cellspacing="0" width="680" >
+            <table border="0" cellpadding="0" cellspacing="0" width="480" >
                 <tr>
-                    <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 2px; line-height: 48px;">
-                      <h1 style="font-size: 32px; font-weight: 400; margin: 0;">{{$email->tajuk}}</h1>
+                    <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+                      <h1 style="font-size: 32px; font-weight: 400; margin: 0;">Permohonan Gagal</h1>
                     </td>
                 </tr>
             </table>
@@ -97,11 +97,11 @@
     <!-- COPY BLOCK -->
     <tr>
         <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
-            <table border="0" cellpadding="0" cellspacing="0" width="680" >
+            <table border="0" cellpadding="0" cellspacing="0" width="480" >
               <!-- COPY -->
               <tr>
                 <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                  <p style="margin: 0;">{!! $email->kandungan !!} </p>
+                  <p style="margin: 0;">{{$permohonan->remarks_admin}}</p>
                 </td>
               </tr>
               <!-- BULLETPROOF BUTTON -->
@@ -112,7 +112,7 @@
                       <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
                         <table border="0" cellspacing="0" cellpadding="0">
                           <tr>
-                              <td align="center" style="border-radius: 3px;" bgcolor="#003E61"><a href="{{ route('home') }}" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #003E61; display: inline-block;">Klik Di Sini</a></td>
+                              <td align="center" style="border-radius: 3px;" bgcolor="#003E61"><a href="{{ route('permohonan.listGagal') }}" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #003E61; display: inline-block;">Klik Di Sini</a></td>
                           </tr>
                         </table>
                       </td>
@@ -126,7 +126,7 @@
     <!-- COPY CALLOUT -->
     <tr>
         <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
-            <table border="0" cellpadding="0" cellspacing="0" width="680" >
+            <table border="0" cellpadding="0" cellspacing="0" width="480" >
                 <!-- HEADLINE -->
                 <tr>
                   <td bgcolor="#111111" align="left" style="padding: 40px 30px 20px 30px; color: #ffffff; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
@@ -142,7 +142,7 @@
                 <!-- COPY -->
                 <tr>
                   <td bgcolor="#111111" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                    <p style="margin: 0;"><a href="{{ route('home') }}" target="_blank" style="color: #FFFFE0; font-size: 12px;">{{ urlencode(route('home')) }}</a></p>
+                    <p style="margin: 0;"><a href="{{ route('permohonan.listGagal') }}" target="_blank" style="color: #FFFFE0; font-size: 12px;">{{ urlencode(route('permohonan.listGagal')) }}</a></p>
                   </td>
                 </tr>
             </table>
@@ -151,7 +151,7 @@
     <!-- SUPPORT CALLOUT -->
     <tr>
         <td bgcolor="#f4f4f4" align="center" style="padding: 30px 10px 0px 10px;">
-            <table border="0" cellpadding="0" cellspacing="0" width="680" >
+            <table border="0" cellpadding="0" cellspacing="0" width="480" >
                 <!-- HEADLINE -->
                 <tr>
                   <td bgcolor="#003E61" align="center" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
@@ -165,7 +165,7 @@
     <!-- FOOTER -->
     <tr>
         <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
-            <table border="0" cellpadding="0" cellspacing="0" width="680" >
+            <table border="0" cellpadding="0" cellspacing="0" width="480" >
 
               <!-- PERMISSION REMINDER -->
               <tr>

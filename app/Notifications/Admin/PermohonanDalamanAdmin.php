@@ -1,24 +1,30 @@
 <?php
 
-namespace App\Notifications;
+namespace App\Notifications\Admin;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class PermohonanGagal extends Notification
+class PermohonanDalamanAdmin extends Notification
 {
     use Queueable;
+
+    protected $admin;
+    protected $email;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($admin, $email)
     {
         //
+        $this->admin = $admin;
+        $this->email = $email;
+
     }
 
     /**
@@ -29,7 +35,7 @@ class PermohonanGagal extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -40,19 +46,20 @@ class PermohonanGagal extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+        return Mail::queue(new EmailNotifikasiAdmin($this->admin, $this->email));
     }
 
     public function toDatabase($notifiable)
     {
-      return [
-        ''
-      ]
+        // dd($notifiable);
+        return[
+          'permohonan_id' => $notifiable->id,
+          'tajuk' => 'Permohonan dalaman baru yang perlu disemak',
+          'tarikh_dicipta' => $notifiable->created_at,
+          'kepada_email' => $this->admin->email,
+          'kepada_id' => $this->admin->id,
+        ];
     }
-
 
     /**
      * Get the array representation of the notification.
