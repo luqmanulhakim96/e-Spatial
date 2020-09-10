@@ -22,7 +22,7 @@
                     <!-- Col sm 6, col md 6, col lg 3 -->
                     <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                       <!-- Card -->
-                      <a href="#"  >
+                      <a href="{{route('permohonan.listBaru')}}"  >
                         <div class="card border-0 rounded-lg">
                             <!-- Card body -->
                             <div class="card-body"  style="border-radius:.5rem;">
@@ -35,7 +35,17 @@
                                     <!-- Text -->
                                     <div class="small-card-text w-100 text-center">
                                         <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Baru</p>
-                                        <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                        <h4 class="font-weight-normal m-0 text-primary">
+                                          @if(Auth::user()->role == 0)
+                                          {{$countPermohonanBaruPS}}
+                                          @elseif(Auth::user()->role == 1)
+                                          {{$countPermohonanBaruP1}}
+                                          @elseif(Auth::user()->role == 2)
+                                          {{$countPermohonanBaruP2}}
+                                          @elseif(Auth::user()->role == 3)
+                                          {{$countPermohonanBaruKP}}
+                                          @endif
+                                        </h4>
                                     </div>
 
                                 </div>
@@ -52,7 +62,7 @@
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                         <!-- Card -->
-                        <a href="#"  >
+                        <a href="{{route('permohonan.listSedangDiproses')}}"  >
                           <div class="card border-0 rounded-lg">
                               <!-- Card body -->
                               <div class="card-body"  style="border-radius:.5rem;">
@@ -65,7 +75,7 @@
                                       <!-- Text -->
                                       <div class="small-card-text w-100 text-center">
                                           <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Sedang Diproses</p>
-                                          <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                          <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanSedangDiproses}}</h4>
                                       </div>
 
                                   </div>
@@ -84,7 +94,7 @@
                           <!-- Card -->
                           <div class="card border-0 rounded-lg">
                               <!-- Card body -->
-                              <a href="#"  >
+                              <a href="{{route('permohonan.list')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
@@ -95,7 +105,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Lulus</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
                                         </div>
                                     </div>
 
@@ -113,7 +123,7 @@
                           <!-- Card -->
                           <div class="card border-0 rounded-lg">
                               <!-- Card body -->
-                              <a href="#"  >
+                              <a href="{{route('permohonan.listGagal')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
@@ -124,7 +134,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Gagal</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanGagal}}</h4>
                                         </div>
                                     </div>
 
@@ -155,7 +165,7 @@
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
-                          <a href="#"  >
+                          <a href="{{route('permohonan.listTidakBerkaitan')}}"  >
                             <div class="card border-0 rounded-lg">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
@@ -168,7 +178,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Tidak Berkaitan</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanTidakBerkaitan}}</h4>
                                         </div>
                                     </div>
 
@@ -186,7 +196,7 @@
                           <!-- Card -->
                           <div class="card border-0 rounded-lg">
                               <!-- Card body -->
-                              <a href="#"  >
+                              <a href="{{route('permohonan.listBatal')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
@@ -197,7 +207,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Batal</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanBatal}}</h4>
                                         </div>
                                     </div>
 
@@ -213,7 +223,7 @@
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
-                          <a href="#"  >
+                          <a href="{{route('permohonan.listDalaman')}}"  >
                             <div class="card border-0 rounded-lg">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
@@ -226,7 +236,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Dalaman</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanDalaman}}</h4>
                                         </div>
                                     </div>
 
@@ -296,7 +306,7 @@
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-primary">Jumlah Data Geospatial</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countSenaraiHarga}}</h4>
                                         </div>
                                     </div>
 
@@ -318,7 +328,7 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna</p>
+                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna Biasa</p>
                                             <h4 class="font-weight-normal m-0 text-primary">{{$countPengguna}}</h4>
                                         </div>
                                     </div>
@@ -341,8 +351,8 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna Dalaman</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">99</h4>
+                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna (Admin)</p>
+                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPenggunaDalaman}}</h4>
                                         </div>
                                     </div>
 
@@ -593,25 +603,25 @@
               data.addRows([
                 [ 'Julai',sites[i]['count_bulan']],
               ]);
-            }else if (sites[i]['bulan'] == 1) {
+            }else if (sites[i]['bulan'] == 8) {
               data.addRows([
                 [ 'Ogos',sites[i]['count_bulan']],
               ]);
-            }else if (sites[i]['bulan'] == 8) {
+            }else if (sites[i]['bulan'] == 9) {
               data.addRows([
                 [ 'September',sites[i]['count_bulan']],
               ]);
-            }else if (sites[i]['bulan'] == 9) {
+            }else if (sites[i]['bulan'] == 10) {
               data.addRows([
                 [ 'Oktober',sites[i]['count_bulan']],
               ]);
-            }else if (sites[i]['bulan'] == 10) {
+            }else if (sites[i]['bulan'] == 11) {
               data.addRows([
                 [ 'November',sites[i]['count_bulan']],
               ]);
-            }else if (sites[i]['bulan'] == 11) {
+            }else if (sites[i]['bulan'] == 12) {
               data.addRows([
-                [ 'Desember',sites[i]['count_bulan']],
+                [ 'Disember',sites[i]['count_bulan']],
               ]);
             }
           }
@@ -682,25 +692,25 @@
             data.addRows([
               [ 'Julai',parseFloat(sites[i]['total'])],
             ]);
-          }else if (sites[i]['bulan'] == 1) {
+          }else if (sites[i]['bulan'] == 8) {
             data.addRows([
               [ 'Ogos',parseFloat(sites[i]['total'])],
             ]);
-          }else if (sites[i]['bulan'] == 8) {
+          }else if (sites[i]['bulan'] == 9) {
             data.addRows([
               [ 'September',parseFloat(sites[i]['total'])],
             ]);
-          }else if (sites[i]['bulan'] == 9) {
+          }else if (sites[i]['bulan'] == 10) {
             data.addRows([
               [ 'Oktober',parseFloat(sites[i]['total'])],
             ]);
-          }else if (sites[i]['bulan'] == 10) {
+          }else if (sites[i]['bulan'] == 11) {
             data.addRows([
               [ 'November',parseFloat(sites[i]['total'])],
             ]);
-          }else if (sites[i]['bulan'] == 11) {
+          }else if (sites[i]['bulan'] == 12) {
             data.addRows([
-              [ 'Desember',parseFloat(sites[i]['total'])],
+              [ 'Disember',parseFloat(sites[i]['total'])],
             ]);
           }
         }

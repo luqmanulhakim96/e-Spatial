@@ -45,6 +45,10 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/permohonan/senarai/gagal', 'HomeController@senaraiPermohonanGagal')->name('permohonan.listGagal');
 
+  Route::get('/permohonan/senarai/tidak-berkaitan', 'HomeController@senaraiPermohonanTidakBerkaitan')->name('permohonan.listTidakBerkaitan');
+
+  Route::get('/permohonan/senarai/batal', 'HomeController@senaraiPermohonanBatal')->name('permohonan.listBatal');
+
   Route::get('/permohonan/senarai/dalaman', 'HomeController@senaraiPermohonanDalaman')->name('permohonan.listDalaman');
 
   Route::get('/permohonan/senarai/semua', 'HomeController@senaraiPermohonan')->name('permohonan.list');

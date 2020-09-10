@@ -47,6 +47,7 @@ class UserController extends Controller
 
     $countPermohonanLulus = Permohonan::where('user_id', $user_id)
                                 ->where('status_permohonan', 'Lulus')
+                                ->whereNotNull('attachment_surat_bayaran')
                                 ->count();
 
     $countPermohonanGagal = Permohonan::where('user_id', $user_id)

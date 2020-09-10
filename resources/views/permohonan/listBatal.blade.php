@@ -10,36 +10,43 @@
 
                 <div class="card rounded-lg">
                   <div class="card-body">
-                      <div class="card-title">Senarai Pemohonan Dalaman</div>
+                      <div class="card-title">Senarai Pemohonan Batal</div>
 
                       <div class="table-responsive">
-                      <table class="table table-striped table-bordered" id="list_permohonan_dalaman" style="width: 100%;">
 
+                      <table class="table table-striped table-bordered" id="list_permohonan_gagal" style="width: 100%;">
                         <thead>
                             <tr>
                               <th class="all">PERMOHONAN ID</th>
-                              <th class="all">NAMA</th>
-                              <th class="all">STATUS PERMOHONAN</th>
+                              <th class="all">NAMA PEMOHON</th>
                               <th class="all">TARIKH PERMOHONAN</th>
+                              <th class="all">TARIKH PEMBATALAN</th>
                             </tr>
                         </thead>
                         <tbody>
-                          @foreach($listPermohonanDalaman as $dalaman)
+                          @foreach($listPermohonanBatal as $data)
                           <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              <a href="{{ route('permohonan.view', $dalaman->id) }}">{{ $dalaman->getPermohonanID()  }}</a>
+                              <a href="{{ route('permohonan.view', $data->id) }}">{{ $data->getPermohonanID()  }}</a>
                             </td>
-                            <td>{{$dalaman->user->name}}</td>
-                            <td>{{$dalaman->status_permohonan}}</td>
-                            <td>{{$dalaman->created_at}}</td>
+                            <td>
+                              <div style="padding : 4px;"></div>
+                              {{$data->user->name}}
+                            </td>
+                            <td>
+                              <div style="padding : 4px;"></div>
+                              {{$data->created_at}}
+                            </td>
+                            <td>
+                              <div style="padding : 4px;"></div>
+                              {{$data->updated_at}}
+                            </td>
                           </tr>
                           @endforeach
-
                         </tbody>
                       </table>
                     </div>
-
                 </div>
             </div>
         </main>

@@ -19,7 +19,9 @@
                             <tr>
                               <th class="all">PERMOHONAN ID</th>
                               <th class="all">TARIKH PERMOHONAN</th>
-                              <th class="all">STATUS PERMOHONAN</th>
+                              <th class="all">TARIKH PERMOHONAN DIBATALKAN</th>
+
+                              <!-- <th class="all">STATUS PERMOHONAN</th> -->
 
 
                             </tr>
@@ -30,9 +32,11 @@
                           <tr>
                             <td>{{ $batal->getPermohonanID()  }}</td>
                             <td>{{ Carbon\Carbon::parse($batal->created_at)->format('d-m-Y H:i:s')  }}</td>
-                            <td>
+                            <td>{{ Carbon\Carbon::parse($batal->updated_at)->format('d-m-Y H:i:s')  }}</td>
+
+                            <!-- <td>
                               <span class="badge badge-danger badge-pill" style="font-size: 100%;">{{ $batal->status_permohonan  }}</span>
-                            </td>
+                            </td> -->
                           </tr>
                           @endforeach
                         </tbody>

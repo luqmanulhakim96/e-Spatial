@@ -45,18 +45,24 @@
                                         <a href="{{ route('user.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
                                     </div>
                               </td>
+                              <td>
+                                <div class="d-flex flex-row justify-content-around align-items-center">
+                                    <a href="{{ route('user.batal', $data->id) }}" class="btn btn-danger mr-1" onclick="return confirm('Anda pasti mahu membatalkan permohonan ini?')"><i class="fas fa-times-circle"></i></a>
+                                </div>
+                              </td>
                               @else
                               <td>
                                     <div class="d-flex flex-row justify-content-around align-items-center">
                                         <a href="#" class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Maaf, permohonan anda telah diulas."><i class="fas fa-pencil-alt"></i></a>
                                     </div>
                               </td>
-                              @endif
                               <td>
                                 <div class="d-flex flex-row justify-content-around align-items-center">
-                                    <a href="{{ route('user.batal', $data->id) }}" class="btn btn-danger mr-1" onclick="return confirm('Anda pasti mahu membatalkan permohonan ini?')"><i class="fas fa-times-circle"></i></a>
+                                    <a href="#" class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Maaf, permohonan anda telah diulas."><i class="fas fa-times-circle"></i></a>
                                 </div>
                               </td>
+                              @endif
+
                             </tr>
                             @endforeach
                           </tbody>
