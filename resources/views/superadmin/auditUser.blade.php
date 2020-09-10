@@ -22,8 +22,6 @@
                               <th class="all">Masa</th>
                               <th class="all">Pengkalan Data</th>
                               <th class="all">Acara</th>
-                              <th class="all">Data Lama</th>
-                              <th class="all">Data Baharu</th>
 
                             </tr>
                         </thead>
@@ -51,43 +49,12 @@
                             <td>{{ $datas->ip_address }}</td>
                             <td>{{  Carbon\Carbon::parse($datas->updated_at)->format('M-d-Y h:i:s')  }}</td>
                             <td>{{ substr($datas->auditable_type, strpos($datas->auditable_type, "/") + 4) }}</td>
-                            <td>{{  ucfirst($datas->event) }}</td>
 
-                            @if( $datas->old_values == "[]")
-                            <td>-</td>
+                            @if($datas->event == "Log Masuk")
+                            <td><span class="badge m-1 badge-success" style="font-size:12px;">Log Masuk</span></td>
                             @else
-                              @if( $datas->auditable_type == "App\SenaraiSurat")
-                              <td>Data Surat</td>
-                              @else
-                              <td>
-                              <table>
-                                @foreach(explode(',', $datas->old_values) as $info)
-                                  <tr>
-                                    <td>{{  preg_replace('/[{}]/',"",$info) }}</td>
-                                  </tr>
-                                @endforeach
-                              </table>
-                              </td>
-                              @endif
+                            <td><span class="badge m-1 badge-warning" style="font-size:12px;">Log Keluar</span></td>
                             @endif
-                            @if( $datas->new_values == "[]")
-                            <td>-</td>
-                            @else
-                              @if( $datas->auditable_type == "App\SenaraiSurat")
-                              <td>Data Surat</td>
-                              @else
-                              <td>
-                              <table>
-                                @foreach(explode(',', $datas->new_values) as $info)
-                                  <tr>
-                                    <td>{{  preg_replace('/[{}]/',"",$info) }}</td>
-                                  </tr>
-                                @endforeach
-                              </table>
-                              </td>
-                              @endif
-                            @endif
-
                           </tr>
                             @endif
                           @endforeach
