@@ -171,7 +171,7 @@ $(document).ready(function(){
     $(responsiveAuditTable).DataTable({
         responsive : true,
         scrollX: true,
-        order: [[ 7, "desc" ]],
+        order: [[ 3, "desc" ]],
         columnDefs: [
                      {
                           "targets": "_all", // your case first column

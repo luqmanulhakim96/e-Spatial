@@ -47,9 +47,19 @@ class AdminController extends Controller
     // $all = $user->audits;
     $data = Audit::whereHas('user', function($q) {
       $q->where('role','!=','5');
-    })->get();
+    })->where('event','!=','Log Masuk')->where('event','!=','Log Keluar')->get();
     // dd($data);
     return view('superadmin.audit', compact('data'));
+  }
+
+  public function auditTrailLogUser()
+  {
+    // $data = Audit::with('user')->get();
+    // $data = User::where('role','!=','5')->get();
+    // $all = $user->audits;
+    $data = Audit::where('event','Log Masuk')->orWhere('event','Log Keluar')->get();
+    // dd($data);
+    return view('superadmin.auditUser', compact('data'));
   }
 
   protected function validator(array $data)
