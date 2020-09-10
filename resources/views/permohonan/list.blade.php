@@ -16,7 +16,7 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Update Status Bayaran</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Kemaskini Status Bayaran</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
@@ -76,14 +76,25 @@
 
                                 <div class="form-group">
                                   <label for="">Upload Surat Kelulusan</label>
-                                  <!-- <input type="file" required onchange="fileValidation('attachment_surat_bayaran')" class="form-control bg-light" id="attachment_surat_bayaran" name="attachment_surat_bayaran" aria-describedby="attachment_surat_bayaran"> -->
                                   <div class="custom-file">
                                       <input type="file" required class="custom-file-input" required id="attachment_surat_bayaran" onchange="return fileValidation('attachment_surat_bayaran')" name="attachment_surat_bayaran">
-                                      <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                      <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih fail</label>
+                                  </div>
+                                  <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="">Upload Borang Akuan Penerimaan Data</label>
+                                  <div class="custom-file">
+                                      <input type="file" required class="custom-file-input" required id="attachment_penerimaan_data" onchange="return fileValidation('attachment_penerimaan_data')" name="attachment_penerimaan_data">
+                                      <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih fail</label>
                                   </div>
                                   <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
 
                                 </div>
+
+
+
 
                                   <input type="hidden" id="permohonan_id_upload_surat_bayaran" name="permohonan_id_upload_surat_bayaran" value="" readonly>
 
@@ -114,16 +125,7 @@
                                   <input required class="form-control bg-light" type="text" name="link_data" placeholder="Masukkan link untuk muat turun data">
                                 </div>
 
-                                <div class="form-group">
-                                  <label for="">Upload Borang Akuan Penerimaan Data</label>
-                                  <!-- <input type="file" required onchange="fileValidation('attachment_penerimaan_data')" class="form-control bg-light" id="attachment_penerimaan_data" name="attachment_penerimaan_data" aria-describedby="attachment_penerimaan_data"> -->
-                                  <div class="custom-file">
-                                      <input type="file" required class="custom-file-input" required id="attachment_penerimaan_data" onchange="return fileValidation('attachment_penerimaan_data')" name="attachment_penerimaan_data">
-                                      <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                                  </div>
-                                  <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
 
-                                </div>
 
                                   <input type="hidden" id="permohonan_id_link_data" name="permohonan_id_link_data" value="">
 
@@ -141,33 +143,49 @@
                         <thead>
                             <tr>
                               <th class="all">PERMOHONAN ID</th>
-                              <th class="all">STATUS PERMOHONAN</th>
+                              <th class="all">KATEGORI PEMOHON</th>
+                              @if($userInfo->role == 0)
+                              <th class="all">MUAT NAIK SURAT & BORANG</th>
+                              @endif
                               <th class="all">STATUS PEMBAYARAN PEMOHON</th>
-                              <th class="all">MUAT NAIK SURAT KELULUSAN</th>
                               <th class="all">JUMLAH BAYARAN</th>
                               <th class="all">RESIT PEMBAYARAN</th>
-                              @if($userInfo->role == 0)
-                              <th class="all">MUATNAIK DOKUMEN DAN LINK DATA</th>
-                              @endif
                               <th class="all">BORANG AKUAN PENERIMAAN DATA DARIPADA PEMOHON</th>
+                              @if($userInfo->role == 0)
+                              <th class="all">MUATNAIK LINK DATA GEOSPATIAL</th>
+                              @endif
+
                             </tr>
                         </thead>
 
                         <tbody>
                           @foreach($listPermohonanLulus as $lulus)
                           <tr>
-                            <td onclick="document.location = '{{ route('permohonan.view', $lulus->id) }}';">
+                            <td>
                               <div style="padding : 4px;"></div>
-                              {{ $lulus->getPermohonanID()  }}
+                              <a href="{{ route('permohonan.view', $lulus->id) }}">{{ $lulus->getPermohonanID()  }}</a>
                             </td>
 
                             <td>
                               <div style="padding : 4px;"></div>
-                              <span class="badge badge-success badge-pill" style="font-size: 100%;">{{ $lulus->status_permohonan  }}</span>
+                              <span style="font-size: 100%; text-transform:capitalize;">{{ $lulus->user->kategori  }}</span>
                             </td>
 
+                            @if($lulus->attachment_surat_bayaran == null && $userInfo->role == 0)
+                            <td><button class="btn btn-warning mr-1" onclick="passId_upload_surat_bayaran({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_surat_bayaran"><i class="fa fa-upload"></i></button></td>
+                            @else
+                            <td><button class="btn btn-success mr-1" onclick="passId_upload_surat_bayaran({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_surat_bayaran"><i class="fa fa-upload"></i></button></td>
+                            @endif
+
                             @if($lulus->status_pembayaran == 'Belum Dibayar')
-                            <td><button class="btn btn-warning rounded m-2" onclick="passId({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#status_harga">Pilih Status Bayaran</button></td>
+                            <td>
+                              @if($userInfo->role == 0)
+                              <button class="btn btn-warning rounded m-2" onclick="passId({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#status_harga">Pilih Status Bayaran</button>
+                              @else
+                              <div style="padding : 4px;"></div>
+                              <span class="badge badge-warning badge-pill" style="font-size: 100%;">Berbayar</span>
+                              @endif
+                            </td>
                             @elseif($lulus->status_pembayaran == 'Pengecualian Bayaran')
                             <td>
                               <div style="padding : 4px;"></div>
@@ -182,11 +200,7 @@
                             </td>
                             @endif
 
-                            @if($lulus->attachment_surat_bayaran == null)
-                            <td><button class="btn btn-warning mr-1" onclick="passId_upload_surat_bayaran({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_surat_bayaran"><i class="fa fa-upload"></i></button></td>
-                            @else
-                            <td><button class="btn btn-success mr-1" onclick="passId_upload_surat_bayaran({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_surat_bayaran"><i class="fa fa-upload"></i></button></td>
-                            @endif
+
 
                             <td>
                               <div style="padding : 4px;"></div>
@@ -207,12 +221,6 @@
                             </td>
                             @endif
 
-                            @if($lulus->link_data == null)
-                            <td><button class="btn btn-warning mr-1" onclick="passId_upload_link_data({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_link_data"><i class="fa fa-upload"></i></button></td>
-                            @else
-                            <td><button class="btn btn-success mr-1" onclick="passId_upload_link_data({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_link_data"><i class="fa fa-upload"></i></button></td>
-                            @endif
-
                             @if($lulus->attachment_penerimaan_data_user != null)
                             <td>
                               <a href="{{route('permohonan.download.attachment_penerimaan_data_user',  $lulus->id)}}" class="btn btn-success mr-1">
@@ -225,6 +233,14 @@
                               <span>Tiada Data</span>
                             </td>
                             @endif
+
+                            @if($lulus->link_data == null)
+                            <td><button class="btn btn-warning mr-1" onclick="passId_upload_link_data({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_link_data"><i class="fa fa-upload"></i></button></td>
+                            @else
+                            <td><button class="btn btn-success mr-1" onclick="passId_upload_link_data({{ $lulus->id  }})" data-id="" data-toggle="modal" data-target="#upload_link_data"><i class="fa fa-upload"></i></button></td>
+                            @endif
+
+
                           </tr>
                           @endforeach
                         </tbody>
@@ -253,13 +269,38 @@
             function fileValidation(name){
               var fileInput = document.getElementById(name);
               var filePath = fileInput.value;
-              var allowedExtensions = /(\.pdf)$/i;
+              var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png)$/i;
               if(!allowedExtensions.exec(filePath)){
-                  alert('Sila muatnaik file dalam format .pdf sahaja.');
+                  alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg dan .png sahaja.');
                   fileInput.value = '';
                   return false;
               }
-          }
+            }
+
+            $('#attachment_surat_bayaran').on('change', function() {
+                  var numb = $(this)[0].files[0].size/102400 /102400 ;
+                  numb = numb.toFixed(2);
+                  if(numb > 2){
+                  alert('Ralat! Fail anda melebihi 100MB. Saiz fail anda adalah: ' + numb +' MB');
+                  document.getElementById("attachment_permohonan").value = "";
+                  var fileName = "";
+                  $(this).next('.custom-file-label').html(fileName);
+                  return false;
+                  }
+                });
+
+
+              $('#attachment_penerimaan_data').on('change', function() {
+                    var numb = $(this)[0].files[0].size/102400 /102400 ;
+                    numb = numb.toFixed(2);
+                    if(numb > 2){
+                    alert('Ralat! Fail anda melebihi 100MB. Saiz fail anda adalah: ' + numb +' MB');
+                    document.getElementById("attachment_permohonan").value = "";
+                    var fileName = "";
+                    $(this).next('.custom-file-label').html(fileName);
+                    return false;
+                    }
+                  });
 
           function passId(id){
             //var permohonan_id = $(this).data('id');

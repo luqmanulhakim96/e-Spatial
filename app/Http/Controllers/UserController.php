@@ -624,9 +624,9 @@ class UserController extends Controller
     $gambar_profile = "";
 
     if ($files = $request->file('gambar_profile') != null) {
-          $gambar_profile = $request->file('gambar_profile')->store('uploads/gambar_profile');
+          $gambar_profile = $request->file('gambar_profile')->store('public/uploads/gambar_profile');
     }else {
-      $gambar_profil = null;
+      $gambar_profile = null;
     }
 
 
@@ -647,7 +647,7 @@ class UserController extends Controller
       $user->no_tel_rumah = $request->no_tel_rumah;
       $user->no_tel_bimbit = $request->no_tel_bimbit;
       $user->email = $request->email;
-      if($gambar_profil != null){
+      if($gambar_profile != null){
         $user->gambar_profile = $gambar_profile;
       }
 
@@ -670,7 +670,10 @@ class UserController extends Controller
       $user->no_tel_rumah = $request->no_tel_rumah;
       $user->no_tel_bimbit = $request->no_tel_bimbit;
       $user->email = $request->email;
-      $user->gambar_profile = $gambar_profile;
+      if($gambar_profile != null){
+        $user->gambar_profile = $gambar_profile;
+      }
+
 
       $user->save();
 
@@ -693,7 +696,10 @@ class UserController extends Controller
       $user->no_tel_rumah = $request->no_tel_rumah;
       $user->no_tel_bimbit = $request->no_tel_bimbit;
       $user->email = $request->email;
-      $user->gambar_profile = $gambar_profile;
+      if($gambar_profile != null){
+        $user->gambar_profile = $gambar_profile;
+      }
+
 
       $user->save();
 

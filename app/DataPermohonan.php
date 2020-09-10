@@ -15,7 +15,8 @@ class DataPermohonan extends Model implements Auditable
       'permohonan_id',
       'custom_jenis_data',
       'custom_tahun',
-      'saiz_data'
+      'saiz_data',
+      'jumlah_harga_data'
     ];
 
     public function harga(){

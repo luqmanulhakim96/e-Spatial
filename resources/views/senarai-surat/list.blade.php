@@ -12,7 +12,7 @@
                   <div class="card-body">
                       <div class="card-title">Senarai Templat Surat</div>
 
-                      <a class="btn btn-ripple btn-raised btn-primary m-2" href="{{ route('senarai-surat.add') }}">Tambah Surat</a>
+                      <a class="btn btn-ripple btn-raised btn-primary m-2" href="{{ route('senarai-surat.add') }}">Tambah Templat Surat</a>
                       <div class="table-responsive">
 
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
@@ -51,7 +51,7 @@
                         </tbody>
                       </table>
                     </div>
-                      
+
                   </div>
                 </div>
             </div>

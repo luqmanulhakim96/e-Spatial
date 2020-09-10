@@ -1,6 +1,7 @@
 @extends('layouts.app_user')
 @section('content')
       <!--Page Body part -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             <div class="page-body p-4 text-dark">
 
                 <div class="page-heading border-bottom d-flex flex-row">
@@ -26,7 +27,8 @@
                                 <th class="all">STATUS PEMBAYARAN</th>
                                 <th class="all">MUAT NAIK RESIT PEMBAYARAN</th>
                                 <th class="all">MUAT NAIK BORANG AKUAN PENERIMAAAN DATA</th>
-                                <th class="all">TINDAKAN</th>
+                                <th class="all">TINDAKAN PEMOHON</th>
+                                <th class="all">LINK DATA GEOSPATIAL</th>
                               </tr>
                           </thead>
                           <!-- Table body -->
@@ -142,24 +144,37 @@
 
                                   <td>
                                     @if($data->status_pembayaran == "Berbayar" && $data->attachment_receipt_pembayaran == null)
-                                    <span>- Muat Naik Resit Pembayaran</span>
+                                    <span>- Muatnaik Resit Pembayaran</span><br>
                                     @endif
 
                                     @if($data->attachment_penerimaan_data_user == null)
-                                    <span>- Muat Naik Resit Pembayaran</span>
+                                    <span>- Muatnaik Borang Akuan Penerimaan data</span><br>
                                     @endif
 
-                                    @if($data->status_pembayaran == "Berbayar" && $data->attachment_receipt_pembayaran != null && $data->attachment_penerimaan_data_user != null)
-                                    <span>- Selesai</span>
+                                    @if($data->status_pembayaran == "Sudah Dibayar" && $data->attachment_receipt_pembayaran != null && $data->attachment_penerimaan_data_user != null)
+                                    <div style="padding : 4px;"></div>
+                                    <span>Selesai</span><br>
                                     @endif
 
                                     @if($data->status_pembayaran == "Pengecualian Bayaran" &&  $data->attachment_penerimaan_data_user != null)
-                                    <span>- Selesai</span>
+                                    <div style="padding : 4px;"></div>
+                                    <span>Selesai</span><br>
                                     @endif
-
-
-
                                   </td>
+
+                                  @if($data->link_data != null)
+                                  <td>
+                                    <div class="d-flex flex-row justify-content-around align-items-center">
+                                      <a href="//{{$data->link_data}}" class="btn btn-success mr-1"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                                    </div>
+                                  </td>
+                                  @else
+                                  <td>
+                                    <div class="d-flex flex-row justify-content-around align-items-center">
+                                      <button class="btn btn-dark mr-1"><i class="fa fa-external-link" aria-hidden="true"></i></button>
+                                    </div>
+                                  </td>
+                                  @endif
 
                                   <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                       <form action="{{route('user.upload.surat_penerimaan_data')}}" enctype="multipart/form-data" method="post" class="px-4 py-3">
@@ -207,7 +222,7 @@
                                     </div>
                                 </div>
 
-                                  <input type="text" id="permohonan_id_surat" name="permohonan_id_surat" value="">
+                                  <input type="hidden" id="permohonan_id_surat" name="permohonan_id_surat" value="">
 
                               </div>
                               <div class="modal-footer">
@@ -239,7 +254,7 @@
                                     </div>
                                 </div>
 
-                                  <input type="text" id="permohonan_id_resit" name="permohonan_id_resit" value="">
+                                  <input type="hidden" id="permohonan_id_resit" name="permohonan_id_resit" value="">
 
                               </div>
                               <div class="modal-footer">
