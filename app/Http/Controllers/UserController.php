@@ -191,6 +191,7 @@ class UserController extends Controller
 
     $list_gagal = Permohonan::where('user_id','=',$user_id)
               ->where('status_permohonan','Gagal')
+              ->whereNotNull('remarks_admin')
               ->get();
 
     return view('user.listGagal', compact('list_gagal'));

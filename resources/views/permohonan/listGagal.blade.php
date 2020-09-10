@@ -20,16 +20,15 @@
                               <th class="all">PERMOHONAN ID</th>
                               <th class="all">NAMA PEMOHON</th>
                               <th class="all">TARIKH PERMOHONAN</th>
-                              <th class="all">STATUS PERMOHONAN</th>
                               <th class="all">SEBAB GAGAL</th>
                             </tr>
                         </thead>
                         <tbody>
                           @foreach($listPermohonanGagal as $baru2)
-                          <tr onclick="document.location = '{{ route('permohonan.view', $baru2->id) }}';">
+                          <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              {{$baru2->getPermohonanID()}}
+                              <a href="{{ route('permohonan.view', $baru2->id) }}">{{ $baru2->getPermohonanID()  }}</a>
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
@@ -37,33 +36,20 @@
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
-                              {{$baru2->user->created_at}}
+                              {{$baru2->created_at}}
                             </td>
-                            @if($baru2->ulasan_penyokong_1 == null)
-                            <td>Menunggu ulasan Penyokong 1</td>
-                            @elseif($baru2->ulasan_penyokong_2 == null)
-                            <td>Menunggu ulasan Penyokong 2</td>
-                            @elseif($baru2->ulasan_ketua_pengarah == null)
-                            <td>Menunggu ulasan Ketua Pengarah</td>
-                            @else
-                            <td>
-                              <div style="padding : 4px;"></div>
-                              <span class="badge badge-danger badge-pill" style="font-size: 100%;">{{ $baru2->status_permohonan  }}</span>
-                            </td>
-                            @endif
+
                             @if($baru2->remarks_admin == null)
                             <td>
                               <a href="{{ route('permohonan.alasanGagal', $baru2->id) }}">
-                                <button class="btn btn-success mr-1">
+                                <button class="btn btn-warning mr-1">
                                   <i class="far fa-comment-alt"></i>
                                 </button>
                               </a>
                             </td>
                             @else
                             <td>
-                              <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Alasan telah diberi">
-                                <i class="far fa-comment-alt"></i>
-                              </button>
+                              <span>{{ $baru2->remarks_admin  }}</span>
                             </td>
                             @endif
                           </tr>

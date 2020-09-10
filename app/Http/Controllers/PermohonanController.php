@@ -419,6 +419,7 @@ class PermohonanController extends Controller
 
     $permohonan->save();
 
+
     $pemohon = User::where('id','=',$permohonan->user_id)->get();
 
     $email = SenaraiEmail::where('kepada', '=', 'pemohon')->where('jenis', '=', 'permohonan_gagal')->first();
@@ -427,7 +428,8 @@ class PermohonanController extends Controller
       $permohonan->notify(new PermohonanGagalUser($data, $email, $permohonan));  // use this notification when email template not available
     }
 
-    return redirect()->route('permohonan.list')->with('success','Catatan sebab permohonan gagal telah dihantar');
+    return redirect()->route('permohonan.listGagal')->with('success','Sebab permohonan gagal telah dihantar');
+
   }
 
   public function updateStatusTidakBerkaitan($id){
