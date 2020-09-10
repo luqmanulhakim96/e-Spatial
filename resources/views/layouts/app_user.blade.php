@@ -73,6 +73,8 @@
 
                         <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrail') }}" class="w-100 py-3 pl-4" >Audit Trail</a></li>
 
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrailLogUser') }}" class="w-100 py-3 pl-4" >Audit Trail Keluar Masuk Pengguna</a></li>
+
                         @endif
                         @if(Auth::user()->role == 5)
                         <!-- Sub menu parent -->
@@ -213,7 +215,9 @@
                     <div class="dropdown dropdown-arow-none d-contents text-center mx-2">
                         <!-- Icon -->
                         <a href="#" class="w-100 dropdown-toggle text-muted" data-toggle="dropdown">
+
                           @if(Auth::user()->gambar_profile == null)
+
                           <img src="{{ asset('https://icon-library.com/images/default-profile-icon/default-profile-icon-24.jpg') }}" alt="profile" class="profile-avatar" style="height:40px; width:40px;">
                           @else
                           <img src="{{ asset( $image_path = str_replace('public', 'storage',  Auth::user()->gambar_profile)) }}"  class="profile-avatar" style="height:40px; width:40px; ">

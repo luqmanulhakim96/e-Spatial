@@ -95,6 +95,8 @@
 
                         <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrail') }}" class="w-100 py-3 pl-4" >Audit Trail</a></li>
 
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrailLogUser') }}" class="w-100 py-3 pl-4" >Audit Trail Keluar Masuk Pengguna</a></li>
+
                         @endif
                     </ul>
                 </div>
