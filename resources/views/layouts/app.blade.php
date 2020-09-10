@@ -94,6 +94,8 @@
 
                         <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrail') }}" class="w-100 py-3 pl-4" >Audit Trail</a></li>
 
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrailLogUser') }}" class="w-100 py-3 pl-4" >Audit Trail Keluar Masuk Pengguna</a></li>
+
                         @endif
                     </ul>
                 </div>
@@ -148,7 +150,7 @@
                     <span></span>
                 </p>
                 <a href="{{ url()->previous() }}" class="btn btn-outline-primary m-2" style="font-size:150%"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Kembali</a>
-                
+
                 <!-- Navbar search section -->
                 <!-- <div class="navb-search ml-5 d-none d-md-block">
                     <form action="#" method="POST">

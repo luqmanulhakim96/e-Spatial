@@ -132,6 +132,8 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
 
+  Route::get('/audit-trail-user', 'AdminController@auditTrailLogUser')->name('superadmin.auditTrailLogUser');
+
   #route for Senarai Email
   Route::get('/email/senarai', 'SenaraiEmailController@view')->name('senarai-email.list');
 

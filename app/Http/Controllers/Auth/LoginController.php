@@ -7,6 +7,11 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
 
+use Illuminate\Http\Request;
+
+use Carbon\Carbon;
+use App\Audit;
+
 class LoginController extends Controller
 {
     /*
@@ -78,5 +83,14 @@ class LoginController extends Controller
     public function username()
     {
         return 'kad_pengenalan';
+    }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect()->route('login');
     }
 }
