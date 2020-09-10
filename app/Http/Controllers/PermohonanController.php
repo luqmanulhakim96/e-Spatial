@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+use Carbon\Carbon;
+
 use App\Permohonan;
 use App\User;
 use App\SenaraiHarga;
@@ -107,6 +109,12 @@ class PermohonanController extends Controller
       $dataPermohonan = DataPermohonan::findOrFail($test['id_data_permohonan'][$x]);
 
       $dataPermohonan->saiz_data = $test['saiz_data'][$x];
+
+      $data_total = 0.00;
+
+      $data_total = $test['harga_asas'][$x] * $test['saiz_data'][$x];
+
+      $dataPermohonan->jumlah_harga_data = $data_total;
 
       $dataPermohonan->save();
     }
@@ -311,10 +319,13 @@ class PermohonanController extends Controller
     // dd($request->all());
 
     $uploaded_files_permohonan_surat_pembayaran =  $request->file('attachment_surat_bayaran')->store('uploads/surat_bayaran');
+    $uploaded_files_permohonan_penerimaan_data =  $request->file('attachment_penerimaan_data')->store('uploads/surat_penerimaan_data');
+
 
     $permohonan_id = $request->permohonan_id_upload_surat_bayaran;
     $permohonan = Permohonan::findOrFail($permohonan_id);
     $permohonan->attachment_surat_bayaran = $uploaded_files_permohonan_surat_pembayaran;
+    $permohonan->attachment_penerimaan_data = $uploaded_files_permohonan_penerimaan_data;
     $permohonan->save();
 
     return redirect()->route('permohonan.list')->with('success','Fail telah dimuatnaik');
@@ -324,16 +335,13 @@ class PermohonanController extends Controller
     //dd($request->all());
     //upload file
 
-    $uploaded_files_permohonan_penerimaan_data =  $request->file('attachment_penerimaan_data')->store('uploads/surat_penerimaan_data');
 
 
     //update file location in db
     $permohonan_id = $request->permohonan_id_link_data;
     $permohonan = Permohonan::findOrFail($permohonan_id);
     $permohonan->link_data = $request->link_data;
-    $permohonan->attachment_penerimaan_data = $uploaded_files_permohonan_penerimaan_data;
     $permohonan->save();
-
     $user_id = Auth::user()->id;
     $user = User::findOrFail($user_id);
 

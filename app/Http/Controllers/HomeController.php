@@ -309,6 +309,13 @@ class HomeController extends Controller
         }
       }
       // dd($request->all());
+      $gambar_profile = "";
+
+      if ($files = $request->file('gambar_profile') != null) {
+            $gambar_profile = $request->file('gambar_profile')->store('public/uploads/gambar_profile');
+      }else {
+        $gambar_profile = null;
+      }
 
 
       $user_id = Auth::user()->id;
@@ -328,6 +335,10 @@ class HomeController extends Controller
         $user->no_tel_rumah = $request->no_tel_rumah;
         $user->no_tel_bimbit = $request->no_tel_bimbit;
         $user->email = $request->email;
+        if($gambar_profile != null){
+          $user->gambar_profile = $gambar_profile;
+        }
+
         $user->save();
 
       }elseif ($request->kategori == 'awam') {
@@ -347,6 +358,10 @@ class HomeController extends Controller
         $user->no_tel_rumah = $request->no_tel_rumah;
         $user->no_tel_bimbit = $request->no_tel_bimbit;
         $user->email = $request->email;
+        if($gambar_profile != null){
+          $user->gambar_profile = $gambar_profile;
+        }
+
         $user->save();
 
       }else {
@@ -368,6 +383,10 @@ class HomeController extends Controller
         $user->no_tel_rumah = $request->no_tel_rumah;
         $user->no_tel_bimbit = $request->no_tel_bimbit;
         $user->email = $request->email;
+        if($gambar_profile != null){
+          $user->gambar_profile = $gambar_profile;
+        }
+
         $user->save();
 
       }

@@ -17,6 +17,9 @@ class AddCustomJenisDataInDataPermohonans extends Migration
           $table->string('custom_jenis_data')->nullable();
           $table->string('custom_tahun')->nullable();
           $table->string('saiz_data')->nullable();
+          $table->string('jumlah_harga_data')->nullable();
+
+
         });
     }
 
@@ -31,6 +34,8 @@ class AddCustomJenisDataInDataPermohonans extends Migration
           $table->dropColumn('custom_jenis_data');
           $table->dropColumn('custom_tahun');
           $table->dropColumn('saiz_data');
+          $table->dropColumn('jumlah_harga_data');
+
         });
     }
 }

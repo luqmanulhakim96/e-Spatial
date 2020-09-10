@@ -108,6 +108,15 @@
 
                     </div>
                 </div>
+                <div style="padding:15px;"></div>
+
+
+                <div  style="font-size: 180%;" >
+                  <i class="fa fa-area-chart" aria-hidden="true"></i>
+                  Laporan
+                </div>
+                <hr>
+
 
 
                 <!-- Data chart component -->

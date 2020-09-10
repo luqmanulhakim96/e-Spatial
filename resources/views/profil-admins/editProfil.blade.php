@@ -1,4 +1,4 @@
-@extends('layouts.app_user')
+@extends('layouts.app')
 @section('content')
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
@@ -14,7 +14,7 @@
                   <div class="card-body">
                       <div class="card-title" style="text-align: center;">Kemaskini Profil | Update Profile</div>
 
-                      <form method="POST" action="{{route('profil-admins.updateProfil')}}">
+                      <form method="POST" action="{{route('profil-admins.updateProfil')}}" enctype="multipart/form-data">
                           @csrf
 
 
@@ -29,8 +29,24 @@
                               <div class="col-md">
                                   <div class="form-group">
                                     <label for="kategori">Kategori | Category</label>
-                                    <input id="kategori" type="text" class="form-control bg-light" name="kategori" value="{{ $user->kategori}}" autocomplete="kategori" readonly onchange=""="this.value = this.value.toUpperCase();">
+                                    <input id="kategori" type="text" class="form-control bg-light" style="text-transform:capitalize;" name="kategori" value="{{ $user->kategori}}" autocomplete="kategori" readonly onchange=""="this.value = this.value.toUpperCase();">
                                   </div>
+                              </div>
+                              <div class="col-md">
+                                <div class="form-group">
+                                    <label >Muatnaik Gambar Profil | Upload Profile Picture:</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="gambar_profile" onchange="return fileValidation('gambar_profile')" name="gambar_profile">
+                                        <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>
+                                    </div>
+                                    <small id="saiz_data" class="form-text text-secondary">Muat naik gambar tidak melebihi 100MB</small>
+
+                                    @error('gambar_profile')
+                                    <div class="alert alert-danger">
+                                      <strong>{{ $message }}</strong>
+                                    </div>
+                                    @enderror
+                                </div>
                               </div>
                               <div class="col-md-1">
 
@@ -88,7 +104,7 @@
                                   <!-- <div id="text_kp" style="display: block;"> -->
                                   <div id="text_kp" style="display: block;">
                                     <label for="kad_pengenalan" class="">Kad Pengenalan | Identification Card</label>
-                                    <input id="kad_pengenalan" type="text" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ $user->kad_pengenalan }}" onfocus="this.value=''"  autocomplete="kad_pengenalan" >
+                                    <input id="kad_pengenalan" type="text" maxlength="12" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ $user->kad_pengenalan }}" onfocus="this.value=''"  autocomplete="kad_pengenalan" >
                                   </div>
 
                                   <div id="text_pp" style="display: none;">
@@ -232,7 +248,7 @@
                             <div class="col-md">
                               <div class="form-group" id="poskod_div" style="display : block;">
                                 <label for="poskod" class="">Poskod | Postcode</label>
-                                <input id="poskod" type="text" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('poskod') is-invalid @enderror" name="poskod" value="{{  $user->poskod }}" autocomplete="poskod"  >
+                                <input id="poskod" type="text" maxlength="5" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('poskod') is-invalid @enderror" name="poskod" value="{{  $user->poskod }}" autocomplete="poskod"  >
                                 @error('poskod')
                                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -350,7 +366,7 @@
                                   <div class="form-group">
                                     <label for="no_tel_rumah" class="">No Telefon Pejabat</label>
 
-                                    <input id="no_tel_rumah" type="text" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_rumah') is-invalid @enderror" name="no_tel_rumah" value="{{ $user->no_tel_rumah }}" autocomplete="phone" >
+                                    <input id="no_tel_rumah" type="text" maxlength="11" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_rumah') is-invalid @enderror" name="no_tel_rumah" value="{{ $user->no_tel_rumah }}" autocomplete="phone" >
                                     <small id="saiz_data" class="form-text text-secondary">Contoh | Example : 0312345678</small>
                                     @error('no_tel_rumah')
                                     <span class="invalid-feedback" role="alert">
@@ -368,7 +384,7 @@
                                   <div class="form-group">
                                     <label for="no_tel_bimbit" class="">No Telefon Bimbit</label>
 
-                                    <input id="no_tel_bimbit" type="text" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_bimbit') is-invalid @enderror" name="no_tel_bimbit" value="{{ $user->no_tel_bimbit }}" autocomplete="phone" >
+                                    <input id="no_tel_bimbit" type="text" maxlength="11" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_bimbit') is-invalid @enderror" name="no_tel_bimbit" value="{{ $user->no_tel_bimbit }}" autocomplete="phone" >
                                     <small id="saiz_data" class="form-text text-secondary">Contoh | Example : 0123456789</small>
                                     @error('no_tel_bimbit')
                                     <span class="invalid-feedback" role="alert">
@@ -449,6 +465,36 @@
           window.addEventListener('load', showJenisForm)
           window.addEventListener('load', get_tarikh_lahir)
           window.addEventListener('load', viewPassportForm)
+
+          function fileValidation(name){
+            var fileInput = document.getElementById(name);
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.jpeg|\.jpg|\.png)$/i;
+            if(!allowedExtensions.exec(filePath)){
+                alert('Sila muatnaik gambar dalam format .jpeg , .jpg dan .png sahaja.');
+                fileInput.value = '';
+                return false;
+            }
+          }
+
+          $('#gambar_profile').on('change',function(){
+                  //get the file name
+                  var fileName = $(this).val();
+                  //replace the "Choose a file" label
+                  $(this).next('.custom-file-label').html(fileName);
+              })
+
+          $('#gambar_profile').on('change', function() {
+                var numb = $(this)[0].files[0].size/102400 /102400 ;
+                numb = numb.toFixed(2);
+                if(numb > 2){
+                alert('Ralat! Gambar anda melebihi 100MB. Saiz fail anda adalah: ' + numb +' MB');
+                document.getElementById("attachment_permohonan").value = "";
+                var fileName = "";
+                $(this).next('.custom-file-label').html(fileName);
+                return false;
+                }
+              });
 
 
 

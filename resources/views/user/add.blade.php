@@ -271,7 +271,6 @@
                       <div class="col-md-6">
                         <div class="form-group">
                             <label  class="required">Muatnaik Surat Permohonan:</label>
-                            <!-- <input type="file" required="required" onchange="return fileValidation('attachment_permohonan')" class="custom-select  bg-light @error('attachment_permohonan') is-invalid @enderror" id="attachment_permohonan" name="attachment_permohonan" aria-describedby="attachment_permohonan"> -->
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return fileValidation('attachment_permohonan')" name="attachment_permohonan">
                                 <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>
@@ -289,7 +288,6 @@
                       <div class="col-md-6">
                         <div class="form-group">
                             <label for="attachment_permohonan">Muatnaik Attachment AOI:</label>
-                            <!-- <input type="file" onchange="return fileValidation('attachment_aoi')" class="custom-select  bg-light @error('attachment_aoi') is-invalid @enderror" id="attachment_aoi" name="attachment_aoi" aria-describedby="attachment_aoi"> -->
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="attachment_aoi" onchange="return fileValidation('attachment_aoi')" name="attachment_aoi">
                                 <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>

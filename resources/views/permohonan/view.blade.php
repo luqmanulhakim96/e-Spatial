@@ -210,9 +210,7 @@
               <div class="col-md ">
                 <label for="f-name-1">Alamat Kementerian/Jabatan/Badan Berkanun/Swasta:</label>
                 <!-- <input  class="form-control bg-light" type="text" name="bahagian" value="{{ $user->alamat_kementerian }}" readonly> -->
-                <textarea id="alamat_kementerian" name="alamat_kementerian" rows="2" cols="50" class="form-control bg-light" readonly>
-                  {{ $user->alamat_kementerian }}
-                  </textarea>
+                <textarea id="alamat_kementerian" name="alamat_kementerian" rows="2" cols="50" class="form-control bg-light" readonly>{{ $user->alamat_kementerian }}</textarea>
               </div>
               <div class="col-md-2">
 
@@ -280,6 +278,7 @@
                                 <th><p class="mb-0">NEGERI</p></th>
                                 <th><p class="mb-0">HARGA ASAS </p></th>
                                 <th><p class="mb-0">SAIZ DATA</p></th>
+                                <th><p class="mb-0">JUMLAH</p></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -302,7 +301,15 @@
                             @endif
                             <td><p class="mb-0 " style="text-align: center;">{{ $senaraiHargaUser[$i][0]['negeri']}}</p></td>
                             <td><p class="mb-0 " style="text-align: center;">RM {{ $senaraiHargaUser[$i][0]['harga_asas']}}</p></td>
-                            <td><p class="mb-0 " style="text-align: center;">{{ $dataPermohonan[$i]['saiz_data']}}</p></td>
+                            <td>
+                              @if($senaraiHargaUser[$i][0]['jenis_dokumen'] == "Vektor Shapefile")
+                              <p class="mb-0 " style="text-align: center;">{{ $dataPermohonan[$i]['saiz_data']}}</p>
+                              @else
+                              <p class="mb-0 " style="text-align: center;">Tiada</p>
+                              @endif
+                            </td>
+                            <td><p class="mb-0 " style="text-align: center;">RM {{ $dataPermohonan[$i]['jumlah_harga_data']}}</p></td>
+
                           </tr>
 
                           @endfor
@@ -393,7 +400,7 @@
                     <a href="{{route('permohonan.update.tidakBerkaitan', $permohonan->id)}}" class="btn btn-ripple btn-raised btn-danger m-2" onclick="return confirm('Anda pasti mahu membatalkan permohonan ini?');" style="text-align: center;"><i class="fa fa-ban" aria-hidden="true"></i> PERMOHONAN TIDAK BERKAITAN</a>
                   </div>
                 </div>
-              @endif 
+              @endif
 
 
 
