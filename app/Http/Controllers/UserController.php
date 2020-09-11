@@ -68,7 +68,7 @@ class UserController extends Controller
     $countPermohonanKeseluruhan = Permohonan::where('user_id', $user_id)
                                 ->count();
 
-    $pengumuman = Pengumuman::where('status','1')->get();
+    $pengumuman = Pengumuman::where('status','1')->orderBy('created_at', 'DESC')->get();
 
 
       return view('user.mainMenu', compact('list','countPermohonanSedangProses', 'countPermohonanLulus', 'countPermohonanGagal','countPermohonanKeseluruhan','pengumuman', 'countPermohonanTidakBerkaitan','countPermohonanBatal'));

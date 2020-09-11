@@ -33,10 +33,10 @@
                           <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->getPermohonanID()  }}</a>
+                              <a href="{{ route('permohonan.view', $baru->id) }}" style=" font-weight: 600;">{{ $baru->getPermohonanID()  }}</a>
                             </td>
                             <td>
-                              <div style="padding : 4px;"></div>
+                              <div style="padding : 4px; "></div>
                               <div class="d-flex flex-row justify-content-around align-items-center">
                                 {{ $baru->user->name  }}
                               </div>

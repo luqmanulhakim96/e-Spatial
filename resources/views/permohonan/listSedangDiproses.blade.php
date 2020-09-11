@@ -25,8 +25,10 @@
                           </thead>
                           <tbody>
                             @foreach($listPermohonanBaru as $diproses)
-                            <tr onclick="document.location = '{{ route('permohonan.view', $diproses->id) }}';">
-                              <td>{{$diproses->getPermohonanID()}}</td>
+                            <tr>
+                              <td>
+                                <a href="{{ route('permohonan.view', $diproses->id) }}" style=" font-weight: 600;">{{ $diproses->getPermohonanID()  }}</a>
+                              </td>
                               <td>{{$diproses->user->name}}</td>
                               <td>{{$diproses->created_at}}</td>
                               @if($diproses->ulasan_penyokong_1 == null)
