@@ -106,6 +106,8 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/surat/print/{id}', 'SenaraiSuratController@print')->name('senarai-surat.print');
 
+  Route::get('/surat/delete/{id}', 'SenaraiSuratController@delete')->name('senarai-surat.delete');
+
   Route::post('/surat/submit', 'SenaraiSuratController@submitForm')->name('senarai-surat.submit');
 
   #route for Senarai Surat
@@ -146,6 +148,8 @@ Route::middleware('admin')->group(function () {
   Route::get('/email/edit/{id}', 'SenaraiEmailController@edit')->name('senarai-email.edit');
 
   Route::post('/email/update/{id}', 'SenaraiEmailController@updateSurat')->name('senarai-email.update');
+
+  Route::get('/email/delete/{id}', 'SenaraiEmailController@delete')->name('senarai-email.delete');
 
   Route::post('/email/submit', 'SenaraiEmailController@submitForm')->name('senarai-email.submit');
 

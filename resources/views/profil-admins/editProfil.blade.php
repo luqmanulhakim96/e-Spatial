@@ -104,7 +104,7 @@
                                   <!-- <div id="text_kp" style="display: block;"> -->
                                   <div id="text_kp" style="display: block;">
                                     <label for="kad_pengenalan" class="">Kad Pengenalan | Identification Card</label>
-                                    <input id="kad_pengenalan" type="text" maxlength="12" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ $user->kad_pengenalan }}" onfocus="this.value=''"  autocomplete="kad_pengenalan" >
+                                    <input id="kad_pengenalan" readonly type="text" maxlength="12" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ $user->kad_pengenalan }}"  autocomplete="kad_pengenalan" >
                                   </div>
 
                                   <div id="text_pp" style="display: none;">

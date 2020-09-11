@@ -20,29 +20,24 @@
                         <!-- Table head -->
                         <thead>
                             <tr>
-                              <th class="all">ID</th>
-                              <th class="all">NO RUJUKAN</th>
-                              <th class="all">TARIKH</th>
 
-                              <th class="all">TARIKH DICIPTA</th>
-                              <th class="all">TARIKH DIPINDA</th>
-                              <th class="all">ACTION</th>
+                              <th class="all">JENIS TEMPLAT</th>
+                              <th class="all">TINDAKAN</th>
                             </tr>
                         </thead>
                         <!-- Table body -->
                         <tbody>
                           @foreach($list as $data)
                             <tr>
-                              <td>{{ $data->id  }}</td>
-                              <td>{{ $data->nombor_rujukan  }}</td>
-                              <td>{{ $data->tarikh  }}</td>
-                              <td>{{ $data->created_at  }}</td>
-                              <td>{{ $data->updated_at  }}</td>
+
+                              <td>
+                                <span >{{ ucfirst($data->status_pembayaran )  }}</span>
+                              </td>
                               <td class="p-3">
                                     <div class="d-flex flex-row justify-content-around align-items-center">
                                         <a href="{{ route('senarai-surat.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                        <a href="{{ route('senarai-surat.print', $data->id) }}" class="btn btn-success mr-1"><i class="fa fa-print"></i></a>
-                                        <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                        <a href="{{ route('senarai-surat.print', $data->id) }}" class="btn btn-success mr-1"><i class="fa fa-download"></i></a>
+                                        <a href="{{ route('senarai-surat.delete', $data->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 
                                     </div>
                               </td>

@@ -81,7 +81,8 @@
                             <!--kad pengenalan input -->
                             <div class="form-group">
                                 <label for="tahun">Kad Pengenalan :</label>
-                                <input type="text" class="form-control bg-light" onkeypress="return onlyNumberKey(event)" name="kad_pengenalan" id="kad_pengenalan" aria-describedby="kad_pengenalan" placeholder="Masukkan Kad Pengenalan" value="{{ old('kad_pengenalan') }}">
+                                <input type="text" maxlength="12" class="form-control bg-light" onkeypress="return onlyNumberKey(event)" name="kad_pengenalan" id="kad_pengenalan" aria-describedby="kad_pengenalan" placeholder="Masukkan Kad Pengenalan" value="{{ old('kad_pengenalan') }}">
+                                <small id="saiz_data" class="form-text text-secondary">Contoh | Example : 910101028545</small>
                                 @error('kad_pengenalan')
                                 <div class="alert alert-danger">
                                   <strong>{{ $message }}</strong>

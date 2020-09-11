@@ -44,7 +44,7 @@
                               <td class="p-3">
                                     <div class="d-flex flex-row justify-content-around align-items-center">
                                         <a href="{{ route('senarai-email.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                        <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                        <a href="{{ route('senarai-email.delete', $data->id) }}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 
                                     </div>
                               </td>
@@ -53,7 +53,7 @@
                         </tbody>
                       </table>
                     </div>
-                      
+
                   </div>
                 </div>
             </div>

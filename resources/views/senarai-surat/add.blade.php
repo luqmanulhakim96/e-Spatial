@@ -50,8 +50,8 @@
                                 <div class="form-group">
                                     <label for="status_pembayaran">Surat - Status Pembayaran</label>
                                     <select id="status_pembayaran" class="custom-select  bg-light @error('status_pembayaran') is-invalid @enderror" name="status_pembayaran" value="{{ old('status_pembayaran') }}" autofocus>
-                                          <option value="bayaran">Bayaran</option>
-                                          <option value="pengecualian_bayaran">Pengecualian Bayaran</option>
+                                          <option value="berbayar">Berbayar</option>
+                                          <option value="dikecualikan_bayaran">Dikecualikan Bayaran</option>
                                       </select>
                                 </div>
                                 @error('status_pembayaran')
