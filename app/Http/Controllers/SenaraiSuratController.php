@@ -91,4 +91,11 @@ class SenaraiSuratController extends Controller
         // return $pdf->stream();
         return $pdf->download('surat-' . $surat->updated_at->format('d-m-Y') . '.pdf');
     }
+
+    public function delete($id)
+    {
+      $surat = SenaraiSurat::findOrFail($id);
+      $surat->delete();
+      return redirect()->route('senarai-surat.list')->with('success','Surat telah dipadam');
+    }
 }

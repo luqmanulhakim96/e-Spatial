@@ -49,8 +49,8 @@
                                 <div class="form-group">
                                     <label for="status_pembayaran">Surat - Status Pembayaran</label>
                                     <select id="status_pembayaran" class="custom-select  bg-light @error('status_pembayaran') is-invalid @enderror" name="status_pembayaran" value="{{ $info->status_pembayaran }}" autofocus>
-                                          <option value="bayaran" {{ $info->status_pembayaran == "bayaran" ? 'selected' : '' }}>Bayaran</option>
-                                          <option value="pengecualian_bayaran" {{ $info->status_pembayaran == "pengecualian_bayaran" ? 'selected' : '' }} >Pengecualian Bayaran</option>
+                                          <option value="berbayar" {{ $info->status_pembayaran == "berbayar" ? 'selected' : '' }}>Berbayar</option>
+                                          <option value="dikecualikan_bayaran" {{ $info->status_pembayaran == "dikecualikan_bayaran" ? 'selected' : '' }} >Dikecualikan Bayaran</option>
                                       </select>
                                 </div>
                                 @error('status_pembayaran')
