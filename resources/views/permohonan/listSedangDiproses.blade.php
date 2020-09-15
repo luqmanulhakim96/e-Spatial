@@ -27,7 +27,7 @@
                             @foreach($listPermohonanBaru as $diproses)
                             <tr>
                               <td>
-                                <a href="{{ route('permohonan.view', $diproses->id) }}" style=" font-weight: 600;">{{ $diproses->getPermohonanID()  }}</a>
+                                <a href="{{ route('permohonan.view', $diproses->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $diproses->getPermohonanID()  }}</a>
                               </td>
                               <td>{{$diproses->user->name}}</td>
                               <td>{{$diproses->created_at}}</td>

@@ -30,7 +30,13 @@
                         <div class="col-md-8">
                           <div class="form-group">
                             <label>Kata Laluan Terdahulu</label>
-                            <input type="password"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Masukkan Kata Laluan Terdahulu" required>
+                            <!-- <input type="password"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Masukkan Kata Laluan Terdahulu" required> -->
+                            <div class="input-group mb-3">
+                              <input type="password" id="old_pass"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Masukkan Kata Laluan Terdahulu" required>
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" onclick="visibleOldPass()" type="button" id="button-addon2"><i class="fa fa-eye"></i></button>
+                              </div>
+                            </div>
                             @error('old_pass')
                             <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -92,7 +98,14 @@
         </main>
         <script>
 
-
+        function visibleOldPass() {
+          var x = document.getElementById("old_pass");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
 
         function visiblePassNew() {
           var x = document.getElementById("new_pass");

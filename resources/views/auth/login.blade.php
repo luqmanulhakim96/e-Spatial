@@ -61,7 +61,7 @@
                               <div class="col-md-10">
                                 <!-- Password -->
                                 <div class="form-group">
-                                    <label for="Passeord" class="text-muted">Password</label>
+                                    <label for="Passeord" class="text-muted">Kata Laluan</label>
                                     <div class="input-group mb-3">
                                       <input id="password" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                       <div class="input-group-append">
@@ -82,7 +82,7 @@
                               </div>
                               <div class="col-md-10">
                                 <!-- Remember me checkbox -->
-                                <div class="custom-control custom-checkbox">
+                                <div class="custom-control custom-checkbox" style="display: none;">
                                     <input id="my-input" class="custom-control-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                     <label for="my-input" class="custom-control-label">Remember me</label>
                                 </div>
@@ -93,7 +93,7 @@
                               <div class="col-md-1">
                               </div>
                               <div class="col-md-10">
-                                <button type="submit" class="btn btn-primary rounded m-1 btn-outline-primary badge-pill btn-block w-50 m-auto">Masuk</button>
+                                <button type="submit" class="btn btn-primary rounded m-1 btn-outline-primary badge-pill btn-block w-50 m-auto"> Log Masuk</button>
                               </div>
                             </div>
 
