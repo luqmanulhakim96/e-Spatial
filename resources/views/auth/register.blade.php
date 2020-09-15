@@ -181,9 +181,6 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
-                        <span class="input-icon">
-                            <i class="fas fa-hospital-alt"></i>
-                        </span>
                     </div>
                 </div>
                 <div class="col-md-1">
@@ -316,9 +313,6 @@
                               <strong>{{ $message }}</strong>
                           </span>
                       @enderror
-                      <span class="input-icon">
-                          <i class="fas fa-university"></i>
-                      </span>
                     </div>
                 </div>
                 <div class="col-md-1">

@@ -1,5 +1,7 @@
 @extends('layouts.app_user')
 @section('content')
+<!--By Artanis Cloud Sdn Bhd-->
+
       <!--Page Body part -->
             <div class="p
             age-body p-4 text-dark">
@@ -276,7 +278,7 @@
                                 <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>
                             </div>
                             <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
-                            <small id="saiz_data" class="form-text text-secondary">Sila compile file sekiranya melebihi 1 dokumen</small>
+                            <small id="saiz_data" class="form-text text-secondary">Sila mampatkan file kedalam format .zip atau .rar sekiranya melebihi 1 dokumen</small>
 
                             @error('attachment_permohonan')
                             <div class="alert alert-danger">
@@ -293,6 +295,7 @@
                                 <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>
                             </div>
                             <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
+                            <small id="saiz_data" class="form-text text-secondary">Sila mampatkan file kedalam format .zip atau .rar sekiranya melebihi 1 dokumen</small>
                             @error('attachment_aoi')
                             <div class="alert alert-danger">
                               <strong>{{ $message }}</strong>
@@ -427,9 +430,9 @@
         function fileValidation(name){
           var fileInput = document.getElementById(name);
           var filePath = fileInput.value;
-          var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png)$/i;
+          var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png|\.zip|\.rar)$/i;
           if(!allowedExtensions.exec(filePath)){
-              alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg dan .png sahaja.');
+              alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg , .png , .zip dan .rar sahaja.');
               fileInput.value = '';
               return false;
           }
@@ -490,13 +493,25 @@
                 var custom_tahun = document.getElementById("custom_tahun").value;
                 var custom_negeri = document.getElementById("custom_negeri").value;
 
+                // console.log('Jenis Dokumen :' + jenis_dokumen);
+                // console.log('Jenis Data :' + jenis_data);
+                // console.log('Tahun :' + tahun);
+                // console.log('Kategori Data :' + kategori_data);
+                // console.log('Negeri :' + negeri);
+                // console.log('Jenis Kertas :' + jenis_kertas);
+                // console.log('Custom Jenis Dokumen :' + custom_jenis_data);
+                // console.log('Custom tahun :' + custom_tahun);
+                // console.log('Custom Negeri :' + custom_negeri);
+
+
+
                 if(jenis_kertas){
-                  console.log('jenis kertas exist');
+                  // console.log('jenis kertas exist');
 
                 }else {
-                  console.log('jenis kertas not exist');
+                  // console.log('jenis kertas not exist');
                   jenis_kertas = "tiada";
-                  console.log('jenis kertas value', jenis_kertas);
+                  // console.log('jenis kertas value', jenis_kertas);
 
                 }
                 //this variable to count total data apply by the user
@@ -509,7 +524,7 @@
 
                 //insert data in other form
                 if(tahun){
-                  console.log('tahun masuk');
+                  // console.log('tahun masuk');
 
                   //kategori_data = null;
                   //1st Ajax for tahun
@@ -638,7 +653,7 @@
                           {
                             document.getElementById('button_submit_permohonan').style.display = "block";
                           }
-                          console.log('counter_data: kategori_data :',counter_data);
+                          // console.log('counter_data: kategori_data :',counter_data);
 
                           document.getElementById("counter_data").value = counter_data;
                           document.getElementById("increment").value = increment;
@@ -806,7 +821,7 @@
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
-                console.log(data);
+                // console.log(data);
                 data.forEach(function(data)
                 {
                   //console.log(data.jenis_data);
@@ -1060,7 +1075,7 @@
 
           var negeri = $(this).val();
 
-          console.log(jenisDokumen);
+          // console.log(jenisDokumen);
       //clear kategori_data selection
           $("#jenis_kertas").empty();
           //default selection
@@ -1076,7 +1091,7 @@
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
-                console.log(respond);
+                // console.log(respond);
                 data.forEach(function(data)
                 {
 

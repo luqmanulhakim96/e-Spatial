@@ -550,10 +550,20 @@
                                 <div class="col-md">
 
                                   <div class="form-group" >
-                                    @if($current_user_info->role == 3)
+                                    @if($current_user_info->role == 3 && $permohonan->status_permohonan == "Sedang Diproses")
                                     <button type="submit" class="btn btn-primary" onclick="return confirm('Adakah anda pasti dengan keputusan permohonan ini??');" id="submit_data" >Hantar Keputusan</button>
                                     @else
-                                    <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          @if($current_user_info->role == 0 && $permohonan->ulasan_admin == null)
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          @endif
+
+                                          @if($current_user_info->role == 1 && $permohonan->ulasan_penyokong_1 == null)
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          @endif
+
+                                          @if($current_user_info->role == 2 && $permohonan->ulasan_penyokong_2 == null)
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          @endif
                                     @endif
                                   </div>
                                 </div>

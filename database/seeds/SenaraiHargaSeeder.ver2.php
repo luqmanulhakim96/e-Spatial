@@ -5268,7 +5268,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Semenanjung Malaysia
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5282,7 +5282,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5296,7 +5296,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5310,7 +5310,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5324,7 +5324,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5338,7 +5338,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5352,7 +5352,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5366,7 +5366,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5380,7 +5380,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5394,7 +5394,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5408,7 +5408,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5422,7 +5422,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5436,7 +5436,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5450,7 +5450,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5464,7 +5464,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5478,7 +5478,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5492,7 +5492,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5506,7 +5506,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5520,7 +5520,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5534,7 +5534,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5548,7 +5548,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5562,7 +5562,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5576,7 +5576,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5590,7 +5590,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5604,7 +5604,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5618,7 +5618,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5632,7 +5632,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5646,7 +5646,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5660,7 +5660,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5674,7 +5674,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5688,7 +5688,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5702,7 +5702,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5716,7 +5716,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5730,7 +5730,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5744,7 +5744,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5758,7 +5758,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5772,7 +5772,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5786,7 +5786,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5800,7 +5800,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5814,7 +5814,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5830,7 +5830,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Johor
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5844,7 +5844,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5858,7 +5858,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5872,7 +5872,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5886,7 +5886,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5900,7 +5900,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5914,7 +5914,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5928,7 +5928,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5942,7 +5942,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5956,7 +5956,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5970,7 +5970,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5984,7 +5984,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -5998,7 +5998,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6012,7 +6012,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6026,7 +6026,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6040,7 +6040,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6054,7 +6054,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6068,7 +6068,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6082,7 +6082,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6096,7 +6096,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6110,7 +6110,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6124,7 +6124,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6138,7 +6138,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6152,7 +6152,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6166,7 +6166,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6180,7 +6180,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6194,7 +6194,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6208,7 +6208,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6222,7 +6222,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6236,7 +6236,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6250,7 +6250,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6264,7 +6264,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6278,7 +6278,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6292,7 +6292,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6306,7 +6306,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6320,7 +6320,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6334,7 +6334,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6348,7 +6348,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6362,7 +6362,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6376,7 +6376,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6392,7 +6392,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Kedah
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6406,7 +6406,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6420,7 +6420,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6434,7 +6434,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6448,7 +6448,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6462,7 +6462,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6476,7 +6476,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6490,7 +6490,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6504,7 +6504,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6518,7 +6518,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6532,7 +6532,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6546,7 +6546,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6560,7 +6560,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6574,7 +6574,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6588,7 +6588,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6602,7 +6602,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6616,7 +6616,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6630,7 +6630,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6644,7 +6644,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6658,7 +6658,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6672,7 +6672,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6686,7 +6686,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6700,7 +6700,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6714,7 +6714,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6728,7 +6728,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6742,7 +6742,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6756,7 +6756,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6770,7 +6770,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6784,7 +6784,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6798,7 +6798,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6812,7 +6812,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6826,7 +6826,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6840,7 +6840,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6854,7 +6854,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6868,7 +6868,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6882,7 +6882,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6896,7 +6896,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6910,7 +6910,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6924,7 +6924,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6938,7 +6938,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6954,7 +6954,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Kelantan
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6968,7 +6968,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6982,7 +6982,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -6996,7 +6996,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7010,7 +7010,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7024,7 +7024,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7038,7 +7038,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7052,7 +7052,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7066,7 +7066,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7080,7 +7080,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7094,7 +7094,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7108,7 +7108,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7122,7 +7122,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7136,7 +7136,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7150,7 +7150,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7164,7 +7164,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7178,7 +7178,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7192,7 +7192,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7206,7 +7206,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7220,7 +7220,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7234,7 +7234,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7248,7 +7248,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7262,7 +7262,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7276,7 +7276,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7290,7 +7290,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7304,7 +7304,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7318,7 +7318,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7332,7 +7332,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7346,7 +7346,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7360,7 +7360,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7374,7 +7374,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7388,7 +7388,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7402,7 +7402,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7416,7 +7416,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7430,7 +7430,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7444,7 +7444,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7458,7 +7458,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7472,7 +7472,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7486,7 +7486,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7500,7 +7500,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7516,7 +7516,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Negeri Sembilan
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7530,7 +7530,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7544,7 +7544,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7558,7 +7558,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7572,7 +7572,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7586,7 +7586,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7600,7 +7600,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7614,7 +7614,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7628,7 +7628,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7642,7 +7642,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7656,7 +7656,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7670,7 +7670,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7684,7 +7684,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7698,7 +7698,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7712,7 +7712,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7726,7 +7726,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7740,7 +7740,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7754,7 +7754,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7768,7 +7768,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7782,7 +7782,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7796,7 +7796,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7810,7 +7810,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7824,7 +7824,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7838,7 +7838,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7852,7 +7852,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7866,7 +7866,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7880,7 +7880,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7894,7 +7894,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7908,7 +7908,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7922,7 +7922,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7936,7 +7936,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7950,7 +7950,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7964,7 +7964,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7978,7 +7978,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -7992,7 +7992,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8006,7 +8006,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8020,7 +8020,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8034,7 +8034,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8048,7 +8048,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8062,7 +8062,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8078,7 +8078,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Pahang
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8092,7 +8092,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8106,7 +8106,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8120,7 +8120,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8134,7 +8134,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8148,7 +8148,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8162,7 +8162,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8176,7 +8176,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8190,7 +8190,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8204,7 +8204,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8218,7 +8218,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8232,7 +8232,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8246,7 +8246,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8260,7 +8260,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8274,7 +8274,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8288,7 +8288,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8302,7 +8302,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8316,7 +8316,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8330,7 +8330,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8344,7 +8344,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8358,7 +8358,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8372,7 +8372,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8386,7 +8386,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8400,7 +8400,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8414,7 +8414,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8428,7 +8428,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8442,7 +8442,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8456,7 +8456,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8470,7 +8470,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8484,7 +8484,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8498,7 +8498,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8512,7 +8512,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8526,7 +8526,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8540,7 +8540,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8554,7 +8554,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8568,7 +8568,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8582,7 +8582,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8596,7 +8596,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8610,7 +8610,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8624,7 +8624,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8640,7 +8640,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Perak
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8654,7 +8654,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8668,7 +8668,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8682,7 +8682,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8696,7 +8696,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8710,7 +8710,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8724,7 +8724,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8738,7 +8738,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8752,7 +8752,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8766,7 +8766,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8780,7 +8780,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8794,7 +8794,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8808,7 +8808,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8822,7 +8822,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8836,7 +8836,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8850,7 +8850,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8864,7 +8864,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8878,7 +8878,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8892,7 +8892,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8906,7 +8906,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8920,7 +8920,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8934,7 +8934,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8948,7 +8948,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8962,7 +8962,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8976,7 +8976,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -8990,7 +8990,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9004,7 +9004,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9018,7 +9018,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9032,7 +9032,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9046,7 +9046,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9060,7 +9060,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9074,7 +9074,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9088,7 +9088,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9102,7 +9102,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9116,7 +9116,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9130,7 +9130,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9144,7 +9144,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9158,7 +9158,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9172,7 +9172,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9186,7 +9186,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9202,7 +9202,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Perlis
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9216,7 +9216,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9230,7 +9230,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9244,7 +9244,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9258,7 +9258,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9272,7 +9272,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9286,7 +9286,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9300,7 +9300,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9314,7 +9314,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9328,7 +9328,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9342,7 +9342,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9356,7 +9356,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9370,7 +9370,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9384,7 +9384,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9398,7 +9398,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9412,7 +9412,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9426,7 +9426,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9440,7 +9440,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9454,7 +9454,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9468,7 +9468,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9482,7 +9482,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9496,7 +9496,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9510,7 +9510,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9524,7 +9524,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9538,7 +9538,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9552,7 +9552,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9566,7 +9566,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9580,7 +9580,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9594,7 +9594,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9608,7 +9608,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9622,7 +9622,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9636,7 +9636,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9650,7 +9650,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9664,7 +9664,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9678,7 +9678,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9692,7 +9692,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9706,7 +9706,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9720,7 +9720,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9734,7 +9734,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9748,7 +9748,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9764,7 +9764,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Pulau Pinang
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9778,7 +9778,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9792,7 +9792,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9806,7 +9806,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9820,7 +9820,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9834,7 +9834,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9848,7 +9848,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9862,7 +9862,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9876,7 +9876,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9890,7 +9890,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9904,7 +9904,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9918,7 +9918,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9932,7 +9932,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9946,7 +9946,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9960,7 +9960,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9974,7 +9974,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -9988,7 +9988,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10002,7 +10002,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10016,7 +10016,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10030,7 +10030,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10044,7 +10044,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10058,7 +10058,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10072,7 +10072,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10086,7 +10086,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10100,7 +10100,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10114,7 +10114,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10128,7 +10128,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10142,7 +10142,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10156,7 +10156,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10170,7 +10170,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10184,7 +10184,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10198,7 +10198,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10212,7 +10212,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10226,7 +10226,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10240,7 +10240,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10254,7 +10254,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10268,7 +10268,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10282,7 +10282,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10296,7 +10296,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10310,7 +10310,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10326,7 +10326,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Selangor
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10340,7 +10340,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10354,7 +10354,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10368,7 +10368,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10382,7 +10382,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10396,7 +10396,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10410,7 +10410,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10424,7 +10424,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10438,7 +10438,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10452,7 +10452,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10466,7 +10466,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10480,7 +10480,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10494,7 +10494,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10508,7 +10508,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10522,7 +10522,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10536,7 +10536,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10550,7 +10550,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10564,7 +10564,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10578,7 +10578,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10592,7 +10592,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10606,7 +10606,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10620,7 +10620,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10634,7 +10634,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10648,7 +10648,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10662,7 +10662,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10676,7 +10676,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10690,7 +10690,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10704,7 +10704,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10718,7 +10718,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10732,7 +10732,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10746,7 +10746,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10760,7 +10760,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10774,7 +10774,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10788,7 +10788,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10802,7 +10802,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10816,7 +10816,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10830,7 +10830,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10844,7 +10844,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10858,7 +10858,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10872,7 +10872,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10888,7 +10888,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Terengganu
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10902,7 +10902,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10916,7 +10916,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10930,7 +10930,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10944,7 +10944,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10958,7 +10958,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10972,7 +10972,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -10986,7 +10986,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11000,7 +11000,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11014,7 +11014,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11028,7 +11028,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11042,7 +11042,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11056,7 +11056,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11070,7 +11070,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11084,7 +11084,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11098,7 +11098,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11112,7 +11112,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11126,7 +11126,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11140,7 +11140,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11154,7 +11154,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11168,7 +11168,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11182,7 +11182,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11196,7 +11196,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11210,7 +11210,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11224,7 +11224,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11238,7 +11238,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11252,7 +11252,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11266,7 +11266,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11280,7 +11280,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11294,7 +11294,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11308,7 +11308,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11322,7 +11322,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11336,7 +11336,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11350,7 +11350,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11364,7 +11364,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11378,7 +11378,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11392,7 +11392,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11406,7 +11406,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11420,7 +11420,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11434,7 +11434,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11450,7 +11450,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Melaka
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11464,7 +11464,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11478,7 +11478,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11492,7 +11492,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11506,7 +11506,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11520,7 +11520,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11534,7 +11534,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11548,7 +11548,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11562,7 +11562,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11576,7 +11576,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11590,7 +11590,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11604,7 +11604,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11618,7 +11618,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11632,7 +11632,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11646,7 +11646,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11660,7 +11660,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11674,7 +11674,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11688,7 +11688,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11702,7 +11702,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11716,7 +11716,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11730,7 +11730,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11744,7 +11744,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11758,7 +11758,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11772,7 +11772,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11786,7 +11786,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11800,7 +11800,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11814,7 +11814,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11828,7 +11828,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11842,7 +11842,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11856,7 +11856,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11870,7 +11870,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11884,7 +11884,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11898,7 +11898,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11912,7 +11912,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11926,7 +11926,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11940,7 +11940,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11954,7 +11954,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11968,7 +11968,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11982,7 +11982,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -11996,7 +11996,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12012,7 +12012,7 @@ class SenaraiHargaSeeder extends Seeder
       //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Wilayah Persekutuan
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12026,7 +12026,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12040,7 +12040,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12054,7 +12054,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12068,7 +12068,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12082,7 +12082,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12096,7 +12096,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12110,7 +12110,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12124,7 +12124,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12138,7 +12138,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12152,7 +12152,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12166,7 +12166,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12180,7 +12180,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12194,7 +12194,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12208,7 +12208,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12222,7 +12222,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12236,7 +12236,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12250,7 +12250,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12264,7 +12264,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12278,7 +12278,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12292,7 +12292,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12306,7 +12306,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12320,7 +12320,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12334,7 +12334,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12348,7 +12348,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12362,7 +12362,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12376,7 +12376,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12390,7 +12390,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12404,7 +12404,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12418,7 +12418,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12432,7 +12432,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12446,7 +12446,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12460,7 +12460,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12474,7 +12474,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12488,7 +12488,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12502,7 +12502,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12516,7 +12516,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12530,7 +12530,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12544,7 +12544,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12558,7 +12558,7 @@ class SenaraiHargaSeeder extends Seeder
       );
       DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Litupan Kawasan Hutan',
@@ -12570,11 +12570,1065 @@ class SenaraiHargaSeeder extends Seeder
        'status' => 'Aktif',
        ]
       );
+
+    //Vektor Shapefile | Inventori Hutan Nasional | 2010-2019 | A0-A4 | Semenanjung Malaysia
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1961-1970',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1961-1970',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1961-1970',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1961-1970',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1961-1970',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1971-1980',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1981-1990',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1981-1990',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1981-1990',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1981-1990',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1981-1990',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1991-2000',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1991-2000',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1991-2000',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1991-2000',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '1991-2000',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Vektor Shapefile',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Inventori Hutan Nasional',
+       'negeri' => 'Semenanjung Malaysia',
+       'kategori_data' => null,
+       'tahun' => '2001-2010',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+     //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Wilayah Persekutuan
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A0',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2010',
+      'harga_asas' => 770.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A1',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2010',
+      'harga_asas' => 390.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A2',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2010',
+      'harga_asas' => 210.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A3',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2010',
+      'harga_asas' => 110.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A4',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2010',
+      'harga_asas' => 60.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A0',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2012',
+      'harga_asas' => 770.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A1',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2012',
+      'harga_asas' => 390.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A2',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2012',
+      'harga_asas' => 210.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A3',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2012',
+      'harga_asas' => 110.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A4',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2012',
+      'harga_asas' => 60.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A0',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2014',
+      'harga_asas' => 770.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A1',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2014',
+      'harga_asas' => 390.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A2',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2014',
+      'harga_asas' => 210.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A3',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2014',
+      'harga_asas' => 110.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A4',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2014',
+      'harga_asas' => 60.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A0',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2015',
+      'harga_asas' => 770.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A1',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2015',
+      'harga_asas' => 390.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A2',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2015',
+      'harga_asas' => 210.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A3',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2015',
+      'harga_asas' => 110.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A4',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2015',
+      'harga_asas' => 60.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A0',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2016',
+      'harga_asas' => 770.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A1',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2016',
+      'harga_asas' => 390.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A2',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2016',
+      'harga_asas' => 210.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A3',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2016',
+      'harga_asas' => 110.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A4',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2016',
+      'harga_asas' => 60.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A0',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2017',
+      'harga_asas' => 770.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A1',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2017',
+      'harga_asas' => 390.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A2',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2017',
+      'harga_asas' => 210.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A3',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2017',
+      'harga_asas' => 110.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A4',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2017',
+      'harga_asas' => 60.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A0',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2018',
+      'harga_asas' => 770.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A1',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2018',
+      'harga_asas' => 390.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A2',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2018',
+      'harga_asas' => 210.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A3',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2018',
+      'harga_asas' => 110.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A4',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2018',
+      'harga_asas' => 60.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A0',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2019',
+      'harga_asas' => 770.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A1',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2019',
+      'harga_asas' => 390.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A2',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2019',
+      'harga_asas' => 210.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A3',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2019',
+      'harga_asas' => 110.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
+     DB::table('senarai_hargas')-> insert(
+      [
+      'jenis_dokumen' => 'Bercetak',
+      'jenis_kertas' => 'A4',
+      'saiz_data' => 100,
+      'jenis_data' => 'Litupan Kawasan Hutan',
+      'negeri' => 'Wilayah Persekutuan',
+      'kategori_data' => null,
+      'tahun' => '2019',
+      'harga_asas' => 60.00,
+      'jumlah_harga' => 0.00,
+      'status' => 'Aktif',
+      ]
+     );
 
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Semenanjung Malaysia
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12588,7 +13642,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12602,7 +13656,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12616,7 +13670,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12630,7 +13684,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12645,7 +13699,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12659,7 +13713,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12673,7 +13727,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12687,7 +13741,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12701,7 +13755,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12716,7 +13770,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12730,7 +13784,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12744,7 +13798,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12758,7 +13812,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12772,7 +13826,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12787,7 +13841,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12801,7 +13855,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12815,7 +13869,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12829,7 +13883,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12843,7 +13897,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12858,7 +13912,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12873,7 +13927,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12888,7 +13942,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12902,7 +13956,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12916,7 +13970,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12931,7 +13985,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12946,7 +14000,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12961,7 +14015,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12976,7 +14030,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -12991,7 +14045,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13007,7 +14061,7 @@ class SenaraiHargaSeeder extends Seeder
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Johor
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13021,7 +14075,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13035,7 +14089,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13049,7 +14103,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A3',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13064,7 +14118,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A4',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13079,7 +14133,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A0',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13094,7 +14148,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A1',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13109,7 +14163,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A2',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13124,7 +14178,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A3',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13139,7 +14193,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A4',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13154,7 +14208,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A0',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13169,7 +14223,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A1',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13184,7 +14238,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A2',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13199,7 +14253,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A3',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13214,7 +14268,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A4',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13229,7 +14283,7 @@ class SenaraiHargaSeeder extends Seeder
 
      DB::table('senarai_hargas')-> insert(
        [
-         'jenis_dokumen' => 'Kertas',
+         'jenis_dokumen' => 'Bercetak',
          'jenis_kertas' => 'A0',
          'saiz_data' => 100,
          'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13244,7 +14298,7 @@ class SenaraiHargaSeeder extends Seeder
 
       DB::table('senarai_hargas')-> insert(
         [
-          'jenis_dokumen' => 'Kertas',
+          'jenis_dokumen' => 'Bercetak',
           'jenis_kertas' => 'A1',
           'saiz_data' => 100,
           'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13259,7 +14313,7 @@ class SenaraiHargaSeeder extends Seeder
 
       DB::table('senarai_hargas')-> insert(
         [
-          'jenis_dokumen' => 'Kertas',
+          'jenis_dokumen' => 'Bercetak',
           'jenis_kertas' => 'A2',
           'saiz_data' => 100,
           'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13274,7 +14328,7 @@ class SenaraiHargaSeeder extends Seeder
 
       DB::table('senarai_hargas')-> insert(
         [
-          'jenis_dokumen' => 'Kertas',
+          'jenis_dokumen' => 'Bercetak',
           'jenis_kertas' => 'A3',
           'saiz_data' => 100,
           'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13289,7 +14343,7 @@ class SenaraiHargaSeeder extends Seeder
 
       DB::table('senarai_hargas')-> insert(
         [
-          'jenis_dokumen' => 'Kertas',
+          'jenis_dokumen' => 'Bercetak',
           'jenis_kertas' => 'A4',
           'saiz_data' => 100,
           'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13304,7 +14358,7 @@ class SenaraiHargaSeeder extends Seeder
 
       DB::table('senarai_hargas')-> insert(
         [
-          'jenis_dokumen' => 'Kertas',
+          'jenis_dokumen' => 'Bercetak',
           'jenis_kertas' => 'A0',
           'saiz_data' => 100,
           'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13319,7 +14373,7 @@ class SenaraiHargaSeeder extends Seeder
 
       DB::table('senarai_hargas')-> insert(
         [
-          'jenis_dokumen' => 'Kertas',
+          'jenis_dokumen' => 'Bercetak',
           'jenis_kertas' => 'A1',
           'saiz_data' => 100,
           'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13333,7 +14387,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13347,7 +14401,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13361,7 +14415,7 @@ class SenaraiHargaSeeder extends Seeder
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13376,7 +14430,7 @@ class SenaraiHargaSeeder extends Seeder
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13390,7 +14444,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13404,7 +14458,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13418,7 +14472,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13432,7 +14486,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13448,7 +14502,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Kedah
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13462,7 +14516,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13476,7 +14530,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13490,7 +14544,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13504,7 +14558,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13519,7 +14573,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13533,7 +14587,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13547,7 +14601,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13561,7 +14615,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13575,84 +14629,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Kedah',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kedah',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kedah',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kedah',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kedah',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kedah',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -13661,7 +14644,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kedah',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kedah',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kedah',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kedah',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kedah',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13675,7 +14729,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13689,7 +14743,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13703,7 +14757,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13717,7 +14771,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13732,7 +14786,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13746,7 +14800,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13760,7 +14814,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13774,7 +14828,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13788,7 +14842,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13803,7 +14857,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13817,7 +14871,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13831,7 +14885,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13845,7 +14899,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13859,7 +14913,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13875,7 +14929,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Kelantan
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13889,7 +14943,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13903,7 +14957,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13917,7 +14971,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13931,7 +14985,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13946,7 +15000,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13960,7 +15014,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13974,7 +15028,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -13988,7 +15042,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14002,84 +15056,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Kelantan',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kelantan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kelantan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kelantan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kelantan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Kelantan',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -14088,7 +15071,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kelantan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kelantan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kelantan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kelantan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Kelantan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14102,7 +15156,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14116,7 +15170,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14130,7 +15184,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14144,7 +15198,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14159,7 +15213,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14173,7 +15227,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14187,7 +15241,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14201,7 +15255,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14215,7 +15269,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14230,7 +15284,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14244,7 +15298,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14258,7 +15312,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14272,7 +15326,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14286,7 +15340,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14302,7 +15356,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Negeri Sembilan
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14316,7 +15370,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14330,7 +15384,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14344,7 +15398,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14358,7 +15412,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14373,7 +15427,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14387,7 +15441,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14401,7 +15455,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14415,7 +15469,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14429,84 +15483,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Negeri Sembilan',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Negeri Sembilan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Negeri Sembilan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Negeri Sembilan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Negeri Sembilan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Negeri Sembilan',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -14515,7 +15498,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Negeri Sembilan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Negeri Sembilan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Negeri Sembilan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Negeri Sembilan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Negeri Sembilan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14529,7 +15583,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14543,7 +15597,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14557,7 +15611,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14571,7 +15625,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14586,7 +15640,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14600,7 +15654,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14614,7 +15668,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14628,7 +15682,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14642,7 +15696,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14657,7 +15711,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14671,7 +15725,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14685,7 +15739,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14699,7 +15753,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14713,7 +15767,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14729,7 +15783,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Pahang
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14743,7 +15797,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14757,7 +15811,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14771,7 +15825,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14785,7 +15839,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14800,7 +15854,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14814,7 +15868,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14828,7 +15882,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14842,7 +15896,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14856,84 +15910,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Pahang',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pahang',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pahang',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pahang',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pahang',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pahang',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -14942,7 +15925,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pahang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pahang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pahang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pahang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pahang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14956,7 +16010,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14970,7 +16024,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14984,7 +16038,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -14998,7 +16052,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15013,7 +16067,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15027,7 +16081,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15041,7 +16095,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15055,7 +16109,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15069,7 +16123,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15084,7 +16138,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15098,7 +16152,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15112,7 +16166,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15126,7 +16180,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15140,7 +16194,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15156,7 +16210,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Perak
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15170,7 +16224,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15184,7 +16238,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15198,7 +16252,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15212,7 +16266,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15227,7 +16281,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15241,7 +16295,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15255,7 +16309,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15269,7 +16323,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15283,84 +16337,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Perak',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perak',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perak',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perak',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perak',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perak',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -15369,7 +16352,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perak',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perak',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perak',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perak',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perak',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15383,7 +16437,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15397,7 +16451,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15411,7 +16465,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15425,7 +16479,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15440,7 +16494,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15454,7 +16508,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15468,7 +16522,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15482,7 +16536,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15496,7 +16550,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15511,7 +16565,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15525,7 +16579,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15539,7 +16593,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15553,7 +16607,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15567,7 +16621,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15582,7 +16636,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Perlis
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15596,7 +16650,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15610,7 +16664,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15624,7 +16678,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15638,7 +16692,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15653,7 +16707,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15667,7 +16721,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15681,7 +16735,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15695,7 +16749,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15709,84 +16763,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Perlis',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perlis',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perlis',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perlis',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perlis',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Perlis',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -15795,7 +16778,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perlis',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perlis',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perlis',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perlis',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Perlis',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15809,7 +16863,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15823,7 +16877,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15837,7 +16891,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15851,7 +16905,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15866,7 +16920,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15880,7 +16934,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15894,7 +16948,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15908,7 +16962,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15922,7 +16976,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15937,7 +16991,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15951,7 +17005,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15965,7 +17019,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15979,7 +17033,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -15993,7 +17047,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16009,7 +17063,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Pulau Pinang
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16023,7 +17077,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16037,7 +17091,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16051,7 +17105,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16065,7 +17119,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16080,7 +17134,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16094,7 +17148,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16108,7 +17162,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16122,7 +17176,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16136,84 +17190,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Pulau Pinang',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pulau Pinang',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pulau Pinang',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pulau Pinang',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pulau Pinang',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Pulau Pinang',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -16222,7 +17205,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pulau Pinang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pulau Pinang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pulau Pinang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pulau Pinang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Pulau Pinang',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16236,7 +17290,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16250,7 +17304,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16264,7 +17318,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16278,7 +17332,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16293,7 +17347,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16307,7 +17361,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16321,7 +17375,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16335,7 +17389,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16349,7 +17403,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16364,7 +17418,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16378,7 +17432,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16392,7 +17446,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16406,7 +17460,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16420,7 +17474,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16435,7 +17489,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Selangor
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16449,7 +17503,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16463,7 +17517,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16477,7 +17531,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16491,7 +17545,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16506,7 +17560,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16520,7 +17574,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16534,7 +17588,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16548,7 +17602,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16562,84 +17616,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Selangor',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Selangor',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Selangor',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Selangor',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Selangor',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Selangor',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -16648,7 +17631,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Selangor',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Selangor',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Selangor',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Selangor',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Selangor',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16662,7 +17716,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16676,7 +17730,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16690,7 +17744,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16704,7 +17758,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16719,7 +17773,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16733,7 +17787,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16747,7 +17801,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16761,7 +17815,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16775,7 +17829,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16790,7 +17844,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16804,7 +17858,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16818,7 +17872,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16832,7 +17886,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16846,7 +17900,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16861,7 +17915,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Terengganu
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16875,7 +17929,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16889,7 +17943,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16903,7 +17957,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16917,7 +17971,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16932,7 +17986,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16946,7 +18000,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16960,7 +18014,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16974,7 +18028,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -16988,84 +18042,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Terengganu',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Terengganu',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Terengganu',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Terengganu',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Terengganu',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Terengganu',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -17074,7 +18057,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Terengganu',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Terengganu',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Terengganu',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Terengganu',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Terengganu',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17088,7 +18142,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17103,7 +18157,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17117,7 +18171,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17131,7 +18185,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17146,7 +18200,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17160,7 +18214,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17174,7 +18228,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17188,7 +18242,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17202,7 +18256,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17217,7 +18271,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17231,7 +18285,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17245,7 +18299,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17259,7 +18313,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17273,7 +18327,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17288,7 +18342,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Melaka
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17302,7 +18356,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17316,7 +18370,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17330,7 +18384,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17344,7 +18398,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17359,7 +18413,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17373,7 +18427,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17387,7 +18441,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17401,7 +18455,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17415,84 +18469,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Melaka',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Melaka',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Melaka',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Melaka',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Melaka',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Melaka',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -17501,7 +18484,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Melaka',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Melaka',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Melaka',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Melaka',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Melaka',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17515,7 +18569,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17529,7 +18583,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17543,7 +18597,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17557,7 +18611,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17572,7 +18626,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17586,7 +18640,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17600,7 +18654,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17614,7 +18668,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17628,7 +18682,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17643,7 +18697,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17657,7 +18711,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17671,7 +18725,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17685,7 +18739,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17699,7 +18753,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17715,7 +18769,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Wilayah Persekutuan
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17729,7 +18783,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17743,7 +18797,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17757,7 +18811,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17771,7 +18825,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17786,7 +18840,7 @@ DB::table('senarai_hargas')-> insert(
 
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17800,7 +18854,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17814,7 +18868,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17828,7 +18882,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17842,84 +18896,13 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
        'negeri' => 'Wilayah Persekutuan',
        'kategori_data' => null,
        'tahun' => '2011',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Wilayah Persekutuan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Wilayah Persekutuan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Wilayah Persekutuan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Wilayah Persekutuan',
-       'kategori_data' => null,
-       'tahun' => '2015',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Kertas',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
-       'negeri' => 'Wilayah Persekutuan',
-       'kategori_data' => null,
-       'tahun' => '2015',
        'harga_asas' => 60.00,
        'jumlah_harga' => 0.00,
        'status' => 'Aktif',
@@ -17928,7 +18911,78 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A0',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Wilayah Persekutuan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 770.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A1',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Wilayah Persekutuan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 390.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A2',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Wilayah Persekutuan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 210.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A3',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Wilayah Persekutuan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 110.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+     DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
+       'jenis_kertas' => 'A4',
+       'saiz_data' => 100,
+       'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
+       'negeri' => 'Wilayah Persekutuan',
+       'kategori_data' => null,
+       'tahun' => '2015',
+       'harga_asas' => 60.00,
+       'jumlah_harga' => 0.00,
+       'status' => 'Aktif',
+       ]
+     );
+
+DB::table('senarai_hargas')-> insert(
+       [
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17942,7 +18996,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17956,7 +19010,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17970,7 +19024,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17984,7 +19038,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -17999,7 +19053,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18013,7 +19067,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18027,7 +19081,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18041,7 +19095,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18055,7 +19109,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18070,7 +19124,7 @@ DB::table('senarai_hargas')-> insert(
 
 DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18084,7 +19138,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18098,7 +19152,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18112,7 +19166,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18126,7 +19180,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Sempadan Hutan Simpanan Kekal',
@@ -18142,7 +19196,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Semenanjung Malaysia
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18156,7 +19210,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18170,7 +19224,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18184,7 +19238,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18198,7 +19252,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18212,7 +19266,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18226,7 +19280,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18240,7 +19294,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18254,7 +19308,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18268,7 +19322,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18282,7 +19336,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18296,7 +19350,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18310,7 +19364,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18324,7 +19378,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18338,7 +19392,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18352,7 +19406,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18366,7 +19420,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18380,7 +19434,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18394,7 +19448,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18408,7 +19462,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18422,7 +19476,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18436,7 +19490,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18450,7 +19504,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18464,7 +19518,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18478,7 +19532,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18494,7 +19548,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Johor
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18508,7 +19562,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18522,7 +19576,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18536,7 +19590,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18550,7 +19604,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18564,7 +19618,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18578,7 +19632,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18592,7 +19646,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18606,7 +19660,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18620,7 +19674,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18634,7 +19688,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18648,7 +19702,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18662,7 +19716,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18676,7 +19730,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18690,7 +19744,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18704,7 +19758,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18718,7 +19772,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18732,7 +19786,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18746,7 +19800,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18760,7 +19814,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18774,7 +19828,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18788,7 +19842,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18802,7 +19856,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18816,7 +19870,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18830,7 +19884,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18846,7 +19900,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Kedah
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18860,7 +19914,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18874,7 +19928,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18888,7 +19942,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18902,7 +19956,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18916,7 +19970,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18930,7 +19984,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18944,7 +19998,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18958,7 +20012,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18972,7 +20026,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -18986,7 +20040,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19000,7 +20054,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19014,7 +20068,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19028,7 +20082,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19042,7 +20096,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19056,7 +20110,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19070,7 +20124,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19084,7 +20138,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19098,7 +20152,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19112,7 +20166,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19126,7 +20180,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19140,7 +20194,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19154,7 +20208,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19168,7 +20222,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19182,7 +20236,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19198,7 +20252,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Kelantan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19212,7 +20266,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19226,7 +20280,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19240,7 +20294,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19254,7 +20308,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19268,7 +20322,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19282,7 +20336,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19296,7 +20350,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19310,7 +20364,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19324,7 +20378,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19338,7 +20392,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19352,7 +20406,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19366,7 +20420,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19380,7 +20434,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19394,7 +20448,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19408,7 +20462,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19422,7 +20476,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19436,7 +20490,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19450,7 +20504,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19464,7 +20518,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19478,7 +20532,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19492,7 +20546,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19506,7 +20560,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19520,7 +20574,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19534,7 +20588,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19550,7 +20604,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Negeri Sembilan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19564,7 +20618,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19578,7 +20632,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19592,7 +20646,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19606,7 +20660,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19620,7 +20674,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19634,7 +20688,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19648,7 +20702,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19662,7 +20716,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19676,7 +20730,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19690,7 +20744,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19704,7 +20758,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19718,7 +20772,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19732,7 +20786,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19746,7 +20800,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19760,7 +20814,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19774,7 +20828,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19788,7 +20842,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19802,7 +20856,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19816,7 +20870,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19830,7 +20884,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19844,7 +20898,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19858,7 +20912,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19872,7 +20926,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19886,7 +20940,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19902,7 +20956,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Pahang
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19916,7 +20970,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19930,7 +20984,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19944,7 +20998,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19958,7 +21012,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19972,7 +21026,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -19986,7 +21040,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20000,7 +21054,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20014,7 +21068,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20028,7 +21082,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20042,7 +21096,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20056,7 +21110,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20070,7 +21124,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20084,7 +21138,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20098,7 +21152,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20112,7 +21166,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20126,7 +21180,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20140,7 +21194,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20154,7 +21208,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20168,7 +21222,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20182,7 +21236,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20196,7 +21250,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20210,7 +21264,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20224,7 +21278,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20238,7 +21292,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20254,7 +21308,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Perak
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20268,7 +21322,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20282,7 +21336,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20296,7 +21350,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20310,7 +21364,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20324,7 +21378,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20338,7 +21392,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20352,7 +21406,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20366,7 +21420,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20380,7 +21434,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20394,7 +21448,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20408,7 +21462,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20422,7 +21476,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20436,7 +21490,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20450,7 +21504,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20464,7 +21518,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20478,7 +21532,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20492,7 +21546,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20506,7 +21560,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20520,7 +21574,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20534,7 +21588,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20548,7 +21602,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20562,7 +21616,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20576,7 +21630,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20590,7 +21644,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20606,7 +21660,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Perlis
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20620,7 +21674,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20634,7 +21688,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20648,7 +21702,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20662,7 +21716,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20676,7 +21730,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20690,7 +21744,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20704,7 +21758,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20718,7 +21772,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20732,7 +21786,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20746,7 +21800,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20760,7 +21814,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20774,7 +21828,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20788,7 +21842,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20802,7 +21856,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20816,7 +21870,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20830,7 +21884,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20844,7 +21898,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20858,7 +21912,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20872,7 +21926,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20886,7 +21940,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20900,7 +21954,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20914,7 +21968,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20928,7 +21982,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20942,7 +21996,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20958,7 +22012,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Pulau Pinang
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20972,7 +22026,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -20986,7 +22040,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21000,7 +22054,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21014,7 +22068,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21028,7 +22082,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21042,7 +22096,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21056,7 +22110,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21070,7 +22124,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21084,7 +22138,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21098,7 +22152,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21112,7 +22166,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21126,7 +22180,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21140,7 +22194,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21154,7 +22208,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21168,7 +22222,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21182,7 +22236,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21196,7 +22250,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21210,7 +22264,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21224,7 +22278,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21238,7 +22292,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21252,7 +22306,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21266,7 +22320,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21280,7 +22334,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21294,7 +22348,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21310,7 +22364,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Selangor
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21324,7 +22378,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21338,7 +22392,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21352,7 +22406,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21366,7 +22420,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21380,7 +22434,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21394,7 +22448,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21408,7 +22462,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21422,7 +22476,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21436,7 +22490,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21450,7 +22504,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21464,7 +22518,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21478,7 +22532,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21492,7 +22546,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21506,7 +22560,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21520,7 +22574,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21534,7 +22588,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21548,7 +22602,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21562,7 +22616,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21576,7 +22630,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21590,7 +22644,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21604,7 +22658,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21618,7 +22672,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21632,7 +22686,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21646,7 +22700,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21662,7 +22716,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Terengganu
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21676,7 +22730,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21690,7 +22744,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21704,7 +22758,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21718,7 +22772,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21732,7 +22786,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21746,7 +22800,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21760,7 +22814,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21774,7 +22828,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21788,7 +22842,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21802,7 +22856,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21816,7 +22870,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21830,7 +22884,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21844,7 +22898,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21858,7 +22912,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21872,7 +22926,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21886,7 +22940,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21900,7 +22954,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21914,7 +22968,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21928,7 +22982,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21942,7 +22996,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21956,7 +23010,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21970,7 +23024,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21984,7 +23038,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -21998,7 +23052,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22014,7 +23068,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Melaka
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22028,7 +23082,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22042,7 +23096,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22056,7 +23110,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22070,7 +23124,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22084,7 +23138,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22098,7 +23152,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22112,7 +23166,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22126,7 +23180,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22140,7 +23194,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22154,7 +23208,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22168,7 +23222,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22182,7 +23236,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22196,7 +23250,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22210,7 +23264,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22224,7 +23278,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22238,7 +23292,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22252,7 +23306,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22266,7 +23320,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22280,7 +23334,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22294,7 +23348,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22308,7 +23362,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22322,7 +23376,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22336,7 +23390,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22350,7 +23404,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22366,7 +23420,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Inventori Hutan Nasional | 1961-2010 | A0-A4 | Wilayah Persekutuan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22380,7 +23434,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22394,7 +23448,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22408,7 +23462,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22422,7 +23476,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22436,7 +23490,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22450,7 +23504,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22464,7 +23518,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22478,7 +23532,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22492,7 +23546,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22506,7 +23560,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22520,7 +23574,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22534,7 +23588,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22548,7 +23602,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22562,7 +23616,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22576,7 +23630,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22590,7 +23644,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22604,7 +23658,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22618,7 +23672,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22632,7 +23686,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22646,7 +23700,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22660,7 +23714,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22674,7 +23728,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22688,7 +23742,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22702,7 +23756,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Inventori Hutan Nasional',
@@ -22718,7 +23772,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Semenanjung Malaysia
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22732,7 +23786,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22746,7 +23800,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22760,7 +23814,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22774,7 +23828,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22788,7 +23842,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22802,7 +23856,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22816,7 +23870,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22830,7 +23884,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22844,7 +23898,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22858,7 +23912,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22872,7 +23926,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22886,7 +23940,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22900,7 +23954,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22914,7 +23968,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22930,7 +23984,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Johor
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22944,7 +23998,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22958,7 +24012,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22972,7 +24026,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -22986,7 +24040,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23000,7 +24054,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23014,7 +24068,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23028,7 +24082,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23042,7 +24096,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23056,7 +24110,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23070,7 +24124,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23084,7 +24138,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23098,7 +24152,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23112,7 +24166,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23126,7 +24180,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23142,7 +24196,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Kedah
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23156,7 +24210,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23170,7 +24224,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23184,7 +24238,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23198,7 +24252,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23212,7 +24266,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23226,7 +24280,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23240,7 +24294,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23254,7 +24308,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23268,7 +24322,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23282,7 +24336,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23296,7 +24350,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23310,7 +24364,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23324,7 +24378,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23338,7 +24392,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23354,7 +24408,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Kelantan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23368,7 +24422,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23382,7 +24436,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23396,7 +24450,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23410,7 +24464,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23424,7 +24478,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23438,7 +24492,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23452,7 +24506,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23466,7 +24520,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23480,7 +24534,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23494,7 +24548,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23508,7 +24562,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23522,7 +24576,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23536,7 +24590,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23550,7 +24604,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23566,7 +24620,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Negeri Sembilan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23580,7 +24634,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23594,7 +24648,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23608,7 +24662,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23622,7 +24676,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23636,7 +24690,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23650,7 +24704,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23664,7 +24718,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23678,7 +24732,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23692,7 +24746,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23706,7 +24760,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23720,7 +24774,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23734,7 +24788,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23748,7 +24802,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23762,7 +24816,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23778,7 +24832,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Pahang
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23792,7 +24846,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23806,7 +24860,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23820,7 +24874,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23834,7 +24888,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23848,7 +24902,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23862,7 +24916,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23876,7 +24930,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23890,7 +24944,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23904,7 +24958,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23918,7 +24972,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23932,7 +24986,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23946,7 +25000,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23960,7 +25014,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23974,7 +25028,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -23990,7 +25044,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Perak
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24004,7 +25058,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24018,7 +25072,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24032,7 +25086,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24046,7 +25100,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24060,7 +25114,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24074,7 +25128,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24088,7 +25142,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24102,7 +25156,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24116,7 +25170,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24130,7 +25184,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24144,7 +25198,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24158,7 +25212,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24172,7 +25226,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24186,7 +25240,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24202,7 +25256,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Perlis
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24216,7 +25270,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24230,7 +25284,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24244,7 +25298,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24258,7 +25312,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24272,7 +25326,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24286,7 +25340,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24300,7 +25354,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24314,7 +25368,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24328,7 +25382,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24342,7 +25396,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24356,7 +25410,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24370,7 +25424,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24384,7 +25438,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24398,7 +25452,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24414,7 +25468,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Pulau Pinang
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24428,7 +25482,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24442,7 +25496,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24456,7 +25510,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24470,7 +25524,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24484,7 +25538,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24498,7 +25552,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24512,7 +25566,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24526,7 +25580,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24540,7 +25594,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24554,7 +25608,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24568,7 +25622,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24582,7 +25636,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24596,7 +25650,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24610,7 +25664,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24626,7 +25680,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Selangor
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24640,7 +25694,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24654,7 +25708,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24668,7 +25722,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24682,7 +25736,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24696,7 +25750,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24710,7 +25764,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24724,7 +25778,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24738,7 +25792,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24752,7 +25806,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24766,7 +25820,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24780,7 +25834,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24794,7 +25848,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24808,7 +25862,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24822,7 +25876,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24838,7 +25892,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Terengganu
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24852,7 +25906,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24866,7 +25920,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24880,7 +25934,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24894,7 +25948,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24908,7 +25962,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24922,7 +25976,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24936,7 +25990,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24950,7 +26004,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24964,7 +26018,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24978,7 +26032,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -24992,7 +26046,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25006,7 +26060,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25020,7 +26074,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25034,7 +26088,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25050,7 +26104,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Melaka
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25064,7 +26118,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25078,7 +26132,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25092,7 +26146,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25106,7 +26160,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25120,7 +26174,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25134,7 +26188,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25148,7 +26202,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25162,7 +26216,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25176,7 +26230,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25190,7 +26244,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25204,7 +26258,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25218,7 +26272,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25232,7 +26286,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25246,7 +26300,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25262,7 +26316,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Kelas Fungsi Hutan | 2010-2019 | A0-A4 | Wilayah Persekutuan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25276,7 +26330,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25290,7 +26344,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25304,7 +26358,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25318,7 +26372,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25332,7 +26386,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25346,7 +26400,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25360,7 +26414,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25374,7 +26428,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25388,7 +26442,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25402,7 +26456,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25416,7 +26470,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25430,7 +26484,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25444,7 +26498,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25458,7 +26512,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Kelas Fungsi Hutan',
@@ -25474,7 +26528,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Semenanjung Malaysia
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25488,7 +26542,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25502,7 +26556,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25516,7 +26570,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25530,7 +26584,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25544,7 +26598,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25558,7 +26612,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25572,7 +26626,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25586,7 +26640,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25600,7 +26654,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25614,7 +26668,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25628,7 +26682,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25642,7 +26696,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25656,7 +26710,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25670,7 +26724,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25684,7 +26738,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25698,7 +26752,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25712,7 +26766,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25726,7 +26780,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25740,7 +26794,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25754,7 +26808,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25768,7 +26822,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25782,7 +26836,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25796,7 +26850,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25810,7 +26864,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25826,7 +26880,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Johor
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25840,7 +26894,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25854,7 +26908,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25868,7 +26922,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25882,7 +26936,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25896,7 +26950,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25910,7 +26964,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25924,7 +26978,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25938,7 +26992,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25952,7 +27006,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25966,7 +27020,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25980,7 +27034,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -25994,7 +27048,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26008,7 +27062,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26022,7 +27076,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26036,7 +27090,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26050,7 +27104,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26064,7 +27118,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26078,7 +27132,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26092,7 +27146,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26106,7 +27160,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26120,7 +27174,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26134,7 +27188,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26148,7 +27202,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26162,7 +27216,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26178,7 +27232,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Kedah
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26192,7 +27246,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26206,7 +27260,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26220,7 +27274,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26234,7 +27288,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26248,7 +27302,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26262,7 +27316,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26276,7 +27330,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26290,7 +27344,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26304,7 +27358,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26318,7 +27372,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26332,7 +27386,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26346,7 +27400,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26360,7 +27414,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26374,7 +27428,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26388,7 +27442,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26402,7 +27456,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26416,7 +27470,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26430,7 +27484,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26444,7 +27498,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26458,7 +27512,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26472,7 +27526,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26486,7 +27540,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26500,7 +27554,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26514,7 +27568,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26530,7 +27584,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Kelantan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26544,7 +27598,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26558,7 +27612,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26572,7 +27626,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26586,7 +27640,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26600,7 +27654,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26614,7 +27668,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26628,7 +27682,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26642,7 +27696,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26656,7 +27710,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26670,7 +27724,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26684,7 +27738,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26698,7 +27752,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26712,7 +27766,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26726,7 +27780,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26740,7 +27794,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26754,7 +27808,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26768,7 +27822,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26782,7 +27836,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26796,7 +27850,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26810,7 +27864,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26824,7 +27878,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26838,7 +27892,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26852,7 +27906,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26866,7 +27920,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26882,7 +27936,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Negeri Sembilan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26896,7 +27950,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26910,7 +27964,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26924,7 +27978,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26938,7 +27992,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26952,7 +28006,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26966,7 +28020,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26980,7 +28034,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -26994,7 +28048,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27008,7 +28062,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27022,7 +28076,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27036,7 +28090,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27050,7 +28104,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27064,7 +28118,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27078,7 +28132,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27092,7 +28146,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27106,7 +28160,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27120,7 +28174,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27134,7 +28188,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27148,7 +28202,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27162,7 +28216,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27176,7 +28230,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27190,7 +28244,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27204,7 +28258,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27218,7 +28272,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27234,7 +28288,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Pahang
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27248,7 +28302,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27262,7 +28316,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27276,7 +28330,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27290,7 +28344,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27304,7 +28358,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27318,7 +28372,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27332,7 +28386,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27346,7 +28400,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27360,7 +28414,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27374,7 +28428,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27388,7 +28442,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27402,7 +28456,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27416,7 +28470,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27430,7 +28484,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27444,7 +28498,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27458,7 +28512,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27472,7 +28526,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27486,7 +28540,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27500,7 +28554,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27514,7 +28568,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27528,7 +28582,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27542,7 +28596,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27556,7 +28610,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27570,7 +28624,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27586,7 +28640,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Perak
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27600,7 +28654,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27614,7 +28668,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27628,7 +28682,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27642,7 +28696,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27656,7 +28710,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27670,7 +28724,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27684,7 +28738,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27698,7 +28752,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27712,7 +28766,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27726,7 +28780,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27740,7 +28794,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27754,7 +28808,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27768,7 +28822,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27782,7 +28836,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27796,7 +28850,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27810,7 +28864,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27824,7 +28878,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27838,7 +28892,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27852,7 +28906,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27866,7 +28920,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27880,7 +28934,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27894,7 +28948,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27908,7 +28962,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27922,7 +28976,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27938,7 +28992,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Perlis
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27952,7 +29006,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27966,7 +29020,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27980,7 +29034,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -27994,7 +29048,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28008,7 +29062,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28022,7 +29076,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28036,7 +29090,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28050,7 +29104,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28064,7 +29118,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28078,7 +29132,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28092,7 +29146,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28106,7 +29160,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28120,7 +29174,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28134,7 +29188,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28148,7 +29202,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28162,7 +29216,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28176,7 +29230,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28190,7 +29244,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28204,7 +29258,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28218,7 +29272,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28232,7 +29286,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28246,7 +29300,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28260,7 +29314,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28274,7 +29328,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28290,7 +29344,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Pulau Pinang
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28304,7 +29358,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28318,7 +29372,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28332,7 +29386,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28346,7 +29400,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28360,7 +29414,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28374,7 +29428,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28388,7 +29442,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28402,7 +29456,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28416,7 +29470,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28430,7 +29484,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28444,7 +29498,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28458,7 +29512,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28472,7 +29526,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28486,7 +29540,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28500,7 +29554,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28514,7 +29568,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28528,7 +29582,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28542,7 +29596,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28556,7 +29610,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28570,7 +29624,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28584,7 +29638,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28598,7 +29652,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28612,7 +29666,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28626,7 +29680,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28642,7 +29696,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Selangor
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28656,7 +29710,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28670,7 +29724,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28684,7 +29738,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28698,7 +29752,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28712,7 +29766,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28726,7 +29780,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28740,7 +29794,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28754,7 +29808,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28768,7 +29822,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28782,7 +29836,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28796,7 +29850,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28810,7 +29864,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28824,7 +29878,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28838,7 +29892,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28852,7 +29906,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28866,7 +29920,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28880,7 +29934,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28894,7 +29948,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28908,7 +29962,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28922,7 +29976,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28936,7 +29990,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28950,7 +30004,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28964,7 +30018,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28978,7 +30032,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -28994,7 +30048,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Terengganu
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29008,7 +30062,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29022,7 +30076,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29036,7 +30090,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29050,7 +30104,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29064,7 +30118,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29078,7 +30132,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29092,7 +30146,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29106,7 +30160,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29120,7 +30174,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29134,7 +30188,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29148,7 +30202,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29162,7 +30216,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29176,7 +30230,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29190,7 +30244,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29204,7 +30258,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29218,7 +30272,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29232,7 +30286,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29246,7 +30300,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29260,7 +30314,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29274,7 +30328,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29288,7 +30342,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29302,7 +30356,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29316,7 +30370,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29330,7 +30384,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29346,7 +30400,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Melaka
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29360,7 +30414,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29374,7 +30428,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29388,7 +30442,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29402,7 +30456,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29416,7 +30470,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29430,7 +30484,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29444,7 +30498,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29458,7 +30512,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29472,7 +30526,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29486,7 +30540,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29500,7 +30554,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29514,7 +30568,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29528,7 +30582,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29542,7 +30596,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29556,7 +30610,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29570,7 +30624,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29584,7 +30638,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29598,7 +30652,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29612,7 +30666,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29626,7 +30680,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29640,7 +30694,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29654,7 +30708,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29668,7 +30722,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29682,7 +30736,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29698,7 +30752,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Petak Kajian | 2010-2019 | A0-A4 | Wilayah Persekutuan
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29712,7 +30766,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29726,7 +30780,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29740,7 +30794,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29754,7 +30808,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29768,7 +30822,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29782,7 +30836,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29796,7 +30850,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29810,7 +30864,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29824,7 +30878,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29838,7 +30892,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29852,7 +30906,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29866,7 +30920,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29880,7 +30934,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29894,7 +30948,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29908,7 +30962,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29922,7 +30976,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29936,7 +30990,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29950,7 +31004,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29964,7 +31018,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29978,7 +31032,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -29992,7 +31046,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -30006,7 +31060,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -30020,7 +31074,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -30034,7 +31088,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
@@ -30050,7 +31104,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Lain-Lain | null | 'A0'-'A4' | Semenanjung Malaysia
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30064,7 +31118,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30078,7 +31132,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30092,7 +31146,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30106,7 +31160,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30122,7 +31176,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Lain-Lain | null | 'A0'-'A4' | Johor
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30136,7 +31190,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30150,7 +31204,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30164,7 +31218,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30178,7 +31232,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30194,7 +31248,7 @@ DB::table('senarai_hargas')-> insert(
     //Kertas | Lain-Lain | null | 'A0'-'A4' | Kedah
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30208,7 +31262,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30222,7 +31276,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30236,7 +31290,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30250,7 +31304,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30266,7 +31320,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Lain-Lain | null | 'A0'-'A4' | Kelantan
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30280,7 +31334,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30294,7 +31348,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30308,7 +31362,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30322,7 +31376,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30334,15 +31388,13 @@ DB::table('senarai_hargas')-> insert(
        'status' => 'Aktif',
        ]
      );
-
-     //Kertas | Lain-Lain | null | 'A0'-'A4' | Negeri Sembilan
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Negeri Sembilan',
+       'negeri' => 'Kelantan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 770.00,
@@ -30352,11 +31404,11 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Negeri Sembilan',
+       'negeri' => 'Kelantan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 390.00,
@@ -30366,11 +31418,11 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Negeri Sembilan',
+       'negeri' => 'Kelantan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 210.00,
@@ -30380,11 +31432,11 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Negeri Sembilan',
+       'negeri' => 'Kelantan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 110.00,
@@ -30394,11 +31446,11 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Negeri Sembilan',
+       'negeri' => 'Kelantan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 60.00,
@@ -30410,7 +31462,7 @@ DB::table('senarai_hargas')-> insert(
     //Kertas | Lain-Lain | null | 'A0'-'A4' | Pahang
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30424,7 +31476,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30438,7 +31490,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30452,7 +31504,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30466,7 +31518,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30482,7 +31534,7 @@ DB::table('senarai_hargas')-> insert(
     //Kertas | Lain-Lain | null | 'A0'-'A4' | Perak
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30496,7 +31548,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30510,7 +31562,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30524,7 +31576,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30538,7 +31590,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30554,7 +31606,7 @@ DB::table('senarai_hargas')-> insert(
     //Kertas | Lain-Lain | null | 'A0'-'A4' | Perlis
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30568,7 +31620,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30582,7 +31634,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30596,7 +31648,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30610,7 +31662,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30626,7 +31678,7 @@ DB::table('senarai_hargas')-> insert(
     //Kertas | Lain-Lain | null | 'A0'-'A4' | Pulau Pinang
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30640,7 +31692,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30654,7 +31706,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30668,7 +31720,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30682,7 +31734,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30698,7 +31750,7 @@ DB::table('senarai_hargas')-> insert(
     //Kertas | Lain-Lain | null | 'A0'-'A4' | Selangor
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30712,7 +31764,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30726,7 +31778,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30740,7 +31792,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30754,7 +31806,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30770,7 +31822,7 @@ DB::table('senarai_hargas')-> insert(
     //Kertas | Lain-Lain | null | 'A0'-'A4' | Terengganu
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30784,7 +31836,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30798,7 +31850,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30812,7 +31864,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30826,7 +31878,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30842,7 +31894,7 @@ DB::table('senarai_hargas')-> insert(
      //Kertas | Lain-Lain | null | 'A0'-'A4' | Melaka
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30856,7 +31908,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30870,7 +31922,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30884,7 +31936,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30898,7 +31950,7 @@ DB::table('senarai_hargas')-> insert(
      );
      DB::table('senarai_hargas')-> insert(
        [
-       'jenis_dokumen' => 'Kertas',
+       'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
@@ -30914,7 +31966,7 @@ DB::table('senarai_hargas')-> insert(
     //Kertas | Lain-Lain | null | 'A0'-'A4' | Wilayah Persekutuan
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A0',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30928,7 +31980,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A1',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30942,7 +31994,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A2',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30956,7 +32008,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A3',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',
@@ -30970,7 +32022,7 @@ DB::table('senarai_hargas')-> insert(
     );
     DB::table('senarai_hargas')-> insert(
       [
-      'jenis_dokumen' => 'Kertas',
+      'jenis_dokumen' => 'Bercetak',
       'jenis_Kertas' => 'A4',
       'saiz_data' => 100,
       'jenis_data' => 'Lain-Lain',

@@ -226,6 +226,23 @@
                             <div class="card-body">
                                 <div class="card-title" style="text-align: center;">Senarai Data Permohonan</div>
                                 <!-- Table -->
+                                <div class="row">
+                                  <div class="col-md-2">
+
+                                  </div>
+                                  <div class="col-md">
+                                    <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
+                                      <h6 style="text-align: center;">Catatan:</h6>
+                                      <span>Sekiranya terdapat perubahan data permohonan, sila buang data yang sedia ada dan membuat penambahan data baru.</span><br>
+
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2">
+
+                                  </div>
+                                </div>
+                                <div style="padding: 15px;"></div>
+                                
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="pilihan_table">
                                         <thead>

@@ -36,7 +36,7 @@
             <!-- Brand details -->
             <div class="side-menu-brand d-flex flex-column justify-content-center align-items-center clear mt-3">
                 <img src="{{ asset('https://www.atvadventurepark.com/images/hutan.png') }}" alt="bran_name" class="brand-img">
-                <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold">e-Spatial</a>
+                <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold" style="text-align: center; font-size: 20px;">Permohonan Data Geospatial</a>
             </div>
             @if(Auth::user())
             <!-- Side bar menu -->

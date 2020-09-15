@@ -33,10 +33,25 @@
                         <div class=""style="padding: 5px;">
 
                         </div>
-                        <h5 class="text-dark my-4" style="text-align: center;">Tetapan Semula Katalaluan</h5>
+                        <h5 class="text-dark my-4" style="text-align: center;">Tetapan Semula Kata Laluan</h5>
                         <!-- Email -->
+                        <div class="row">
+                          <div class="col-md">
+                            <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
+                              <h6 style="text-align: center; font-weight: bold;">Cara Tetapan Semula Kata Laluan:</h6>
+                              <span>1. Masukkan email yang berdaftar dengan sistem</span><br>
+                              <span>2. Tekan butang "Tetapan Semula Kata Laluan"</span><br>
+                              <span>3. Sila tekan pautan yang dihantar melalui email</span><br>
+                              <span>4. Masukkan katalaluan baru</span><br>
+                              <span>5. Tekan butang hantar</span><br>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div style="padding: 15px;"></div>
+
                         <div class="form-group">
-                            <label for="email" class="text-muted">Email</label>
+                            <label for="email" class="text-muted">Email Pengguna</label>
                             <input id="email" type="email" class="form-control badge-pill bg-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                             @error('email')
@@ -66,6 +81,7 @@
 
 
                     </form>
+
                   </div>
                   <div class="col-md-1"></div>
                 </div>
