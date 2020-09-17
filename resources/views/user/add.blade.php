@@ -321,7 +321,7 @@
 
                           </div>
                           <div class="custom-control custom-radio">
-                              <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif>
+                              <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif required>
                               <label class="custom-control-label" for="Tidak">Tidak</label>
                           </div>
                         </div>

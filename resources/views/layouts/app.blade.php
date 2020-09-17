@@ -61,7 +61,7 @@
                 <!-- Menu item -->
                 <div id="accordion">
                     <ul class="side-menu p-0 m-0 mt-3">
-                        @if(Auth::user()->role == 0 || Auth::user()->role == 1 || Auth::user()->role == 2 || Auth::user()->role == 3)
+                        @if(Auth::user()->role == 0)
                         <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
                         <!-- Sub menu parent -->
                         <!-- <li class="side-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 py-3 pl-4">Senarai Permohonan #temp</a></li> -->
@@ -83,6 +83,34 @@
                         <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
 
                         @endif
+
+
+                        @if( Auth::user()->role == 1 || Auth::user()->role == 2)
+                        <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
+                        <!-- Sub menu parent -->
+                        <!-- <li class="side-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 py-3 pl-4">Senarai Permohonan #temp</a></li> -->
+
+                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4 sub-menu-parent" data-toggle="collapse" data-target="#table-sub-menu3" aria-expanded="false" aria-controls="table-sub-menu">Senarai Permohonan </a></li>
+                        <div id="table-sub-menu3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <ul class="side-sub-menu p-0">
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listBaru') }}" class="w-100 pl-4">Senarai Permohonan Baru </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listSedangDiproses') }}" class="w-100 pl-4">Senarai Permohonan Sedang Diproses </a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Sub menu parent -->
+                        <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
+
+                        @endif
+
+
+                        @if( Auth::user()->role == 3)
+                        <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('permohonan.listBaru') }}" class="w-100 py-3 pl-4">Senarai Permohonan Baru</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
+                        @endif
+
+
                         @if(Auth::user()->role == 0)
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-harga.list') }}" class="w-100 py-3 pl-4" >Senarai Harga</a></li>
@@ -92,6 +120,7 @@
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-email.list') }}" class="w-100 py-3 pl-4" >Senarai Templat Email</a></li>
 
                         @endif
+
                         @if(Auth::user()->role == 4)
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('superadmin.list') }}" class="w-100 py-3 pl-4" >Senarai Pengguna Sistem</a></li>

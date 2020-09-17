@@ -155,7 +155,7 @@ class RegisterController extends Controller
 
         // $emailJob = (new      SendEmail($details))->delay(Carbon::now()->addMinutes(5));
         // $emailJob = SendEmail::dispatch($data,$random)->delay(Carbon::now()->addSeconds(30));
-        $emailJob = (new SendEmailRegistration($data,$random))->delay(Carbon::now()->addSeconds(30));
+        $emailJob = (new SendEmailRegistration($data,$random))->delay(Carbon::now()->addSeconds(15));
         dispatch($emailJob);
         return $user;
     }
