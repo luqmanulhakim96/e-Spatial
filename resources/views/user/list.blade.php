@@ -13,6 +13,16 @@
                 <div class="card rounded-lg">
                   <div class="card-body">
                       <div class="card-title">Senarai Permohonan Lulus</div>
+                      <div class="row">
+                        <div class="col-md">
+                          <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
+                            <h6 >Catatan:</h6>
+                            <span>Sekiranya permohonan anda tidak ada tindakan dalam masa 30 hari, sistem akan kemaskini status permohonan anda kepada tidak lulus.</span><br>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div style="padding: 10px;"></div>
 
                       <div class="table-responsive">
 
@@ -104,6 +114,10 @@
                                 @if($data->status_pembayaran == 'Berbayar' && $data->attachment_receipt_pembayaran == null)
                                 <td>
                                 <button class="btn btn-warning mr-1" onclick="passId_upload_link_data({{ $data->id  }})" data-id="" data-toggle="modal"  data-target="#upload_resit_model"><i class="fa fa-upload"></i></button>
+                                </td>
+                                @else
+                                <td>
+                                <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tidak perlu muatnaik data"><i class="fa fa-upload"></i></button>
                                 </td>
                                 @endif
                             </div>
@@ -303,9 +317,9 @@
         function fileValidation(name){
           var fileInput = document.getElementById(name);
           var filePath = fileInput.value;
-          var allowedExtensions = /(\.pdf)$/i;
+          var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png|\.zip|\.rar)$/i;
           if(!allowedExtensions.exec(filePath)){
-              alert('Sila muatnaik file dalam format .pdf sahaja.');
+              alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg , .png , .zip dan .rar sahaja.');
               fileInput.value = '';
               return false;
             }

@@ -75,6 +75,24 @@ class HomeController extends Controller
                             ->whereNotNull('ulasan_admin')
                             ->count();
 
+      $countPermohonanSedangDiproses1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->count();
+
+      $countPermohonanSedangDiproses2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
+                            ->count();
+
+      $countPermohonanSedangDiprosesKP = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
+                            ->whereNotNull('ulasan_ketua_pengarah')
+                            ->count();
+
       $countPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')
                             ->count();
 
@@ -130,6 +148,9 @@ class HomeController extends Controller
           'countPermohonanBaruP2',
           'countPermohonanBaruKP',
           'countPermohonanSedangDiproses',
+          'countPermohonanSedangDiproses1',
+          'countPermohonanSedangDiproses2',
+          'countPermohonanSedangDiprosesKP',
           'countPermohonanLulus',
           'countPermohonanGagal',
           'countPermohonanTidakBerkaitan',
@@ -244,11 +265,29 @@ class HomeController extends Controller
 
       $userInfo = User::findOrFail($user_id);
 
-      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
+      $listSedangProses = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNotNull('ulasan_admin')
                             ->get();
 
-      return view('permohonan.listSedangDiproses', compact('listPermohonanBaru','userInfo'));
+      $listSedangProses1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->get();
+
+      $listSedangProses2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
+                            ->get();
+
+      $listSedangProsesKP = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
+                            ->whereNotNull('ulasan_ketua_pengarah')
+                            ->get();
+
+      return view('permohonan.listSedangDiproses', compact('listSedangProses','listSedangProses1', 'listSedangProses2','listSedangProsesKP','userInfo'));
     }
 
     public function senaraiPermohonanGagal(){

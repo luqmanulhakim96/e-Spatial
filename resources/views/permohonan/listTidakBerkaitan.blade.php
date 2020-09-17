@@ -28,7 +28,7 @@
                           <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              <a href="{{ route('permohonan.view', $data->id) }}">{{ $data->getPermohonanID()  }}</a>
+                              <a href="{{ route('permohonan.view', $data->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $data->getPermohonanID()  }}</a>
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>

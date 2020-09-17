@@ -12,6 +12,7 @@
 
               <div style="padding:5px;"></div>
 
+              @if(Auth::user()->role == 0)
               <!-- Small card component -->
               <div class="small-cards mt-5 mb-4">
 
@@ -445,24 +446,147 @@
 
                     </div>
                 </div>
+                @endif
 
 
+                @if( Auth::user()->role == 1 || Auth::user()->role == 2)
+                <div style="padding:50px;"></div>
 
-                <!-- <div class="row mb-4">
-                  <div class="col-lg-12 col-md-12 mt-4 mt-lg-0">
+                <div class="row">
+                  <div class="col-md-3">
+
+                  </div>
+                  <!-- Col sm 6, col md 6, col lg 3 -->
+                  <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                    <!-- Card -->
+                    <a href="{{route('permohonan.listBaru')}}"  >
                       <div class="card border-0 rounded-lg">
-                          <div class="card-body ">
-                              <div class="card-title m-0 p-3">Last 20 Day Leads</div>
-                              <div id="chart-wrap">
-                              <div id="columnchart_material" style="width: 100%; height: 350px;"></div>
+                          <!-- Card body -->
+                          <div class="card-body"  style="border-radius:.5rem;">
+
+                              <div class="d-flex flex-row justify-content-center align-items-center">
+                                  <!-- Icon -->
+                                  <div class="small-card-icon">
+                                      <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x"></i>
+                                  </div>
+                                  <!-- Text -->
+                                  <div class="small-card-text w-100 text-center">
+                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Baru</p>
+                                      <h4 class="font-weight-normal m-0 text-primary">
+                                        @if(Auth::user()->role == 0)
+                                        {{$countPermohonanBaruPS}}
+                                        @elseif(Auth::user()->role == 1)
+                                        {{$countPermohonanBaruP1}}
+                                        @elseif(Auth::user()->role == 2)
+                                        {{$countPermohonanBaruP2}}
+                                        @elseif(Auth::user()->role == 3)
+                                        {{$countPermohonanBaruKP}}
+                                        @endif
+                                      </h4>
+                                  </div>
+
+                              </div>
+
+                              <hr>
+                              <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                           </div>
-
                       </div>
-                  </div>
-                </div>
+                    </a>
 
-            </div> -->
+                  </div>
+
+
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                      <!-- Card -->
+                      <a href="{{route('permohonan.listSedangDiproses')}}"  >
+                        <div class="card border-0 rounded-lg">
+                            <!-- Card body -->
+                            <div class="card-body"  style="border-radius:.5rem;">
+
+                                <div class="d-flex flex-row justify-content-center align-items-center">
+                                    <!-- Icon -->
+                                    <div class="small-card-icon">
+                                        <i class="fa fa-retweet card-icon-bg-primary fa-4x"></i>
+                                    </div>
+                                    <!-- Text -->
+                                    <div class="small-card-text w-100 text-center">
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Sedang Diproses</p>
+                                        <h4 class="font-weight-normal m-0 text-primary">
+
+                                          @if(Auth::user()->role == 1)
+                                          {{$countPermohonanSedangDiproses1}}
+                                          @elseif(Auth::user()->role == 2)
+                                          {{$countPermohonanSedangDiproses2}}
+                                          @elseif(Auth::user()->role == 3)
+                                          {{$countPermohonanSedangDiprosesKP}}
+                                          @endif
+                                        </h4>
+                                    </div>
+
+                                </div>
+
+                                <hr>
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                            </div>
+                        </div>
+                      </a>
+
+                    </div>
+
+                </div>
+                @endif
+
+                @if( Auth::user()->role == 3 )
+                <div style="padding:50px;"></div>
+                <div class="row">
+                  <div class="col-md-4">
+
+                  </div>
+                  <!-- Col sm 6, col md 6, col lg 3 -->
+                  <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                    <!-- Card -->
+                    <a href="{{route('permohonan.listBaru')}}"  >
+                      <div class="card border-0 rounded-lg">
+                          <!-- Card body -->
+                          <div class="card-body"  style="border-radius:.5rem;">
+
+                              <div class="d-flex flex-row justify-content-center align-items-center">
+                                  <!-- Icon -->
+                                  <div class="small-card-icon">
+                                      <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x"></i>
+                                  </div>
+                                  <!-- Text -->
+                                  <div class="small-card-text w-100 text-center">
+                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Baru</p>
+                                      <h4 class="font-weight-normal m-0 text-primary">
+                                        @if(Auth::user()->role == 0)
+                                        {{$countPermohonanBaruPS}}
+                                        @elseif(Auth::user()->role == 1)
+                                        {{$countPermohonanBaruP1}}
+                                        @elseif(Auth::user()->role == 2)
+                                        {{$countPermohonanBaruP2}}
+                                        @elseif(Auth::user()->role == 3)
+                                        {{$countPermohonanBaruKP}}
+                                        @endif
+                                      </h4>
+                                  </div>
+
+                              </div>
+
+                              <hr>
+                              <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                          </div>
+                      </div>
+                    </a>
+
+                  </div>
+
+                </div>
+                @endif
         </main>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">

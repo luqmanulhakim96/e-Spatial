@@ -277,8 +277,10 @@
                                 <th><p class="mb-0">TAHUN/KATEGORI DATA</p></th>
                                 <th><p class="mb-0">NEGERI</p></th>
                                 <th><p class="mb-0">HARGA ASAS </p></th>
+                                @if($permohonan->jumlah_bayaran != null)
                                 <th><p class="mb-0">SAIZ DATA</p></th>
                                 <th><p class="mb-0">JUMLAH</p></th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -301,6 +303,7 @@
                             @endif
                             <td><p class="mb-0 " style="text-align: center;">{{ $senaraiHargaUser[$i][0]['negeri']}}</p></td>
                             <td><p class="mb-0 " style="text-align: center;">RM {{ $senaraiHargaUser[$i][0]['harga_asas']}}</p></td>
+                            @if($permohonan->jumlah_bayaran != null)
                             <td>
                               @if($senaraiHargaUser[$i][0]['jenis_dokumen'] == "Vektor Shapefile")
                               <p class="mb-0 " style="text-align: center;">{{ $dataPermohonan[$i]['saiz_data']}}</p>
@@ -309,7 +312,7 @@
                               @endif
                             </td>
                             <td><p class="mb-0 " style="text-align: center;">RM {{ $dataPermohonan[$i]['jumlah_harga_data']}}</p></td>
-
+                            @endif
                           </tr>
 
                           @endfor
@@ -320,8 +323,7 @@
                     </table>
                 </div>
               </div>
-
-              @if($permohonan->jumlah_bayaran == 0.00)
+              @if($permohonan->jumlah_bayaran == 0.00 && $permohonan->status_permohonan == "Sedang Diproses")
               <div class="row">
                 <div class="col-md-5">
 
@@ -330,7 +332,7 @@
                   <a href="{{ route('permohonan.harga.view', $permohonan->id) }}" class="btn btn-ripple btn-raised btn-primary m-2" style="text-align: center;">TAMBAH HARGA</a>
                 </div>
               </div>
-              @else
+              @elseif($permohonan->jumlah_bayaran != 0.00 && ($permohonan->status_permohonan == "Sedang Diproses" || $permohonan->status_permohonan == "Lulus"))
               <div class="row">
                 <div class="col-md-2">
 
@@ -388,7 +390,7 @@
                 </div>
               </div>
 
-              @if($permohonan->ulasan_admin == null)
+              @if($permohonan->ulasan_admin == null && $permohonan->status_permohonan == "Sedang Diproses")
                 <div style="padding : 10px;"></div>
                 <hr>
 
@@ -513,7 +515,7 @@
                                   </div>
                                   <div class="custom-control custom-radio">
                                       <input type="radio" id="Gagal" name="status_permohonan" onclick="showStatusPembayaran()" class="custom-control-input"  value="Gagal" @if(old('status_permohonan')=="Gagal") checked @endif>
-                                      <label class="custom-control-label" for="Gagal">Gagal</label>
+                                      <label class="custom-control-label" for="Gagal">Tidak Lulus</label>
                                   </div>
                                 </div>
 
