@@ -233,7 +233,7 @@
                                   <div class="col-md">
                                     <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
                                       <h6 style="text-align: center;">Catatan:</h6>
-                                      <span>Sekiranya terdapat perubahan data permohonan, sila buang data yang sedia ada dan membuat penambahan data baru.</span><br>
+                                      <span>Sekiranya terdapat perubahan data permohonan sedia ada, sila buang data tersebut dan membuat penambahan data baru.</span><br>
 
                                     </div>
                                   </div>
@@ -242,7 +242,7 @@
                                   </div>
                                 </div>
                                 <div style="padding: 15px;"></div>
-                                
+
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="pilihan_table">
                                         <thead>
@@ -341,7 +341,7 @@
 
                       </div>
                       <div class="col-md-4" id="button_submit_permohonan" style="display: block;">
-                        <button type="submit" onclick="return confirm('Update data permohonan?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Update Data Baru</button>
+                        <button type="submit" onclick="return confirm('Kemaskini data permohonan?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Kemaskini Data Baru</button>
                       </div>
                     </div>
 

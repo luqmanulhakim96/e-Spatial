@@ -277,7 +277,7 @@
                                 <th><p class="mb-0">TAHUN/KATEGORI DATA</p></th>
                                 <th><p class="mb-0">NEGERI</p></th>
                                 <th><p class="mb-0">HARGA ASAS </p></th>
-                                @if($permohonan->jumlah_bayaran != null)
+                                @if($permohonan->jumlah_bayaran != 0.00)
                                 <th><p class="mb-0">SAIZ DATA</p></th>
                                 <th><p class="mb-0">JUMLAH</p></th>
                                 @endif
@@ -303,7 +303,7 @@
                             @endif
                             <td><p class="mb-0 " style="text-align: center;">{{ $senaraiHargaUser[$i][0]['negeri']}}</p></td>
                             <td><p class="mb-0 " style="text-align: center;">RM {{ $senaraiHargaUser[$i][0]['harga_asas']}}</p></td>
-                            @if($permohonan->jumlah_bayaran != null)
+                            @if($permohonan->jumlah_bayaran != 0.00)
                             <td>
                               @if($senaraiHargaUser[$i][0]['jenis_dokumen'] == "Vektor Shapefile")
                               <p class="mb-0 " style="text-align: center;">{{ $dataPermohonan[$i]['saiz_data']}}</p>

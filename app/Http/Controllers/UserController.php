@@ -790,4 +790,9 @@ class UserController extends Controller
     $permohonan = Permohonan::findOrFail($id);
     return Storage::download($permohonan->attachment_penerimaan_data);
   }
+
+  public function downloadSuratTidakLulus($id){
+    $permohonan = Permohonan::findOrFail($id);
+    return Storage::download($permohonan->remarks_admin);
+  }
 }

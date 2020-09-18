@@ -20,7 +20,7 @@
                               <th class="all">PERMOHONAN ID</th>
                               <th class="all">TARIKH PERMOHONAN</th>
 
-                              <th class="all">SEBAB PERMOHONAN GAGAL</th>
+                              <th class="all">MUAT TURUN SURAT TIDAK LULUS </th>
 
                             </tr>
                         </thead>
@@ -33,7 +33,9 @@
                             <!-- <td>
                               <span class="badge badge-danger badge-pill" style="font-size: 100%;">{{ $gagal->status_permohonan  }}</span>
                             </td> -->
-                            <td>{{ $gagal->remarks_admin  }}</td>
+                            <td>
+                              <a class="btn btn-success mr-1" href="{{route('user.download.surat_tidak_lulus', $gagal->id)}}" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Muat turun Surat Tidak Lulus"><i class="fa fa-download"></i></a>
+                            </td>
                           </tr>
                           @endforeach
                         </tbody>

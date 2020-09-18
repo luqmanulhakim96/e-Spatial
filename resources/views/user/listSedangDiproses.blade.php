@@ -53,12 +53,12 @@
                               @else
                               <td>
                                     <div class="d-flex flex-row justify-content-around align-items-center">
-                                        <a href="#" class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Maaf, permohonan anda telah diulas."><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="#" class="btn btn-dark mr-1" ><i class="fas fa-pencil-alt"></i></a>
                                     </div>
                               </td>
                               <td>
                                 <div class="d-flex flex-row justify-content-around align-items-center">
-                                    <a href="#" class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Maaf, permohonan anda telah diulas."><i class="fas fa-times-circle"></i></a>
+                                    <a href="#" class="btn btn-dark mr-1" ><i class="fas fa-times-circle"></i></a>
                                 </div>
                               </td>
                               @endif

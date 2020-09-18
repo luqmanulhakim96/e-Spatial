@@ -79,7 +79,7 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/permohonan/sebabGagal/{id}', 'PermohonanController@viewSebabGagal')->name('permohonan.alasanGagal');
 
-  Route::post('/permohonan/sebabGagal/update/{id}', 'PermohonanController@submitSebabGagal')->name('permohonan.submitAlasan');
+  Route::post('/permohonan/sebabGagal/update/', 'PermohonanController@submitSebabGagal')->name('permohonan.submitAlasan');
 
 
 
@@ -220,5 +220,8 @@ Route::middleware('user')->group(function () {
   Route::get('/permohonan/user/download/surat_bayaran/{id}', 'UserController@downloadSuratBayaran')->name('user.download.surat_bayaran');
 
   Route::get('/permohonan/user/download/surat_penerimaan_data/{id}', 'UserController@downloadSuratPenerimaanData')->name('user.download.surat_penerimaan_data');
+
+  Route::get('/permohonan/user/download/surat_tidak_lulus/{id}', 'UserController@downloadSuratTidakLulus')->name('user.download.surat_tidak_lulus');
+
 });
 // Route::resource('senaraiHargas', 'SenaraiHargaController');
