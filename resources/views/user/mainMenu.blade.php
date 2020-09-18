@@ -191,11 +191,11 @@
 
 
                        <div class="col-md-9 mt-4">
-                         
+
                           <!--  Custom content card -->
                           <div class="card rounded-lg">
                               <div class="card-body">
-                                  <div class="card-title" style="text-align:center;">Pengumuman</div>
+                                  <div class="card-title" style="text-align:center;">Makluman</div>
                                   <!-- List -->
 
 
