@@ -57,7 +57,7 @@
                                               <a href="{{ route('superadmin.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
 
                                               @if($currentUser->id != $data->id)
-                                              <a href="{{ route('superadmin.delete', $data->id) }}" class="btn btn-danger"><i class="fas fa-times-circle"></i></a>
+                                              <a href="{{ route('superadmin.delete', $data->id) }}" onclick="return confirm('Nyahaktif pengguna ini?')" class="btn btn-danger"><i class="fas fa-times-circle"></i></a>
                                               @else
                                               <a href="#" class="btn btn-dark"><i class="fas fa-times-circle"></i></a>
 
@@ -106,7 +106,7 @@
                                               <!-- <a href="{{ route('superadmin.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a> -->
                                               <a href="#" class="btn btn-dark mr-1"><i class="fas fa-pencil-alt"></i></a>
 
-                                              <a href="{{ route('superadmin.delete', $data->id) }}" class="btn btn-success"><i class="fa fa-check-circle"></i></a>
+                                              <a href="{{ route('superadmin.delete', $data->id) }}" onclick="return confirm('Aktifkan pengguna ini?')" class="btn btn-success"><i class="fa fa-check-circle"></i></a>
                                           </div>
                                     </td>
                                   </tr>

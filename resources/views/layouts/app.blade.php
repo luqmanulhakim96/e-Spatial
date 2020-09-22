@@ -123,7 +123,11 @@
 
                         @if(Auth::user()->role == 4)
                         <!-- Sub menu parent -->
-                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.list') }}" class="w-100 py-3 pl-4" >Senarai Pengguna Sistem</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
+
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.list') }}" class="w-100 py-3 pl-4" >Senarai Pengguna Admin</a></li>
+
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.listPenggunaLuar') }}" class="w-100 py-3 pl-4" >Senarai Pengguna Luar</a></li>
 
                         <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrail') }}" class="w-100 py-3 pl-4" >Audit Trail</a></li>
 

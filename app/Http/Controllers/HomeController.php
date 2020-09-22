@@ -14,6 +14,8 @@ use Auth;
 
 use App\User;
 
+use App\Audit;
+
 use App\SenaraiHarga;
 
 use App\Permohonan;
@@ -132,15 +134,19 @@ class HomeController extends Controller
       $jumlahJenisDokumen =  DB::select(DB::raw("SELECT COUNT(senarai_hargas.jenis_dokumen) as count_jenis_dokumen, senarai_hargas.jenis_dokumen as jenis_dokumen FROM senarai_hargas, data_permohonans, permohonans WHERE permohonans.id = data_permohonans.permohonan_id AND senarai_hargas.id = data_permohonans.senarai_harga_id GROUP BY senarai_hargas.jenis_dokumen"));
 
 
-      // dd($dataDipohonMengikutBulan);
-      //$permohonan_negeri_semenanjung_malaysia = SenaraiHarga::where('negeri','Semenanjung Malaysia')->get();
+      //Admin dashboard
+      $countPenggunaAdmin = User::where([['role','!=','5'],['status','!=','0']])->count();
+
+      $countPenggunaLuar = User::where('role','5')->count();
+
+      $countAuditTrail = Audit::whereHas('user', function($q) {
+        $q->where('role','!=','5');
+      })->where('event','!=','Log Masuk')->where('event','!=','Log Keluar')->count();
+
+      $countAuditTrailLog = Audit::where('event','Log Masuk')->orWhere('event','Log Keluar')->count();
 
 
 
-
-      //dd($permohonan_negeri_semenanjung_malaysia);
-
-      // dd($nama);
         return view('home', compact(
           'nama',
           'countPermohonanBaruPS',
@@ -164,7 +170,11 @@ class HomeController extends Controller
           'dataDipohonMengikutBulan',
           'dataStatusPermohonan',
           'dataJumlahPendapatan',
-          'jumlahJenisDokumen'
+          'jumlahJenisDokumen',
+          'countPenggunaAdmin',
+          'countPenggunaLuar',
+          'countAuditTrail',
+          'countAuditTrailLog'
       ));
     }
 

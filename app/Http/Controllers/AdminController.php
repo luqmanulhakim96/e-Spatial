@@ -11,6 +11,7 @@ use App\User;
 use App\Audit;
 
 use Auth;
+use DB;
 
 use App\Mail\User\EmailNotifikasiRegisterUser;
 use Illuminate\Support\Facades\Mail;
@@ -29,6 +30,15 @@ class AdminController extends Controller
     $user_deact = User::where([['role','!=','5'],['status','!=','1']])->get();
 
     return view('superadmin.list', compact('user','user_deact','currentUser'));
+  }
+
+  public function listLuar()
+  {
+    $currentUser = Auth::user();
+
+    $penggunaLuar = User::where('role','5')->get();
+
+    return view('superadmin.listPenggunaLuar', compact('penggunaLuar'));
   }
 
   public function create(){
@@ -58,8 +68,33 @@ class AdminController extends Controller
     // $data = User::where('role','!=','5')->get();
     // $all = $user->audits;
     $data = Audit::where('event','Log Masuk')->orWhere('event','Log Keluar')->get();
+
+
     // dd($data);
     return view('superadmin.auditUser', compact('data'));
+  }
+
+  public function auditTrailLogUserFilter(Request $request){
+    $tarikh_mula = date($request->tarikh_mula);
+    $tarikh_akhir = date($request->tarikh_akhir);
+
+    // $data = Audit::whereBetween('created_at', [$tarikh_mula.' 00:00:00',$tarikh_akhir.' 23:59:59'])
+    //             ->where('event', 'Log Masuk')
+    //             ->orWhere('event', 'Log Keluar')
+    //             ->orderBy('created_at', 'desc')
+    //             ->get();
+
+
+    $data = Audit::where('created_at', '>', $tarikh_mula.' 00:00:00')
+                ->where('created_at', '<', $tarikh_akhir.' 23:59:59')
+                ->orderBy('created_at', 'asc')
+                ->get();
+
+    // $data = DB::select(DB::raw("SELECT * FROM audits WHERE  (event = 'Log Masuk' OR event = 'Log Keluar') AND created_at > '2020-09-18 00:00:00' AND created_at < '2020-09-21 23:59:59' ORDER BY `audits`.`created_at` DESC"));
+
+    // dd($data);
+
+    return view('superadmin.auditUserFilter', compact('data'));
   }
 
   protected function validator(array $data)

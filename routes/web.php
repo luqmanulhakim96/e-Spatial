@@ -126,7 +126,9 @@ Route::middleware('admin')->group(function () {
 
 
   #route for super admin
-  Route::get('/pengguna/senarai', 'AdminController@list')->name('superadmin.list');
+  Route::get('/pengguna/senarai/admin', 'AdminController@list')->name('superadmin.list');
+
+  Route::get('/pengguna/senarai/luar', 'AdminController@listLuar')->name('superadmin.listPenggunaLuar');
 
   Route::get('/pengguna/tambah', 'AdminController@create')->name('superadmin.add');
 
@@ -141,6 +143,8 @@ Route::middleware('admin')->group(function () {
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
 
   Route::get('/audit-trail-user', 'AdminController@auditTrailLogUser')->name('superadmin.auditTrailLogUser');
+
+  Route::post('/audit-trail-user/filter', 'AdminController@auditTrailLogUserFilter')->name('superadmin.auditTrailLogUserFilter');
 
   #route for Senarai Email
   Route::get('/email/senarai', 'SenaraiEmailController@view')->name('senarai-email.list');
