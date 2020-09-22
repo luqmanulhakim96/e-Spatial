@@ -587,6 +587,139 @@
 
                 </div>
                 @endif
+
+                @if(Auth::user()->role == 4)
+                <div style="padding: 10px;">
+
+                </div>
+                <div class="row">
+                  <!-- Col sm 6, col md 6, col lg 3 -->
+                  <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                    <!-- Card -->
+                    <a href="{{route('superadmin.list')}}"  >
+                      <div class="card border-0 rounded-lg">
+                          <!-- Card body -->
+                          <div class="card-body"  style="border-radius:.5rem;">
+
+                              <div class="d-flex flex-row justify-content-center align-items-center">
+                                  <!-- Icon -->
+                                  <div class="small-card-icon">
+                                      <i class="fa fa-user-circle card-icon-bg-primary fa-4x"></i>
+                                  </div>
+                                  <!-- Text -->
+                                  <div class="small-card-text w-100 text-center">
+                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Senarai <br> Pengguna Admin</p>
+                                      <h4 class="font-weight-normal m-0 text-primary">
+                                        {{$countPenggunaAdmin}}
+                                      </h4>
+                                  </div>
+
+                              </div>
+
+                              <hr>
+                              <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                          </div>
+                      </div>
+                    </a>
+
+                  </div>
+
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                      <!-- Card -->
+                      <a href="{{route('superadmin.listPenggunaLuar')}}"  >
+                        <div class="card border-0 rounded-lg">
+                            <!-- Card body -->
+                            <div class="card-body"  style="border-radius:.5rem;">
+
+                                <div class="d-flex flex-row justify-content-center align-items-center">
+                                    <!-- Icon -->
+                                    <div class="small-card-icon">
+                                        <i class="fa fa-users card-icon-bg-primary fa-4x"></i>
+                                    </div>
+                                    <!-- Text -->
+                                    <div class="small-card-text w-100 text-center">
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Senarai <br> Pengguna Luar</p>
+                                        <h4 class="font-weight-normal m-0 text-primary">{{$countPenggunaLuar}}</h4>
+                                    </div>
+
+                                </div>
+
+                                <hr>
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                            </div>
+                        </div>
+                      </a>
+
+                    </div>
+
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                        <!-- Card -->
+                        <div class="card border-0 rounded-lg">
+                            <!-- Card body -->
+                            <a href="{{route('superadmin.auditTrail')}}"  >
+                              <div class="card-body" style="border-radius:.5rem;">
+
+                                  <div class="d-flex flex-row justify-content-center align-items-center">
+                                      <!-- Icon -->
+                                      <div class="small-card-icon">
+                                          <i class="fa fa-database  card-icon-bg-primary fa-4x"></i>
+                                      </div>
+                                      <!-- Text -->
+                                      <div class="small-card-text w-100 text-center">
+                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Audit Trail <br> Proses</p>
+                                          <h4 class="font-weight-normal m-0 text-primary">{{$countAuditTrail}}</h4>
+                                      </div>
+                                  </div>
+
+                                  <hr>
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                              </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                        <!-- Card -->
+                        <div class="card border-0 rounded-lg">
+                            <!-- Card body -->
+                            <a href="{{route('superadmin.auditTrailLogUser')}}"  >
+                              <div class="card-body" style="border-radius:.5rem;">
+
+                                  <div class="d-flex flex-row justify-content-center align-items-center">
+                                      <!-- Icon -->
+                                      <div class="small-card-icon">
+                                          <i class="fa fa-sign-in card-icon-bg-primary fa-4x"></i>
+                                      </div>
+                                      <!-- Text -->
+                                      <div class="small-card-text w-100 text-center">
+                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Audit Trail <br> Keluar Masuk Pengguna</p>
+                                          <h4 class="font-weight-normal m-0 text-primary">{{$countAuditTrailLog}}</h4>
+                                      </div>
+                                  </div>
+
+                                  <hr>
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                              </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                @endif
+
         </main>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
