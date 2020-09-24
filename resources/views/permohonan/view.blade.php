@@ -29,7 +29,7 @@
       </ul>
 
       <!-- Tab panes -->
-      <div class="tab-content">
+      <div class="tab-content" id="tabAll">
           <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <div class="row">
@@ -567,6 +567,8 @@
                                           <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
                                           @endif
                                     @endif
+                                    <button type="button" class="btn btn-primary"  id="printButton" ><i class="fa fa-print" aria-hidden="true"></i> Cetak Permohonan</button>
+
                                   </div>
                                 </div>
                                 <div class="col-md-4">
@@ -589,7 +591,7 @@
 </div>
 
             </div>
-        </main>
+
 
       <script type="text/javascript">
         function validateStatusPermohonan(){
@@ -619,6 +621,24 @@
             });
         });
       </script>
-</main>
+      <script type="text/javascript">
+      $("#printButton").click(function(){
+      // Before printing show all the tab panel contents
+      // $('#tabAll').show();
+      $("#home").tab('show');
+      $("#profile").tab('show');
+
+      // Print the page
+      window.print();
+      // After printing hide back all the tab panel contents which are supposed to be hidden
+      // $('.ui-tabs-panel[aria-hidden=true]').hide();
+
+      $("#home").hide();
+
+      });
+      </script>
+
+
+
 
 @endsection
