@@ -40,7 +40,7 @@
     </div>
     @endif
 </head>
-<body class="position-relative">
+<body class="position-relative" style="background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271); height: 100vh;">
 
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
