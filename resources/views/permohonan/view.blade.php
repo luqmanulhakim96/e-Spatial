@@ -21,7 +21,7 @@
           <a class="nav-link" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="false">Info Data Pemohonan</a>
           </li>
 
-          @if($permohonan->jumlah_bayaran != 0.00)
+          @if($permohonan->jumlah_bayaran != 0.00 && $permohonan->status_permohonan != "Tidak Berkaitan")
           <li class="nav-item">
           <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Rumusan</a>
           </li>
@@ -571,9 +571,7 @@
 
                                   </div>
                                 </div>
-                                <div class="col-md-4">
 
-                                </div>
                               </div>
 
                             </form>
