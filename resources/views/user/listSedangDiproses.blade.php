@@ -11,7 +11,7 @@
 
                 <div class="card rounded-lg">
                   <div class="card-body">
-                      <div class="card-title">Senarai Sedang Sedang Diproses</div>
+                      <div class="card-title">Senarai Permohonan Sedang Diproses</div>
 
                       <div class="table-responsive">
 
