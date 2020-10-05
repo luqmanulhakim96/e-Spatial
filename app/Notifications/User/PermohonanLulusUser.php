@@ -64,7 +64,7 @@ class PermohonanLulusUser extends Notification
         // dd($notifiable);
         return[
           'permohonan_id' => $notifiable->id,
-          'tajuk' => 'Permohonan Lulus!',
+          'tajuk' => 'Permohonan '.$notifiable->getPermohonanID().' Lulus!',
           'tarikh_dicipta' => $notifiable->created_at,
           'kepada_email' => $this->admin->email,
           'kepada_id' => $this->admin->id,

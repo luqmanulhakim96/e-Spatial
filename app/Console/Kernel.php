@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+      'App\Console\Commands\SendReminderEmails',
     ];
 
     /**
@@ -25,6 +25,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        // $schedule->command('artanis:reminder-emails')->everyFiveMinutes();
+        $schedule->command('artanis:reminder-emails')->everyMinute();
     }
 
     /**
