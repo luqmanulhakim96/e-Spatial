@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/password/resets/{token}/{email}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 
 Route::get('/notifikasi/baca/{id}', 'HomeController@redirectNotification')->name('notification.mark-as-read');
 
