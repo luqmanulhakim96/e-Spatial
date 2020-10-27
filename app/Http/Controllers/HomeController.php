@@ -63,14 +63,20 @@ class HomeController extends Controller
 
       $countPermohonanBaruP1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_admin')
                             ->count();
 
       $countPermohonanBaruP2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNull('ulasan_penyokong_2')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
                             ->count();
 
       $countPermohonanBaruKP = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNull('ulasan_ketua_pengarah')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
                             ->count();
 
       $countPermohonanSedangDiproses = Permohonan::where('status_permohonan', 'Sedang Diproses')

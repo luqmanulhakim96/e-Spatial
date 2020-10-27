@@ -142,7 +142,7 @@
         </div>
 
         <!-- Main section -->
-        <main class="bg-light main-full-body">
+        <main class="bg-light main-full-body" style="background-color: #ccc!important;">
 
             <!-- Theme changer -->
             <!-- <div class="theme-option p-4">
@@ -180,7 +180,7 @@
 
 
             <!-- The navbar -->
-            <nav class="navbar navbar-expand navbar-light bg-light py-3">
+            <nav class="navbar navbar-expand navbar-light bg-light py-3" style="background-color: #ccc!important;">
                 <p class="navbar-brand mb-0 pb-0">
                     <span></span>
                     <span></span>
@@ -272,7 +272,7 @@
     @yield('content')
 
     <!-- Footer section -->
-    <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary">
+    <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary" style="background: linear-gradient(to bottom, #cccccc 0%, #ffffff 110%) !important;">
         <p>&copy; Copyright. <a href="https://www.forestry.gov.my/my/" target="_Blank">Jabatan Perhutanan Semenanjung Malaysia</a></p>
         <p>Version 1.0.0</p>
     </footer>

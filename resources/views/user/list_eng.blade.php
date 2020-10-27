@@ -1,4 +1,4 @@
-@extends('layouts.app_user')
+@extends('layouts.app_user_eng')
 @section('content')
       <!--Page Body part -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,10 +11,10 @@
                   <div class="row">
                     <div class="col-md">
                       <div class="btn-group">
-                          <button class="btn btn-primary">Bahasa Melayu</button>
-                          <!-- <a href="{{ route('user.listSedangDiproses') }}" class="btn btn-outline-primary">Bahasa Melayu</a> -->
-                          <!-- <button class="btn btn-primary">English</button> -->
-                          <a href="{{ route('user.list_eng') }}" class="btn btn-outline-primary">English</a>
+                          <!-- <button class="btn btn-primary">Bahasa Melayu</button> -->
+                          <a href="{{ route('user.list') }}" class="btn btn-outline-primary">Bahasa Melayu</a>
+                          <button class="btn btn-primary">English</button>
+                          <!-- <a href="{{ route('user.list_eng') }}" class="btn btn-outline-primary">English</a> -->
                       </div>
                     </div>
                   </div>
@@ -30,14 +30,14 @@
                 <!-- Small card component -->
 
                 <div class="card rounded-lg" style="border-color: #003473 !important;">
-                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Permohonan Lulus</div>
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">List of Passed Application</div>
 
                   <div class="card-body">
                       <div class="row">
                         <div class="col-md">
                           <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
-                            <h6 >Catatan:</h6>
-                            <span>Sekiranya tiada sebarang tindakan daripada pemohon dalam tempoh 30 hari dari tarikh kelulusan, permohonan akan terbatal secara automatik</span><br>
+                            <h6 >Important:</h6>
+                            <span>If there is no action from the applicant within 30 days from the date of approval, the application will be automatically canceled</span><br>
 
                           </div>
                         </div>
@@ -46,20 +46,20 @@
 
                       <div class="table-responsive">
 
-                      <table class="table table-striped table-bordered" id="list_permohonan_user_lulus" style="width: 100%;">
+                      <table class="table table-striped table-bordered" id="list_permohonan_user_lulus_eng" style="width: 100%;">
                           <!-- Table head -->
                           <thead>
                               <tr>
-                                <th class="all">PERMOHONAN ID</th>
-                                <th class="all">TARIKH PERMOHONAN</th>
-                                <th class="all">MUAT TURUN SURAT KELULUSAN</th>
-                                <th class="all">MUAT TURUN BORANG AKUAN PENERIMAAN DATA</th>
-                                <th class="all">JUMLAH BAYARAN</th>
-                                <th class="all">STATUS PEMBAYARAN</th>
-                                <th class="all">MUAT NAIK RESIT PEMBAYARAN</th>
-                                <th class="all">MUAT NAIK BORANG AKUAN PENERIMAAAN DATA</th>
-                                <th class="all">TINDAKAN PEMOHON</th>
-                                <th class="all">PAUTAN DATA GEOSPATIAL</th>
+                                <th class="all">APPLICATION ID</th>
+                                <th class="all">DATE OF APPLICATION</th>
+                                <th class="all">DOWNLOAD APPROVAL LETTER</th>
+                                <th class="all">DOWNLOAD DATA ACCEPTANCE FORM</th>
+                                <th class="all">TOTAL PAYMENT</th>
+                                <th class="all">PAYMENT STATUS</th>
+                                <th class="all">UPLOAD PAYMENT RECEIPT</th>
+                                <th class="all">UPLOAD DATA ACCEPTANCE FORM</th>
+                                <th class="all">APPLICANT ACTION</th>
+                                <th class="all">LINK GEOSPATIAL DATA </th>
                               </tr>
                           </thead>
                           <!-- Table body -->
@@ -113,17 +113,17 @@
                               @if($data->status_pembayaran == 'Pengecualian Bayaran')
                               <td>
                                 <div style="padding : 4px;"></div>
-                                <span class="badge badge-primary badge-pill" style="font-size: 100%;">{{ $data->status_pembayaran  }}</span>
+                                <span class="badge badge-primary badge-pill" style="font-size: 100%;">Payment Exemption</span>
                               </td>
                               @elseif($data->status_pembayaran == 'Berbayar')
                               <td>
                                 <div style="padding : 4px;"></div>
-                                <span class="badge badge-warning badge-pill" style="font-size: 100%;">Belum Dibayar</span>
+                                <span class="badge badge-warning badge-pill" style="font-size: 100%;">Payment Pending</span>
                               </td>
                               @elseif($data->status_pembayaran == 'Sudah Dibayar')
                               <td>
                                 <div style="padding : 4px;"></div>
-                                <span class="badge badge-success badge-pill" style="font-size: 100%;">{{ $data->status_pembayaran  }}</span>
+                                <span class="badge badge-success badge-pill" style="font-size: 100%;">Payment Accepted</span>
                               </td>
                               @endif
 
@@ -137,7 +137,7 @@
                                 </td>
                                 @else
                                 <td>
-                                <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tidak perlu muatnaik data"><i class="fa fa-upload"></i></button>
+                                <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="No need to upload data"><i class="fa fa-upload"></i></button>
                                 </td>
                                 @endif
                             </div>
@@ -151,7 +151,7 @@
 
                                 @elseif($data->status_pembayaran == 'Pengecualian Bayaran')
                                 <td>
-                                <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="Tidak perlu muatnaik data"><i class="fa fa-upload"></i></button>
+                                <button class="btn btn-dark mr-1" data-toggle="tooltip" data-trigger="hover" data-placement="top" title="No need to upload data"><i class="fa fa-upload"></i></button>
                                 </td>
                                 @elseif($data->status_pembayaran == 'Sudah Dibayar' || $data->attachment_receipt_pembayaran != null)
 
@@ -183,21 +183,21 @@
 
                                   <td>
                                     @if($data->status_pembayaran == "Berbayar" && $data->attachment_receipt_pembayaran == null)
-                                    <span>- Muatnaik Resit Pembayaran</span><br>
+                                    <span>- Upload Payment Receipt</span><br>
                                     @endif
 
                                     @if($data->attachment_penerimaan_data_user == null)
-                                    <span>- Muatnaik Borang Akuan Penerimaan data</span><br>
+                                    <span>- Upload Data Acceptance Form</span><br>
                                     @endif
 
                                     @if($data->status_pembayaran == "Sudah Dibayar" && $data->attachment_receipt_pembayaran != null && $data->attachment_penerimaan_data_user != null)
                                     <div style="padding : 4px;"></div>
-                                    <span>Selesai</span><br>
+                                    <span>Completed</span><br>
                                     @endif
 
                                     @if($data->status_pembayaran == "Pengecualian Bayaran" &&  $data->attachment_penerimaan_data_user != null)
                                     <div style="padding : 4px;"></div>
-                                    <span>Selesai</span><br>
+                                    <span>Completed</span><br>
                                     @endif
                                   </td>
 
@@ -245,7 +245,7 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Muat Naik Borang Akuan Penerimaan Data</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Upload Data Acceptance Form</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
@@ -257,7 +257,7 @@
                                 <div class="input-group mt-3">
                                     <div class="custom-file">
                                         <input type="file" required class="custom-file-input" required id="attachment_surat_penerimaan_data" onchange="return fileValidation('attachment_surat_penerimaan_data')" name="attachment_surat_penerimaan_data">
-                                        <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih Fail</label>
+                                        <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose File</label>
                                     </div>
                                 </div>
 
@@ -265,7 +265,7 @@
 
                               </div>
                               <div class="modal-footer">
-                                  <button type="submit"  class="btn btn-primary" >Muatnaik</button>
+                                  <button type="submit"  class="btn btn-primary">Upload</button>
                               </div>
                             </form>
                           </div>
@@ -276,7 +276,7 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Muat Naik Resit Pembayaran</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Upload Payment Receipt</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
@@ -289,7 +289,7 @@
 
                                     <div class="custom-file">
                                         <input type="file" required class="custom-file-input" required id="attachment_receipt_pembayaran" onchange="return fileValidation('attachment_receipt_pembayaran')" name="attachment_receipt_pembayaran">
-                                        <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Pilih Fail</label>
+                                        <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose File</label>
                                     </div>
                                 </div>
 
@@ -297,7 +297,7 @@
 
                               </div>
                               <div class="modal-footer">
-                                  <button type="submit"  class="btn btn-primary" >Muatnaik</button>
+                                  <button type="submit"  class="btn btn-primary" >Upload</button>
                               </div>
                             </form>
                           </div>
@@ -339,7 +339,7 @@
           var filePath = fileInput.value;
           var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png|\.zip|\.rar)$/i;
           if(!allowedExtensions.exec(filePath)){
-              alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg , .png , .zip dan .rar sahaja.');
+              alert('Please upload file in format .pdf , .doc , .docx , .jpeg , .jpg , .png , .zip dan .rar only.');
               fileInput.value = '';
               return false;
             }

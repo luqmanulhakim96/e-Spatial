@@ -8,34 +8,33 @@
                 <i class="fa fa-home" aria-hidden="true"></i>
                 Dashboard
               </div>
-              <hr>
+
+              <hr style="background-color: #343a40 !important;">
 
               <div style="padding:5px;"></div>
 
               @if(Auth::user()->role == 0)
               <!-- Small card component -->
-              <div class="small-cards mt-5 mb-4">
-
-
+              <div class="small-cards mb-4">
 
 
                   <div class="row">
                     <!-- Col sm 6, col md 6, col lg 3 -->
                     <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                       <!-- Card -->
-                      <a href="{{route('permohonan.listBaru')}}"  >
-                        <div class="card border-0 rounded-lg">
+                      <a href="{{route('permohonan.listBaru')}}">
+                        <div class="card rounded-lg" style="border-color: #003473 !important;">
                             <!-- Card body -->
-                            <div class="card-body"  style="border-radius:.5rem;">
+                            <div class="card-body"  style="border-radius:.5rem;" >
 
                                 <div class="d-flex flex-row justify-content-center align-items-center">
                                     <!-- Icon -->
                                     <div class="small-card-icon">
-                                        <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x"></i>
+                                        <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x" style="color: #003473 !important;"></i>
                                     </div>
                                     <!-- Text -->
                                     <div class="small-card-text w-100 text-center">
-                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Baru</p>
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Permohonan <br> Baru</p>
                                         <h4 class="font-weight-normal m-0 text-primary">
                                           @if(Auth::user()->role == 0)
                                           {{$countPermohonanBaruPS}}
@@ -51,8 +50,9 @@
 
                                 </div>
 
-                                <hr>
-                                <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                <hr style="background-color: #003473; height: 1px; border: 0;">
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
 
                             </div>
                         </div>
@@ -64,25 +64,25 @@
                       <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                         <!-- Card -->
                         <a href="{{route('permohonan.listSedangDiproses')}}"  >
-                          <div class="card border-0 rounded-lg">
+                          <div class="card border-1 rounded-lg" style="border-color: #28a745 !important;">
                               <!-- Card body -->
                               <div class="card-body"  style="border-radius:.5rem;">
 
                                   <div class="d-flex flex-row justify-content-center align-items-center">
                                       <!-- Icon -->
                                       <div class="small-card-icon">
-                                          <i class="fa fa-retweet card-icon-bg-primary fa-4x"></i>
+                                          <i class="fa fa-retweet card-icon-bg-primary fa-4x" style="color: #28a745 !important;"></i>
                                       </div>
                                       <!-- Text -->
                                       <div class="small-card-text w-100 text-center">
-                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Sedang Diproses</p>
-                                          <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanSedangDiproses}}</h4>
+                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #28a745 !important;">Permohonan <br> Sedang Diproses</p>
+                                          <h4 class="font-weight-normal m-0 text-primary" style="color: #28a745 !important;">{{$countPermohonanSedangDiproses}}</h4>
                                       </div>
 
                                   </div>
 
-                                  <hr>
-                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                  <hr style="background-color: #28a745;">
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #28a745 !important">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                               </div>
                           </div>
@@ -93,7 +93,7 @@
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
-                          <div class="card border-0 rounded-lg">
+                          <div class="card border-1 rounded-lg" style="border-color: #D25F00 !important;">
                               <!-- Card body -->
                               <a href="{{route('permohonan.list')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
@@ -101,17 +101,17 @@
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fa fa-check  card-icon-bg-primary fa-4x"></i>
+                                            <i class="fa fa-check  card-icon-bg-primary fa-4x" style="color: #D25F00 !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Lulus</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanLulus}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #D25F00 !important;">Permohonan <br> Lulus</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: #D25F00 !important;">{{$countPermohonanLulus}}</h4>
                                         </div>
                                     </div>
 
-                                    <hr>
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <hr style="background-color: #D25F00 !important;">
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #D25F00 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                                 </div>
                               </a>
@@ -122,7 +122,7 @@
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
-                          <div class="card border-0 rounded-lg">
+                          <div class="card border-1 rounded-lg" style="border-color: #dc3545 !important">
                               <!-- Card body -->
                               <a href="{{route('permohonan.listGagal')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
@@ -130,17 +130,17 @@
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fa fa-times-circle card-icon-bg-primary fa-4x"></i>
+                                            <i class="fa fa-times-circle card-icon-bg-primary fa-4x" style="color: #dc3545 !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Gagal</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanGagal}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #dc3545 !important;">Permohonan <br> Gagal</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: #dc3545 !important;">{{$countPermohonanGagal}}</h4>
                                         </div>
                                     </div>
 
-                                    <hr>
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <hr style="background-color: #dc3545 !important;">
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #dc3545 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                                 </div>
                               </a>
@@ -157,9 +157,7 @@
 
 
                   <div class="row">
-                    <div class="col-md-1">
 
-                    </div>
 
 
 
@@ -167,24 +165,24 @@
                       <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
                           <a href="{{route('permohonan.listTidakBerkaitan')}}"  >
-                            <div class="card border-0 rounded-lg">
+                            <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fa fa-question-circle card-icon-bg-primary fa-4x"></i>
+                                            <i class="fa fa-question-circle card-icon-bg-primary fa-4x" style="color: #003473 !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Tidak Berkaitan</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanTidakBerkaitan}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Permohonan <br> Tidak Berkaitan</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: #003473 !important;">{{$countPermohonanTidakBerkaitan}}</h4>
                                         </div>
                                     </div>
 
-                                    <hr>
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <hr style="background-color: #003473 !important;">
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                                 </div>
                             </div>
@@ -195,7 +193,7 @@
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
-                          <div class="card border-0 rounded-lg">
+                          <div class="card border-1 rounded-lg" style="border-color: #057108 !important;">
                               <!-- Card body -->
                               <a href="{{route('permohonan.listBatal')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
@@ -203,17 +201,17 @@
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fa fa-trash  card-icon-bg-primary fa-4x"></i>
+                                            <i class="fa fa-trash  card-icon-bg-primary fa-4x" style="color: #057108 !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Batal</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanBatal}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #057108 !important;">Permohonan <br> Batal</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: #057108 !important;">{{$countPermohonanBatal}}</h4>
                                         </div>
                                     </div>
 
-                                    <hr>
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <hr style="background-color: #057108 !important;">
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #057108 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                                 </div>
                               </a>
@@ -225,24 +223,24 @@
                       <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
                           <a href="{{route('permohonan.listDalaman')}}"  >
-                            <div class="card border-0 rounded-lg">
+                            <div class="card border-1 rounded-lg" style="border-color: #D25F00 !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fa fa-users card-icon-bg-primary fa-4x"></i>
+                                            <i class="fa fa-users card-icon-bg-primary fa-4x" style="color: #D25F00 !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Dalaman</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanDalaman}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #D25F00 !important;">Permohonan <br> Dalaman</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: #D25F00 !important;">{{$countPermohonanDalaman}}</h4>
                                         </div>
                                     </div>
 
-                                    <hr>
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <hr style="background-color: #D25F00 !important;">
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #D25F00 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                                 </div>
                             </div>
@@ -272,19 +270,19 @@
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <!-- Card -->
-                            <div class="card border-0 rounded-lg">
+                            <div class="card border-0 rounded-lg" style="background-color: #003473 !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fas fa-file card-icon-bg-primary fa-4x"></i>
+                                            <i class="fas fa-file card-icon-bg-primary fa-4x" style="color: white !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Permohonan Keseluruhan</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPermohonanKeseluruhan}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="color: white !important;">Permohonan Keseluruhan</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countPermohonanKeseluruhan}}</h4>
                                         </div>
                                     </div>
 
@@ -297,17 +295,17 @@
                             <!-- Card -->
                             <div class="card border-0 rounded-lg">
                                 <!-- Card body -->
-                                <div class="card-body" style="border-radius:.5rem;">
+                                <div class="card-body" style="border-radius:.5rem; background-color: #28a745 !important;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fa fa-database  card-icon-bg-primary fa-4x"></i>
+                                            <i class="fa fa-database  card-icon-bg-primary fa-4x" style="color: white !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Jumlah Data Geospatial</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countSenaraiHarga}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="color: white !important;">Jumlah Data Geospatial</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countSenaraiHarga}}</h4>
                                         </div>
                                     </div>
 
@@ -318,19 +316,19 @@
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <!-- Card -->
-                            <div class="card border-0 rounded-lg">
+                            <div class="card border-0 rounded-lg" style="background-color: #ffc107 !important">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fa fa-user-circle-o card-icon-bg-primary fa-4x"></i>
+                                            <i class="fa fa-user-circle-o card-icon-bg-primary fa-4x" style="color: black !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna Biasa</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPengguna}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="color: black !important;">Jumlah Pengguna Biasa</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: black !important;">{{$countPengguna}}</h4>
                                         </div>
                                     </div>
 
@@ -341,19 +339,19 @@
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <!-- Card -->
-                            <div class="card border-0 rounded-lg">
+                            <div class="card border-0 rounded-lg" style="background-color: #dc3545 !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
                                         <div class="small-card-icon">
-                                            <i class="fa fa-users card-icon-bg-primary fa-4x"></i>
+                                            <i class="fa fa-users card-icon-bg-primary fa-4x" style="color: white !important;"></i>
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary">Jumlah Pengguna (Admin)</p>
-                                            <h4 class="font-weight-normal m-0 text-primary">{{$countPenggunaDalaman}}</h4>
+                                            <p class="font-weight-normal m-0 text-primary" style="color: white !important;">Jumlah Pengguna (Admin)</p>
+                                            <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countPenggunaDalaman}}</h4>
                                         </div>
                                     </div>
 
@@ -372,11 +370,12 @@
                     <!-- Col lg 8, col md 12 -->
                     <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
                         <!-- Card -->
-                        <div class="card border-0 rounded-lg">
+                        <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
+                          <div class="card-header bg-transparent border-1" style="border-color: #003473 !important; font-size: 130%; font-weight: bold;">Jumlah Permohonan (6 Bulan Lepas)</div>
                             <!-- Card body -->
                             <div class="card-body">
                                 <!-- Card title -->
-                                <div class="card-title">Jumlah Permohonan (6 Bulan Lepas)</div>
+                                <!-- <div class="card-title">Jumlah Permohonan (6 Bulan Lepas)</div> -->
                                 <!-- Chart -->
                                 <!-- <div id="echartBar" style="height: 300px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative;"></div> -->
                                 <div id="chart-wrap">
@@ -391,11 +390,13 @@
                     <!-- Col lg 4, col md 12 -->
                     <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
                         <!-- Card -->
-                        <div class="card border-0 rounded-lg">
+                        <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
                             <!-- Card body -->
+                            <div class="card-header bg-transparent border-1" style="border-color: #003473 !important; font-size: 130%; font-weight: bold;">Status Permohonan Keseluruhan</div>
+
                             <div class="card-body">
                                 <!-- Card title -->
-                                <div class="card-title">Status Permohonan Keseluruhan</div>
+                                <!-- <div class="card-title">Status Permohonan Keseluruhan</div> -->
                                 <!-- Chart -->
                                 <div id="chart-wrap">
                                   <div id="status_permohonan_keseluruhan_div"></div>
@@ -414,10 +415,12 @@
                        <!-- col md 6 -->
                        <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
                         <!-- Six Month Sales VS Revenue Card -->
-                        <div class="card border-0 rounded-lg">
+                        <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
+                          <div class="card-header bg-transparent border-1" style="border-color: #003473 !important; font-size: 130%; font-weight: bold;">Jumlah Data Yang Dipohon Mengikut Negeri</div>
+
                             <!-- Card body -->
                             <div class="card-body">
-                                <div class="card-title m-0 p-1">Jumlah Data Yang Dipohon Mengikut Negeri</div>
+                                <!-- <div class="card-title m-0 p-1">Jumlah Data Yang Dipohon Mengikut Negeri</div> -->
                                 <!-- Chart -->
                                 <div id="chart-wrap">
 
@@ -431,11 +434,13 @@
 
                     <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
                         <!-- Card -->
-                        <div class="card border-0 rounded-lg">
+                        <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
+                          <div class="card-header bg-transparent border-1" style="border-color: #003473 !important; font-size: 130%; font-weight: bold;">Jumlah Pendapatan Mengikut Bulan</div>
+
                             <!-- Card body -->
                             <div class="card-body">
                                 <!-- Card title -->
-                                <div class="card-title">Jumlah Pendapatan Mengikut Bulan</div>
+                                <!-- <div class="card-title">Jumlah Pendapatan Mengikut Bulan</div> -->
                                 <div id="chart-wrap">
                                 <!-- Chart -->
                                 <div id="jumlah_pendapatan_mengikut_bulan_div" style="width: 100%; height: 400px;"></div>
@@ -450,29 +455,27 @@
 
 
                 @if( Auth::user()->role == 1 || Auth::user()->role == 2)
-                <div style="padding:50px;"></div>
+                <div style="padding:5px;"></div>
 
                 <div class="row">
-                  <div class="col-md-3">
 
-                  </div>
                   <!-- Col sm 6, col md 6, col lg 3 -->
-                  <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                  <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mt-lg-0">
                     <!-- Card -->
                     <a href="{{route('permohonan.listBaru')}}"  >
-                      <div class="card border-0 rounded-lg">
+                      <div class="card border-0 rounded-lg" style="background-color: #003E61 !important;">
                           <!-- Card body -->
                           <div class="card-body"  style="border-radius:.5rem;">
 
                               <div class="d-flex flex-row justify-content-center align-items-center">
                                   <!-- Icon -->
                                   <div class="small-card-icon">
-                                      <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x"></i>
+                                      <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x" style="color: white !important;"></i>
                                   </div>
                                   <!-- Text -->
                                   <div class="small-card-text w-100 text-center">
-                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Baru</p>
-                                      <h4 class="font-weight-normal m-0 text-primary">
+                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Permohonan Baru</p>
+                                      <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">
                                         @if(Auth::user()->role == 0)
                                         {{$countPermohonanBaruPS}}
                                         @elseif(Auth::user()->role == 1)
@@ -488,7 +491,7 @@
                               </div>
 
                               <hr>
-                              <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                              <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                           </div>
                       </div>
@@ -498,22 +501,22 @@
 
 
                     <!-- Col sm 6, col md 6, col lg 3 -->
-                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                    <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mt-lg-0">
                       <!-- Card -->
                       <a href="{{route('permohonan.listSedangDiproses')}}"  >
                         <div class="card border-0 rounded-lg">
                             <!-- Card body -->
-                            <div class="card-body"  style="border-radius:.5rem;">
+                            <div class="card-body"  style="border-radius:.5rem; background-color: #28a745 !important;">
 
                                 <div class="d-flex flex-row justify-content-center align-items-center">
                                     <!-- Icon -->
                                     <div class="small-card-icon">
-                                        <i class="fa fa-retweet card-icon-bg-primary fa-4x"></i>
+                                        <i class="fa fa-retweet card-icon-bg-primary fa-4x" style="color: white !important;"></i>
                                     </div>
                                     <!-- Text -->
                                     <div class="small-card-text w-100 text-center">
-                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Sedang Diproses</p>
-                                        <h4 class="font-weight-normal m-0 text-primary">
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Permohonan Sedang Diproses</p>
+                                        <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">
 
                                           @if(Auth::user()->role == 1)
                                           {{$countPermohonanSedangDiproses1}}
@@ -528,7 +531,7 @@
                                 </div>
 
                                 <hr>
-                                <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color:white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                             </div>
                         </div>
@@ -589,7 +592,7 @@
                 @endif
 
                 @if(Auth::user()->role == 4)
-                <div style="padding: 10px;">
+                <div style="padding: 1px;">
 
                 </div>
                 <div class="row">
@@ -597,19 +600,19 @@
                   <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                     <!-- Card -->
                     <a href="{{route('superadmin.list')}}"  >
-                      <div class="card border-0 rounded-lg">
+                      <div class="card border-0 rounded-lg" style="background-color: #003e61 !important;">
                           <!-- Card body -->
                           <div class="card-body"  style="border-radius:.5rem;">
 
                               <div class="d-flex flex-row justify-content-center align-items-center">
                                   <!-- Icon -->
                                   <div class="small-card-icon">
-                                      <i class="fa fa-user-circle card-icon-bg-primary fa-4x"></i>
+                                      <i class="fa fa-user-circle card-icon-bg-primary fa-4x" style="color: #fff;"></i>
                                   </div>
                                   <!-- Text -->
                                   <div class="small-card-text w-100 text-center">
-                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Senarai <br> Pengguna Admin</p>
-                                      <h4 class="font-weight-normal m-0 text-primary">
+                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Senarai <br> Pengguna Admin</p>
+                                      <h4 class="font-weight-normal m-0 text-primary" style="color: #fff !important;">
                                         {{$countPenggunaAdmin}}
                                       </h4>
                                   </div>
@@ -617,7 +620,7 @@
                               </div>
 
                               <hr>
-                              <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                              <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #fff !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                           </div>
                       </div>
@@ -629,25 +632,25 @@
                     <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                       <!-- Card -->
                       <a href="{{route('superadmin.listPenggunaLuar')}}"  >
-                        <div class="card border-0 rounded-lg">
+                        <div class="card border-0 rounded-lg" style="background-color: rgb(40 167 69) !important;">
                             <!-- Card body -->
                             <div class="card-body"  style="border-radius:.5rem;">
 
                                 <div class="d-flex flex-row justify-content-center align-items-center">
                                     <!-- Icon -->
                                     <div class="small-card-icon">
-                                        <i class="fa fa-users card-icon-bg-primary fa-4x"></i>
+                                        <i class="fa fa-users card-icon-bg-primary fa-4x" style="color: #fff;"></i>
                                     </div>
                                     <!-- Text -->
                                     <div class="small-card-text w-100 text-center">
-                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Senarai <br> Pengguna Luar</p>
-                                        <h4 class="font-weight-normal m-0 text-primary">{{$countPenggunaLuar}}</h4>
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Senarai <br> Pengguna Luar</p>
+                                        <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countPenggunaLuar}}</h4>
                                     </div>
 
                                 </div>
 
                                 <hr>
-                                <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                             </div>
                         </div>
@@ -661,22 +664,22 @@
                         <div class="card border-0 rounded-lg">
                             <!-- Card body -->
                             <a href="{{route('superadmin.auditTrail')}}"  >
-                              <div class="card-body" style="border-radius:.5rem;">
+                              <div class="card-body" style="border-radius:.5rem; background-color: #ffc107 !important;">
 
                                   <div class="d-flex flex-row justify-content-center align-items-center">
                                       <!-- Icon -->
                                       <div class="small-card-icon">
-                                          <i class="fa fa-database  card-icon-bg-primary fa-4x"></i>
+                                          <i class="fa fa-database  card-icon-bg-primary fa-4x" style="color: black;"></i>
                                       </div>
                                       <!-- Text -->
                                       <div class="small-card-text w-100 text-center">
-                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Audit Trail <br> Proses</p>
-                                          <h4 class="font-weight-normal m-0 text-primary">{{$countAuditTrail}}</h4>
+                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: black !important;">Audit Trail <br> Proses</p>
+                                          <h4 class="font-weight-normal m-0 text-primary" style="color: black !important;">{{$countAuditTrail}}</h4>
                                       </div>
                                   </div>
 
-                                  <hr>
-                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                  <hr style="background-color: black; height: 1px; border: 0;">
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: black !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                               </div>
                             </a>
@@ -690,22 +693,22 @@
                         <div class="card border-0 rounded-lg">
                             <!-- Card body -->
                             <a href="{{route('superadmin.auditTrailLogUser')}}"  >
-                              <div class="card-body" style="border-radius:.5rem;">
+                              <div class="card-body" style="border-radius:.5rem; background-color: #dc3545 !important;">
 
                                   <div class="d-flex flex-row justify-content-center align-items-center">
                                       <!-- Icon -->
                                       <div class="small-card-icon">
-                                          <i class="fa fa-sign-in card-icon-bg-primary fa-4x"></i>
+                                          <i class="fa fa-sign-in card-icon-bg-primary fa-4x" style="color: white !important;"></i>
                                       </div>
                                       <!-- Text -->
                                       <div class="small-card-text w-100 text-center">
-                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Audit Trail <br> Keluar Masuk Pengguna</p>
-                                          <h4 class="font-weight-normal m-0 text-primary">{{$countAuditTrailLog}}</h4>
+                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Audit Trail <br> Keluar Masuk Pengguna</p>
+                                          <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countAuditTrailLog}}</h4>
                                       </div>
                                   </div>
 
                                   <hr>
-                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
 
                               </div>
                             </a>
@@ -713,10 +716,41 @@
                         </div>
                     </div>
 
-
-
-
                 </div>
+
+                <!-- <div style="padding: 20px;"></div>
+
+                <div  style="font-size: 180%;" >
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                  Laporan
+                </div>
+
+                <hr>
+
+                <div style="padding: 10px;">
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 mt-3 mt-lg-0">
+                      <div class="card border-0 rounded-lg">
+                            <div class="card-body" style="border-radius:.5rem; background-color: #dc3545 !important;">
+
+                                <div class="d-flex flex-row justify-content-center align-items-center">
+                                    <div class="small-card-icon">
+                                        <i class="fa fa-sign-in card-icon-bg-primary fa-4x" style="color: white !important;"></i>
+                                    </div>
+                                    <div class="small-card-text w-100 text-center">
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Audit Trail <br> Keluar Masuk Pengguna</p>
+                                        <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countAuditTrailLog}}</h4>
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                            </div>
+                      </div>
+                  </div>
+                </div> -->
 
                 @endif
 

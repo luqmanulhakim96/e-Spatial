@@ -1,4 +1,4 @@
-@extends('layouts.app_user')
+@extends('layouts.app_user_eng')
 @section('content')
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
@@ -10,10 +10,10 @@
                   <div class="row">
                     <div class="col-md">
                       <div class="btn-group">
-                          <button class="btn btn-primary">Bahasa Melayu</button>
-                          <!-- <a href="{{ route('user.list') }}" class="btn btn-outline-primary">Bahasa Melayu</a> -->
-                          <!-- <button class="btn btn-primary">English</button> -->
-                          <a href="{{ route('user.profile.password') }}" class="btn btn-outline-primary">English</a>
+                          <!-- <button class="btn btn-primary">Bahasa Melayu</button> -->
+                          <a href="{{ route('user.profil.katalaluan') }}" class="btn btn-outline-primary">Bahasa Melayu</a>
+                          <button class="btn btn-primary">English</button>
+                          <!-- <a href="{{ route('user.profil.katalaluan') }}" class="btn btn-outline-primary">English</a> -->
                       </div>
                     </div>
                   </div>
@@ -29,7 +29,7 @@
                 <!-- Small card component -->
 
                 <div class="card rounded-lg" style="border-color: #003473 !important;">
-                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Tukar Kata Laluan</div>
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Change Password</div>
 
                   <div class="card-body">
 
@@ -49,10 +49,10 @@
                         </div>
                         <div class="col-md-8">
                           <div class="form-group">
-                            <label>Kata Laluan Terdahulu</label>
+                            <label>Previous Password</label>
                             <!-- <input type="password"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Masukkan Kata Laluan Terdahulu" required> -->
                             <div class="input-group mb-3">
-                              <input type="password" id="old_pass"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Masukkan Kata Laluan Terdahulu" required>
+                              <input type="password" id="old_pass"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Fill in Previous Password" required>
                               <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" onclick="visibleOldPass()" type="button" id="button-addon2"><i class="fa fa-eye"></i></button>
                               </div>
@@ -71,9 +71,9 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label>Kata Laluan Terkini</label>
+                            <label>New Password</label>
                             <div class="input-group mb-3">
-                              <input type="password" id="new_pass"  class="form-control bg-light @error('new_pass') is-invalid @enderror" name="new_pass" placeholder="Masukkan Kata Laluan Terkini" required>
+                              <input type="password" id="new_pass"  class="form-control bg-light @error('new_pass') is-invalid @enderror" name="new_pass" placeholder="Fill in new password" required>
                               <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" onclick="visiblePassNew()" type="button" id="button-addon2"><i class="fa fa-eye"></i></button>
                               </div>
@@ -87,9 +87,9 @@
                         </div>
                         <div class="col-md-4">
                           <div class="form-group">
-                            <label>Sahkan Kata Laluan Terkini</label>
+                            <label>Confirm New Password</label>
                             <div class="input-group mb-3">
-                              <input type="password" id="new_pass_confirm"  class="form-control bg-light @error('new_pass_confirm') is-invalid @enderror" name="new_pass_confirm" placeholder="Sahkan Kata Laluan Terkini" required>
+                              <input type="password" id="new_pass_confirm"  class="form-control bg-light @error('new_pass_confirm') is-invalid @enderror" name="new_pass_confirm" placeholder="Confirm new password" required>
                               <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" onclick="visiblePassConfirm()" type="button" id="button-addon2"><i class="fa fa-eye"></i></button>
                               </div>
@@ -103,7 +103,7 @@
                         </div>
                       </div>
 
-                      <button type="submit" onclick="return confirm('Anda pasti untuk tukar kata laluan?')" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto">Tukar Kata Laluan</button>
+                      <button type="submit" onclick="return confirm('Anda pasti untuk tukar kata laluan?')" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto">Change Password</button>
 
 
                         <!-- <div class="row">

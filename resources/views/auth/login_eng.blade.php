@@ -5,7 +5,7 @@
     <div class="login-page d-flex flex-row justify-content-center align-items-center">
         <!-- Login card -->
         <div class="card mx-3 mx-md-0 border-0 rounded-lg">
-          <h5 class="card-header" style="text-align: center;">Log Masuk</h5>
+          <h5 class="card-header" style="text-align: center;">Login</h5>
 
             <div class="card-body">
                 <!-- Row -->
@@ -28,9 +28,10 @@
                           <div class="col-md">
                             &nbsp&nbsp&nbsp
                             <div class="btn-group">
-                                <button class="btn btn-primary">Bahasa Melayu</button>
-                                <!-- <button class="btn btn-outline-primary">English</button> -->
-                                <a href="{{ route('auth.login_eng') }}" class="btn btn-outline-primary">English</a>
+                                <!-- <button class="btn btn-primary">Bahasa Melayu</button> -->
+                                <a href="{{ route('login') }}" class="btn btn-outline-primary">Bahasa Melayu</a>
+                                <button class="btn btn-primary">English</button>
+                                <!-- <a href="{{ route('auth.register_eng') }}" class="btn btn-outline-primary">English</a> -->
                             </div>
                           </div>
                         </div>
@@ -64,7 +65,7 @@
                               </div>
                               <div class="col-md-10">
                                 <div class="form-group">
-                                    <label for="kad_pengenalan" class="text-muted">Kad Pengenalan / Pasport</label>
+                                    <label for="kad_pengenalan" class="text-muted">Identification Card Number / Passport</label>
                                     <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" required autocomplete="kad_pengenalan" autofocus>
 
 
@@ -85,7 +86,7 @@
                               <div class="col-md-10">
                                 <!-- Password -->
                                 <div class="form-group">
-                                    <label for="Passeord" class="text-muted">Kata Laluan</label>
+                                    <label for="Passeord" class="text-muted">Password</label>
                                     <div class="input-group mb-3">
                                       <input id="password" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                       <div class="input-group-append">
@@ -117,7 +118,7 @@
                               <div class="col-md-1">
                               </div>
                               <div class="col-md-10">
-                                <button type="submit" class="btn btn-primary rounded m-1 btn-outline-primary badge-pill btn-block w-50 m-auto">Log Masuk</button>
+                                <button type="submit" class="btn btn-primary rounded m-1 btn-outline-primary badge-pill btn-block w-50 m-auto">Login</button>
                               </div>
                             </div>
 
@@ -127,12 +128,12 @@
                         <div class="btn btn-block w-75 m-auto">
                         <div class="btn btn-primarynew rounded m-0">
                                 @if (Route::has('password.request'))
-                                <a href="{{ route('password.request') }}" >Lupa Kata Laluan</a>
+                                <a href="{{ route('auth.passwords.email_eng') }}" >Forgot Password</a>
                             </div>
                             <span> | </span>
                             <div class="btn btn-primarynew rounded m-0">
                                 @endif
-                                <a href="{{ route('register') }}">Daftar</a>
+                                <a href="{{ route('auth.register_eng') }}">Register</a>
                             </div>
 
                         </div>

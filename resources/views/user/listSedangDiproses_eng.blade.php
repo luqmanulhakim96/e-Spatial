@@ -1,4 +1,4 @@
-@extends('layouts.app_user')
+@extends('layouts.app_user_eng')
 @section('content')
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
@@ -10,10 +10,10 @@
                   <div class="row">
                     <div class="col-md">
                       <div class="btn-group">
-                          <button class="btn btn-primary">Bahasa Melayu</button>
-                          <!-- <a href="{{ route('login') }}" class="btn btn-outline-primary">Bahasa Melayu</a> -->
-                          <!-- <button class="btn btn-primary">English</button> -->
-                          <a href="{{ route('user.listSedangDiproses_eng') }}" class="btn btn-outline-primary">English</a>
+                          <!-- <button class="btn btn-primary">Bahasa Melayu</button> -->
+                          <a href="{{ route('user.listSedangDiproses') }}" class="btn btn-outline-primary">Bahasa Melayu</a>
+                          <button class="btn btn-primary">English</button>
+                          <!-- <a href="{{ route('user.listSedangDiproses_eng') }}" class="btn btn-outline-primary">English</a> -->
                       </div>
                     </div>
                   </div>
@@ -29,20 +29,20 @@
                 <!-- Small card component -->
 
                 <div class="card rounded-lg" style="border-color: #003473 !important;">
-                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Permohonan Sedang Diproses</div>
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">List of Applications In Processing</div>
 
                   <div class="card-body">
 
                       <div class="table-responsive">
 
-                      <table class="table table-striped table-bordered" id="list_permohonan_user" style="width: 100%;">
+                      <table class="table table-striped table-bordered" id="list_permohonan_user_eng" style="width: 100%;">
                           <!-- Table head -->
                           <thead>
                               <tr>
-                                <th class="all">PERMOHONAN ID</th>
-                                <th class="all">TARIKH PERMOHONAN</th>
-                                <th class="all">KEMASKINI PERMOHONAN</th>
-                                <th class="all">BATALKAN PERMOHONAN</th>
+                                <th class="all">APPLICATION ID</th>
+                                <th class="all">DATE OF APPLICATION</th>
+                                <th class="all">EDIT APPLICATION</th>
+                                <th class="all">CANCEL APPLICATION</th>
 
                               </tr>
                           </thead>
@@ -67,7 +67,7 @@
                               </td>
                               <td>
                                 <div class="d-flex flex-row justify-content-around align-items-center">
-                                    <a href="{{ route('user.batal', $data->id) }}" class="btn btn-danger mr-1" onclick="return confirm('Anda pasti mahu membatalkan permohonan ini?')"><i class="fas fa-times-circle"></i></a>
+                                    <a href="{{ route('user.batal', $data->id) }}" class="btn btn-danger mr-1" onclick="return confirm('Are you sure you want to cancel this application?')"><i class="fas fa-times-circle"></i></a>
                                 </div>
                               </td>
                               @else

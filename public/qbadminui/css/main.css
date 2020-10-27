@@ -1285,7 +1285,7 @@ button.close {
   align-items: center;
   width: 3rem;
   height: 3rem;
-  background: #6B5CAB;
+  background: #003e61;
   position: absolute;
   left: -3rem;
   top: 0;
@@ -1534,7 +1534,7 @@ main {
   background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
 }
 .login-pagenew {
-  height: 100rem;
+  height: 110rem;
   background-image: linear-gradient(to bottom, #00285c, #003866, #00476d, #005570, #006271);
 }
 .login-pagemain {
