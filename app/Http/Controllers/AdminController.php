@@ -93,8 +93,8 @@ class AdminController extends Controller
     // $data = Audit::with('user')->get();
     // $data = User::where('role','!=','5')->get();
     // $all = $user->audits;
-    // $data = Audit::where('event','Log Masuk')->orWhere('event','Log Keluar')->get();
-    $data = Audit::where('event','Log Masuk')->get();
+    $data = Audit::where('event','Log Masuk')->orWhere('event','Log Keluar')->get();
+    // $data = Audit::where('event','Log Masuk')->get();
 
     // dd($data);
     return view('superadmin.auditUser', compact('data'));
@@ -114,6 +114,7 @@ class AdminController extends Controller
     $data = Audit::where('created_at', '>', $tarikh_mula.' 00:00:00')
                 ->where('created_at', '<', $tarikh_akhir.' 23:59:59')
                 ->where('event','Log Masuk')
+                ->orWhere('event', 'Log Keluar')
                 ->orderBy('created_at', 'asc')
                 ->get();
 
