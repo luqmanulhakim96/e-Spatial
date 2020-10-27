@@ -80,7 +80,8 @@
                             <td> Pengguna Biasa </td>
                             @endif
                             <td>{{ $datas->ip_address }}</td>
-                            <td>{{  Carbon\Carbon::parse($datas->created_at)->format('M-d-Y h:i:s')  }}</td>
+                            <!-- <td>{!!  Carbon\Carbon::parse($datas->updated_at)->format('M-d-Y h:i:s')  !!}</td> -->
+                            <td>{{  Carbon\Carbon::parse($datas->updated_at)->format('Y-m-d h:i:s')  }}</td>
                             <td>{{ substr($datas->auditable_type, strpos($datas->auditable_type, "/") + 4) }}</td>
 
                             @if($datas->event == "Log Masuk")
