@@ -3,15 +3,35 @@
 <!--By Artanis Cloud Sdn Bhd-->
 
       <!--Page Body part -->
-            <div class="p
-            age-body p-4 text-dark">
+            <div class="page-body p-4 text-dark">
+              <div class="theme-option p-3 border-1" style="border: 1px solid;border-color: #003e61 !important;">
+                  <div class="theme-pck">
+                      <i class="fa fa-globe" aria-hidden="true" style="font-size: 180% !important;"></i>
+                  </div>
+                  <p style="font-size: 110%;">Pilih Bahasa | Choose Language</p>
+                  <div class="row">
+                    <div class="col-md">
+                      <div class="btn-group">
+                          <button class="btn btn-primary">Bahasa Melayu</button>
+                          <!-- <a href="{{ route('login') }}" class="btn btn-outline-primary">Bahasa Melayu</a> -->
+                          <!-- <button class="btn btn-primary">English</button> -->
+                          <a href="{{ route('user.add_eng') }}" class="btn btn-outline-primary">English</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="side-nav-themes d-flex flex-row">
+                      <p class="p-3 rounded side-nav-theme-primary side-nav-theme" theme-color="purple"></p>
+                      <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
+                  </div> -->
+              </div>
                 <div class="page-heading border-bottom d-flex flex-row">
                 </div>
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Permohonan Baru</div>
+
                   <div class="card-body">
-                      <div class="card-title" style="text-align: center;">Permohonan Baru</div>
                       <div class="">
                         <form class="" id="pilihan_data" enctype="multipart/form-data">
                           @csrf
@@ -23,7 +43,6 @@
                           <div class="col-md-4">
                             <div class="form-group">
                                 <label for="jenis_dokumen">Jenis Dokumen:</label>
-                                <label for="jenis_dokumen">(Document Type)</label>
                                   <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)" required>
                                       <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                       @foreach($jenisDokumen as $data)
@@ -47,7 +66,6 @@
                               <!-- jenis data input-->
                               <div class="form-group">
                                   <label for="jenis_data">Jenis Data:</label>
-                                  <label for="jenis_data">(Data Type)</label>
                                     <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)" required>
                                       <option value="" selected disabled hidden>Pilih Jenis Data</option>
                                     </select>
@@ -112,7 +130,6 @@
                                 <!-- custom negeri input -->
                                 <div class="form-group">
                                   <label for="negeri">Negeri:</label>
-                                  <label for="negeri">(State)</label>
                                     <select id="custom_negeri" class="custom-select  bg-light" name="custom_negeri" required>
                                         <option value="" selected disabled hidden>Pilih Negeri</option>
                                     </select>
@@ -157,7 +174,6 @@
                                 <!--tahun input -->
                                 <div class="form-group" id="tahun_div" style="display: block;">
                                     <label for="tahun">Tahun:</label>
-                                    <label for="tahun">(Year)</label>
                                     <select id="tahun" class="custom-select  bg-light" name="tahun" required>
                                         <option value="" selected disabled hidden>Pilih Tahun</option>
                                     </select>
@@ -178,7 +194,6 @@
                                 <!-- negeri input -->
                                 <div class="form-group">
                                   <label for="negeri">Negeri:</label>
-                                  <label for="negeri">(State)</label>
                                     <select id="negeri" class="custom-select  bg-light" name="negeri" required>
                                         <option value="" selected disabled hidden>Pilih Negeri</option>
                                     </select>
@@ -213,15 +228,14 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-5">
+
+                            <div class="card-footer text-center">
+                                <input class="btn btn-primary" id="more" type="button" value=" Tambah Data " onclick="tambahData()">
 
                             </div>
-                            <div class="col-md-4">
-                              <input class="btn btn-primary" type="button" value=" Tambah Data " onclick="tambahData()">
 
-                            </div>
-                        </div>
+
+
                         </form>
                       </div>
                   </div>
@@ -232,10 +246,23 @@
               <!-- Col md 6 -->
                     <div class="col-md-15 mt-1">
                         <!-- Light Bordered Table card -->
-                        <div class="card rounded-lg">
+                        <div class="card rounded-lg" style="border-color: #003473 !important;">
+                          <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Data Permohonan</div>
                             <div class="card-body">
-                                <div class="card-title" style="text-align: center;">Senarai Data Permohonan</div>
-                                <!-- Table -->
+                              <div class="row">
+                                <div class="col-md-2"></div>
+
+                                <div class="col-md">
+                                  <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
+                                    <h6 style="text-align: center;">Catatan:</h6>
+                                    <span>Pemohon hendaklah memohon sekurang-kurangnya satu data dalam senarai untuk meneruskan permohonan</span><br>
+
+                                  </div>
+                                </div>
+                                <div class="col-md-2"></div>
+
+                              </div>
+                              <div style="padding: 10px;"></div>
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="pilihan_table">
                                         <thead>
@@ -262,10 +289,9 @@
             </div>
 
             <div class="card-body">
-              <div class="card rounded-lg">
+              <div class="card rounded-lg" style="border-color: #003473 !important;">
+                <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Maklumat Tambahan</div>
                 <div class="card-body">
-                  <div class="card-title" style="text-align: center;">Maklumat Tambahan</div>
-
                   <form  method="post" action="{{route('user.submit')}}" id="permohonan_data" enctype="multipart/form-data">
                     @csrf
 
@@ -373,12 +399,13 @@
                       </div>
                     </div>
 
-                    <div class="row">
-                      <div class="col-md-3">
 
-                      </div>
-                      <div class="col-md-4" id="button_submit_permohonan" style="display: none;">
-                        <button type="submit" onclick="return confirm('Anda pasti mahu memohon data ini?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Mohon Data</button>
+
+                    <div class="row">
+
+                      <div class="col-md" id="button_submit_permohonan" style="display: none;">
+                        <button type="submit" onclick="return confirm('Anda pasti mahu memohon data ini?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto" id="submit_data" >Mohon Data</button>
+
                       </div>
                     </div>
 

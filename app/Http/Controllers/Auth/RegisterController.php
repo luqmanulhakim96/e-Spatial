@@ -82,6 +82,28 @@ class RegisterController extends Controller
         ]);
     }
 
+    protected function validatorInstitut(array $data)
+    {
+        return Validator::make($data, [
+            'kategori' => ['required'],
+            'nama' => ['required', 'string', 'max:255'],
+            'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8', 'unique:users'],
+            'kerakyatan' => ['required'],
+            'tarikh_lahir' => ['required', 'date'],
+            'tempat_lahir' => ['required', 'string', 'max:255'],
+            'jenis_perniagaan' => ['required', 'string', 'max:255'],
+            'alamat_kediaman' => ['required','string', 'max:255'],
+            'poskod' => ['required','string', 'max:5', 'min:5'],
+            'negeri' => ['required','string', 'max:255'],
+            'nama_kementerian' => ['required','string', 'max:255'],
+            'alamat_kementerian' => ['required','string', 'max:255'],
+            'no_tel_rumah' => ['required', 'string', 'max:12'],
+            'no_tel_bimbit' => ['required', 'string', 'max:12'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users']
+            // 'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+    }
+
     protected function validatorAwam(array $data)
     {
         return Validator::make($data, [
@@ -142,6 +164,38 @@ class RegisterController extends Controller
             'tarikh_lahir' => $data['tarikh_lahir'],
             'tempat_lahir' => $data['tempat_lahir'],
             'jawatan' => $data['jawatan'],
+            'jenis_perniagaan' => $data['jenis_perniagaan'],
+            'nama_kementerian' => $data['nama_kementerian'],
+            'alamat_kementerian' => $data['alamat_kementerian'],
+            'no_tel_rumah' => $data['no_tel_rumah'],
+            'no_tel_bimbit' => $data['no_tel_bimbit'],
+            // 'password' => Hash::make($data['password']),
+            'password' => $hashed_random_password,
+        ]);
+        // Mail::send(new EmailNotifikasiRegisterUser($data, $random));
+        // Mail::queue(new EmailNotifikasiRegisterUser($data, $random));
+
+        // $emailJob = (new      SendEmail($details))->delay(Carbon::now()->addMinutes(5));
+        // $emailJob = SendEmail::dispatch($data,$random)->delay(Carbon::now()->addSeconds(30));
+        $emailJob = (new SendEmailRegistration($data,$random))->delay(Carbon::now()->addSeconds(15));
+        dispatch($emailJob);
+        return $user;
+    }
+
+    protected function createInstitut(array $data)
+    {
+        $random = Str::random(10);
+
+        $hashed_random_password = Hash::make($random);
+
+        $user = User::create([
+            'kategori' => $data['kategori'],
+            'name' => $data['nama'],
+            'email' => $data['email'],
+            'kad_pengenalan' => $data['kad_pengenalan'],
+            'kerakyatan' => $data['kerakyatan'],
+            'tarikh_lahir' => $data['tarikh_lahir'],
+            'tempat_lahir' => $data['tempat_lahir'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
             'nama_kementerian' => $data['nama_kementerian'],
             'alamat_kementerian' => $data['alamat_kementerian'],
@@ -251,6 +305,9 @@ class RegisterController extends Controller
         $this->validatorAwam($request->all())->validate();
         event(new Registered($user = $this->createAwam($request->all())));
 
+      }elseif ($request->kategori == 'institut') {
+        $this->validatorInstitut($request->all())->validate();
+        event(new Registered($user = $this->createInstitut($request->all())));
       }else {
 
         $this->validator($request->all())->validate();

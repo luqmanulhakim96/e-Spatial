@@ -36,7 +36,7 @@
             <!-- Brand details -->
             <div class="side-menu-brand d-flex flex-column justify-content-center align-items-center clear mt-3">
                 <img src="{{ asset('https://www.atvadventurepark.com/images/hutan.png') }}" alt="bran_name" class="brand-img">
-                <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold" style="text-align: center; font-size: 20px !important;">Permohonan Data Geospatial</a>
+                <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold" style="text-align: center; font-size: 20px !important;">Geospatial Data Application</a>
             </div>
             @if(Auth::user())
             <!-- Side bar menu -->
@@ -78,20 +78,20 @@
                         @endif
                         @if(Auth::user()->role == 5)
                         <!-- Sub menu parent -->
-                        <li class="side-menu-item px-3"><a href="{{ route('user.mainMenu') }}" class="w-100 py-3 pl-4" >Halaman Utama</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('user.mainMenu_eng') }}" class="w-100 py-3 pl-4" >Main Menu</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('user.add') }}" class="w-100 py-3 pl-4" >Permohonan Baru</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('user.add_eng') }}" class="w-100 py-3 pl-4" >New Data Application</a></li>
 
                         <!-- <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4" >Senarai Permohonan </a></li> -->
 
-                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4 sub-menu-parent" data-toggle="collapse" data-target="#table-sub-menu3" aria-expanded="false" aria-controls="table-sub-menu">Senarai Permohonan </a></li>
+                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4 sub-menu-parent" data-toggle="collapse" data-target="#table-sub-menu3" aria-expanded="false" aria-controls="table-sub-menu">List of Application</a></li>
                         <div id="table-sub-menu3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <ul class="side-sub-menu p-0">
-                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listSedangDiproses') }}" class="w-100 pl-4">Permohonan Sedang Diproses </a></li>
-                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.list') }}" class="w-100 pl-4">Permohonan Lulus </a></li>
-                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listGagal') }}" class="w-100 pl-4">Permohonan Gagal </a></li>
-                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listTidakBerkaitan') }}" class="w-100 pl-4">Permohonan Tidak Berkaitan </a></li>
-                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listBatal') }}" class="w-100 pl-4">Permohonan Batal </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listSedangDiproses_eng') }}" class="w-100 pl-4">Application In Processing</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.list_eng') }}" class="w-100 pl-4">Passed Application</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listGagal_eng') }}" class="w-100 pl-4">Failed Application </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listTidakBerkaitan_eng') }}" class="w-100 pl-4">Unrelated Application</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('user.listBatal_eng') }}" class="w-100 pl-4">Canceled Application</a></li>
                             </ul>
                         </div>
 
@@ -156,7 +156,7 @@
 
 
 
-                <a href="{{ url()->previous() }}" class="btn btn-outline-primary m-2" style="font-size:150%"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Kembali</a>
+                <a href="{{ url()->previous() }}" class="btn btn-outline-primary m-2" style="font-size:150%"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i>&nbsp&nbspBack &nbsp&nbsp</a>
 
 
 
@@ -228,15 +228,15 @@
                             <!-- Menu items -->
 
                             <a href="#" class="dropdown-item disabled small"><i class="far fa-user mr-1"></i>{{explode(' ',trim(ucwords(strtolower((Auth::user()->name)))))[0]}} </a>
-                            <a href="{{ route('user.profil.edit') }}" class="dropdown-item text-secondary-light">Kemaskini Profil</a>
-                            <a href="{{ route('user.profil.katalaluan') }}" class="dropdown-item text-secondary-light">Tukar Kata Laluan</a>
+                            <a href="{{ route('user.profil.edit_eng') }}" class="dropdown-item text-secondary-light">Update Profile</a>
+                            <a href="{{ route('user.profile.password') }}" class="dropdown-item text-secondary-light">Change Password</a>
 
                             <!-- <a href="#" class="dropdown-item text-secondary-light">Billing history</a> -->
                             <a  class="dropdown-item text-secondary-light"
                                 href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
-                            >Log Keluar</a>
+                            >Logout</a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
@@ -250,8 +250,8 @@
 
     <!-- Footer section -->
     <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary" style="background: linear-gradient(to bottom, #cccccc 0%, #ffffff 110%) !important;">
-        <p>&copy; Hakcipta Terpelihara 2020. <a href="https://www.forestry.gov.my/my/" target="_Blank"><font color="black">Jabatan Perhutanan Semenanjung Malaysia</font></a></p>
-        <p>Versi 1.0</p>
+        <p>&copy; Copyright 2020. <a href="https://www.forestry.gov.my/my/" target="_Blank"><font color="black">Jabatan Perhutanan Semenanjung Malaysia</font></a></p>
+        <p>Version 1.0</p>
     </footer>
   </div>
 

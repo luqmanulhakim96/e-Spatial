@@ -24,6 +24,15 @@ Route::get('/password/resets/{token}/{email}', 'Auth\ResetPasswordController@sho
 
 Route::get('/notifikasi/baca/{id}', 'HomeController@redirectNotification')->name('notification.mark-as-read');
 
+//English Language Pages
+Route::get('/register/eng', 'EngController@viewRegisterEng')->name('auth.register_eng');
+
+Route::get('/login/eng', 'EngController@viewLoginEng')->name('auth.login_eng');
+
+Route::get('/passwords/reset/eng', 'EngController@viewPasswordResetEng')->name('auth.passwords.email_eng');
+
+
+
 Route::middleware('admin')->group(function () {
   Route::get('/home', 'HomeController@index')->name('home');
 
@@ -166,17 +175,31 @@ Route::middleware('user')->group(function () {
   #normal user route
   Route::get('/halaman-utama', 'UserController@index')->name('user.mainMenu');
 
+  Route::get('/main-menu', 'EngController@index')->name('user.mainMenu_eng');
+
   Route::get('/permohonan/user/senarai/sedang-diproses', 'UserController@viewListSedangDiproses')->name('user.listSedangDiproses');
 
-  Route::get('/permohonan/senarai', 'UserController@list')->name('user.list');
+  Route::get('/application/user/list/in-processing', 'EngController@viewListSedangDiproses')->name('user.listSedangDiproses_eng');
+
+  Route::get('/permohonan/user/senarai/lulus', 'UserController@list')->name('user.list');
+
+  Route::get('/application/user/list/passed', 'EngController@list')->name('user.list_eng');
 
   Route::get('/permohonan/user/senarai/gagal', 'UserController@viewListGagal')->name('user.listGagal');
 
+  Route::get('/application/user/list/failed', 'EngController@viewListGagal')->name('user.listGagal_eng');
+
   Route::get('/permohonan/user/senarai/tidak-berkaitan', 'UserController@viewListTidakBerkaitan')->name('user.listTidakBerkaitan');
+
+  Route::get('/application/user/list/unrelated', 'EngController@viewListTidakBerkaitan')->name('user.listTidakBerkaitan_eng');
 
   Route::get('/permohonan/user/senarai/batal', 'UserController@viewListBatal')->name('user.listBatal');
 
+  Route::get('/application/user/list/cancel', 'EngController@viewListBatal')->name('user.listBatal_eng');
+
   Route::get('/permohonan/baru', 'UserController@add')->name('user.add');
+
+  Route::get('/application/new', 'EngController@add')->name('user.add_eng');
 
   Route::get('/permohonan/jenisdata/{data}', 'UserController@getJenisData')->name('user.jenisdata');
 
@@ -212,6 +235,8 @@ Route::middleware('user')->group(function () {
 
   Route::get('/profil/edit', 'UserController@editProfil')->name('user.profil.edit');
 
+  Route::get('/profil/edit/eng', 'EngController@editProfil')->name('user.profil.edit_eng');
+
   Route::post('/profile/update', 'UserController@updateProfil')->name('user.profil.updatePengguna');
 
   Route::post('/upload/resit_pembayaran', 'UserController@uploadResitPembayaran')->name('user.upload.resit_pembayaran');
@@ -219,6 +244,8 @@ Route::middleware('user')->group(function () {
   Route::post('/upload/surat_penerimaan_data', 'UserController@uploadPenerimaanData')->name('user.upload.surat_penerimaan_data');
 
   Route::get('/profil/tukar_kata_laluan', 'UserController@changePassUser')->name('user.profil.katalaluan');
+
+  Route::get('/profile/change-password', 'EngController@changePassUser')->name('user.profile.password');
 
   Route::post('/profile/tukar_kata_laluan/update', 'UserController@updatePass')->name('user.profil.updatePassword');
 

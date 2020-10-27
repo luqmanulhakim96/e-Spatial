@@ -1,4 +1,4 @@
-@extends('layouts.app_user')
+@extends('layouts.app_user_eng')
 @section('content')
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
@@ -10,10 +10,10 @@
                   <div class="row">
                     <div class="col-md">
                       <div class="btn-group">
-                          <button class="btn btn-primary">Bahasa Melayu</button>
-                          <!-- <a href="{{ route('user.listSedangDiproses') }}" class="btn btn-outline-primary">Bahasa Melayu</a> -->
-                          <!-- <button class="btn btn-primary">English</button> -->
-                          <a href="{{ route('user.listGagal_eng') }}" class="btn btn-outline-primary">English</a>
+                          <!-- <button class="btn btn-primary">Bahasa Melayu</button> -->
+                          <a href="{{ route('user.listGagal') }}" class="btn btn-outline-primary">Bahasa Melayu</a>
+                          <button class="btn btn-primary">English</button>
+                          <!-- <a href="{{ route('user.listSedangDiproses_eng') }}" class="btn btn-outline-primary">English</a> -->
                       </div>
                     </div>
                   </div>
@@ -29,18 +29,18 @@
                 <!-- Small card component -->
 
                 <div class="card rounded-lg" style="border-color: #003473 !important;">
-                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pemohonan Gagal</div>
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">List Of Failed Application</div>
 
                   <div class="card-body">
                       <div class="table-responsive">
 
-                      <table class="table table-striped table-bordered" id="list_permohonan_user_gagal" style="width: 100%;">
+                      <table class="table table-striped table-bordered" id="list_permohonan_user_gagal_eng" style="width: 100%;">
                         <thead>
                             <tr>
-                              <th class="all">PERMOHONAN ID</th>
-                              <th class="all">TARIKH PERMOHONAN</th>
+                              <th class="all">APPLICATION ID</th>
+                              <th class="all">APPLICATION DATE</th>
 
-                              <th class="all">MUAT TURUN SURAT TIDAK LULUS </th>
+                              <th class="all">DOWNLOAD FAILED APPLICATION LETTER</th>
 
                             </tr>
                         </thead>

@@ -197,6 +197,35 @@ $(document).ready(function(){
     // Responsive Data Table
     let list_permohonan_user = $("#list_permohonan_user")
     $(list_permohonan_user).DataTable({
+      "language": {
+          "lengthMenu": "Memaparkan _MENU_ rekod per halaman",
+          "zeroRecords": "Maaf, tiada rekod.",
+          "info": "Memaparkan halaman _PAGE_ dari _PAGES_",
+          "infoEmpty": "Tidak ada rekod yang tersedia",
+          "infoFiltered": "(Ditapis dari _MAX_ jumlah rekod)",
+          "search": "Carian",
+          "previous": "Sebelum",
+          "paginate": {
+              "first":      "Pertama",
+              "last":       "Terakhir",
+              "next":       "Seterusnya",
+              "previous":   "Sebelumnya"
+          },
+      },
+        responsive : true,
+        order:[[1,"desc"]],
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
+
+    });
+
+    // Responsive Data Table
+    let list_permohonan_user_eng = $("#list_permohonan_user_eng")
+    $(list_permohonan_user_eng).DataTable({
         responsive : true,
         order:[[1,"desc"]],
         columnDefs: [
@@ -211,6 +240,35 @@ $(document).ready(function(){
     // Responsive Data Table
     let list_permohonan_user_lulus = $("#list_permohonan_user_lulus")
     $(list_permohonan_user_lulus).DataTable({
+      "language": {
+          "lengthMenu": "Memaparkan _MENU_ rekod per halaman",
+          "zeroRecords": "Maaf, tiada rekod.",
+          "info": "Memaparkan halaman _PAGE_ dari _PAGES_",
+          "infoEmpty": "Tidak ada rekod yang tersedia",
+          "infoFiltered": "(Ditapis dari _MAX_ jumlah rekod)",
+          "search": "Carian",
+          "previous": "Sebelum",
+          "paginate": {
+              "first":      "Pertama",
+              "last":       "Terakhir",
+              "next":       "Seterusnya",
+              "previous":   "Sebelumnya"
+          },
+      },
+        responsive : true,
+        order:[[4,"desc"]],
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
+
+    });
+
+    // Responsive Data Table
+    let list_permohonan_user_lulus_eng = $("#list_permohonan_user_lulus_eng")
+    $(list_permohonan_user_lulus_eng).DataTable({
         responsive : true,
         order:[[4,"desc"]],
         columnDefs: [
@@ -225,6 +283,35 @@ $(document).ready(function(){
     // Responsive Data Table
     let list_permohonan_user_gagal = $("#list_permohonan_user_gagal")
     $(list_permohonan_user_gagal).DataTable({
+      "language": {
+          "lengthMenu": "Memaparkan _MENU_ rekod per halaman",
+          "zeroRecords": "Maaf, tiada rekod.",
+          "info": "Memaparkan halaman _PAGE_ dari _PAGES_",
+          "infoEmpty": "Tidak ada rekod yang tersedia",
+          "infoFiltered": "(Ditapis dari _MAX_ jumlah rekod)",
+          "search": "Carian",
+          "previous": "Sebelum",
+          "paginate": {
+              "first":      "Pertama",
+              "last":       "Terakhir",
+              "next":       "Seterusnya",
+              "previous":   "Sebelumnya"
+          },
+      },
+        responsive : true,
+        order:[[2,"desc"]],
+        columnDefs: [
+                     {
+                          "targets": "_all", // your case first column
+                          "className": "text-center",
+                     },
+                   ],
+
+    });
+
+    // Responsive Data Table
+    let list_permohonan_user_gagal_eng = $("#list_permohonan_user_gagal_eng")
+    $(list_permohonan_user_gagal_eng).DataTable({
         responsive : true,
         order:[[2,"desc"]],
         columnDefs: [

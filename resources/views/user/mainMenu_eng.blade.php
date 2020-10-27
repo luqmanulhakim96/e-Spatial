@@ -1,4 +1,4 @@
-@extends('layouts.app_user')
+@extends('layouts.app_user_eng')
 
 @section('content')
 <style>
@@ -37,10 +37,10 @@ a:active {
       <div class="row">
         <div class="col-md">
           <div class="btn-group">
-              <button class="btn btn-primary">Bahasa Melayu</button>
-              <!-- <a href="{{ route('login') }}" class="btn btn-outline-primary">Bahasa Melayu</a> -->
-              <!-- <button class="btn btn-primary">English</button> -->
-              <a href="{{ route('user.mainMenu_eng') }}" class="btn btn-outline-primary">English</a>
+              <!-- <button class="btn btn-primary">Bahasa Melayu</button> -->
+              <a href="{{ route('user.mainMenu') }}" class="btn btn-outline-primary">Bahasa Melayu</a>
+              <button class="btn btn-primary">English</button>
+              <!-- <a href="{{ route('auth.register_eng') }}" class="btn btn-outline-primary">English</a> -->
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@ a:active {
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <div  style="font-size: 180%;" >
     <i class="fa fa-home" aria-hidden="true"></i>
-    Halaman Utama
+    Main Menu
   </div>
   <hr style="background-color: black !important;">
   <div style="padding:5px;"></div>
@@ -78,7 +78,7 @@ a:active {
                           </div>
                           <!-- Text -->
                           <div class="small-card-text w-100 text-center">
-                              <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Permohonan <br> Sedang Diproses</p>
+                              <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Application <br>In Processing</p>
                               <h4 class="font-weight-normal m-0 text-primary" style="color: #003473 !important;">{{$countPermohonanSedangProses}}</h4>
                           </div>
 
@@ -87,8 +87,8 @@ a:active {
                       <hr style="background-color: #003473 !important;">
 
                       <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">
-                        <a href="{{ route('user.listSedangDiproses') }}"  >
-                        Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        <a href="{{ route('user.listSedangDiproses_eng') }}"  >
+                        More Info <i class="fa fa-caret-right" aria-hidden="true"></i>
                       </a>
 
                       </p>
@@ -112,16 +112,16 @@ a:active {
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #28a745 !important;">Permohonan <br> Lulus</p>
+                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #28a745 !important;">Passed <br> Application</p>
                                 <h4 class="font-weight-normal m-0 text-primary" style="color: #28a745 !important;">{{$countPermohonanLulus}}</h4>
                             </div>
                         </div>
 
                         <hr style="background-color: #28a745 !important;">
                         <p class="font-weight-normal m-0 text-primary" style="text-align: right ; color: #28a745 !important;">
-                          <a href="{{ route('user.list') }}" >
+                          <a href="{{ route('user.list_eng') }}" >
 
-                          Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                          More Info <i class="fa fa-caret-right" aria-hidden="true"></i>
                         </a>
 
                         </p>
@@ -145,16 +145,16 @@ a:active {
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #D25F00 !important;">Permohonan<br> Gagal</p>
+                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #D25F00 !important;">Failed<br> Application</p>
                                 <h4 class="font-weight-normal m-0 text-primary" style="color: #D25F00 !important;">{{$countPermohonanGagal}}</h4>
                             </div>
                         </div>
 
                         <hr style="background-color: #D25F00 !important;">
                         <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #D25F00 !important;">
-                          <a href="{{ route('user.listGagal') }}"  >
+                          <a href="{{ route('user.listGagal_eng') }}"  >
 
-                          Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                          More Info <i class="fa fa-caret-right" aria-hidden="true"></i>
                         </a>
 
                         </p>
@@ -190,16 +190,16 @@ a:active {
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Permohonan <br> Tidak Berkaitan</p>
+                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Unrelated <br> Application</p>
                                 <h4 class="font-weight-normal m-0 text-primary" style="color: #003473 !important;">{{$countPermohonanTidakBerkaitan}}</h4>
                             </div>
                         </div>
 
                         <hr style="background-color: #003473 !important;">
                         <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">
-                          <a href="{{ route('user.listTidakBerkaitan') }}"  >
+                          <a href="{{ route('user.listTidakBerkaitan_eng') }}"  >
 
-                          Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                          More Info <i class="fa fa-caret-right" aria-hidden="true"></i>
                         </a>
 
                         </p>
@@ -223,16 +223,16 @@ a:active {
                             </div>
                             <!-- Text -->
                             <div class="small-card-text w-100 text-center">
-                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #28a745 !important;">Permohonan <br> Batal</p>
+                                <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #28a745 !important;">Canceled <br> Application</p>
                                 <h4 class="font-weight-normal m-0 text-primary" style="color: #28a745 !important;">{{$countPermohonanBatal}}</h4>
                             </div>
                         </div>
 
                         <hr style="background-color: #28a745 !important;">
                         <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #28a745 !important;">
-                          <a href="{{ route('user.listBatal') }}"  >
+                          <a href="{{ route('user.listBatal_eng') }}"  >
 
-                          Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                          More Info <i class="fa fa-caret-right" aria-hidden="true"></i>
                         </a>
 
                         </p>
@@ -264,7 +264,7 @@ a:active {
 
             <!--  Custom content card -->
             <div class="card rounded-lg" style="border-color: #003473 !important;">
-              <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Makluman</div>
+              <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Announcement</div>
 
                 <div class="card-body">
                     <!-- List -->

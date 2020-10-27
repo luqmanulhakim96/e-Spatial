@@ -6,7 +6,7 @@
         <!-- <div class="card rounded-sm mt-4 w-50 p-3"> -->
         <!-- <div class="card rounded-sm mt-0 w-50 p-3"> -->
         <div class="card mx-5 mx-md-25 border-0 rounded-lg  w-50">
-        <h5 class="card-header" style="text-align: center;">Borang Pendaftaran Pemohon</h5>
+        <h5 class="card-header" style="text-align: center;">Registration Form</h5>
         <!-- <br> -->
 
         <div class="card-body" >
@@ -18,9 +18,9 @@
           <div class="col-md">
             <div class="buttons">
                 <div class="btn-group">
-                    <button class="btn btn-primary">Bahasa Melayu</button>
-                    <!-- <button class="btn btn-outline-primary">English</button> -->
-                    <a href="{{ route('auth.register_eng') }}" class="btn btn-outline-primary">English</a>
+                    <!-- <button class="btn btn-outline-primary">Bahasa Melayu</button> -->
+                    <a href="{{ route('register') }}" class="btn btn-outline-primary">Bahasa Melayu</a>
+                    <button class="btn btn-primary">English</button>
                 </div>
             </div>
           </div>
@@ -37,14 +37,14 @@
               </div>
               <div class="col-md">
                 <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 2px solid black;">
-                <h5>MUSTAHAK:</h5>
-                <span >Permohonan daripada Kementerian atau Jabatan Kerajaan, ianya hanya boleh dibuat melalui surat Ketua Setiausaha / Timbalan
-                Ketua Setiausaha / Ketua Penolong Setiausaha / Ketua Pengarah / Timbalan Ketua Pengarah / Penolong Ketua Pengarah / Ketua
-                Jabatan Negeri / Timbalan Ketua Jabatan Negeri / Dekan / Pustakawan</span><br><br>
-                <span>Jika permohonan dari pada pihak swasta, borang hendaklah melalui Surat Pengarah / Pengurus</span><br><br>
-                <span>Kelulusan mendapatkan Dokumen Geospatial adalah tertakluk kepada Syarat-Syarat Pemberian Data Geospatial Bercetak atau
-                Digital Jabatan Perhutanan Semenanjung Malaysia sepertimana Pekeliling Ketua Pengarah Perhutanan Semenanjung Malaysia
-                Bil.3/2018</span>
+                <h5>IMPORTANT:</h5>
+                <span >Application from the Ministry or Government Department, it can only be made through the letter of the Secretary General / Deputy
+                Secretary General / Chief Assistant Secretary / Director General / Deputy Director General / Assistant Director General / Head
+                State Department / Deputy Head of State Department / Dean / Librarian</span><br><br>
+                <span>If the application is from a private party, the form must be through the Director / Manager Letter</span><br><br>
+                <span>Approval for obtaining Geospatial Documents is subject to the Terms of Providing Printed Geospatial Data or
+                Digital Department of Forestry Peninsular Malaysia as per the Circular of the Director General of Forestry Peninsular Malaysia
+                Bil.3 / 2018</span>
                 </div>
               </div>
               <div class="col-md-1">
@@ -63,16 +63,16 @@
                 <div class="col-md">
                     <div class="form-group">
 
-                      <label for="kategori" class="required">Kategori</label>
+                      <label for="kategori" class="required">Category</label>
                       <select id="kategori" class="custom-select  bg-light @error('kategori') is-invalid @enderror" name="kategori" value="{{ old('kategori') }}" onchange="showJenisForm()" >
-                            <option value="" selected disabled hidden>Pilih Kategori</option>
-                            <option value="kementerian" {{ old('kategori') == "kementerian" ? 'selected' : '' }}>Kementerian</option>
-                            <option value="agensi" {{ old('kategori') == "agensi" ? 'selected' : '' }}>Agensi</option>
-                            <option value="penyelidik" {{ old('kategori') == "penyelidik" ? 'selected' : '' }}>Penyelidik</option>
-                            <option value="institut" {{ old('kategori') == "institut" ? 'selected' : '' }}>Institut Pengajian Tinggi</option>
-                            <option value="awam" {{ old('kategori') == "awam" ? 'selected' : '' }}>Orang Awam</option>
-                            <option value="dalaman" {{ old('kategori') == "dalaman" ? 'selected' : '' }}>Warga JPSM</option>
-                            <option value="lain" {{ old('kategori') == "lain" ? 'selected' : '' }}>Lain-lain</option>
+                            <option value="" selected disabled hidden>Choose Category</option>
+                            <option value="kementerian" {{ old('kategori') == "kementerian" ? 'selected' : '' }}>Ministry</option>
+                            <option value="agensi" {{ old('kategori') == "agensi" ? 'selected' : '' }}>Agency</option>
+                            <option value="penyelidik" {{ old('kategori') == "penyelidik" ? 'selected' : '' }}>Researchers</option>
+                            <option value="institut" {{ old('kategori') == "institut" ? 'selected' : '' }}>Institut of Higher Education</option>
+                            <option value="awam" {{ old('kategori') == "awam" ? 'selected' : '' }}>Citizen</option>
+                            <option value="dalaman" {{ old('kategori') == "dalaman" ? 'selected' : '' }}>JPSM Staff</option>
+                            <option value="lain" {{ old('kategori') == "lain" ? 'selected' : '' }}>Others</option>
                         </select>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-md">
                     <div class="form-group">
-                      <label for="nama" class="required" >Nama Penuh</label>
+                      <label for="nama" class="required" >Full Name</label>
                       <input id="nama" type="text" class="form-control bg-light @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama') }}" autocomplete="name" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                       @error('nama')
                       <span class="invalid-feedback" role="alert">
@@ -111,11 +111,11 @@
               <!-- Kerakyatan -->
                 <div class="col-md">
                   <div class="form-group">
-                      <label for="kerakyatan" class="required">Kerakyatan</label>
+                      <label for="kerakyatan" class="required">Citizen</label>
                       <select id="kerakyatan" class="custom-select  bg-light @error('kerakyatan') is-invalid @enderror" name="kerakyatan" value="{{ old('kerakyatan') }}" onchange="viewPassportForm()" >
-                            <option value="" selected disabled hidden>Pilih Kerakyatan</option>
-                            <option value="Warganegara" {{ old('kerakyatan') == "Warganegara" ? 'selected' : '' }}>Warganegara</option>
-                            <option value="Bukan Warganegara" {{ old('kerakyatan') == "Bukan Warganegara" ? 'selected' : '' }}>Bukan Warganegara</option>
+                            <option value="" selected disabled hidden>Choose Citizenship</option>
+                            <option value="Warganegara" {{ old('kerakyatan') == "Warganegara" ? 'selected' : '' }}>Citizen of Malaysia</option>
+                            <option value="Bukan Warganegara" {{ old('kerakyatan') == "Bukan Warganegara" ? 'selected' : '' }}>Not a Citizen</option>
                         </select>
                       @error('kerakyatan')
                       <span class="invalid-feedback" role="alert">
@@ -131,16 +131,16 @@
 
                     <!-- <div id="text_kp" style="display: block;"> -->
                     <div id="text_kp" style="display: block;">
-                      <label for="kad_pengenalan" class="required">Kad Pengenalan</label>
+                      <label for="kad_pengenalan" class="required">Identification Card Number</label>
                       <input id="kad_pengenalan" type="text" minlength="12" maxlength="12" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}"  autocomplete="kad_pengenalan" >
                     </div>
 
                     <div id="text_pp" style="display: none;">
-                      <label for="pasport" class="required">Pasport</label>
+                      <label for="pasport" class="required">Passport</label>
                       <input id="pasport" type="text" class="form-control bg-light @error('pasport') is-invalid @enderror" name="pasport" value="{{ old('pasport') }}" autocomplete="pasport" >
                     </div>
 
-                    <small id="saiz_data" class="form-text text-secondary">Contoh : 910101028545</small>
+                    <small id="saiz_data" class="form-text text-secondary">Example : 910101028545</small>
 
                       @error('kad_pengenalan')
                       <span class="invalid-feedback" role="alert">
@@ -168,7 +168,7 @@
                 <div class="col-md">
                     <div class="form-group">
 
-                        <label for="tarikh_lahir" class="required">Tarikh Lahir</label>
+                        <label for="tarikh_lahir" class="required">Birth Date</label>
                         <div id="auto_birthdate" style="display : block;">
                           <input id="tarikh_lahir" type="text" class="form-control bg-light @error('tarikh_lahir') is-invalid @enderror" name="tarikh_lahir" value="{{ old('tarikh_lahir') }}" autocomplete="tarikh_lahir"  readonly>
                           @error('tarikh_lahir')
@@ -191,7 +191,7 @@
                 <!-- 2nd row -->
                 <div class="col-md">
                     <div class="form-group">
-                        <label for="tempat_lahir" class="required">Tempat Lahir</label>
+                        <label for="tempat_lahir" class="required">Birth Place</label>
                         <input id="tempat_lahir" type="text" class="form-control bg-light @error('tempat_lahir') is-invalid @enderror" name="tempat_lahir" value="{{ old('tempat_lahir') }}" autocomplete="tempat_lahir" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                         @error('tempat_lahir')
                         <span class="invalid-feedback" role="alert">
@@ -210,7 +210,7 @@
               </div>
                 <div id="jawatan_div" class="col-md" style="display: block;">
                     <div class="form-group">
-                        <label for="jawatan" class="required">Jawatan/Gred</label><br>
+                        <label for="jawatan" class="required">Position/Grade</label><br>
                         <input id="jawatan" type="text" class="form-control bg-light @error('jawatan') is-invalid @enderror" name="jawatan" value="{{ old('jawatan') }}" autocomplete="jawatan" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                         @error('jawatan')
                         <span class="invalid-feedback" role="alert">
@@ -225,7 +225,7 @@
                 <!-- 2nd row -->
                 <div class="col-md" id="jenis_perniagaan_div">
                     <div class="form-group">
-                        <label for="jenis_perniagaan" class="required">Profesion</label>
+                        <label for="jenis_perniagaan" class="required">Profession</label>
                         <input id="jenis_perniagaan" type="text" class="form-control bg-light @error('jenis_perniagaan') is-invalid @enderror" name="jenis_perniagaan" value="{{ old('jenis_perniagaan') }}" autocomplete="jenis_perniagaan"  oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                         @error('jenis_perniagaan')
                         <span class="invalid-feedback" role="alert">
@@ -248,7 +248,7 @@
                 <!-- Alamat Kediaman -->
                 <div class="col-md">
                     <div class="form-group" id="alamat_kediaman_div" style="display : block;">
-                      <label for="alamat_kediaman" class="required">Alamat Kediaman</label>
+                      <label for="alamat_kediaman" class="required">Residential address</label>
                       <!-- <input id="alamat_kediaman" type="text" class="form-control bg-light @error('alamat_kediaman') is-invalid @enderror" name="alamat_kediaman" value="" autocomplete="address"  > -->
                       <textarea id="alamat_kediaman" name="alamat_kediaman" rows="2" cols="50" class="form-control bg-light @error('alamat_kediaman') is-invalid @enderror" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">{{ old('alamat_kediaman') }}</textarea>
                       @error('alamat_kediaman')
@@ -272,7 +272,7 @@
               </div>
               <div class="col-md">
                 <div class="form-group" id="poskod_div" style="display : block;">
-                  <label for="poskod" class="required">Poskod</label>
+                  <label for="poskod" class="required">Postcode</label>
                   <input id="poskod" type="text" maxlength="5" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('poskod') is-invalid @enderror" name="poskod" value="{{ old('poskod') }}" autocomplete="poskod"  >
                   @error('poskod')
                   <span class="invalid-feedback" role="alert">
@@ -283,10 +283,10 @@
               </div>
               <div class="col-md">
                 <div class="form-group" id="negeri_div" style="display : block;">
-                  <label for="negeri" class="required">Negeri</label>
+                  <label for="negeri" class="required">State</label>
                   <!-- <input id="negeri" type="text" class="form-control bg-light @error('negeri') is-invalid @enderror" name="negeri" value="{{ old('negeri') }}" autocomplete="negeri" > -->
                   <select id="negeri" class="custom-select  bg-light @error('negeri') is-invalid @enderror" name="negeri" value="{{ old('negeri') }}"  >
-                        <option value="" selected disabled hidden>Pilih Negeri</option>
+                        <option value="" selected disabled hidden>Choose State</option>
                         <option value="Johor" {{ old('negeri') == "Johor" ? 'selected' : '' }}>Johor</option>
                         <option value="Kedah" {{ old('negeri') == "Kedah" ? 'selected' : '' }}>Kedah</option>
                         <option value="Kelantan" {{ old('negeri') == "Kelantan" ? 'selected' : '' }}>Kelantan</option>
@@ -323,7 +323,7 @@
                 <!-- Nama Kementerian/Jabatan/Badan Berkanun/Swasta -->
                 <div class="col-md" id="nama_kementerian_div" style="display: block;">
                     <div class="form-group">
-                      <label for="nama_kementerian" class="required">Nama Kementerian/Jabatan/Badan Berkanun/Swasta/Institut Pengajian Tinggi</label>
+                      <label for="nama_kementerian" class="required">Name of Ministry/Department/Statutory Body/Private/Institutes of Higher Education</label>
                       <input id="nama_kementerian" type="text" class="form-control bg-light @error('nama_kementerian') is-invalid @enderror" name="nama_kementerian" value="{{ old('nama_kementerian') }}" autocomplete="nama_kementerian"  oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                       @error('nama_kementerian')
                       <span class="invalid-feedback" role="alert">
@@ -343,7 +343,7 @@
                 <!-- Bahagian -->
                 <div class="col-md" id="bahagian_div" style="display: none;">
                     <div class="form-group">
-                      <label for="bahagian" class="required">Bahagian / JPN</label>
+                      <label for="bahagian" class="required">Department/JPN</label>
                       <input id="bahagian" type="text" class="form-control bg-light @error('bahagian') is-invalid @enderror" name="bahagian" value="{{ old('bahagian') }}" autocomplete="bahagian"  oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                       @error('bahagian')
                       <span class="invalid-feedback" role="alert">
@@ -363,7 +363,7 @@
                 <!-- Alamat Kementerian/Jabatan/Badan Berkanun/Swasta -->
                 <div class="col-md" id="alamat_kementerian_div" style="display: block;">
                     <div class="form-group">
-                      <label for="alamat_kementerian" class="required">Alamat Kementerian/Jabatan/Badan Berkanun/Swasta/Institut Pengajian Tinggi</label>
+                      <label for="alamat_kementerian" class="required">Address of Ministry/Department/Statutory Body/Private/Institutes of Higher Education</label>
                       <!-- <input id="alamat_kementerian" type="text" class="form-control bg-light @error('alamat_kementerian') is-invalid @enderror" name="alamat_kementerian" value="{{ old('alamat_kementerian') }}" autocomplete="alamat_kementerian"  > -->
                       <textarea id="alamat_kementerian" name="alamat_kementerian" rows="2" cols="50" class="form-control bg-light @error('alamat_kementerian') is-invalid @enderror" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">{{ old('alamat_kementerian') }}</textarea>
                       @error('alamat_kementerian')
@@ -384,10 +384,10 @@
                 <!-- No Telefon Rumah -->
                 <div class="col-md">
                     <div class="form-group">
-                      <label for="no_tel_rumah" class="required">No Telefon Pejabat</label>
+                      <label for="no_tel_rumah" class="required">Office Number</label>
 
                       <input id="no_tel_rumah" type="text" minlength="10" maxlength="11" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_rumah') is-invalid @enderror" name="no_tel_rumah" value="{{ old('no_tel_rumah') }}" autocomplete="phone" >
-                      <small id="saiz_data"  class="form-text text-secondary">Contoh : 0312345678</small>
+                      <small id="saiz_data"  class="form-text text-secondary">Example : 0312345678</small>
                       @error('no_tel_rumah')
                       <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
@@ -402,10 +402,10 @@
                 <!-- No Telefon Bimbit -->
                 <div class="col-md">
                     <div class="form-group">
-                      <label for="no_tel_bimbit" class="required">No Telefon Bimbit</label>
+                      <label for="no_tel_bimbit" class="required">Phone Number</label>
 
                       <input id="no_tel_bimbit" type="text" minlength="10" maxlength="11" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_bimbit') is-invalid @enderror" name="no_tel_bimbit" value="{{ old('no_tel_bimbit') }}" autocomplete="phone" >
-                      <small id="saiz_data"  class="form-text text-secondary">Contoh : 0123456789</small>
+                      <small id="saiz_data"  class="form-text text-secondary">Example : 0123456789</small>
                       @error('no_tel_bimbit')
                       <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
@@ -431,7 +431,7 @@
                     <div class="form-group">
                       <label for="email" class="required">Email</label>
                       <input id="email" type="email" class="form-control bg-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
-                      <small id="saiz_data" class="form-text text-secondary">PERINGATAN : Pemohon hendaklah menggunakan email yang sah untuk menggunakan sistem eSpatial</small>
+                      <small id="saiz_data" class="form-text text-secondary">WARNING: Applicants must use a valid email to use the eSpatial system</small>
                       @error('email')
                       <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
@@ -459,17 +459,17 @@
                   </div>
 
                 </div>
-                <button type="submit" onclick="return confirm('Anda pasti maklumat ini tepat? ');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit-form">Daftar</button>
+                <button type="submit" onclick="return confirm('Are you sure the information is correct? ');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit-form">Register</button>
 
                 <div style="padding:10px;"></div>
 
                 <div class="btn btn-block w-75 m-auto">
                     <div class="btn btn-primarynew rounded m-0">
-                      <a href="{{ route('login') }}" >Log Masuk</a>
+                      <a href="{{ route('auth.login_eng') }}" >Login</a>
                     </div>
                     <span> | </span>
                     <div class="btn btn-primarynew rounded m-0">
-                        <a href="{{ route('password.request') }}" >Lupa Kata Laluan</a>
+                        <a href="{{ route('auth.passwords.email_eng') }}" >Forgot Password</a>
                     </div>
                 </div>
               </div>
