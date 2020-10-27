@@ -62,13 +62,39 @@ class AdminController extends Controller
     return view('superadmin.audit', compact('data'));
   }
 
+  public function auditTrailFilter(Request $request){
+    $tarikh_mula = date($request->tarikh_mula);
+    $tarikh_akhir = date($request->tarikh_akhir);
+
+    // $data = Audit::whereBetween('created_at', [$tarikh_mula.' 00:00:00',$tarikh_akhir.' 23:59:59'])
+    //             ->where('event', 'Log Masuk')
+    //             ->orWhere('event', 'Log Keluar')
+    //             ->orderBy('created_at', 'desc')
+    //             ->get();
+
+
+    $data = Audit::whereHas('user', function($q) {
+                  $q->where('role','!=','5');
+                })->where('event','!=','Log Masuk')->where('event','!=','Log Keluar')
+                ->where('created_at', '>', $tarikh_mula.' 00:00:00')
+                ->where('created_at', '<', $tarikh_akhir.' 23:59:59')
+                ->orderBy('created_at', 'asc')
+                ->get();
+
+    // $data = DB::select(DB::raw("SELECT * FROM audits WHERE  (event = 'Log Masuk' OR event = 'Log Keluar') AND created_at > '2020-09-18 00:00:00' AND created_at < '2020-09-21 23:59:59' ORDER BY `audits`.`created_at` DESC"));
+
+    // dd($data);
+
+    return view('superadmin.auditFilter', compact('data'));
+  }
+
   public function auditTrailLogUser()
   {
     // $data = Audit::with('user')->get();
     // $data = User::where('role','!=','5')->get();
     // $all = $user->audits;
-    $data = Audit::where('event','Log Masuk')->orWhere('event','Log Keluar')->get();
-
+    // $data = Audit::where('event','Log Masuk')->orWhere('event','Log Keluar')->get();
+    $data = Audit::where('event','Log Masuk')->get();
 
     // dd($data);
     return view('superadmin.auditUser', compact('data'));
@@ -87,6 +113,7 @@ class AdminController extends Controller
 
     $data = Audit::where('created_at', '>', $tarikh_mula.' 00:00:00')
                 ->where('created_at', '<', $tarikh_akhir.' 23:59:59')
+                ->where('event','Log Masuk')
                 ->orderBy('created_at', 'asc')
                 ->get();
 

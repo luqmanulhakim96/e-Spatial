@@ -152,6 +152,8 @@ Route::middleware('admin')->group(function () {
 
   Route::get('/audit-trail', 'AdminController@auditTrail')->name('superadmin.auditTrail');
 
+  Route::post('/audit-trail/filter', 'AdminController@auditTrailFilter')->name('superadmin.auditTrailFilter');
+
   Route::get('/audit-trail-user', 'AdminController@auditTrailLogUser')->name('superadmin.auditTrailLogUser');
 
   Route::post('/audit-trail-user/filter', 'AdminController@auditTrailLogUserFilter')->name('superadmin.auditTrailLogUserFilter');
