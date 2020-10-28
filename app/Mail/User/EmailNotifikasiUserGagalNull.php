@@ -36,8 +36,8 @@ class EmailNotifikasiUserGagalNull extends Mailable
       $permohonan =  $this->permohonan;
 
       return $this->to($this->admin->email , $this->admin->name)
-              ->from(env('MAIL_FROM_ADDRESS'))
-              // ->from('system@espatial.com')
+              // ->from(env('MAIL_FROM_ADDRESS'))
+              ->from('espatial@forestry.gov.my')
               ->subject('Permohonan Gagal')
               ->view('senarai-email.templates.notifikasiUserPermohonanGagalNull', compact('permohonan'));
     }

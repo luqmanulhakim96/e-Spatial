@@ -41,8 +41,8 @@ class EmailNotifikasiUserGagal extends Mailable
         $permohonan =  $this->permohonan;
         // dd($this->email);
         return $this->to($this->admin->email , $this->admin->name)
-                ->from(env('MAIL_FROM_ADDRESS'))
-                // ->from('system@espatial.com')
+                // ->from(env('MAIL_FROM_ADDRESS'))
+                ->from('espatial@forestry.gov.my')
                 ->subject($this->email->subjek)
                 ->view('senarai-email.templates.notifikasiUser', compact('email','permohonan'));
     }
