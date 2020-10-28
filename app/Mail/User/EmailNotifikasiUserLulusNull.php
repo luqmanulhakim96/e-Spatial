@@ -32,8 +32,8 @@ class EmailNotifikasiUserLulusNull extends Mailable
     public function build()
     {
       return $this->to($this->admin->email , $this->admin->name)
-              ->from(env('MAIL_FROM_ADDRESS'))
-              // ->from('system@espatial.com')
+              // ->from(env('MAIL_FROM_ADDRESS'))
+              ->from('espatial@forestry.gov.my')
               ->subject('Permohonan Lulus')
               ->view('senarai-email.templates.notifikasiUserPermohonanLulusNull');
     }
