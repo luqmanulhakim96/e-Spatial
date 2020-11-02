@@ -38,8 +38,8 @@ class EmailNotifikasiLupaKataLaluan extends Mailable
       $user = $this->user;
 
       // return $this->to($this->user->email , $this->user->name)
-      return $this->from(env('MAIL_FROM_ADDRESS'))
-      // return $this->from('espatial@forestry.gov.my')
+      // return $this->from(env('MAIL_FROM_ADDRESS'))
+      return $this->from('espatial@forestry.gov.my')
               ->subject('Tetapan Semula Katalaluan')
               ->view('senarai-email.templates.notifikasiUserResetPassword', compact('token', 'user'));
     }

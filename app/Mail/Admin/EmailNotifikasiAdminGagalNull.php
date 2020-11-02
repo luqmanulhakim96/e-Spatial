@@ -32,8 +32,8 @@ class EmailNotifikasiAdminGagalNull extends Mailable
     public function build()
     {
       return $this->to($this->admin->email , $this->admin->name)
-              ->from(env('MAIL_FROM_ADDRESS'))
-              // ->from('espatial@forestry.gov.my')
+              // ->from(env('MAIL_FROM_ADDRESS'))
+              ->from('espatial@forestry.gov.my')
               ->subject('Terdapat Permohonan Gagal')
               ->view('senarai-email.templates.notifikasiAdminPermohonanGagalNull');
     }

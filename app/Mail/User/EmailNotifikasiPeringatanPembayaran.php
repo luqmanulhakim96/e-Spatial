@@ -34,8 +34,8 @@ class EmailNotifikasiPeringatanPembayaran extends Mailable
         // return $this->view('view.name');
         // dd($this->data);
         return $this->to($this->data['user_email'], $this->data['user_name'])
-                ->from(env('MAIL_FROM_ADDRESS'))
-                // ->from('espatial@forestry.gov.my')
+                // ->from(env('MAIL_FROM_ADDRESS'))
+                ->from('espatial@forestry.gov.my')
                 ->subject($this->data['subject']." ".$this->data['permohonan_id'])
                 ->view('senarai-email.templates.notifikasiUserPeringatan');
     }
