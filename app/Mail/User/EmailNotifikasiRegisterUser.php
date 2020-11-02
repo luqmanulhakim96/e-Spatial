@@ -34,7 +34,7 @@ class EmailNotifikasiRegisterUser extends Mailable
       $password = $this->password;
       return $this->to($this->user['email'] , $this->user['nama'])
               // ->from(env('MAIL_FROM_ADDRESS'))
-              ->from('espatial@forestry.gov.my')
+              ->from('espatial@forestry.gov.my' ,'E-mel Sistem eSpatial')
               ->subject('Pendaftaran Berjaya')
               ->view('senarai-email.templates.notifikasiUserPendaftaranBaru', compact('user','password'));
     }

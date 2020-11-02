@@ -33,7 +33,7 @@ class EmailNotifikasiAdminNull extends Mailable
     {
       return $this->to($this->admin->email , $this->admin->name)
               // ->from(env('MAIL_FROM_ADDRESS'))
-              ->from('espatial@forestry.gov.my')
+              ->from('espatial@forestry.gov.my' ,'E-mel Sistem eSpatial')
               ->subject('Permohonan Baru')
               ->view('senarai-email.templates.notifikasiAdminPermohonanNull');
     }

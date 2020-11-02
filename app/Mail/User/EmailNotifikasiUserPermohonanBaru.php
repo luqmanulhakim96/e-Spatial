@@ -33,7 +33,7 @@ class EmailNotifikasiUserPermohonanBaru extends Mailable
     {
       return $this->to($this->user->email , $this->user->name)
               // ->from(env('MAIL_FROM_ADDRESS'))
-              ->from('espatial@forestry.gov.my')
+              ->from('espatial@forestry.gov.my' ,'E-mel Sistem eSpatial')
               ->subject('Permohonan Diterima')
               ->view('senarai-email.templates.notifikasiUserPermohonanBaru');
     }

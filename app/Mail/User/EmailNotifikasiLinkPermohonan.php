@@ -36,7 +36,7 @@ class EmailNotifikasiLinkPermohonan extends Mailable
         //dd($permohonan);
         return $this->to($this->user['email'] , $this->user['nama'])
                 // ->from(env('MAIL_FROM_ADDRESS'))
-                ->from('espatial@forestry.gov.my')
+                ->from('espatial@forestry.gov.my' ,'E-mel Sistem eSpatial')
                 ->subject($permohonan->getPermohonanID().' '.'Penerimaan Data')
                 ->attachFromStorage($permohonan->attachment_penerimaan_data)
                 ->view('senarai-email.templates.notifikasiUserPenerimaanData', compact('permohonan'));
