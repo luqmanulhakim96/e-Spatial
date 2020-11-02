@@ -32,8 +32,8 @@ class EmailNotifikasiUserPermohonanBaru extends Mailable
     public function build()
     {
       return $this->to($this->user->email , $this->user->name)
-              // ->from(env('MAIL_FROM_ADDRESS'))
-              ->from('espatial@forestry.gov.my')
+              ->from(env('MAIL_FROM_ADDRESS'))
+              // ->from('espatial@forestry.gov.my')
               ->subject('Permohonan Diterima')
               ->view('senarai-email.templates.notifikasiUserPermohonanBaru');
     }
