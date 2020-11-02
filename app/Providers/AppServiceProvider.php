@@ -7,6 +7,7 @@ use Illuminate\Support\ServiceProvider;
 use App\User;
 use Auth;
 use App\Permohonan;
+use Illuminate\Support\Facades\Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+      Schema::defaultStringLength(191);
+
       view()->composer('*', function ($view)
       {
         if(Auth::user()){
