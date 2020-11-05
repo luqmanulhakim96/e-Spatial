@@ -314,6 +314,10 @@ class RegisterController extends Controller
         event(new Registered($user = $this->create($request->all())));
       }
 
-        return redirect('/login')->with('success','Pendaftaran anda telah berjaya');
+        if($request->language == "english"){
+          return redirect('/login/eng')->with('success','Your registration has been successful');
+        }else {
+          return redirect('/login')->with('success','Pendaftaran anda telah berjaya');
+        }
     }
 }

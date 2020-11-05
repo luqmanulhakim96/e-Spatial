@@ -448,8 +448,11 @@ class UserController extends Controller
 
     $permohonanBaru->notify(new PermohonanBaruUser(Auth::user(),$emailUser));
 
-
-    return redirect()->route('user.listSedangDiproses')->with('success','Anda berjaya membuat permohonan data.');
+    if($request->language == "english"){
+      return redirect()->route('user.listSedangDiproses_eng')->with('success','You have successfully made a data request.');
+    }else {
+      return redirect()->route('user.listSedangDiproses')->with('success','Anda berjaya membuat permohonan data.');
+    }
   }
 
   public function edit($id){
@@ -546,8 +549,11 @@ class UserController extends Controller
         'custom_tahun' => $tahun_single,
       ]);
     }
-
-    return redirect()->route('user.listSedangDiproses')->with('success','Data permohonan anda telah berjaya dikemaskini.');
+    if($request->language == "english"){
+      return redirect()->route('user.listSedangDiproses_eng')->with('success','Your application data has been successfully updated.');
+    }else {
+      return redirect()->route('user.listSedangDiproses')->with('success','Data permohonan anda telah berjaya dikemaskini.');
+    }
   }
 
   public function editProfil(){
@@ -718,7 +724,11 @@ class UserController extends Controller
 
     }
 
-    return redirect()->route('user.profil.edit')->with('success','Profil anda telah dikemaskini');
+    if($request->language == "english"){
+      return redirect()->route('user.profil.edit_eng')->with('success','Your profile has been updated');
+    }else {
+      return redirect()->route('user.profil.edit')->with('success','Profil anda telah dikemaskini');
+    }
     //return view('user.profil.edit');
   }
 
@@ -736,8 +746,13 @@ class UserController extends Controller
     foreach ($admins as $data) {
       $permohonan->notify(new PermohonanMuatNaikResitAdmin($data, $email));
     }
+    if($request->language == "english"){
+      return redirect()->route('user.list_eng')->with('success','Payment receipt was successfully uploaded');
 
-    return redirect()->route('user.list')->with('success','Resit Pembayaran telah berjaya dimuatnaik');
+    }else {
+      return redirect()->route('user.list')->with('success','Resit Pembayaran telah berjaya dimuatnaik');
+
+    }
   }
 
   public function uploadPenerimaanData(Request $request){
@@ -746,7 +761,11 @@ class UserController extends Controller
     $permohonan->attachment_penerimaan_data_user = $uploaded_files_permohonan;
     $permohonan->save();
 
-    return redirect()->route('user.list')->with('success','Borang Akuan Penerimaan Data anda telah berjaya dimuatnaik');
+    if ($request->language == "english") {
+      return redirect()->route('user.list_eng')->with('success','Data Acceptance Form was successfully uploaded');
+    }else {
+      return redirect()->route('user.list')->with('success','Borang Akuan Penerimaan Data anda telah berjaya dimuatnaik');
+    }
   }
 
   public function updatePass(Request $request){
@@ -778,7 +797,11 @@ class UserController extends Controller
 
       $user->save();
 
-      return redirect()->route('user.mainMenu')->with("success","Kata laluan telah ditukar");
+      if($request->language == "english"){
+        return redirect()->route('user.mainMenu_eng')->with("success","Password has been changed");
+      }else {
+        return redirect()->route('user.mainMenu')->with("success","Kata laluan telah ditukar");
+      }
   }
 
   public function downloadSuratBayaran($id){

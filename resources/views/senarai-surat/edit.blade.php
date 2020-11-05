@@ -8,13 +8,15 @@
                 </div>
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Kemaskini Surat</div>
+
                   <div class="card-body">
                       <form action="{{route('senarai-surat.update', $info->id)}}" method="post" id="senarai_surat_submit">
                         @csrf
                         <div class="row">
                           <div class="col-md-12">
-                            <div class="card-title">Edit Surat</div>
+                            <!-- <div class="card-title">Edit Surat</div> -->
                               <!--jumlah harga input -->
                               <div class="row">
                                   <div class="col-md-6">
@@ -75,7 +77,10 @@
                             </div>
                         </div>
                         <div class="row">
-                          <div class="col-md-12">
+                          <div class="col-md-5">
+
+                          </div>
+                          <div class="col-md">
                             <button type="submit" class="btn btn-primary">Edit</button>
                           </div>
                         </div>

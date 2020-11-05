@@ -8,9 +8,11 @@
 
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pemohonan Batal</div>
+
                   <div class="card-body">
-                      <div class="card-title">Senarai Pemohonan Batal</div>
+                      <!-- <div class="card-title">Senarai Pemohonan Batal</div> -->
 
                       <div class="table-responsive">
 

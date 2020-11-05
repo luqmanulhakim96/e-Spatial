@@ -7,9 +7,11 @@
                     <small class="mt-2 ml-2">Dashboard</small> -->
                 </div>
                 <!-- Small card component -->
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Audit Trail Log Akses</div>
+
                   <div class="card-body">
-                      <div class="card-title">Audit Trail</div>
+                      <!-- <div class="card-title">Audit Trail</div> -->
                       <div style="padding:5px;"></div>
 
 

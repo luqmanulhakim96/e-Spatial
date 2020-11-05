@@ -447,6 +447,8 @@
 
                 </div>
               </div>
+              <input type="hidden" name="language" value="english">
+
               <!-- Submit button -->
               <div style="padding : 10px;">
 
