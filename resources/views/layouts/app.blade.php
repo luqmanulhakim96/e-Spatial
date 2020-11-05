@@ -125,13 +125,13 @@
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.list') }}" class="w-100 py-3 pl-4" >Senarai Pengguna Admin</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.list') }}" class="w-100 py-3 pl-4" >Senarai Pengguna</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.listPenggunaLuar') }}" class="w-100 py-3 pl-4" >Senarai Pengguna Luar</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.listPenggunaLuar') }}" class="w-100 py-3 pl-4" >Senarai Pemohon</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrail') }}" class="w-100 py-3 pl-4" >Audit Trail</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrail') }}" class="w-100 py-3 pl-4" >Audit Trail Proses</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrailLogUser') }}" class="w-100 py-3 pl-4" >Audit Trail Keluar Masuk Pengguna</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrailLogUser') }}" class="w-100 py-3 pl-4" >Audit Trail Log Akses</a></li>
 
                         @endif
                     </ul>
@@ -273,8 +273,8 @@
 
     <!-- Footer section -->
     <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary" style="background: linear-gradient(to bottom, #cccccc 0%, #ffffff 110%) !important;">
-        <p>&copy; Copyright. <a href="https://www.forestry.gov.my/my/" target="_Blank">Jabatan Perhutanan Semenanjung Malaysia</a></p>
-        <p>Version 1.0.0</p>
+        <p>&copy; Hakcipta Terpelihara 2020. <a href="https://www.forestry.gov.my/my/" target="_Blank">Jabatan Perhutanan Semenanjung Malaysia</a></p>
+        <p>Versi 1.0</p>
     </footer>
   </div>
 

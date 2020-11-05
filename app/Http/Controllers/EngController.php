@@ -91,6 +91,32 @@ class EngController extends Controller
       return view('user.add_eng', compact('jenisDokumen'));
     }
 
+    public function edit($id){
+      $info = Permohonan::findOrFail($id);
+      $dataPilihan = DataPermohonan::where('permohonan_id', $id)->get();
+      $jumlahdata = DataPermohonan::where('permohonan_id', $id)->count();
+      $jenisDokumen = SenaraiHarga::select('jenis_dokumen')->distinct()->get();
+      //dd($dataPilihan);
+
+      $senaraiHarga = null;
+
+      for($i = 0; $i < $jumlahdata; $i++){
+        $senaraiHarga[$i] = SenaraiHarga::where('id',$dataPilihan[$i]->senarai_harga_id)->get();
+      }
+      //dd($dataPilihan);
+
+
+      //$senaraiHarga = SenaraiHarga::get();
+      //dd($senaraiHarga[0][0]);
+      // $i=0;
+      // foreach ($senaraiHarga[1] as $data) {
+      //   dd($data);
+      //   $i++;
+      // }
+      //dd($data);
+      return view('user.edit_eng', compact('info','dataPilihan','jenisDokumen','jumlahdata','senaraiHarga'));
+    }
+
     public function viewListSedangDiproses(){
       $user_id = Auth::user()->id;
 

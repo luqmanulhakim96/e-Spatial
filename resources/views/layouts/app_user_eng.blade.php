@@ -126,7 +126,7 @@
             @if ($message = Session::get('success'))
             <div id=alert>
                 <div class="alert alert-card  alert-success" role="alert">
-                    <strong>Operasi Berjaya! </strong>
+                    <strong>Operation Successful! </strong>
                     {{$message}}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

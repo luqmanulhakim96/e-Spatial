@@ -62,7 +62,7 @@
                               @if($data->ulasan_admin == NULL)
                               <td>
                                     <div class="d-flex flex-row justify-content-around align-items-center">
-                                        <a href="{{ route('user.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <a href="{{ route('user.edit_eng', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
                                     </div>
                               </td>
                               <td>

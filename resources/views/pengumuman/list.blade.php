@@ -8,9 +8,11 @@
 
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pengumuman</div>
+
                   <div class="card-body">
-                      <div class="card-title">Senarai Pengumuman</div>
+                      <!-- <div class="card-title">Senarai Pengumuman</div> -->
                       <a class="btn btn-ripple btn-raised btn-primary m-2" href="{{ route('pengumuman.add') }}">Pengumuman Baru</a>
 
                       <div class="table-responsive">

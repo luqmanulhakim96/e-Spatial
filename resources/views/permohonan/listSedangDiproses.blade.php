@@ -8,9 +8,11 @@
 
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pemohonan Sedang Diproses</div>
+
                   <div class="card-body">
-                      <div class="card-title">Senarai Pemohonan Sedang Diproses</div>
+                      <!-- <div class="card-title">Senarai Pemohonan Sedang Diproses</div> -->
                       <div class="table-responsive">
 
                         <table class="table table-striped table-bordered" id="list_permohonan_baru_2" style="width: 100%;">

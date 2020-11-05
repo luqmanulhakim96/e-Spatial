@@ -155,7 +155,7 @@
                                 <div class="form-group" id="kategori_data_div" style="display: none;">
                                     <label for="kategori_data">Category of Data:</label>
                                       <select id="kategori_data" class="custom-select  bg-light" name="kategori_data" required>
-                                          <option value="" selected disabled hidden>Pilih Kategori Data</option>
+                                          <option value="" selected disabled hidden>Choose Category of Data</option>
                                       </select>
                                       @error('kategori_data')
                                       <div class="alert alert-danger">
@@ -399,7 +399,7 @@
                       </div>
                     </div>
 
-
+                    <input type="hidden" name="language" value="english">
 
                     <div class="row">
 
@@ -877,7 +877,7 @@
           //clear kategori_data selection
           $("#kategori_data").empty();
           //default selection
-          $("#kategori_data").append('<option value="" selected disabled hidden>Pilih Kategori Data</option>');
+          $("#kategori_data").append('<option value="" selected disabled hidden>Choose Category of Data</option>');
           //ajax
           if(jenisData){
             $.ajax({

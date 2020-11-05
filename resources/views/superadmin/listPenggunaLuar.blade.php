@@ -8,9 +8,11 @@
                 </div>
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pemohon</div>
+
                   <div class="card-body">
-                      <div class="card-title">Senarai Pengguna Luar</div>
+                      <!-- <div class="card-title">Senarai Pengguna Luar</div> -->
                       <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
 
                         <thead>

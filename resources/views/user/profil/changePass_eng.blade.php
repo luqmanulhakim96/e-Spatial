@@ -102,7 +102,8 @@
                           </div>
                         </div>
                       </div>
-
+                      <input type="hidden" name="language" value="english">
+                      
                       <button type="submit" onclick="return confirm('Anda pasti untuk tukar kata laluan?')" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto">Change Password</button>
 
 

@@ -262,6 +262,8 @@
                                 </div>
 
                                   <input type="hidden" id="permohonan_id_surat" name="permohonan_id_surat" value="">
+                                  <input type="hidden" name="language" value="melayu">
+
 
                               </div>
                               <div class="modal-footer">
@@ -294,6 +296,8 @@
                                 </div>
 
                                   <input type="hidden" id="permohonan_id_resit" name="permohonan_id_resit" value="">
+                                  <input type="hidden" name="language" value="malayu">
+
 
                               </div>
                               <div class="modal-footer">
