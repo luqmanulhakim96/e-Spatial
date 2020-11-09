@@ -46,7 +46,7 @@
                                   <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)" required>
                                       <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                       @foreach($jenisDokumen as $data)
-                                      <option value="{{$data->jenis_dokumen}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
+                                      <option value="{{preg_replace('/\s+/', '',$data->jenis_dokumen)}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
                                       @endforeach
                                   </select>
                                   @error('jenis_dokumen')
@@ -423,15 +423,20 @@
 
 
         function showDiv(select){
-           if(select.value=='Petak Kajian'){
+           if(select.value=='PetakKajian'){
+             // console.log("masuk petakajian");
             document.getElementById('default_form_div').style.display = "block";
             document.getElementById('custom_form_div').style.display = "none";
             document.getElementById('kategori_data_div').style.display = "block";
             document.getElementById('tahun_div').style.display = "none";
           } else if (select.value=='Lain-Lain') {
+            // console.log("masuk lainlain");
+
             document.getElementById('default_form_div').style.display = "none";
             document.getElementById('custom_form_div').style.display = "block";
           }else{
+            // console.log("masuk selani");
+
             document.getElementById('default_form_div').style.display = "block";
             document.getElementById('custom_form_div').style.display = "none";
              document.getElementById('kategori_data_div').style.display = "none";
@@ -521,15 +526,15 @@
                 var custom_tahun = document.getElementById("custom_tahun").value;
                 var custom_negeri = document.getElementById("custom_negeri").value;
 
-                // console.log('Jenis Dokumen :' + jenis_dokumen);
-                // console.log('Jenis Data :' + jenis_data);
-                // console.log('Tahun :' + tahun);
-                // console.log('Kategori Data :' + kategori_data);
-                // console.log('Negeri :' + negeri);
-                // console.log('Jenis Kertas :' + jenis_kertas);
-                // console.log('Custom Jenis Dokumen :' + custom_jenis_data);
-                // console.log('Custom tahun :' + custom_tahun);
-                // console.log('Custom Negeri :' + custom_negeri);
+                console.log('Jenis Dokumen :' + jenis_dokumen);
+                console.log('Jenis Data :' + jenis_data);
+                console.log('Tahun :' + tahun);
+                console.log('Kategori Data :' + kategori_data);
+                console.log('Negeri :' + negeri);
+                console.log('Jenis Kertas :' + jenis_kertas);
+                console.log('Custom Jenis Dokumen :' + custom_jenis_data);
+                console.log('Custom tahun :' + custom_tahun);
+                console.log('Custom Negeri :' + custom_negeri);
 
 
 
@@ -813,7 +818,9 @@
                 data.forEach(function(data)
                 {
                   //console.log(data.jenis_data);
-                  $("#jenis_data").append('<option value="'+data.jenis_data+'">'+data.jenis_data+'</option>');
+                  // $("#jenis_data").append('<option value="'+data.jenis_data+'">'+data.jenis_data+'</option>');
+                  $("#jenis_data").append('<option value="'+data.jenis_data.replace(/\s+/g, '')+'">'+data.jenis_data+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');

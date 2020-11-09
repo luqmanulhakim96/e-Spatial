@@ -14,6 +14,7 @@
                   <div class="card-body">
                       <!-- <div class="card-title">Senarai Pengguna Admin</div> -->
                       <a class="btn btn-primary mb-2" href="{{ route('superadmin.add') }}">Tambah Pengguna</a>
+                      <div style="padding: 15px;"></div>
                         <!-- Tab nav -->
                         <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item">
@@ -37,6 +38,8 @@
                         <!-- Tab content -->
                         <div class="tab-content" id="pills-tabContent">
                           <div class="tab-pane active" id="active" role="tabpanel" aria-labelledby="active-tab">
+                            <div style="padding: 10px;"></div>
+                            <div class="table-responsive">
                               <table class="table table-striped table-bordered" id="responsiveDataTable" style="width: 100%;">
 
                                 <thead>
@@ -82,8 +85,11 @@
                                 </tbody>
                               </table>
                             </div>
+                            </div>
 
                             <div class="tab-pane" id="deactive" role="tabpanel" aria-labelledby="deactive-tab">
+                              <div style="padding: 10px;"></div>
+
                               <div class="table-responsive">
 
                               <table class="table table-striped table-bordered" id="responsiveDataTable2" style="width: 100%;">
