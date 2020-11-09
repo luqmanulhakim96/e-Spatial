@@ -94,6 +94,17 @@ class UserController extends Controller
 
   public function getSenaraiHargaIdByTahun($jenisDokumen, $jenisData, $tahun, $negeri, $jenisKertas){
 
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    // if($kategoriData != "G&Y" && $kategoriData != "CFI"){
+    //   $kategoriData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $kategoriData );
+    //   $kategoriData = ltrim($kategoriData);
+    // }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
     if($jenisKertas == 'tiada'){
       $senaraiHargaId = SenaraiHarga::select('id')
                         ->where('jenis_dokumen',$jenisDokumen)
@@ -116,6 +127,17 @@ class UserController extends Controller
 
   public function getSenaraiHargaIdByKategoriData($jenisDokumen, $jenisData, $kategoriData, $negeri, $jenisKertas){
 
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    if($kategoriData != "G&Y" && $kategoriData != "CFI"){
+      $kategoriData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $kategoriData );
+      $kategoriData = ltrim($kategoriData);
+    }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
     if($jenisKertas == 'tiada'){
       $senaraiHargaId = SenaraiHarga::select('id')
                         ->where('jenis_dokumen',$jenisDokumen)
@@ -137,6 +159,17 @@ class UserController extends Controller
   }
 
   public function getSenaraiHargaIdCustom($jenisDokumen, $jenisData, $jenisKertas, $negeri){
+
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    // if($kategoriData != "G&Y" && $kategoriData != "CFI"){
+    //   $kategoriData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $kategoriData );
+    //   $kategoriData = ltrim($kategoriData);
+    // }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
 
     if($jenisKertas == 'tiada'){
       $senaraiHargaId = SenaraiHarga::select('id')
@@ -227,6 +260,9 @@ class UserController extends Controller
 
   public function getJenisData($jenisDokumen){
     // Fetch Users by Departmentid
+      $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+      $jenisDokumen = ltrim($jenisDokumen);
+
       $jenisData = SenaraiHarga::select('jenis_data')
               			->where('jenis_dokumen',$jenisDokumen)
                     ->distinct()
@@ -236,6 +272,14 @@ class UserController extends Controller
   }
 
   public function getTahun($jenisData, $jenisDokumen){
+
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
     $tahun = SenaraiHarga::select('tahun')
               ->where('jenis_data', $jenisData)
               ->where('jenis_dokumen', $jenisDokumen)
@@ -246,6 +290,14 @@ class UserController extends Controller
   }
 
   public function getKategoriData($jenisData,$jenisDokumen){
+
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
     $kategoriData = SenaraiHarga::select('kategori_data')
                       ->where('jenis_data', $jenisData)
                       ->where('jenis_dokumen', $jenisDokumen)
@@ -256,6 +308,15 @@ class UserController extends Controller
   }
 
   public function getCustomNegeri($jenisData,$jenisDokumen){
+
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
+
     $negeri = SenaraiHarga::select('negeri')
                 ->where('jenis_data', $jenisData)
                 ->where('jenis_dokumen', $jenisDokumen)
@@ -266,6 +327,14 @@ class UserController extends Controller
   }
 
   public function getNegeriFromTahun($jenisData,$jenisDokumen,$tahun){
+
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
     $negeri = SenaraiHarga::select('negeri')
                 ->where('jenis_data', $jenisData)
                 ->where('jenis_dokumen', $jenisDokumen)
@@ -277,6 +346,18 @@ class UserController extends Controller
   }
 
   public function getNegeriFromKategoriData($jenisData,$jenisDokumen,$kategoriData){
+
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    if($kategoriData != "G&Y" && $kategoriData != "CFI"){
+      $kategoriData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $kategoriData );
+      $kategoriData = ltrim($kategoriData);
+    }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
     $negeri = SenaraiHarga::select('negeri')
                 ->where('jenis_data', $jenisData)
                 ->where('jenis_dokumen', $jenisDokumen)
@@ -288,6 +369,13 @@ class UserController extends Controller
   }
 
   public function getJenisKertasFromTahun($jenisData,$jenisDokumen,$tahun,$negeri){
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
     $jenisKertas = SenaraiHarga::select('jenis_kertas')
                 ->where('jenis_data', $jenisData)
                 ->where('jenis_dokumen', $jenisDokumen)
@@ -300,6 +388,17 @@ class UserController extends Controller
   }
 
   public function getJenisKertasFromKategoriData($jenisData,$jenisDokumen,$kategoriData,$negeri){
+    if($jenisData != "Lain-Lain"){
+          $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+          $jenisData = ltrim($jenisData);
+    }
+    if($kategoriData != "G&Y" && $kategoriData != "CFI"){
+      $kategoriData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $kategoriData );
+      $kategoriData = ltrim($kategoriData);
+    }
+    $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+    $jenisDokumen = ltrim($jenisDokumen);
+
       $jenisKertas = SenaraiHarga::select('jenis_kertas')
                   ->where('jenis_data', $jenisData)
                   ->where('jenis_dokumen', $jenisDokumen)
@@ -312,6 +411,13 @@ class UserController extends Controller
     }
 
     public function getCustomJenisKertas($jenisData,$jenisDokumen,$negeri){
+      if($jenisData != "Lain-Lain"){
+            $jenisData = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisData );
+            $jenisData = ltrim($jenisData);
+      }
+      $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
+      $jenisDokumen = ltrim($jenisDokumen);
+
         $jenisKertas = SenaraiHarga::select('jenis_kertas')
                      ->where('jenis_data', $jenisData)
                      ->where('jenis_dokumen', $jenisDokumen)

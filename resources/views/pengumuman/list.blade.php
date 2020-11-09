@@ -67,9 +67,9 @@
                               <td class="p-3">
                                     <div class="d-flex flex-row justify-content-around align-items-center">
                                       @if($user->role == $view->user2->role)
-                                        <a href="#" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <!-- <a href="#" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a> -->
                                         @else
-                                        <a href="#" class="btn btn-dark mr-1"><i class="fas fa-pencil-alt"></i></a>
+                                        <!-- <a href="#" class="btn btn-dark mr-1"><i class="fas fa-pencil-alt"></i></a> -->
                                         @endif
 
                                         @if($user->role == 0 || $user->role == $view->user2->role)
