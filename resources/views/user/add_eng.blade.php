@@ -15,7 +15,7 @@
                           <!-- <button class="btn btn-primary">Bahasa Melayu</button> -->
                           <a href="{{ route('user.add') }}" class="btn btn-outline-primary">Bahasa Melayu</a>
                           <button class="btn btn-primary">English</button>
-                          <!-- <a href="{{ route('auth.register_eng') }}" class="btn btn-outline-primary">English</a> -->
+                          <!-- <a href="{{ route('user.add_eng') }}" class="btn btn-outline-primary">English</a> -->
                       </div>
                     </div>
                   </div>
@@ -29,7 +29,7 @@
                 <!-- Small card component -->
 
                 <div class="card rounded-lg" style="border-color: #003473 !important;">
-                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">New Application</div>
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">New Data Application</div>
 
                   <div class="card-body">
                       <div class="">
@@ -46,7 +46,7 @@
                                   <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)" required>
                                       <option value="" selected disabled hidden>Choose Document Type</option>
                                       @foreach($jenisDokumen as $data)
-                                      <option value="{{$data->jenis_dokumen}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
+                                      <option value="{{preg_replace('/\s+/', '',$data->jenis_dokumen)}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
                                       @endforeach
                                   </select>
                                   @error('jenis_dokumen')
@@ -92,7 +92,7 @@
                                 <div class="form-group">
                                   <div class="form-group" id="custom_jenis_data_div" >
                                       <label for="maklumat_agensi">State The Data Type:</label>
-                                      <input type="text" class="form-control bg-light @error('custom_jenis_data') is-invalid @enderror" id="custom_jenis_data" name="custom_jenis_data" placeholder="State Data Type" aria-describedby="custom_jenis_data">
+                                      <input type="text" class="form-control bg-light @error('custom_jenis_data') is-invalid @enderror" id="custom_jenis_data" name="custom_jenis_data" placeholder="State The Data Type" aria-describedby="custom_jenis_data" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                                       @error('custom_jenis_data')
                                       <div class="alert alert-danger">
                                         <strong>{{ $message }}</strong>
@@ -112,6 +112,7 @@
                                   <div class="form-group" id="custom_tahun_div" >
                                       <label for="maklumat_agensi">Year:</label>
                                       <input type="text" class="form-control bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" placeholder="State Year of Data" aria-describedby="custom_tahun">
+                                      <small id="saiz_data" class="form-text text-secondary">Example : 2012 OR 2010-2012</small>
                                       @error('custom_tahun')
                                       <div class="alert alert-danger">
                                         <strong>{{ $message }}</strong>
@@ -254,7 +255,7 @@
 
                                 <div class="col-md">
                                   <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
-                                    <h6 style="text-align: center;">Important:</h6>
+                                    <h6 style="text-align: center;">Catatan:</h6>
                                     <span>Applicants must apply for at least one data in the list to proceed with the application</span><br>
 
                                   </div>
@@ -301,7 +302,7 @@
                             <label  class="required">Upload Application Letter:</label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return fileValidation('attachment_permohonan')" name="attachment_permohonan">
-                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Upload File</label>
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Upload file</label>
                             </div>
                             <small id="saiz_data" class="form-text text-secondary">File upload does not exceed 100MB</small>
                             <small id="saiz_data" class="form-text text-secondary">Please compress the file into .zip or .rar format if more than 1 document</small>
@@ -318,7 +319,7 @@
                             <label for="attachment_permohonan">Upload AOI Attachment:</label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="attachment_aoi" onchange="return fileValidation('attachment_aoi')" name="attachment_aoi">
-                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Upload File</label>
+                                <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Upload file</label>
                             </div>
                             <small id="saiz_data" class="form-text text-secondary">File upload does not exceed 100MB</small>
                             <small id="saiz_data" class="form-text text-secondary">Please compress the file into .zip or .rar format if more than 1 document</small>
@@ -399,12 +400,13 @@
                       </div>
                     </div>
 
-                    <input type="hidden" name="language" value="english">
+
+                    <input type="hidden" name="language" value="melayu">
 
                     <div class="row">
 
                       <div class="col-md" id="button_submit_permohonan" style="display: none;">
-                        <button type="submit" onclick="return confirm('Are you sure you want to request this data?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto" id="submit_data" >Request Data</button>
+                        <button type="submit" onclick="return confirm('Are you sure you want to request this data?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto" id="submit_data" >Apply Data</button>
 
                       </div>
                     </div>
@@ -422,15 +424,20 @@
 
 
         function showDiv(select){
-           if(select.value=='Petak Kajian'){
+           if(select.value=='PetakKajian'){
+             // console.log("masuk petakajian");
             document.getElementById('default_form_div').style.display = "block";
             document.getElementById('custom_form_div').style.display = "none";
             document.getElementById('kategori_data_div').style.display = "block";
             document.getElementById('tahun_div').style.display = "none";
           } else if (select.value=='Lain-Lain') {
+            // console.log("masuk lainlain");
+
             document.getElementById('default_form_div').style.display = "none";
             document.getElementById('custom_form_div').style.display = "block";
           }else{
+            // console.log("masuk selani");
+
             document.getElementById('default_form_div').style.display = "block";
             document.getElementById('custom_form_div').style.display = "none";
              document.getElementById('kategori_data_div').style.display = "none";
@@ -459,7 +466,7 @@
           var filePath = fileInput.value;
           var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png|\.zip|\.rar)$/i;
           if(!allowedExtensions.exec(filePath)){
-              alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg , .png , .zip dan .rar sahaja.');
+              alert('Please upload files in .pdf, .doc, .docx, .jpeg, .jpg, .png, .zip and .rar formats only.');
               fileInput.value = '';
               return false;
           }
@@ -469,7 +476,7 @@
               var numb = $(this)[0].files[0].size/102400 /102400 ;
               numb = numb.toFixed(2);
               if(numb > 2){
-              alert('Ralat! Fail anda melebihi 100MB. Saiz fail anda adalah: ' + numb +' MB');
+              alert('Error! Your file exceeds 100MB. Your file size is: ' + numb +' MB');
               document.getElementById("attachment_permohonan").value = "";
               var fileName = "";
               $(this).next('.custom-file-label').html(fileName);
@@ -481,7 +488,7 @@
                   var numb = $(this)[0].files[0].size/102400 /102400 ;
                   numb = numb.toFixed(2);
                   if(numb > 2){
-                  alert('Ralat! Fail anda melebihi 100MB. Saiz fail anda adalah: ' + numb +' MB');
+                  alert('Error! Your file exceeds 100MB. Your file size is: ' + numb +' MB');
                   document.getElementById("attachment_aoi").value = "";
                   var fileName = "";
                   $(this).next('.custom-file-label').html(fileName);
@@ -519,6 +526,8 @@
                 var custom_jenis_data = document.getElementById("custom_jenis_data").value;
                 var custom_tahun = document.getElementById("custom_tahun").value;
                 var custom_negeri = document.getElementById("custom_negeri").value;
+
+
 
                 // console.log('Jenis Dokumen :' + jenis_dokumen);
                 // console.log('Jenis Data :' + jenis_data);
@@ -566,7 +575,23 @@
                       //loop for data
                       data.forEach(function(){
                         //insert data in table
+
+
                         if(jenis_kertas){
+
+                            jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                            tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                            kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                            negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                            custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                            custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                            jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
+
                           $("#pilihan_table").append(
                             '<tr><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_dokumen +
@@ -578,10 +603,10 @@
                             tahun + kategori_data +
                             '</td><td><p class="mb-0 " style="text-align: center;">' +
                             negeri +
-                            '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }else {
-                          jenis_kertas = "Tiada";
+
                           $("#pilihan_table").append(
                             '<tr><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_dokumen +
@@ -593,7 +618,7 @@
                             tahun + kategori_data +
                             '</td><td><p class="mb-0 " style="text-align: center;">' +
                             negeri +
-                            '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }
                         //console.log(data[0].id);
@@ -608,7 +633,7 @@
                         {
                           document.getElementById('button_submit_permohonan').style.display = "block";
                         }
-                        // console.log('counter_data: tahun:',counter_data);
+                        // console.log('counter_data: Year:',counter_data);
 
                         document.getElementById("counter_data").value = counter_data;
                         document.getElementById("increment").value = increment;
@@ -641,6 +666,18 @@
                         $(document).ready(function(){
                           //display in table
                           if(jenis_kertas){
+                            jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                            tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                            kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                            negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                            custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                            custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                            jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
                             $("#pilihan_table").append(
                               '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
@@ -652,10 +689,11 @@
                               tahun + kategori_data +
                               '</td><td><p class="mb-0 " style="text-align: center;">' +
                               negeri +
-                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
+
                             $("#pilihan_table").append(
                               '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
@@ -667,7 +705,7 @@
                               tahun + kategori_data +
                               '</td><td><p class="mb-0 " style="text-align: center;">' +
                               negeri +
-                              '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }
                           //console.log(data.id);
@@ -709,6 +747,18 @@
                         $(document).ready(function(){
                           //display in table
                           if(jenis_kertas){
+                            jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                            tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                            kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                            negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                            custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                            custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                            jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
                             $("#pilihan_table").append(
                               '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
@@ -720,10 +770,10 @@
                               custom_tahun +
                               '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1" ><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1" ><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
-                            jenis_kertas = "Tiada";
+
                             $("#pilihan_table").append(
                               '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
@@ -735,7 +785,7 @@
                               custom_tahun +
                               '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }
                           //console.log(data.id);
@@ -798,7 +848,7 @@
           //clear jenis_data selection
           $("#jenis_data").empty();
           //initialize selection
-          $("#jenis_data").append('<option value="" selected disabled hidden>Choose Data Type</option>');
+          $("#jenis_data").append('<option value="" selected disabled hidden>Pilih Jenis Data</option>');
           //ajax
           if(jenisDokumen){
             $.ajax({
@@ -812,7 +862,9 @@
                 data.forEach(function(data)
                 {
                   //console.log(data.jenis_data);
-                  $("#jenis_data").append('<option value="'+data.jenis_data+'">'+data.jenis_data+'</option>');
+                  // $("#jenis_data").append('<option value="'+data.jenis_data+'">'+data.jenis_data+'</option>');
+                  $("#jenis_data").append('<option value="'+data.jenis_data.replace(/\s+/g, '')+'">'+data.jenis_data+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
