@@ -13,7 +13,7 @@
                           <!-- <button class="btn btn-primary">Bahasa Melayu</button> -->
                           <a href="{{ route('user.edit', $info->id) }}" class="btn btn-outline-primary">Bahasa Melayu</a>
                           <button class="btn btn-primary">English</button>
-                          <!-- <a href="#" class="btn btn-outline-primary">English</a> -->
+                          <!-- <a href="{{ route('user.edit_eng', $info->id) }}" class="btn btn-outline-primary">English</a> -->
                       </div>
                     </div>
                   </div>
@@ -43,7 +43,7 @@
                                     <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)" required>
                                         <option value="" selected disabled hidden>Choose Document Type</option>
                                         @foreach($jenisDokumen as $data)
-                                        <option value="{{$data->jenis_dokumen}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
+                                        <option value="{{preg_replace('/\s+/', '',$data->jenis_dokumen)}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
                                         @endforeach
                                     </select>
                                     @error('jenis_dokumen')
@@ -83,7 +83,7 @@
                               <div class="form-group">
                                 <div class="form-group" id="custom_jenis_data_div" >
                                     <label for="maklumat_agensi">Data Type:</label>
-                                    <input type="text" class="form-control  bg-light @error('custom_jenis_data') is-invalid @enderror" id="custom_jenis_data" name="custom_jenis_data" placeholder="State Data Type" aria-describedby="custom_jenis_data">
+                                    <input type="text" class="form-control  bg-light @error('custom_jenis_data') is-invalid @enderror" id="custom_jenis_data" name="custom_jenis_data" placeholder="State Data Type" aria-describedby="custom_jenis_data" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                                     @error('custom_jenis_data')
                                     <div class="alert alert-danger">
                                       <strong>{{ $message }}</strong>
@@ -102,6 +102,7 @@
                                 <div class="form-group" id="custom_tahun_div" >
                                     <label for="maklumat_agensi">Year:</label>
                                     <input type="text" class="form-control  bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" placeholder="State Year of Data" aria-describedby="custom_tahun">
+                                    <small id="saiz_data" class="form-text text-secondary">Example : 2012 ATAU 2010-2012</small>
                                     @error('custom_tahun')
                                     <div class="alert alert-danger">
                                       <strong>{{ $message }}</strong>
@@ -281,39 +282,39 @@
                                           @foreach($senaraiHarga[$i] as $senarai_harga_data)
                                             <tr>
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->jenis_dokumen}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->jenis_dokumen}}</p>
                                               </td>
                                               @if($senarai_harga_data->jenis_dokumen == 'Bercetak')
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->jenis_kertas}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->jenis_kertas}}</p>
                                               </td>
                                               @else
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">Tiada</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">Tiada</p>
                                               </td>
                                               @endif
                                               @if($senarai_harga_data->jenis_data == 'Lain-Lain')
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->jenis_data}} : {{$dataPilihan[$i]['custom_jenis_data']}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->jenis_data}} : {{$dataPilihan[$i]['custom_jenis_data']}}</p>
                                               </td>
                                               @else
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->jenis_data}} </p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->jenis_data}} </p>
                                               </td>
                                               @endif
                                               @if($senarai_harga_data->jenis_data == 'Lain-Lain')
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$dataPilihan[$i]['custom_tahun']}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$dataPilihan[$i]['custom_tahun']}}</p>
                                               </td>
                                               @else
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->tahun}}{{$senarai_harga_data->kategori_data}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->tahun}}{{$senarai_harga_data->kategori_data}}</p>
                                               </td>
                                               @endif
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->negeri}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->negeri}}</p>
                                               </td>
-                                              <td>
+                                              <td style="text-align: center; vertical-align: middle;">
                                                 <a class="btn btn-danger mr-1" onClick="removeData(this,'{{$i}}'); return false;"><i class="fa fa-trash" ></i></a>
                                               </td>
                                             </tr>
@@ -356,13 +357,13 @@
                         </div>
                       </div>
                     </div>
-                    <input type="hidden" name="language" value="english">
+                    <input type="hidden" name="language" value="melayu">
                     <div class="row">
                       <div class="col-md-4">
 
                       </div>
                       <div class="col-md-4" id="button_submit_permohonan" style="display: block;">
-                        <button type="submit" onclick="return confirm('Update application data?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Update New Data</button>
+                        <button type="submit" onclick="return confirm('Kemaskini data permohonan?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Update New Data</button>
                       </div>
                     </div>
 
@@ -384,7 +385,7 @@
         </main>
         <script type="text/javascript">
         function showDiv(select){
-           if(select.value=='Petak Kajian'){
+           if(select.value=='PetakKajian'){
             document.getElementById('default_form_div').style.display = "block";
             document.getElementById('custom_form_div').style.display = "none";
             document.getElementById('kategori_data_div').style.display = "block";
@@ -493,33 +494,46 @@
                       data.forEach(function(){
                         //insert data in table
                         if(jenis_kertas){
+
+                          jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                          jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                          tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                          kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                          negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                          jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                          custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                          custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                          jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
                           $("#pilihan_table").append(
-                            '<tr><td><p class="mb-0 font-weight-bold">' +
+                            '<tr><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_dokumen +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_kertas +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             tahun + kategori_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             negeri +
-                            '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }else {
                           jenis_kertas = "Tiada";
                           $("#pilihan_table").append(
-                            '<tr><td><p class="mb-0 font-weight-bold">' +
+                            '<tr><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_dokumen +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_kertas +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             tahun + kategori_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             negeri +
-                            '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }
                         //console.log(data[0].id);
@@ -568,31 +582,44 @@
                         $(document).ready(function(){
                           //display in table
                           if(jenis_kertas){
+
+                            jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                            tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                            kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                            negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                            custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                            custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                            jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               tahun + kategori_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               negeri +
-                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               tahun + kategori_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               negeri +
                               '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
@@ -637,33 +664,46 @@
                         $(document).ready(function(){
                           //display in table
                           if(jenis_kertas){
+                            jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                            tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                            kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                            negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                            custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                            custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                            jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
+
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data + ' : ' + custom_jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_tahun +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data + ' : ' + custom_jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_tahun +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }
                           //console.log(data.id);
@@ -741,7 +781,9 @@
                 data.forEach(function(data)
                 {
                   //console.log(data.jenis_data);
-                  $("#jenis_data").append('<option value="'+data.jenis_data+'">'+data.jenis_data+'</option>');
+                  // $("#jenis_data").append('<option value="'+data.jenis_data+'">'+data.jenis_data+'</option>');
+                  $("#jenis_data").append('<option value="'+data.jenis_data.replace(/\s+/g, '')+'">'+data.jenis_data+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
