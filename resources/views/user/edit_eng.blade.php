@@ -862,7 +862,9 @@
                 data.forEach(function(data)
                 {
                   //console.log(data.kategori_data);
-                  $("#kategori_data").append('<option value="'+data.kategori_data+'">'+data.kategori_data+'</option>');
+                  // $("#kategori_data").append('<option value="'+data.kategori_data+'">'+data.kategori_data+'</option>');
+                  $("#kategori_data").append('<option value="'+data.kategori_data.replace(/\s+/g, '')+'">'+data.kategori_data+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -899,7 +901,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  $("#negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');

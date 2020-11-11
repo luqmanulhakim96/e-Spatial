@@ -901,7 +901,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  $("#negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
