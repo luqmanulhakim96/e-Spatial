@@ -904,7 +904,10 @@
                 data.forEach(function(data)
                 {
                   //console.log(data.jenis_data);
-                  $("#tahun").append('<option value="'+data.tahun+'">'+data.tahun+'</option>');
+                  // $("#tahun").append('<option value="'+data.tahun+'">'+data.tahun+'</option>');
+                  $("#tahun").append('<option value="'+data.tahun.replace(/\s+/g, '')+'">'+data.tahun+'</option>');
+
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -943,7 +946,9 @@
                 data.forEach(function(data)
                 {
                   //console.log(data.kategori_data);
-                  $("#kategori_data").append('<option value="'+data.kategori_data+'">'+data.kategori_data+'</option>');
+                  // $("#kategori_data").append('<option value="'+data.kategori_data+'">'+data.kategori_data+'</option>');
+                  $("#kategori_data").append('<option value="'+data.kategori_data.replace(/\s+/g, '')+'">'+data.kategori_data+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -980,7 +985,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  $("#negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -1018,7 +1025,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  $("#negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -1061,7 +1070,9 @@
                 data.forEach(function(data)
                 {
 
-                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  // $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas.replace(/\s+/g, '')+'">'+data.jenis_kertas+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -1085,7 +1096,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  // $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas.replace(/\s+/g, '')+'">'+data.jenis_kertas+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -1130,7 +1143,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#custom_negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#custom_negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  $("#custom_negeri").append('<option value="'+data.custom_negeri.replace(/\s+/g, '')+'">'+data.custom_negeri+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -1174,7 +1189,9 @@
                 data.forEach(function(data)
                 {
 
-                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  // $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas.replace(/\s+/g, '')+'">'+data.jenis_kertas+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
