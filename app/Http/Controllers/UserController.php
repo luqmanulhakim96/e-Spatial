@@ -105,6 +105,15 @@ class UserController extends Controller
     $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
     $jenisDokumen = ltrim($jenisDokumen);
 
+    $tahun = preg_replace('/(?<!\ )[A-Z]/', ' $0', $tahun );
+    $tahun = ltrim($tahun);
+
+    $negeri = preg_replace('/(?<!\ )[A-Z]/', ' $0', $negeri );
+    $negeri = ltrim($negeri);
+
+    $jenisKertas = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisKertas );
+    $jenisKertas = ltrim($jenisKertas);
+
     if($jenisKertas == 'tiada'){
       $senaraiHargaId = SenaraiHarga::select('id')
                         ->where('jenis_dokumen',$jenisDokumen)
@@ -138,6 +147,12 @@ class UserController extends Controller
     $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
     $jenisDokumen = ltrim($jenisDokumen);
 
+    $negeri = preg_replace('/(?<!\ )[A-Z]/', ' $0', $negeri );
+    $negeri = ltrim($negeri);
+
+    $jenisKertas = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisKertas );
+    $jenisKertas = ltrim($jenisKertas);
+
     if($jenisKertas == 'tiada'){
       $senaraiHargaId = SenaraiHarga::select('id')
                         ->where('jenis_dokumen',$jenisDokumen)
@@ -170,6 +185,12 @@ class UserController extends Controller
     // }
     $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
     $jenisDokumen = ltrim($jenisDokumen);
+
+    $jenisKertas = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisKertas );
+    $jenisKertas = ltrim($jenisKertas);
+
+    $negeri = preg_replace('/(?<!\ )[A-Z]/', ' $0', $negeri );
+    $negeri = ltrim($negeri);
 
     if($jenisKertas == 'tiada'){
       $senaraiHargaId = SenaraiHarga::select('id')
@@ -335,6 +356,9 @@ class UserController extends Controller
     $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
     $jenisDokumen = ltrim($jenisDokumen);
 
+    $tahun = preg_replace('/(?<!\ )[A-Z]/', ' $0', $tahun );
+    $tahun = ltrim($tahun);
+
     $negeri = SenaraiHarga::select('negeri')
                 ->where('jenis_data', $jenisData)
                 ->where('jenis_dokumen', $jenisDokumen)
@@ -376,6 +400,12 @@ class UserController extends Controller
     $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
     $jenisDokumen = ltrim($jenisDokumen);
 
+    $tahun = preg_replace('/(?<!\ )[A-Z]/', ' $0', $tahun );
+    $tahun = ltrim($tahun);
+
+    $negeri = preg_replace('/(?<!\ )[A-Z]/', ' $0', $negeri );
+    $negeri = ltrim($negeri);
+
     $jenisKertas = SenaraiHarga::select('jenis_kertas')
                 ->where('jenis_data', $jenisData)
                 ->where('jenis_dokumen', $jenisDokumen)
@@ -399,6 +429,9 @@ class UserController extends Controller
     $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
     $jenisDokumen = ltrim($jenisDokumen);
 
+    $negeri = preg_replace('/(?<!\ )[A-Z]/', ' $0', $negeri );
+    $negeri = ltrim($negeri);
+
       $jenisKertas = SenaraiHarga::select('jenis_kertas')
                   ->where('jenis_data', $jenisData)
                   ->where('jenis_dokumen', $jenisDokumen)
@@ -417,6 +450,9 @@ class UserController extends Controller
       }
       $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
       $jenisDokumen = ltrim($jenisDokumen);
+
+      $negeri = preg_replace('/(?<!\ )[A-Z]/', ' $0', $negeri );
+      $negeri = ltrim($negeri);
 
         $jenisKertas = SenaraiHarga::select('jenis_kertas')
                      ->where('jenis_data', $jenisData)

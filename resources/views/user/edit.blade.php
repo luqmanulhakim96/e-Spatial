@@ -1062,7 +1062,7 @@
                 data.forEach(function(data)
                 {
                   // $("#custom_negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
-                  $("#custom_negeri").append('<option value="'+data.custom_negeri.replace(/\s+/g, '')+'">'+data.custom_negeri+'</option>');
+                  $("#custom_negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
 
                 });
                     // $.each(JSON.parse(respond),function(key,value){

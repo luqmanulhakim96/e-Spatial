@@ -1050,7 +1050,7 @@
           var tahun = $('#tahun').val();
           var kategori_data = $('#kategori_data').val();
           var negeri = $(this).val();
-
+          console.log(negeri);
 
       //clear kategori_data selection
           $("#jenis_kertas").empty();
@@ -1140,11 +1140,11 @@
               success: function(respond){
                 //console.log(respond);
                 var data = JSON.parse(respond);
-                //console.log(data);
+                console.log(data);
                 data.forEach(function(data)
                 {
                   // $("#custom_negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
-                  $("#custom_negeri").append('<option value="'+data.custom_negeri.replace(/\s+/g, '')+'">'+data.custom_negeri+'</option>');
+                  $("#custom_negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
 
                 });
                     // $.each(JSON.parse(respond),function(key,value){
