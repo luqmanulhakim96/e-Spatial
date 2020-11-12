@@ -9,11 +9,13 @@
 
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Pengumuman Baru</div>
+
                   <div class="card-body">
                     <form class="" action="{{route('pengumuman.submit')}}" method="post">
                     @csrf
-                        <div class="card-title" style="text-align: center;">Pengumuman Baru</div>
+                        <!-- <div class="card-title" style="text-align: center;">Pengumuman Baru</div> -->
                         <div class="row">
                           <div class="col-md-3">
                           </div>

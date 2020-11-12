@@ -1,4 +1,4 @@
-@extends('layouts.app_user2')
+@extends('layouts.app_user2_eng')
 
 @section('content')
     <!-- Main content start -->
@@ -113,6 +113,7 @@
                                 </div>
                               </div>
                             </div>
+                            <input type="hidden" name="language" value="english">
 
                             <div class="row">
                               <div class="col-md-1">

@@ -8,9 +8,11 @@
                 </div>
                 <!-- Small card component -->
 
-                      <div class="card rounded-lg">
+                      <div class="card rounded-lg" style="border-color: #003473 !important;">
+                        <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Maklumat Permohonan</div>
+
   <div class="card-body">
-      <div class="card-title">Maklumat Permohonan</div>
+      <!-- <div class="card-title">Maklumat Permohonan</div> -->
       <!-- Nav tabs -->
       <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">

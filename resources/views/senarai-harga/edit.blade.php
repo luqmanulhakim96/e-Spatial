@@ -8,9 +8,11 @@
                 </div>
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Kemaskini Data Geospatial</div>
+
                   <div class="card-body">
-                      <div class="card-title" style="text-align: center;">Kemaskini Data Geospatial</div>
+                      <!-- <div class="card-title" style="text-align: center;">Kemaskini Data Geospatial</div> -->
 
                       <form  action="{{route('senarai-harga.update', $info->id)}}" method="post">
                         @csrf
@@ -75,14 +77,14 @@
                           <div class="col-md-4">
                             @if($info->jenis_dokumen == "Vektor Shapefile")
                             <!-- saiz data input -->
-                            <div class="form-group" id="saiz_data_div">
+                            <div class="form-group" id="saiz_data_div_2">
                                 <label for="actionBarName1">Saiz Data:</label>
                                 <input type="text" class="form-control bg-light" name="saiz_data" id="saiz_data" aria-describedby="saiz_data" placeholder="Masukkan Saiz Data (MB)" value="{{ $info->saiz_data  }}">
                                 <small id="actionBarName1Help" class="form-text text-secondary">Size data dalam format MB (Contoh: 120.2)</small>
                             </div>
                             @else
                             <!-- jenis data input-->
-                            <div class="form-group" id="jenis_kertas_div" style="display: block;">
+                            <div class="form-group" id="jenis_kertas_div_2" style="display: block;">
                                 <label for="jenis_kertas">Jenis Kertas:</label>
                                   <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas">
                                       <option value="" selected disabled hidden>Pilih Jenis Data</option>
@@ -256,12 +258,16 @@
         function showSaizData(select){
           if(select.value=='Bercetak'){
             document.getElementById('saiz_data_div').style.display = "none";
+            document.getElementById('saiz_data_div_2').style.display = "none";
+
             document.getElementById('jenis_kertas_div').style.display = "block";
 
           }
           else if (select.value=='Vektor Shapefile') {
             document.getElementById('saiz_data_div').style.display = "block";
             document.getElementById('jenis_kertas_div').style.display = "none";
+            document.getElementById('jenis_kertas_div_2').style.display = "none";
+
           }
         }
         function showDiv(select){

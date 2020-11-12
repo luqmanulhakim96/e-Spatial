@@ -13,9 +13,11 @@
                       <form  action="{{route('permohonan.harga.update',$id)}}" method="post">
                         @csrf
                         <!-- Light table Head card -->
-                        <div class="card rounded-lg">
+                        <div class="card rounded-lg" style="border-color: #003473 !important;">
+                          <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Paparan Harga Permohonan</div>
+
                             <div class="card-body">
-                              <div class="card-title" style="text-align: center;">Paparan Harga Permohonan</div>
+                              <!-- <div class="card-title" style="text-align: center;">Paparan Harga Permohonan</div> -->
 
                                 <!-- Table -->
                                 <div class="table-responsive">
@@ -48,22 +50,22 @@
                                             <td>
                                               <p class="mb-0 " style="text-align: center;">
                                                 Tiada
-                                                <input type="hidden" id="harga" name="saiz_data[]" value="1" required>
-                                                <input type="hidden" id="harga" name="id_data_permohonan[]"  value="{{ $dataPermohonan[$i]['id']}}" readonly>
+                                                <input type="hidden"  name="saiz_data[]" value="1" required>
+                                                <input type="hidden"  name="id_data_permohonan[]"  value="{{ $dataPermohonan[$i]['id']}}" readonly>
                                               </p>
                                             </td>
 
                                             @else
                                             <td>
                                               <p class="mb-0 " style="text-align: center;">
-                                                <input type="text" id="harga" name="saiz_data[]" onkeypress="return fun_AllowOnlyAmountAndDot(this.id);"  value="{{ $senaraiHargaUser[$i][0]['saiz_data']}}" required>
-                                                <input type="hidden" id="harga" name="id_data_permohonan[]"  value="{{ $dataPermohonan[$i]['id']}}" readonly>
+                                                <input type="text"  name="saiz_data[]" onkeypress="return fun_AllowOnlyAmountAndDot(this.id);"  value="{{ $senaraiHargaUser[$i][0]['saiz_data']}}" required>
+                                                <input type="hidden"  name="id_data_permohonan[]"  value="{{ $dataPermohonan[$i]['id']}}" readonly>
                                               </p>
                                             </td>
                                             @endif
                                             <td>
                                               <p class="mb-0 " style="text-align: center;">RM {{ $senaraiHargaUser[$i][0]['harga_asas']}}</p>
-                                              <p class="mb-0 " style="text-align: center;"><input type="hidden" id="harga" name="harga_asas[]" value="{{ $senaraiHargaUser[$i][0]['harga_asas']}}" readonly></p>
+                                              <p class="mb-0 " style="text-align: center;"><input type="hidden" id="harga_asas" name="harga_asas[]" value="{{ $senaraiHargaUser[$i][0]['harga_asas']}}" readonly></p>
                                             </td>
                                           </tr>
 
@@ -100,7 +102,7 @@
                                     </div>
                                     <div class="col-md-4">
                                       <label for="harga_asas">Catatan Harga Lain-Lain:</label>
-                                      <textarea  name="catatan_harga" rows="2" cols="15" class="form-control bg-light @error('catatan_harga') is-invalid @enderror">{{ old('catatan_harga') }}</textarea>
+                                      <textarea  name="catatan_harga" rows="2" cols="15" class="form-control bg-light @error('catatan_harga') is-invalid @enderror" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">{{ old('catatan_harga') }}</textarea>
                                     </div>
 
 

@@ -2,7 +2,31 @@
 @section('content')
             <!--Page Body part -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <style>
+            a{
+              font-size: 110% !important;
+            }
+            /* unvisited link */
+            a:link {
+              color: black !important;
+            }
 
+            /* visited link */
+            a:visited {
+              color: black !important;
+            }
+
+            /* mouse over link */
+            a:hover {
+              color: red !important;
+            }
+
+            /* selected link */
+            a:active {
+              color: black !important;
+
+            }
+            </style>
             <div class="page-body p-4 text-dark">
               <div  style="font-size: 180%;" >
                 <i class="fa fa-home" aria-hidden="true"></i>
@@ -22,7 +46,6 @@
                     <!-- Col sm 6, col md 6, col lg 3 -->
                     <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                       <!-- Card -->
-                      <a href="{{route('permohonan.listBaru')}}">
                         <div class="card rounded-lg" style="border-color: #003473 !important;">
                             <!-- Card body -->
                             <div class="card-body"  style="border-radius:.5rem;" >
@@ -51,19 +74,24 @@
                                 </div>
 
                                 <hr style="background-color: #003473; height: 1px; border: 0;">
-                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">
+                                  <a href="{{route('permohonan.listBaru')}}">
+
+                                  Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                </a>
+
+                                </p>
 
 
                             </div>
                         </div>
-                      </a>
 
                     </div>
 
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                         <!-- Card -->
-                        <a href="{{route('permohonan.listSedangDiproses')}}"  >
                           <div class="card border-1 rounded-lg" style="border-color: #28a745 !important;">
                               <!-- Card body -->
                               <div class="card-body"  style="border-radius:.5rem;">
@@ -82,11 +110,16 @@
                                   </div>
 
                                   <hr style="background-color: #28a745;">
-                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #28a745 !important">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #28a745 !important">
+                                    <a href="{{route('permohonan.listSedangDiproses')}}"  >
+
+                                    Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                  </a>
+
+                                  </p>
 
                               </div>
                           </div>
-                        </a>
 
                       </div>
 
@@ -95,7 +128,6 @@
                           <!-- Card -->
                           <div class="card border-1 rounded-lg" style="border-color: #D25F00 !important;">
                               <!-- Card body -->
-                              <a href="{{route('permohonan.list')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
@@ -111,10 +143,15 @@
                                     </div>
 
                                     <hr style="background-color: #D25F00 !important;">
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #D25F00 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #D25F00 !important;">
+                                      <a href="{{route('permohonan.list')}}"  >
+
+                                      Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    </a>
+
+                                    </p>
 
                                 </div>
-                              </a>
 
                           </div>
                       </div>
@@ -124,7 +161,6 @@
                           <!-- Card -->
                           <div class="card border-1 rounded-lg" style="border-color: #dc3545 !important">
                               <!-- Card body -->
-                              <a href="{{route('permohonan.listGagal')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
@@ -140,10 +176,15 @@
                                     </div>
 
                                     <hr style="background-color: #dc3545 !important;">
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #dc3545 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #dc3545 !important;">
+                                      <a href="{{route('permohonan.listGagal')}}"  >
+
+                                      Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    </a>
+
+                                    </p>
 
                                 </div>
-                              </a>
 
                           </div>
                       </div>
@@ -164,7 +205,6 @@
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
-                          <a href="{{route('permohonan.listTidakBerkaitan')}}"  >
                             <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
@@ -182,11 +222,16 @@
                                     </div>
 
                                     <hr style="background-color: #003473 !important;">
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">
+                                      <a href="{{route('permohonan.listTidakBerkaitan')}}"  >
+
+                                      Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    </a>
+
+                                    </p>
 
                                 </div>
                             </div>
-                          </a>
 
                       </div>
 
@@ -195,7 +240,6 @@
                           <!-- Card -->
                           <div class="card border-1 rounded-lg" style="border-color: #057108 !important;">
                               <!-- Card body -->
-                              <a href="{{route('permohonan.listBatal')}}"  >
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
@@ -211,10 +255,15 @@
                                     </div>
 
                                     <hr style="background-color: #057108 !important;">
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #057108 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #057108 !important;">
+                                      <a href="{{route('permohonan.listBatal')}}"  >
+
+                                      Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    </a>
+
+                                    </p>
 
                                 </div>
-                              </a>
 
                           </div>
                       </div>
@@ -222,7 +271,6 @@
                       <!-- Col sm 6, col md 6, col lg 3 -->
                       <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
                           <!-- Card -->
-                          <a href="{{route('permohonan.listDalaman')}}"  >
                             <div class="card border-1 rounded-lg" style="border-color: #D25F00 !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
@@ -240,11 +288,16 @@
                                     </div>
 
                                     <hr style="background-color: #D25F00 !important;">
-                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #D25F00 !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                                    <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #D25F00 !important;">
+                                      <a href="{{route('permohonan.listDalaman')}}"  >
+
+                                      Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    </a>
+
+                                    </p>
 
                                 </div>
                             </div>
-                          </a>
 
                       </div>
 
@@ -258,11 +311,353 @@
 
 
 
+
+                @endif
+
+
+                @if( Auth::user()->role == 1 || Auth::user()->role == 2)
+                <div style="padding:5px;"></div>
+
+                <div class="row">
+
+                  <!-- Col sm 6, col md 6, col lg 3 -->
+                  <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mt-lg-0">
+                    <!-- Card -->
+                      <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
+                          <!-- Card body -->
+                          <div class="card-body"  style="border-radius:.5rem;">
+
+                              <div class="d-flex flex-row justify-content-center align-items-center">
+                                  <!-- Icon -->
+                                  <div class="small-card-icon">
+                                      <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x" style="color: #003473 !important;"></i>
+                                  </div>
+                                  <!-- Text -->
+                                  <div class="small-card-text w-100 text-center">
+                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Permohonan Baru</p>
+                                      <h4 class="font-weight-normal m-0 text-primary" style="color: #003473 !important;">
+                                        @if(Auth::user()->role == 0)
+                                        {{$countPermohonanBaruPS}}
+                                        @elseif(Auth::user()->role == 1)
+                                        {{$countPermohonanBaruP1}}
+                                        @elseif(Auth::user()->role == 2)
+                                        {{$countPermohonanBaruP2}}
+                                        @elseif(Auth::user()->role == 3)
+                                        {{$countPermohonanBaruKP}}
+                                        @endif
+                                      </h4>
+                                  </div>
+
+                              </div>
+
+                              <hr style="background-color: #003473 !important;">
+                              <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">
+                                <a href="{{route('permohonan.listBaru')}}"  >
+
+                                Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                              </a>
+
+                              </p>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mt-lg-0">
+                      <!-- Card -->
+                        <div class="card border-1 rounded-lg" style="border-color: #28a745 !important;">
+                            <!-- Card body -->
+                            <div class="card-body"  style="border-radius:.5rem;">
+
+                                <div class="d-flex flex-row justify-content-center align-items-center">
+                                    <!-- Icon -->
+                                    <div class="small-card-icon">
+                                        <i class="fa fa-retweet card-icon-bg-primary fa-4x" style="color: #28a745 !important;"></i>
+                                    </div>
+                                    <!-- Text -->
+                                    <div class="small-card-text w-100 text-center">
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #28a745 !important;">Permohonan Sedang Diproses</p>
+                                        <h4 class="font-weight-normal m-0 text-primary" style="color: #28a745 !important;">
+
+                                          @if(Auth::user()->role == 1)
+                                          {{$countPermohonanSedangDiproses1}}
+                                          @elseif(Auth::user()->role == 2)
+                                          {{$countPermohonanSedangDiproses2}}
+                                          @elseif(Auth::user()->role == 3)
+                                          {{$countPermohonanSedangDiprosesKP}}
+                                          @endif
+                                        </h4>
+                                    </div>
+
+                                </div>
+
+                                <hr style="background-color: #28a745 !important;">
+
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right ; color: #28a745 !important;">
+                                  <a href="{{route('permohonan.listSedangDiproses')}}"  >
+
+                                  Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                </a>
+
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div style="padding:20px;"></div>
+                @endif
+
+                @if( Auth::user()->role == 3 )
+                <div class="row">
+                  <!-- <div class="col-md-4">
+
+                  </div> -->
+                  <!-- Col sm 6, col md 6, col lg 3 -->
+                  <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mt-lg-0">
+                    <!-- Card -->
+                      <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
+                          <!-- Card body -->
+                          <div class="card-body"  style="border-radius:.5rem;">
+
+                              <div class="d-flex flex-row justify-content-center align-items-center">
+                                  <!-- Icon -->
+                                  <div class="small-card-icon">
+                                      <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x" style="color: #003473 !important;"></i>
+                                  </div>
+                                  <!-- Text -->
+                                  <div class="small-card-text w-100 text-center">
+                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Permohonan <br> Baru</p>
+                                      <h4 class="font-weight-normal m-0 text-primary" style="color: #003473 !important;">
+                                        @if(Auth::user()->role == 0)
+                                        {{$countPermohonanBaruPS}}
+                                        @elseif(Auth::user()->role == 1)
+                                        {{$countPermohonanBaruP1}}
+                                        @elseif(Auth::user()->role == 2)
+                                        {{$countPermohonanBaruP2}}
+                                        @elseif(Auth::user()->role == 3)
+                                        {{$countPermohonanBaruKP}}
+                                        @endif
+                                      </h4>
+                                  </div>
+
+                              </div>
+
+                              <hr style="background-color: #003473 !important;">
+
+                              <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">
+                                <a href="{{route('permohonan.listBaru')}}"  >
+
+                                Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                              </a>
+
+                              </p>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+                </div>
+                <div style="padding:20px;"></div>
+
+                @endif
+
+                @if(Auth::user()->role == 4)
+                <div style="padding: 1px;">
+
+                </div>
+                <div class="row">
+                  <!-- Col sm 6, col md 6, col lg 3 -->
+                  <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                    <!-- Card -->
+                      <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
+                          <!-- Card body -->
+                          <div class="card-body"  style="border-radius:.5rem;">
+
+                              <div class="d-flex flex-row justify-content-center align-items-center">
+                                  <!-- Icon -->
+                                  <div class="small-card-icon">
+                                      <i class="fa fa-user-circle card-icon-bg-primary fa-4x" style="color: #003473 !important;"></i>
+                                  </div>
+                                  <!-- Text -->
+                                  <div class="small-card-text w-100 text-center">
+                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #003473 !important;">Senarai <br> Pengguna</p>
+                                      <h4 class="font-weight-normal m-0 text-primary" style="color: #003473 !important;">
+                                        {{$countPenggunaAdmin}}
+                                      </h4>
+                                  </div>
+
+                              </div>
+
+                              <hr style="background-color: #003473 !important;">
+
+                              <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #003473 !important;">
+                                <a href="{{route('superadmin.list')}}"  >
+
+                                Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                              </a>
+
+                              </p>
+
+                          </div>
+                      </div>
+
+                  </div>
+
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                      <!-- Card -->
+                        <div class="card border-1 rounded-lg" style="border-color: #28a745 !important;">
+                            <!-- Card body -->
+                            <div class="card-body"  style="border-radius:.5rem;">
+
+                                <div class="d-flex flex-row justify-content-center align-items-center">
+                                    <!-- Icon -->
+                                    <div class="small-card-icon">
+                                        <i class="fa fa-users card-icon-bg-primary fa-4x" style="color: #28a745 !important;"></i>
+                                    </div>
+                                    <!-- Text -->
+                                    <div class="small-card-text w-100 text-center">
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #28a745 !important;">Senarai <br> Pemohon</p>
+                                        <h4 class="font-weight-normal m-0 text-primary" style="color: #28a745 !important;">{{$countPenggunaLuar}}</h4>
+                                    </div>
+
+                                </div>
+
+                                <hr style="background-color: #28a745 !important;">
+
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right ; color: #28a745 !important;">
+                                  <a href="{{route('superadmin.listPenggunaLuar')}}"  >
+
+                                  Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                </a>
+
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                        <!-- Card -->
+                        <div class="card border-1 rounded-lg" style="border-color: #D25F00 !important;">
+                            <!-- Card body -->
+                              <div class="card-body" style="border-radius:.5rem;">
+
+                                  <div class="d-flex flex-row justify-content-center align-items-center">
+                                      <!-- Icon -->
+                                      <div class="small-card-icon">
+                                          <i class="fa fa-database  card-icon-bg-primary fa-4x" style="color: #D25F00 !important;"></i>
+                                      </div>
+                                      <!-- Text -->
+                                      <div class="small-card-text w-100 text-center">
+                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #D25F00 !important;">Audit Trail <br> Proses</p>
+                                          <h4 class="font-weight-normal m-0 text-primary" style="color: #D25F00 !important;">{{$countAuditTrail}}</h4>
+                                      </div>
+                                  </div>
+
+                                  <hr style="background-color: #D25F00 !important;">
+
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #D25F00 !important;">
+                                    <a href="{{route('superadmin.auditTrail')}}"  >
+
+                                    Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                  </a>
+
+                                  </p>
+
+                              </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Col sm 6, col md 6, col lg 3 -->
+                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
+                        <!-- Card -->
+                        <div class="card border-1 rounded-lg" style="border-color: #dc3545 !important;">
+                            <!-- Card body -->
+                              <div class="card-body" style="border-radius:.5rem;">
+
+                                  <div class="d-flex flex-row justify-content-center align-items-center">
+                                      <!-- Icon -->
+                                      <div class="small-card-icon">
+                                          <i class="fa fa-sign-in card-icon-bg-primary fa-4x" style="color: #dc3545 !important;"></i>
+                                      </div>
+                                      <!-- Text -->
+                                      <div class="small-card-text w-100 text-center">
+                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #dc3545 !important;">Audit <br> Log Akses</p>
+                                          <h4 class="font-weight-normal m-0 text-primary" style="color: #dc3545 !important;">{{$countAuditTrailLog}}</h4>
+                                      </div>
+                                  </div>
+
+                                  <hr style="background-color: #dc3545 !important;">
+
+                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #dc3545 !important;">
+                                    <a href="{{route('superadmin.auditTrailLogUser')}}"  >
+
+                                    Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                  </p>
+                                </a>
+
+                              </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div style="padding: 20px;"></div>
+
+                <div  style="font-size: 180%;" >
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                  Laporan
+                </div>
+
+                <hr>
+
+                <div style="padding: 10px;">
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 mt-3 mt-lg-0">
+                      <div class="card border-0 rounded-lg">
+                            <div class="card-body" style="border-radius:.5rem; background-color: #dc3545 !important;">
+
+                                <div class="d-flex flex-row justify-content-center align-items-center">
+                                    <div class="small-card-icon">
+                                        <i class="fa fa-sign-in card-icon-bg-primary fa-4x" style="color: white !important;"></i>
+                                    </div>
+                                    <div class="small-card-text w-100 text-center">
+                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Audit Trail <br> Keluar Masuk Pengguna</p>
+                                        <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countAuditTrailLog}}</h4>
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                            </div>
+                      </div>
+                  </div>
+                </div> -->
+                <div style="padding:20px;"></div>
+
+                @endif
+
                 <div  style="font-size: 180%;" >
                   <i class="fa fa-area-chart" aria-hidden="true"></i>
                   Laporan
                 </div>
-                <hr>
+                <hr style="background-color: #343a40 !important;">
+                <div style="padding:5px;"></div>
+
 
                 <!-- Small card component -->
                 <div class="small-cards mb-4">
@@ -270,7 +665,7 @@
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <!-- Card -->
-                            <div class="card border-0 rounded-lg" style="background-color: #003473 !important;">
+                            <div class="card border-1 rounded-lg" style="background-color: #003473 !important; border-color: black !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
@@ -293,9 +688,9 @@
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <!-- Card -->
-                            <div class="card border-0 rounded-lg">
+                            <div class="card border-1 rounded-lg" style="background-color: #28a745 !important; border-color: black !important;">
                                 <!-- Card body -->
-                                <div class="card-body" style="border-radius:.5rem; background-color: #28a745 !important;">
+                                <div class="card-body" style="border-radius:.5rem; ">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
                                         <!-- Icon -->
@@ -316,7 +711,7 @@
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <!-- Card -->
-                            <div class="card border-0 rounded-lg" style="background-color: #ffc107 !important">
+                            <div class="card border-1 rounded-lg" style="background-color: #ffc107 !important; border-color: black !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
@@ -339,7 +734,7 @@
                         <!-- Col sm 6, col md 6, col lg 3 -->
                         <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <!-- Card -->
-                            <div class="card border-0 rounded-lg" style="background-color: #dc3545 !important;">
+                            <div class="card border-1 rounded-lg" style="background-color: #dc3545 !important; border-color: black !important;">
                                 <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
@@ -451,308 +846,6 @@
 
                     </div>
                 </div>
-                @endif
-
-
-                @if( Auth::user()->role == 1 || Auth::user()->role == 2)
-                <div style="padding:5px;"></div>
-
-                <div class="row">
-
-                  <!-- Col sm 6, col md 6, col lg 3 -->
-                  <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mt-lg-0">
-                    <!-- Card -->
-                    <a href="{{route('permohonan.listBaru')}}"  >
-                      <div class="card border-0 rounded-lg" style="background-color: #003E61 !important;">
-                          <!-- Card body -->
-                          <div class="card-body"  style="border-radius:.5rem;">
-
-                              <div class="d-flex flex-row justify-content-center align-items-center">
-                                  <!-- Icon -->
-                                  <div class="small-card-icon">
-                                      <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x" style="color: white !important;"></i>
-                                  </div>
-                                  <!-- Text -->
-                                  <div class="small-card-text w-100 text-center">
-                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Permohonan Baru</p>
-                                      <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">
-                                        @if(Auth::user()->role == 0)
-                                        {{$countPermohonanBaruPS}}
-                                        @elseif(Auth::user()->role == 1)
-                                        {{$countPermohonanBaruP1}}
-                                        @elseif(Auth::user()->role == 2)
-                                        {{$countPermohonanBaruP2}}
-                                        @elseif(Auth::user()->role == 3)
-                                        {{$countPermohonanBaruKP}}
-                                        @endif
-                                      </h4>
-                                  </div>
-
-                              </div>
-
-                              <hr>
-                              <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
-
-                          </div>
-                      </div>
-                    </a>
-
-                  </div>
-
-
-                    <!-- Col sm 6, col md 6, col lg 3 -->
-                    <div class="col-sm-6 col-md-6 col-lg-4 mt-3 mt-lg-0">
-                      <!-- Card -->
-                      <a href="{{route('permohonan.listSedangDiproses')}}"  >
-                        <div class="card border-0 rounded-lg">
-                            <!-- Card body -->
-                            <div class="card-body"  style="border-radius:.5rem; background-color: #28a745 !important;">
-
-                                <div class="d-flex flex-row justify-content-center align-items-center">
-                                    <!-- Icon -->
-                                    <div class="small-card-icon">
-                                        <i class="fa fa-retweet card-icon-bg-primary fa-4x" style="color: white !important;"></i>
-                                    </div>
-                                    <!-- Text -->
-                                    <div class="small-card-text w-100 text-center">
-                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Permohonan Sedang Diproses</p>
-                                        <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">
-
-                                          @if(Auth::user()->role == 1)
-                                          {{$countPermohonanSedangDiproses1}}
-                                          @elseif(Auth::user()->role == 2)
-                                          {{$countPermohonanSedangDiproses2}}
-                                          @elseif(Auth::user()->role == 3)
-                                          {{$countPermohonanSedangDiprosesKP}}
-                                          @endif
-                                        </h4>
-                                    </div>
-
-                                </div>
-
-                                <hr>
-                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color:white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
-
-                            </div>
-                        </div>
-                      </a>
-
-                    </div>
-
-                </div>
-                @endif
-
-                @if( Auth::user()->role == 3 )
-                <div style="padding:50px;"></div>
-                <div class="row">
-                  <div class="col-md-4">
-
-                  </div>
-                  <!-- Col sm 6, col md 6, col lg 3 -->
-                  <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                    <!-- Card -->
-                    <a href="{{route('permohonan.listBaru')}}"  >
-                      <div class="card border-0 rounded-lg">
-                          <!-- Card body -->
-                          <div class="card-body"  style="border-radius:.5rem;">
-
-                              <div class="d-flex flex-row justify-content-center align-items-center">
-                                  <!-- Icon -->
-                                  <div class="small-card-icon">
-                                      <i class="fa fa-exclamation-circle card-icon-bg-primary fa-4x"></i>
-                                  </div>
-                                  <!-- Text -->
-                                  <div class="small-card-text w-100 text-center">
-                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%;">Permohonan <br> Baru</p>
-                                      <h4 class="font-weight-normal m-0 text-primary">
-                                        @if(Auth::user()->role == 0)
-                                        {{$countPermohonanBaruPS}}
-                                        @elseif(Auth::user()->role == 1)
-                                        {{$countPermohonanBaruP1}}
-                                        @elseif(Auth::user()->role == 2)
-                                        {{$countPermohonanBaruP2}}
-                                        @elseif(Auth::user()->role == 3)
-                                        {{$countPermohonanBaruKP}}
-                                        @endif
-                                      </h4>
-                                  </div>
-
-                              </div>
-
-                              <hr>
-                              <p class="font-weight-normal m-0 text-primary" style="text-align: right;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
-
-                          </div>
-                      </div>
-                    </a>
-
-                  </div>
-
-                </div>
-                @endif
-
-                @if(Auth::user()->role == 4)
-                <div style="padding: 1px;">
-
-                </div>
-                <div class="row">
-                  <!-- Col sm 6, col md 6, col lg 3 -->
-                  <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                    <!-- Card -->
-                    <a href="{{route('superadmin.list')}}"  >
-                      <div class="card border-0 rounded-lg" style="background-color: #003e61 !important;">
-                          <!-- Card body -->
-                          <div class="card-body"  style="border-radius:.5rem;">
-
-                              <div class="d-flex flex-row justify-content-center align-items-center">
-                                  <!-- Icon -->
-                                  <div class="small-card-icon">
-                                      <i class="fa fa-user-circle card-icon-bg-primary fa-4x" style="color: #fff;"></i>
-                                  </div>
-                                  <!-- Text -->
-                                  <div class="small-card-text w-100 text-center">
-                                      <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Senarai <br> Pengguna Admin</p>
-                                      <h4 class="font-weight-normal m-0 text-primary" style="color: #fff !important;">
-                                        {{$countPenggunaAdmin}}
-                                      </h4>
-                                  </div>
-
-                              </div>
-
-                              <hr>
-                              <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: #fff !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
-
-                          </div>
-                      </div>
-                    </a>
-
-                  </div>
-
-                    <!-- Col sm 6, col md 6, col lg 3 -->
-                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                      <!-- Card -->
-                      <a href="{{route('superadmin.listPenggunaLuar')}}"  >
-                        <div class="card border-0 rounded-lg" style="background-color: rgb(40 167 69) !important;">
-                            <!-- Card body -->
-                            <div class="card-body"  style="border-radius:.5rem;">
-
-                                <div class="d-flex flex-row justify-content-center align-items-center">
-                                    <!-- Icon -->
-                                    <div class="small-card-icon">
-                                        <i class="fa fa-users card-icon-bg-primary fa-4x" style="color: #fff;"></i>
-                                    </div>
-                                    <!-- Text -->
-                                    <div class="small-card-text w-100 text-center">
-                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Senarai <br> Pengguna Luar</p>
-                                        <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countPenggunaLuar}}</h4>
-                                    </div>
-
-                                </div>
-
-                                <hr>
-                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
-
-                            </div>
-                        </div>
-                      </a>
-
-                    </div>
-
-                    <!-- Col sm 6, col md 6, col lg 3 -->
-                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                        <!-- Card -->
-                        <div class="card border-0 rounded-lg">
-                            <!-- Card body -->
-                            <a href="{{route('superadmin.auditTrail')}}"  >
-                              <div class="card-body" style="border-radius:.5rem; background-color: #ffc107 !important;">
-
-                                  <div class="d-flex flex-row justify-content-center align-items-center">
-                                      <!-- Icon -->
-                                      <div class="small-card-icon">
-                                          <i class="fa fa-database  card-icon-bg-primary fa-4x" style="color: black;"></i>
-                                      </div>
-                                      <!-- Text -->
-                                      <div class="small-card-text w-100 text-center">
-                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: black !important;">Audit Trail <br> Proses</p>
-                                          <h4 class="font-weight-normal m-0 text-primary" style="color: black !important;">{{$countAuditTrail}}</h4>
-                                      </div>
-                                  </div>
-
-                                  <hr style="background-color: black; height: 1px; border: 0;">
-                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: black !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
-
-                              </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <!-- Col sm 6, col md 6, col lg 3 -->
-                    <div class="col-sm-6 col-md-6 col-lg-3 mt-3 mt-lg-0">
-                        <!-- Card -->
-                        <div class="card border-0 rounded-lg">
-                            <!-- Card body -->
-                            <a href="{{route('superadmin.auditTrailLogUser')}}"  >
-                              <div class="card-body" style="border-radius:.5rem; background-color: #dc3545 !important;">
-
-                                  <div class="d-flex flex-row justify-content-center align-items-center">
-                                      <!-- Icon -->
-                                      <div class="small-card-icon">
-                                          <i class="fa fa-sign-in card-icon-bg-primary fa-4x" style="color: white !important;"></i>
-                                      </div>
-                                      <!-- Text -->
-                                      <div class="small-card-text w-100 text-center">
-                                          <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Audit Trail <br> Keluar Masuk Pengguna</p>
-                                          <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countAuditTrailLog}}</h4>
-                                      </div>
-                                  </div>
-
-                                  <hr>
-                                  <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
-
-                              </div>
-                            </a>
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- <div style="padding: 20px;"></div>
-
-                <div  style="font-size: 180%;" >
-                  <i class="fa fa-home" aria-hidden="true"></i>
-                  Laporan
-                </div>
-
-                <hr>
-
-                <div style="padding: 10px;">
-
-                <div class="row">
-                  <div class="col-sm-6 col-md-6 col-lg-6 mt-3 mt-lg-0">
-                      <div class="card border-0 rounded-lg">
-                            <div class="card-body" style="border-radius:.5rem; background-color: #dc3545 !important;">
-
-                                <div class="d-flex flex-row justify-content-center align-items-center">
-                                    <div class="small-card-icon">
-                                        <i class="fa fa-sign-in card-icon-bg-primary fa-4x" style="color: white !important;"></i>
-                                    </div>
-                                    <div class="small-card-text w-100 text-center">
-                                        <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: white !important;">Audit Trail <br> Keluar Masuk Pengguna</p>
-                                        <h4 class="font-weight-normal m-0 text-primary" style="color: white !important;">{{$countAuditTrailLog}}</h4>
-                                    </div>
-                                </div>
-
-                                <hr>
-                                <p class="font-weight-normal m-0 text-primary" style="text-align: right; color: white !important;">Lihat Seterusnya <i class="fa fa-caret-right" aria-hidden="true"></i></p>
-
-                            </div>
-                      </div>
-                  </div>
-                </div> -->
-
-                @endif
 
         </main>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
