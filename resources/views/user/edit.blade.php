@@ -368,7 +368,7 @@
                     </div>
 
                     </div>
-                    </div>
+
 
                     @for( $i=0; $i < $jumlahdata; $i++)
                     <div class="">
@@ -378,6 +378,13 @@
                     </div>
                     @endfor
                   </form>
+                  <div class="col-md" id="button_submit_permohonan_disable" style="display: none;">
+                    <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto" onclick="return confirm('Sila masukkan data geospatial di atas');">Kemaskini Data Baru</button>
+                    <!-- <a href="#" class="btn btn-dark btn-outline-primary badge-pill btn-block w-25 m-auto" data-toggle="tooltip" data-placement="right" title="Sila masukkan data geospatial di atas">Mohon Data</a> -->
+
+                  </div>
+                  <div style="padding: 25px;"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -547,6 +554,8 @@
                         if(counter_data != 0)
                         {
                           document.getElementById('button_submit_permohonan').style.display = "block";
+                          document.getElementById('button_submit_permohonan_disable').style.display = "none";
+
                         }
                         console.log('counter_data: tahun:',counter_data);
 
@@ -633,6 +642,8 @@
                           if(counter_data != 0)
                           {
                             document.getElementById('button_submit_permohonan').style.display = "block";
+                            document.getElementById('button_submit_permohonan_disable').style.display = "none";
+
                           }
                           console.log('counter_data: kategori_data :',counter_data);
 
@@ -717,6 +728,8 @@
                           if(counter_data != 0)
                           {
                             document.getElementById('button_submit_permohonan').style.display = "block";
+                            document.getElementById('button_submit_permohonan_disable').style.display = "none";
+
                           }
 
                           document.getElementById("counter_data").value = counter_data;
@@ -753,6 +766,8 @@
               counter_data--;
               if(counter_data == 0){
                 document.getElementById('button_submit_permohonan').style.display = "none";
+                document.getElementById('button_submit_permohonan_disable').style.display = "block";
+
               }
               //update data into jumlah data input
               document.getElementById("counter_data").value = counter_data;
