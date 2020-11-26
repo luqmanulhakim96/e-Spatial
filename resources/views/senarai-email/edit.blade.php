@@ -105,7 +105,7 @@
 
                           </div>
                           <div class="col-md">
-                            <button type="submit" class="btn btn-primary">Edit</button>
+                            <button type="submit" class="btn btn-primary">Kemaskini</button>
                           </div>
                         </div>
                       </form>
