@@ -8,9 +8,11 @@
 
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pemohonan Baru</div>
+
                   <div class="card-body">
-                      <div class="card-title">Senarai Pemohonan Baru</div>
+                      <!-- <div class="card-title">Senarai Pemohonan Baru</div> -->
                       <div class="table-responsive">
                       <table class="table table-striped table-bordered" id="list_permohonan_baru" style="width: 100%;">
 
@@ -33,7 +35,7 @@
                           <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              <a href="{{ route('permohonan.view', $baru->id) }}" style=" font-weight: 600;">{{ $baru->getPermohonanID()  }}</a>
+                              <a href="{{ route('permohonan.view', $baru->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $baru->getPermohonanID()  }}</a>
                             </td>
                             <td>
                               <div style="padding : 4px; "></div>
@@ -73,7 +75,7 @@
                           <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->getPermohonanID()  }}</a>
+                              <a href="{{ route('permohonan.view', $baru->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $baru->getPermohonanID()  }}</a>
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
@@ -111,7 +113,7 @@
                           <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->getPermohonanID()  }}</a>
+                              <a href="{{ route('permohonan.view', $baru->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $baru->getPermohonanID()  }}</a>
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
@@ -143,7 +145,7 @@
                           <tr onclick="document.location = '{{ route('permohonan.view', $baru->id) }}';">
                             <td>
                               <div style="padding : 4px;"></div>
-                              <a href="{{ route('permohonan.view', $baru->id) }}">{{ $baru->getPermohonanID()  }}</a>
+                              <a href="{{ route('permohonan.view', $baru->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $baru->getPermohonanID()  }}</a>
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>

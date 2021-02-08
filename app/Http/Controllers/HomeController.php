@@ -14,6 +14,8 @@ use Auth;
 
 use App\User;
 
+use App\Audit;
+
 use App\SenaraiHarga;
 
 use App\Permohonan;
@@ -61,18 +63,42 @@ class HomeController extends Controller
 
       $countPermohonanBaruP1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_admin')
                             ->count();
 
       $countPermohonanBaruP2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNull('ulasan_penyokong_2')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
                             ->count();
 
       $countPermohonanBaruKP = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNull('ulasan_ketua_pengarah')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
                             ->count();
 
       $countPermohonanSedangDiproses = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNotNull('ulasan_admin')
+                            ->count();
+
+      $countPermohonanSedangDiproses1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->count();
+
+      $countPermohonanSedangDiproses2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
+                            ->count();
+
+      $countPermohonanSedangDiprosesKP = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
+                            ->whereNotNull('ulasan_ketua_pengarah')
                             ->count();
 
       $countPermohonanLulus = Permohonan::where('status_permohonan', 'Lulus')
@@ -114,15 +140,19 @@ class HomeController extends Controller
       $jumlahJenisDokumen =  DB::select(DB::raw("SELECT COUNT(senarai_hargas.jenis_dokumen) as count_jenis_dokumen, senarai_hargas.jenis_dokumen as jenis_dokumen FROM senarai_hargas, data_permohonans, permohonans WHERE permohonans.id = data_permohonans.permohonan_id AND senarai_hargas.id = data_permohonans.senarai_harga_id GROUP BY senarai_hargas.jenis_dokumen"));
 
 
-      // dd($dataDipohonMengikutBulan);
-      //$permohonan_negeri_semenanjung_malaysia = SenaraiHarga::where('negeri','Semenanjung Malaysia')->get();
+      //Admin dashboard
+      $countPenggunaAdmin = User::where([['role','!=','5'],['status','!=','0']])->count();
+
+      $countPenggunaLuar = User::where('role','5')->count();
+
+      $countAuditTrail = Audit::whereHas('user', function($q) {
+        $q->where('role','!=','5');
+      })->where('event','!=','Log Masuk')->where('event','!=','Log Keluar')->count();
+
+      $countAuditTrailLog = Audit::where('event','Log Masuk')->orWhere('event','Log Keluar')->count();
 
 
 
-
-      //dd($permohonan_negeri_semenanjung_malaysia);
-
-      // dd($nama);
         return view('home', compact(
           'nama',
           'countPermohonanBaruPS',
@@ -130,6 +160,9 @@ class HomeController extends Controller
           'countPermohonanBaruP2',
           'countPermohonanBaruKP',
           'countPermohonanSedangDiproses',
+          'countPermohonanSedangDiproses1',
+          'countPermohonanSedangDiproses2',
+          'countPermohonanSedangDiprosesKP',
           'countPermohonanLulus',
           'countPermohonanGagal',
           'countPermohonanTidakBerkaitan',
@@ -143,7 +176,11 @@ class HomeController extends Controller
           'dataDipohonMengikutBulan',
           'dataStatusPermohonan',
           'dataJumlahPendapatan',
-          'jumlahJenisDokumen'
+          'jumlahJenisDokumen',
+          'countPenggunaAdmin',
+          'countPenggunaLuar',
+          'countAuditTrail',
+          'countAuditTrailLog'
       ));
     }
 
@@ -244,11 +281,29 @@ class HomeController extends Controller
 
       $userInfo = User::findOrFail($user_id);
 
-      $listPermohonanBaru = Permohonan::where('status_permohonan', 'Sedang Diproses')
+      $listSedangProses = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNotNull('ulasan_admin')
                             ->get();
 
-      return view('permohonan.listSedangDiproses', compact('listPermohonanBaru','userInfo'));
+      $listSedangProses1 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->get();
+
+      $listSedangProses2 = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
+                            ->get();
+
+      $listSedangProsesKP = Permohonan::where('status_permohonan', 'Sedang Diproses')
+                            ->whereNotNull('ulasan_admin')
+                            ->whereNotNull('ulasan_penyokong_1')
+                            ->whereNotNull('ulasan_penyokong_2')
+                            ->whereNotNull('ulasan_ketua_pengarah')
+                            ->get();
+
+      return view('permohonan.listSedangDiproses', compact('listSedangProses','listSedangProses1', 'listSedangProses2','listSedangProsesKP','userInfo'));
     }
 
     public function senaraiPermohonanGagal(){

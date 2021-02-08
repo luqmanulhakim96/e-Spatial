@@ -1,15 +1,35 @@
 @extends('layouts.app_user')
 @section('content')
       <!--Page Body part -->
-            <div class="p
-            age-body p-4 text-dark">
+            <div class="page-body p-4 text-dark">
+              <div class="theme-option p-3 border-1" style="border: 1px solid;border-color: #003e61 !important;">
+                  <div class="theme-pck">
+                      <i class="fa fa-globe" aria-hidden="true" style="font-size: 180% !important;"></i>
+                  </div>
+                  <p style="font-size: 110%;">Pilih Bahasa | Choose Language</p>
+                  <div class="row">
+                    <div class="col-md">
+                      <div class="btn-group">
+                          <button class="btn btn-primary">Bahasa Melayu</button>
+                          <!-- <a href="#" class="btn btn-outline-primary">Bahasa Melayu</a> -->
+                          <!-- <button class="btn btn-primary">English</button> -->
+                          <a href="{{ route('user.edit_eng', $info->id) }}" class="btn btn-outline-primary">English</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="side-nav-themes d-flex flex-row">
+                      <p class="p-3 rounded side-nav-theme-primary side-nav-theme" theme-color="purple"></p>
+                      <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
+                  </div> -->
+              </div>
                 <div class="page-heading border-bottom d-flex flex-row">
                 </div>
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Kemaskini Data Permohonan</div>
+
                   <div class="card-body">
-                      <div class="card-title" style="text-align: center;">Kemaskini Data Permohonan</div>
                       <div class="">
                         <form class="" id="pilihan_data" enctype="multipart/form-data">
                           @csrf
@@ -20,11 +40,10 @@
                               <!-- jenis dokumen input-->
                               <div class="form-group">
                                   <label for="jenis_dokumen">Jenis Dokumen:</label>
-                                  <label for="jenis_dokumen">(Document Type)</label>
                                     <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showJenisKertas(this)" required>
                                         <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                         @foreach($jenisDokumen as $data)
-                                        <option value="{{$data->jenis_dokumen}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
+                                        <option value="{{preg_replace('/\s+/', '',$data->jenis_dokumen)}}" {{ old('jenis_dokumen') == "$data->jenis_dokumen" ? 'selected' : '' }}>{{$data->jenis_dokumen}}</option>
                                         @endforeach
                                     </select>
                                     @error('jenis_dokumen')
@@ -43,7 +62,6 @@
                               <!-- jenis data input-->
                               <div class="form-group">
                                   <label for="jenis_data">Jenis Data:</label>
-                                  <label for="jenis_data">(Data Type)</label>
                                     <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)" required>
                                       <option value="" selected disabled hidden>Pilih Jenis Data</option>
                                     </select>
@@ -65,7 +83,7 @@
                               <div class="form-group">
                                 <div class="form-group" id="custom_jenis_data_div" >
                                     <label for="maklumat_agensi">Nyatakan Jenis Data:</label>
-                                    <input type="text" class="custom-select  bg-light @error('custom_jenis_data') is-invalid @enderror" id="custom_jenis_data" name="custom_jenis_data" placeholder="Nyatakan Jenis Data" aria-describedby="custom_jenis_data">
+                                    <input type="text" class="form-control  bg-light @error('custom_jenis_data') is-invalid @enderror" id="custom_jenis_data" name="custom_jenis_data" placeholder="Nyatakan Jenis Data" aria-describedby="custom_jenis_data" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                                     @error('custom_jenis_data')
                                     <div class="alert alert-danger">
                                       <strong>{{ $message }}</strong>
@@ -83,7 +101,8 @@
                               <div class="form-group">
                                 <div class="form-group" id="custom_tahun_div" >
                                     <label for="maklumat_agensi">Tahun:</label>
-                                    <input type="text" class="custom-select  bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" placeholder="Nyatakan Tahun Data" aria-describedby="custom_tahun">
+                                    <input type="text" class="form-control  bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" placeholder="Nyatakan Tahun Data" aria-describedby="custom_tahun">
+                                    <small id="saiz_data" class="form-text text-secondary">Contoh : 2012 ATAU 2010-2012</small>
                                     @error('custom_tahun')
                                     <div class="alert alert-danger">
                                       <strong>{{ $message }}</strong>
@@ -101,7 +120,6 @@
                               <!-- custom negeri input -->
                               <div class="form-group">
                                 <label for="negeri">Negeri:</label>
-                                <label for="negeri">(State)</label>
                                   <select id="custom_negeri" class="custom-select  bg-light" name="custom_negeri" required>
                                       <option value="" selected disabled hidden>Pilih Negeri</option>
                                   </select>
@@ -144,7 +162,6 @@
                               <!--tahun input -->
                               <div class="form-group" id="tahun_div" style="display: block;">
                                   <label for="tahun">Tahun:</label>
-                                  <label for="tahun">(Year)</label>
                                   <select id="tahun" class="custom-select  bg-light" name="tahun" required>
                                       <option value="" selected disabled hidden>Pilih Tahun</option>
                                   </select>
@@ -164,7 +181,6 @@
                               <!-- negeri input -->
                               <div class="form-group">
                                 <label for="negeri">Negeri:</label>
-                                <label for="negeri">(State)</label>
                                   <select id="negeri" class="custom-select  bg-light" name="negeri" required>
                                       <option value="" selected disabled hidden>Pilih Negeri</option>
                                   </select>
@@ -198,14 +214,19 @@
                           </div>
                         </div>
 
-                        <div class="row">
+                        <div class="card-footer text-center">
+                            <input class="btn btn-primary" id="more" type="button" value=" Tambah Data " onclick="tambahData()">
+
+                        </div>
+
+                        <!-- <div class="row">
                           <div class="col-md-5">
                           </div>
                           <div class="col-md-4">
                             <input class="btn btn-primary" type="button" value=" Tambah Data " onclick="tambahData()">
 
                           </div>
-                        </div>
+                        </div> -->
 
                         </form>
 
@@ -222,10 +243,27 @@
               <!-- Col md 6 -->
                     <div class="col-md-15 mt-1">
                         <!-- Light Bordered Table card -->
-                        <div class="card rounded-lg">
+                        <div class="card rounded-lg" style="border-color: #003473 !important;">
+                          <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Data Permohonan</div>
+
                             <div class="card-body">
-                                <div class="card-title" style="text-align: center;">Senarai Data Permohonan</div>
                                 <!-- Table -->
+                                <div class="row">
+                                  <div class="col-md-2"></div>
+                                  <div class="col-md">
+                                    <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
+                                      <h6 style="text-align: center;">Catatan:</h6>
+                                      <span>Pemohon hendaklah mempunyai sekurang-kurangnya satu data dalam senarai untuk kemaskini permohonan</span><br><br>
+
+                                      <span>Sekiranya terdapat perubahan data permohonan sedia ada, sila buang data tersebut dan membuat penambahan data baru.</span><br>
+
+                                    </div>
+                                  </div>
+                                  <div class="col-md-2"></div>
+
+                                </div>
+                                <div style="padding: 15px;"></div>
+
                                 <div class="table-responsive">
                                     <table class="table table-bordered" id="pilihan_table">
                                         <thead>
@@ -244,39 +282,39 @@
                                           @foreach($senaraiHarga[$i] as $senarai_harga_data)
                                             <tr>
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->jenis_dokumen}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->jenis_dokumen}}</p>
                                               </td>
                                               @if($senarai_harga_data->jenis_dokumen == 'Bercetak')
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->jenis_kertas}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->jenis_kertas}}</p>
                                               </td>
                                               @else
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">Tiada</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">Tiada</p>
                                               </td>
                                               @endif
                                               @if($senarai_harga_data->jenis_data == 'Lain-Lain')
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->jenis_data}} : {{$dataPilihan[$i]['custom_jenis_data']}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->jenis_data}} : {{$dataPilihan[$i]['custom_jenis_data']}}</p>
                                               </td>
                                               @else
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->jenis_data}} </p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->jenis_data}} </p>
                                               </td>
                                               @endif
                                               @if($senarai_harga_data->jenis_data == 'Lain-Lain')
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$dataPilihan[$i]['custom_tahun']}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$dataPilihan[$i]['custom_tahun']}}</p>
                                               </td>
                                               @else
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->tahun}}{{$senarai_harga_data->kategori_data}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->tahun}}{{$senarai_harga_data->kategori_data}}</p>
                                               </td>
                                               @endif
                                               <td>
-                                                <p class="mb-0 font-weight-bold" style="text-align: center;">{{$senarai_harga_data->negeri}}</p>
+                                                <p class="mb-0 " style="text-align: center;" style="text-align: center;">{{$senarai_harga_data->negeri}}</p>
                                               </td>
-                                              <td>
+                                              <td style="text-align: center; vertical-align: middle;">
                                                 <a class="btn btn-danger mr-1" onClick="removeData(this,'{{$i}}'); return false;"><i class="fa fa-trash" ></i></a>
                                               </td>
                                             </tr>
@@ -295,9 +333,10 @@
             </div>
 
             <div class="card-body">
-              <div class="card rounded-lg">
+              <div class="card rounded-lg" style="border-color: #003473 !important;">
+                <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Maklumat Tambahan</div>
+
                 <div class="card-body">
-                  <div class="card-title" style="text-align: center;">Maklumat Tambahan</div>
 
                   <form  id="permohonan_data" action="{{route('user.update', $info->id)}}" method="post">
                     @csrf
@@ -318,18 +357,18 @@
                         </div>
                       </div>
                     </div>
-
+                    <input type="hidden" name="language" value="melayu">
                     <div class="row">
                       <div class="col-md-4">
 
                       </div>
                       <div class="col-md-4" id="button_submit_permohonan" style="display: block;">
-                        <button type="submit" onclick="return confirm('Update data permohonan?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Update Data Baru</button>
+                        <button type="submit" onclick="return confirm('Kemaskini data permohonan?');" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto" id="submit_data" >Kemaskini Data Baru</button>
                       </div>
                     </div>
 
                     </div>
-                    </div>
+
 
                     @for( $i=0; $i < $jumlahdata; $i++)
                     <div class="">
@@ -339,6 +378,13 @@
                     </div>
                     @endfor
                   </form>
+                  <div class="col-md" id="button_submit_permohonan_disable" style="display: none;">
+                    <button type="submit" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto" onclick="return confirm('Sila masukkan data geospatial di atas');">Kemaskini Data Baru</button>
+                    <!-- <a href="#" class="btn btn-dark btn-outline-primary badge-pill btn-block w-25 m-auto" data-toggle="tooltip" data-placement="right" title="Sila masukkan data geospatial di atas">Mohon Data</a> -->
+
+                  </div>
+                  <div style="padding: 25px;"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -346,7 +392,7 @@
         </main>
         <script type="text/javascript">
         function showDiv(select){
-           if(select.value=='Petak Kajian'){
+           if(select.value=='PetakKajian'){
             document.getElementById('default_form_div').style.display = "block";
             document.getElementById('custom_form_div').style.display = "none";
             document.getElementById('kategori_data_div').style.display = "block";
@@ -455,33 +501,46 @@
                       data.forEach(function(){
                         //insert data in table
                         if(jenis_kertas){
+
+                          jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                          jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                          tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                          kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                          negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                          jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                          custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                          custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                          jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
                           $("#pilihan_table").append(
-                            '<tr><td><p class="mb-0 font-weight-bold">' +
+                            '<tr><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_dokumen +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_kertas +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             tahun + kategori_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             negeri +
-                            '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }else {
                           jenis_kertas = "Tiada";
                           $("#pilihan_table").append(
-                            '<tr><td><p class="mb-0 font-weight-bold">' +
+                            '<tr><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_dokumen +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_kertas +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             jenis_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             tahun + kategori_data +
-                            '</td><td><p class="mb-0 font-weight-bold">' +
+                            '</td><td><p class="mb-0 " style="text-align: center;">' +
                             negeri +
-                            '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                            '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                           );
                         }
                         //console.log(data[0].id);
@@ -495,6 +554,8 @@
                         if(counter_data != 0)
                         {
                           document.getElementById('button_submit_permohonan').style.display = "block";
+                          document.getElementById('button_submit_permohonan_disable').style.display = "none";
+
                         }
                         console.log('counter_data: tahun:',counter_data);
 
@@ -530,31 +591,44 @@
                         $(document).ready(function(){
                           //display in table
                           if(jenis_kertas){
+
+                            jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                            tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                            kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                            negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                            custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                            custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                            jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               tahun + kategori_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               negeri +
-                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               tahun + kategori_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               negeri +
                               '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
@@ -568,6 +642,8 @@
                           if(counter_data != 0)
                           {
                             document.getElementById('button_submit_permohonan').style.display = "block";
+                            document.getElementById('button_submit_permohonan_disable').style.display = "none";
+
                           }
                           console.log('counter_data: kategori_data :',counter_data);
 
@@ -599,33 +675,46 @@
                         $(document).ready(function(){
                           //display in table
                           if(jenis_kertas){
+                            jenis_dokumen = jenis_dokumen.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_data = jenis_data.replace(/([A-Z])/g, ' $1').trim();
+                            tahun = tahun.replace(/([A-Z])/g, ' $1').trim();
+                            kategori_data = kategori_data.replace(/([A-Z])/g, ' $1').trim();
+                            negeri = negeri.replace(/([A-Z])/g, ' $1').trim();
+                            jenis_kertas = jenis_kertas.replace(/([A-Z])/g, ' $1').trim();
+
+                            custom_tahun = custom_tahun.replace(/([A-Z])/g, ' $1').trim();
+                            custom_negeri = custom_negeri.replace(/([A-Z])/g, ' $1').trim();
+
+                            jenis_kertas = jenis_kertas.charAt(0).toUpperCase()+ jenis_kertas.slice(1);
+
+
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data + ' : ' + custom_jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_tahun +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this,'+ increment  +'); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }else{
                             jenis_kertas = "Tiada";
                             $("#pilihan_table").append(
-                              '<tr><td><p class="mb-0 font-weight-bold">' +
+                              '<tr><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_dokumen +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_kertas +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               jenis_data + ' : ' + custom_jenis_data +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_tahun +
-                              '</td><td><p class="mb-0 font-weight-bold">' +
+                              '</td><td><p class="mb-0 " style="text-align: center;">' +
                               custom_negeri +
-                              '</td><td><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
+                              '</td><td style="text-align: center; vertical-align: middle;"><a onClick="removeData(this, '+ increment  +' ); return false;" class="btn btn-danger mr-1"><i class="fa fa-trash"></i></a></td></tr>'
                             );
                           }
                           //console.log(data.id);
@@ -639,6 +728,8 @@
                           if(counter_data != 0)
                           {
                             document.getElementById('button_submit_permohonan').style.display = "block";
+                            document.getElementById('button_submit_permohonan_disable').style.display = "none";
+
                           }
 
                           document.getElementById("counter_data").value = counter_data;
@@ -675,6 +766,8 @@
               counter_data--;
               if(counter_data == 0){
                 document.getElementById('button_submit_permohonan').style.display = "none";
+                document.getElementById('button_submit_permohonan_disable').style.display = "block";
+
               }
               //update data into jumlah data input
               document.getElementById("counter_data").value = counter_data;
@@ -703,7 +796,9 @@
                 data.forEach(function(data)
                 {
                   //console.log(data.jenis_data);
-                  $("#jenis_data").append('<option value="'+data.jenis_data+'">'+data.jenis_data+'</option>');
+                  // $("#jenis_data").append('<option value="'+data.jenis_data+'">'+data.jenis_data+'</option>');
+                  $("#jenis_data").append('<option value="'+data.jenis_data.replace(/\s+/g, '')+'">'+data.jenis_data+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -782,7 +877,9 @@
                 data.forEach(function(data)
                 {
                   //console.log(data.kategori_data);
-                  $("#kategori_data").append('<option value="'+data.kategori_data+'">'+data.kategori_data+'</option>');
+                  // $("#kategori_data").append('<option value="'+data.kategori_data+'">'+data.kategori_data+'</option>');
+                  $("#kategori_data").append('<option value="'+data.kategori_data.replace(/\s+/g, '')+'">'+data.kategori_data+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -819,7 +916,11 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
+                  $("#negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
+
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -857,7 +958,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  $("#negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -900,7 +1003,9 @@
                 data.forEach(function(data)
                 {
 
-                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  // $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas.replace(/\s+/g, '')+'">'+data.jenis_kertas+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -924,7 +1029,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  // $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas.replace(/\s+/g, '')+'">'+data.jenis_kertas+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -969,7 +1076,9 @@
                 //console.log(data);
                 data.forEach(function(data)
                 {
-                  $("#custom_negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  // $("#custom_negeri").append('<option value="'+data.negeri+'">'+data.negeri+'</option>');
+                  $("#custom_negeri").append('<option value="'+data.negeri.replace(/\s+/g, '')+'">'+data.negeri+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');
@@ -1013,7 +1122,9 @@
                 data.forEach(function(data)
                 {
 
-                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  // $("#jenis_kertas").append('<option value="'+data.jenis_kertas+'">'+data.jenis_kertas+'</option>');
+                  $("#jenis_kertas").append('<option value="'+data.jenis_kertas.replace(/\s+/g, '')+'">'+data.jenis_kertas+'</option>');
+
                 });
                     // $.each(JSON.parse(respond),function(key,value){
                     //     $("#jenis_data").append('<option value="'+value+'">'+value+'</option>');

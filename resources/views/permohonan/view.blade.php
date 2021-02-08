@@ -8,9 +8,11 @@
                 </div>
                 <!-- Small card component -->
 
-                      <div class="card rounded-lg">
+                      <div class="card rounded-lg" style="border-color: #003473 !important;">
+                        <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Maklumat Permohonan</div>
+
   <div class="card-body">
-      <div class="card-title">Maklumat Permohonan</div>
+      <!-- <div class="card-title">Maklumat Permohonan</div> -->
       <!-- Nav tabs -->
       <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item">
@@ -21,7 +23,7 @@
           <a class="nav-link" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="false">Info Data Pemohonan</a>
           </li>
 
-          @if($permohonan->jumlah_bayaran != 0.00)
+          @if($permohonan->jumlah_bayaran != 0.00 && $permohonan->status_permohonan != "Tidak Berkaitan")
           <li class="nav-item">
           <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Rumusan</a>
           </li>
@@ -29,7 +31,7 @@
       </ul>
 
       <!-- Tab panes -->
-      <div class="tab-content">
+      <div class="tab-content" id="tabAll">
           <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
             <div class="row">
@@ -277,8 +279,10 @@
                                 <th><p class="mb-0">TAHUN/KATEGORI DATA</p></th>
                                 <th><p class="mb-0">NEGERI</p></th>
                                 <th><p class="mb-0">HARGA ASAS </p></th>
+                                @if($permohonan->jumlah_bayaran != 0.00)
                                 <th><p class="mb-0">SAIZ DATA</p></th>
                                 <th><p class="mb-0">JUMLAH</p></th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -301,6 +305,7 @@
                             @endif
                             <td><p class="mb-0 " style="text-align: center;">{{ $senaraiHargaUser[$i][0]['negeri']}}</p></td>
                             <td><p class="mb-0 " style="text-align: center;">RM {{ $senaraiHargaUser[$i][0]['harga_asas']}}</p></td>
+                            @if($permohonan->jumlah_bayaran != 0.00)
                             <td>
                               @if($senaraiHargaUser[$i][0]['jenis_dokumen'] == "Vektor Shapefile")
                               <p class="mb-0 " style="text-align: center;">{{ $dataPermohonan[$i]['saiz_data']}}</p>
@@ -309,7 +314,7 @@
                               @endif
                             </td>
                             <td><p class="mb-0 " style="text-align: center;">RM {{ $dataPermohonan[$i]['jumlah_harga_data']}}</p></td>
-
+                            @endif
                           </tr>
 
                           @endfor
@@ -320,8 +325,7 @@
                     </table>
                 </div>
               </div>
-
-              @if($permohonan->jumlah_bayaran == 0.00)
+              @if($permohonan->jumlah_bayaran == 0.00 && $permohonan->status_permohonan == "Sedang Diproses")
               <div class="row">
                 <div class="col-md-5">
 
@@ -330,7 +334,7 @@
                   <a href="{{ route('permohonan.harga.view', $permohonan->id) }}" class="btn btn-ripple btn-raised btn-primary m-2" style="text-align: center;">TAMBAH HARGA</a>
                 </div>
               </div>
-              @else
+              @elseif($permohonan->jumlah_bayaran != 0.00 && ($permohonan->status_permohonan == "Sedang Diproses" || $permohonan->status_permohonan == "Lulus"))
               <div class="row">
                 <div class="col-md-2">
 
@@ -388,7 +392,7 @@
                 </div>
               </div>
 
-              @if($permohonan->ulasan_admin == null)
+              @if($permohonan->ulasan_admin == null && $permohonan->status_permohonan == "Sedang Diproses")
                 <div style="padding : 10px;"></div>
                 <hr>
 
@@ -513,7 +517,7 @@
                                   </div>
                                   <div class="custom-control custom-radio">
                                       <input type="radio" id="Gagal" name="status_permohonan" onclick="showStatusPembayaran()" class="custom-control-input"  value="Gagal" @if(old('status_permohonan')=="Gagal") checked @endif>
-                                      <label class="custom-control-label" for="Gagal">Gagal</label>
+                                      <label class="custom-control-label" for="Gagal">Tidak Lulus</label>
                                   </div>
                                 </div>
 
@@ -550,16 +554,26 @@
                                 <div class="col-md">
 
                                   <div class="form-group" >
-                                    @if($current_user_info->role == 3)
+                                    @if($current_user_info->role == 3 && $permohonan->status_permohonan == "Sedang Diproses")
                                     <button type="submit" class="btn btn-primary" onclick="return confirm('Adakah anda pasti dengan keputusan permohonan ini??');" id="submit_data" >Hantar Keputusan</button>
                                     @else
-                                    <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          @if($current_user_info->role == 0 && $permohonan->ulasan_admin == null)
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          @endif
+
+                                          @if($current_user_info->role == 1 && $permohonan->ulasan_penyokong_1 == null)
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          @endif
+
+                                          @if($current_user_info->role == 2 && $permohonan->ulasan_penyokong_2 == null)
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          @endif
                                     @endif
+                                    <button type="button" class="btn btn-primary"  id="printButton" ><i class="fa fa-print" aria-hidden="true"></i> Cetak Permohonan</button>
+
                                   </div>
                                 </div>
-                                <div class="col-md-4">
 
-                                </div>
                               </div>
 
                             </form>
@@ -577,7 +591,7 @@
 </div>
 
             </div>
-        </main>
+
 
       <script type="text/javascript">
         function validateStatusPermohonan(){
@@ -607,6 +621,24 @@
             });
         });
       </script>
-</main>
+      <script type="text/javascript">
+      $("#printButton").click(function(){
+      // Before printing show all the tab panel contents
+      // $('#tabAll').show();
+      $("#home").tab('show');
+      $("#profile").tab('show');
+
+      // Print the page
+      window.print();
+      // After printing hide back all the tab panel contents which are supposed to be hidden
+      // $('.ui-tabs-panel[aria-hidden=true]').hide();
+
+      $("#home").hide();
+
+      });
+      </script>
+
+
+
 
 @endsection

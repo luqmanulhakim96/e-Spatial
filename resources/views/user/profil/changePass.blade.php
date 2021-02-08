@@ -2,14 +2,35 @@
 @section('content')
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
-
+              <div class="theme-option p-3 border-1" style="border: 1px solid;border-color: #003e61 !important;">
+                  <div class="theme-pck">
+                      <i class="fa fa-globe" aria-hidden="true" style="font-size: 180% !important;"></i>
+                  </div>
+                  <p style="font-size: 110%;">Pilih Bahasa | Choose Language</p>
+                  <div class="row">
+                    <div class="col-md">
+                      <div class="btn-group">
+                          <button class="btn btn-primary">Bahasa Melayu</button>
+                          <!-- <a href="{{ route('user.list') }}" class="btn btn-outline-primary">Bahasa Melayu</a> -->
+                          <!-- <button class="btn btn-primary">English</button> -->
+                          <a href="{{ route('user.profile.password') }}" class="btn btn-outline-primary">English</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="side-nav-themes d-flex flex-row">
+                      <p class="p-3 rounded side-nav-theme-primary side-nav-theme" theme-color="purple"></p>
+                      <p class="p-3 rounded ml-2 side-nav-theme-light side-nav-theme" theme-color="light"></p>
+                  </div> -->
+              </div>
                 <div class="page-heading border-bottom d-flex flex-row">
 
                 </div>
 
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Tukar Kata Laluan</div>
+
                   <div class="card-body">
 
                       <div class="row">
@@ -17,7 +38,6 @@
 
                         </div>
                         <div class="col-md-8">
-                          <div class="card-title">Tukar Kata Laluan</div>
                         </div>
                       </div>
 
@@ -30,7 +50,13 @@
                         <div class="col-md-8">
                           <div class="form-group">
                             <label>Kata Laluan Terdahulu</label>
-                            <input type="password"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Masukkan Kata Laluan Terdahulu" required>
+                            <!-- <input type="password"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Masukkan Kata Laluan Terdahulu" required> -->
+                            <div class="input-group mb-3">
+                              <input type="password" id="old_pass"  class="form-control bg-light @error('old_pass') is-invalid @enderror" name="old_pass" placeholder="Masukkan Kata Laluan Terdahulu" required>
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" onclick="visibleOldPass()" type="button" id="button-addon2"><i class="fa fa-eye"></i></button>
+                              </div>
+                            </div>
                             @error('old_pass')
                             <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -76,15 +102,17 @@
                           </div>
                         </div>
                       </div>
+                      <input type="hidden" name="language" value="melayu">
+                      <button type="submit" onclick="return confirm('Anda pasti untuk tukar kata laluan?')" class="btn btn-primary btn-outline-primary badge-pill btn-block w-25 m-auto">Tukar Kata Laluan</button>
 
-                        <div class="row">
+
+                        <!-- <div class="row">
                           <div class="col-md-3">
 
                           </div>
                             <div class="col-md-6">
-                              <button type="submit" onclick="return confirm('Anda pasti untuk tukar kata laluan?')" class="btn btn-primary btn-outline-primary badge-pill btn-block w-75 m-auto">Tukar Kata Laluan</button>
                             </div>
-                        </div>
+                        </div> -->
                       </form>
                   </div>
                 </div>
@@ -92,7 +120,14 @@
         </main>
         <script>
 
-
+        function visibleOldPass() {
+          var x = document.getElementById("old_pass");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
 
         function visiblePassNew() {
           var x = document.getElementById("new_pass");

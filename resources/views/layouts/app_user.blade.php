@@ -36,7 +36,7 @@
             <!-- Brand details -->
             <div class="side-menu-brand d-flex flex-column justify-content-center align-items-center clear mt-3">
                 <img src="{{ asset('https://www.atvadventurepark.com/images/hutan.png') }}" alt="bran_name" class="brand-img">
-                <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold">e-Spatial</a>
+                <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold" style="text-align: center; font-size: 20px !important;">Permohonan Data Geospatial</a>
             </div>
             @if(Auth::user())
             <!-- Side bar menu -->
@@ -108,7 +108,7 @@
         </div>
 
         <!-- Main section -->
-        <main class="bg-light main-full-body">
+        <main class="bg-light main-full-body" style="background-color: #ccc!important;">
 
             <!-- Theme changer -->
             <!-- <div class="theme-option p-4">
@@ -145,7 +145,7 @@
             </div>
             @endif
             <!-- The navbar -->
-            <nav class="navbar navbar-expand navbar-light bg-light py-3">
+            <nav class="navbar navbar-expand navbar-light bg-light py-3" style="background-color: #ccc!important;">
                 <p class="navbar-brand mb-0 pb-0">
                     <span></span>
                     <span></span>
@@ -249,9 +249,9 @@
     @yield('content')
 
     <!-- Footer section -->
-    <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary">
-        <p>&copy; Copyright. <a href="https://www.forestry.gov.my/my/" target="_Blank"><font color="black">Jabatan Perhutanan Semenanjung Malaysia</font></a></p>
-        <p>Version 1.0.0</p>
+    <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary" style="background: linear-gradient(to bottom, #cccccc 0%, #ffffff 110%) !important;">
+        <p>&copy; Hakcipta Terpelihara 2020. <a href="https://www.forestry.gov.my/my/" target="_Blank"><font color="black">Jabatan Perhutanan Semenanjung Malaysia</font></a></p>
+        <p>Versi 1.0</p>
     </footer>
   </div>
 

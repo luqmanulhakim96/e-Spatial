@@ -37,8 +37,8 @@ class EmailNotifikasiAdminBatal extends Mailable
       $email = $this->email;
       // dd($this->email);
       return $this->to($this->admin->email , $this->admin->name)
-              ->from(env('MAIL_FROM_ADDRESS'))
-              // ->from('system@espatial.com')
+              // ->from(env('MAIL_FROM_ADDRESS'))
+              ->from('espatial@forestry.gov.my' ,'E-mel Sistem eSpatial')
               ->subject($this->email->subjek)
               ->view('senarai-email.templates.notifikasiAdmin', compact('email'));
     }

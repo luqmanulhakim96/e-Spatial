@@ -12571,1060 +12571,6 @@ class SenaraiHargaSeeder extends Seeder
        ]
       );
 
-    //Vektor Shapefile | Inventori Hutan Nasional | 2010-2019 | A0-A4 | Semenanjung Malaysia
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1961-1970',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1961-1970',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1961-1970',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1961-1970',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1961-1970',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1971-1980',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1981-1990',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1981-1990',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1981-1990',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1981-1990',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1981-1990',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1991-2000',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1991-2000',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1991-2000',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1991-2000',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '1991-2000',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A0',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 770.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A1',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 390.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A2',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 210.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Vektor Shapefile',
-       'jenis_kertas' => 'A3',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 110.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-     DB::table('senarai_hargas')-> insert(
-       [
-       'jenis_dokumen' => 'Bercetak',
-       'jenis_kertas' => 'A4',
-       'saiz_data' => 100,
-       'jenis_data' => 'Inventori Hutan Nasional',
-       'negeri' => 'Semenanjung Malaysia',
-       'kategori_data' => null,
-       'tahun' => '2001-2010',
-       'harga_asas' => 60.00,
-       'jumlah_harga' => 0.00,
-       'status' => 'Aktif',
-       ]
-     );
-
-     //Kertas | Litupan Kawansan Hutan | '2010'-'2019' | 'A0'-'A4' | Wilayah Persekutuan
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A0',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2010',
-      'harga_asas' => 770.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A1',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2010',
-      'harga_asas' => 390.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A2',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2010',
-      'harga_asas' => 210.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A3',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2010',
-      'harga_asas' => 110.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A4',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2010',
-      'harga_asas' => 60.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A0',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2012',
-      'harga_asas' => 770.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A1',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2012',
-      'harga_asas' => 390.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A2',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2012',
-      'harga_asas' => 210.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A3',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2012',
-      'harga_asas' => 110.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A4',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2012',
-      'harga_asas' => 60.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A0',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2014',
-      'harga_asas' => 770.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A1',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2014',
-      'harga_asas' => 390.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A2',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2014',
-      'harga_asas' => 210.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A3',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2014',
-      'harga_asas' => 110.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A4',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2014',
-      'harga_asas' => 60.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A0',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2015',
-      'harga_asas' => 770.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A1',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2015',
-      'harga_asas' => 390.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A2',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2015',
-      'harga_asas' => 210.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A3',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2015',
-      'harga_asas' => 110.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A4',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2015',
-      'harga_asas' => 60.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A0',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2016',
-      'harga_asas' => 770.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A1',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2016',
-      'harga_asas' => 390.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A2',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2016',
-      'harga_asas' => 210.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A3',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2016',
-      'harga_asas' => 110.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A4',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2016',
-      'harga_asas' => 60.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A0',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2017',
-      'harga_asas' => 770.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A1',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2017',
-      'harga_asas' => 390.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A2',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2017',
-      'harga_asas' => 210.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A3',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2017',
-      'harga_asas' => 110.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A4',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2017',
-      'harga_asas' => 60.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A0',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2018',
-      'harga_asas' => 770.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A1',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2018',
-      'harga_asas' => 390.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A2',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2018',
-      'harga_asas' => 210.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A3',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2018',
-      'harga_asas' => 110.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A4',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2018',
-      'harga_asas' => 60.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A0',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2019',
-      'harga_asas' => 770.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A1',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2019',
-      'harga_asas' => 390.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A2',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2019',
-      'harga_asas' => 210.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A3',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2019',
-      'harga_asas' => 110.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-     DB::table('senarai_hargas')-> insert(
-      [
-      'jenis_dokumen' => 'Bercetak',
-      'jenis_kertas' => 'A4',
-      'saiz_data' => 100,
-      'jenis_data' => 'Litupan Kawasan Hutan',
-      'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => null,
-      'tahun' => '2019',
-      'harga_asas' => 60.00,
-      'jumlah_harga' => 0.00,
-      'status' => 'Aktif',
-      ]
-     );
-
      //Kertas | Sempadan Hutan Simpanan Kekal | '2007'-'2019' | 'A0'-'A4' | Semenanjung Malaysia
      DB::table('senarai_hargas')-> insert(
        [
@@ -26603,7 +25549,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Semenanjung Malaysia',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -26617,7 +25563,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Semenanjung Malaysia',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -26631,7 +25577,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Semenanjung Malaysia',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -26645,7 +25591,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Semenanjung Malaysia',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -26659,7 +25605,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Semenanjung Malaysia',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -26955,7 +25901,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Johor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -26969,7 +25915,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Johor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -26983,7 +25929,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Johor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -26997,7 +25943,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Johor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -27011,7 +25957,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Johor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -27307,7 +26253,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kedah',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -27321,7 +26267,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kedah',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -27335,7 +26281,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kedah',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -27349,7 +26295,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kedah',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -27363,7 +26309,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kedah',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -27659,7 +26605,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kelantan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -27673,7 +26619,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kelantan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -27687,7 +26633,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kelantan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -27701,7 +26647,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kelantan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -27715,7 +26661,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Kelantan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -28011,7 +26957,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Negeri Sembilan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -28025,7 +26971,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Negeri Sembilan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -28039,7 +26985,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Negeri Sembilan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -28053,7 +26999,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Negeri Sembilan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -28067,7 +27013,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Negeri Sembilan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -28363,7 +27309,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pahang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -28377,7 +27323,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pahang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -28391,7 +27337,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pahang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -28405,7 +27351,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pahang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -28419,7 +27365,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pahang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -28715,7 +27661,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perak',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -28729,7 +27675,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perak',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -28743,7 +27689,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perak',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -28757,7 +27703,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perak',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -28771,7 +27717,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perak',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -29067,7 +28013,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perlis',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -29081,7 +28027,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perlis',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -29095,7 +28041,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perlis',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -29109,7 +28055,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perlis',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -29123,7 +28069,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Perlis',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -29419,7 +28365,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pulau Pinang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -29433,7 +28379,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pulau Pinang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -29447,7 +28393,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pulau Pinang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -29461,7 +28407,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pulau Pinang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -29475,7 +28421,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Pulau Pinang',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -29771,7 +28717,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Selangor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -29785,7 +28731,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Selangor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -29799,7 +28745,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Selangor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -29813,7 +28759,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Selangor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -29827,7 +28773,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Selangor',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -30123,7 +29069,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Terengganu',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -30137,7 +29083,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Terengganu',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -30151,7 +29097,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Terengganu',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -30165,7 +29111,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Terengganu',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -30179,7 +29125,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Terengganu',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -30475,7 +29421,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Melaka',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -30489,7 +29435,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Melaka',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -30503,7 +29449,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Melaka',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -30517,7 +29463,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Melaka',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -30531,7 +29477,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Melaka',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -30827,7 +29773,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 770.00,
       'jumlah_harga' => 0.00,
@@ -30841,7 +29787,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 390.00,
       'jumlah_harga' => 0.00,
@@ -30855,7 +29801,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 210.00,
       'jumlah_harga' => 0.00,
@@ -30869,7 +29815,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 110.00,
       'jumlah_harga' => 0.00,
@@ -30883,7 +29829,7 @@ DB::table('senarai_hargas')-> insert(
       'saiz_data' => 100,
       'jenis_data' => 'Petak Kajian',
       'negeri' => 'Wilayah Persekutuan',
-      'kategori_data' => 'Growth ploth',
+      'kategori_data' => 'Growth Ploth',
       'tahun' => null,
       'harga_asas' => 60.00,
       'jumlah_harga' => 0.00,
@@ -31388,13 +30334,15 @@ DB::table('senarai_hargas')-> insert(
        'status' => 'Aktif',
        ]
      );
+
+     //Kertas | Lain-Lain | null | 'A0'-'A4' | Negeri Sembilan
      DB::table('senarai_hargas')-> insert(
        [
        'jenis_dokumen' => 'Bercetak',
        'jenis_Kertas' => 'A0',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Kelantan',
+       'negeri' => 'Negeri Sembilan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 770.00,
@@ -31408,7 +30356,7 @@ DB::table('senarai_hargas')-> insert(
        'jenis_Kertas' => 'A1',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Kelantan',
+       'negeri' => 'Negeri Sembilan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 390.00,
@@ -31422,7 +30370,7 @@ DB::table('senarai_hargas')-> insert(
        'jenis_Kertas' => 'A2',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Kelantan',
+       'negeri' => 'Negeri Sembilan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 210.00,
@@ -31436,7 +30384,7 @@ DB::table('senarai_hargas')-> insert(
        'jenis_Kertas' => 'A3',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Kelantan',
+       'negeri' => 'Negeri Sembilan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 110.00,
@@ -31450,7 +30398,7 @@ DB::table('senarai_hargas')-> insert(
        'jenis_Kertas' => 'A4',
        'saiz_data' => 100,
        'jenis_data' => 'Lain-Lain',
-       'negeri' => 'Kelantan',
+       'negeri' => 'Negeri Sembilan',
        'kategori_data' => null,
        'tahun' => null,
        'harga_asas' => 60.00,

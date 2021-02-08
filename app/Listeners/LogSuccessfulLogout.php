@@ -32,17 +32,20 @@ class LogSuccessfulLogout
      */
     public function handle(Logout $event)
     {
-       $data = [
-          'auditable_id' =>  Auth::user()->id,
-          'auditable_type' => get_class($event->user),
-          'event'      => "Log Keluar",
-          'url'        => $this->request->fullUrl(),
-          'ip_address' => $this->request->getClientIp(),
-          'user_agent' => $this->request->userAgent(),
-          'created_at' => Carbon::now(),
-          'updated_at' => Carbon::now(),
-          'user_id'    => Auth::user()->id,
-      ];
-      $details = Audit::create($data);
+      if(Auth::user())
+      {
+        $data = [
+           'auditable_id' =>  Auth::user()->id,
+           'auditable_type' => get_class($event->user),
+           'event'      => "Log Keluar",
+           'url'        => $this->request->fullUrl(),
+           'ip_address' => $this->request->getClientIp(),
+           'user_agent' => $this->request->userAgent(),
+           'created_at' => Carbon::now(),
+           'updated_at' => Carbon::now(),
+           'user_id'    => Auth::user()->id,
+       ];
+       $details = Audit::create($data);
+      }
     }
 }

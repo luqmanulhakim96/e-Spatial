@@ -8,12 +8,14 @@
                 </div>
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Tambah Data Geospatial</div>
+
                   <div class="card-body">
 
                       <form action="{{route('senarai-harga.insert')}}" method="post">
                         @csrf
-                        <div class="card-title" style="text-align: center;">Tambah Data Geospatial</div>
+                        <!-- <div class="card-title" style="text-align: center;">Tambah Data Geospatial</div> -->
 
                         <div class="row">
                           <div class="col-md-4"></div>

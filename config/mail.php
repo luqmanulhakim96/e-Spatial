@@ -85,7 +85,9 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS'),
+        // 'address' => 'espatial@forestry.gov.my',
         'name' => env('MAIL_FROM_NAME'),
+        // 'name' => 'eSpatial',
     ],
 
     /*

@@ -153,8 +153,8 @@
     <body>
         <div class="flex-center position-ref full-height">
             <div class="content">
-                <div class="title m-b-md">
-                     eSpatial
+                <div class="title m-b-md" style="font-size: 300%">
+                     Permohonan Data Geospatial
                 </div>
 
                 <div class="links">

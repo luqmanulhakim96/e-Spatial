@@ -8,9 +8,11 @@
 
                 <!-- Small card component -->
 
-                <div class="card rounded-lg">
+                <div class="card rounded-lg" style="border-color: #003473 !important;">
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pemohonan Lulus</div>
+
                   <div class="card-body">
-                      <div class="card-title">Senarai Pemohonan Lulus</div>
+                      <!-- <div class="card-title">Senarai Pemohonan Lulus</div> -->
 
                       <div class="modal fade" id="status_harga" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -65,7 +67,7 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Upload Surat Kelulusan</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Muatnaik Surat Kelulusan</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
@@ -111,7 +113,7 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Upload Dokumen Dan Link Data</h5>
+                              <h5 class="modal-title" id="exampleModalLabel">Muatnaik Dokumen Dan Link Data</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                   <span aria-hidden="true">&times;</span>
                               </button>
@@ -128,6 +130,15 @@
 
 
                                   <input type="hidden" id="permohonan_id_link_data" name="permohonan_id_link_data" value="">
+                                  <div class="row">
+                                    <div class="col-md">
+                                      <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
+                                        <h6 >Catatan:</h6>
+                                        <span>Sekiranya permohonan tiada data Vektor Shapefile, sila letakkan nilai "#".</span><br>
+
+                                      </div>
+                                    </div>
+                                  </div>
 
                               </div>
                               <div class="modal-footer">
@@ -143,6 +154,7 @@
                         <thead>
                             <tr>
                               <th class="all">PERMOHONAN ID</th>
+                              <th class="all">NAMA PEMOHON</th>
                               <th class="all">KATEGORI PEMOHON</th>
                               @if($userInfo->role == 0)
                               <th class="all">MUAT NAIK SURAT & BORANG</th>
@@ -163,9 +175,12 @@
                           <tr>
                             <td>
                               <div style="padding : 4px;"></div>
-                              <a href="{{ route('permohonan.view', $lulus->id) }}">{{ $lulus->getPermohonanID()  }}</a>
+                              <a href="{{ route('permohonan.view', $lulus->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $lulus->getPermohonanID()  }}</a>
                             </td>
-
+                            <td>
+                              <div style="padding : 4px;"></div>
+                              {{$lulus->user->name}}
+                            </td>
                             <td>
                               <div style="padding : 4px;"></div>
                               <span style="font-size: 100%; text-transform:capitalize;">{{ $lulus->user->kategori  }}</span>
@@ -269,9 +284,9 @@
             function fileValidation(name){
               var fileInput = document.getElementById(name);
               var filePath = fileInput.value;
-              var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png)$/i;
+              var allowedExtensions = /(\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.jpeg|\.jpg|\.png|\.zip|\.rar)$/i;
               if(!allowedExtensions.exec(filePath)){
-                  alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg dan .png sahaja.');
+                  alert('Sila muatnaik file dalam format .pdf , .doc , .docx , .jpeg , .jpg , .png , .zip dan .rar sahaja.');
                   fileInput.value = '';
                   return false;
               }

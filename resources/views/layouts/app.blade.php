@@ -39,7 +39,9 @@
             <!-- Brand details -->
             <div class="side-menu-brand d-flex flex-column justify-content-center align-items-center clear mt-3">
                 <img src="{{ asset('https://www.atvadventurepark.com/images/hutan.png') }}" alt="bran_name" class="brand-img">
-                <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold">e-Spatial</a>
+                <!-- <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold">e-Spatial</a> -->
+                <a href="{{ route('home') }}" class="brand-name mt-2 ml-2 font-weight-bold" style="text-align: center; font-size: 20px;">Permohonan Data Geospatial</a>
+
             </div>
             @if(Auth::user())
             <!-- Side bar menu -->
@@ -59,7 +61,7 @@
                 <!-- Menu item -->
                 <div id="accordion">
                     <ul class="side-menu p-0 m-0 mt-3">
-                        @if(Auth::user()->role == 0 || Auth::user()->role == 1 || Auth::user()->role == 2 || Auth::user()->role == 3)
+                        @if(Auth::user()->role == 0)
                         <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
                         <!-- Sub menu parent -->
                         <!-- <li class="side-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 py-3 pl-4">Senarai Permohonan #temp</a></li> -->
@@ -81,6 +83,34 @@
                         <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
 
                         @endif
+
+
+                        @if( Auth::user()->role == 1 || Auth::user()->role == 2)
+                        <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
+                        <!-- Sub menu parent -->
+                        <!-- <li class="side-menu-item px-3"><a href="{{ route('permohonan.list') }}" class="w-100 py-3 pl-4">Senarai Permohonan #temp</a></li> -->
+
+                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4 sub-menu-parent" data-toggle="collapse" data-target="#table-sub-menu3" aria-expanded="false" aria-controls="table-sub-menu">Senarai Permohonan </a></li>
+                        <div id="table-sub-menu3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <ul class="side-sub-menu p-0">
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listBaru') }}" class="w-100 pl-4">Senarai Permohonan Baru </a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{ route('permohonan.listSedangDiproses') }}" class="w-100 pl-4">Senarai Permohonan Sedang Diproses </a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Sub menu parent -->
+                        <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
+
+                        @endif
+
+
+                        @if( Auth::user()->role == 3)
+                        <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('permohonan.listBaru') }}" class="w-100 py-3 pl-4">Senarai Permohonan Baru</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
+                        @endif
+
+
                         @if(Auth::user()->role == 0)
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-harga.list') }}" class="w-100 py-3 pl-4" >Senarai Harga</a></li>
@@ -90,13 +120,18 @@
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-email.list') }}" class="w-100 py-3 pl-4" >Senarai Templat Email</a></li>
 
                         @endif
+
                         @if(Auth::user()->role == 4)
                         <!-- Sub menu parent -->
-                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.list') }}" class="w-100 py-3 pl-4" >Senarai Pengguna Sistem</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('home') }}" class="w-100 py-3 pl-4">Dashboard</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrail') }}" class="w-100 py-3 pl-4" >Audit Trail</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.list') }}" class="w-100 py-3 pl-4" >Senarai Pengguna</a></li>
 
-                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrailLogUser') }}" class="w-100 py-3 pl-4" >Audit Trail Keluar Masuk Pengguna</a></li>
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.listPenggunaLuar') }}" class="w-100 py-3 pl-4" >Senarai Pemohon</a></li>
+
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrail') }}" class="w-100 py-3 pl-4" >Audit Trail Proses</a></li>
+
+                        <li class="side-menu-item px-3"><a href="{{ route('superadmin.auditTrailLogUser') }}" class="w-100 py-3 pl-4" >Audit Trail Log Akses</a></li>
 
                         @endif
                     </ul>
@@ -107,7 +142,7 @@
         </div>
 
         <!-- Main section -->
-        <main class="bg-light main-full-body">
+        <main class="bg-light main-full-body" style="background-color: #ccc!important;">
 
             <!-- Theme changer -->
             <!-- <div class="theme-option p-4">
@@ -145,7 +180,7 @@
 
 
             <!-- The navbar -->
-            <nav class="navbar navbar-expand navbar-light bg-light py-3">
+            <nav class="navbar navbar-expand navbar-light bg-light py-3" style="background-color: #ccc!important;">
                 <p class="navbar-brand mb-0 pb-0">
                     <span></span>
                     <span></span>
@@ -237,9 +272,9 @@
     @yield('content')
 
     <!-- Footer section -->
-    <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary">
-        <p>&copy; Copyright. <a href="https://www.forestry.gov.my/my/" target="_Blank">Jabatan Perhutanan Semenanjung Malaysia</a></p>
-        <p>Version 1.0.0</p>
+    <footer class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary" style="background: linear-gradient(to bottom, #cccccc 0%, #ffffff 110%) !important;">
+        <p>&copy; Hakcipta Terpelihara 2020. <a href="https://www.forestry.gov.my/my/" target="_Blank">Jabatan Perhutanan Semenanjung Malaysia</a></p>
+        <p>Versi 1.0</p>
     </footer>
   </div>
 

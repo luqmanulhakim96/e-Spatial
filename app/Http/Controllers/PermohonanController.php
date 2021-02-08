@@ -412,10 +412,15 @@ class PermohonanController extends Controller
 
   }
 
-  public function submitSebabGagal($id, Request $request){
-    $permohonan = Permohonan::findOrFail($id);
+  public function submitSebabGagal(Request $request){
+    // dd($request->all());
 
-    $permohonan->remarks_admin = $request->sebab_gagal;
+    $permohonan = Permohonan::findOrFail($request->permohonan_id_upload_surat_bayaran);
+
+    $uploaded_files_permohonan_surat_tidak_lulus =  $request->file('attachment_surat_gagal')->store('uploads/surat_tidak_lulus');
+
+
+    $permohonan->remarks_admin = $uploaded_files_permohonan_surat_tidak_lulus;
 
     $permohonan->save();
 
@@ -428,7 +433,7 @@ class PermohonanController extends Controller
       $permohonan->notify(new PermohonanGagalUser($data, $email, $permohonan));  // use this notification when email template not available
     }
 
-    return redirect()->route('permohonan.listGagal')->with('success','Sebab permohonan gagal telah dihantar');
+    return redirect()->route('permohonan.listGagal')->with('success','Surat Permohonan Tidak Lulus telah dihantar');
 
   }
 

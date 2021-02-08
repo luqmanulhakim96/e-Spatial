@@ -7,6 +7,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use OwenIt\Auditing\Contracts\Auditable;
 
+use App\Notifications\User\ResetPassword;
+
 class User extends Authenticatable implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
@@ -53,4 +55,10 @@ class User extends Authenticatable implements Auditable
    {
        return sprintf('USR-%05d', $this->id);
    }
+
+   public function sendPasswordResetNotification($token)
+    {
+        // Your your own implementation.
+        $this->notify(new ResetPassword($token, $this->email));
+    }
 }
