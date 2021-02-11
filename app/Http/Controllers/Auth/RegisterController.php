@@ -64,7 +64,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'kategori' => ['required'],
             'nama' => ['required', 'string', 'max:255'],
-            'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8', 'unique:users'],
+            'kad_pengenalan' => ['required', 'string', 'unique:users'],
             'kerakyatan' => ['required'],
             'tarikh_lahir' => ['required', 'date'],
             'tempat_lahir' => ['required', 'string', 'max:255'],
@@ -87,7 +87,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'kategori' => ['required'],
             'nama' => ['required', 'string', 'max:255'],
-            'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8', 'unique:users'],
+            'kad_pengenalan' => ['required', 'string', 'unique:users'],
             'kerakyatan' => ['required'],
             'tarikh_lahir' => ['required', 'date'],
             'tempat_lahir' => ['required', 'string', 'max:255'],
@@ -109,7 +109,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'kategori' => ['required'],
             'nama' => ['required', 'string', 'max:255'],
-            'kad_pengenalan' => ['required', 'string', 'max:12', 'min:8', 'unique:users'],
+            'kad_pengenalan' => ['required', 'string', 'unique:users'],
             'kerakyatan' => ['required'],
             'tarikh_lahir' => ['required', 'date'],
             'tempat_lahir' => ['required', 'string', 'max:255'],
@@ -130,7 +130,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'kategori' => ['required'],
             'nama' => ['required', 'string', 'max:255'],
-            'kad_pengenalan' => ['required', 'string', 'max:12','unique:users'],
+            'kad_pengenalan' => ['required', 'string','unique:users'],
             'kerakyatan' => ['required'],
             'tarikh_lahir' => ['required', 'date'],
             'tempat_lahir' => ['required', 'string', 'max:255'],
@@ -165,6 +165,9 @@ class RegisterController extends Controller
             'tempat_lahir' => $data['tempat_lahir'],
             'jawatan' => $data['jawatan'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
+            'alamat_kediaman' => $data['alamat_kediaman'],
+            'poskod' => $data['poskod'],
+            'negeri' => $data['negeri'],
             'nama_kementerian' => $data['nama_kementerian'],
             'alamat_kementerian' => $data['alamat_kementerian'],
             'no_tel_rumah' => $data['no_tel_rumah'],
@@ -197,6 +200,9 @@ class RegisterController extends Controller
             'tarikh_lahir' => $data['tarikh_lahir'],
             'tempat_lahir' => $data['tempat_lahir'],
             'jenis_perniagaan' => $data['jenis_perniagaan'],
+            'alamat_kediaman' => $data['alamat_kediaman'],
+            'poskod' => $data['poskod'],
+            'negeri' => $data['negeri'],
             'nama_kementerian' => $data['nama_kementerian'],
             'alamat_kementerian' => $data['alamat_kementerian'],
             'no_tel_rumah' => $data['no_tel_rumah'],
@@ -295,6 +301,8 @@ class RegisterController extends Controller
         }
       }
 
+
+
       if($request->kategori == 'dalaman'){
 
         $this->validatorDalaman($request->all())->validate();
@@ -309,8 +317,8 @@ class RegisterController extends Controller
         $this->validatorInstitut($request->all())->validate();
         event(new Registered($user = $this->createInstitut($request->all())));
       }else {
-
         $this->validator($request->all())->validate();
+
         event(new Registered($user = $this->create($request->all())));
       }
 

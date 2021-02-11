@@ -49,7 +49,7 @@
                         onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();"
                     >
-                        <i class="fas fa-sign-out-alt"></i>
+                        <i class="fas fa-sign-out-alt" data-toggle="tooltip" data-placement="top" title="Log Keluar"></i>
                     </a>
                 </div>
 
@@ -112,7 +112,7 @@
 
             <!-- Theme changer -->
             <!-- <div class="theme-option p-4">
-                <div class="theme-pck">
+                <div class="theme-pck" data-toggle="tooltip" data-placement="left" title="Bahasa | Language">
                     <i class="fas fa-cog fa-lg"></i>
                 </div>
                 <p>Colour Theme:</p>
@@ -185,7 +185,7 @@
                         <!-- icon -->
                         <a href="#" class="w-100 dropdown-toggle text-muted position-relative" data-toggle="dropdown">
                             <!-- Notification -->
-                            <i class="far fa-bell fa-2x"></i>
+                            <i class="far fa-bell fa-2x" data-toggle="tooltip" data-placement="left" title="Notifikasi"></i>
                             <span class="badge badge-primary position-absolute notification-badge">{{$count_notification}}</span>
                         </a>
                         @if($count_notification != 0)
@@ -218,9 +218,9 @@
 
                           @if(Auth::user()->gambar_profile == null)
 
-                          <img src="{{ asset('https://icon-library.com/images/default-profile-icon/default-profile-icon-24.jpg') }}" alt="profile" class="profile-avatar" style="height:40px; width:40px;">
+                          <img src="{{ asset('https://icon-library.com/images/default-profile-icon/default-profile-icon-24.jpg') }}" alt="profile" class="profile-avatar" style="height:40px; width:40px;" data-toggle="tooltip" data-placement="left" title="Profil">
                           @else
-                          <img src="{{ asset( $image_path = str_replace('public', 'storage',  Auth::user()->gambar_profile)) }}"  class="profile-avatar" style="height:40px; width:40px; ">
+                          <img src="{{ asset( $image_path = str_replace('public', 'storage',  Auth::user()->gambar_profile)) }}"  class="profile-avatar" style="height:40px; width:40px; " data-toggle="tooltip" data-placement="left" title="Profil">
                           @endif
                         </a>
                         <!-- Dropdown Menu -->

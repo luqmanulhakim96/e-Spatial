@@ -16,9 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect()->route('home');
 });
-
+// Route::get('/', function () {
+//   if((auth()->user()->role == 5)){
+//     Route::get('/halaman-utama', 'UserController@index')->name('user.mainMenu');
+//   }
+//   else {
+//     Route::get('/home', 'HomeController@index')->name('home');
+//   }
+// });
 Auth::routes();
 Route::get('/password/resets/{token}/{email}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 

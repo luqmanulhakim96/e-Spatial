@@ -20,6 +20,11 @@
                         <div style="padding: 15px;">
 
                         </div>
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                IC Number / Passport or Password incorrect
+                            </div>
+                        @endif
 
                         <div class="row">
                           <div class="col-md-1">
@@ -66,7 +71,7 @@
                               <div class="col-md-10">
                                 <div class="form-group">
                                     <label for="kad_pengenalan" class="text-muted">Identification Card Number / Passport</label>
-                                    <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" required autocomplete="kad_pengenalan" autofocus>
+                                    <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" required autocomplete="kad_pengenalan" autofocus>
 
 
 

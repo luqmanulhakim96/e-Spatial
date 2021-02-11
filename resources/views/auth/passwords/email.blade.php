@@ -53,6 +53,9 @@
                         <div class=""style="padding: 5px;">
 
                         </div>
+
+                            
+
                         <!-- <h5 class="text-dark my-4" style="text-align: center;">Tetapan Semula Kata Laluan | Reset Password</h5> -->
                         <!-- Email -->
                         <div class="row">
@@ -72,7 +75,7 @@
 
                         <div class="form-group">
                             <label for="email" class="text-muted">Email Pengguna</label>
-                            <input id="email" type="email" class="form-control badge-pill bg-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <input id="email" type="email" class="form-control badge-pill bg-light @error('email') is-invalid @enderror" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                             @error('email')
                             <span class="invalid-feedback" role="alert">

@@ -74,6 +74,11 @@
                             <option value="dalaman" {{ old('kategori') == "dalaman" ? 'selected' : '' }}>Warga JPSM</option>
                             <option value="lain" {{ old('kategori') == "lain" ? 'selected' : '' }}>Lain-lain</option>
                         </select>
+                        @error('kategori')
+                        <span class="invalid-feedback" role="alert">
+                                <strong>Sila pilih kategori</strong>
+                            </span>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-md-1">
@@ -92,7 +97,7 @@
                       <input id="nama" type="text" class="form-control bg-light @error('nama') is-invalid @enderror" name="nama" value="{{ old('nama') }}" autocomplete="name" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                       @error('nama')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                              <strong>Sila isi bahagian ini</strong>
                           </span>
                       @enderror
                       <span class="input-icon">
@@ -119,7 +124,7 @@
                         </select>
                       @error('kerakyatan')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                              <strong>Sila pilih kerakyatan</strong>
                           </span>
                       @enderror
                   </div>
@@ -132,7 +137,17 @@
                     <!-- <div id="text_kp" style="display: block;"> -->
                     <div id="text_kp" style="display: block;">
                       <label for="kad_pengenalan" class="required">Kad Pengenalan</label>
-                      <input id="kad_pengenalan" type="text" minlength="12" maxlength="12" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}"  autocomplete="kad_pengenalan" >
+                      <input id="kad_pengenalan" type="text" minlength="12" maxlength="12" onkeypress="return onlyNumberKey(event)" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Kad pengenalan perlu mempunyai 12 nombor')" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}"  autocomplete="kad_pengenalan" >
+                      @error('kad_pengenalan')
+                      <span class="invalid-feedback" role="alert">
+                        @if( $message == 'The kad pengenalan has already been taken.')
+                              <strong>Kad pengenalan ini telah didaftarkan</strong>
+                        @else
+                          <strong>Sila isi bahagian ini</strong>
+                        @endif
+                          </span>
+
+                      @enderror
                     </div>
 
                     <div id="text_pp" style="display: none;">
@@ -178,7 +193,7 @@
                           @enderror
                         </div>
                         <div id="manual_birthdate" style="display : none;">
-                          <input type="date" class="form-control bg-light @error('tarikh_lahir_manual') is-invalid @enderror" name="tarikh_lahir_manual" value="{{ old('tarikh_lahir_manual') }}" autocomplete="tarikh_lahir_manual" >
+                          <input id="tarikh_lahir_manual" type="date" class="form-control bg-light @error('tarikh_lahir_manual') is-invalid @enderror" name="tarikh_lahir_manual" value="{{ old('tarikh_lahir_manual') }}"  max={{date('Y-m-d')}} autocomplete="tarikh_lahir_manual" onkeydown="return false;">
                           @error('tarikh_lahir_manual')
                           <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -195,7 +210,7 @@
                         <input id="tempat_lahir" type="text" class="form-control bg-light @error('tempat_lahir') is-invalid @enderror" name="tempat_lahir" value="{{ old('tempat_lahir') }}" autocomplete="tempat_lahir" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                         @error('tempat_lahir')
                         <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
+                                <strong>Sila isi bahagian ini</strong>
                             </span>
                         @enderror
                     </div>
@@ -214,7 +229,7 @@
                         <input id="jawatan" type="text" class="form-control bg-light @error('jawatan') is-invalid @enderror" name="jawatan" value="{{ old('jawatan') }}" autocomplete="jawatan" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                         @error('jawatan')
                         <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
+                                <strong>Sila isi bahagian ini</strong>
                             </span>
                         @enderror
                         <span class="input-icon">
@@ -229,7 +244,7 @@
                         <input id="jenis_perniagaan" type="text" class="form-control bg-light @error('jenis_perniagaan') is-invalid @enderror" name="jenis_perniagaan" value="{{ old('jenis_perniagaan') }}" autocomplete="jenis_perniagaan"  oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                         @error('jenis_perniagaan')
                         <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
+                                <strong>Sila isi bahagian ini</strong>
                             </span>
                         @enderror
                         <span class="input-icon">
@@ -253,7 +268,7 @@
                       <textarea id="alamat_kediaman" name="alamat_kediaman" rows="2" cols="50" class="form-control bg-light @error('alamat_kediaman') is-invalid @enderror" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">{{ old('alamat_kediaman') }}</textarea>
                       @error('alamat_kediaman')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                              <strong>Sila isi bahagian ini</strong>
                           </span>
                       @enderror
                       <span class="input-icon">
@@ -273,10 +288,10 @@
               <div class="col-md">
                 <div class="form-group" id="poskod_div" style="display : block;">
                   <label for="poskod" class="required">Poskod</label>
-                  <input id="poskod" type="text" maxlength="5" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('poskod') is-invalid @enderror" name="poskod" value="{{ old('poskod') }}" autocomplete="poskod"  >
+                  <input id="poskod" type="text" maxlength="5" minlength="5" onkeypress="return onlyNumberKey(event)" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Poskod perlu mempunyai 5 nombor')" class="form-control bg-light @error('poskod') is-invalid @enderror" name="poskod" value="{{ old('poskod') }}" autocomplete="poskod"  >
                   @error('poskod')
                   <span class="invalid-feedback" role="alert">
-                          <strong>{{ $message }}</strong>
+                          <strong>Sila isi bahagian ini</strong>
                       </span>
                   @enderror
                 </div>
@@ -306,7 +321,7 @@
                     </select>
                   @error('negeri')
                   <span class="invalid-feedback" role="alert">
-                          <strong>{{ $message }}</strong>
+                          <strong>Sila pilih negeri</strong>
                       </span>
                   @enderror
                 </div>
@@ -327,7 +342,7 @@
                       <input id="nama_kementerian" type="text" class="form-control bg-light @error('nama_kementerian') is-invalid @enderror" name="nama_kementerian" value="{{ old('nama_kementerian') }}" autocomplete="nama_kementerian"  oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                       @error('nama_kementerian')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                              <strong>Sila isi bahagian ini</strong>
                           </span>
                       @enderror
                     </div>
@@ -347,7 +362,7 @@
                       <input id="bahagian" type="text" class="form-control bg-light @error('bahagian') is-invalid @enderror" name="bahagian" value="{{ old('bahagian') }}" autocomplete="bahagian"  oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                       @error('bahagian')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                              <strong>Sila isi bahagian ini</strong>
                           </span>
                       @enderror
                     </div>
@@ -368,7 +383,7 @@
                       <textarea id="alamat_kementerian" name="alamat_kementerian" rows="2" cols="50" class="form-control bg-light @error('alamat_kementerian') is-invalid @enderror" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">{{ old('alamat_kementerian') }}</textarea>
                       @error('alamat_kementerian')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                              <strong>Sila isi bahagian ini</strong>
                           </span>
                       @enderror
                     </div>
@@ -386,11 +401,11 @@
                     <div class="form-group">
                       <label for="no_tel_rumah" class="required">No Telefon Pejabat</label>
 
-                      <input id="no_tel_rumah" type="text" minlength="10" maxlength="11" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_rumah') is-invalid @enderror" name="no_tel_rumah" value="{{ old('no_tel_rumah') }}" autocomplete="phone" >
+                      <input id="no_tel_rumah" type="text" minlength="10" maxlength="11" onkeypress="return onlyNumberKey(event)" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Nombor telefon pejabat perlu mempunyai 10 atau 11 nombor')" class="form-control bg-light @error('no_tel_rumah') is-invalid @enderror" name="no_tel_rumah" value="{{ old('no_tel_rumah') }}" autocomplete="phone" >
                       <small id="saiz_data"  class="form-text text-secondary">Contoh : 0312345678</small>
                       @error('no_tel_rumah')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                              <strong>Sila isi bahagian ini</strong>
                           </span>
                       @enderror
                         <!-- Input icon -->
@@ -404,11 +419,11 @@
                     <div class="form-group">
                       <label for="no_tel_bimbit" class="required">No Telefon Bimbit</label>
 
-                      <input id="no_tel_bimbit" type="text" minlength="10" maxlength="11" onkeypress="return onlyNumberKey(event)" class="form-control bg-light @error('no_tel_bimbit') is-invalid @enderror" name="no_tel_bimbit" value="{{ old('no_tel_bimbit') }}" autocomplete="phone" >
+                      <input id="no_tel_bimbit" type="text" minlength="10" maxlength="11" onkeypress="return onlyNumberKey(event)" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Nombor telefon bimbit perlu mempunyai 10 atau 11 nombor')" class="form-control bg-light @error('no_tel_bimbit') is-invalid @enderror" name="no_tel_bimbit" value="{{ old('no_tel_bimbit') }}" autocomplete="phone" >
                       <small id="saiz_data"  class="form-text text-secondary">Contoh : 0123456789</small>
                       @error('no_tel_bimbit')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                              <strong>Sila isi bahagian ini</strong>
                           </span>
                       @enderror
                         <!-- Input icon -->
@@ -430,11 +445,15 @@
                 <div class="col-md">
                     <div class="form-group">
                       <label for="email" class="required">Email</label>
-                      <input id="email" type="email" class="form-control bg-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email">
+                      <input id="email" type="email" class="form-control bg-light @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila betulkan format email di bahagian ini. Contoh: pengguna@email.com')" autocomplete="email">
                       <small id="saiz_data" class="form-text text-secondary">PERINGATAN : Pemohon hendaklah menggunakan email yang sah untuk menggunakan sistem eSpatial</small>
                       @error('email')
                       <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                        @if($message == 'The email has already been taken.')
+                              <strong>Email ini telah didaftar.</strong>
+                        @else
+                          <strong>Sila isi bahagian ini</strong>
+                        @endif
                           </span>
                       @enderror
                         <!-- Input icon -->
@@ -448,7 +467,7 @@
                 </div>
               </div>
               <input type="hidden" name="language" value="melayu">
-              
+
               <!-- Submit button -->
               <div style="padding : 10px;">
 
@@ -598,5 +617,6 @@
           });
       });
     </script>
+
 
 @endsection

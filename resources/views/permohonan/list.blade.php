@@ -9,10 +9,10 @@
                 <!-- Small card component -->
 
                 <div class="card rounded-lg" style="border-color: #003473 !important;">
-                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pemohonan Lulus</div>
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Permohonan Lulus</div>
 
                   <div class="card-body">
-                      <!-- <div class="card-title">Senarai Pemohonan Lulus</div> -->
+                      <!-- <div class="card-title">Senarai Permohonan Lulus</div> -->
 
                       <div class="modal fade" id="status_harga" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">

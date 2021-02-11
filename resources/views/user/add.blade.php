@@ -5,7 +5,7 @@
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
               <div class="theme-option p-3 border-1" style="border: 1px solid;border-color: #003e61 !important;">
-                  <div class="theme-pck">
+                  <div class="theme-pck" data-toggle="tooltip" data-placement="left" title="Bahasa | Language">
                       <i class="fa fa-globe" aria-hidden="true" style="font-size: 180% !important;"></i>
                   </div>
                   <p style="font-size: 110%;">Pilih Bahasa | Choose Language</p>
@@ -111,7 +111,7 @@
                                 <div class="form-group">
                                   <div class="form-group" id="custom_tahun_div" >
                                       <label for="maklumat_agensi">Tahun:</label>
-                                      <input type="text" class="form-control bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" placeholder="Nyatakan Tahun Data" aria-describedby="custom_tahun">
+                                      <input type="text" class="form-control bg-light @error('custom_tahun') is-invalid @enderror" maxlength="9" minlength="4" onkeypress="return isNumberDashKey(event);" id="custom_tahun" name="custom_tahun" placeholder="Nyatakan Tahun Data" aria-describedby="custom_tahun">
                                       <small id="saiz_data" class="form-text text-secondary">Contoh : 2012 ATAU 2010-2012</small>
                                       @error('custom_tahun')
                                       <div class="alert alert-danger">
@@ -301,7 +301,7 @@
                         <div class="form-group">
                             <label  class="required">Muatnaik Surat Permohonan:</label>
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return fileValidation('attachment_permohonan')" name="attachment_permohonan">
+                                <input type="file" class="custom-file-input" required id="attachment_permohonan" onchange="return translateUpload('attachment_permohonan');" oninvalid="this.setCustomValidity('Sila muatnaik fail di bahagian ini')" name="attachment_permohonan" >
                                 <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Muatnaik fail</label>
                             </div>
                             <small id="saiz_data" class="form-text text-secondary">Muat naik fail tidak melebihi 100MB</small>
@@ -342,16 +342,16 @@
                           <!-- All Radio Button  -->
                           <div class="radios">
                               <!-- Primary Radio Button  -->
-                          <div class="custom-control custom-radio">
-                              <input type="radio" id="Ya" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Ya" @if(old('dokumen_ke_luar_negara')=="Ya") checked @endif>
-                              <label class="custom-control-label" for="Ya">Ya</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="Ya" name="dokumen_ke_luar_negara" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')" class="custom-control-input" onclick="showAgensi()" value="Ya" @if(old('dokumen_ke_luar_negara')=="Ya") checked @endif>
+                                <label class="custom-control-label" for="Ya">Ya</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif required>
+                                <label class="custom-control-label" for="Tidak">Tidak</label>
+                            </div>
 
                           </div>
-                          <div class="custom-control custom-radio">
-                              <input type="radio" id="Tidak" name="dokumen_ke_luar_negara" class="custom-control-input" onclick="showAgensi()" value="Tidak" @if(old('dokumen_ke_luar_negara')=="Tidak") checked @endif required>
-                              <label class="custom-control-label" for="Tidak">Tidak</label>
-                          </div>
-                        </div>
 
                           @error('dokumen_ke_luar_negara')
                           <div class="alert alert-danger">
@@ -364,7 +364,7 @@
                         <div class="form-group">
                           <div class="form-group" id="maklumat_agensi_dan_negara_div" style="display: none;" >
                               <label for="maklumat_agensi" class="required">Maklumat Agensi Dan Negara Terlibat:</label>
-                              <input type="text" class="form-control bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara">
+                              <input type="text" class="form-control bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                               @error('maklumat_agensi_dan_negara')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>
@@ -427,6 +427,24 @@
 
         </main>
         <script type="text/javascript">
+          function translateUpload(x){
+            console.log("translate upload fungsi");
+            fileValidation(x);
+            document.getElementById("attachment_permohonan").setCustomValidity('');
+          }
+        </script>
+        <script type="text/javascript">
+
+        function isNumberDashKey(evt)
+        {
+          var charCode = (evt.which) ? evt.which : event.keyCode;
+         console.log(charCode);
+            if (charCode != 46 && charCode != 45 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+        }
 
 
 
@@ -453,7 +471,6 @@
         }
         </script>
         <script type="text/javascript">
-
         $('#attachment_aoi').on('change',function(){
                 //get the file name
                 var fileName = $(this).val();
@@ -514,9 +531,13 @@
         function showAgensi(select){
            if(document.getElementById('Ya').checked){
             document.getElementById('maklumat_agensi_dan_negara_div').style.display = "block";
+            document.getElementById("maklumat_agensi_dan_negara").required = true;
+
            }
            else{
              document.getElementById('maklumat_agensi_dan_negara_div').style.display = "none";
+             document.getElementById("Ya").setCustomValidity('');
+             document.getElementById("maklumat_agensi_dan_negara").required = false;
            }
         }
         </script>
