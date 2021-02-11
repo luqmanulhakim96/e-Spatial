@@ -3,7 +3,7 @@
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
               <div class="theme-option p-3 border-1" style="border: 1px solid;border-color: #003e61 !important;">
-                  <div class="theme-pck">
+                  <div class="theme-pck" data-toggle="tooltip" data-placement="left" title="Bahasa | Language">
                       <i class="fa fa-globe" aria-hidden="true" style="font-size: 180% !important;"></i>
                   </div>
                   <p style="font-size: 110%;">Pilih Bahasa | Choose Language</p>
@@ -104,7 +104,7 @@
                               <div class="col-md">
                                 <div class="form-group">
                                     <label for="kerakyatan" class="required">Kerakyatan</label>
-                                    <select id="kerakyatan" class="custom-select  bg-light @error('kerakyatan') is-invalid @enderror" name="kerakyatan" value="{{ $user->kerakyatan }}" onchange="viewPassportForm()" >
+                                    <select id="kerakyatan" class="custom-select  bg-light @error('kerakyatan') is-invalid @enderror" name="kerakyatan" value="{{ $user->kerakyatan }}" onchange="viewPassportForm()">
                                           <option value="" selected disabled hidden>Pilih Kerakyatan</option>
                                           <option value="Warganegara" {{ $user->kerakyatan == "Warganegara" ? 'selected' : '' }}>Warganegara</option>
                                           <option value="Bukan Warganegara" {{ $user->kerakyatan == "Bukan Warganegara" ? 'selected' : '' }}>Bukan Warganegara</option>
@@ -203,6 +203,7 @@
                             <div class="col-md-1">
 
                             </div>
+                            @if($user->kategori != 'institut')
                               <div class="col-md">
                                   <div class="form-group">
                                       <label for="jawatan" class="required">Jawatan/Gred</label><br>
@@ -217,6 +218,7 @@
                                       </span>
                                   </div>
                               </div>
+                              @endif
                               <!-- 2nd row -->
                               <div class="col-md" id="jenis_perniagaan_div">
                                   <div class="form-group">

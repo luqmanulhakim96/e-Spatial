@@ -20,7 +20,7 @@
           </li>
 
           <li class="nav-item">
-          <a class="nav-link" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="false">Info Data Pemohonan</a>
+          <a class="nav-link" id="data-tab" data-toggle="tab" href="#data" role="tab" aria-controls="data" aria-selected="false">Info Data Permohonan</a>
           </li>
 
           @if($permohonan->jumlah_bayaran != 0.00 && $permohonan->status_permohonan != "Tidak Berkaitan")
@@ -224,7 +224,7 @@
 
             </div>
 
-            <!-- info data pemohonan -->
+            <!-- info data Permohonan -->
             <div class="tab-pane" id="data" role="tabpanel" aria-labelledby="data-tab">
 
               <div style="padding : 10px;"></div>

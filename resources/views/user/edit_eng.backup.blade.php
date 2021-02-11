@@ -3,7 +3,7 @@
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
               <div class="theme-option p-3 border-1" style="border: 1px solid;border-color: #003e61 !important;">
-                  <div class="theme-pck">
+                  <div class="theme-pck" data-toggle="tooltip" data-placement="left" title="Bahasa | Language">
                       <i class="fa fa-globe" aria-hidden="true" style="font-size: 180% !important;"></i>
                   </div>
                   <p style="font-size: 110%;">Pilih Bahasa | Choose Language</p>

@@ -5,7 +5,7 @@
       <!--Page Body part -->
             <div class="page-body p-4 text-dark">
               <div class="theme-option p-3 border-1" style="border: 1px solid;border-color: #003e61 !important;">
-                  <div class="theme-pck">
+                  <div class="theme-pck" data-toggle="tooltip" data-placement="left" title="Bahasa | Language">
                       <i class="fa fa-globe" aria-hidden="true" style="font-size: 180% !important;"></i>
                   </div>
                   <p style="font-size: 110%;">Pilih Bahasa | Choose Language</p>
@@ -111,7 +111,7 @@
                                 <div class="form-group">
                                   <div class="form-group" id="custom_tahun_div" >
                                       <label for="maklumat_agensi">Year:</label>
-                                      <input type="text" class="form-control bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" placeholder="State Year of Data" aria-describedby="custom_tahun">
+                                      <input type="text" class="form-control bg-light @error('custom_tahun') is-invalid @enderror" id="custom_tahun" name="custom_tahun" maxlength="9" minlength="4" onkeypress="return isNumberDashKey(event);" placeholder="State Year of Data" aria-describedby="custom_tahun">
                                       <small id="saiz_data" class="form-text text-secondary">Example : 2012 OR 2010-2012</small>
                                       @error('custom_tahun')
                                       <div class="alert alert-danger">
@@ -255,7 +255,7 @@
 
                                 <div class="col-md">
                                   <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
-                                    <h6 style="text-align: center;">Catatan:</h6>
+                                    <h6 style="text-align: center;">Important:</h6>
                                     <span>Applicants must apply for at least one data in the list to proceed with the application</span><br>
 
                                   </div>
@@ -364,7 +364,7 @@
                         <div class="form-group">
                           <div class="form-group" id="maklumat_agensi_dan_negara_div" style="display: none;" >
                               <label for="maklumat_agensi" class="required">Information of Agencies and Countries Involved:</label>
-                              <input type="text" class="form-control bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Name of agency and country" aria-describedby="maklumat_agensi_dan_negara">
+                              <input type="text" class="form-control bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Name of agency and country" aria-describedby="maklumat_agensi_dan_negara" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                               @error('maklumat_agensi_dan_negara')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>
@@ -401,7 +401,7 @@
                     </div>
 
 
-                    <input type="hidden" name="language" value="melayu">
+                    <input type="hidden" name="language" value="english">
 
                     <div class="row">
 
@@ -426,7 +426,16 @@
         </main>
         <script type="text/javascript">
 
+        function isNumberDashKey(evt)
+        {
+          var charCode = (evt.which) ? evt.which : event.keyCode;
+         console.log(charCode);
+            if (charCode != 46 && charCode != 45 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+             return false;
 
+          return true;
+        }
 
         function showDiv(select){
            if(select.value=='PetakKajian'){
@@ -512,9 +521,11 @@
         function showAgensi(select){
            if(document.getElementById('Ya').checked){
             document.getElementById('maklumat_agensi_dan_negara_div').style.display = "block";
+            document.getElementById("maklumat_agensi_dan_negara").required = true;
            }
            else{
              document.getElementById('maklumat_agensi_dan_negara_div').style.display = "none";
+             document.getElementById("maklumat_agensi_dan_negara").required = false;
            }
         }
         </script>
@@ -861,7 +872,7 @@
           //clear jenis_data selection
           $("#jenis_data").empty();
           //initialize selection
-          $("#jenis_data").append('<option value="" selected disabled hidden>Pilih Jenis Data</option>');
+          $("#jenis_data").append('<option value="" selected disabled hidden>Choose Type of Data</option>');
           //ajax
           if(jenisDokumen){
             $.ajax({

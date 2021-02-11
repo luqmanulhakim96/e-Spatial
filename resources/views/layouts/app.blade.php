@@ -146,7 +146,7 @@
 
             <!-- Theme changer -->
             <!-- <div class="theme-option p-4">
-                <div class="theme-pck">
+                <div class="theme-pck" data-toggle="tooltip" data-placement="left" title="Bahasa | Language">
                     <i class="fas fa-cog fa-lg"></i>
                 </div>
                 <p>Colour Theme:</p>

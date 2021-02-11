@@ -37,6 +37,7 @@ class LoginController extends Controller
    protected $redirectTo;
    public function redirectTo()
    {
+      // dd(request()->all());
        switch(Auth::user()->role){
            case 0:
                $this->redirectTo = '/home';
@@ -59,7 +60,11 @@ class LoginController extends Controller
                return $this->redirectTo;
                break;
            case 5:
-               $this->redirectTo = '/halaman-utama';
+               if(request()->language == "melayu")
+                  $this->redirectTo = '/halaman-utama';
+               else {
+                  $this->redirectTo = '/main-menu';
+               }
                return $this->redirectTo;
                break;
            default:

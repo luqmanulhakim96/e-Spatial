@@ -13,6 +13,7 @@
                     <!-- Left side -->
                     <!-- <div class="col-md-6 border-0 border-md-right"> -->
                     <div class="col-md-12">
+
                         <!-- Brand -->
                         <div class="login-brand m-3 m-md d-flex justify-content-center align-items-center">
                             <img src="{{ asset('https://eresearch.forestry.gov.my/static_files/images/logos/99wVeGrpFpy_qG7bZk30YtKiMEXzhPPK.png') }}" alt="image" class="w-25">
@@ -20,6 +21,11 @@
                         <div style="padding: 15px;">
 
                         </div>
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                Kad pengenalan / Passport atau Kata Laluan tidak tepat
+                            </div>
+                        @endif
 
                         <div class="row">
                           <div class="col-md-1">
@@ -27,6 +33,7 @@
                           </div>
                           <div class="col-md">
                             &nbsp&nbsp&nbsp
+
                             <div class="btn-group">
                                 <button class="btn btn-primary">Bahasa Melayu</button>
                                 <!-- <button class="btn btn-outline-primary">English</button> -->
@@ -53,6 +60,7 @@
 
                               <div class="col-md">
                                 <!-- <h5 class="text-dark my-3" style="padding-top:20px; text-align: center;">Log Masuk | Login</h5> -->
+
                               </div>
                             </div>
 
@@ -65,15 +73,12 @@
                               <div class="col-md-10">
                                 <div class="form-group">
                                     <label for="kad_pengenalan" class="text-muted">Kad Pengenalan / Pasport</label>
-                                    <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" required autocomplete="kad_pengenalan" autofocus>
-
-
-
-                                    @error('kad_pengenalan')
+                                    <input id="kad_pengenalan" type="text" class="form-control badge-pill bg-light " name="kad_pengenalan" value="{{ old('kad_pengenalan') }}" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')"  required autocomplete="kad_pengenalan" autofocus>
+                                    <!-- @error('kad_pengenalan')
                                     <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
-                                    @enderror
+                                    @enderror -->
                                 </div>
                               </div>
                             </div>
@@ -87,7 +92,7 @@
                                 <div class="form-group">
                                     <label for="Passeord" class="text-muted">Kata Laluan</label>
                                     <div class="input-group mb-3">
-                                      <input id="password" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                      <input id="password" type="password" class="form-control badge-pill bg-light @error('password') is-invalid @enderror" name="password" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')"  required autocomplete="current-password">
                                       <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" onclick="visiblePass()" type="button" id="button-addon2"><i class="fa fa-eye"></i></button>
                                       </div>

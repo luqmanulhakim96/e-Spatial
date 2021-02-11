@@ -9,10 +9,10 @@
                 <!-- Small card component -->
 
                 <div class="card rounded-lg" style="border-color: #003473 !important;">
-                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Pemohonan Baru</div>
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Senarai Permohonan Baru</div>
 
                   <div class="card-body">
-                      <!-- <div class="card-title">Senarai Pemohonan Baru</div> -->
+                      <!-- <div class="card-title">Senarai Permohonan Baru</div> -->
                       <div class="table-responsive">
                       <table class="table table-striped table-bordered" id="list_permohonan_baru" style="width: 100%;">
 

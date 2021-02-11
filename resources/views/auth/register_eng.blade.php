@@ -74,6 +74,11 @@
                             <option value="dalaman" {{ old('kategori') == "dalaman" ? 'selected' : '' }}>JPSM Staff</option>
                             <option value="lain" {{ old('kategori') == "lain" ? 'selected' : '' }}>Others</option>
                         </select>
+                        @error('kategori')
+                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                 </div>
                 <div class="col-md-1">
@@ -133,6 +138,11 @@
                     <div id="text_kp" style="display: block;">
                       <label for="kad_pengenalan" class="required">Identification Card Number</label>
                       <input id="kad_pengenalan" type="text" minlength="12" maxlength="12" onkeypress="return onlyNumberKey(event)" onkeyup="get_tarikh_lahir()" class="form-control bg-light @error('kad_pengenalan') is-invalid @enderror" name="kad_pengenalan" value="{{ old('kad_pengenalan') }}"  autocomplete="kad_pengenalan" >
+                      @error('kad_pengenalan')
+                      <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
                     </div>
 
                     <div id="text_pp" style="display: none;">
@@ -178,7 +188,7 @@
                           @enderror
                         </div>
                         <div id="manual_birthdate" style="display : none;">
-                          <input type="date" class="form-control bg-light @error('tarikh_lahir_manual') is-invalid @enderror" name="tarikh_lahir_manual" value="{{ old('tarikh_lahir_manual') }}" autocomplete="tarikh_lahir_manual" >
+                          <input id="tarikh_lahir_manual" type="date" class="form-control bg-light @error('tarikh_lahir_manual') is-invalid @enderror" name="tarikh_lahir_manual" value="{{ old('tarikh_lahir_manual') }}"  max={{date('Y-m-d')}} autocomplete="tarikh_lahir_manual" onkeydown="return false;">
                           @error('tarikh_lahir_manual')
                           <span class="invalid-feedback" role="alert">
                                   <strong>{{ $message }}</strong>
@@ -444,7 +454,6 @@
                     </div>
                 </div>
                 <div class="col-md-1">
-
                 </div>
               </div>
               <input type="hidden" name="language" value="english">
