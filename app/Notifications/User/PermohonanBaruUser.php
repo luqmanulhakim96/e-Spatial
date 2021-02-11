@@ -21,11 +21,12 @@ class PermohonanBaruUser extends Notification
      *
      * @return void
      */
-     public function __construct($user, $email)
+     public function __construct($user, $email, $language)
      {
          //
          $this->user = $user;
          $this->email = $email;
+         $this->language = $language;
      }
 
     /**
@@ -49,7 +50,7 @@ class PermohonanBaruUser extends Notification
     {
       if(is_null($this->email))
       {
-        return Mail::queue(new EmailNotifikasiUserPermohonanBaru($this->user));
+        return Mail::queue(new EmailNotifikasiUserPermohonanBaru($this->user, $this->language));
       }
       else {
         return Mail::queue(new EmailNotifikasiUser($this->user, $this->email));
@@ -57,14 +58,24 @@ class PermohonanBaruUser extends Notification
     }
     public function toDatabase($notifiable)
     {
-        // dd($notifiable);
-        return[
-          'permohonan_id' => $notifiable->id,
-          'tajuk' => 'Permohonan baru sedang diproses',
-          'tarikh_dicipta' => $notifiable->created_at,
-          'kepada_email' => $this->user->email,
-          'kepada_id' => $this->user->id,
-        ];
+        // dd($this->language);
+        if($this->language == "english"){
+          return[
+            'permohonan_id' => $notifiable->id,
+            'tajuk' => 'The new application is in process.',
+            'tarikh_dicipta' => $notifiable->created_at,
+            'kepada_email' => $this->user->email,
+            'kepada_id' => $this->user->id,
+          ];
+        }else{
+          return[
+            'permohonan_id' => $notifiable->id,
+            'tajuk' => 'Permohonan baru sedang diproses',
+            'tarikh_dicipta' => $notifiable->created_at,
+            'kepada_email' => $this->user->email,
+            'kepada_id' => $this->user->id,
+          ];
+        }
     }
 
     /**

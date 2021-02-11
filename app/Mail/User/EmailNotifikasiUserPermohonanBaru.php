@@ -17,11 +17,13 @@ class EmailNotifikasiUserPermohonanBaru extends Mailable
      * @return void
      */
     public $user;
+    public $language;
 
-    public function __construct($user)
+    public function __construct($user, $language)
     {
         //
         $this->user = $user;
+        $this->language = $language;
     }
 
     /**
@@ -31,10 +33,19 @@ class EmailNotifikasiUserPermohonanBaru extends Mailable
      */
     public function build()
     {
-      return $this->to($this->user->email , $this->user->name)
-              // ->from(env('MAIL_FROM_ADDRESS'))
-              ->from('espatial@forestry.gov.my' ,'E-mel Sistem eSpatial')
-              ->subject('Permohonan Diterima')
-              ->view('senarai-email.templates.notifikasiUserPermohonanBaru');
+      if($this->language == "english"){
+        return $this->to($this->user->email , $this->user->name)
+                // ->from(env('MAIL_FROM_ADDRESS'))
+                ->from('espatial@forestry.gov.my' ,'E-mel Sistem eSpatial')
+                ->subject('Permohonan Diterima')
+                ->view('senarai-email.templates.notifikasiUserPermohonanBaruEnglish');
+      }
+      else{
+        return $this->to($this->user->email , $this->user->name)
+                // ->from(env('MAIL_FROM_ADDRESS'))
+                ->from('espatial@forestry.gov.my' ,'E-mel Sistem eSpatial')
+                ->subject('Permohonan Diterima')
+                ->view('senarai-email.templates.notifikasiUserPermohonanBaru');
+      }
     }
 }

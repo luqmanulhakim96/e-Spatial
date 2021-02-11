@@ -88,7 +88,7 @@
             <table border="0" cellpadding="0" cellspacing="0" width="480" >
                 <tr>
                     <td bgcolor="#ffffff" align="center" valign="top" style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
-                      <h1 style="font-size: 32px; font-weight: 400; margin: 0;">Permohonan Diterima</h1>
+                      <h1 style="font-size: 32px; font-weight: 400; margin: 0;">Application Received</h1>
                     </td>
                 </tr>
             </table>
@@ -101,7 +101,7 @@
               <!-- COPY -->
               <tr>
                 <td bgcolor="#ffffff" align="left" style="padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                  <p style="margin: 0;"> Permohonan anda sedang diproses </p>
+                  <p style="margin: 0;">Your application is in process.</p>
                 </td>
               </tr>
               <!-- BULLETPROOF BUTTON -->
@@ -112,7 +112,7 @@
                       <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
                         <table border="0" cellspacing="0" cellpadding="0">
                           <tr>
-                              <td align="center" style="border-radius: 3px;" bgcolor="#003E61"><a href="{{ route('user.listSedangDiproses') }}" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #003E61; display: inline-block;">Klik Di Sini</a></td>
+                              <td align="center" style="border-radius: 3px;" bgcolor="#003E61"><a href="{{ route('user.listSedangDiproses_eng') }}" target="_blank" style="font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid #003E61; display: inline-block;">Click Here</a></td>
                           </tr>
                         </table>
                       </td>
@@ -130,19 +130,19 @@
                 <!-- HEADLINE -->
                 <tr>
                   <td bgcolor="#111111" align="left" style="padding: 40px 30px 20px 30px; color: #ffffff; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                    <h2 style="font-size: 24px; font-weight: 400; margin: 0;">Butang tidak berfungsi?</h2>
+                    <h2 style="font-size: 24px; font-weight: 400; margin: 0;">Button is not working?</h2>
                   </td>
                 </tr>
                 <!-- COPY -->
                 <tr>
                   <td bgcolor="#111111" align="left" style="padding: 0px 30px 20px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                    <p style="margin: 0;">Klik pautan di bawah atau <i>copy</i> dan <i>paste</i> di laman sesawang.</p>
+                    <p style="margin: 0;">Click link below or <i>copy</i> and <i>paste</i> in your browser.</p>
                   </td>
                 </tr>
                 <!-- COPY -->
                 <tr>
                   <td bgcolor="#111111" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 4px 4px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
-                    <p style="margin: 0;"><a href="{{ route('user.listSedangDiproses') }}" target="_blank" style="color: #FFFFE0; font-size: 12px;">{{ urlencode(route('user.listSedangDiproses')) }}</a></p>
+                    <p style="margin: 0;"><a href="{{ route('user.listSedangDiproses_eng') }}" target="_blank" style="color: #FFFFE0; font-size: 12px;">{{ urlencode(route('user.listSedangDiproses_eng')) }}</a></p>
                   </td>
                 </tr>
             </table>
@@ -156,7 +156,7 @@
                 <tr>
                   <td bgcolor="#003E61" align="center" style="padding: 30px 30px 30px 30px; border-radius: 4px 4px 4px 4px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;" >
                     <h2 style="font-size: 20px; font-weight: 400; color: #ffffff; margin: 0;">Perlukan bantuan?</h2>
-                    <p style="margin: 0;"><a href="mailto:webmaster@forestry.gov.my" target="_blank" style="color: #FFFFE0;">Hubungi kami di sini</a></p>
+                    <p style="margin: 0;"><a href="mailto:webmaster@forestry.gov.my" target="_blank" style="color: #FFFFE0;">Contact us here</a></p>
                   </td>
                 </tr>
             </table>
@@ -170,7 +170,7 @@
               <!-- PERMISSION REMINDER -->
               <tr>
                 <td bgcolor="#f4f4f4" align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px;" >
-                  <p style="margin: 0;text-align: center;">Email ini dihasilkan oleh Sistem, anda tidak perlu membalas email ini.</p>
+                  <p style="margin: 0;text-align: center;">This is a system-generated email. No need to reply to this email.</p>
                 </td>
               </tr>
 
