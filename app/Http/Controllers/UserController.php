@@ -588,7 +588,7 @@ class UserController extends Controller
 
     $emailUser = SenaraiEmail::where('kepada', '=', 'pemohon')->where('jenis', '=', 'permohonan_baru')->first();
 
-    $permohonanBaru->notify(new PermohonanBaruUser(Auth::user(),$emailUser));
+    $permohonanBaru->notify(new PermohonanBaruUser(Auth::user(),$emailUser, $request->language));
 
     if($request->language == "english"){
       return redirect()->route('user.listSedangDiproses_eng')->with('success','You have successfully made a data request.');

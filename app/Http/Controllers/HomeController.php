@@ -359,6 +359,8 @@ class HomeController extends Controller
     public function redirectNotification($id){
 
       $markAsRead = Notification::where('id', $id)->first();
+      // dd($markAsRead->data['permohonan_id']);
+      // dd($markAsRead);
 
       $markAsRead->markAsRead();
 
@@ -423,19 +425,23 @@ class HomeController extends Controller
         }
 
         if($permohonanbaru){
-          return redirect()->route('permohonan.listBaru');
+          return redirect()->route('permohonan.view', $markAsRead->data['permohonan_id']);
         }
         elseif ($permohonanlulus) {
-          return redirect()->route('permohonan.list');
+          return redirect()->route('permohonan.view', $markAsRead->data['permohonan_id']);
+          // return redirect()->route('permohonan.list');
         }
         elseif ($permohonangagal) {
-          return redirect()->route('permohonan.listGagal');
+          return redirect()->route('permohonan.view', $markAsRead->data['permohonan_id']);
+          // return redirect()->route('permohonan.listGagal');
         }
         elseif ($permohonandalaman) {
-          return redirect()->route('permohonan.listDalaman');
+          return redirect()->route('permohonan.view', $markAsRead->data['permohonan_id']);
+          // return redirect()->route('permohonan.listDalaman');
         }
         elseif ($permohonanbatal) {
-          return redirect()->route('permohonan.listBatal');
+          return redirect()->route('permohonan.view', $markAsRead->data['permohonan_id']);
+          // return redirect()->route('permohonan.listBatal');
         }
       }
     }
