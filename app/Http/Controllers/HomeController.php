@@ -492,17 +492,19 @@ class HomeController extends Controller
     }
 
     public function updateProfil(Request $request){
-      if($request->kerakyatan == 'Bukan Warganegara'){
-        if($request->pasport != null){
-          $request->merge([
-            'kad_pengenalan' => $request->pasport,
-          ]);
+      // dd($request->all());
 
-          $request->merge([
-            'tarikh_lahir' => $request->tarikh_lahir_manual,
-          ]);
-        }
-      }
+      // if($request->kerakyatan == 'Bukan Warganegara'){
+      //   if($request->pasport != null){
+      //     $request->merge([
+      //       'kad_pengenalan' => $request->pasport,
+      //     ]);
+      //
+      //     $request->merge([
+      //       'tarikh_lahir' => $request->tarikh_lahir_manual,
+      //     ]);
+      //   }
+      // }
       // dd($request->all());
       $gambar_profile = "";
 
@@ -517,14 +519,15 @@ class HomeController extends Controller
       $user = User::findOrFail($user_id);
 
       if($request->kategori == 'dalaman'){
+        // dd($request->all());
 
         $this->validatorDalaman($request->all())->validate();
 
         $user->name = $request->nama;
-        $user->kerakyatan = $request->kerakyatan;
-        $user->kad_pengenalan = $request->kad_pengenalan;
-        $user->tarikh_lahir = $request->tarikh_lahir;
-        $user->tempat_lahir = $request->tempat_lahir;
+        // $user->kerakyatan = $request->kerakyatan;
+        // $user->kad_pengenalan = $request->kad_pengenalan;
+        // $user->tarikh_lahir = $request->tarikh_lahir;
+        // $user->tempat_lahir = $request->tempat_lahir;
         $user->jawatan = $request->jawatan;
         $user->bahagian = $request->bahagian;
         $user->no_tel_rumah = $request->no_tel_rumah;
@@ -638,10 +641,10 @@ class HomeController extends Controller
         return Validator::make($data, [
             'kategori' => ['required'],
             'nama' => ['required', 'string', 'max:255'],
-            'kad_pengenalan' => ['required', 'string', 'max:12'],
-            'kerakyatan' => ['required'],
-            'tarikh_lahir' => ['required', 'date'],
-            'tempat_lahir' => ['required', 'string', 'max:255'],
+            // 'kad_pengenalan' => ['required', 'string', 'max:12'],
+            // 'kerakyatan' => ['required'],
+            // 'tarikh_lahir' => ['required', 'date'],
+            // 'tempat_lahir' => ['required', 'string', 'max:255'],
             'jawatan' => ['required', 'string', 'max:255'],
             'no_tel_rumah' => ['required', 'string', 'max:12'],
             'no_tel_bimbit' => ['required', 'string', 'max:12'],

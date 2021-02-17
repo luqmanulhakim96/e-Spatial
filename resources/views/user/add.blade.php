@@ -364,7 +364,7 @@
                         <div class="form-group">
                           <div class="form-group" id="maklumat_agensi_dan_negara_div" style="display: none;" >
                               <label for="maklumat_agensi" class="required">Maklumat Agensi Dan Negara Terlibat:</label>
-                              <input type="text" class="form-control bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
+                              <input type="text" class="form-control bg-light @error('maklumat_agensi_dan_negara') is-invalid @enderror" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')" id="maklumat_agensi_dan_negara" name="maklumat_agensi_dan_negara" placeholder="Nama agensi dan negara" aria-describedby="maklumat_agensi_dan_negara" oninput="let p=this.selectionStart;this.value=this.value.toUpperCase();this.setSelectionRange(p, p);">
                               @error('maklumat_agensi_dan_negara')
                               <div class="alert alert-danger">
                                 <strong>{{ $message }}</strong>

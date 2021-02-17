@@ -22,7 +22,8 @@
                               <th class="all">PERMOHONAN ID</th>
                               <th class="all">NAMA PEMOHON</th>
                               <th class="all">TARIKH PERMOHONAN</th>
-                              <th class="all">TARIKH DIBATALKAN</th>
+                              <th class="all">TARIKH MAKLUMAN</th>
+                              <th class="all">ULASAN</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +44,9 @@
                             <td>
                               <div style="padding : 4px;"></div>
                               {{$data->updated_at}}
+                            </td>
+                            <td>
+                              {{$data->remarks_admin}}
                             </td>
                           </tr>
                           @endforeach

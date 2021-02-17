@@ -39,7 +39,7 @@
 
                             <div class="form-group">
                                 <label for="jenis_dokumen">Jenis Dokumen:</label>
-                                <input id="jenis_dokumen" type="text" class="form-control bg-light @error('jenis_dokumen') is-invalid @enderror" name="jenis_dokumen" value=" {{$info->jenis_dokumen}}" autocomplete="name" readonly>
+                                <input id="jenis_dokumen" type="text" class="form-control bg-light @error('jenis_dokumen') is-invalid @enderror" name="jenis_dokumen" value=" {{$info->jenis_dokumen}}" autocomplete="name" disabled>
                                   @error('jenis_dokumen')
                                   <div class="alert alert-danger">
                                     <strong>{{ $message }}</strong>
@@ -52,12 +52,12 @@
                             @if($info->jenis_dokumen == "Vektor Shapefile")
                             <div class="form-group">
                                 <label for="actionBarName1">Saiz Data:</label>
-                                <input type="text" class="form-control bg-light" name="saiz_data" id="saiz_data" aria-describedby="saiz_data"  value="{{ $info->saiz_data  }}" readonly>
+                                <input type="text" class="form-control bg-light" name="saiz_data" id="saiz_data" aria-describedby="saiz_data"  value="{{ $info->saiz_data  }}" disabled>
                             </div>
                             @elseif($info->jenis_dokumen == "Bercetak")
                             <div class="form-group">
                                 <label for="actionBarName1">Jenis Kertas:</label>
-                                <input type="text" class="form-control bg-light" name="saiz_data" id="jenis_kertas" aria-describedby="jenis_kertas"  value="{{ $info->jenis_kertas  }}" readonly>
+                                <input type="text" class="form-control bg-light" name="saiz_data" id="jenis_kertas" aria-describedby="jenis_kertas"  value="{{ $info->jenis_kertas  }}" disabled>
                             </div>
                             @endif
 
@@ -74,7 +74,7 @@
                           <div class="col-md-4">
                             <div class="form-group">
                                 <label for="jenis_data">Jenis Data:</label>
-                                <input id="jenis_data" type="text" class="form-control bg-light @error('jenis_data') is-invalid @enderror" name="jenis_data" value=" {{$info->jenis_data}}" autocomplete="name" readonly>
+                                <input id="jenis_data" type="text" class="form-control bg-light @error('jenis_data') is-invalid @enderror" name="jenis_data" value=" {{$info->jenis_data}}" autocomplete="name" disabled>
                                   @error('jenis_data')
                                   <div class="alert alert-danger">
                                     <strong>{{ $message }}</strong>
@@ -86,17 +86,17 @@
                             @if($info->jenis_data == "Petak Kajian")
                             <div class="form-group">
                                 <label for="actionBarName1">Kategori Data:</label>
-                                <input id="kategori_data" type="text" class="form-control bg-light @error('kategori_data') is-invalid @enderror" name="kategori_data" value=" {{$info->kategori_data}}" autocomplete="name" readonly>
+                                <input id="kategori_data" type="text" class="form-control bg-light @error('kategori_data') is-invalid @enderror" name="kategori_data" value=" {{$info->kategori_data}}" autocomplete="name" disabled>
                             </div>
                             @elseif($info->jenis_data == "Lain-Lain")
                             <div class="form-group">
                                 <label for="actionBarName1">Negeri:</label>
-                                <input id="tahun" type="text" class="form-control bg-light @error('negeri') is-invalid @enderror" name="negeri" value=" {{$info->negeri}}" autocomplete="name" readonly>
+                                <input id="tahun" type="text" class="form-control bg-light @error('negeri') is-invalid @enderror" name="negeri" value=" {{$info->negeri}}" autocomplete="name" disabled>
                             </div>
                             @else
                             <div class="form-group">
                                 <label for="actionBarName1">Tahun:</label>
-                                <input id="tahun" type="text" class="form-control bg-light @error('tahun') is-invalid @enderror" name="tahun" value=" {{$info->tahun}}" autocomplete="name" readonly>
+                                <input id="tahun" type="text" class="form-control bg-light @error('tahun') is-invalid @enderror" name="tahun" value=" {{$info->tahun}}" autocomplete="name" disabled>
                             </div>
                             @endIf
 
@@ -115,7 +115,7 @@
 
                             <div class="form-group">
                                 <label for="actionBarName1">Negeri:</label>
-                                <input id="tahun" type="text" class="form-control bg-light @error('negeri') is-invalid @enderror" name="negeri" value=" {{$info->negeri}}" autocomplete="name" readonly>
+                                <input id="tahun" type="text" class="form-control bg-light @error('negeri') is-invalid @enderror" name="negeri" value=" {{$info->negeri}}" autocomplete="name" disabled>
                             </div>
 
                             @endIf

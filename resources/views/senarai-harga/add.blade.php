@@ -23,7 +23,7 @@
                             <!-- jenis dokumen input-->
                             <div class="form-group">
                                 <label for="jenis_dokumen">Jenis Dokumen:</label>
-                                  <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showSaizData(this)">
+                                  <select id="jenis_dokumen" class="custom-select  bg-light" name="jenis_dokumen" onchange="showSaizData(this)" oninvalid="this.setCustomValidity('Sila isi bahagian ini');" required>
                                       <option value="" selected disabled hidden>Pilih Jenis Dokumen</option>
                                       <option value="Bercetak" {{ old('jenis_dokumen') == "Bercetak" ? 'selected' : '' }}>Bercetak</option>
                                       <option value="Vektor Shapefile" {{ old('jenis_dokumen') == "Vektor Shapefile" ? 'selected' : '' }}>Vektor Shapefile (Digital)</option>
@@ -44,7 +44,7 @@
                             <!-- jenis data input-->
                             <div class="form-group" style="display: none;" id="jenis_kertas_div">
                                 <label for="jenis_kertas">Jenis Kertas:</label>
-                                  <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas" >
+                                  <select id="jenis_kertas" class="custom-select  bg-light" name="jenis_kertas" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')">
                                       <option value="" selected disabled hidden>Pilih Jenis Kertas</option>
                                       <option value="A0" {{ old('jenis_kertas') == "A0" ? 'selected' : '' }}>A0</option>
                                       <option value="A1" {{ old('jenis_kertas') == "A1" ? 'selected' : '' }}>A1</option>
@@ -86,7 +86,7 @@
                             <!-- jenis data input-->
                             <div class="form-group">
                                 <label for="jenis_data">Jenis Data:</label>
-                                  <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)">
+                                  <!-- <select id="jenis_data" class="custom-select  bg-light" name="jenis_data" onchange="showDiv(this)">
                                       <option value="" selected disabled hidden>Pilih Jenis Data</option>
                                       <option value="Litupan Kawasan Hutan" {{ old('jenis_data') == "Litupan Kawasan Hutan" ? 'selected' : '' }}>Litupan Kawasan Hutan</option>
                                       <option value="Sempadan Hutan Simpanan Kekal" {{ old('jenis_data') == "Sempadan Hutan Simpanan Kekal" ? 'selected' : '' }}>Sempadan Hutan Simpanan Kekal</option>
@@ -94,7 +94,17 @@
                                       <option value="Kelas Fungsi Hutan" {{ old('jenis_data') == "Kelas Fungsi Hutan" ? 'selected' : '' }}>Kelas Fungsi Hutan</option>
                                       <option value="Petak Kajian" {{ old('jenis_data') == "Petak Kajian" ? 'selected' : '' }}>Petak Kajian</option>
                                       <option value="Lain-lain" {{ old('jenis_data') == "Lain-lain" ? 'selected' : '' }}>Lain-lain</option>
-                                  </select>
+                                  </select> -->
+
+                                  <input list="browsers" class="custom-select bg-light" id="jenis_data" name="jenis_data" style="text-transform:capitalize;" onchange="showDiv(this)" placeholder="Masukkan Jenis Data" oninvalid="this.setCustomValidity('Sila isi bahagian ini')" required>
+                                  <datalist id="browsers">
+                                    <option value="Litupan Kawasan Hutan" {{ old('jenis_data') == "Litupan Kawasan Hutan" ? 'selected' : '' }}>Litupan Kawasan Hutan</option>
+                                    <option value="Sempadan Hutan Simpanan Kekal" {{ old('jenis_data') == "Sempadan Hutan Simpanan Kekal" ? 'selected' : '' }}>Sempadan Hutan Simpanan Kekal</option>
+                                    <option value="Inventori Hutan Nasional" {{ old('jenis_data') == "Inventori Hutan Nasional" ? 'selected' : '' }}>Inventori Hutan Nasional</option>
+                                    <option value="Kelas Fungsi Hutan" {{ old('jenis_data') == "Kelas Fungsi Hutan" ? 'selected' : '' }}>Kelas Fungsi Hutan</option>
+                                    <option value="Petak Kajian" {{ old('jenis_data') == "Petak Kajian" ? 'selected' : '' }}>Petak Kajian</option>
+                                    <option value="Lain-lain" {{ old('jenis_data') == "Lain-lain" ? 'selected' : '' }}>Lain-lain</option>
+                                  </datalist>
                                   @error('jenis_data')
                                   <div class="alert alert-danger">
                                     <strong>{{ $message }}</strong>
@@ -110,7 +120,7 @@
                           <div class="col-md">
                             <div class="form-group" id="kategori_data_div" style="display: none;">
                                 <label for="kategori_data">Kategori Data:</label>
-                                  <select id="kategori_data" class="custom-select  bg-light" name="kategori_data" >
+                                  <select id="kategori_data" class="custom-select  bg-light" name="kategori_data" onchange="this.setCustomValidity('')"  oninvalid="this.setCustomValidity('Sila isi bahagian ini');">
                                       <option value="" selected disabled hidden>Pilih Jenis Data</option>
                                       <option value="Fenologi" {{ old('kategori_data') == "Fenologi" ? 'selected' : '' }}>Fenologi</option>
                                       <option value="Growth Ploth" {{ old('kategori_data') == "Growth Ploth" ? 'selected' : '' }}>Growth Ploth</option>
@@ -134,7 +144,7 @@
                             <!--tahun input -->
                             <div class="form-group" id="tahun_div" style="display: block;">
                                 <label for="tahun">Tahun:</label>
-                                <input type="text" class="form-control bg-light"  name="tahun" id="tahun" aria-describedby="tahun" placeholder="Masukkan Tahun" value="{{ old('tahun') }}">
+                                <input type="text" class="form-control bg-light" maxlength="9" minlength="4" name="tahun" onkeypress="return isNumberDashKey(event);" id="tahun" aria-describedby="tahun" placeholder="Masukkan Tahun" value="{{ old('tahun') }}" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini');">
                                 <small id="harga_asas" class="form-text text-secondary">Contoh: 2013 | 2003-2004 </small>
 
                                 @error('tahun')
@@ -153,7 +163,7 @@
                             <!-- negeri input -->
                             <div class="form-group">
                               <label for="negeri">Negeri:</label>
-                                <select id="negeri" class="custom-select  bg-light" name="negeri">
+                                <select id="negeri" class="custom-select  bg-light" name="negeri" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini');" required>
                                     <option value="" selected disabled hidden>Pilih Negeri</option>
                                     <option value="Semenanjung Malaysia" {{ old('negeri') == "Semenanjung Malaysia" ? 'selected' : '' }}>Semenanjung Malaysia</option>
                                     <option value="Johor" {{ old('negeri') == "Johor" ? 'selected' : '' }}>Johor</option>
@@ -185,7 +195,7 @@
                             <!--harga asas input -->
                             <div class="form-group">
                                 <label for="harga_asas">Harga Asas: RM</label>
-                                <input type="text" class="form-control bg-light" name="harga_asas" id="harga_asas" onkeypress="return fun_AllowOnlyAmountAndDot(this.id);" aria-describedby="harga_asas" placeholder="Masukkan Harga Asas (RM)" value="{{ old('harga_asas') }}">
+                                <input type="text" class="form-control bg-light" onkeypress="return fun_AllowOnlyAmountAndDot(this.id);" name="harga_asas" id="harga_asas" onkeypress="return fun_AllowOnlyAmountAndDot(this.id);" aria-describedby="harga_asas" placeholder="Masukkan Harga Asas (RM)" value="{{ old('harga_asas') }}" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini');" required>
                                 <small id="harga_asas" class="form-text text-secondary">Contoh: 120.20</small>
                                 @error('harga_asas')
                                 <div class="alert alert-danger">
@@ -211,13 +221,99 @@
         </main>
 
         <script type="text/javascript">
+        function fun_AllowOnlyAmountAndDot(txt)
+         {
+             if(event.keyCode > 47 && event.keyCode < 58 || event.keyCode == 46)
+             {
+                var txtbx=document.getElementById(txt);
+                var amount = document.getElementById(txt).value;
+                var present=0;
+                var count=0;
+
+                if(amount.indexOf(".",present)||amount.indexOf(".",present+1));
+                {
+               // alert('0');
+                }
+
+               /*if(amount.length==2)
+               {
+                 if(event.keyCode != 46)
+                 return false;
+               }*/
+                do
+                {
+                present=amount.indexOf(".",present);
+                if(present!=-1)
+                 {
+                  count++;
+                  present++;
+                  }
+                }
+                while(present!=-1);
+                if(present==-1 && amount.length==0 && event.keyCode == 46)
+                {
+                     event.keyCode=0;
+                     //alert("Wrong position of decimal point not  allowed !!");
+                     return false;
+                }
+
+                if(count>=1 && event.keyCode == 46)
+                {
+
+                     event.keyCode=0;
+                     //alert("Only one decimal point is allowed !!");
+                     return false;
+                }
+                if(count==1)
+                {
+                 var lastdigits=amount.substring(amount.indexOf(".")+1,amount.length);
+                 if(lastdigits.length>=2)
+                             {
+                               //alert("Two decimal places only allowed");
+                               event.keyCode=0;
+                               return false;
+                               }
+                }
+                     return true;
+             }
+             else
+             {
+                     event.keyCode=0;
+                     //alert("Only Numbers with dot allowed !!");
+                     return false;
+             }
+
+         }
+
+         function isNumberDashKey(evt)
+         {
+           var charCode = (evt.which) ? evt.which : event.keyCode;
+          console.log(charCode);
+             if (charCode != 46 && charCode != 45 && charCode > 31
+             && (charCode < 48 || charCode > 57))
+              return false;
+
+           return true;
+         }tahun
+
         function showSaizData(select){
           if(select.value=='Bercetak'){
             document.getElementById('saiz_data_div').style.display = "none";
             document.getElementById('jenis_kertas_div').style.display = "block";
+
+            document.getElementById("jenis_kertas").required = true;
+            document.getElementById("saiz_data").required = false;
+
+            document.getElementById("jenis_dokumen").setCustomValidity('');
+
           }else{
             document.getElementById('saiz_data_div').style.display = "block";
             document.getElementById('jenis_kertas_div').style.display = "none";
+
+            document.getElementById("jenis_kertas").required = false;
+            document.getElementById("saiz_data").required = true;
+
+            document.getElementById("jenis_dokumen").setCustomValidity('');
           }
         }
 
@@ -225,9 +321,21 @@
            if(select.value=='Petak Kajian'){
             document.getElementById('kategori_data_div').style.display = "block";
             document.getElementById('tahun_div').style.display = "none";
+
+            document.getElementById("kategori_data").required = true;
+            document.getElementById("tahun").required = false;
+
+            document.getElementById("jenis_data").setCustomValidity('');
+
            } else{
              document.getElementById('kategori_data_div').style.display = "none";
              document.getElementById('tahun_div').style.display = "block";
+
+             document.getElementById("kategori_data").required = false;
+             document.getElementById("tahun").required = true;
+
+             document.getElementById("jenis_data").setCustomValidity('');
+
            }
         }
 

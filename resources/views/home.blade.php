@@ -170,7 +170,7 @@
                                         </div>
                                         <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
-                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #dc3545 !important;">Permohonan <br> Gagal</p>
+                                            <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #dc3545 !important;">Permohonan <br> Tidak Lulus</p>
                                             <h4 class="font-weight-normal m-0 text-primary" style="color: #dc3545 !important;">{{$countPermohonanGagal}}</h4>
                                         </div>
                                     </div>
@@ -269,18 +269,14 @@
                       </div>
 
                       <!-- Col sm 6, col md 6, col lg 3 -->
-                      <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
-                          <!-- Card -->
+                      <!-- <div class="col-sm-6 col-md- col-lg-3 mt-3 mt-lg-0">
                             <div class="card border-1 rounded-lg" style="border-color: #D25F00 !important;">
-                                <!-- Card body -->
                                 <div class="card-body" style="border-radius:.5rem;">
 
                                     <div class="d-flex flex-row justify-content-center align-items-center">
-                                        <!-- Icon -->
                                         <div class="small-card-icon">
                                             <i class="fa fa-users card-icon-bg-primary fa-4x" style="color: #D25F00 !important;"></i>
                                         </div>
-                                        <!-- Text -->
                                         <div class="small-card-text w-100 text-center">
                                             <p class="font-weight-normal m-0 text-primary" style="font-size: 120%; color: #D25F00 !important;">Permohonan <br> Dalaman</p>
                                             <h4 class="font-weight-normal m-0 text-primary" style="color: #D25F00 !important;">{{$countPermohonanDalaman}}</h4>
@@ -299,7 +295,7 @@
                                 </div>
                             </div>
 
-                      </div>
+                      </div> -->
 
 
 

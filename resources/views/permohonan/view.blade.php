@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-without-footer')
 @section('content')
             <!--Page Body part -->
             <div class="page-body p-4 text-dark">
@@ -401,7 +401,31 @@
 
                   </div>
                   <div class="col-md-4">
-                    <a href="{{route('permohonan.update.tidakBerkaitan', $permohonan->id)}}" class="btn btn-ripple btn-raised btn-danger m-2" onclick="return confirm('Anda pasti mahu membatalkan permohonan ini?');" style="text-align: center;"><i class="fa fa-ban" aria-hidden="true"></i> PERMOHONAN TIDAK BERKAITAN</a>
+                    <a href="#" class="btn btn-ripple btn-raised btn-danger m-2" data-toggle="modal" data-target="#exampleModal2"  style="text-align: center;"><i class="fa fa-ban" aria-hidden="true"></i> PERMOHONAN TIDAK BERKAITAN</a>
+                  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Anda pasti mahu membatalkan permohonan ini?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <form class="" action="{{route('permohonan.update.tidakBerkaitan', $permohonan->id)}}" method="post">
+                              @csrf
+                              <div class="modal-body">
+                                <label>Sila isi ulasan:</label>
+                                <textarea name="ulasan_tidak_berkaitan" class="form-control" onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')" rows="8" cols="80" required></textarea>
+                              </div>
+                              <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                              <button type="submit" class="btn btn-primary">Kemaskini Status Permohonan</button>
+                              </div>
+                            </form>
+
+                        </div>
+                      </div>
+                  </div>
                   </div>
                 </div>
               @endif
@@ -455,7 +479,7 @@
 
                                   </div>
 
-                                  @if($current_user_info->role != 1)
+
                                   <div class="col-md-6">
 
                                     @if($current_user_info->role == 2)
@@ -474,15 +498,15 @@
 
                                   </div>
 
-                                  @if($current_user_info->role != 2)
+
                                   <div class="col-md-6">
 
                                     @if($current_user_info->role == 3)
                                     <div class="card text-white bg-primary mb-3" style="border: 1px solid #f8f9fa;">
-                                    <div class="card-header" style="text-align: center; border-bottom: 1px solid #f8f9fa;">Keputusan Ketua Pengarah</div>
+                                      <div class="card-header" style="text-align: center; border-bottom: 1px solid #f8f9fa;">Ulasan Ketua Pengarah</div>
                                     @else
                                     <div class="card bg-light mb-3" style="border: 1px solid #003e61;">
-                                    <div class="card-header" style="text-align: center; border-bottom: 1px solid #003e61;">Keputusan Ketua Pengarah</div>
+                                    <div class="card-header" style="text-align: center; border-bottom: 1px solid #003e61;">Ulasan Ketua Pengarah</div>
                                     @endif
 
                                       <div class="card-body text-dark">
@@ -492,9 +516,9 @@
                                     </div>
 
                                   </div>
-                                  @endif
 
-                                  @endif
+
+
                               </div>
 
                               @if($current_user_info->role == 3)
@@ -508,7 +532,7 @@
                                 </div>
                                 <div class="col-md">
                                   <!-- All Radio Button  -->
-                                  <label for="l-name-1">Pilih status permohonan:</label>
+                                  <label for="l-name-1">Keputusan Ketua Pengarah:</label>
                                   <div class="switchs">
                                       <!-- Primary Radio Button  -->
                                   <div class="custom-control custom-radio">
@@ -525,7 +549,7 @@
                                 <div class="col-md" id="status_pembayaran_div" style="display : block;">
                                   <!-- All Radio Button  -->
                                   <label for="l-name-1">Pilih status pembayaran:</label>
-                                  <div class="switchs">
+                                  <div class="radios">
                                       <!-- Primary Radio Button  -->
                                   <div class="custom-control custom-radio">
                                       <input type="radio" id="Berbayar" name="status_pembayaran" class="custom-control-input"  value="Berbayar" @if(old('status_pembayaran')=="Berbayar") checked @endif>
@@ -598,7 +622,7 @@
           var x = document.forms["ulasan"]["status_permohonan"].value;
           console.log(x);
           if (x == "") {
-            alert("Sila pilih status permohonan ini!");
+            alert("Sila pilih Keputusan Ketua Pengarah");
             location.reload();
             return false;
           }
@@ -607,9 +631,13 @@
         function showStatusPembayaran(select){
            if(document.getElementById('Gagal').checked){
             document.getElementById('status_pembayaran_div').style.display = "none";
+            document.getElementById("Berbayar").required = false;
+
            }
            else{
              document.getElementById('status_pembayaran_div').style.display = "block";
+             document.getElementById("Berbayar").required = true;
+
            }
         }
       </script>
