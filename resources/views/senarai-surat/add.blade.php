@@ -93,7 +93,7 @@
             tinymce.init({
                 selector:'#kandungan',
                 // inline: true5
-                width: 794,
+                width: 800,
                 // width: 794,
                 height: 1000,
                 plugins: "pagebreak",

@@ -438,12 +438,15 @@ class PermohonanController extends Controller
   }
 
   public function updateStatusTidakBerkaitan($id){
-
+    // dd(request()->all());
     $status = "Tidak Berkaitan";
 
     $permohonan = Permohonan::findOrFail($id);
 
     $permohonan->status_permohonan = $status;
+
+    $permohonan->remarks_admin = request()->ulasan_tidak_berkaitan;
+
 
     $permohonan->save();
 

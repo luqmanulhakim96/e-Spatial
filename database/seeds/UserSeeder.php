@@ -18,114 +18,99 @@ class UserSeeder extends Seeder
       DB::table('users')-> delete();
       DB::table('users')-> insert(
         [
-        'name' => 'SuperAdmin',
+        'kategori' => 'dalaman',
+        'name' => 'SUPER ADMIN',
+        'kerakyatan' => 'Warganegara',
+        'kad_pengenalan' => '900102034567',
+        'tarikh_lahir' => '1990/1/1',
+        'tempat_lahir' => 'KUANTAN',
+        'jawatan' => 'SUPER ADMIN',
+        'bahagian' => 'TEKNOLOGI MAKLUMAT',
+        'no_tel_rumah' => '035684259',
+        'no_tel_bimbit' => '01284593214',
         'email' => 'SuperAdmin@gmail.com',
         'password' => $hashed_random_password,
+        'status'=> true,
         'role' => '4',
-        'kategori' => 'dalaman',
-        'kad_pengenalan' => '900102034567',
-        'kerakyatan' => 'Warganegara',
-        'tarikh_lahir' => '1990/1/02',
-        'tempat_lahir' => 'Kuantan',
-        'jawatan' => 'SuperAdmin',
-        'alamat_kediaman' => 'Shah Alam',
-        'nama_kementerian' => 'KPM',
-        'bahagian' => 'IT Department',
-        'alamat_kementerian' => 'Putrajaya',
-        'jenis_perniagaan' => 'Kesihantan',
-        'no_tel_rumah' => '035684259',
-        'no_tel_bimbit' => '01284593214',
-        'status'=> true
         ]
       );
+
       DB::table('users')-> insert(
         [
-        'name' => 'PS - Ahmad Rauf',
+        'kategori' => 'dalaman',
+        'name' => 'PS - AHMAD RAUF',
+        'kerakyatan' => 'Warganegara',
+        'kad_pengenalan' => '900102034568',
+        'tarikh_lahir' => '1990/1/1',
+        'tempat_lahir' => 'KUANTAN',
+        'jawatan' => 'PENTADBIR SISTEM',
+        'bahagian' => 'TEKNOLOGI MAKLUMAT',
+        'no_tel_rumah' => '035684259',
+        'no_tel_bimbit' => '01284593214',
         'email' => 'PentadbirSistem@gmail.com',
         'password' => $hashed_random_password,
+        'status'=> true,
         'role' => '0',
-        'kategori' => 'dalaman',
-        'kad_pengenalan' => '900102034568',
-        'kerakyatan' => 'Warganegara',
-        'tarikh_lahir' => '1990/1/02',
-        'tempat_lahir' => 'Kuantan',
-        'jawatan' => 'Pentadbir Sistem',
-        'bahagian' => 'IT Department',
-        'alamat_kediaman' => 'Shah Alam',
-        'nama_kementerian' => 'KPM',
-        'alamat_kementerian' => 'Putrajaya',
-        'jenis_perniagaan' => 'Kesihantan',
-        'no_tel_rumah' => '035684259',
-        'no_tel_bimbit' => '01284593214',
-        'status'=> true
         ]
       );
+
       DB::table('users')-> insert(
         [
-        'name' => 'P1 - Ahmad Junaidi',
+        'kategori' => 'dalaman',
+        'name' => 'P1 - AHMAD JUNAIDI',
+        'kerakyatan' => 'Warganegara',
+        'kad_pengenalan' => '900102034569',
+        'tarikh_lahir' => '1990/1/1',
+        'tempat_lahir' => 'KUANTAN',
+        'jawatan' => 'PENYOKONG 1',
+        'bahagian' => 'TEKNOLOGI MAKLUMAT',
+        'no_tel_rumah' => '035684259',
+        'no_tel_bimbit' => '01284593214',
         'email' => 'Penyokong1@gmail.com',
         'password' => $hashed_random_password,
+        'status'=> true,
         'role' => '1',
-        'kategori' => 'dalaman',
-        'kad_pengenalan' => '900102034569',
-        'kerakyatan' => 'Warganegara',
-        'tarikh_lahir' => '1990/1/02',
-        'tempat_lahir' => 'Kuantan',
-        'jawatan' => 'Pentadbir Sistem',
-        'bahagian' => 'IT Department',
-        'alamat_kediaman' => 'Shah Alam',
-        'nama_kementerian' => 'KPM',
-        'alamat_kementerian' => 'Putrajaya',
-        'jenis_perniagaan' => 'Kesihantan',
-        'no_tel_rumah' => '035684259',
-        'no_tel_bimbit' => '01284593214',
-        'status'=> true
         ]
       );
+
       DB::table('users')-> insert(
         [
-        'name' => 'P2 - Mohd Ali',
+        'kategori' => 'dalaman',
+        'name' => 'P2 - MOHAMMAD ALI',
+        'kerakyatan' => 'Warganegara',
+        'kad_pengenalan' => '900102034570',
+        'tarikh_lahir' => '1990/1/1',
+        'tempat_lahir' => 'KUANTAN',
+        'jawatan' => 'PENYOKONG 2',
+        'bahagian' => 'TEKNOLOGI MAKLUMAT',
+        'no_tel_rumah' => '035684259',
+        'no_tel_bimbit' => '01284593214',
         'email' => 'Penyokong2@gmail.com',
         'password' => $hashed_random_password,
+        'status'=> true,
         'role' => '2',
-        'kategori' => 'dalaman',
-        'kad_pengenalan' => '900102034570',
-        'kerakyatan' => 'Warganegara',
-        'tarikh_lahir' => '1990/1/02',
-        'tempat_lahir' => 'Kuantan',
-        'jawatan' => 'Pentadbir Sistem',
-        'alamat_kediaman' => 'Shah Alam',
-        'bahagian' => 'IT Department',
-        'nama_kementerian' => 'KPM',
-        'alamat_kementerian' => 'Putrajaya',
-        'jenis_perniagaan' => 'Kesihantan',
-        'no_tel_rumah' => '035684259',
-        'no_tel_bimbit' => '01284593214',
-        'status'=> true
         ]
       );
+
       DB::table('users')-> insert(
         [
-        'name' => 'KP - Siti Sarah',
-        'email' => 'KetuaPengarah@gmail.com',
-        'password' => $hashed_random_password,
-        'role' => '3',
         'kategori' => 'dalaman',
-        'kad_pengenalan' => '900102034571',
+        'name' => 'KP - SITI SARAH',
         'kerakyatan' => 'Warganegara',
-        'tarikh_lahir' => '1990/1/02',
-        'tempat_lahir' => 'Kuantan',
-        'jawatan' => 'Pentadbir Sistem',
-        'alamat_kediaman' => 'Shah Alam',
-        'bahagian' => 'IT Department',
-        'nama_kementerian' => 'KPM',
-        'alamat_kementerian' => 'Putrajaya',
-        'jenis_perniagaan' => 'Kesihantan',
+        'kad_pengenalan' => '900102034571',
+        'tarikh_lahir' => '1990/1/1',
+        'tempat_lahir' => 'KUANTAN',
+        'jawatan' => 'KETUA PENGARAH',
+        'bahagian' => 'PENTADBIRAN',
         'no_tel_rumah' => '035684259',
         'no_tel_bimbit' => '01284593214',
-        'status'=> true
+        'email' => 'KetuaPengarah@gmail.com',
+        'password' => $hashed_random_password,
+        'status'=> true,
+        'role' => '3',
         ]
       );
+
       DB::table('users')-> insert(
         [
         'name' => 'U1 - Siti Aminah',

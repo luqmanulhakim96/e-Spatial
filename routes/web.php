@@ -75,7 +75,7 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/permohonan/updateHarga/{id}', 'PermohonanController@updateHarga')->name('permohonan.harga.update');
 
-  Route::get('/permohonan/tidak-berkaitan/{id}', 'PermohonanController@updateStatusTidakBerkaitan')->name('permohonan.update.tidakBerkaitan');
+  Route::post('/permohonan/tidak-berkaitan/{id}', 'PermohonanController@updateStatusTidakBerkaitan')->name('permohonan.update.tidakBerkaitan');
 
   Route::get('/permohonan/download/attachment_aoi/{id}', 'PermohonanController@downloadAoi')->name('permohonan.download.attachment_aoi');
 

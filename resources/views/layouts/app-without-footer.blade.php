@@ -272,10 +272,7 @@
     @yield('content')
 
     <!-- Footer section -->
-    <footer id="footer" class="footer-full-body p-4 d-flex flex-row justify-content-between text-secondary" style="background: linear-gradient(to bottom, #cccccc 0%, #ffffff 110%) !important;">
-        <p>&copy; Hakcipta Terpelihara 2020. <a href="https://www.forestry.gov.my/my/" target="_Blank">Jabatan Perhutanan Semenanjung Malaysia</a></p>
-        <p>Versi 1.0</p>
-    </footer>
+    
   </div>
 
 

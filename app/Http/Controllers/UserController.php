@@ -300,7 +300,7 @@ class UserController extends Controller
     }
     $jenisDokumen = preg_replace('/(?<!\ )[A-Z]/', ' $0', $jenisDokumen );
     $jenisDokumen = ltrim($jenisDokumen);
-
+    // dd($jenisData);
     $tahun = SenaraiHarga::select('tahun')
               ->where('jenis_data', $jenisData)
               ->where('jenis_dokumen', $jenisDokumen)

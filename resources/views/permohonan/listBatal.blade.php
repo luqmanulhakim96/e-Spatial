@@ -23,6 +23,8 @@
                               <th class="all">NAMA PEMOHON</th>
                               <th class="all">TARIKH PERMOHONAN</th>
                               <th class="all">TARIKH PEMBATALAN</th>
+                              <th class="all">ULASAN</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -43,6 +45,10 @@
                             <td>
                               <div style="padding : 4px;"></div>
                               {{$data->updated_at}}
+                            </td>
+                            <td>
+                              <div style="padding : 4px;"></div>
+                              <span>Dibatalkan oleh pengguna</span>
                             </td>
                           </tr>
                           @endforeach

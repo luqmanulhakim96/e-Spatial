@@ -71,7 +71,7 @@ class SenaraiHargaController extends Controller
           'saiz_data' => ['nullable', 'numeric'],
           'jenis_kertas' => ['nullable'],
           'jenis_data' => ['required'],
-          'tahun' => ['nullable', 'numeric', 'digits:4'],
+          'tahun' => ['nullable'],
           'negeri' => ['required'],
           'harga_asas' => ['required', 'numeric'],
           'kategori_data' => ['nullable']
@@ -169,104 +169,109 @@ class SenaraiHargaController extends Controller
   }
 
   public function updateHarga($id, Request $request){
-    $this->validator(request()->all())->validate();
-
-    if($request->jenis_dokumen == "Vektor Shapefile"){
-      if($request->jenis_data != "Petak Kajian"){
-        $searchVektor = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
-                                    ->where('jenis_data' , $request->jenis_data)
-                                    ->where('tahun' , $request->tahun)
-                                    ->where('negeri' , $request->negeri)
-                                    ->where('status' , "Aktif")
-                                    ->count();
-
-        $idVektor = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
-                                    ->where('jenis_data' , $request->jenis_data)
-                                    ->where('tahun' , $request->tahun)
-                                    ->where('negeri' , $request->negeri)
-                                    ->where('status' , "Aktif")->get();
-
-      }else {
-        $searchVektor = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
-                                    ->where('jenis_data' , $request->jenis_data)
-                                    ->where('kategori_data' , $request->kategori_data)
-                                    ->where('negeri' , $request->negeri)
-                                    ->where('status' , "Aktif")
-                                    ->count();
-
-        $idVektor = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
-                                    ->where('jenis_data' , $request->jenis_data)
-                                    ->where('kategori_data' , $request->kategori_data)
-                                    ->where('negeri' , $request->negeri)
-                                    ->where('status' , "Aktif")->get();
-      }
-
-      if($searchVektor > 0 && $idVektor[0]->id != $id){
-        return redirect()->route('senarai-harga.edit', $id)->with('error','Data Geospatial ini telah didaftarkan.');
-      }
-    }else {
-      if($request->jenis_data != "Petak Kajian"){
-        $searchBercetak = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
-                                    ->where('jenis_data' , $request->jenis_data)
-                                    ->where('tahun' , $request->tahun)
-                                    ->where('negeri' , $request->negeri)
-                                    ->where('jenis_kertas' , $request->jenis_kertas)
-                                    ->where('status' , "Aktif")
-                                    ->count();
-
-        $idBercetak = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
-                                    ->where('jenis_data' , $request->jenis_data)
-                                    ->where('tahun' , $request->tahun)
-                                    ->where('negeri' , $request->negeri)
-                                    ->where('jenis_kertas' , $request->jenis_kertas)
-                                    ->where('status' , "Aktif")->get();
-      }else {
-        $searchBercetak = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
-                                    ->where('jenis_data' , $request->jenis_data)
-                                    ->where('kategori_data' , $request->kategori_data)
-                                    ->where('negeri' , $request->negeri)
-                                    ->where('jenis_kertas' , $request->jenis_kertas)
-                                    ->where('status' , "Aktif")
-                                    ->count();
-
-        $idBercetak = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
-                                    ->where('jenis_data' , $request->jenis_data)
-                                    ->where('kategori_data' , $request->kategori_data)
-                                    ->where('negeri' , $request->negeri)
-                                    ->where('jenis_kertas' , $request->jenis_kertas)
-                                    ->where('status' , "Aktif")->get();
-      }
-
-      if($searchBercetak > 0 && $idBercetak[0]->id != $id){
-        return redirect()->route('senarai-harga.edit', $id)->with('error','Data Geospatial ini telah didaftarkan.');
-      }
-
-    }
+    // dd($request->all());
     $harga = SenaraiHarga::findOrFail($id);
-    // dd($harga);
-    $harga->jenis_dokumen = $request->jenis_dokumen;
-
-    if($request->jenis_dokumen == "Bercetak"){
-      $harga->jenis_kertas = $request->jenis_kertas;
-    }else {
-      $harga->saiz_data = $request->saiz_data;
-    }
-
-    $harga->jenis_data = $request->jenis_data;
-
-    if($request->jenis_data == "Petak Kajian"){
-      $harga->kategori_data = $request->kategori_data;
-    }else {
-      $harga->tahun = $request->tahun;
-    }
-
-    $harga->negeri = $request->negeri;
-
     $harga->harga_asas = $request->harga_asas;
+    $harga->save();
 
+    // $this->validator(request()->all())->validate();
+    //
+    // if($request->jenis_dokumen == "Vektor Shapefile"){
+    //   if($request->jenis_data != "Petak Kajian"){
+    //     $searchVektor = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
+    //                                 ->where('jenis_data' , $request->jenis_data)
+    //                                 ->where('tahun' , $request->tahun)
+    //                                 ->where('negeri' , $request->negeri)
+    //                                 ->where('status' , "Aktif")
+    //                                 ->count();
+    //
+    //     $idVektor = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
+    //                                 ->where('jenis_data' , $request->jenis_data)
+    //                                 ->where('tahun' , $request->tahun)
+    //                                 ->where('negeri' , $request->negeri)
+    //                                 ->where('status' , "Aktif")->get();
+    //
+    //   }else {
+    //     $searchVektor = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
+    //                                 ->where('jenis_data' , $request->jenis_data)
+    //                                 ->where('kategori_data' , $request->kategori_data)
+    //                                 ->where('negeri' , $request->negeri)
+    //                                 ->where('status' , "Aktif")
+    //                                 ->count();
+    //
+    //     $idVektor = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
+    //                                 ->where('jenis_data' , $request->jenis_data)
+    //                                 ->where('kategori_data' , $request->kategori_data)
+    //                                 ->where('negeri' , $request->negeri)
+    //                                 ->where('status' , "Aktif")->get();
+    //   }
+    //
+    //   if($searchVektor > 0 && $idVektor[0]->id != $id){
+    //     return redirect()->route('senarai-harga.edit', $id)->with('error','Data Geospatial ini telah didaftarkan.');
+    //   }
+    // }else {
+    //   if($request->jenis_data != "Petak Kajian"){
+    //     $searchBercetak = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
+    //                                 ->where('jenis_data' , $request->jenis_data)
+    //                                 ->where('tahun' , $request->tahun)
+    //                                 ->where('negeri' , $request->negeri)
+    //                                 ->where('jenis_kertas' , $request->jenis_kertas)
+    //                                 ->where('status' , "Aktif")
+    //                                 ->count();
+    //
+    //     $idBercetak = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
+    //                                 ->where('jenis_data' , $request->jenis_data)
+    //                                 ->where('tahun' , $request->tahun)
+    //                                 ->where('negeri' , $request->negeri)
+    //                                 ->where('jenis_kertas' , $request->jenis_kertas)
+    //                                 ->where('status' , "Aktif")->get();
+    //   }else {
+    //     $searchBercetak = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
+    //                                 ->where('jenis_data' , $request->jenis_data)
+    //                                 ->where('kategori_data' , $request->kategori_data)
+    //                                 ->where('negeri' , $request->negeri)
+    //                                 ->where('jenis_kertas' , $request->jenis_kertas)
+    //                                 ->where('status' , "Aktif")
+    //                                 ->count();
+    //
+    //     $idBercetak = SenaraiHarga::where('jenis_dokumen' , $request->jenis_dokumen)
+    //                                 ->where('jenis_data' , $request->jenis_data)
+    //                                 ->where('kategori_data' , $request->kategori_data)
+    //                                 ->where('negeri' , $request->negeri)
+    //                                 ->where('jenis_kertas' , $request->jenis_kertas)
+    //                                 ->where('status' , "Aktif")->get();
+    //   }
+    //
+    //   if($searchBercetak > 0 && $idBercetak[0]->id != $id){
+    //     return redirect()->route('senarai-harga.edit', $id)->with('error','Data Geospatial ini telah didaftarkan.');
+    //   }
+    //
+    // }
+    // $harga = SenaraiHarga::findOrFail($id);
+    // // dd($harga);
+    // $harga->jenis_dokumen = $request->jenis_dokumen;
+    //
+    // if($request->jenis_dokumen == "Bercetak"){
+    //   $harga->jenis_kertas = $request->jenis_kertas;
+    // }else {
+    //   $harga->saiz_data = $request->saiz_data;
+    // }
+    //
+    // $harga->jenis_data = $request->jenis_data;
+    //
+    // if($request->jenis_data == "Petak Kajian"){
+    //   $harga->kategori_data = $request->kategori_data;
+    // }else {
+    //   $harga->tahun = $request->tahun;
+    // }
+    //
+    // $harga->negeri = $request->negeri;
+    //
+    // $harga->harga_asas = $request->harga_asas;
+    //
     // dd($harga);
-
-    $harga->update();
+    //
+    // $harga->update();
     return redirect()->route('senarai-harga.list')->with('success','Maklumat data telah dikemaskini');
   }
 
