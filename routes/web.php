@@ -150,6 +150,9 @@ Route::middleware('admin')->group(function () {
 
   Route::post('/laporan/bilangan-keseluruhan-permohonan-tapis', 'HomeController@laporan1_tapis')->name('laporan.laporan-1-tapis');
 
+  Route::get('/laporan/bilangan-permohonan-mengikut-kategori-pemohon', 'HomeController@laporan2')->name('laporan.laporan-2');
+
+  Route::post('/laporan/bilangan-permohonan-mengikut-kategori-pemohon-tapis', 'HomeController@laporan2_tapis')->name('laporan.laporan-2-tapis');
 
   Route::get('/laporan/bilangan-mengikut-kategori-data', 'HomeController@laporan3')->name('laporan.laporan-3');
 

@@ -697,6 +697,29 @@ class HomeController extends Controller
       return view('laporan.laporan-1-tapis', compact('listPermohonan','userInfo'));
     }
 
+    public function laporan2(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonan = Permohonan::get();
+
+      return view('laporan.laporan-2', compact('listPermohonan','userInfo'));
+    }
+
+    public function laporan2_tapis(Request $request){
+      $user_id = Auth::user()->id;
+
+      $tarikh_mula = date($request->tarikh_mula);
+      $tarikh_akhir = date($request->tarikh_akhir);
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonan = Permohonan::where('tarikh_permohonan', '>', $tarikh_mula.' 00:00:00')->where('tarikh_permohonan', '<', $tarikh_akhir.' 23:59:59')->get();
+
+      return view('laporan.laporan-2', compact('listPermohonan','userInfo'));
+    }
+
     public function laporan3(){
 
       $data_permohonan = DataPermohonan::get();
