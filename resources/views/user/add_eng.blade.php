@@ -316,7 +316,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                            <label for="attachment_permohonan">Upload AOI Attachment:</label>
+                            <label for="attachment_permohonan">Upload AOI Attachment in Shapefile form:</label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="attachment_aoi" onchange="return fileValidation('attachment_aoi')" name="attachment_aoi">
                                 <label class="custom-file-label bg-light" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Upload file</label>

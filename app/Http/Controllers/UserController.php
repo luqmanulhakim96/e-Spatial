@@ -475,6 +475,8 @@ class UserController extends Controller
     $status_permohonan = $data['status_permohonan'];
     $status_pembayaran = $data['status_pembayaran'];
 
+    $currentTime = date('Y-m-d H:i:s');
+
     return Permohonan::Create([
       'attachment_aoi' => $uploaded_file_aoi,
       'attachment_permohonan' => $uploaded_files_permohonan,
@@ -483,7 +485,8 @@ class UserController extends Controller
       'status_permohonan' => $status_permohonan,
       'status_pembayaran' => $status_pembayaran,
       'user_id' => $user_id,
-      'jumlah_bayaran'=> 0.00
+      'jumlah_bayaran'=> 0.00,
+      'tarikh_permohonan' => $currentTime,
       ]);
   }
 

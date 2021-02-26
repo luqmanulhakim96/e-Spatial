@@ -61,7 +61,7 @@
 
               <div class="col-md pt-3">
                 <label for="f-name-1">Kerakyatan:</label>
-                <input  class="form-control bg-light" type="text" name="jenis_data" value="{{ $user->kerakyatan }}" readonly>
+                <input  class="form-control bg-light" type="text" name="jenis_data" style="text-transform: uppercase;" value="{{ $user->kerakyatan }}" readonly>
               </div>
 
               <div class="col-md pt-3">
@@ -104,7 +104,7 @@
 
               <div class="col-md pt-3">
                 <label for="f-name-1">Negeri:</label>
-                <input  class="form-control bg-light" type="text" name="jenis_data" value="{{ $user->negeri }}" readonly>
+                <input  class="form-control bg-light" type="text" name="jenis_data" style="text-transform: uppercase;" value="{{ $user->negeri }}" readonly>
               </div>
 
               <div class="col-md-2">
@@ -313,7 +313,7 @@
                               <p class="mb-0 " style="text-align: center;">Tiada</p>
                               @endif
                             </td>
-                            <td><p class="mb-0 " style="text-align: center;">RM {{ $dataPermohonan[$i]['jumlah_harga_data']}}</p></td>
+                            <td><p class="mb-0 " style="text-align: center;">RM {{ number_format((float)$dataPermohonan[$i]['jumlah_harga_data'], 2, '.', '') }}</p></td>
                             @endif
                           </tr>
 
@@ -341,7 +341,7 @@
                 </div>
                 <div class="col-md-4">
                   <label for="f-name-1">Harga Lain-Lain:</label>
-                  <input  class="form-control bg-light" type="text" name="bahagian" value="RM {{ $permohonan->harga_tambahan }}" readonly>
+                  <input  class="form-control bg-light" type="text" name="bahagian" value="RM {{ number_format((float)$permohonan->harga_tambahan , 2, '.', '') }}" readonly>
                 </div>
                 <div class="col-md-4">
                   <label for="f-name-1" style="font-weight:bold;">Jumlah Harga Data:</label>
@@ -454,7 +454,7 @@
                                     <div class="card-header" style="text-align: center; border-bottom: 1px solid #003e61;">Ulasan Pentadbir Sistem</div>
                                     @endif
                                       <div class="card-body text-dark">
-                                        <textarea id="ulasan_admin" class="form-control bg-light" name="ulasan_admin" rows="3" cols="50" {{ $current_user_info->role != 0 || $permohonan->ulasan_admin != null ? 'readonly' : '' }}>{{ $permohonan->ulasan_admin }}</textarea>
+                                        <textarea id="ulasan_admin" class="form-control bg-light" name="ulasan_admin" rows="3" cols="50" {{ $current_user_info->role != 0 || $permohonan->ulasan_admin != null ? 'readonly' : 'required' }} onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')">{{ $permohonan->ulasan_admin }}</textarea>
 
                                       </div>
                                     </div>
@@ -472,7 +472,7 @@
                                     @endif
                                       <div class="card-body text-dark">
 
-                                        <textarea id="ulasan_penyokong1" class="form-control bg-light" name="ulasan_penyokong1" rows="3" cols="50" {{ $current_user_info->role != 1 ? 'readonly' : '' }}>{{ $permohonan->ulasan_penyokong_1 }}</textarea>
+                                        <textarea id="ulasan_penyokong1" class="form-control bg-light" name="ulasan_penyokong1" rows="3" cols="50" {{ $current_user_info->role != 1 ? 'readonly' : 'required' }} onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')">{{ $permohonan->ulasan_penyokong_1 }}</textarea>
 
                                       </div>
                                     </div>
@@ -491,7 +491,7 @@
                                     @endif
                                       <div class="card-body text-dark">
 
-                                        <textarea id="ulasan_penyokong2" class="form-control bg-light" name="ulasan_penyokong2" rows="3" cols="50" {{ $current_user_info->role != 2 ? 'readonly' : '' }}>{{ $permohonan->ulasan_penyokong_2 }}</textarea>
+                                        <textarea id="ulasan_penyokong2" class="form-control bg-light" name="ulasan_penyokong2" rows="3" cols="50" {{ $current_user_info->role != 2 ? 'readonly' : 'required' }} onchange="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Sila isi bahagian ini')">{{ $permohonan->ulasan_penyokong_2 }}</textarea>
 
                                       </div>
                                     </div>
@@ -579,18 +579,18 @@
 
                                   <div class="form-group" >
                                     @if($current_user_info->role == 3 && $permohonan->status_permohonan == "Sedang Diproses")
-                                    <button type="submit" class="btn btn-primary" onclick="return confirm('Adakah anda pasti dengan keputusan permohonan ini??');" id="submit_data" >Hantar Keputusan</button>
+                                    <button type="submit" class="btn btn-primary" onclick="return confirm('Adakah anda pasti dengan keputusan permohonan ini?');" id="submit_data" >Hantar Keputusan</button>
                                     @else
                                           @if($current_user_info->role == 0 && $permohonan->ulasan_admin == null)
-                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini?');">Hantar Ulasan</button>
                                           @endif
 
                                           @if($current_user_info->role == 1 && $permohonan->ulasan_penyokong_1 == null)
-                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini?');">Hantar Ulasan</button>
                                           @endif
 
                                           @if($current_user_info->role == 2 && $permohonan->ulasan_penyokong_2 == null)
-                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini??');">Hantar Ulasan</button>
+                                          <button type="submit" class="btn btn-primary"  id="submit_data" onclick="return confirm('Hantar ulasan ini?');">Hantar Ulasan</button>
                                           @endif
                                     @endif
                                     <button type="button" class="btn btn-primary"  id="printButton" ><i class="fa fa-print" aria-hidden="true"></i> Cetak Permohonan</button>

@@ -34,7 +34,7 @@
 
                           </div>
                           <div class="col-md">
-                            <button type="submit" class="btn btn-primary" onclick="return confirm('Hantar borang ini??');">Hantar Sebab</button>
+                            <button type="submit" class="btn btn-primary" onclick="return confirm('Hantar borang ini?');">Hantar Sebab</button>
                           </div>
                           <div class="col-md-4">
 

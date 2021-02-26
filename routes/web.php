@@ -142,6 +142,42 @@ Route::middleware('admin')->group(function () {
   Route::get('/pengumuman/delete/{id}', 'PengumumanController@delete')->name('pengumuman.delete');
 
 
+  #route for super admin
+  Route::get('/status-perlaksanaan/senarai', 'HomeController@statusPerlaksanaan')->name('permohonan.statusPerlaksanaan');
+
+  #route for laporan
+  Route::get('/laporan/bilangan-keseluruhan-permohonan', 'HomeController@laporan1')->name('laporan.laporan-1');
+
+  Route::post('/laporan/bilangan-keseluruhan-permohonan-tapis', 'HomeController@laporan1_tapis')->name('laporan.laporan-1-tapis');
+
+
+  Route::get('/laporan/bilangan-mengikut-kategori-data', 'HomeController@laporan3')->name('laporan.laporan-3');
+
+  Route::post('/laporan/bilangan-mengikut-kategori-data-tapis', 'HomeController@laporan3_tapis')->name('laporan.laporan-3-tapis');
+
+  Route::get('/laporan/bilangan-mengikut-status-permohonan', 'HomeController@laporan4')->name('laporan.laporan-4');
+
+  Route::post('/laporan/bilangan-mengikut-status-permohonan-tapis', 'HomeController@laporan4_tapis')->name('laporan.laporan-4-tapis');
+
+  Route::get('/laporan/bilangan-mengikut-kategori-permohonan-diluluskan', 'HomeController@laporan5')->name('laporan.laporan-5');
+
+  Route::post('/laporan/bilangan-mengikut-kategori-permohonan-diluluskan-tapis', 'HomeController@laporan5_tapis')->name('laporan.laporan-5-tapis');
+
+  Route::get('/laporan/bilangan-mengikut-kategori-permohonan-tidak-diluluskan', 'HomeController@laporan6')->name('laporan.laporan-6');
+
+  Route::post('/laporan/bilangan-mengikut-kategori-permohonan-tidak-diluluskan-tapis', 'HomeController@laporan6_tapis')->name('laporan.laporan-6-tapis');
+
+  Route::get('/laporan/bilangan-mengikut-kategori-permohonan-tidak-berkaitan', 'HomeController@laporan7')->name('laporan.laporan-7');
+
+  Route::post('/laporan/bilangan-mengikut-kategori-permohonan-tidak-berkaitan-tapis', 'HomeController@laporan7_tapis')->name('laporan.laporan-7-tapis');
+
+  Route::get('/laporan/bilangan-mengikut-kategori-permohonan-batal', 'HomeController@laporan8')->name('laporan.laporan-8');
+
+  Route::post('/laporan/bilangan-mengikut-kategori-permohonan-batal-tapis', 'HomeController@laporan8_tapis')->name('laporan.laporan-8-tapis');
+
+
+
+
 
   #route for super admin
   Route::get('/pengguna/senarai/admin', 'AdminController@list')->name('superadmin.list');

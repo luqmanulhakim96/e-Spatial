@@ -190,6 +190,7 @@ class PermohonanController extends Controller
     $user_id = Auth::user()->id;
     $current_user_info = User::findOrFail($user_id);
     //dd($current_user_info->role);
+    $currentTime = date('Y-m-d H:i:s');
 
     $permohonan = Permohonan::findOrFail($id);
 
@@ -201,7 +202,16 @@ class PermohonanController extends Controller
 
     $permohonan->ulasan_ketua_pengarah = $request->ulasan_ketua_pengarah;
 
+      if($current_user_info->role == 0){
+        $permohonan->tarikh_pentadbir_sistem = $currentTime;
+      }elseif ($current_user_info->role == 1) {
+        $permohonan->tarikh_penyokong_1 = $currentTime;
+      }elseif ($current_user_info->role == 2) {
+        $permohonan->tarikh_penyokong_2 = $currentTime;
+      }
+
     if($current_user_info->role == 3){
+      $permohonan->tarikh_ketua_pengarah = $currentTime;
       $permohonan->status_permohonan = $request->status_permohonan;
       if($request->status_permohonan == 'Lulus'){
         $permohonan->status_pembayaran = $request->status_pembayaran;
@@ -441,9 +451,13 @@ class PermohonanController extends Controller
     // dd(request()->all());
     $status = "Tidak Berkaitan";
 
+    $currentTime = date('Y-m-d H:i:s');
+
     $permohonan = Permohonan::findOrFail($id);
 
     $permohonan->status_permohonan = $status;
+
+    $permohonan->tarikh_pentadbir_sistem = $currentTime;
 
     $permohonan->remarks_admin = request()->ulasan_tidak_berkaitan;
 

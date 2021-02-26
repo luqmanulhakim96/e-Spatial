@@ -45,9 +45,35 @@
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
+                              @if($baru->user->kategori == 'kementerian')
                               <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
-                                {{ $baru->user->kategori  }}
+                                KEMENTERIAN
                               </div>
+                              @elseif($baru->user->kategori == 'agensi')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                AGENSI
+                              </div>
+                              @elseif($baru->user->kategori == 'penyelidik')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                PENYELIDIK
+                              </div>
+                              @elseif($baru->user->kategori == 'institut')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                INSTITUT PENGAJIAN TINGGI
+                              </div>
+                              @elseif($baru->user->kategori == 'awam')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                ORANG AWAM
+                              </div>
+                              @elseif($baru->user->kategori == 'dalaman')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                WARGA JPSM
+                              </div>
+                              @elseif($baru->user->kategori == 'lain')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                LAIN-LAIN
+                              </div>
+                              @endif
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>

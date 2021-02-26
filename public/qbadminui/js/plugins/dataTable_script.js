@@ -555,7 +555,7 @@ $(document).ready(function(){
           "info": "Memaparkan halaman _PAGE_ dari _PAGES_",
           "infoEmpty": "Tidak ada rekod yang tersedia",
           "infoFiltered": "(Ditapis dari _MAX_ jumlah rekod)",
-          "search": "Carian",
+          "search": "ID Pemohon / Nama",
           "previous": "Sebelum",
           "paginate": {
               "first":      "Pertama",
@@ -572,6 +572,8 @@ $(document).ready(function(){
                      },
                    ],
     });
+
+
 
     // Responsive Data Table
     let list_permohonan_lulus = $("#list_permohonan_lulus")

@@ -15,6 +15,12 @@ class AddLinkDataInPermohonans extends Migration
     {
         Schema::table('permohonans', function (Blueprint $table) {
           $table->string('link_data')->nullable();
+
+          $table->string('tarikh_permohonan')->nullable();
+          $table->string('tarikh_pentadbir_sistem')->nullable();
+          $table->string('tarikh_penyokong_1')->nullable();
+          $table->string('tarikh_penyokong_2')->nullable();
+          $table->string('tarikh_ketua_pengarah')->nullable();
         });
     }
 
