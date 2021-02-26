@@ -125,7 +125,7 @@
                         <div id="table-sub-menu-laporan" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <ul class="side-sub-menu p-0">
                                 <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-1')}}" class="w-100 pl-4">Laporan Bilangan Keseluruhan Permohonan</a></li>
-                                <!-- <li class="side-sub-menu-item px-3"><a href="#" class="w-100 pl-4">Laporan Bilangan Permohonan Mengikut Kategori Permohon</a></li> -->
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-2')}}" class="w-100 pl-4">Laporan Bilangan Permohonan Mengikut Kategori Permohon</a></li>
                                 <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-3')}}" class="w-100 pl-4">Laporan Mengikut Kategori Data Yang Dipohon</a></li>
                                 <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-4')}}" class="w-100 pl-4">Laporan Mengikut Status Permohonan</a></li>
                                 <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-5')}}" class="w-100 pl-4">Laporan Mengikut Kategori Data Yang Diluluskan</a></li>
