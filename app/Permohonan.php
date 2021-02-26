@@ -32,7 +32,13 @@ class Permohonan extends Model implements Auditable
       'link_data',
       'attachment_penerimaan_data_user',
       'remarks_admin',
-      'catatan_harga'
+      'catatan_harga',
+      'tarikh_permohonan',
+      'tarikh_pentadbir_sistem',
+      'tarikh_penyokong_1',
+      'tarikh_penyokong_2',
+      'tarikh_ketua_pengarah',
+
 
     ];
 

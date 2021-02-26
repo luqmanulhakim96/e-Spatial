@@ -20,6 +20,9 @@ use App\SenaraiHarga;
 
 use App\Permohonan;
 
+use App\DataPermohonan;
+
+
 
 use Carbon;
 
@@ -652,5 +655,162 @@ class HomeController extends Controller
             'bahagian' => ['required','string', 'max:255'],
             // 'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+    }
+
+    public function statusPerlaksanaan(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonan = Permohonan::get();
+
+      return view('permohonan.statusPerlaksanaan', compact('listPermohonan','userInfo'));
+    }
+
+    public function laporan1(){
+      $user_id = Auth::user()->id;
+
+      $userInfo = User::findOrFail($user_id);
+
+      $listPermohonan = Permohonan::get();
+
+      return view('laporan.laporan-1', compact('listPermohonan','userInfo'));
+    }
+
+    public function laporan1_tapis(Request $request){
+      // dd($request->all());
+      $user_id = Auth::user()->id;
+
+      $tarikh_mula = date($request->tarikh_mula);
+      $tarikh_akhir = date($request->tarikh_akhir);
+
+
+      if($request->select_tarikh == "permohonan"){
+        $userInfo = User::findOrFail($user_id);
+
+        $listPermohonan = Permohonan::where('tarikh_permohonan', '>', $tarikh_mula.' 00:00:00')->where('tarikh_permohonan', '<', $tarikh_akhir.' 23:59:59')->get();
+      }else {
+        $userInfo = User::findOrFail($user_id);
+
+        $listPermohonan = Permohonan::where('tarikh_ketua_pengarah', '>', $tarikh_mula.' 00:00:00')->where('tarikh_ketua_pengarah', '<', $tarikh_akhir.' 23:59:59')->get();
+      }
+      return view('laporan.laporan-1-tapis', compact('listPermohonan','userInfo'));
+    }
+
+    public function laporan3(){
+
+      $data_permohonan = DataPermohonan::get();
+
+      return view('laporan.laporan-3', compact('data_permohonan'));
+    }
+
+    public function laporan3_tapis(Request $request){
+      // dd($request->all());
+      $tarikh_mula = date($request->tarikh_mula);
+      $tarikh_akhir = date($request->tarikh_akhir);
+
+      // $data_permohonan =  DataPermohonan::whereHas('permohonan', function ($query) {
+      //     return $query->where('tarikh_permohonan', '>', $tarikh_mula.' 00:00:00')->where('tarikh_permohonan', '<', $tarikh_akhir.' 23:59:59');
+      // })->get();
+
+      $data_permohonan = DataPermohonan::where('created_at', '>', $tarikh_mula.' 00:00:00')->where('created_at', '<', $tarikh_akhir.' 23:59:59')->get();
+
+      return view('laporan.laporan-3-tapis', compact('data_permohonan'));
+    }
+
+    public function laporan4(){
+
+      $permohonan = Permohonan::get();
+
+      return view('laporan.laporan-4', compact('permohonan'));
+    }
+
+    public function laporan4_tapis(Request $request){
+      $tarikh_mula = date($request->tarikh_mula);
+      $tarikh_akhir = date($request->tarikh_akhir);
+
+      $permohonan = Permohonan::where('tarikh_permohonan', '>', $tarikh_mula.' 00:00:00')->where('tarikh_permohonan', '<', $tarikh_akhir.' 23:59:59')->get();
+
+      return view('laporan.laporan-4', compact('permohonan'));
+    }
+
+    public function laporan5(){
+
+      $permohonan = Permohonan::where('status_permohonan', 'Lulus')->get();
+
+      return view('laporan.laporan-5', compact('permohonan'));
+    }
+
+    public function laporan5_tapis(Request $request){
+      // dd($request->all());
+      $user_id = Auth::user()->id;
+
+      $tarikh_mula = date($request->tarikh_mula);
+      $tarikh_akhir = date($request->tarikh_akhir);
+
+
+      if($request->select_tarikh == "permohonan"){
+        $permohonan = Permohonan::where('tarikh_permohonan', '>', $tarikh_mula.' 00:00:00')->where('tarikh_permohonan', '<', $tarikh_akhir.' 23:59:59')->where('status_permohonan', 'Lulus')->get();
+      }else {
+        $permohonan = Permohonan::where('tarikh_ketua_pengarah', '>', $tarikh_mula.' 00:00:00')->where('tarikh_ketua_pengarah', '<', $tarikh_akhir.' 23:59:59')->where('status_permohonan', 'Lulus')->get();
+      }
+      return view('laporan.laporan-5-tapis', compact('permohonan',));
+    }
+
+    public function laporan6(){
+
+      $permohonan = Permohonan::where('status_permohonan', 'Gagal')->get();
+
+      return view('laporan.laporan-6', compact('permohonan'));
+    }
+
+    public function laporan6_tapis(Request $request){
+      // dd($request->all());
+      $user_id = Auth::user()->id;
+
+      $tarikh_mula = date($request->tarikh_mula);
+      $tarikh_akhir = date($request->tarikh_akhir);
+
+
+      if($request->select_tarikh == "permohonan"){
+        $permohonan = Permohonan::where('tarikh_permohonan', '>', $tarikh_mula.' 00:00:00')->where('tarikh_permohonan', '<', $tarikh_akhir.' 23:59:59')->where('status_permohonan', 'Gagal')->get();
+      }else {
+        $permohonan = Permohonan::where('tarikh_ketua_pengarah', '>', $tarikh_mula.' 00:00:00')->where('tarikh_ketua_pengarah', '<', $tarikh_akhir.' 23:59:59')->where('status_permohonan', 'Gagal')->get();
+      }
+      return view('laporan.laporan-6-tapis', compact('permohonan',));
+    }
+
+    public function laporan7(){
+
+      $permohonan = Permohonan::where('status_permohonan', 'Tidak Berkaitan')->get();
+
+      return view('laporan.laporan-7', compact('permohonan'));
+    }
+
+    public function laporan7_tapis(Request $request){
+
+      $tarikh_mula = date($request->tarikh_mula);
+      $tarikh_akhir = date($request->tarikh_akhir);
+
+      $permohonan = Permohonan::where('tarikh_permohonan', '>', $tarikh_mula.' 00:00:00')->where('tarikh_permohonan', '<', $tarikh_akhir.' 23:59:59')->where('status_permohonan', 'Tidak Berkaitan')->get();
+
+      return view('laporan.laporan-7-tapis', compact('permohonan'));
+    }
+
+    public function laporan8(){
+
+      $permohonan = Permohonan::where('status_permohonan', 'Batal')->get();
+
+      return view('laporan.laporan-8', compact('permohonan'));
+    }
+
+    public function laporan8_tapis(Request $request){
+
+      $tarikh_mula = date($request->tarikh_mula);
+      $tarikh_akhir = date($request->tarikh_akhir);
+
+      $permohonan = Permohonan::where('tarikh_permohonan', '>', $tarikh_mula.' 00:00:00')->where('tarikh_permohonan', '<', $tarikh_akhir.' 23:59:59')->where('status_permohonan', 'Batal')->get();
+
+      return view('laporan.laporan-8-tapis', compact('permohonan'));
     }
 }

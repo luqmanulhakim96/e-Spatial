@@ -73,7 +73,7 @@
                                         @endif
 
                                         @if($user->role == 0 || $user->role == $view->user2->role)
-                                        <a href="{{ route('pengumuman.delete', $view->id) }}" onclick="return confirm('Padam pengumuman ini??');"class="btn btn-danger"><i class="fas fa-times-circle"></i></a>
+                                        <a href="{{ route('pengumuman.delete', $view->id) }}" onclick="return confirm('Padam pengumuman ini?');"class="btn btn-danger"><i class="fas fa-times-circle"></i></a>
                                         @else
                                         <a href="#" class="btn btn-dark"><i class="fas fa-times-circle"></i></a>
                                         @endif

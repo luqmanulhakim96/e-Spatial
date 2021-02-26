@@ -51,7 +51,7 @@
                             <td class="p-3">
                                   <div class="d-flex flex-row justify-content-around align-items-center">
                                       <a href="{{ route('senarai-harga.edit', $data->id) }}" class="btn btn-success mr-1"><i class="fas fa-pencil-alt"></i></a>
-                                      <a href="{{ route('senarai-harga.delete', $data->id) }}" class="btn btn-danger" onclick="return confirm('Adakah anda pasti mahu memadamkan item ini??');"><i class="fas fa-times-circle"></i></a>
+                                      <a href="{{ route('senarai-harga.delete', $data->id) }}" class="btn btn-danger" onclick="return confirm('Adakah anda pasti mahu memadamkan item ini?');"><i class="fas fa-times-circle"></i></a>
                                   </div>
                             </td>
                           </tr>
