@@ -9,7 +9,7 @@
                 <!-- Small card component -->
 
                 <div class="card rounded-lg" style="border-color: #003473 !important;">
-                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Laporan Mengikut Kategori Data Yang Dimohon</div>
+                  <div class="card-header" style="text-align:center; border-color: #003473 !important; font-size: 130%; font-weight: bold;">Laporan Mengikut Status Permohonan</div>
 
                   <div class="card-body">
 
@@ -87,7 +87,13 @@
                               <div style="padding : 4px;"></div>
                               {{$laporan4->user->name}}
                             </td>
-                            <td> {{$laporan4->user->nama_kementerian}}</td>
+                            <td>
+                              @if($laporan4->user->nama_kementerian != null)
+                              {{$laporan4->user->nama_kementerian}}
+                              @else
+                              -
+                              @endif
+                            </td>
                             <td> {{$laporan4->getPermohonanID()}}</td>
                             @if($laporan4->status_permohonan == "Sedang Diproses")
                             <td>

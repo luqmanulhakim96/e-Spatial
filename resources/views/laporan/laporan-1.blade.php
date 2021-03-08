@@ -86,19 +86,19 @@
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
-                              @if($laporan1->user->kategori != 'kementerian')
+                              @if($laporan1->user->kategori == 'kementerian')
                               Kementerian
-                              @elseif($laporan1->user->kategori != 'agensi')
+                              @elseif($laporan1->user->kategori == 'agensi')
                               Agensi
-                              @elseif($laporan1->user->kategori != 'penyelidik')
+                              @elseif($laporan1->user->kategori == 'penyelidik')
                               Penyelidik
-                              @elseif($laporan1->user->kategori != 'institut')
+                              @elseif($laporan1->user->kategori == 'institut')
                               Institut Pengajian Tinggi
-                              @elseif($laporan1->user->kategori != 'awam')
+                              @elseif($laporan1->user->kategori == 'awam')
                               Orang Awam
-                              @elseif($laporan1->user->kategori != 'dalaman')
+                              @elseif($laporan1->user->kategori == 'dalaman')
                               Warga JPSM
-                              @elseif($laporan1->user->kategori != 'lain')
+                              @elseif($laporan1->user->kategori == 'lain')
                               Lain-lain
                               @endif
                             </td>
@@ -126,7 +126,12 @@
                             </td>
 
                             <td>
+                              @if($laporan1->status_permohonan == 'Lulus')
                               {{$laporan1->status_pembayaran}}
+                              @else
+                              -
+                              @endif
+                              
                             </td>
 
                             <td>
