@@ -60,19 +60,19 @@
                             <td></td>
                             <td>
                               <div style="padding : 4px;"></div>
-                              @if($laporan2->user->kategori != 'kementerian')
+                              @if($laporan2->user->kategori == 'kementerian')
                               Kementerian
-                              @elseif($laporan2->user->kategori != 'agensi')
+                              @elseif($laporan2->user->kategori == 'agensi')
                               Agensi
-                              @elseif($laporan2->user->kategori != 'penyelidik')
+                              @elseif($laporan2->user->kategori == 'penyelidik')
                               Penyelidik
-                              @elseif($laporan2->user->kategori != 'institut')
+                              @elseif($laporan2->user->kategori == 'institut')
                               Institut Pengajian Tinggi
-                              @elseif($laporan2->user->kategori != 'awam')
+                              @elseif($laporan2->user->kategori == 'awam')
                               Orang Awam
-                              @elseif($laporan2->user->kategori != 'dalaman')
+                              @elseif($laporan2->user->kategori == 'dalaman')
                               Warga JPSM
-                              @elseif($laporan2->user->kategori != 'lain')
+                              @elseif($laporan2->user->kategori == 'lain')
                               Lain-lain
                               @endif
                             </td>
@@ -82,7 +82,11 @@
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
+                              @if($laporan2->user->nama_kementerian != null)
                               {{$laporan2->user->nama_kementerian}}
+                              @else
+                              -
+                              @endif
                             </td>
                           </tr>
                           @endforeach

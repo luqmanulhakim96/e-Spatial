@@ -102,7 +102,13 @@
                               {{$laporan5->user->name}}
                             </td>
 
-                            <td> {{$laporan5->user->nama_kementerian}}</td>
+                            <td>
+                              @if($laporan5->user->nama_kementerian != null)
+                              {{$laporan5->user->nama_kementerian}}
+                              @else
+                              -
+                              @endif
+                            </td>
 
                             <td> {{$laporan5->getPermohonanID()}}</td>
 

@@ -77,19 +77,19 @@
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
-                              @if($laporan3->permohonan->user->kategori != 'kementerian')
+                              @if($laporan3->permohonan->user->kategori == 'kementerian')
                               Kementerian
-                              @elseif($laporan3->permohonan->user->kategori != 'agensi')
+                              @elseif($laporan3->permohonan->user->kategori == 'agensi')
                               Agensi
-                              @elseif($laporan3->permohonan->user->kategori != 'penyelidik')
+                              @elseif($laporan3->permohonan->user->kategori == 'penyelidik')
                               Penyelidik
-                              @elseif($laporan3->permohonan->user->kategori != 'institut')
+                              @elseif($laporan3->permohonan->user->kategori == 'institut')
                               Institut Pengajian Tinggi
-                              @elseif($laporan3->permohonan->user->kategori != 'awam')
+                              @elseif($laporan3->permohonan->user->kategori == 'awam')
                               Orang Awam
-                              @elseif($laporan3->permohonan->user->kategori != 'dalaman')
+                              @elseif($laporan3->permohonan->user->kategori == 'dalaman')
                               Warga JPSM
-                              @elseif($laporan3->permohonan->user->kategori != 'lain')
+                              @elseif($laporan3->permohonan->user->kategori == 'lain')
                               Lain-lain
                               @endif
                             </td>
