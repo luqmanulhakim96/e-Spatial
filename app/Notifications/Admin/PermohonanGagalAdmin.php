@@ -64,7 +64,7 @@ class PermohonanGagalAdmin extends Notification
         // dd($notifiable);
         return[
           'permohonan_id' => $notifiable->id,
-          'tajuk' => 'Terdapat permohonan yang telah digagalkan',
+          'tajuk' => 'Terdapat permohonan yang tidak lulus',
           'tarikh_dicipta' => $notifiable->created_at,
           'kepada_email' => $this->admin->email,
           'kepada_id' => $this->admin->id,

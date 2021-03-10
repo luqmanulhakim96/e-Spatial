@@ -661,7 +661,8 @@
       // After printing hide back all the tab panel contents which are supposed to be hidden
       // $('.ui-tabs-panel[aria-hidden=true]').hide();
 
-      $("#home").hide();
+      // $("#home").hide();
+      location.reload();
 
       });
       </script>

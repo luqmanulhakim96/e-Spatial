@@ -36,7 +36,7 @@
                         <div class="col-md">
                           <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
                             <h6 >Catatan:</h6>
-                            <span>Sekiranya permohonan anda tersenarai dalam permohonan tidak berkaitan, data yang anda berkemungkinan tidak ada dalam senarai. Sila buat permohonan semula atau menghubngi pihak JPSM.</span><br>
+                            <span>Data yang dimohon masih tiada dalam katalog. Sila hubungi pihak JPSM.</span><br>
 
                           </div>
                         </div>

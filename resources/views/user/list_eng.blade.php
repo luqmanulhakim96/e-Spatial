@@ -37,7 +37,7 @@
                         <div class="col-md">
                           <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
                             <h6 >Important:</h6>
-                            <span>If there is no action from the applicant within 30 days from the date of approval, the application will be automatically canceled</span><br>
+                            <span>The application will be automatically canceled if there is no response within 30 days after the date of approval.</span><br>
 
                           </div>
                         </div>

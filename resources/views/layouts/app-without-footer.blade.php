@@ -80,7 +80,6 @@
                         </div>
 
                         <!-- Sub menu parent -->
-                        <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
 
                         @endif
 
@@ -100,7 +99,19 @@
 
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
-
+                        <li class="side-menu-item px-3"><a href="#" class="w-100 py-3 pl-4 sub-menu-parent" data-toggle="collapse" data-target="#table-sub-menu-laporan" aria-expanded="false" aria-controls="table-sub-menu">Laporan</a></li>
+                        <div id="table-sub-menu-laporan" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <ul class="side-sub-menu p-0">
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-1')}}" class="w-100 pl-4">Laporan Bilangan Keseluruhan Permohonan</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-2')}}" class="w-100 pl-4">Laporan Bilangan Permohonan Mengikut Kategori Permohon</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-3')}}" class="w-100 pl-4">Laporan Mengikut Kategori Data Yang Dipohon</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-4')}}" class="w-100 pl-4">Laporan Mengikut Status Permohonan</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-5')}}" class="w-100 pl-4">Laporan Mengikut Kategori Data Yang Diluluskan</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-6')}}" class="w-100 pl-4">Laporan Mengikut Kategori Data Yang Tidak Diluluskan</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-7')}}" class="w-100 pl-4">Laporan Mengikut Kategori Data Yang Tidak Berkaitan</a></li>
+                                <li class="side-sub-menu-item px-3"><a href="{{route('laporan.laporan-8')}}" class="w-100 pl-4">Laporan Mengikut Kategori Data Yang Batal</a></li>
+                            </ul>
+                        </div>
                         @endif
 
 
@@ -112,6 +123,8 @@
 
 
                         @if(Auth::user()->role == 0)
+                        <li class="side-menu-item px-3"><a href="{{ route('pengumuman.list') }}" class="w-100 py-3 pl-4" >Senarai Pengumuman</a></li>
+
                         <!-- Sub menu parent -->
                         <li class="side-menu-item px-3"><a href="{{ route('senarai-harga.list') }}" class="w-100 py-3 pl-4" >Senarai Harga</a></li>
                         <!-- Sub menu parent -->

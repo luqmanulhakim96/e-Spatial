@@ -36,7 +36,7 @@
                         <div class="col-md">
                           <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
                             <h6 >Important:</h6>
-                            <span>If your application is listed in an unrelated application, the data you are likely to be not in the list. Please re-apply or contact JPSM.</span><br>
+                            <span>The requested data is still not in the catalog. Please contact JPSM.</span><br>
 
                           </div>
                         </div>
