@@ -183,7 +183,35 @@
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>
-                              <span style="font-size: 100%; text-transform:capitalize;">{{ $lulus->user->kategori  }}</span>
+                              @if($lulus->user->kategori == 'kementerian')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                KEMENTERIAN
+                              </div>
+                              @elseif($lulus->user->kategori == 'agensi')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                AGENSI
+                              </div>
+                              @elseif($lulus->user->kategori == 'penyelidik')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                PENYELIDIK
+                              </div>
+                              @elseif($lulus->user->kategori == 'institut')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                INSTITUT PENGAJIAN TINGGI
+                              </div>
+                              @elseif($lulus->user->kategori == 'awam')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                ORANG AWAM
+                              </div>
+                              @elseif($lulus->user->kategori == 'dalaman')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                WARGA JPSM
+                              </div>
+                              @elseif($lulus->user->kategori == 'lain')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                LAIN-LAIN
+                              </div>
+                              @endif
                             </td>
 
                             @if($lulus->attachment_surat_bayaran == null && $userInfo->role == 0)

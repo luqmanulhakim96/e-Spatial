@@ -20,6 +20,7 @@
                         <thead>
                             <tr>
                               <th class="all">PERMOHONAN ID</th>
+                              <th class="all">KATEGORI PEMOHON</th>
                               <th class="all">NAMA PEMOHON</th>
                               <th class="all">TARIKH PERMOHONAN</th>
                               <th class="all">Muat Naik Surat Tidak Lulus</th>
@@ -31,6 +32,38 @@
                             <td>
                               <div style="padding : 4px;"></div>
                               <a href="{{ route('permohonan.view', $baru2->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $baru2->getPermohonanID()  }}</a>
+                            </td>
+                            <td>
+                              <div style="padding : 4px;"></div>
+                              @if($baru2->user->kategori == 'kementerian')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                KEMENTERIAN
+                              </div>
+                              @elseif($baru2->user->kategori == 'agensi')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                AGENSI
+                              </div>
+                              @elseif($baru2->user->kategori == 'penyelidik')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                PENYELIDIK
+                              </div>
+                              @elseif($baru2->user->kategori == 'institut')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                INSTITUT PENGAJIAN TINGGI
+                              </div>
+                              @elseif($baru2->user->kategori == 'awam')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                ORANG AWAM
+                              </div>
+                              @elseif($baru2->user->kategori == 'dalaman')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                WARGA JPSM
+                              </div>
+                              @elseif($baru2->user->kategori == 'lain')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                LAIN-LAIN
+                              </div>
+                              @endif
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>

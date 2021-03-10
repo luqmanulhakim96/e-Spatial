@@ -20,6 +20,7 @@
                         <thead>
                             <tr>
                               <th class="all">PERMOHONAN ID</th>
+                              <th class="all">KATEGORI PEMOHON</th>
                               <th class="all">NAMA PEMOHON</th>
                               <th class="all">TARIKH PERMOHONAN</th>
                               <th class="all">TARIKH MAKLUMAN</th>
@@ -32,6 +33,38 @@
                             <td>
                               <div style="padding : 4px;"></div>
                               <a href="{{ route('permohonan.view', $data->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $data->getPermohonanID()  }}</a>
+                            </td>
+                            <td>
+                              <div style="padding : 4px;"></div>
+                              @if($data->user->kategori == 'kementerian')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                KEMENTERIAN
+                              </div>
+                              @elseif($data->user->kategori == 'agensi')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                AGENSI
+                              </div>
+                              @elseif($data->user->kategori == 'penyelidik')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                PENYELIDIK
+                              </div>
+                              @elseif($data->user->kategori == 'institut')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                INSTITUT PENGAJIAN TINGGI
+                              </div>
+                              @elseif($data->user->kategori == 'awam')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                ORANG AWAM
+                              </div>
+                              @elseif($data->user->kategori == 'dalaman')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                WARGA JPSM
+                              </div>
+                              @elseif($data->user->kategori == 'lain')
+                              <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                LAIN-LAIN
+                              </div>
+                              @endif
                             </td>
                             <td>
                               <div style="padding : 4px;"></div>

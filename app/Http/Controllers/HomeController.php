@@ -60,6 +60,9 @@ class HomeController extends Controller
 
       $nama = User::find(1);
 
+      //get current Year
+      $currentYear = date('Y');
+
       $countPermohonanBaruPS = Permohonan::where('status_permohonan', 'Sedang Diproses')
                             ->whereNull('ulasan_admin')
                             ->count();
@@ -121,7 +124,9 @@ class HomeController extends Controller
 
       $countPermohonanKeseluruhan = Permohonan::count();
 
-      $countSenaraiHarga = SenaraiHarga::count();
+      $countSenaraiHarga = SenaraiHarga::distinct('jenis_data')->count();
+
+      $countSenaraiHarga = $countSenaraiHarga - 1;
 
       $countPengguna = User::where('role', '5')
                         ->count();
@@ -130,11 +135,16 @@ class HomeController extends Controller
                         ->count();
 
       //google chart
-      $dataDipohonMengikutNegeri = DB::select(DB::raw("SELECT COUNT(senarai_hargas.negeri) as count, senarai_hargas.negeri FROM senarai_hargas, data_permohonans, permohonans WHERE permohonans.id = data_permohonans.permohonan_id AND senarai_hargas.id = data_permohonans.senarai_harga_id GROUP BY senarai_hargas.negeri"));
-      //dd($data);
+      // $test = DB::select(DB::raw("SELECT permohonans.created_at FROM permohonans WHERE YEAR(permohonans.created_at) = YEAR(CURDATE())"));
+      // dd($test);
+
+
+      $dataDipohonMengikutNegeri = DB::select(DB::raw("SELECT COUNT(senarai_hargas.negeri) as count, senarai_hargas.negeri FROM senarai_hargas, data_permohonans, permohonans WHERE permohonans.id = data_permohonans.permohonan_id AND senarai_hargas.id = data_permohonans.senarai_harga_id AND YEAR(permohonans.created_at) = YEAR(CURDATE()) GROUP BY senarai_hargas.negeri"));
+      // dd($dataDipohonMengikutNegeri);
       //$mytime = Carbon\Carbon::now();
       //dd($mytime->year);
       $dataDipohonMengikutBulan = DB::select(DB::raw("SELECT EXTRACT(MONTH FROM created_at) as bulan, COUNT(EXTRACT(MONTH FROM created_at)) as count_bulan from permohonans where created_at >= date_sub(now(),interval 6 month) GROUP BY bulan"));
+      // dd($dataDipohonMengikutBulan);
 
       $dataStatusPermohonan = DB::select(DB::raw("SELECT COUNT(permohonans.status_permohonan) as count_status, permohonans.status_permohonan as status FROM permohonans GROUP BY status"));
 
@@ -183,7 +193,8 @@ class HomeController extends Controller
           'countPenggunaAdmin',
           'countPenggunaLuar',
           'countAuditTrail',
-          'countAuditTrailLog'
+          'countAuditTrailLog',
+          'currentYear'
       ));
     }
 

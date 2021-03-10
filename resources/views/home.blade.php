@@ -762,7 +762,7 @@
                     <div class="col-lg-6 col-md-12 mt-4 mt-lg-0">
                         <!-- Card -->
                         <div class="card border-1 rounded-lg" style="border-color: #003473 !important;">
-                          <div class="card-header bg-transparent border-1" style="border-color: #003473 !important; font-size: 130%; font-weight: bold;">Jumlah Permohonan (6 Bulan Lepas)</div>
+                          <div class="card-header bg-transparent border-1" style="border-color: #003473 !important; font-size: 130%; font-weight: bold;">Jumlah Permohonan {{$currentYear}}</div>
                             <!-- Card body -->
                             <div class="card-body">
                                 <!-- Card title -->

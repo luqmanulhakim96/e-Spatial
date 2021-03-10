@@ -37,7 +37,7 @@
                         <div class="col-md">
                           <div class="card-header" style="text-align: justify; text-justify: inter-word; border: 1px solid black;">
                             <h6 >Catatan:</h6>
-                            <span>Sekiranya tiada sebarang tindakan daripada pemohon dalam tempoh 30 hari dari tarikh kelulusan, permohonan akan terbatal secara automatik</span><br>
+                            <span>Permohonan akan terbatal secara automatik sekiranya tiada maklum balas dalam tempoh 30 hari selepas tarikh kelulusan.</span><br>
 
                           </div>
                         </div>

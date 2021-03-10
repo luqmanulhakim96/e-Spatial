@@ -20,6 +20,7 @@
                           <thead>
                               <tr>
                                 <th class="all">PERMOHONAN ID</th>
+                                <th class="all">KATEGORI PEMOHON</th>
                                 <th class="all">NAMA PEMOHON</th>
                                 <th class="all">TARIKH PERMOHONAN</th>
                                 <th class="all">STATUS PERMOHONAN</th>
@@ -31,6 +32,38 @@
                             <tr>
                               <td>
                                 <a href="{{ route('permohonan.view', $diproses->id) }}" style=" font-weight: 600; color: #d0183a !important;">{{ $diproses->getPermohonanID()  }}</a>
+                              </td>
+                              <td>
+                                <div style="padding : 4px;"></div>
+                                @if($diproses->user->kategori == 'kementerian')
+                                <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                  KEMENTERIAN
+                                </div>
+                                @elseif($diproses->user->kategori == 'agensi')
+                                <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                  AGENSI
+                                </div>
+                                @elseif($diproses->user->kategori == 'penyelidik')
+                                <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                  PENYELIDIK
+                                </div>
+                                @elseif($diproses->user->kategori == 'institut')
+                                <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                  INSTITUT PENGAJIAN TINGGI
+                                </div>
+                                @elseif($diproses->user->kategori == 'awam')
+                                <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                  ORANG AWAM
+                                </div>
+                                @elseif($diproses->user->kategori == 'dalaman')
+                                <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                  WARGA JPSM
+                                </div>
+                                @elseif($diproses->user->kategori == 'lain')
+                                <div class="d-flex flex-row justify-content-around align-items-center" style="text-transform:capitalize;">
+                                  LAIN-LAIN
+                                </div>
+                                @endif
                               </td>
                               <td>{{$diproses->user->name}}</td>
                               <td>{{$diproses->created_at}}</td>
